@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+      xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+
+	  
+	  
+	  
+	  
+<!-- adverbios -->
+
+
+
+<category><pattern>un pedacito *</pattern><template><sr/></template></category> 
+<category><pattern>mucho *</pattern><template><sr/></template></category> 
+<category><pattern>un poco *</pattern><template><sr/></template></category> 
+<category><pattern>muchos de *</pattern><template><sr/></template></category> 
+<category><pattern>arriba *</pattern><template><sr/></template></category> 
+<category><pattern>al exterior *</pattern><template><sr/></template></category> 
+<category><pattern>precipitadamente *</pattern><template><sr/></template></category>
+<category><pattern>absolutamente *</pattern><template><sr/></template></category> 
+<category><pattern>accidentalmente *</pattern><template><sr/></template></category> 
+<category><pattern>por consiguiente *</pattern><template><sr/></template></category> 
+<category><pattern>exactamente *</pattern><template><sr/></template></category> 
+<category><pattern>activamente *</pattern><template><sr/></template></category> 
+<category><pattern>realmente *</pattern><template><sr/></template></category> 
+<category><pattern>adecuadamente *</pattern><template><sr/></template></category> 
+<category><pattern>luego *</pattern><template><sr/></template></category> 
+<category><pattern>otra vez *</pattern><template><sr/></template></category> 
+<category><pattern>a continuacion *</pattern><template><sr/></template></category> 
+
+<category><pattern>todo a la derecha *</pattern><template><sr/></template></category> 
+<category><pattern>casi *</pattern><template><sr/></template></category> 
+<category><pattern>solamente *</pattern><template><sr/></template></category>         
+<category><pattern>ya *</pattern><template><sr/></template></category> 
+<category><pattern>bien *</pattern><template><sr/></template></category> 
+<category><pattern>tambien *</pattern><template><sr/></template></category> 
+<category><pattern>alternativamente *</pattern><template><sr/></template></category> 
+<category><pattern>en conjunto *</pattern><template><sr/></template></category> 
+<category><pattern>siempre *</pattern><template><sr/></template></category> 
+<category><pattern>y asi sucesivamente *</pattern><template><sr/></template></category> 
+<category><pattern>airadamente *</pattern><template><sr/></template></category> 
+<category><pattern>anualmente *</pattern><template><sr/></template></category>
+<category><pattern>ansiosamente *</pattern><template><sr/></template></category> 
+<category><pattern>de todas formas *</pattern><template><sr/></template></category> 
+<category><pattern>dondequiera *</pattern><template><sr/></template></category> 
+<category><pattern>aparte *</pattern><template><sr/></template></category> 
+<category><pattern>al parecer *</pattern><template><sr/></template></category> 
+<category><pattern>aproximadamente *</pattern><template><sr/></template></category> 
+<category><pattern>alrededor *</pattern><template><sr/></template></category> 
+<category><pattern>como de costumbre *</pattern><template><sr/></template></category> 
+<category><pattern>hasta ahora *</pattern><template><sr/></template></category> 
+<category><pattern>a un lado *</pattern><template><sr/></template></category> 
+<category><pattern>en todos *</pattern><template><sr/></template></category> 
+<category><pattern>al principio *</pattern><template><sr/></template></category> 
+<category><pattern>en el ultimo *</pattern><template><sr/></template></category> 
+<category><pattern>por lo menos *</pattern><template><sr/></template></category> 
+<category><pattern>inmediatamente *</pattern><template><sr/></template></category>
+<category><pattern>actualmente *</pattern><template><sr/></template></category> 
+<category><pattern>automaticamente *</pattern><template><sr/></template></category> 
+<category><pattern>torpe *</pattern><template><sr/></template></category> 
+<category><pattern>al reves *</pattern><template><sr/></template></category> 
+<category><pattern>gravemente *</pattern><template><sr/></template></category> 
+<category><pattern>apenas *</pattern><template><sr/></template></category> 
+<category><pattern>basicamente *</pattern><template><sr/></template></category> 
+<category><pattern>maravillosamente *</pattern><template><sr/></template></category> 
+<category><pattern>antes *</pattern><template><sr/></template></category> 
+<category><pattern>detras *</pattern><template><sr/></template></category> 
+<category><pattern>abajo *</pattern><template><sr/></template></category> 
+<category><pattern>ademas de *</pattern><template><sr/></template></category> 
+<category><pattern>lo mejor posible *</pattern><template><sr/></template></category> 
+<category><pattern>mejorar *</pattern><template><sr/></template></category> 
+<category><pattern>mas alla *</pattern><template><sr/></template></category> 
+<category><pattern>amargamente *</pattern><template><sr/></template></category> 
+<category><pattern>oculto *</pattern><template><sr/></template></category> 
+<category><pattern>* presumido</pattern><template><sr/></template></category> 
+<category><pattern>* audazmente</pattern><template><sr/></template></category> 
+<category><pattern>* ambos</pattern><template><sr/></template></category> 
+<category><pattern>* airosamente</pattern><template><sr/></template></category> 
+<category><pattern>* brevemente</pattern><template><sr/></template></category> 
+<category><pattern>* brillantemente</pattern><template><sr/></template></category> 
+<category><pattern>* ampliamente</pattern><template><sr/></template></category> 
+<category><pattern>* afanosamente</pattern><template><sr/></template></category> 
+<category><pattern>* de ninguna manera</pattern><template><sr/></template></category> 
+<category><pattern>* ahora</pattern><template><sr/></template></category> 
+<category><pattern>* tranquilamente</pattern><template><sr/></template></category> 
+<category><pattern>* cuidadosamente</pattern><template><sr/></template></category> 
+<category><pattern>* negligentemente</pattern><template><sr/></template></category> 
+<category><pattern>* cautelosamente</pattern><template><sr/></template></category> 
+<category><pattern>* ciertamente</pattern><template><sr/></template></category> 
+<category><pattern>* alegre</pattern><template><sr/></template></category> 
+<category><pattern>* claramente</pattern><template><sr/></template></category> 
+<category><pattern>* de cerca</pattern><template><sr/></template></category> 
+<category><pattern>* mas cerca</pattern><template><sr/></template></category> 
+<category><pattern>* comunmente</pattern><template><sr/></template></category> 
+<category><pattern>* comparativamente</pattern><template><sr/></template></category> 
+<category><pattern>* totalmente</pattern><template><sr/></template></category> 
+<category><pattern>* concebible</pattern><template><sr/></template></category> 
+<category><pattern>* por lo tanto</pattern><template><sr/></template></category> 
+<category><pattern>* considerablemente</pattern><template><sr/></template></category> 
+<category><pattern>* constantemente</pattern><template><sr/></template></category> 
+<category><pattern>* continuamente</pattern><template><sr/></template></category> 
+<category><pattern>* correctamente</pattern><template><sr/></template></category> 
+<category><pattern>* valeroso</pattern><template><sr/></template></category> 
+<category><pattern>* valerosa</pattern><template><sr/></template></category>
+<category><pattern>* cruel</pattern><template><sr/></template></category> 
+<category><pattern>* actualmente</pattern><template><sr/></template></category> 
+<category><pattern>* diario</pattern><template><sr/></template></category> 
+<category><pattern>* profundamente</pattern><template><sr/></template></category>  
+<category><pattern>* desafiantemente</pattern><template><sr/></template></category> 
+<category><pattern>* definitivamente</pattern><template><sr/></template></category> 
+<category><pattern>* deliberadamente</pattern><template><sr/></template></category> 
+<category><pattern>* desesperadamente</pattern><template><sr/></template></category> 
+<category><pattern>* diferentemente</pattern><template><sr/></template></category> 
+<category><pattern>* directamente</pattern><template><sr/></template></category> 
+<category><pattern>* dudoso</pattern><template><sr/></template></category> 
+<category><pattern>* dudosa</pattern><template><sr/></template></category> 
+<category><pattern>* abajo</pattern><template><sr/></template></category> 
+<category><pattern>* dramaticamente</pattern><template><sr/></template></category> 
+<category><pattern>sangriento *</pattern><template><sr/></template></category> 
+<category><pattern>sangrienta *</pattern><template><sr/></template></category> 
+<category><pattern>anterior *</pattern><template><sr/></template></category> 
+<category><pattern>temprano *</pattern><template><sr/></template></category> 
+<category><pattern>mas facil *</pattern><template><sr/></template></category> 
+<category><pattern>facilmente *</pattern><template><sr/></template></category> 
+<category><pattern>con eficacia *</pattern><template><sr/></template></category> 
+<category><pattern>eficientemente *</pattern><template><sr/></template></category> 
+<category><pattern>cualquiera *</pattern><template><sr/></template></category> 
+<category><pattern>elegante *</pattern><template><sr/></template></category> 
+<category><pattern>a otra parte *</pattern><template><sr/></template></category> 
+<category><pattern>enormemente *</pattern><template><sr/></template></category> 
+<category><pattern>bastantes *</pattern><template><sr/></template></category>  
+<category><pattern>* igualmente</pattern><template><sr/></template></category> 
+<category><pattern>esencialmente *</pattern><template><sr/></template></category> 
+<category><pattern>y otros *</pattern><template><sr/></template></category> 
+<category><pattern>* etc</pattern><template><sr/></template></category> 
+<category><pattern>sin embargo *</pattern><template><sr/></template></category> 
+<category><pattern>* siempre</pattern><template><sr/></template></category> 
+<category><pattern>* por todas partes</pattern><template><sr/></template></category> 
+<category><pattern>* evidentemente</pattern><template><sr/></template></category> 
+<category><pattern>exclusivamente *</pattern><template><sr/></template></category> 
+<category><pattern>* extremadamente</pattern><template><sr/></template></category> 
+<category><pattern>fielmente *</pattern><template><sr/></template></category> 
+<category><pattern>* rapido</pattern><template><sr/></template></category> 
+<category><pattern>* mas rapidamente</pattern><template><sr/></template></category> 
+<category><pattern>* fatal</pattern><template><sr/></template></category> 
+<category><pattern>finalmente *</pattern><template><sr/></template></category> 
+<category><pattern>* en primer lugar</pattern><template><sr/></template></category>																   
+<category><pattern>absurdo *</pattern><template><sr/></template></category> 
+<category><pattern>* para siempre</pattern><template><sr/></template></category> 
+<category><pattern>* por ejemplo</pattern><template><sr/></template></category>  
+<category><pattern>* por siempre</pattern><template><sr/></template></category> 
+<category><pattern>delantero *</pattern><template><sr/></template></category> 
+<category><pattern>remite enteramente *</pattern><template><sr/></template></category> 
+<category><pattern>* especialmente eventual</pattern><template><sr/></template></category> 
+<category><pattern>gradualmente *</pattern><template><sr/></template></category> 
+<category><pattern>* explicitamente</pattern><template><sr/></template></category> 
+<category><pattern>* firmemente</pattern><template><sr/></template></category>  
+<category><pattern>* bastante lejos</pattern><template><sr/></template></category> 
+<category><pattern>* ferozmente</pattern><template><sr/></template></category> 
+<category><pattern>afortunadamente *</pattern><template><sr/></template></category> 
+<category><pattern>freneticamente *</pattern><template><sr/></template></category> 
+<category><pattern>* con frecuencia</pattern><template><sr/></template></category>  
+<category><pattern>completamente *</pattern><template><sr/></template></category> 
+<category><pattern>* libremente</pattern><template><sr/></template></category> 
+<category><pattern>de vez en cuando *</pattern><template><sr/></template></category> 
+<category><pattern>ademas *</pattern><template><sr/></template></category> 
+<category><pattern>generalmente *</pattern><template><sr/></template></category> 
+<category><pattern>suavemente *</pattern><template><sr/></template></category> 
+<category><pattern>genuino *</pattern><template><sr/></template></category> 
+<category><pattern>genuina *</pattern><template><sr/></template></category> 
+<category><pattern>alegre *</pattern><template><sr/></template></category> 
+<category><pattern>agraciado *</pattern><template><sr/></template></category> 
+<category><pattern>agraciada *</pattern><template><sr/></template></category> 
+<category><pattern>grandemente *</pattern><template><sr/></template></category> 
+<category><pattern>codicioso *</pattern><template><sr/></template></category> 
+<category><pattern>codiciosa *</pattern><template><sr/></template></category> 
+<category><pattern>feliz *</pattern><template><sr/></template></category> 
+<category><pattern>precipitado *</pattern><template><sr/></template></category> 
+<category><pattern>pesadamente *</pattern><template><sr/></template></category> 
+<category><pattern>altamente *</pattern><template><sr/></template></category>   
+<category><pattern>por lo tanto *</pattern><template><sr/></template></category> 
+<category><pattern>* esperanzadamente</pattern><template><sr/></template></category> 
+<category><pattern>* cada hora</pattern><template><sr/></template></category> 
+<category><pattern>* sin embargo</pattern><template><sr/></template></category> 
+<category><pattern>* hambriento</pattern><template><sr/></template></category> 
+<category><pattern>* hambrienta</pattern><template><sr/></template></category> 
+<category><pattern>* es decir</pattern><template><sr/></template></category> 
+<category><pattern>* idealmente</pattern><template><sr/></template></category> 
+<category><pattern>casero *</pattern><template><sr/></template></category> 
+<category><pattern>casera *</pattern><template><sr/></template></category> 
+<category><pattern>importantemente *</pattern><template><sr/></template></category> 
+<category><pattern>en general *</pattern><template><sr/></template></category> 
+<category><pattern>en parte *</pattern><template><sr/></template></category> 
+<category><pattern>particularmente *</pattern><template><sr/></template></category> 
+<category><pattern>en fin *</pattern><template><sr/></template></category> 
+<category><pattern>inadvertidamente *</pattern><template><sr/></template></category> 
+<category><pattern>cada vez mas *</pattern><template><sr/></template></category> 
+<category><pattern>de hecho *</pattern><template><sr/></template></category> 
+<category><pattern>indefinidamente *</pattern><template><sr/></template></category> 
+<category><pattern>independientemente *</pattern><template><sr/></template></category> 
+<category><pattern>individualmente *</pattern><template><sr/></template></category> 
+<category><pattern>inevitable *</pattern><template><sr/></template></category> 
+<category><pattern>inicialmente *</pattern><template><sr/></template></category> 
+<category><pattern>inocente *</pattern><template><sr/></template></category> 
+<category><pattern>inquisitivamente *</pattern><template><sr/></template></category> 
+<category><pattern>interior *</pattern><template><sr/></template></category> 
+<category><pattern>en lugar *</pattern><template><sr/></template></category> 
+<category><pattern>invariable *</pattern><template><sr/></template></category> 
+<category><pattern>irritablemente *</pattern><template><sr/></template></category> 
+<category><pattern>en comun *</pattern><template><sr/></template></category>  
+<category><pattern>apenas alrededor *</pattern><template><sr/></template></category> 
+<category><pattern>justo *</pattern><template><sr/></template></category> 
+<category><pattern>amablemente *</pattern><template><sr/></template></category> 
+<category><pattern>en gran parte *</pattern><template><sr/></template></category> 
+<category><pattern>tarde *</pattern><template><sr/></template></category>  
+<category><pattern>mas adelante *</pattern><template><sr/></template></category> 
+<category><pattern>perezoso *</pattern><template><sr/></template></category> 
+<category><pattern>perezosa *</pattern><template><sr/></template></category>
+<category><pattern>ligeramente *</pattern><template><sr/></template></category> 
+<category><pattern>asimismo *</pattern><template><sr/></template></category> 
+<category><pattern>literalmente *</pattern><template><sr/></template></category> 
+<category><pattern>poco *</pattern><template><sr/></template></category> 
+<category><pattern>localmente *</pattern><template><sr/></template></category> 
+<category><pattern>mas de largo *</pattern><template><sr/></template></category> 
+<category><pattern>libremente *</pattern><template><sr/></template></category> 
+<category><pattern>en alta voz *</pattern><template><sr/></template></category> 
+<category><pattern>enojado *</pattern><template><sr/></template></category> 
+<category><pattern>enojada *</pattern><template><sr/></template></category> 
+<category><pattern>principalmente *</pattern><template><sr/></template></category> 
+<category><pattern>quiza *</pattern><template><sr/></template></category> 
+<category><pattern>quizas *</pattern><template><sr/></template></category> 
+<category><pattern>mientras tanto *</pattern><template><sr/></template></category> 
+<category><pattern>mentalmente *</pattern><template><sr/></template></category> 
+<category><pattern>simplemente *</pattern><template><sr/></template></category> 
+<category><pattern>mensual *</pattern><template><sr/></template></category> 
+<category><pattern>mas *</pattern><template><sr/></template></category> 
+<category><pattern>mas que *</pattern><template><sr/></template></category>
+<category><pattern>por otra parte *</pattern><template><sr/></template></category> 
+<category><pattern>mortalmente *</pattern><template><sr/></template></category> 
+<category><pattern>la mayoria *</pattern><template><sr/></template></category> 
+<category><pattern>sobre todo *</pattern><template><sr/></template></category> 
+<category><pattern>misterioso *</pattern><template><sr/></template></category> 
+<category><pattern>misteriosa *</pattern><template><sr/></template></category> 
+<category><pattern>a saber *</pattern><template><sr/></template></category>  
+<category><pattern>naturalmente *</pattern><template><sr/></template></category> 
+<category><pattern>cerca *</pattern><template><sr/></template></category> 
+<category><pattern>cuidadosamente *</pattern><template><sr/></template></category> 
+<category><pattern>nervioso *</pattern><template><sr/></template></category>
+<category><pattern>nerviosa *</pattern><template><sr/></template></category> 
+<category><pattern>nuevamente *</pattern><template><sr/></template></category> 
+<category><pattern>ninguna duda *</pattern><template><sr/></template></category> 
+<category><pattern>ruidoso *</pattern><template><sr/></template></category> 
+<category><pattern>ruidosa *</pattern><template><sr/></template></category> 
+<category><pattern>no obstante *</pattern><template><sr/></template></category> 
+<category><pattern>normalmente *</pattern><template><sr/></template></category> 
+<category><pattern>notablemente *</pattern><template><sr/></template></category> 
+<category><pattern>ahora *</pattern><template><sr/></template></category> 
+<category><pattern>hoy en dia *</pattern><template><sr/></template></category> 
+<category><pattern>en ninguna parte *</pattern><template><sr/></template></category> 
+<category><pattern>obedientemente *</pattern><template><sr/></template></category> 
+<category><pattern>desagradable *</pattern><template><sr/></template></category> 
+<category><pattern>obviamente *</pattern><template><sr/></template></category> 
+<category><pattern>por supuesto *</pattern><template><sr/></template></category> 
+<category><pattern>oficialmente *</pattern><template><sr/></template></category> 
+<category><pattern>a menudo *</pattern><template><sr/></template></category> 
+<category><pattern>a bordo *</pattern><template><sr/></template></category> 
+<category><pattern>una vez *</pattern><template><sr/></template></category> 
+<category><pattern>de nuevo *</pattern><template><sr/></template></category> 
+<category><pattern>una vez mas *</pattern><template><sr/></template></category> 
+<category><pattern>hacia adelante *</pattern><template><sr/></template></category> 
+<category><pattern>abiertamente *</pattern><template><sr/></template></category> 
+<category><pattern>originalmente *</pattern><template><sr/></template></category> 
+<category><pattern>si no *</pattern><template><sr/></template></category> 
+<category><pattern>exterior *</pattern><template><sr/></template></category> 
+<category><pattern>alla *</pattern><template><sr/></template></category> 
+<category><pattern>total *</pattern><template><sr/></template></category> 
+<category><pattern>excesivamente *</pattern><template><sr/></template></category> 
+<category><pattern>durante la noche *</pattern><template><sr/></template></category> 
+<category><pattern>doloroso *</pattern><template><sr/></template></category> 
+<category><pattern>dolorosa *</pattern><template><sr/></template></category> 
+<category><pattern>parcialmente *</pattern><template><sr/></template></category> 
+<category><pattern>perfectamente *</pattern><template><sr/></template></category> 
+<category><pattern>permanentemente *</pattern><template><sr/></template></category> 
+<category><pattern>personalmente *</pattern><template><sr/></template></category> 
+<category><pattern>fisicamente *</pattern><template><sr/></template></category> 
+<category><pattern>por favor *</pattern><template><sr/></template></category> 
+<category><pattern>cortesmente *</pattern><template><sr/></template></category> 
+<category><pattern>positivamente *</pattern><template><sr/></template></category> 
+<category><pattern>posiblemente *</pattern><template><sr/></template></category> 
+<category><pattern>potencialmente *</pattern><template><sr/></template></category> 
+<category><pattern>de gran alcance *</pattern><template><sr/></template></category> 
+<category><pattern>practicamente *</pattern><template><sr/></template></category> 
+<category><pattern>exacto *</pattern><template><sr/></template></category> 
+<category><pattern>predominante *</pattern><template><sr/></template></category> 
+<category><pattern>probablemente *</pattern><template><sr/></template></category> 
+<category><pattern>bastante *</pattern><template><sr/></template></category> 
+<category><pattern>previamente *</pattern><template><sr/></template></category> 
+<category><pattern>privado *</pattern><template><sr/></template></category> 
+<category><pattern>puntualmente *</pattern><template><sr/></template></category> 
+<category><pattern>correctamente *</pattern><template><sr/></template></category> 
+<category><pattern>puramente *</pattern><template><sr/></template></category> 
+<category><pattern>rapidamente *</pattern><template><sr/></template></category> 
+<category><pattern>reservado *</pattern><template><sr/></template></category> 
+<category><pattern>raramente *</pattern><template><sr/></template></category> 
+<category><pattern>algo *</pattern><template><sr/></template></category> 
+<category><pattern>razonablemente *</pattern><template><sr/></template></category> 
+<category><pattern>recientemente *</pattern><template><sr/></template></category> 
+<category><pattern>cueste lo que cueste *</pattern><template><sr/></template></category> 
+<category><pattern>regularmente *</pattern><template><sr/></template></category> 
+<category><pattern>relativamente *</pattern><template><sr/></template></category> 
+<category><pattern>renuente *</pattern><template><sr/></template></category> 
+<category><pattern>notable *</pattern><template><sr/></template></category> 
+<category><pattern>en varias ocasiones *</pattern><template><sr/></template></category> 
+<category><pattern>segun se informa *</pattern><template><sr/></template></category> 
+<category><pattern>respectivamente *</pattern><template><sr/></template></category> 
+<category><pattern>groseramente *</pattern><template><sr/></template></category> 
+<category><pattern>tristemente *</pattern><template><sr/></template></category> 
+<category><pattern>con seguridad *</pattern><template><sr/></template></category> 
+<category><pattern>en segundo lugar *</pattern><template><sr/></template></category> 
+<category><pattern>aparentemente *</pattern><template><sr/></template></category> 
+<category><pattern>derecho *</pattern><template><sr/></template></category> 
+<category><pattern>por separado *</pattern><template><sr/></template></category> 
+<category><pattern>seriamente *</pattern><template><sr/></template></category> 
+<category><pattern>varios *</pattern><template><sr/></template></category> 
+<category><pattern>inestable *</pattern><template><sr/></template></category> 
+<category><pattern>agudamente *</pattern><template><sr/></template></category> 
+<category><pattern>pronto *</pattern><template><sr/></template></category>  
+<category><pattern>perceptiblemente *</pattern><template><sr/></template></category> 
+<category><pattern>silenciosamente *</pattern><template><sr/></template></category> 
+<category><pattern>semejantemente *</pattern><template><sr/></template></category> 
+<category><pattern>simultaneamente *</pattern><template><sr/></template></category> 
+<category><pattern>sinceramente *</pattern><template><sr/></template></category>  
+<category><pattern>levemente *</pattern><template><sr/></template></category> 
+<category><pattern>lentamente *</pattern><template><sr/></template></category>
+<category><pattern>tan *</pattern><template><sr/></template></category> 
+<category><pattern>social *</pattern><template><sr/></template></category>  
+<category><pattern>solemnemente *</pattern><template><sr/></template></category> 
+<category><pattern>de alguna manera *</pattern><template><sr/></template></category> 
+<category><pattern>a veces *</pattern><template><sr/></template></category> 
+<category><pattern>en alguna parte *</pattern><template><sr/></template></category> 
+<category><pattern>clase de *</pattern><template><sr/></template></category> 
+<category><pattern>especialmente *</pattern><template><sr/></template></category> 
+<category><pattern>especificamente *</pattern><template><sr/></template></category>
+<category><pattern>constantemente *</pattern><template><sr/></template></category> 
+<category><pattern>cautelosamente *</pattern><template><sr/></template></category> 
+<category><pattern>aun *</pattern><template><sr/></template></category> 
+<category><pattern>terminantemente *</pattern><template><sr/></template></category>
+<category><pattern>fuertemente *</pattern><template><sr/></template></category> 
+<category><pattern>posteriormente *</pattern><template><sr/></template></category> 
+<category><pattern>substancialmente *</pattern><template><sr/></template></category> 
+<category><pattern>con exito *</pattern><template><sr/></template></category> 
+<category><pattern>repentinamente *</pattern><template><sr/></template></category> 
+<category><pattern>suficientemente *</pattern><template><sr/></template></category> 
+<category><pattern>seguramente *</pattern><template><sr/></template></category> 
+<category><pattern>asombrosamente *</pattern><template><sr/></template></category> 
+<category><pattern>temporalmente *</pattern><template><sr/></template></category> 
+<category><pattern>blando *</pattern><template><sr/></template></category> 
+<category><pattern>terrible *</pattern><template><sr/></template></category> 
+<category><pattern>despues de eso *</pattern><template><sr/></template></category> 
+<category><pattern>de tal modo *</pattern><template><sr/></template></category> 
+<category><pattern>a fondo *</pattern><template><sr/></template></category> 
+<category><pattern>a traves *</pattern><template><sr/></template></category> 
+<category><pattern>firmemente *</pattern><template><sr/></template></category> 
+<category><pattern>hoy *</pattern><template><sr/></template></category> 
+<category><pattern>junto *</pattern><template><sr/></template></category> 
+<category><pattern>esta noche *</pattern><template><sr/></template></category> 
+<category><pattern>demasiado *</pattern><template><sr/></template></category> 
+<category><pattern>totalmente *</pattern><template><sr/></template></category> 
+<category><pattern>tradicionalmente *</pattern><template><sr/></template></category> 
+<category><pattern>verdad *</pattern><template><sr/></template></category> 
+<category><pattern>verazmente *</pattern><template><sr/></template></category> 
+<category><pattern>tipicamente *</pattern><template><sr/></template></category> 
+<category><pattern>en ultima instancia *</pattern><template><sr/></template></category> 
+<category><pattern>indudablemente *</pattern><template><sr/></template></category> 
+<category><pattern>inesperado *</pattern><template><sr/></template></category> 
+<category><pattern>desafortunadamente *</pattern><template><sr/></template></category> 
+<category><pattern>muy *</pattern><template><sr/></template></category> 
+<category><pattern>victoriosamente *</pattern><template><sr/></template></category> 
+<category><pattern>violentamente *</pattern><template><sr/></template></category> 
+<category><pattern>virtualmente *</pattern><template><sr/></template></category> 
+<category><pattern>con gusto *</pattern><template><sr/></template></category> 
+<category><pattern>debil *</pattern><template><sr/></template></category> 
+<category><pattern>con fatiga *</pattern><template><sr/></template></category> 
+<category><pattern>siempre que *</pattern><template><sr/></template></category> 
+<category><pattern>por el que *</pattern><template><sr/></template></category> 
+<category><pattern>dondequiera que *</pattern><template><sr/></template></category> 
+<category><pattern>enteramente *</pattern><template><sr/></template></category> 
+<category><pattern>extensamente *</pattern><template><sr/></template></category> 
+<category><pattern>dentro *</pattern><template><sr/></template></category> 
+<category><pattern>por todo el mundo *</pattern><template><sr/></template></category>  
+<category><pattern>con todo *</pattern><template><sr/></template></category> 
+<category><pattern>* cruzado</pattern><template><sr/></template></category> 
+<category><pattern>* un pedacito</pattern><template><sr/></template></category> 
+<category><pattern>* mucho</pattern><template><sr/></template></category> 
+<category><pattern>* un poco</pattern><template><sr/></template></category> 
+<category><pattern>* sobre</pattern><template><sr/></template></category> 
+<category><pattern>* al exterior</pattern><template><sr/></template></category> 
+<category><pattern>* precipitadamente</pattern><template><sr/></template></category> 
+<category><pattern>* absolutamente</pattern><template><sr/></template></category> 
+<category><pattern>* por consiguiente</pattern><template><sr/></template></category> 
+<category><pattern>* exactamente</pattern><template><sr/></template></category> 
+<category><pattern>* activamente</pattern><template><sr/></template></category> 
+<category><pattern>* realmente</pattern><template><sr/></template></category> 
+<category><pattern>* adecuadamente</pattern><template><sr/></template></category> 
+<category><pattern>* luego</pattern><template><sr/></template></category> 
+<category><pattern>* otra vez</pattern><template><sr/></template></category> 
+<category><pattern>* a continuacion</pattern><template><sr/></template></category> 
+<category><pattern>* todo a la derecha</pattern><template><sr/></template></category> 
+<category><pattern>* casi</pattern><template><sr/></template></category> 
+<category><pattern>* solamente</pattern><template><sr/></template></category> 
+<category><pattern>* ya</pattern><template><sr/></template></category> 
+<category><pattern>* bien</pattern><template><sr/></template></category> 
+<category><pattern>* tambien</pattern><template><sr/></template></category> 
+<category><pattern>* alternativamente</pattern><template><sr/></template></category> 
+<category><pattern>* en conjunto</pattern><template><sr/></template></category> 
+<category><pattern>* y asi sucesivamente</pattern><template><sr/></template></category> 
+<category><pattern>* airadamente</pattern><template><sr/></template></category> 
+<category><pattern>* anualmente</pattern><template><sr/></template></category> 
+<category><pattern>* ansiosamente</pattern><template><sr/></template></category> 
+<category><pattern>* de todos modos</pattern><template><sr/></template></category> 
+<category><pattern>* dondequiera</pattern><template><sr/></template></category> 
+<category><pattern>* aparte</pattern><template><sr/></template></category> 
+<category><pattern>* al parecer</pattern><template><sr/></template></category> 
+<category><pattern>* aproximadamente</pattern><template><sr/></template></category> 
+<category><pattern>* alrededor</pattern><template><sr/></template></category> 
+<category><pattern>* como de costumbre</pattern><template><sr/></template></category> 
+<category><pattern>* hasta ahora</pattern><template><sr/></template></category> 
+<category><pattern>* a un lado</pattern><template><sr/></template></category> 
+<category><pattern>* en todos</pattern><template><sr/></template></category> 
+<category><pattern>* al principio</pattern><template><sr/></template></category> 
+<category><pattern>* en el ultimo</pattern><template><sr/></template></category> 
+<category><pattern>* por lo menos</pattern><template><sr/></template></category> 
+<category><pattern>* inmediatamente</pattern><template><sr/></template></category> 
+<category><pattern>* automaticamente</pattern><template><sr/></template></category> 
+<category><pattern>* torpe</pattern><template><sr/></template></category> 
+<category><pattern>* al reves</pattern><template><sr/></template></category> 
+<category><pattern>* gravemente</pattern><template><sr/></template></category> 
+<category><pattern>* apenas</pattern><template><sr/></template></category> 
+<category><pattern>* basicamente</pattern><template><sr/></template></category> 
+<category><pattern>* maravillosamente</pattern><template><sr/></template></category> 
+<category><pattern>* antes</pattern><template><sr/></template></category> 
+<category><pattern>* detras</pattern><template><sr/></template></category> 
+<category><pattern>* debajo</pattern><template><sr/></template></category> 
+<category><pattern>* ademas</pattern><template><sr/></template></category> 
+<category><pattern>* mas alla</pattern><template><sr/></template></category> 
+<category><pattern>* amargamente</pattern><template><sr/></template></category> 
+<category><pattern>* oculto</pattern><template><sr/></template></category> 
+<category><pattern>* sangriento</pattern><template><sr/></template></category>  
+<category><pattern>* elegante</pattern><template><sr/></template></category> 
+<category><pattern>* a otra parte</pattern><template><sr/></template></category> 
+<category><pattern>* enormemente</pattern><template><sr/></template></category> 
+<category><pattern>* bastantes</pattern><template><sr/></template></category> 
+<category><pattern>* entusiastico</pattern><template><sr/></template></category> 
+<category><pattern>* enteramente</pattern><template><sr/></template></category> 
+<category><pattern>* especialmente</pattern><template><sr/></template></category> 
+<category><pattern>* esencialmente</pattern><template><sr/></template></category> 
+<category><pattern>* y otros</pattern><template><sr/></template></category> 
+<category><pattern>* uniforme</pattern><template><sr/></template></category> 
+<category><pattern>* eventual</pattern><template><sr/></template></category> 
+<category><pattern>* exclusivamente</pattern><template><sr/></template></category> 
+<category><pattern>* bastante</pattern><template><sr/></template></category> 
+<category><pattern>* fielmente</pattern><template><sr/></template></category> 
+<category><pattern>* finalmente</pattern><template><sr/></template></category> 
+<category><pattern>en primer lugar *</pattern><template><sr/></template></category> 
+<category><pattern>por ejemplo *</pattern><template><sr/></template></category> 
+<category><pattern>* delantero</pattern><template><sr/></template></category> 
+<category><pattern>* remite</pattern><template><sr/></template></category> 
+<category><pattern>antes afortunadamente *</pattern><template><sr/></template></category> 
+<category><pattern>* freneticamente</pattern><template><sr/></template></category>  
+<category><pattern>* de vez en cuando</pattern><template><sr/></template></category> 
+<category><pattern>* completamente</pattern><template><sr/></template></category> 
+<category><pattern>* generalmente</pattern><template><sr/></template></category> 
+<category><pattern>* suavemente</pattern><template><sr/></template></category> 
+<category><pattern>* genuino</pattern><template><sr/></template></category> 
+<category><pattern>* agraciado</pattern><template><sr/></template></category> 
+<category><pattern>* gradualmente</pattern><template><sr/></template></category> 
+<category><pattern>* grandemente</pattern><template><sr/></template></category> 
+<category><pattern>* codicioso</pattern><template><sr/></template></category> 
+<category><pattern>* precipitado</pattern><template><sr/></template></category> 
+<category><pattern>* pesadamente</pattern><template><sr/></template></category> 
+<category><pattern>* altamente</pattern><template><sr/></template></category> 
+<category><pattern>de la parte * particularmente</pattern><template><sr/></template></category> 
+<category><pattern>particularmente * en fin</pattern><template><sr/></template></category> 
+<category><pattern>en fin * inadvertidamente</pattern><template><sr/></template></category> 
+<category><pattern>inadvertidamente * cada vez mas</pattern><template><sr/></template></category> 
+<category><pattern>cada vez mas * de hecho</pattern><template><sr/></template></category> 
+<category><pattern>de hecho * indefinidamente</pattern><template><sr/></template></category> 
+<category><pattern>indefinidamente * independientemente</pattern><template><sr/></template></category> 
+<category><pattern>independientemente * individualmente</pattern><template><sr/></template></category> 
+<category><pattern>individualmente * inevitable</pattern><template><sr/></template></category> 
+<category><pattern>inevitable * inicialmente</pattern><template><sr/></template></category> 
+<category><pattern>inicialmente * inocente</pattern><template><sr/></template></category> 
+<category><pattern>inocente * inquisitivamente</pattern><template><sr/></template></category> 
+<category><pattern>* en lugar de otro</pattern><template><sr/></template></category> 
+<category><pattern>* invariable</pattern><template><sr/></template></category> 
+<category><pattern>* irritablemente</pattern><template><sr/></template></category> 
+<category><pattern>* en comun</pattern><template><sr/></template></category> 
+<category><pattern>* felizmente</pattern><template><sr/></template></category> 
+<category><pattern>* apenas sobre</pattern><template><sr/></template></category> 
+<category><pattern>* justo</pattern><template><sr/></template></category> 
+<category><pattern>* amablemente</pattern><template><sr/></template></category> 
+<category><pattern>* en gran parte</pattern><template><sr/></template></category> 
+<category><pattern>* tarde</pattern><template><sr/></template></category> 
+<category><pattern>* mas adelante</pattern><template><sr/></template></category> 
+<category><pattern>* perezoso</pattern><template><sr/></template></category> 
+<category><pattern>* ligeramente</pattern><template><sr/></template></category> 
+<category><pattern>* literalmente</pattern><template><sr/></template></category> 
+<category><pattern>* poco</pattern><template><sr/></template></category> 
+<category><pattern>* localmente</pattern><template><sr/></template></category> 
+<category><pattern>* mas de largo</pattern><template><sr/></template></category> 
+<category><pattern>* en voz alta</pattern><template><sr/></template></category> 
+<category><pattern>* enojado</pattern><template><sr/></template></category> 
+<category><pattern>* principalmente</pattern><template><sr/></template></category> 
+<category><pattern>* quiza</pattern><template><sr/></template></category> 
+<category><pattern>* mientras tanto</pattern><template><sr/></template></category> 
+<category><pattern>* mentalmente</pattern><template><sr/></template></category> 
+<category><pattern>* simplemente</pattern><template><sr/></template></category>  
+<category><pattern>* mensual</pattern><template><sr/></template></category> 
+<category><pattern>* mas que</pattern><template><sr/></template></category> 
+<category><pattern>* mas</pattern><template><sr/></template></category> 
+<category><pattern>* por otra parte</pattern><template><sr/></template></category> 
+<category><pattern>* mortalmente</pattern><template><sr/></template></category> 
+<category><pattern>* la mayoria</pattern><template><sr/></template></category> 
+<category><pattern>* sobre todo</pattern><template><sr/></template></category> 
+<category><pattern>* misterioso</pattern><template><sr/></template></category> 
+<category><pattern>* naturalmente</pattern><template><sr/></template></category> 
+<category><pattern>* cerca</pattern><template><sr/></template></category> 
+<category><pattern>* necesariamente</pattern><template><sr/></template></category> 
+<category><pattern>* nervioso</pattern><template><sr/></template></category> 
+<category><pattern>* nuevamente</pattern><template><sr/></template></category> 
+<category><pattern>* ninguna duda</pattern><template><sr/></template></category> 
+<category><pattern>* ruidoso</pattern><template><sr/></template></category> 
+<category><pattern>* no obstante</pattern><template><sr/></template></category> 
+<category><pattern>* normalmente</pattern><template><sr/></template></category> 
+<category><pattern>* notablemente</pattern><template><sr/></template></category> 
+<category><pattern>* hoy en dia</pattern><template><sr/></template></category> 
+<category><pattern>* en ninguna parte</pattern><template><sr/></template></category> 
+<category><pattern>* obedientemente</pattern><template><sr/></template></category> 
+<category><pattern>* obviamente</pattern><template><sr/></template></category> 
+<category><pattern>* oficialmente</pattern><template><sr/></template></category> 
+<category><pattern>* a menudo</pattern><template><sr/></template></category> 
+<category><pattern>* a bordo</pattern><template><sr/></template></category> 
+<category><pattern>* de nuevo</pattern><template><sr/></template></category> 
+<category><pattern>* una vez mas</pattern><template><sr/></template></category> 
+<category><pattern>* una vez</pattern><template><sr/></template></category>  
+<category><pattern>* hacia adelante</pattern><template><sr/></template></category> 
+<category><pattern>* abiertamente</pattern><template><sr/></template></category> 
+<category><pattern>* originalmente</pattern><template><sr/></template></category> 
+<category><pattern>* de otra manera</pattern><template><sr/></template></category> 
+<category><pattern>* exterior</pattern><template><sr/></template></category> 
+<category><pattern>* alla</pattern><template><sr/></template></category> 
+<category><pattern>* total</pattern><template><sr/></template></category> 
+<category><pattern>* parcialmente</pattern><template><sr/></template></category> 
+<category><pattern>* particularmente</pattern><template><sr/></template></category> 
+<category><pattern>* en parte</pattern><template><sr/></template></category> 
+<category><pattern>* perfectamente</pattern><template><sr/></template></category> 
+<category><pattern>* quizas</pattern><template><sr/></template></category> 
+<category><pattern>* permanentemente</pattern><template><sr/></template></category> 
+<category><pattern>* personalmente</pattern><template><sr/></template></category> 
+<category><pattern>* fisicamente</pattern><template><sr/></template></category> 
+<category><pattern>* por favor</pattern><template><sr/></template></category> 
+<category><pattern>* cortesmente</pattern><template><sr/></template></category> 
+<category><pattern>* positivamente</pattern><template><sr/></template></category> 
+<category><pattern>* posiblemente</pattern><template><sr/></template></category> 
+<category><pattern>* potencialmente</pattern><template><sr/></template></category> 
+<category><pattern>* de gran alcance</pattern><template><sr/></template></category> 
+<category><pattern>* practicamente</pattern><template><sr/></template></category> 
+<category><pattern>* exacto</pattern><template><sr/></template></category> 
+<category><pattern>* predominante</pattern><template><sr/></template></category> 
+<category><pattern>* probablemente</pattern><template><sr/></template></category> 
+<category><pattern>* previamente</pattern><template><sr/></template></category> 
+<category><pattern>* privado</pattern><template><sr/></template></category>  
+<category><pattern>* puntualmente</pattern><template><sr/></template></category>  
+<category><pattern>* puramente</pattern><template><sr/></template></category> 
+<category><pattern>* rapidamente</pattern><template><sr/></template></category> 
+<category><pattern>* raramente</pattern><template><sr/></template></category>  
+<category><pattern>* facilmente</pattern><template><sr/></template></category> 
+<category><pattern>* razonablemente</pattern><template><sr/></template></category> 
+<category><pattern>* recientemente</pattern><template><sr/></template></category> 
+<category><pattern>* cueste lo que cueste</pattern><template><sr/></template></category> 
+<category><pattern>* regularmente</pattern><template><sr/></template></category> 
+<category><pattern>* relativamente</pattern><template><sr/></template></category> 
+<category><pattern>* renuente</pattern><template><sr/></template></category> 
+<category><pattern>* segun se informa</pattern><template><sr/></template></category> 
+<category><pattern>* respectivamente</pattern><template><sr/></template></category> 
+<category><pattern>* groseramente</pattern><template><sr/></template></category> 
+<category><pattern>* tristemente</pattern><template><sr/></template></category> 
+<category><pattern>* en segundo lugar</pattern><template><sr/></template></category> 
+<category><pattern>* aparentemente</pattern><template><sr/></template></category>    
+<category><pattern>* por separado</pattern><template><sr/></template></category> 
+<category><pattern>* seriamente</pattern><template><sr/></template></category>  
+<category><pattern>* inestable</pattern><template><sr/></template></category>          
+<category><pattern>* agudamente</pattern><template><sr/></template></category>  
+<category><pattern>* pronto</pattern><template><sr/></template></category>                         
+<category><pattern>* perceptiblemente</pattern><template><sr/></template></category> 
+<category><pattern>* silenciosamente</pattern><template><sr/></template></category> 
+<category><pattern>* semejantemente</pattern><template><sr/></template></category> 
+<category><pattern>* simultaneamente</pattern><template><sr/></template></category> 
+<category><pattern>* desde</pattern><template><sr/></template></category>                
+<category><pattern>* sinceramente</pattern><template><sr/></template></category>                                                       
+<category><pattern>levemente * lentamente</pattern><template><sr/></template></category>                                                              
+<category><pattern>lentamente * suavemente</pattern><template><sr/></template></category>                                                               
+<category><pattern>suavemente * social</pattern><template><sr/></template></category>                                                               
+<category><pattern>social * suavemente</pattern><template><sr/></template></category>                                                               
+<category><pattern>suavemente * solamente</pattern><template><sr/></template></category>                                                             
+<category><pattern>solamente * solemnemente</pattern><template><sr/></template></category>                                                           
+<category><pattern>solemnemente * de alguna manera</pattern><template><sr/></template></category>                                                             
+<category><pattern>de alguna manera * a veces</pattern><template><sr/></template></category>                                                               
+<category><pattern>a veces * algo</pattern><template><sr/></template></category>                                                            
+<category><pattern>algo * en alguna parte</pattern><template><sr/></template></category>                                                             
+<category><pattern>en alguna parte * pronto</pattern><template><sr/></template></category>                                                                            
+<category><pattern>* de especialmente</pattern><template><sr/></template></category> 
+<category><pattern>* especificamente</pattern><template><sr/></template></category>               
+<category><pattern>* con</pattern><template><sr/></template></category>                 
+<category><pattern>* junto</pattern><template><sr/></template></category>                 
+<category><pattern>* esta noche</pattern><template><sr/></template></category>  
+<category><pattern>* demasiado</pattern><template><sr/></template></category>            
+<category><pattern>* tradicionalmente</pattern><template><sr/></template></category> 
+<category><pattern>* verdad</pattern><template><sr/></template></category>                
+<category><pattern>* verazmente</pattern><template><sr/></template></category>  
+<category><pattern>* tipicamente</pattern><template><sr/></template></category> 
+<category><pattern>* en ultima instancia</pattern><template><sr/></template></category> 
+<category><pattern>* indudablemente</pattern><template><sr/></template></category> 
+<category><pattern>* inesperado</pattern><template><sr/></template></category>                   
+<category><pattern>* desafortunadamente</pattern><template><sr/></template></category> 
+<category><pattern>* hasta</pattern><template><sr/></template></category>                                                              
+<category><pattern>* arriba</pattern><template><sr/></template></category>            
+<category><pattern>* muy</pattern><template><sr/></template></category>                   
+<category><pattern>* victoriosamente</pattern><template><sr/></template></category>  
+<category><pattern>* virtualmente</pattern><template><sr/></template></category> 
+<category><pattern>* con gusto</pattern><template><sr/></template></category>                        
+<category><pattern>* debil</pattern><template><sr/></template></category>                  
+<category><pattern>* con fatiga</pattern><template><sr/></template></category>  
+<category><pattern>* siempre que</pattern><template><sr/></template></category> 
+<category><pattern>* por el que</pattern><template><sr/></template></category>  
+<category><pattern>* dondequiera que</pattern><template><sr/></template></category> 
+<category><pattern>* extensamente</pattern><template><sr/></template></category> 
+<category><pattern>* violentamente</pattern><template><sr/></template></category> 
+<category><pattern>* dentro</pattern><template><sr/></template></category>                   
+<category><pattern>* por todo el mundo</pattern><template><sr/></template></category> 
+<category><pattern>* ayer</pattern><template><sr/></template></category>                                                                                                                                                                                                        
+<category><pattern>* aun</pattern><template><sr/></template></category>                     
+<category><pattern>* derecho</pattern><template><sr/></template></category>                 
+<category><pattern>* terminantemente</pattern><template><sr/></template></category> 
+<category><pattern>* fuertemente</pattern><template><sr/></template></category> 
+<category><pattern>* posteriormente</pattern><template><sr/></template></category> 
+<category><pattern>* substancialmente</pattern><template><sr/></template></category> 
+<category><pattern>* con exito</pattern><template><sr/></template></category>               
+<category><pattern>* repentinamente</pattern><template><sr/></template></category> 
+<category><pattern>* suficientemente</pattern><template><sr/></template></category> 
+<category><pattern>* seguramente</pattern><template><sr/></template></category> 
+<category><pattern>* asombrosamente</pattern><template><sr/></template></category>  
+<category><pattern>* temporalmente</pattern><template><sr/></template></category> 
+<category><pattern>* blando</pattern><template><sr/></template></category>                         
+<category><pattern>* terrible</pattern><template><sr/></template></category>              
+<category><pattern>* despues de eso</pattern><template><sr/></template></category> 
+<category><pattern>* de tal modo</pattern><template><sr/></template></category> 
+<category><pattern>* a fondo</pattern><template><sr/></template></category>      
+</aiml> 

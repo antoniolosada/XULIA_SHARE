@@ -1,0 +1,15 @@
+C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch
+
+;;  *****************************************
+    GoTo.Last.Window:
+;;  *****************************************
+               CoordMode, Mouse, Screen
+               Sleep, 125 ; 1,000 = 1 second
+               run C:\Users\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Window Switcher.lnk
+               Sleep, 100 ; 1,000 = 1 second
+               sendinput {return}
+               return
+
+
+Alt-ESC
+Alt-Shift- ESC

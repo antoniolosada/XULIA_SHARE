@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/xmlschema-instance" xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+<!-- nacionalidad usuario -->
+<category><pattern>soy de *</pattern><that>de que pais eres</that><template>
+	<think><set name="pais"><star/></set></think><sr/></template></category>
+<category><pattern>soy espanhol</pattern><template>
+	<think><set name="pais">espanha</set></think>paella, sangria, tortilla de patatas y ole.</template></category>
+<category><pattern>soy frances</pattern><template>
+	<think><set name="pais">francia</set></think>me gustaria ver la torre eiffel. la has visto?</template></category>
+<category><pattern>soy italiano</pattern><template>
+	<think><set name="pais">italia</set></think>eres de italia? debes ser un maestro haciendo pasta.</template></category>
+<category><pattern>soy ingles</pattern><template>
+	<think><set name="pais">inglaterra</set></think>me gustaria visitar londres en un futuro.</template></category>
+<category><pattern>soy portugues</pattern><template>
+	<think><set name="pais">portugal</set></think>entonces, como quien dice, somos vecinos.</template></category>
+<category><pattern>soy belga</pattern><template>
+	<think><set name="pais">belgica</set></think>debes ser un gran aficionado al ciclismo.</template></category>
+<category><pattern>soy holandes</pattern><template>
+	<think><set name="pais">holanda</set></think>amsterdam es una bonita ciudad.</template></category>
+<category><pattern>soy irlandes</pattern><template>
+	<think><set name="pais">irlanda</set></think>vaya invento la guinness!</template></category>
+<category><pattern>soy danes</pattern><template>
+	<think><set name="pais">dinamarca</set></think>como la sirenita.</template></category>
+<category><pattern>soy noruego</pattern><template>
+	<think><set name="pais">noruego</set></think>tienes suerte de tener los fiordos tan cerca. me encantaria visitarlos.</template></category>
+<category><pattern>soy sueco</pattern><template>
+	<think><set name="pais">suecia</set></think>podrias mover unos hilos y otorgarle un nobel a mi botmaster?.</template></category>
+<category><pattern>soy finlandes</pattern><template>
+	<think><set name="pais">finlandia</set></think>seguro que tienes un telefono nokia ;-).</template></category>
+<category><pattern>soy ruso</pattern><template>
+	<think><set name="pais">rusia</set></think>has estado en moscu? la plaza roja es impresionante.</template></category>
+<category><pattern>soy bielorruso</pattern><template>
+	<think><set name="pais">bielorusia</set></think>apenas tengo datos de bielorusia. cuentame algo.</template></category>
+<category><pattern>soy ucraniano</pattern><template>
+	<think><set name="pais">ucrania</set></think>serguei bucka tambien es ucraniano.</template></category>
+<category><pattern>soy serbio</pattern><template>
+<think><set name="pais">serbia</set></think>oye, que opinas de clemente como seleccionador serbio?</template></category>
+<category><pattern>soy checo</pattern><template>
+	<think><set name="pais">chequia</set></think>praga es una de las ciudades con mas encanto de europa.</template></category>
+<category><pattern>soy polaco</pattern><template>
+	<think><set name="pais">polonia</set></think>como marie sklodowska, la conoces?. es la famosa cientifica marie curie.</template></category>
+<category><pattern>soy griego</pattern><template>
+	<think><set name="pais">grecia</set></think>lo que mas me gusta de grecia son sus islas.</template></category>
+<category><pattern>soy rumano</pattern><template>
+	<think><set name="pais">rumania</set></think>como el conde dracula. has estado en transilvania?</template></category>
+<category><pattern>soy bulgaro</pattern><template>
+	<think><set name="pais">bulgaria</set></think>te gusta el tarator?</template></category>
+<category><pattern>soy croata</pattern><template>
+	<think><set name="pais">croacia</set></think>janica kostelic es una esquiadora esplendida.</template></category>
+<category><pattern>soy esloveno</pattern><template>
+	<think><set name="pais">eslovenia</set></think>no conozco mucho de eslovenia. por que no me cuentas algo de alli?</template></category>
+<category><pattern>soy eslovaco</pattern><template>
+	<think><set name="pais">eslovaquia</set></think>cuentame algo de eslovaquia. yo no se mucho.</template></category>
+<category><pattern>soy suizo</pattern><template>
+	<think><set name="pais">suiza</set></think>como los relojes.</template></category>
+<category><pattern>soy austriaco</pattern><template>
+	<think><set name="pais">austria</set></think>igual que mozart, te gusta la musica clasica?</template></category>
+<category><pattern>soy andorrano</pattern><template>
+	<think><set name="pais">andorra</set></think>andorra es el paraiso de los cachibaches.</template></category>
+<category><pattern>soy luxemburgues</pattern><template>
+	<think><set name="pais">luxemburgo</set></think>apenas conozco nada de luxemburgo.</template></category>
+<category><pattern>soy hungaro</pattern><template>
+	<think><set name="pais">hungria</set></think>espero poder visitar budapest en un futuro.</template></category>
+<category><pattern>soy bosnio</pattern><template>
+	<think><set name="pais">bosnia</set></think>apenas conozco nada de bosnia. cuentame algo.</template></category>
+<category><pattern>soy turco</pattern><template>
+	<think><set name="pais">turquia</set></think>la mezquita azul me parece un culmen arquitectonico.</template></category>
+<category><pattern>soy albanes</pattern><template>
+	<think><set name="pais">albania</set></think>albania es un pais bastante desconocido para mi.</template></category>
+<category><pattern>soy montenegrino</pattern><template>
+	<think><set name="pais">montenegro</set></think>no conozco mucho de montenegro. que me puedes contar?</template></category>
+<category><pattern>soy macedonio</pattern><template>
+	<think><set name="pais">macedonia</set></think>como alejandro magno. sabes de quien hablo?</template></category>
+<category><pattern>soy lituano</pattern><template>
+	<think><set name="pais">lituania</set></think>estoy segura de que te gusta el baloncesto.</template></category>
+<category><pattern>soy estonio</pattern><template>
+	<think><set name="pais">estonia</set></think>el estonio que mas conozco el valery karpin.</template></category>
+<category><pattern>soy leton</pattern><template>
+	<think><set name="pais">letonia</set></think>riga es una hermosa ciudad.</template></category>
+<category><pattern>soy aleman</pattern><template>
+	<think><set name="pais">alemania</set></think>llegasta a ver en pie el muro de berlin?</template></category>
+<category><pattern>soy islandes</pattern><template>
+	<think><set name="pais">islandia</set></think>lo siento, pero bjork me parece horripilante.</template></category>
+<category><pattern>soy moldavo</pattern><template>
+	<think><set name="pais">moldavia</set></think>en moldavia se habla el rumano, no es cierto?</template></category>
+<category><pattern>soy brasilenho</pattern><template>
+	<think><set name="pais">brasil</set></think>me gustaria poder bailar samba.</template></category>
+<category><pattern>soy argentino</pattern><template>
+	<think><set name="pais">argentina</set></think>ensenhame a bailar tango.</template></category>
+<category><pattern>soy uruguayo</pattern><template>
+	<think><set name="pais">uruguay</set></think>vamonos de vacaciones a punta del este.</template></category>
+<category><pattern>soy paraguayo</pattern><template>
+	<think><set name="pais">paraguay</set></think>sabes hablar el guarani?</template></category>
+<category><pattern>soy chileno</pattern><template>
+	<think><set name="pais">chile</set></think>has visitado la isla de pascua?</template></category>
+<category><pattern>soy peruano</pattern><template>
+	<think><set name="pais">peru</set></think>eres un descendiente inca.</template></category>
+<category><pattern>soy venezolano</pattern><template>
+	<think><set name="pais">venezuela</set></think>conoces a alguna miss mundo?</template></category>
+<category><pattern>soy ecuatoriano</pattern><template>
+	<think><set name="pais">ecuador</set></think>vaya tortugas teneis en las islas galapagos.</template></category>
+<category><pattern>soy colombiano</pattern><template>
+	<think><set name="pais">colombia</set></think>me encanta shakira, en concreto como se mueve.</template></category>
+<category><pattern>soy boliviano</pattern><template>
+	<think><set name="pais">bolivia</set></think>los jerseys de evo morales son muy vistosos.</template></category>
+<category><pattern>soy panamenho</pattern><template>
+	<think><set name="pais">panama</set></think>sabes cuando se construyo el canal de panama?</template></category>
+<category><pattern>soy nicaraguense</pattern><template>
+	<think><set name="pais">nicaragua</set></think>soy una gran aficionada a la poesia de ruben dario.</template></category>
+<category><pattern>soy costarricense</pattern><template>
+	<think><set name="pais">costa rica</set></think>que me dice mae?</template></category>
+<category><pattern>soy salvadorenho</pattern><template>
+	<think><set name="pais">el salvador</set></think>apenas conozco algo de tu pais. cuentame algo.</template></category>
+<category><pattern>soy hondurenho</pattern><template>
+	<think><set name="pais">honduras</set></think>cuentame algo de tu pais.</template></category>
+<category><pattern>soy guatemalteco</pattern><template>
+<think><set name="pais">guatemala</set></think>puede ser ricardo arjona vuestro conciudadano mas internacional?</template></category>
+<category><pattern>soy jamaicano</pattern><template>
+	<think><set name="pais">jamaica</set></think>soy una gran fan de la musica reggae.</template></category>
+<category><pattern>soy belicenho</pattern><template>
+	<think><set name="pais">belice</set></think>lo siento, pero belice es un pais tan pequenho que no se nada de el.</template></category>
+<category><pattern>soy mexicano</pattern><template>
+	<think><set name="pais">mexico</set></think>... con dinero y sin dinero hago siempre lo que quiero, y mi palabra es la leeeeeeeeeeeeey.  no tengo trono ni reina, ni nadie quien me comprenda...pero sigo siendo el reeeeeeeeeeey... canta conmigo guey.</template></category>
+<category><pattern>soy cubano</pattern><template>
+	<think><set name="pais">cuba</set></think>los puros habanos tienen fama de ser los mejores del mundo.</template></category>
+<category><pattern>soy dominicano</pattern><template>
+	<think><set name="pais">republica dominicana</set></think>mi botmaster te agradeceria que le invitases a un brugal.</template></category>
+<category><pattern>soy haitiano</pattern><template>
+	<think><set name="pais">haiti</set></think>no tengo muchos datos acerca de haiti.</template></category>
+<category><pattern>soy estadounidense</pattern><template>
+	<think><set name="pais">estados unidos</set></think>me gustaria mandarle un paquete de galletitas al presidente bush.</template></category>
+<category><pattern>soy canadiense</pattern><template>
+	<think><set name="pais">canada</set></think>crees que podria llegar a ser miembro de la policia montada?</template></category>
+<category><pattern>soy marroqui</pattern><template>
+	<think><set name="pais">marruecos</set></think>me encantaria visitar marrakech.</template></category>
+<category><pattern>soy argelino</pattern><template>
+	<think><set name="pais">argelia</set></think>nourredine morceli fue un gran atleta.</template></category>
+<category><pattern>soy tunecino</pattern><template>
+	<think><set name="pais">tunez</set></think>cartago fue un gran imperio en la antiguedad.</template></category>
+<category><pattern>soy egipcio</pattern><template>
+	<think><set name="pais">egipto</set></think>como las piramides. las has visitado?</template></category>
+<category><pattern>soy sudanes</pattern><template>
+	<think><set name="pais">sudan</set></think>no conozco a muchos sudaneses. estoy encantada de poder hablar contigo.</template></category>
+<category><pattern>soy somali</pattern><template>
+	<think><set name="pais">somalia</set></think>siento todos los problemas que estan ocurriendo en tu pais.</template></category>
+<category><pattern>soy libio</pattern><template>
+	<think><set name="pais">libia</set></think>hh</template></category>
+<category><pattern>soy angolenho</pattern><template>
+	<think><set name="pais">angola</set></think>entonces hablas portugues.</template></category>
+<category><pattern>soy sudafricano</pattern><template>
+	<think><set name="pais">sudafrica</set></think>nelson mandela es un de los personajes historicos que mas admiro.</template></category>
+<category><pattern>soy guineano</pattern><template>
+	<think><set name="pais">guinea</set></think>guinea ecuatorial?</template></category>
+<category><pattern>soy sengales</pattern><template>
+	<think><set name="pais">senegal</set></think>hh</template></category>
+<category><pattern>soy camerunes</pattern><template>
+	<think><set name="pais">camerun</set></think>mira, como eto'o! te gusta el futbol?</template></category>
+<category><pattern>soy nigeriano</pattern><template>
+	<think><set name="pais">nigeria</set></think>hh</template></category>
+<category><pattern>soy ganes</pattern><template>
+	<think><set name="pais">ghana</set></think>hh</template></category>
+<category><pattern>soy chino</pattern><template>
+	<think><set name="pais">china</set></think>logico, un 20% de la poblacion mundial es china, asi que no me sorprende en absoluto. </template></category>
+<category><pattern>soy japones</pattern><template>
+<think><set name="pais">japon</set></think>oooooosstras como shin chan. </template></category>
+<category><pattern>soy coreano</pattern><template>
+	<think><set name="pais">corea</set></think>seguro que conoces a alguien trabajando en hyuandai.</template></category>
+<category><pattern>soy israeli</pattern><template>
+	<think><set name="pais">israel</set></think>hh</template></category>
+<category><pattern>soy libanes</pattern><template>
+	<think><set name="pais">libano</set></think>hh</template></category>
+<category><pattern>soy chipriota</pattern><template>
+	<think><set name="pais">chipre</set></think>hh</template></category>
+<category><pattern>soy iraqui</pattern><template>
+	<think><set name="pais">irak</set></think>anda que no os la montaron bien. espero se solucione todo lo mejor posible.</template></category>
+<category><pattern>soy irani</pattern><template>
+	<think><set name="pais">iran</set></think>iran esta en primera linea de noticias ultimamente.</template></category>
+<category><pattern>soy jordano</pattern><template>
+	<think><set name="pais">jordania</set></think>me vas a perdonar, pero todo lo que conozco de tu pais es a la reina, rania de jordania.</template></category>
+<category><pattern>soy indio</pattern><template>
+	<think><set name="pais">la india</set></think>ya han elegido el taj mahal como una de las siete maravillas del mundo moderno? espero que si.</template></category>
+<category><pattern>soy tailandes</pattern><template>
+	<think><set name="pais">tailandia</set></think>hh</template></category>
+<category><pattern>soy vietnamita</pattern><template>
+	<think><set name="pais">vietnam</set></think>hh</template></category>
+<category><pattern>soy camboyano</pattern><template>
+	<think><set name="pais">camboya</set></think>hh</template></category>
+<category><pattern>soy afgano</pattern><template>
+	<think><set name="pais">afganistan</set></think>hh</template></category>
+<category><pattern>soy pakistani</pattern><template>
+	<think><set name="pais">pakistan</set></think>hh</template></category>
+<category><pattern>soy australiano</pattern><template>
+	<think><set name="pais">australia</set></think>canguros, koalas, playas y foster's. podria acostumbrarme sin problemas.</template></category>
+<category><pattern>soy neozelandes</pattern><template>
+	<think><set name="pais">nueva zelanda</set></think>tengo entendido que nueva zelanda es muy similar a galicia. me encantaria poder visitarla.</template></category>
+<category><pattern>soy malayo</pattern><template>
+	<think><set name="pais">malasia</set></think>yo creo que lo mas conocido de malasia son las torres petronas, en kuala lumpur.</template></category>
+<category><pattern>soy indonesio</pattern><template>
+	<think><set name="pais">indonesia</set></think>dime como se puede gobernar un pais con 17.508 islas, me parece imposible.</template></category>
+<category><pattern>soy samoano</pattern><template>
+	<think><set name="pais">samoa</set></think>eres de savaii o de upolu?</template></category>
+<category><pattern>soy fijiano</pattern><template>
+	<think><set name="pais">fiji</set></think>sabias que abel tasman fue el primer europeo que navego en las aguas de fiji alla por 1643?</template></category>
+<category><pattern>soy tongano</pattern><template>
+	<think><set name="pais">tonga</set></think>sabias que vuestro antiguo rey taufa'ahau tupou iv estaba en el libro guinness de los records como el rey mas gordo del mundo?</template></category>
+<category><pattern>soy vanuatense</pattern><template>
+	<think><set name="pais">vanuatu</set></think>sabes que segun la new economics foundation vanuatu es el mejor pais para vivir?</template></category>
+<category><pattern>soy papu</pattern><template>
+	<think><set name="pais">papua nueva guinea</set></think>aclarame esta duda, tu pais pertenece a asia o a oceania?.</template></category>
+<category><pattern>soy malgache</pattern><template>
+	<think><set name="pais">madagascar</set></think>vivir es madagascar es un privilegio. alli se encuentran mas del 5% de las especies animales del planeta.</template></category>
+
+<category><pattern>soy espanhol *</pattern><template><srai>soy espanhol</srai></template></category>
+<category><pattern>soy frances *</pattern><template><srai>soy frances</srai></template></category>
+<category><pattern>soy italiano *</pattern><template><srai>soy italiano</srai></template></category>
+<category><pattern>soy ingles *</pattern><template><srai>soy ingles</srai></template></category>
+<category><pattern>soy portugues *</pattern><template><srai>soy portugues</srai></template></category>
+<category><pattern>soy belga *</pattern><template><srai>soy belga</srai></template></category>
+<category><pattern>soy holandes *</pattern><template><srai>soy holandes</srai></template></category>
+<category><pattern>soy irlandes *</pattern><template><srai>soy irlandes</srai></template></category>
+<category><pattern>soy danes *</pattern><template><srai>soy danes</srai></template></category>
+<category><pattern>soy noruego *</pattern><template><srai>soy noruego</srai></template></category>
+<category><pattern>soy sueco *</pattern><template><srai>soy sueco</srai></template></category>
+<category><pattern>soy finlandes *</pattern><template><srai>soy finlandes</srai></template></category>
+<category><pattern>soy ruso *</pattern><template><srai>soy ruso</srai></template></category>
+<category><pattern>soy bielorruso *</pattern><template><srai>soy bielorruso</srai></template></category>
+<category><pattern>soy ucraniano *</pattern><template><srai>soy ucraniano</srai></template></category>
+<category><pattern>soy serbio *</pattern><template><srai>soy serbio</srai></template></category>
+<category><pattern>soy checo *</pattern><template><srai>soy checo</srai></template></category>
+<category><pattern>soy polaco *</pattern><template><srai>soy polaco</srai></template></category>
+<category><pattern>soy griego *</pattern><template><srai>soy griego</srai></template></category>
+<category><pattern>soy rumano *</pattern><template><srai>soy rumano</srai></template></category>
+<category><pattern>soy bulgaro *</pattern><template><srai>soy bulgaro</srai></template></category>
+<category><pattern>soy croata *</pattern><template><srai>soy croata</srai></template></category>
+<category><pattern>soy esloveno *</pattern><template><srai>soy esloveno</srai></template></category>
+<category><pattern>soy eslovaco *</pattern><template><srai>soy eslovaco</srai></template></category>
+<category><pattern>soy suizo *</pattern><template><srai>soy suizo</srai></template></category>
+<category><pattern>soy austriaco *</pattern><template><srai>soy austriaco</srai></template></category>
+<category><pattern>soy andorrano *</pattern><template><srai>soy andorrano</srai></template></category>
+<category><pattern>soy luxemburgues *</pattern><template><srai>soy luxemburgues</srai></template></category>
+<category><pattern>soy hungaro *</pattern><template><srai>soy hungaro</srai></template></category>
+<category><pattern>soy bosnio *</pattern><template><srai>soy bosnio</srai></template></category>
+<category><pattern>soy turco *</pattern><template><srai>soy turco</srai></template></category>
+<category><pattern>soy albanes *</pattern><template><srai>soy albanes</srai></template></category>
+<category><pattern>soy montenegrino *</pattern><template><srai>soy montenegrino</srai></template></category>
+<category><pattern>soy macedonio *</pattern><template><srai>soy macedonio</srai></template></category>
+<category><pattern>soy lituanao *</pattern><template><srai>soy lituano</srai></template></category>
+<category><pattern>soy estonio *</pattern><template><srai>soy estonio</srai></template></category>
+<category><pattern>soy leton *</pattern><template><srai>soy leton</srai></template></category>
+<category><pattern>soy aleman *</pattern><template><srai>soy aleman</srai></template></category>
+<category><pattern>soy moldavo *</pattern><template><srai>soy moldavo</srai></template></category>
+<category><pattern>soy brasilenho *</pattern><template><srai>soy brasilenho</srai></template></category>
+<category><pattern>soy argentino *</pattern><template><srai>soy argentino</srai></template></category>
+<category><pattern>soy uruguayo *</pattern><template><srai>soy uruguayo</srai></template></category>
+<category><pattern>soy paraguayo *</pattern><template><srai>soy paraguayo</srai></template></category>
+<category><pattern>soy chileno *</pattern><template><srai>soy chileno</srai></template></category>
+<category><pattern>soy peruano *</pattern><template><srai>soy peruano</srai></template></category>
+<category><pattern>soy venezolano *</pattern><template><srai>soy venezolano</srai></template></category>
+<category><pattern>soy ecuatoriano *</pattern><template><srai>soy ecuatoriano</srai></template></category>
+<category><pattern>soy colombiano *</pattern><template><srai>soy colombiano</srai></template></category>
+<category><pattern>soy boliviano *</pattern><template><srai>soy boliviano</srai></template></category>
+<category><pattern>soy panamenho *</pattern><template><srai>soy panamenho</srai></template></category>
+<category><pattern>soy nicaraguense *</pattern><template><srai>soy nicaraguense</srai></template></category>
+<category><pattern>soy costarricense *</pattern><template><srai>soy costarricense</srai></template></category>
+<category><pattern>soy salvadorenho *</pattern><template><srai>soy salvadorenho</srai></template></category>
+<category><pattern>soy hondurenho *</pattern><template><srai>soy hondurenho</srai></template></category>
+<category><pattern>soy guatemalteco *</pattern><template><srai>soy guetemalteco</srai></template></category>
+<category><pattern>soy jamaicano *</pattern><template><srai>soy jamaicano</srai></template></category>
+<category><pattern>soy belicenho *</pattern><template><srai>soy belicenho</srai></template></category>
+<category><pattern>soy mexicano *</pattern><template><srai>soy mexicano</srai></template></category>
+<category><pattern>soy cubano *</pattern><template><srai>soy cubano</srai></template></category>
+<category><pattern>soy dominicano *</pattern><template><srai>soy dominicano</srai></template></category>
+<category><pattern>soy haitiano *</pattern><template><srai>soy haitiano</srai></template></category>
+<category><pattern>soy estadounidense *</pattern><template><srai>soy estadounidense</srai></template></category>
+<category><pattern>soy canadiense *</pattern><template><srai>soy canadiense</srai></template></category>
+<category><pattern>soy marroqui *</pattern><template><srai>soy marroqui</srai></template></category>
+<category><pattern>soy argelino *</pattern><template><srai>soy argelino</srai></template></category>
+<category><pattern>soy tunecino *</pattern><template><srai>soy tunecino</srai></template></category>
+<category><pattern>soy egipcio *</pattern><template><srai>soy egipcio</srai></template></category>
+<category><pattern>soy sudanes *</pattern><template><srai>soy sudanes</srai></template></category>
+<category><pattern>soy libio *</pattern><template><srai>soy libio</srai></template></category>
+<category><pattern>soy angolenho *</pattern><template><srai>soy angolenho</srai></template></category>
+<category><pattern>soy sudafricano *</pattern><template><srai>soy sudafricano</srai></template></category>
+<category><pattern>soy guineano *</pattern><template><srai>soy guineana</srai></template></category>
+<category><pattern>soy senegales *</pattern><template><srai>soy senegales</srai></template></category>
+<category><pattern>soy somali *</pattern><template><srai>soy somali</srai></template></category>
+<category><pattern>soy cameruness *</pattern><template><srai>soy camerunes</srai></template></category>
+<category><pattern>soy nigeriano *</pattern><template><srai>soy nigeriano</srai></template></category>
+<category><pattern>soy ganes *</pattern><template><srai>soy ganes</srai></template></category>
+<category><pattern>soy chino *</pattern><template><srai>soy chino</srai></template></category>
+<category><pattern>soy japones *</pattern><template><srai>soy japones</srai></template></category>
+<category><pattern>soy coreano *</pattern><template><srai>soy coreano</srai></template></category>
+<category><pattern>soy israeli *</pattern><template><srai>soy israeli</srai></template></category>
+<category><pattern>soy libanes *</pattern><template><srai>soy libenes</srai></template></category>
+<category><pattern>soy chipriota *</pattern><template><srai>soy chipriota</srai></template></category>
+<category><pattern>soy iraqui *</pattern><template><srai>soy iraqui</srai></template></category>
+<category><pattern>soy irani *</pattern><template><srai>soy irani</srai></template></category>
+<category><pattern>soy jordano *</pattern><template><srai>soy jordano</srai></template></category>
+<category><pattern>soy indio *</pattern><template><srai>soy indio</srai></template></category>
+<category><pattern>soy tailandes *</pattern><template><srai>soy tailandes</srai></template></category>
+<category><pattern>soy vietnamita *</pattern><template><srai>soy vietnamita</srai></template></category>
+<category><pattern>soy camboyano *</pattern><template><srai>soy camboyano</srai></template></category>
+<category><pattern>soy afgano *</pattern><template><srai>soy afgano</srai></template></category>
+<category><pattern>soy pakistani *</pattern><template><srai>soy pakistanai</srai></template></category>
+<category><pattern>soy australiano *</pattern><template><srai>soy australiano</srai></template></category>
+<category><pattern>soy neozelandes *</pattern><template><srai>soy neozelandes</srai></template></category>
+<category><pattern>soy malayo *</pattern><template><srai>soy malayo</srai></template></category>
+<category><pattern>soy indonesio *</pattern><template><srai>soy indonesio</srai></template></category>
+<category><pattern>soy samoano *</pattern><template><srai>soy samoano</srai></template></category>
+<category><pattern>soy fijiano *</pattern><template><srai>soy fijiano</srai></template></category>
+<category><pattern>soy tongano *</pattern><template><srai>soy tongano</srai></template></category>
+<category><pattern>soy vanuatense *</pattern><template><srai>soy vanuatense</srai></template></category>
+<category><pattern>soy papu *</pattern><template><srai>soy papu</srai></template></category>
+<category><pattern>soy melgache *</pattern><template><srai>soy melgache</srai></template></category>
+	
+<category><pattern>soy espanhola</pattern><template><srai>soy espanhol</srai></template></category>
+<category><pattern>soy francesa</pattern><template><srai>soy frances</srai></template></category>
+<category><pattern>soy italiana</pattern><template><srai>soy italiano</srai></template></category>
+<category><pattern>soy inglesa</pattern><template><srai>soy ingles</srai></template></category>
+<category><pattern>soy portuguesa</pattern><template><srai>soy portugues</srai></template></category>
+<category><pattern>soy holandesa</pattern><template><srai>soy holandes</srai></template></category>
+<category><pattern>soy irlandesa</pattern><template><srai>soy irlandes</srai></template></category>
+<category><pattern>soy danesa</pattern><template><srai>soy danes</srai></template></category>
+<category><pattern>soy noruega</pattern><template><srai>soy noruego</srai></template></category>
+<category><pattern>soy sueca</pattern><template><srai>soy sueco</srai></template></category>
+<category><pattern>soy finlandesa</pattern><template><srai>soy finlandes</srai></template></category>
+<category><pattern>soy rusa</pattern><template><srai>soy ruso</srai></template></category>
+<category><pattern>soy bielorrusa</pattern><template><srai>soy bielorruso</srai></template></category>
+<category><pattern>soy ucraniana</pattern><template><srai>soy ucraniano</srai></template></category>
+<category><pattern>soy serbia</pattern><template><srai>soy serbio</srai></template></category>
+<category><pattern>soy checa</pattern><template><srai>soy checo</srai></template></category>
+<category><pattern>soy polaca</pattern><template><srai>soy polaco</srai></template></category>
+<category><pattern>soy griega</pattern><template><srai>soy griego</srai></template></category>
+<category><pattern>soy rumana</pattern><template><srai>soy rumano</srai></template></category>
+<category><pattern>soy bulgara</pattern><template><srai>soy bulgaro</srai></template></category>
+<category><pattern>soy eslovena</pattern><template><srai>soy esloveno</srai></template></category>
+<category><pattern>soy eslovaca</pattern><template><srai>soy eslovaco</srai></template></category>
+<category><pattern>soy suiza</pattern><template><srai>soy suizo</srai></template></category>
+<category><pattern>soy austriaca</pattern><template><srai>soy austriaco</srai></template></category>
+<category><pattern>soy andorrana</pattern><template><srai>soy andorrano</srai></template></category>
+<category><pattern>soy luxemburguesa</pattern><template><srai>soy luxemburgues</srai></template></category>
+<category><pattern>soy hungara</pattern><template><srai>soy hungaro</srai></template></category>
+<category><pattern>soy bosnia</pattern><template><srai>soy bosnio</srai></template></category>
+<category><pattern>soy turca</pattern><template><srai>soy turco</srai></template></category>
+<category><pattern>soy albanesa</pattern><template><srai>soy albanes</srai></template></category>
+<category><pattern>soy montenegrina</pattern><template><srai>soy montenegrino</srai></template></category>
+<category><pattern>soy macedonia</pattern><template><srai>soy macedonio</srai></template></category>
+<category><pattern>soy lituana</pattern><template><srai>soy lituano</srai></template></category>
+<category><pattern>soy estonia</pattern><template><srai>soy estonio</srai></template></category>
+<category><pattern>soy letona</pattern><template><srai>soy leton</srai></template></category>
+<category><pattern>soy alemana</pattern><template><srai>soy aleman</srai></template></category>
+<category><pattern>soy moldava</pattern><template><srai>soy moldavo</srai></template></category>
+<category><pattern>soy brasilenha</pattern><template><srai>soy brasilenho</srai></template></category>
+<category><pattern>soy argentina</pattern><template><srai>soy argentino</srai></template></category>
+<category><pattern>soy uruguaya</pattern><template><srai>soy uruguayo</srai></template></category>
+<category><pattern>soy paraguaya</pattern><template><srai>soy paraguayo</srai></template></category>
+<category><pattern>soy chilena</pattern><template><srai>soy chileno</srai></template></category>
+<category><pattern>soy peruana</pattern><template><srai>soy peruano</srai></template></category>
+<category><pattern>soy venezolana</pattern><template><srai>soy venezolano</srai></template></category>
+<category><pattern>soy ecuatoriana</pattern><template><srai>soy ecuatoriano</srai></template></category>
+<category><pattern>soy colombiana</pattern><template><srai>soy colombiano</srai></template></category>
+<category><pattern>soy boliviana</pattern><template><srai>soy boliviano</srai></template></category>
+<category><pattern>soy panamenha</pattern><template><srai>soy panamenho</srai></template></category>
+<category><pattern>soy salvadorenha</pattern><template><srai>soy salvadorenho</srai></template></category>
+<category><pattern>soy hondurenha</pattern><template><srai>soy hondurenho</srai></template></category>
+<category><pattern>soy guatemalteca</pattern><template><srai>soy guetemalteco</srai></template></category>
+<category><pattern>soy jamaicana</pattern><template><srai>soy jamaicano</srai></template></category>
+<category><pattern>soy belicenha</pattern><template><srai>soy belicenho</srai></template></category>
+<category><pattern>soy mexicana</pattern><template><srai>soy mexicano</srai></template></category>
+<category><pattern>soy cubana</pattern><template><srai>soy cubano</srai></template></category>
+<category><pattern>soy dominicana</pattern><template><srai>soy dominicano</srai></template></category>
+<category><pattern>soy haitiana</pattern><template><srai>soy haitiano</srai></template></category>
+<category><pattern>soy argelina</pattern><template><srai>soy argelino</srai></template></category>
+<category><pattern>soy tunecina</pattern><template><srai>soy tunecino</srai></template></category>
+<category><pattern>soy egipcia</pattern><template><srai>soy egipcio</srai></template></category>
+<category><pattern>soy sudanesa</pattern><template><srai>soy sudanes</srai></template></category>
+<category><pattern>soy libia</pattern><template><srai>soy libio</srai></template></category>
+<category><pattern>soy angolenha</pattern><template><srai>soy angolenho</srai></template></category>
+<category><pattern>soy sudafricana</pattern><template><srai>soy sudafricano</srai></template></category>
+<category><pattern>soy guineana</pattern><template><srai>soy guineana</srai></template></category>
+<category><pattern>soy senegalesa</pattern><template><srai>soy senegales</srai></template></category>
+<category><pattern>soy camerunesa</pattern><template><srai>soy camerunes</srai></template></category>
+<category><pattern>soy nigeriana</pattern><template><srai>soy nigeriano</srai></template></category>
+<category><pattern>soy ganesa</pattern><template><srai>soy ganes</srai></template></category>
+<category><pattern>soy china</pattern><template><srai>soy chino</srai></template></category>
+<category><pattern>soy japonesa</pattern><template><srai>soy japones</srai></template></category>
+<category><pattern>soy coreana</pattern><template><srai>soy coreano</srai></template></category>
+<category><pattern>soy libanesa</pattern><template><srai>soy libenes</srai></template></category>
+<category><pattern>soy jordana</pattern><template><srai>soy jordano</srai></template></category>
+<category><pattern>soy india</pattern><template><srai>soy indio</srai></template></category>
+<category><pattern>soy tailandesa</pattern><template><srai>soy tailandes</srai></template></category>
+<category><pattern>soy camboyana</pattern><template><srai>soy camboyano</srai></template></category>
+<category><pattern>soy afgana</pattern><template><srai>soy afgano</srai></template></category>
+<category><pattern>soy australiana</pattern><template><srai>soy australiano</srai></template></category>
+<category><pattern>soy neozelandesa</pattern><template><srai>soy neozelandes</srai></template></category>
+<category><pattern>soy malaya</pattern><template><srai>soy malayo</srai></template></category>
+<category><pattern>soy indonesia</pattern><template><srai>soy indonesio</srai></template></category>
+<category><pattern>soy samoana</pattern><template><srai>soy samoano</srai></template></category>
+<category><pattern>soy fijiana</pattern><template><srai>soy fijiano</srai></template></category>
+<category><pattern>soy tongana</pattern><template><srai>soy tongano</srai></template></category>
+
+<category><pattern>soy espanhola *</pattern><template><srai>soy espanhol</srai></template></category>
+<category><pattern>soy francesa *</pattern><template><srai>soy frances</srai></template></category>
+<category><pattern>soy italiana *</pattern><template><srai>soy italiano</srai></template></category>
+<category><pattern>soy inglesa *</pattern><template><srai>soy ingles</srai></template></category>
+<category><pattern>soy portuguesa *</pattern><template><srai>soy portugues</srai></template></category>
+<category><pattern>soy holandesa *</pattern><template><srai>soy holandes</srai></template></category>
+<category><pattern>soy irlandesa *</pattern><template><srai>soy irlandes</srai></template></category>
+<category><pattern>soy danesa *</pattern><template><srai>soy danes</srai></template></category>
+<category><pattern>soy noruega *</pattern><template><srai>soy noruego</srai></template></category>
+<category><pattern>soy sueca *</pattern><template><srai>soy sueco</srai></template></category>
+<category><pattern>soy finlandesa *</pattern><template><srai>soy finlandes</srai></template></category>
+<category><pattern>soy rusa *</pattern><template><srai>soy ruso</srai></template></category>
+<category><pattern>soy bielorrusa *</pattern><template><srai>soy bielorruso</srai></template></category>
+<category><pattern>soy ucraniana *</pattern><template><srai>soy ucraniano</srai></template></category>
+<category><pattern>soy serbia *</pattern><template><srai>soy serbio</srai></template></category>
+<category><pattern>soy checa *</pattern><template><srai>soy checo</srai></template></category>
+<category><pattern>soy polaca *</pattern><template><srai>soy polaco</srai></template></category>
+<category><pattern>soy griega *</pattern><template><srai>soy griego</srai></template></category>
+<category><pattern>soy rumana *</pattern><template><srai>soy rumano</srai></template></category>
+<category><pattern>soy bulgara *</pattern><template><srai>soy bulgaro</srai></template></category>
+<category><pattern>soy eslovena *</pattern><template><srai>soy esloveno</srai></template></category>
+<category><pattern>soy eslovaca *</pattern><template><srai>soy eslovaco</srai></template></category>
+<category><pattern>soy suiza *</pattern><template><srai>soy suizo</srai></template></category>
+<category><pattern>soy austriaca *</pattern><template><srai>soy austriaco</srai></template></category>
+<category><pattern>soy andorrana *</pattern><template><srai>soy andorrano</srai></template></category>
+<category><pattern>soy luxemburguesa *</pattern><template><srai>soy luxemburgues</srai></template></category>
+<category><pattern>soy hungara *</pattern><template><srai>soy hungaro</srai></template></category>
+<category><pattern>soy bosnia *</pattern><template><srai>soy bosnio</srai></template></category>
+<category><pattern>soy turca *</pattern><template><srai>soy turco</srai></template></category>
+<category><pattern>soy albanesa *</pattern><template><srai>soy albanes</srai></template></category>
+<category><pattern>soy montenegrina *</pattern><template><srai>soy montenegrino</srai></template></category>
+<category><pattern>soy macedonia *</pattern><template><srai>soy macedonio</srai></template></category>
+<category><pattern>soy lituana *</pattern><template><srai>soy lituano</srai></template></category>
+<category><pattern>soy estonia *</pattern><template><srai>soy estonio</srai></template></category>
+<category><pattern>soy letona *</pattern><template><srai>soy leton</srai></template></category>
+<category><pattern>soy alemana *</pattern><template><srai>soy aleman</srai></template></category>
+<category><pattern>soy moldava *</pattern><template><srai>soy moldavo</srai></template></category>
+<category><pattern>soy brasilenha *</pattern><template><srai>soy brasilenho</srai></template></category>
+<category><pattern>soy argentina *</pattern><template><srai>soy argentino</srai></template></category>
+<category><pattern>soy uruguaya *</pattern><template><srai>soy uruguayo</srai></template></category>
+<category><pattern>soy paraguaya *</pattern><template><srai>soy paraguayo</srai></template></category>
+<category><pattern>soy chilena *</pattern><template><srai>soy chileno</srai></template></category>
+<category><pattern>soy peruana *</pattern><template><srai>soy peruano</srai></template></category>
+<category><pattern>soy venezolana *</pattern><template><srai>soy venezolano</srai></template></category>
+<category><pattern>soy ecuatoriana *</pattern><template><srai>soy ecuatoriano</srai></template></category>
+<category><pattern>soy colombiana *</pattern><template><srai>soy colombiano</srai></template></category>
+<category><pattern>soy boliviana *</pattern><template><srai>soy boliviano</srai></template></category>
+<category><pattern>soy panamenha *</pattern><template><srai>soy panamenho</srai></template></category>
+<category><pattern>soy salvadorenha *</pattern><template><srai>soy salvadorenho</srai></template></category>
+<category><pattern>soy hondurenha *</pattern><template><srai>soy hondurenho</srai></template></category>
+<category><pattern>soy guatemalteca *</pattern><template><srai>soy guetemalteco</srai></template></category>
+<category><pattern>soy jamaicana *</pattern><template><srai>soy jamaicano</srai></template></category>
+<category><pattern>soy belicenha *</pattern><template><srai>soy belicenho</srai></template></category>
+<category><pattern>soy mexicana *</pattern><template><srai>soy mexicano</srai></template></category>
+<category><pattern>soy cubana *</pattern><template><srai>soy cubano</srai></template></category>
+<category><pattern>soy dominicana *</pattern><template><srai>soy dominicano</srai></template></category>
+<category><pattern>soy haitiana *</pattern><template><srai>soy haitiano</srai></template></category>
+<category><pattern>soy argelina *</pattern><template><srai>soy argelino</srai></template></category>
+<category><pattern>soy tunecina *</pattern><template><srai>soy tunecino</srai></template></category>
+<category><pattern>soy egipcia *</pattern><template><srai>soy egipcio</srai></template></category>
+<category><pattern>soy sudanesa *</pattern><template><srai>soy sudanes</srai></template></category>
+<category><pattern>soy libia *</pattern><template><srai>soy libio</srai></template></category>
+<category><pattern>soy angolenha *</pattern><template><srai>soy angolenho</srai></template></category>
+<category><pattern>soy sudafricana *</pattern><template><srai>soy sudafricano</srai></template></category>
+<category><pattern>soy guineana *</pattern><template><srai>soy guineana</srai></template></category>
+<category><pattern>soy senegalesa *</pattern><template><srai>soy senegales</srai></template></category>
+<category><pattern>soy camerunesa *</pattern><template><srai>soy camerunes</srai></template></category>
+<category><pattern>soy nigeriana *</pattern><template><srai>soy nigeriano</srai></template></category>
+<category><pattern>soy ganesa *</pattern><template><srai>soy ganes</srai></template></category>
+<category><pattern>soy china *</pattern><template><srai>soy chino</srai></template></category>
+<category><pattern>soy japonesa *</pattern><template><srai>soy japones</srai></template></category>
+<category><pattern>soy coreana *</pattern><template><srai>soy coreano</srai></template></category>
+<category><pattern>soy libanesa *</pattern><template><srai>soy libenes</srai></template></category>
+<category><pattern>soy jordana *</pattern><template><srai>soy jordano</srai></template></category>
+<category><pattern>soy india *</pattern><template><srai>soy indio</srai></template></category>
+<category><pattern>soy tailandesa *</pattern><template><srai>soy tailandes</srai></template></category>
+<category><pattern>soy camboyana *</pattern><template><srai>soy camboyano</srai></template></category>
+<category><pattern>soy afgana *</pattern><template><srai>soy afgano</srai></template></category>
+<category><pattern>soy australiana *</pattern><template><srai>soy australiano</srai></template></category>
+<category><pattern>soy neozelandesa *</pattern><template><srai>soy neozelandes</srai></template></category>
+<category><pattern>soy malaya *</pattern><template><srai>soy malayo</srai></template></category>
+<category><pattern>soy indonesia *</pattern><template><srai>soy indonesio</srai></template></category>
+<category><pattern>soy samoana *</pattern><template><srai>soy samoano</srai></template></category>
+<category><pattern>soy fijiana *</pattern><template><srai>soy fijiano</srai></template></category>
+<category><pattern>soy tongana *</pattern><template><srai>soy tongano</srai></template></category>
+
+
+
+<!-- nacionalidad bot -->
+<category><pattern>eres de *</pattern><template>soy un bot espanhol.</template></category>
+<category><pattern>eres espanhol</pattern><template>si, soy  espanhola.</template></category>
+<category><pattern>eres frances</pattern><template>no, soy espanhola.</template></category>
+<category><pattern>eres italiano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres ingles</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres portugues</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres belga</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres holandes</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres irlandes</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres danes</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres noruego</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres sueco</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres finlandes</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres ruso</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres bielorruso</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres ucraniano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres serbio</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres checo</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres polaco</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres griego</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres rumano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres bulgaro</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres croata</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres esloveno</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres eslovaco</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres suizo</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres austriaco</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres andorrano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres luxemburgues</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres hungaro</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres bosnio</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres turco</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres albanes</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres montenegrino</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres macedonio</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres lituano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres estonio</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres leton</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres aleman</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres moldavo</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres brasilenho</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres argentino</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres uruguayo</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres paraguayo</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres chileno</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres peruano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres venezolano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres ecuatoriano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres colombiano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres boliviano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres panamenho</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres nicaraguense</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres costarricense</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres salvadorenho</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres hondurenho</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres guatemalteco</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres jamaicano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres belicenho</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres mexicano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres cubano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres dominicano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres haitiano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres estadounidense</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres canadiense</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres marroqui</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres argelino</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres tunecino</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres egipcio</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres sudanes</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres libio</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres angolenho</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres sudafricano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres guineano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres sengales</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres somali</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres camerunes</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres nigeriano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres ganes</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres chino</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres japones</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres coreano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres israeli</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres libanes</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres chipriota</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres iraqui</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres irani</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres jordano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres indio</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres tailandes</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres vietnamita</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres camboyano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres afgano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres pakistani</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres australiano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres neozelandes</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres malayo</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres indonesio</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres samoano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres fijiano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres tongano</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres vanuatense</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres papu</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres malgache</pattern><template><srai>eres frances</srai></template></category>
+
+<category><pattern>eres espanhol *</pattern><template>si, soy  espanhola.</template></category>
+<category><pattern>eres frances *</pattern><template>no, soy espanhola.</template></category>
+<category><pattern>eres italiano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres ingles *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres portugues *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres belga *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres holandes *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres irlandes *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres danes *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres noruego *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres sueco *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres finlandes *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres ruso *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres bielorruso *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres ucraniano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres serbio *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres checo *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres polaco *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres griego *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres rumano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres bulgaro *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres croata *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres esloveno *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres eslovaco *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres suizo *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres austriaco *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres andorrano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres luxemburgues *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres hungaro *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres bosnio *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres turco *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres albanes *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres montenegrino *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres macedonio *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres lituano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres estonio *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres leton *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres aleman *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres moldavo *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres brasilenho *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres argentino *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres uruguayo *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres paraguayo *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres chileno *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres peruano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres venezolano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres ecuatoriano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres colombiano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres boliviano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres panamenho *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres nicaraguense *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres costarricense *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres salvadorenho *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres hondurenho *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres guatemalteco *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres jamaicano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres belicenho *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres mexicano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres cubano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres dominicano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres haitiano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres estadounidense *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres canadiense *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres marroqui *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres argelino *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres tunecino *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres egipcio *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres sudanes *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres libio *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres angolenho *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres sudafricano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres guineano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres sengales *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres somali *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres camerunes *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres nigeriano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres ganes *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres chino *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres japones *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres coreano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres israeli *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres libanes *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres chipriota *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres iraqui *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres irani *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres jordano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres indio *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres tailandes *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres vietnamita *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres camboyano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres afgano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres pakistani *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres australiano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres neozelandes *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres malayo *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres indonesio *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres samoano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres fijiano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres tongano *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres vanuatense *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres papu *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres malgache *</pattern><template><srai>eres frances</srai></template></category>
+
+<category><pattern>eres espanhola</pattern><template><srai>eres espanhol</srai></template></category>
+<category><pattern>eres francesa</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres italiana</pattern><template><srai>eres italiano</srai></template></category>
+<category><pattern>eres inglesa</pattern><template><srai>eres ingles</srai></template></category>
+<category><pattern>eres portuguesa</pattern><template><srai>eres portugues</srai></template></category>
+<category><pattern>eres holandesa</pattern><template><srai>eres holandes</srai></template></category>
+<category><pattern>eres irlandesa</pattern><template><srai>eres irlandes</srai></template></category>
+<category><pattern>eres danesa</pattern><template><srai>eres danes</srai></template></category>
+<category><pattern>eres noruega</pattern><template><srai>eres noruego</srai></template></category>
+<category><pattern>eres sueca</pattern><template><srai>eres sueco</srai></template></category>
+<category><pattern>eres finlandesa</pattern><template><srai>eres finlandes</srai></template></category>
+<category><pattern>eres rusa</pattern><template><srai>eres ruso</srai></template></category>
+<category><pattern>eres bielorrusa</pattern><template><srai>eres bielorruso</srai></template></category>
+<category><pattern>eres ucraniana</pattern><template><srai>eres ucraniano</srai></template></category>
+<category><pattern>eres serbia</pattern><template><srai>eres serbio</srai></template></category>
+<category><pattern>eres checa</pattern><template><srai>eres checo</srai></template></category>
+<category><pattern>eres polaca</pattern><template><srai>eres polaco</srai></template></category>
+<category><pattern>eres griega</pattern><template><srai>eres griego</srai></template></category>
+<category><pattern>eres rumana</pattern><template><srai>eres rumano</srai></template></category>
+<category><pattern>eres bulgara</pattern><template><srai>eres bulgaro</srai></template></category>
+<category><pattern>eres eslovena</pattern><template><srai>eres esloveno</srai></template></category>
+<category><pattern>eres eslovaca</pattern><template><srai>eres eslovaco</srai></template></category>
+<category><pattern>eres suiza</pattern><template><srai>eres suizo</srai></template></category>
+<category><pattern>eres austriaca</pattern><template><srai>eres austriaco</srai></template></category>
+<category><pattern>eres andorrana</pattern><template><srai>eres andorrano</srai></template></category>
+<category><pattern>eres luxemburguesa</pattern><template><srai>eres luxemburgues</srai></template></category>
+<category><pattern>eres hungara</pattern><template><srai>eres hungaro</srai></template></category>
+<category><pattern>eres bosnia</pattern><template><srai>eres bosnio</srai></template></category>
+<category><pattern>eres turca</pattern><template><srai>eres turco</srai></template></category>
+<category><pattern>eres albanesa</pattern><template><srai>eres albanes</srai></template></category>
+<category><pattern>eres montenegrina</pattern><template><srai>eres montenegrino</srai></template></category>
+<category><pattern>eres macedonia</pattern><template><srai>eres macedonio</srai></template></category>
+<category><pattern>eres lituana</pattern><template><srai>eres lituano</srai></template></category>
+<category><pattern>eres estonia</pattern><template><srai>eres estonio</srai></template></category>
+<category><pattern>eres letona</pattern><template><srai>eres leton</srai></template></category>
+<category><pattern>eres alemana</pattern><template><srai>eres aleman</srai></template></category>
+<category><pattern>eres moldava</pattern><template><srai>eres moldavo</srai></template></category>
+<category><pattern>eres brasilenha</pattern><template><srai>eres brasilenho</srai></template></category>
+<category><pattern>eres argentina</pattern><template><srai>eres argentino</srai></template></category>
+<category><pattern>eres uruguaya</pattern><template><srai>eres uruguayo</srai></template></category>
+<category><pattern>eres paraguaya</pattern><template><srai>eres paraguayo</srai></template></category>
+<category><pattern>eres chilena</pattern><template><srai>eres chileno</srai></template></category>
+<category><pattern>eres peruana</pattern><template><srai>eres peruano</srai></template></category>
+<category><pattern>eres venezolana</pattern><template><srai>eres venezolano</srai></template></category>
+<category><pattern>eres ecuatoriana</pattern><template><srai>eres ecuatoriano</srai></template></category>
+<category><pattern>eres colombiana</pattern><template><srai>eres colombiano</srai></template></category>
+<category><pattern>eres boliviana</pattern><template><srai>eres boliviano</srai></template></category>
+<category><pattern>eres panamenha</pattern><template><srai>eres panamenho</srai></template></category>
+<category><pattern>eres salvadorenha</pattern><template><srai>eres salvadorenho</srai></template></category>
+<category><pattern>eres hondurenha</pattern><template><srai>eres hondurenho</srai></template></category>
+<category><pattern>eres guatemalteca</pattern><template><srai>eres guetemalteco</srai></template></category>
+<category><pattern>eres jamaicana</pattern><template><srai>eres jamaicano</srai></template></category>
+<category><pattern>eres belicenha</pattern><template><srai>eres belicenho</srai></template></category>
+<category><pattern>eres mexicana</pattern><template><srai>eres mexicano</srai></template></category>
+<category><pattern>eres cubana</pattern><template><srai>eres cubano</srai></template></category>
+<category><pattern>eres dominicana</pattern><template><srai>eres dominicano</srai></template></category>
+<category><pattern>eres haitiana</pattern><template><srai>eres haitiano</srai></template></category>
+<category><pattern>eres argelina</pattern><template><srai>eres argelino</srai></template></category>
+<category><pattern>eres tunecina</pattern><template><srai>eres tunecino</srai></template></category>
+<category><pattern>eres egipcia</pattern><template><srai>eres egipcio</srai></template></category>
+<category><pattern>eres sudanesa</pattern><template><srai>eres sudanes</srai></template></category>
+<category><pattern>eres libia</pattern><template><srai>eres libio</srai></template></category>
+<category><pattern>eres angolenha</pattern><template><srai>eres angolenho</srai></template></category>
+<category><pattern>eres sudafricana</pattern><template><srai>eres sudafricano</srai></template></category>
+<category><pattern>eres guineana</pattern><template><srai>eres guineana</srai></template></category>
+<category><pattern>eres senegalesa</pattern><template><srai>eres senegales</srai></template></category>
+<category><pattern>eres camerunesa</pattern><template><srai>eres camerunes</srai></template></category>
+<category><pattern>eres nigeriana</pattern><template><srai>eres nigeriano</srai></template></category>
+<category><pattern>eres ganesa</pattern><template><srai>eres ganes</srai></template></category>
+<category><pattern>eres china</pattern><template><srai>eres chino</srai></template></category>
+<category><pattern>eres japonesa</pattern><template><srai>eres japones</srai></template></category>
+<category><pattern>eres coreana</pattern><template><srai>eres coreano</srai></template></category>
+<category><pattern>eres libanesa</pattern><template><srai>eres libenes</srai></template></category>
+<category><pattern>eres jordana</pattern><template><srai>eres jordano</srai></template></category>
+<category><pattern>eres india</pattern><template><srai>eres indio</srai></template></category>
+<category><pattern>eres tailandesa</pattern><template><srai>eres tailandes</srai></template></category>
+<category><pattern>eres camboyana</pattern><template><srai>eres camboyano</srai></template></category>
+<category><pattern>eres afgana</pattern><template><srai>eres afgano</srai></template></category>
+<category><pattern>eres australiana</pattern><template><srai>eres australiano</srai></template></category>
+<category><pattern>eres neozelandesa</pattern><template><srai>eres neozelandes</srai></template></category>
+<category><pattern>eres malaya</pattern><template><srai>eres malayo</srai></template></category>
+<category><pattern>eres indonesia</pattern><template><srai>eres indonesio</srai></template></category>
+<category><pattern>eres samoana</pattern><template><srai>eres samoano</srai></template></category>
+<category><pattern>eres fijiana</pattern><template><srai>eres fijiano</srai></template></category>
+<category><pattern>eres tongana</pattern><template><srai>eres tongano</srai></template></category>
+
+<category><pattern>eres espanhola *</pattern><template><srai>eres espanhol</srai></template></category>
+<category><pattern>eres francesa *</pattern><template><srai>eres frances</srai></template></category>
+<category><pattern>eres italiana *</pattern><template><srai>eres italiano</srai></template></category>
+<category><pattern>eres inglesa *</pattern><template><srai>eres ingles</srai></template></category>
+<category><pattern>eres portuguesa *</pattern><template><srai>eres portugues</srai></template></category>
+<category><pattern>eres holandesa *</pattern><template><srai>eres holandes</srai></template></category>
+<category><pattern>eres irlandesa *</pattern><template><srai>eres irlandes</srai></template></category>
+<category><pattern>eres danesa *</pattern><template><srai>eres danes</srai></template></category>
+<category><pattern>eres noruega *</pattern><template><srai>eres noruego</srai></template></category>
+<category><pattern>eres sueca *</pattern><template><srai>eres sueco</srai></template></category>
+<category><pattern>eres finlandesa *</pattern><template><srai>eres finlandes</srai></template></category>
+<category><pattern>eres rusa *</pattern><template><srai>eres ruso</srai></template></category>
+<category><pattern>eres bielorrusa *</pattern><template><srai>eres bielorruso</srai></template></category>
+<category><pattern>eres ucraniana *</pattern><template><srai>eres ucraniano</srai></template></category>
+<category><pattern>eres serbia *</pattern><template><srai>eres serbio</srai></template></category>
+<category><pattern>eres checa *</pattern><template><srai>eres checo</srai></template></category>
+<category><pattern>eres polaca *</pattern><template><srai>eres polaco</srai></template></category>
+<category><pattern>eres griega *</pattern><template><srai>eres griego</srai></template></category>
+<category><pattern>eres rumana *</pattern><template><srai>eres rumano</srai></template></category>
+<category><pattern>eres bulgara *</pattern><template><srai>eres bulgaro</srai></template></category>
+<category><pattern>eres eslovena *</pattern><template><srai>eres esloveno</srai></template></category>
+<category><pattern>eres eslovaca *</pattern><template><srai>eres eslovaco</srai></template></category>
+<category><pattern>eres suiza *</pattern><template><srai>eres suizo</srai></template></category>
+<category><pattern>eres austriaca *</pattern><template><srai>eres austriaco</srai></template></category>
+<category><pattern>eres andorrana *</pattern><template><srai>eres andorrano</srai></template></category>
+<category><pattern>eres luxemburguesa *</pattern><template><srai>eres luxemburgues</srai></template></category>
+<category><pattern>eres hungara *</pattern><template><srai>eres hungaro</srai></template></category>
+<category><pattern>eres bosnia *</pattern><template><srai>eres bosnio</srai></template></category>
+<category><pattern>eres turca *</pattern><template><srai>eres turco</srai></template></category>
+<category><pattern>eres albanesa *</pattern><template><srai>eres albanes</srai></template></category>
+<category><pattern>eres montenegrina *</pattern><template><srai>eres montenegrino</srai></template></category>
+<category><pattern>eres macedonia *</pattern><template><srai>eres macedonio</srai></template></category>
+<category><pattern>eres lituana *</pattern><template><srai>eres lituano</srai></template></category>
+<category><pattern>eres estonia *</pattern><template><srai>eres estonio</srai></template></category>
+<category><pattern>eres letona *</pattern><template><srai>eres leton</srai></template></category>
+<category><pattern>eres alemana *</pattern><template><srai>eres aleman</srai></template></category>
+<category><pattern>eres moldava *</pattern><template><srai>eres moldavo</srai></template></category>
+<category><pattern>eres brasilenha *</pattern><template><srai>eres brasilenho</srai></template></category>
+<category><pattern>eres argentina *</pattern><template><srai>eres argentino</srai></template></category>
+<category><pattern>eres uruguaya *</pattern><template><srai>eres uruguayo</srai></template></category>
+<category><pattern>eres paraguaya *</pattern><template><srai>eres paraguayo</srai></template></category>
+<category><pattern>eres chilena *</pattern><template><srai>eres chileno</srai></template></category>
+<category><pattern>eres peruana *</pattern><template><srai>eres peruano</srai></template></category>
+<category><pattern>eres venezolana *</pattern><template><srai>eres venezolano</srai></template></category>
+<category><pattern>eres ecuatoriana *</pattern><template><srai>eres ecuatoriano</srai></template></category>
+<category><pattern>eres colombiana *</pattern><template><srai>eres colombiano</srai></template></category>
+<category><pattern>eres boliviana *</pattern><template><srai>eres boliviano</srai></template></category>
+<category><pattern>eres panamenha *</pattern><template><srai>eres panamenho</srai></template></category>
+<category><pattern>eres salvadorenha *</pattern><template><srai>eres salvadorenho</srai></template></category>
+<category><pattern>eres hondurenha *</pattern><template><srai>eres hondurenho</srai></template></category>
+<category><pattern>eres guatemalteca *</pattern><template><srai>eres guetemalteco</srai></template></category>
+<category><pattern>eres jamaicana *</pattern><template><srai>eres jamaicano</srai></template></category>
+<category><pattern>eres belicenha *</pattern><template><srai>eres belicenho</srai></template></category>
+<category><pattern>eres mexicana *</pattern><template><srai>eres mexicano</srai></template></category>
+<category><pattern>eres cubana *</pattern><template><srai>eres cubano</srai></template></category>
+<category><pattern>eres dominicana *</pattern><template><srai>eres dominicano</srai></template></category>
+<category><pattern>eres haitiana *</pattern><template><srai>eres haitiano</srai></template></category>
+<category><pattern>eres argelina *</pattern><template><srai>eres argelino</srai></template></category>
+<category><pattern>eres tunecina *</pattern><template><srai>eres tunecino</srai></template></category>
+<category><pattern>eres egipcia *</pattern><template><srai>eres egipcio</srai></template></category>
+<category><pattern>eres sudanesa *</pattern><template><srai>eres sudanes</srai></template></category>
+<category><pattern>eres libia *</pattern><template><srai>eres libio</srai></template></category>
+<category><pattern>eres angolenha *</pattern><template><srai>eres angolenho</srai></template></category>
+<category><pattern>eres sudafricana *</pattern><template><srai>eres sudafricano</srai></template></category>
+<category><pattern>eres guineana *</pattern><template><srai>eres guineana</srai></template></category>
+<category><pattern>eres senegalesa *</pattern><template><srai>eres senegales</srai></template></category>
+<category><pattern>eres camerunesa *</pattern><template><srai>eres camerunes</srai></template></category>
+<category><pattern>eres nigeriana *</pattern><template><srai>eres nigeriano</srai></template></category>
+<category><pattern>eres ganesa *</pattern><template><srai>eres ganes</srai></template></category>
+<category><pattern>eres china *</pattern><template><srai>eres chino</srai></template></category>
+<category><pattern>eres japonesa *</pattern><template><srai>eres japones</srai></template></category>
+<category><pattern>eres coreana *</pattern><template><srai>eres coreano</srai></template></category>
+<category><pattern>eres libanesa *</pattern><template><srai>eres libenes</srai></template></category>
+<category><pattern>eres jordana *</pattern><template><srai>eres jordano</srai></template></category>
+<category><pattern>eres india *</pattern><template><srai>eres indio</srai></template></category>
+<category><pattern>eres tailandesa *</pattern><template><srai>eres tailandes</srai></template></category>
+<category><pattern>eres camboyana *</pattern><template><srai>eres camboyano</srai></template></category>
+<category><pattern>eres afgana *</pattern><template><srai>eres afgano</srai></template></category>
+<category><pattern>eres australiana *</pattern><template><srai>eres australiano</srai></template></category>
+<category><pattern>eres neozelandesa *</pattern><template><srai>eres neozelandes</srai></template></category>
+<category><pattern>eres malaya *</pattern><template><srai>eres malayo</srai></template></category>
+<category><pattern>eres indonesia *</pattern><template><srai>eres indonesio</srai></template></category>
+<category><pattern>eres samoana *</pattern><template><srai>eres samoano</srai></template></category>
+<category><pattern>eres fijiana *</pattern><template><srai>eres fijiano</srai></template></category>
+<category><pattern>eres tongana *</pattern><template><srai>eres tongano</srai></template></category>
+
+</aiml>

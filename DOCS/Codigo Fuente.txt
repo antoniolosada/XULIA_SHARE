@@ -1,0 +1,102 @@
+MAximizxar ventanas
+
+Declare Function ShowWindow Lib "user32" (ByVal hWnd As System.IntPtr, ByVal nCmdShow As Integer) As Boolean
+ Private Const SW_MINIMIZE As Integer = 6 ' Minimizar la ventana. 
+ Private Const SW_MAXIMIZE As Integer = 3 ' Maximizar la ventana
+ Private Const SW_RESTORE As Integer = 9 ' Restaura la ventana a su tamaño y posición original
+ Private Const SW_HIDE As Integer = 0 ' Ocultar la ventana
+ Private Const SW_SHOWNORMAL As Integer = 1 ' Visualiza la ventana y la activa.
+ Private Const SW_SHOWMINIMIZED As Integer = 2 ' Miniminiza la ventana
+ Private Const SW_SHOWNOACTIVATE As Integer = 4 'Visualiza la ventana en su tamaño y posición actual sin activarla
+ Private Const SW_SHOW As Integer = 5 'Visualiza la ventana
+ Private Const SW_SHOWMINNOACTIVE As Integer = 7 'Miniminiza la ventana pero no la activa
+ Private Const SW_SHOWNA As Integer = 8 'Visualiza la ventana en su estado actual pero no la activa. 
+ 
+  Private Sub MostrarVentana()
+ Dim p As Process() = System.Diagnostics.Process.GetProcessesByName("!!Nombre Del Proceso!!")
+ Try
+ ShowWindow(p(0).MainWindowHandle, SW_MAXIMIZE)
+ ShowWindow(p(0).MainWindowHandle, SW_RESTORE)
+ ShowWindow(p(0).MainWindowHandle, SW_SHOWNORMAL)
+ Catch ex As Exception
+ MessageBox.Show("Error")
+ Me.Close()
+ End Try
+ End Sub
+ 
+ Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+ MostrarVentana()
+ End Sub
+
+
+
+ 'Función Api FindWindow para buscar el HWND 
+ Private Declare Function FindWindow _
+ Lib "user32" _
+ Alias "FindWindowA" ( _
+ ByVal lpClassName As String, _
+ ByVal lpWindowName As String) As Long
+
+ 'Función ShowWindow para maximizar , minimizar etc.. 
+ Private Declare Function ShowWindow _
+ Lib "user32" ( _
+ ByVal hwnd As Long, _
+ ByVal nCmdShow As Long) As Long
+
+ 'Constantes para el api ShowWindow 
+ Const SW_HIDE = 0
+ Const SW_NORMAL = 1
+
+ Dim Handle As Long
+
+ 'Ocultar ventana 
+ Private Sub Button1_Click()
+ Handle = FindWindow(vbNullString, "MSN Messenger")
+ Call ShowWindow(Handle, SW_HIDE)
+ End Sub
+
+ 'Mostrar ventana 
+ Private Sub Button2_Click()
+ 'El nombre "MSN Messenger" es el nombre de la clase de ventana del Msn 
+
+ Handle = FindWindow(vbNullString, "MSN Messenger")
+ Call ShowWindow(Handle, SW_NORMAL)
+
+ End Sub
+-------------------------------------------------------------------------------------------------
+Mover ventana
+
+[DllImport("user32.dll")]
+public static extern bool MoveWindow(IntPtr hWnd, int X, int Y, int nWidth, int nHeight, bool bRepaint);
+-------------------------------------------------------------------------------------------------
+Localizar ventanas por título
+
+foreach (Process proc in Process.GetProcesses())
+{
+    if (proc.MainWindowTitle.Contains("Visual Studio"))
+    {
+        IntPtr handle = proc.MainWindowHandle;
+        ...
+        MoveWindow(handle ...);
+        ...
+    }
+}
+-------------------------------------------------------------------------------------------------
+Cambiar idioma en windows 7 -> Vistalisator
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------

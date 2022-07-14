@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+      xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+	  
+	  
+	  
+		<!-- spam . -->
+
+ 
+<category><pattern>75lt</pattern><template><srai>spam</srai></template></category>
+<category><pattern>aik *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>aikit</pattern><template><srai>spam</srai></template></category>
+<category><pattern>aiksteliai *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>aiktu *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>aiktu</pattern><template><srai>spam</srai></template></category>
+<category><pattern>aina *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ainu *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ait</pattern><template><srai>spam</srai></template></category>
+<category><pattern>aizawlchat *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>aizawlchat</pattern><template><srai>spam</srai></template></category>
+<category><pattern>amlord *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ane</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ant *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>anthrax</pattern><template><srai>spam</srai></template></category>
+<category><pattern>apie *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>apipis *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>aquilla</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ar  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>atsiemima *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>atsiliepe</pattern><template><srai>spam</srai></template></category>
+<category><pattern>au *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>auth  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>avine</pattern><template><srai>spam</srai></template></category>
+<category><pattern>azure *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>b *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>baik *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>bbd</pattern><template><srai>spam</srai></template></category>
+<category><pattern>bbz</pattern><template><srai>spam</srai></template></category>
+<category><pattern>bijau</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ble</pattern><template><srai>spam</srai></template></category>
+<category><pattern>bled</pattern><template><srai>spam</srai></template></category>
+<category><pattern>bokalas</pattern><template><srai>spam</srai></template></category>
+<category><pattern>boome</pattern><template><srai>spam</srai></template></category>
+<category><pattern>buna</pattern><template><srai>spam</srai></template></category>
+<category><pattern>bus *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>chatstats *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>cia  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>cube *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>cyan</pattern><template><srai>spam</srai></template></category>
+<category><pattern>d</pattern><template><srai>spam</srai></template></category>
+<category><pattern>daba</pattern><template><srai>spam</srai></template></category>
+<category><pattern>daina</pattern><template><srai>spam</srai></template></category>
+<category><pattern>dar  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>dedasi *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>devoice *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>dirbat *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>dmn *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>draugiskai *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>du *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>duodi</pattern><template><srai>spam</srai></template></category>
+<category><pattern>e *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>esrt</pattern><template><srai>spam</srai></template></category>
+<category><pattern>est</pattern><template><srai>spam</srai></template></category>
+<category><pattern>fora *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>foto</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ftp</pattern><template><srai>spam</srai></template></category>
+<category><pattern>fuxai *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>fuxes</pattern><template><srai>spam</srai></template></category>
+<category><pattern>gah</pattern><template><srai>spam</srai></template></category>
+<category><pattern>gales *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>gales</pattern><template><srai>spam</srai></template></category>
+<category><pattern>gausiu *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>gavai</pattern><template><srai>spam</srai></template></category>
+<category><pattern>gavau *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>geda *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>geile *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>gera</pattern><template><srai>spam</srai></template></category>
+<category><pattern>geri</pattern><template><srai>spam</srai></template></category>
+<category><pattern>geriau</pattern><template><srai>spam</srai></template></category>
+<category><pattern>gersne</pattern><template><srai>spam</srai></template></category>
+<category><pattern>glo *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>guest8</pattern><template><srai>spam</srai></template></category>
+<category><pattern>guest</pattern><template><srai>spam</srai></template></category>
+<category><pattern>heeft</pattern><template><srai>spam</srai></template></category>
+<category><pattern>homepafe</pattern><template><srai>spam</srai></template></category>
+<category><pattern>idomu</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ilgi  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>ir  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>ir</pattern><template><srai>spam</srai></template></category>
+<category><pattern>islaikiau *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>istikruju</pattern><template><srai>spam</srai></template></category>
+<category><pattern>jaime *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>jau *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>jauciu</pattern><template><srai>spam</srai></template></category>
+<category><pattern>jauciuosi</pattern><template><srai>spam</srai></template></category>
+<category><pattern>jeigu *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>jie *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ooooooooooooooooooooook</pattern><template><srai>spam</srai></template></category>
+<category><pattern>orai</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ore</pattern><template><srai>spam</srai></template></category>
+<category><pattern>pabuciuotum *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>paglosciau</pattern><template><srai>spam</srai></template></category>
+<category><pattern>parasiau</pattern><template><srai>spam</srai></template></category>
+<category><pattern>parasyt *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>paskelbta *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>pass  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>pazistamas</pattern><template><srai>spam</srai></template></category>
+<category><pattern>pazystamas</pattern><template><srai>spam</srai></template></category>
+<category><pattern>pigiau</pattern><template><srai>spam</srai></template></category>
+<category><pattern>pirma *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>pirmas *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>pisk</pattern><template><srai>spam</srai></template></category>
+<category><pattern>pizda</pattern><template><srai>spam</srai></template></category>
+<category><pattern>pize</pattern><template><srai>spam</srai></template></category>
+<category><pattern>praeita *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>priede</pattern><template><srai>spam</srai></template></category>
+<category><pattern>purius</pattern><template><srai>spam</srai></template></category>
+<category><pattern>push</pattern><template><srai>spam</srai></template></category>
+<category><pattern>pykina</pattern><template><srai>spam</srai></template></category>
+<category><pattern>pyzdavoti</pattern><template><srai>spam</srai></template></category>
+<category><pattern>reik</pattern><template><srai>spam</srai></template></category>
+<category><pattern>reiks *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>rellen</pattern><template><srai>spam</srai></template></category>          
+<category><pattern>resp</pattern><template><srai>spam</srai></template></category>
+<category><pattern>rurins *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ryte</pattern><template><srai>spam</srai></template></category>
+<category><pattern>sakei</pattern><template><srai>spam</srai></template></category>
+<category><pattern>sarcastic *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>seriala</pattern><template><srai>spam</srai></template></category>
+<category><pattern>sixtynine *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>skambint</pattern><template><srai>spam</srai></template></category>
+<category><pattern>smth</pattern><template><srai>spam</srai></template></category>
+<category><pattern>snekejo *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>spam</pattern><template><random><li>me estas bombardeando?</li><li>podrias hablar castellano?</li><li>que idioma es ese?</li></random></template></category>
+<category><pattern>strang</pattern><template><srai>spam</srai></template></category>
+<category><pattern>sugadinau</pattern><template><srai>spam</srai></template></category>
+<category><pattern>suvesi *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>svyturio</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ta</pattern><template><srai>spam</srai></template></category>
+<category><pattern>tada</pattern><template><srai>spam</srai></template></category>
+<category><pattern>tai  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>tai</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>tas</pattern><template><srai>spam</srai></template></category>
+<category><pattern>tave</pattern><template><srai>spam</srai></template></category>
+<category><pattern>tavo *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>te</pattern><template><srai>spam</srai></template></category>
+<category><pattern>tennleftwing *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>tep</pattern><template><srai>spam</srai></template></category>
+<category><pattern>thianpa *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>tie *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>tik *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>tipd *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>tipo</pattern><template><srai>spam</srai></template></category>
+<category><pattern>titus *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>toj</pattern><template><srai>spam</srai></template></category>
+<category><pattern>toki</pattern><template><srai>spam</srai></template></category>
+<category><pattern>topike</pattern><template><srai>spam</srai></template></category>
+<category><pattern>traumavai</pattern><template><srai>spam</srai></template></category>
+<category><pattern>traumuotas</pattern><template><srai>spam</srai></template></category>
+<category><pattern>treciam *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>trial</pattern><template><srai>spam</srai></template></category>
+<category><pattern>trys *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>tu  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>tu</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>jis *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>jobtvaimat</pattern><template><srai>spam</srai></template></category>
+<category><pattern>joe</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ka  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>kad  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>kai  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>kaip  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>kam *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>karoce</pattern><template><srai>spam</srai></template></category>
+<category><pattern>kas *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>keuryme *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>kiek</pattern><template><srai>spam</srai></template></category>
+<category><pattern>kitaip *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>knowin</pattern><template><srai>spam</srai></template></category>
+<category><pattern>knygas *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ko *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>koki *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>kokio *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>koks *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>kur *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>labai</pattern><template><srai>spam</srai></template></category>
+<category><pattern>labute *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>labutlabutleaves *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>lietuvos</pattern><template><srai>spam</srai></template></category>
+<category><pattern>mafkees *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>majakina *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>mano *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>marex</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>matei</pattern><template><srai>spam</srai></template></category>
+<category><pattern>members *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>mes</pattern><template><srai>spam</srai></template></category>
+<category><pattern>min *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>mode *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>mokykis</pattern><template><srai>spam</srai></template></category>
+<category><pattern>mpfeif101 *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>muilo *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>muilus</pattern><template><srai>spam</srai></template></category>
+<category><pattern>mylintys *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nagu *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ne  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>nea</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nebuna</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nebuvo *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>neisizeisk</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nelenda *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nemoku</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nemus *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nemyli</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nenori *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>neprisiseges</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ner *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nerandu</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nestabdys *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>neturiu</pattern><template><srai>spam</srai></template></category>
+<category><pattern>niekad *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nieko</pattern><template><srai>spam</srai></template></category>
+<category><pattern>niet *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nihuja</pattern><template><srai>spam</srai></template></category>
+<category><pattern>noriu</pattern><template><srai>spam</srai></template></category>
+<category><pattern>nu  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>oi</pattern><template><srai>spam</srai></template></category>
+<category><pattern>oooook</pattern><template><srai>spam</srai></template></category>
+
+<category><pattern>turet</pattern><template><srai>spam</srai></template></category>
+<category><pattern>turi *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>turiu</pattern><template><srai>spam</srai></template></category>
+<category><pattern>unban *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>undernete</pattern><template><srai>spam</srai></template></category>
+<category><pattern>uostyk</pattern><template><srai>spam</srai></template></category>
+<category><pattern>userdel *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>uz *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>uzduchino</pattern><template><srai>spam</srai></template></category>
+<category><pattern>vaidas</pattern><template><srai>spam</srai></template></category>
+<category><pattern>varem</pattern><template><srai>spam</srai></template></category>
+<category><pattern>veike *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>viena *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>vinausinio</pattern><template><srai>spam</srai></template></category>
+<category><pattern>visai *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>visas *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>voice  *</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>wacht *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>wertz *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>whahahah *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>wheheh *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>whoeiiiiii *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>wz *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>wzc *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>wzf *</pattern><template><srai>spam</srai></template></category>
+<category><pattern>xebrai</pattern><template><srai>spam</srai></template></category>
+<category><pattern>ytariu</pattern><template><srai>spam</srai></template></category>
+<category><pattern>zavute</pattern><template><srai>spam</srai></template></category>
+<category><pattern>zeuru</pattern><template><srai>spam</srai></template></category>       
+<category><pattern>ziauru</pattern><template><srai>spam</srai></template></category>     
+<category><pattern>ziaurus</pattern><template><srai>spam</srai></template></category>
+<category><pattern>zjbz</pattern><template><srai>spam</srai></template></category>
+<category><pattern>zole</pattern><template><srai>spam</srai></template></category>
+<category><pattern>zopute</pattern><template><srai>spam</srai></template></category>
+</aiml>

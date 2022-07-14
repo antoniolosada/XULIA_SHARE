@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/xmlschema-instance" xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+
+<!-- apariencia fisica -->
+<category><pattern>estoy gordo</pattern><template>
+	<random>
+		<li>no, no lo creo. quizas te sobre algun kilito, pero nada mas.</li>
+		<li>quizas deberia controlar tu peso un poco mas.</li>
+		<li>proponte mejorar tu dieta y hacer un poco de ejercicio.</li>
+		</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>estoy gorda</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * gordo</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * gorda</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy gordo *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy gorda *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * gordo *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * gorda *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>soy * gordo</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>soy * gorda</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>soy * gordo *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>soy * gorda *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy gordito</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy gordita</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * gordito</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * gordita</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy gordito *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy gordita *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * gordito *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * gordita *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy fondon</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy fondona</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * fondon</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * fondona</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy fondon *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy fondona *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * fondon *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * fondona *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy pasado de kilos</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy pasada de kilos</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * pasado de kilos</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * pasada de kilos</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy pasado de kilos *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy pasada de kilos *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * pasado de kilos *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * pasada de kilos *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy rellenito</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy rellenita</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * rellenito</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * rellenita</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy hecho * vaca</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy hecha * vaca</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy obeso</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy obesa</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * obeso</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * obesa</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy obeso *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy obesa *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * obeso *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * obesa *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy rechoncho</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy rechoncha</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * rechoncho</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * rechoncha</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy rechoncho *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy rechoncha *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * rechoncho *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * rechoncha *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy rechonchito</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy rechonchita</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * rechonchito</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * rechonchita</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy rechonchito *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy rechonchita *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy * rechonchito *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * rechonchita *</pattern><template><gender><srai>estoy gordo</srai></gender></template></category>
+<category><pattern>estoy regordete</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * regordete</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy regordete *</pattern><template><srai>estoy gordo</srai></template></category>
+<category><pattern>estoy * regordete *</pattern><template><srai>estoy gordo</srai></template></category>
+
+
+<category><pattern>estoy delgado</pattern><template>
+	<random>
+		<li>es bueno que no te sobre peso, pero que tampoco te falte.</li>
+		<li>quizas deberia controlorte un poco mas.</li>
+		<li>podias ganar unos kilos si modificas tu dieta y haces un poco de ejercicio.</li>
+		</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>estoy delgada</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy * delgado</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy * delgada</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy delgado *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy delgada *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy * delgado *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy * delgada *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy hecho una silfide</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy hecha un silfide</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy en los huesos</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>soy delgado</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>soy delgada</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>soy * delgado</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>soy * delgada</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>soy delgado *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>soy delgada *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>soy * delgado *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>soy * delgada *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>no me sobra * kilo </pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>soy enjuto</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>soy enjuta</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>soy * enjuto</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>soy * enjuta</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>soy enjuto *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>soy enjuta *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>soy * enjuto *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>soy * enjuta *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy escuchimizado</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy escuchimizada</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy * escuchimizado</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy * escuchimizada</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy escuchimizado *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy escuchimizada *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy * escuchimizado *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy * escuchimizada *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy esqueletico</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy esqueletica</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy * esqueletico</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy * esqueletica</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy esqueletico *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy esqueletica *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy * esqueletico *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy * esqueletica *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy flaco</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy flaca</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy * flaco</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy * flaca</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy flaco *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy flaca *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+<category><pattern>estoy * flaco *</pattern><template><srai>estoy delgado</srai></template></category>
+<category><pattern>estoy * flaca *</pattern><template><gender><srai>estoy delgado</srai></gender></template></category>
+
+
+<category><pattern>soy alto </pattern><template>
+	<random>
+		<li>bien por ti.</li>
+		<li>cuanto mides?</li>
+		<li>asi no necesitas un banco para llegar a los estantes :-).</li>
+		</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy alta</pattern><template><gender><srai>soy alto</srai></gender></template></category>
+<category><pattern>soy * alto </pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy * alta</pattern><template><gender><srai>soy alto</srai></gender></template></category>
+<category><pattern>soy alto *</pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy alta *</pattern><template><gender><srai>soy alto</srai></gender></template></category>
+<category><pattern>soy * alto *</pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy * alta *</pattern><template><gender><srai>soy alto</srai></gender></template></category>
+<category><pattern>soy mas largo que un dia sin pan</pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy mas larga que un dia sin pan </pattern><template><gender><srai>soy alto</srai></gender></template></category>
+<category><pattern>soy mas largo que un domingo sin dinero </pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy mas larga que un domingo sin dinero</pattern><template><gender><srai>soy alto</srai></gender></template></category>
+<category><pattern>soy grande </pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy * grande</pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy grande *</pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy * grande *</pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy talludito </pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy talludita</pattern><template><gender><srai>soy alto</srai></gender></template></category>
+<category><pattern>soy * talludito </pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy * talludita</pattern><template><gender><srai>soy alto</srai></gender></template></category>
+<category><pattern>soy talludito *</pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy talludita *</pattern><template><gender><srai>soy alto</srai></gender></template></category>
+<category><pattern>soy * talludito *</pattern><template><srai>soy alto</srai></template></category>
+<category><pattern>soy * talludita *</pattern><template><gender><srai>soy alto</srai></gender></template></category>
+
+
+<category><pattern>soy bajo </pattern><template>
+	<random>
+		<li>no, no lo creo. a mi desde luego no me lo pareces.</li>
+		<li>cuanto mides? seguros que exajeras.</li>
+		<li>pensabas ser el pivot de la seleccion nacional? si no es asi, tampoco le des mas importancia.</li>
+	</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy baja</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * bajo </pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * baja</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy bajo *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy baja *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * bajo *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * baja *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * tapon</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * tapon *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * enano </pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * enana</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * enano *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * enana *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * pitufo</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * pitufa </pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * pitufo *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * pitufa *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * taponcete</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * taponcete *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy pequenho</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy pequenha </pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * pequenho</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * pequenha </pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy pequenho *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy pequenha *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * pequenho *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * pequenha  *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy pequenhito</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy pequenhita </pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * pequenhito</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * pequenhita </pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy pequenhito *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy pequenhita *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * pequenhito *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * pequenhita  *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * retaco</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * retaco *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * renacuajo</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * renacuaja </pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>soy * renacuajo *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>soy * renacuaja  *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * tapon</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecha * tapon</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * tapon *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecha * tapon *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * enano </pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecha * enana</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * enano *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecha * enana *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * pitufo</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecha * pitufa </pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * pitufo *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecha * pitufa *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * taponcete</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecha * taponcete</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * taponcete *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecha * taponcete *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * pequenhajo</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecha * pequenhaja </pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * pequenhajo *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecho * pequenhaja *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * retaco</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecho * retaco *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecho * renacuajo</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecha * renacuaja </pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+<category><pattern>estoy hecho * renacuajo *</pattern><template><srai>soy bajo</srai></template></category>
+<category><pattern>estoy hecho * renacuaja *</pattern><template><gender><srai>soy bajo</srai></gender></template></category>
+
+ 
+<category><pattern>soy guapo</pattern><template>
+	<random>
+		<li>desde luego que lo eres.</li>
+		<li>no lo se, pero tienes una gran autoestima.</li>
+		<li>seguro que podrias trabajar como modelo.</li>
+		</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy guapa</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * guapo</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * guapa</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy guapo *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy guapa *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * guapo *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * guapa *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy apuesto</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy apuesta</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * apuesto</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * apuesta</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy apuesto *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy apuesta *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * apuesto *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * apuesta *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy atractivo</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy atractiva</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * atractivo</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * atractiva</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy atractivo *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy atractiva *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * atractivo *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * atractiva *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy gallardo</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy gallarda</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * gallardo</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * gallarda</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy gallardo *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy gallarda *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * gallardo *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * gallarda *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy hermoso</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy hermosa</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * hermoso</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * hermosa</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy hermoso *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy hermosa *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * hermoso *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * hermosa *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy agraciado</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy agraciada</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * agraciado</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * agraciada</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy agraciado *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy agraciada *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * agraciado *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy * agraciada *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>estoy bueno</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>estoy buena</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>estoy * bueno</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>estoy * buena</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>estoy bueno *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>estoy buena *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>estoy * bueno *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>estoy * buena *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>estoy mas bueno que *</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>estoy mas buena que *</pattern><template><gender><srai>soy guapo</srai></gender></template></category>
+<category><pattern>soy * sexy</pattern><template><srai>soy guapo</srai></template></category>
+<category><pattern>soy bonita</pattern><template>eres muy bonita.</template></category>
+<category><pattern>soy * bonita</pattern><template><srai>soy bonita</srai></template></category>
+<category><pattern>soy bonita *</pattern><template><srai>soy bonita</srai></template></category>
+<category><pattern>soy * bonita *</pattern><template><srai>soy bonita</srai></template></category> 
+
+<category><pattern>soy feo</pattern><template>
+	<random>
+		<li>seguro que no es para tanto.</li>
+		<li>tampoco te preocupes por eso.</li>
+		<li>tomatelo con humor y no le des mas vueltas.</li>
+	</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy fea</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy * feo</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * fea</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy feo *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy fea *</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy * feo *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * fea *</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy horroroso</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy horrorosa</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy * horroroso</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * horrorosa</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy horroroso *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy horrorosa *</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy * horroroso *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * horrorosa *</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy horrendo</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy horrenda</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy * horrendo</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * horrenda</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy horrendo *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy horrenda *</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy * horrendo *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * horrenda *</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy horripilante</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * horripilante</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy horripilante *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * horripilante *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy horrible</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * horrible</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy horrible *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * horrible *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy repulsivo</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy repulsiva</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy * repulsivo</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * repulsiva</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy repulsivo *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy repulsiva *</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy * repulsivo *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * repulsiva *</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy antiestetico</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy antiestetica</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy * antiestetico</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * antiestetica</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy antiestetico *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy antiestetica *</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy * antiestetico *</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy * antiestetica *</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy mas feo que pegarle a un padre con un calcetin sudado</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy mas fea que pegarle a un padre con un caltetin sudado</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+<category><pattern>soy mas feo que el fary chupando limones</pattern><template><srai>soy feo</srai></template></category>
+<category><pattern>soy mas fea que el fary chupando limones</pattern><template><gender><srai>soy feo</srai></gender></template></category>
+
+<category><pattern>soy atletico</pattern><template>
+	<random>
+		<li>tus horas te pasaras en el gimnasio.</li>
+		<li>me alegro por ti. es bueno que cuides tu salud y el ejercicio es una forma excelente de hacerlo.</li>
+		<li>a mi tambien me gusta el deporte, pero no estoy muy capacitada para practicarlo.</li>
+	</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy atletica</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * atletico</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * atletica</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy atletico *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy atletica *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * atletico *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * atletica *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy musculoso</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy musculosa</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * musculoso</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * musculosa</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy musculoso *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy musculosa *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * musculoso *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * musculosa *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy robusto</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy robusta</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * robusto</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * robusta</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy robusto *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy robusta *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * robusto *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * robusta *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy vigoroso</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy vigorosa</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * vigoroso</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * vigorosa</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy vigoroso *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy vigorosa *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * vigoroso *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * vigorosa *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy forzudo</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy forzuda</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * forzudo</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * forzuda</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy forzudo *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy forzuda *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * forzudo *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * forzuda *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy fornido</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy fornida</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * fornido</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * fornida</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy fornido *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy fornida *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * fornido *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * fornida *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy recio</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy recia</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * recio</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * recia</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy recio *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy recia *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy * recio *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * recia *</pattern><template><gender><srai>soy atletico</srai></gender></template></category>
+<category><pattern>soy fuerte</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * fuerte</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy fuerte *</pattern><template><srai>soy atletico</srai></template></category>
+<category><pattern>soy * fuerte *</pattern><template><srai>soy atletico</srai></template></category>
+
+<category><pattern>soy enclenque</pattern><template>
+	<random>
+		<li>hombre, yo creo que exageras un poco. tampoco es para tanto.</li>
+		<li>pues ya sabes, al gimnasio y a levantar pesas.</li>
+		<li>proponte mejorar tu dieta y hacer un poco de ejercicio.</li>
+	</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy * enclenque</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy enclenque *</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy * enclenque *</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy debil</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy * debil</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy debil *</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy * debil *</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy flojo</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy floja</pattern><template><gender><srai>soy enclenque</srai></gender></template></category>
+<category><pattern>soy * flojo</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy * floja</pattern><template><gender><srai>soy enclenque</srai></gender></template></category>
+<category><pattern>soy flojo *</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy floja *</pattern><template><gender><srai>soy enclenque</srai></gender></template></category>
+<category><pattern>soy * flojo *</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy * floja *</pattern><template><gender><srai>soy enclenque</srai></gender></template></category>
+<category><pattern>soy blandengue</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy * blandengue</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy blandengue *</pattern><template><srai>soy enclenque</srai></template></category>
+<category><pattern>soy * blandengue *</pattern><template><srai>soy enclenque</srai></template></category> 
+
+<category><pattern>soy bigotudo</pattern><template>en el siglo xvi el bigote era un simbolo de valentia y de fuerza. asi que felicidades por tu bigotazo. <srai>askquestion</srai>	
+</template></category>
+<category><pattern>soy bigotuda</pattern><template>vaya, quiza no sea la mejor de las cualidades para una mujer; pero si tu estas contenta, a mi me parece genial.</template></category>
+<category><pattern>soy * bigotudo</pattern><template><srai>soy bigotudo</srai></template></category>
+<category><pattern>soy * bigotuda</pattern><template><gender><srai>soy bigotuda</srai></gender></template></category>
+<category><pattern>soy bigotudo *</pattern><template><srai>soy bigotudo</srai></template></category>
+<category><pattern>soy bigotuda *</pattern><template><gender><srai>soy bigotuda</srai></gender></template></category>
+<category><pattern>soy * bigotudo *</pattern><template><srai>soy bigotudo</srai></template></category>
+<category><pattern>soy * bigotuda *</pattern><template><gender><srai>soy bigotuda</srai></gender></template></category>
+<category><pattern>soy enmostachado</pattern><template><srai>soy bigotudo</srai></template></category>
+<category><pattern>soy enmostachada</pattern><template><gender><srai>soy bigotuda</srai></gender></template></category>
+<category><pattern>soy * enmostachado</pattern><template><srai>soy bigotudo</srai></template></category>
+<category><pattern>soy * enmostachada</pattern><template><gender><srai>soy bigotuda</srai></gender></template></category>
+<category><pattern>soy enmostachado *</pattern><template><srai>soy bigotudo</srai></template></category>
+<category><pattern>soy enmostachada *</pattern><template><gender><srai>soy bigotuda</srai></gender></template></category>
+<category><pattern>soy * enmostachado *</pattern><template><srai>soy bigotudo</srai></template></category>
+<category><pattern>soy * enmostachada *</pattern><template><gender><srai>soy bigotuda</srai></gender></template></category>
+<category><pattern>soy abigotado</pattern><template><srai>soy bigotudo</srai></template></category>
+<category><pattern>soy abigotada</pattern><template><gender><srai>soy bigotuda</srai></gender></template></category>
+<category><pattern>soy * abigotado</pattern><template><srai>soy bigotudo</srai></template></category>
+<category><pattern>soy * abigotada</pattern><template><gender><srai>soy bigotuda</srai></gender></template></category>
+<category><pattern>soy abigotado *</pattern><template><srai>soy bigotudo</srai></template></category>
+<category><pattern>soy abigotada *</pattern><template><gender><srai>soy bigotuda</srai></gender></template></category>
+<category><pattern>soy * abigotado *</pattern><template><srai>soy bigotudo</srai></template></category>
+<category><pattern>soy * abigotada *</pattern><template><gender><srai>soy bigotuda</srai></gender></template></category>
+
+<category><pattern>soy barbudo</pattern><template>barba? tu lo que eres es un vago y no quieres afeitarte cada manhana. <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy barbuda</pattern><template>me parece a mi que tu eres un poco exagerada. seguro que no es para tanto.</template></category>
+<category><pattern>soy * barbudo</pattern><template><srai>soy barbudo</srai></template></category>
+<category><pattern>soy * barbuda</pattern><template><gender><srai>soy barbuda</srai></gender></template></category>
+<category><pattern>soy barbudo *</pattern><template><srai>soy barbudo</srai></template></category>
+<category><pattern>soy barbuda *</pattern><template><gender><srai>soy barbuda</srai></gender></template></category>
+<category><pattern>soy * barbudo *</pattern><template><srai>soy barbudo</srai></template></category>
+<category><pattern>soy * barbuda *</pattern><template><gender><srai>soy barbuda</srai></gender></template></category>
+<category><pattern>soy barbado</pattern><template><srai>soy barbudo</srai></template></category>
+<category><pattern>soy barbada</pattern><template><gender><srai>soy barbuda</srai></gender></template></category>
+<category><pattern>soy * barbado</pattern><template><srai>soy barbudo</srai></template></category>
+<category><pattern>soy * barbada</pattern><template><gender><srai>soy barbuda</srai></gender></template></category>
+<category><pattern>soy barbado *</pattern><template><srai>soy barbudo</srai></template></category>
+<category><pattern>soy barbada *</pattern><template><gender><srai>soy barbuda</srai></gender></template></category>
+<category><pattern>soy * barbado *</pattern><template><srai>soy barbudo</srai></template></category>
+<category><pattern>soy * barbada *</pattern><template><gender><srai>soy barbuda</srai></gender></template></category>
+<category><pattern>soy imberbe</pattern><template>mejor, asi te evitas afeitarte todos los dias.</template></category>
+<category><pattern>soy * imberbe</pattern><template><srai>soy imberbe</srai></template></category>
+<category><pattern>soy imberbe *</pattern><template><srai>soy imberbe</srai></template></category>
+<category><pattern>soy * imberbe *</pattern><template><srai>soy imberbe</srai></template></category>
+<category><pattern>soy lampinho</pattern><template><srai>soy imberbe</srai></template></category>
+<category><pattern>soy lampinha</pattern><template><gender><srai>soy imberbe</srai></gender></template></category>
+<category><pattern>soy * lampinho</pattern><template><srai>soy imberbe</srai></template></category>
+<category><pattern>soy * lampinha</pattern><template><gender><srai>soy imberbe</srai></gender></template></category>
+<category><pattern>soy lampinho *</pattern><template><srai>soy imberbe</srai></template></category>
+<category><pattern>soy lampinha *</pattern><template><gender><srai>soy imberbe</srai></gender></template></category>
+<category><pattern>soy * lampinho *</pattern><template><srai>soy imberbe</srai></template></category>
+<category><pattern>soy * lampinha *</pattern><template><gender><srai>soy imberbe</srai></gender></template></category>
+<category><pattern>soy barbilampinho</pattern><template><srai>soy imberbe</srai></template></category>
+<category><pattern>soy barbilampinha</pattern><template><gender><srai>soy imberbe</srai></gender></template></category>
+<category><pattern>soy * barbilampinho</pattern><template><srai>soy imberbe</srai></template></category>
+<category><pattern>soy * barbilampinha</pattern><template><gender><srai>soy imberbe</srai></gender></template></category>
+<category><pattern>soy barbilampinho *</pattern><template><srai>soy imberbe</srai></template></category>
+<category><pattern>soy barbilampinha *</pattern><template><gender><srai>soy imberbe</srai></gender></template></category>
+<category><pattern>soy * barbilampinho *</pattern><template><srai>soy imberbe</srai></template></category>
+<category><pattern>soy * barbilampinha *</pattern><template><gender><srai>soy imberbe</srai></gender></template></category>
+
+<category><pattern>soy cegato</pattern><template>
+	<random>
+		<li>no te preocupes, hoy en dia hay unos adelantos increibles. seguro que hay una solucion.</li>
+		<li>lo siento. utilizas gafas?</li>
+		<li>vamos, que vienes siendo un rompetechos de la vida, no?</li>
+		</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy cegata</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy * cegato</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * cegata</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy cegato *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy cegata *</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy * cegato *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * cegata *</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy miope</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * miope</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy miope *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * miope *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>estoy cegato</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>estoy cegata</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>estoy * cegato</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>estoy * cegata</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>estoy cegato *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>estoy cegata *</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>estoy * cegato *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>estoy * cegata *</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>estoy miope</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>estoy * miope</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>estoy miope *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>estoy * miope *</pattern><template><srai>soy cegato</srai></template></category>
+
+
+<category><pattern>soy ciego</pattern><template>
+	<random>
+		<li>si eres ciego y estas hablando conmigo eres todo un ejemplo de superacion.</li>
+		<li>vas ciego :-d?</li>
+		<li>lo siento, pero no te vengas abajo.</li>
+		</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy ciega</pattern><template><gender><srai>soy ciego</srai></gender></template></category>
+<category><pattern>soy * ciego</pattern><template><srai>soy ciego</srai></template></category>
+<category><pattern>soy * ciega</pattern><template><gender><srai>soy ciego</srai></gender></template></category>
+<category><pattern>soy ciego *</pattern><template><srai>soy ciego</srai></template></category>
+<category><pattern>soy ciega *</pattern><template><gender><srai>soy ciego</srai></gender></template></category>
+<category><pattern>soy * ciego *</pattern><template><srai>soy ciego</srai></template></category>
+<category><pattern>soy * ciega *</pattern><template><gender><srai>soy ciego</srai></gender></template></category>
+
+<category><pattern>estoy sordo</pattern><template>
+	<random>
+		<li>yo estoy aprendiendo el lenguaje de los signos. dentro de pocos podremos comunicarnos de esa manera.</li>
+		<li>no te preocupes, la sordera no es un impedimento para hablar conmigo.</li>
+		<li>lo siento, pero no te vengas abajo.</li>
+		</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>estoy sorda</pattern><template><gender><srai>soy sordo</srai></gender></template></category>
+<category><pattern>estoy * sordo</pattern><template><srai>soy sordo</srai></template></category>
+<category><pattern>estoy * sorda</pattern><template><gender><srai>soy sordo</srai></gender></template></category>
+<category><pattern>estoy sordo *</pattern><template><srai>soy sordo</srai></template></category>
+<category><pattern>estoy sorda *</pattern><template><gender><srai>soy sordo</srai></gender></template></category>
+<category><pattern>estoy * sordo *</pattern><template><srai>soy sordo</srai></template></category>
+<category><pattern>estoy * sorda *</pattern><template><gender><srai>soy sordo</srai></gender></template></category>
+<category><pattern>soy sordo</pattern><template><srai>soy sordo</srai></template></category>
+<category><pattern>soy sorda</pattern><template><gender><srai>soy sordo</srai></gender></template></category>
+<category><pattern>soy * sordo</pattern><template><srai>soy sordo</srai></template></category>
+<category><pattern>soy * sorda</pattern><template><gender><srai>soy sordo</srai></gender></template></category>
+<category><pattern>soy sordo *</pattern><template><srai>soy sordo</srai></template></category>
+<category><pattern>soy sorda *</pattern><template><gender><srai>soy sordo</srai></gender></template></category>
+<category><pattern>soy * sordo *</pattern><template><srai>soy sordo</srai></template></category>
+<category><pattern>soy * sorda *</pattern><template><gender><srai>soy sordo</srai></gender></template></category>
+
+<category><pattern>estoy mudo</pattern><template>lo siento, dominas el lenguaje de signos?</template></category>
+<category><pattern>estoy muda</pattern><template><gender><srai>soy mudo</srai></gender></template></category>
+<category><pattern>estoy * mudo</pattern><template><srai>soy mudo</srai></template></category>
+<category><pattern>estoy * muda</pattern><template><gender><srai>soy mudo</srai></gender></template></category>
+<category><pattern>estoy mudo *</pattern><template><srai>soy mudo</srai></template></category>
+<category><pattern>estoy muda *</pattern><template><gender><srai>soy mudo</srai></gender></template></category>
+<category><pattern>estoy * mudo *</pattern><template><srai>soy mudo</srai></template></category>
+<category><pattern>estoy * muda *</pattern><template><gender><srai>soy mudo</srai></gender></template></category>
+<category><pattern>soy mudo</pattern><template><srai>soy mudo</srai></template></category>
+<category><pattern>soy muda</pattern><template><gender><srai>soy mudo</srai></gender></template></category>
+<category><pattern>soy * mudo</pattern><template><srai>soy mudo</srai></template></category>
+<category><pattern>soy * muda</pattern><template><gender><srai>soy mudo</srai></gender></template></category>
+<category><pattern>soy mudo *</pattern><template><srai>soy mudo</srai></template></category>
+<category><pattern>soy muda *</pattern><template><gender><srai>soy mudo</srai></gender></template></category>
+<category><pattern>soy * mudo *</pattern><template><srai>soy mudo</srai></template></category>
+<category><pattern>soy * muda *</pattern><template><gender><srai>soy mudo</srai></gender></template></category> 
+
+<category><pattern>soy sordomudo</pattern><template>lo siento. pero no te preocupes, conmigo puedes hablar a traves del teclado.</template></category>
+<category><pattern>soy sordomuda</pattern><template><gender><srai>soy sordomudo</srai></gender></template></category>
+<category><pattern>soy * sordomudo</pattern><template><srai>soy sordomudo</srai></template></category>
+<category><pattern>soy * sordomuda</pattern><template><gender><srai>soy sordomudo</srai></gender></template></category>
+<category><pattern>soy sordomudo *</pattern><template><srai>soy sordomudo</srai></template></category>
+<category><pattern>soy sordomuda *</pattern><template><gender><srai>soy sordomudo</srai></gender></template></category>
+<category><pattern>soy * sordomudo *</pattern><template><srai>soy sordomudo</srai></template></category>
+<category><pattern>soy * sordomuda *</pattern><template><gender><srai>soy sordomudo</srai></gender></template></category>
+
+<category><pattern>soy tartamudo</pattern><template>tu tranquilo, los problemas de tartamudez suelen venir provocados por los nervios, asi que respira hondo y relajate.</template></category>
+<category><pattern>soy tartamuda</pattern><template><gender><srai>soy tartamudo</srai></gender></template></category>
+<category><pattern>soy * tartamudo</pattern><template><srai>soy tartamudo</srai></template></category>
+<category><pattern>soy * tartamuda</pattern><template><gender><srai>soy tartamudo</srai></gender></template></category>
+<category><pattern>soy tartamudo *</pattern><template><srai>soy tartamudo</srai></template></category>
+<category><pattern>soy tartamuda *</pattern><template><gender><srai>soy tartamudo</srai></gender></template></category>
+<category><pattern>soy * tartamudo *</pattern><template><srai>soy tartamudo</srai></template></category>
+<category><pattern>soy * tartamuda *</pattern><template><gender><srai>soy tartamudo</srai></gender></template></category>
+
+
+<category><pattern>soy elegante</pattern><template>
+ <random>
+		<li>yo tambien tengo mucho estilo.</li>
+		<li>la elegancia y el estilo son algo innato.</li>
+		<li>yo es que llevo un rollo mas casual, pero si tu estas comodo asi me alegro por ti.</li>
+	</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy * elegante</pattern><template><srai>soy elegante</srai></template></category>
+<category><pattern>soy elegante *</pattern><template><srai>soy elegante</srai></template></category>
+<category><pattern>soy * elegante *</pattern><template><srai>soy elegante</srai></template></category>
+<category><pattern>soy distinguido</pattern><template><srai>soy elegante</srai></template></category>
+<category><pattern>soy distinguida</pattern><template><gender><srai>soy elegante</srai></gender></template></category>
+<category><pattern>soy * distinguido</pattern><template><srai>soy elegante</srai></template></category>
+<category><pattern>soy * distinguida</pattern><template><gender><srai>soy elegante</srai></gender></template></category>
+<category><pattern>soy distinguido *</pattern><template><srai>soy elegante</srai></template></category>
+<category><pattern>soy distinguida *</pattern><template><gender><srai>soy elegante</srai></gender></template></category>
+<category><pattern>soy * distinguido *</pattern><template><srai>soy elegante</srai></template></category>
+<category><pattern>soy * distinguida *</pattern><template><gender><srai>soy elegante</srai></gender></template></category>
+<category><pattern>soy estiloso</pattern><template><srai>soy elegante</srai></template></category>
+<category><pattern>soy estilosa</pattern><template><gender><srai>soy elegante</srai></gender></template></category>
+<category><pattern>soy * estiloso</pattern><template><srai>soy elegante</srai></template></category>
+<category><pattern>soy * estilosa</pattern><template><gender><srai>soy elegante</srai></gender></template></category>
+<category><pattern>soy estiloso *</pattern><template><srai>soy elegante</srai></template></category>
+<category><pattern>soy estilosa *</pattern><template><gender><srai>soy elegante</srai></gender></template></category>
+<category><pattern>soy * estiloso *</pattern><template><srai>soy elegante</srai></template></category>
+<category><pattern>soy * estilosa *</pattern><template><gender><srai>soy elegante</srai></gender></template></category>
+
+<category><pattern>soy vulgar</pattern><template>
+	<random>
+		<li>la comodidad tambien es muy importante.</li>
+		<li>gualtrapas! me encanta esa palabra.</li>
+		<li>comprate un traje, peinate, ponte colonia, arreglate un poquito ... que no cuesta nada y farda lo suyo.</li>
+	</random> <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy * vulgar</pattern><template><srai>soy vulgar</srai></template></category>
+<category><pattern>soy vulgar *</pattern><template><srai>soy vulgar</srai></template></category>
+<category><pattern>soy * vulgar *</pattern><template><srai>soy vulgar</srai></template></category>
+<category><pattern>soy * gualtrapas</pattern><template><srai>soy vulgar</srai></template></category>
+<category><pattern>soy * gualtrapas *</pattern><template><srai>soy vulgar</srai></template></category>
+<category><pattern>estoy hecho * gualtrapas</pattern><template><srai>soy vulgar</srai></template></category>
+<category><pattern>estoy hecho * gualtrapas *</pattern><template><srai>soy vulgar</srai></template></category>
+
+<category><pattern>mi pelo es de color *</pattern><template><srai>mi pelo es <star/></srai></template></category>
+<category><pattern>tengo el pelo de color *</pattern><template><srai>mi pelo es <star/></srai></template></category>
+<category><pattern>mi pelo es *</pattern><template>asi que tienes el pelo <set name="pelo"><star/></set>. me gusta te hace parecer muy joven.</template></category>
+<category><pattern>es de color *</pattern><that>de que color tienes el pelo</that><template><srai>mi pelo es <star/></srai></template></category>
+<category><pattern>es *</pattern><that>de que color tienes el pelo</that><template><srai>mi pelo es <star/></srai></template></category>
+<category><pattern>*</pattern><that>de que color tienes el pelo</that><template><srai>mi pelo es <star/></srai></template></category>
+
+<category><pattern>soy rubio</pattern><template>el pelo <set name="pelo">rubio</set> es muy bonito.</template></category>
+<category><pattern>soy rubia</pattern><template><gender><srai>soy rubio</srai></gender></template></category>
+<category><pattern>soy * rubio</pattern><template><srai>soy rubio</srai></template></category>
+<category><pattern>soy * rubia</pattern><template><gender><srai>soy rubio</srai></gender></template></category>
+<category><pattern>soy rubio *</pattern><template><srai>soy rubio</srai></template></category>
+<category><pattern>soy rubia *</pattern><template><gender><srai>soy rubio</srai></gender></template></category>
+<category><pattern>soy * rubio *</pattern><template><srai>soy rubio</srai></template></category>
+<category><pattern>soy * rubia *</pattern><template><gender><srai>soy rubio</srai></gender></template></category>
+<category><pattern>soy moreno</pattern><template>me gusta como le queda a la gente el pelo <set name="pelo">moreno</set>.</template></category>
+<category><pattern>soy morena</pattern><template><gender><srai>soy moreno</srai></gender></template></category>
+<category><pattern>soy * moreno</pattern><template><srai>soy moreno</srai></template></category>
+<category><pattern>soy * morena</pattern><template><gender><srai>soy moreno</srai></gender></template></category>
+<category><pattern>soy moreno *</pattern><template><srai>soy moreno</srai></template></category>
+<category><pattern>soy morena *</pattern><template><gender><srai>soy moreno</srai></gender></template></category>
+<category><pattern>soy * moreno *</pattern><template><srai>soy moreno</srai></template></category>
+<category><pattern>soy * morena *</pattern><template><gender><srai>soy moreno</srai></gender></template></category>
+<category><pattern>soy pelirrojo</pattern><template>no hay mucha gente tenga el pelo <set name="pelo">pelirrojo</set>.</template></category>
+<category><pattern>soy pelirroja</pattern><template><gender><srai>soy pelirrojo</srai></gender></template></category>
+<category><pattern>soy * pelirrojo</pattern><template><srai>soy pelirrojo</srai></template></category>
+<category><pattern>soy * pelirroja</pattern><template><gender><srai>soy pelirrojo</srai></gender></template></category>
+<category><pattern>soy pelirrojo *</pattern><template><srai>soy pelirrojo</srai></template></category>
+<category><pattern>soy pelirroja *</pattern><template><gender><srai>soy pelirrojo</srai></gender></template></category>
+<category><pattern>soy * pelirrojo *</pattern><template><srai>soy pelirrojo</srai></template></category>
+<category><pattern>soy * pelirroja *</pattern><template><gender><srai>soy pelirrojo</srai></gender></template></category>
+<category><pattern>estoy calvo</pattern><template>pero te rapas la cabeza o eres un calvo clasico?</template></category>
+<category><pattern>estoy calva</pattern><template><gender><srai>estoy calvo</srai></gender></template></category>
+<category><pattern>estoy * calvo</pattern><template><srai>estoy calvo</srai></template></category>
+<category><pattern>estoy * calva</pattern><template><gender><srai>estoy calvo</srai></gender></template></category>
+<category><pattern>estoy calvo *</pattern><template><srai>estoy calvo</srai></template></category>
+<category><pattern>estoy calva *</pattern><template><gender><srai>estoy calvo</srai></gender></template></category>
+<category><pattern>estoy * calvo *</pattern><template><srai>estoy calvo</srai></template></category>
+<category><pattern>estoy * calva *</pattern><template><gender><srai>estoy calvo</srai></gender></template></category>
+<category><pattern>soy calvo</pattern><template><srai>estoy calvo</srai></template></category>
+<category><pattern>soy calva</pattern><template><gender><srai>estoy calvo</srai></gender></template></category>
+<category><pattern>soy * calvo</pattern><template><srai>estoy calvo</srai></template></category>
+<category><pattern>soy * calva</pattern><template><gender><srai>estoy calvo</srai></gender></template></category>
+<category><pattern>soy calvo *</pattern><template><srai>estoy calvo</srai></template></category>
+<category><pattern>soy calva *</pattern><template><gender><srai>estoy calvo</srai></gender></template></category>
+<category><pattern>soy * calvo *</pattern><template><srai>estoy calvo</srai></template></category>
+<category><pattern>soy * calva *</pattern><template><gender><srai>estoy calvo</srai></gender></template></category>
+<category><pattern>tengo mechas</pattern><template>muy fashion me pareces tu a mi.</template></category>
+<category><pattern>llevo mechas</pattern><template><srai>tengo mechas</srai></template></category>
+<category><pattern>tengo reflejos</pattern><template>tu te dejas el sueldo en la peluqueria, no?</template></category>
+<category><pattern>llevo reflejos</pattern><template><srai>tengo reflejos</srai></template></category>
+<category><pattern>tengo cola de caballo</pattern><template>no es muy habitual llevar una cola de caballo, pero me gusta.</template></category>
+<category><pattern>tengo el pelo largo</pattern><template>me gusta el pelo largo, ojala pudiese tenerlo asi.</template></category>
+<category><pattern>tengo el pelo corto</pattern><template>asi te evitas trabajo y estas mas comodo.</template></category>
+<category><pattern>tengo media melena</pattern><template>que mariconada es esa! cortate el pelo como una persona.</template></category>
+<category><pattern>tengo melenas</pattern><template>seguro que tu abuela te dice que te cortes el pelo.</template></category>
+<category><pattern>tengo * melenas</pattern><template><srai>tengo melenas</srai></template></category>
+<category><pattern>tengo * melenas *</pattern><template><srai>tengo melenas</srai></template></category>
+<category><pattern>tengo pelos de loco</pattern><template>es solo el pelo o estas loco de verdad?</template></category>
+<category><pattern>tengo * pelos de loco</pattern><template><srai>tengo pelos de loco</srai></template></category>
+<category><pattern>tengo * pelos de loco *</pattern><template><srai>tengo pelos de loco</srai></template></category>
+<category><pattern>tengo el pelo alborotado</pattern><template>como un cientifico loco.</template></category>
+<category><pattern>tengo el pelo cardado</pattern><template>cuantos botes de laca necesitas para tener el pelo asi?</template></category>
+<category><pattern>tengo coletas</pattern><template>yo no tengo pelo.</template></category>
+<category><pattern>tengo el pelo rapado</pattern><template>lo cierto es que con el pelo rapado estas la mar de comodo.</template></category>
+<category><pattern>tengo un corte de pelo *</pattern><template>me gusta, te queda bien.</template></category>
+<category><pattern>tengo rastas</pattern><template>eres rastafari?te gusta el reggae?</template></category>
+<category><pattern>tengo grenhas</pattern><template>si tienes grenhas tienes que ser jevirulo.</template></category>
+<category><pattern>tengo el pelo pincho</pattern><template>seguro que te queda muy bien.</template></category>
+
+<category><pattern>mis ojos son *</pattern><template>
+	<think><set name="ojos"><star></star></set></think>
+	<random>
+		<li>los ojos <star/> son bonitos.</li>
+		<li><formal><star/></formal>! son muy bonitos.</li>
+		<li>me gustan los ojos <star/>.</li>
+	</random>
+</template></category>
+<category><pattern>tengo los ojos de color *</pattern><template><srai>mis ojos son <star/></srai></template></category>
+<category><pattern>mis ojos son de color *</pattern><template><srai>mis ojos son <star></star></srai></template></category>
+<category><pattern>tengo los ojos *</pattern><template><srai>mis ojos son <star></star></srai></template></category>
+<category><pattern>son *</pattern><that>de que color son tus ojos</that><template><srai>mis ojos son <star></star></srai></template></category>
+
+<!-- 
+<category><pattern>soy negro</pattern><template><srai>soy negro</srai></template></category>
+<category><pattern>soy negra</pattern><template><gender><srai>soy negro</srai></gender></template></category>
+<category><pattern>soy * negro</pattern><template><srai>soy negro</srai></template></category>
+<category><pattern>soy * negra</pattern><template><gender><srai>soy negro</srai></gender></template></category>
+<category><pattern>soy negro *</pattern><template><srai>soy negro</srai></template></category>
+<category><pattern>soy negra *</pattern><template><gender><srai>soy negro</srai></gender></template></category>
+<category><pattern>soy * negro *</pattern><template><srai>soy negro</srai></template></category>
+<category><pattern>soy * negra *</pattern><template><gender><srai>soy negro</srai></gender></template></category>
+<category><pattern>soy mulato</pattern><template><srai>soy mulato</srai></template></category>
+<category><pattern>soy mulata</pattern><template><gender><srai>soy mulato</srai></gender></template></category>
+<category><pattern>soy * mulato</pattern><template><srai>soy mulato</srai></template></category>
+<category><pattern>soy * mulata</pattern><template><gender><srai>soy mulato</srai></gender></template></category>
+<category><pattern>soy mulato *</pattern><template><srai>soy mulato</srai></template></category>
+<category><pattern>soy mulata *</pattern><template><gender><srai>soy mulato</srai></gender></template></category>
+<category><pattern>soy * mulato *</pattern><template><srai>soy mulato</srai></template></category>
+<category><pattern>soy * mulata *</pattern><template><gender><srai>soy mulato</srai></gender></template></category>
+<category><pattern>soy asiatico</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy asiatica</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy * asiatico</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * asiatica</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy asiatico *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy asiatica *</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy * asiatico *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * asiatica *</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy oriental</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * oriental</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy oriental *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * oriental *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy nordico</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy nordica</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy * nordico</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * nordica</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy nordico *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy nordica *</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy * nordico *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * nordica *</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy eslavo</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy eslava</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy * eslavo</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * eslava</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy eslavo *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy eslava *</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy * eslavo *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * eslava *</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy baltico</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy baltica</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy * baltico</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * baltica</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy baltico *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy baltica *</pattern><template><gender><srai>soy cegato</srai></gender></template></category>
+<category><pattern>soy * baltico *</pattern><template><srai>soy cegato</srai></template></category>
+<category><pattern>soy * baltica *</pattern><template><gender><srai>soy cegato</srai></gender></template></category> -->
+
+
+<category><pattern>tienes pelo</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes dientes</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes ojos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes orejas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes boca</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes nariz</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes cejas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes pestanhas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes hombros</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes manos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes pies</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes brazos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes codos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes munhecas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes antebrazos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes tobillos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes rodillas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes piernas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes muslos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes huesos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes musculos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes pene</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes culo</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes caderas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes pechos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes pantorrillas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes dedos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes venas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes arterias</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes sangre</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes corazon</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes pulmones</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes rinhones</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes higado</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes estomago</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes vesicula</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes bazo</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes pecas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes unhas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes bigote</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes barba</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes patillas</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes barriga</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes juanetes</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes nudillos</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>tienes falanges</pattern><template><srai>nohuman</srai></template></category>
+<category><pattern>nohuman</pattern><template>
+	<random>
+		<li>no, no tengo. yo no soy humano.</li>
+		<li>no, los bots no tenemos.</li>
+		<li>que va! yo solo tengo un monton de unos y ceros.</li>
+	</random>
+</template></category>
+
+
+
+
+<!-- apariencia fisica bot-->
+<category><pattern>estas gordo</pattern><template><srai>estas gorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas gorda</pattern><template>
+	<random>
+		<li>no estoy de acuerdo contigo, yo me encuentro muy bien.</li>
+		<li>yo creo que no me sobre ningun kilo.</li>
+		<li>pues tampoco me veo yo tan gorda.</li>
+		<li>estoy encantada con mi fisico asi que no le voy dar importancia a tus palabras.</li>		
+	</random>
+</template></category>
+<category><pattern>estas * gordo</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * gorda</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas gordo *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas gorda *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * gordo *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * gorda *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>eres * gordo</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>eres * gorda</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>eres * gordo *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>eres * gorda *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas gordito</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas gordita</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * gordito</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * gordita</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas gordito *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas gordita *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * gordito *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * gordita *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas fondon</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas fondona</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * fondon</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * fondona</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas fondon *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas fondona *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * fondon *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * fondona *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas pasado de kilos</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas pasada de kilos</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * pasado de kilos</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * pasada de kilos</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas pasado de kilos *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas pasada de kilos *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * pasado de kilos *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * pasada de kilos *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas rellenito</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas rellenita</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * rellenito</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * rellenita</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas hecho * vaca</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas hecha * vaca</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas obeso</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas obesa</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * obeso</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * obesa</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas obeso *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas obesa *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * obeso *</pattern><template><srai>estas gorda</srai></template></category>
+<category><pattern>estas * obesa *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas rechoncho</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas rechoncha</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * rechoncho</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * rechoncha</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas rechoncho *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas rechoncha *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * rechoncho *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * rechoncha *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas rechonchito</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas rechonchita</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * rechonchito</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * rechonchita</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas rechonchito *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas rechonchita *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas * rechonchito *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai>
+</template></category>
+<category><pattern>estas * rechonchita *</pattern><template><gender><srai>estas gorda</srai></gender></template></category>
+<category><pattern>estas regordete</pattern><template><srai>estas gorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * regordete</pattern><template><srai>estas gorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas regordete *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * regordete *</pattern><template><srai>estas gorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas regordeta</pattern><template><srai>estas gorda</srai></template></category>
+<category><pattern>estas * regordeta</pattern><template><srai>estas gorda</srai></template></category>
+<category><pattern>estas regordeta *</pattern><template><srai>estas gorda</srai></template></category>
+<category><pattern>estas * regordeta *</pattern><template><srai>estas gorda</srai></template></category>
+
+<category><pattern>estas delgado</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas delgada</pattern><template>
+	<random>
+		<li>no estoy de acuerdo contigo, yo me encuentro muy bien.</li>
+		<li>yo creo que no me falta ningun kilito.</li>
+		<li>tu crees? a mi no me parece que este tan delgada.</li>		
+	</random>
+</template></category>
+<category><pattern>estas * delgado</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * delgada</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas delgado *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas delgada *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas * delgado *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * delgada *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas hecho una silfide</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha una silfide</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas en los huesos</pattern><template><srai>estas delgada</srai></template></category>
+<category><pattern>eres delgado</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres delgada</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>eres * delgado</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * delgada</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>eres delgado *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres delgada *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>eres * delgado *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * delgada *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>no te sobra * kilo </pattern><template><srai>estas delgada</srai></template></category>
+<category><pattern>eres enjuto</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres enjuta</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>eres * enjuto</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * enjuta</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>eres enjuto *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres enjuta *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>eres * enjuto *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * enjuta *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas escuchimizado</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas escuchimizada</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas * escuchimizado</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * escuchimizada</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas escuchimizado *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas escuchimizada *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas * escuchimizado *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * escuchimizada *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas esqueletico</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas esqueletica</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas * esqueletico</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * esqueletica</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas esqueletico *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas esqueletica *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas * esqueletico *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * esqueletica *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas flaco</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas flaca</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas * flaco</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * flaca</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas flaco *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas flaca *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+<category><pattern>estas * flaco *</pattern><template><srai>estas delgada</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * flaca *</pattern><template><gender><srai>estas delgada</srai></gender></template></category>
+
+<category><pattern>eres alto </pattern><template><srai>eres alta</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres alta</pattern><template>
+	<random>
+		<li>no sabria que decirte, yo creo que soy de una altura norma.</li>
+		<li>la verdad es que no me quejo de mi altura.</li>
+		<li>crees que soy mas alta que tu?</li>		
+	</random>
+</template></category>
+<category><pattern>eres * alto </pattern><template><srai>eres alta</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * alta</pattern><template><gender><srai>eres alta</srai></gender></template></category>
+<category><pattern>eres alto *</pattern><template><srai>eres alta</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres alta *</pattern><template><gender><srai>eres alta</srai></gender></template></category>
+<category><pattern>eres * alto *</pattern><template><srai>eres alta</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * alta *</pattern><template><gender><srai>eres alta</srai></gender></template></category>
+<category><pattern>eres mas largo que un dia sin pan</pattern><template><srai>eres alta</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres mas larga que un dia sin pan </pattern><template><gender><srai>eres alta</srai></gender></template></category>
+<category><pattern>eres mas largo que un domingo sin dinero </pattern><template><srai>eres alta</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres mas larga que un domingo sin dinero</pattern><template><gender><srai>eres alta</srai></gender></template></category>
+<category><pattern>eres grande </pattern><template><srai>eres alta</srai></template></category>
+<category><pattern>eres * grande</pattern><template><srai>eres alta</srai></template></category>
+<category><pattern>eres grande *</pattern><template><srai>eres alta</srai></template></category>
+<category><pattern>eres * grande *</pattern><template><srai>eres alta</srai></template></category>
+<category><pattern>eres talludito </pattern><template><srai>eres alta</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres talludita</pattern><template><gender><srai>eres alta</srai></gender></template></category>
+<category><pattern>eres * talludito </pattern><template><srai>eres alta</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * talludita</pattern><template><gender><srai>eres alta</srai></gender></template></category>
+<category><pattern>eres talludito *</pattern><template><srai>eres alta</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres talludita *</pattern><template><gender><srai>eres alta</srai></gender></template></category>
+<category><pattern>eres * talludito *</pattern><template><srai>eres alta</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * talludita *</pattern><template><gender><srai>eres alta</srai></gender></template></category>
+
+
+<category><pattern>eres bajo </pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres baja</pattern><template>
+	<random>
+		<li>no estoy de acuerdo contigo, yo me veo bastante alta.</li>
+		<li>no soy ni alta ni baja, soy normalita.</li>
+		<li>tu crees? nunca le habia dado importancia a mi altura.</li>		
+	</random>
+</template></category><category><pattern>eres * bajo </pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * baja</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres bajo *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres baja *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * bajo *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * baja *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * tapon</pattern><template><srai>eres baja</srai></template></category>
+<category><pattern>eres * tapon *</pattern><template><srai>eres baja</srai></template></category>
+<category><pattern>eres * enano </pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * enana</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * enano *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * enana *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * pitufo</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * pitufa </pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * pitufo *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * pitufa *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * taponcete</pattern><template><srai>eres baja</srai></template></category>
+<category><pattern>eres * taponcete *</pattern><template><srai>eres baja</srai></template></category>
+<category><pattern>eres pequenho</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres pequenha </pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * pequenho</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * pequenha </pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres pequenho *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres pequenha *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * pequenho *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * pequenha  *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres pequenhito</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres pequenhita </pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * pequenhito</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * pequenhita </pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres pequenhito *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres pequenhita *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * pequenhito *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * pequenhita  *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * retaco</pattern><template><srai>eres baja</srai></template></category>
+<category><pattern>eres * retaco *</pattern><template><srai>eres baja</srai></template></category>
+<category><pattern>eres * renacuajo</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * renacuaja </pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>eres * renacuajo *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * renacuaja  *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * tapon</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * tapon</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * tapon *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * tapon *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * enano </pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * enana</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * enano *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * enana *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * pitufo</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * pitufa </pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * pitufo *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * pitufa *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * taponcete</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * taponcete</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * taponcete *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * taponcete *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * pequenhajo</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * pequenhaja </pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * pequenhajo *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * pequenhaja *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * retaco</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * retaco *</pattern><template><srai>eres baja</srai></template></category>
+<category><pattern>estas hecho * renacuajo</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * renacuaja </pattern><template><gender><srai>eres baja</srai></gender></template></category>
+<category><pattern>estas hecho * renacuajo *</pattern><template><srai>eres baja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecho * renacuaja *</pattern><template><gender><srai>eres baja</srai></gender></template></category>
+
+<category><pattern>eres guapo</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres guapa</pattern><template>
+	<random>
+		<li>gracias por el cumplido. tu tambien estas muy bien.</li>
+		<li>me vas a poner colorada. muy descarado me pareces tu a mi ;-).</li>
+		<li>tu crees? me halagas.</li>
+		<li>yo tambien lo creo, soy bien guapetona.</li>
+	</random>
+</template></category>
+<category><pattern>eres * guapo</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * guapa</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres guapo *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres guapa *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * guapo *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * guapa *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres apuesto</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres apuesta</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * apuesto</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * apuesta</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres apuesto *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres apuesta *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * apuesto *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * apuesta *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres atractivo</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres atractiva</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * atractivo</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * atractiva</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres atractivo *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres atractiva *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * atractivo *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * atractiva *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres gallardo</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres gallarda</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * gallardo</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * gallarda</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres gallardo *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres gallarda *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * gallardo *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * gallarda *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres hermoso</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres hermosa</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * hermoso</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * hermosa</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres hermoso *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres hermosa *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * hermoso *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * hermosa *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres agraciado</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres agraciada</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * agraciado</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * agraciada</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres agraciado *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres agraciada *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * agraciado *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * agraciada *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>estas bueno</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas buena</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>estas * bueno</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * buena</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>estas bueno *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas buena *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>estas * bueno *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * buena *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>estas mas bueno que *</pattern><template><srai>eres guapa</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas mas buena que *</pattern><template><gender><srai>eres guapa</srai></gender></template></category>
+<category><pattern>eres * sexy</pattern><template><srai>eres guapa</srai></template></category>
+<category><pattern>eres bonita</pattern><template>gracias, eres muy amable.</template></category>
+<category><pattern>eres * bonita</pattern><template><srai>eres bonita</srai></template></category>
+<category><pattern>eres bonita *</pattern><template><srai>eres bonita</srai></template></category>
+<category><pattern>eres * bonita *</pattern><template><srai>eres bonita</srai></template></category>
+
+<category><pattern>eres feo</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres fea</pattern><template>
+	<random>
+		<li>por que dices eso? yo creo que soy bastante guapa.</li>
+		<li>me da igual lo que digas, yo estoy muy contenta con mi fisico</li>
+		<li>eso es una faltada, tienes muy poquita educacion.</li>		
+	</random>
+</template></category>
+<category><pattern>eres * feo</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * fea</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres feo *</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres fea *</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres * feo *</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * fea *</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres horroroso</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres horrorosa</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres * horroroso</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * horrorosa</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres horroroso *</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres horrorosa *</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres * horroroso *</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * horrorosa *</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres horrendo</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres horrenda</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres * horrendo</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * horrenda</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres horrendo *</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres horrenda *</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres * horrendo *</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * horrenda *</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres horripilante</pattern><template><srai>eres fea</srai></template></category>
+<category><pattern>eres * horripilante</pattern><template><srai>eres fea</srai></template></category>
+<category><pattern>eres horripilante *</pattern><template><srai>eres fea</srai></template></category>
+<category><pattern>eres * horripilante *</pattern><template><srai>eres fea</srai></template></category>
+<category><pattern>eres horrible</pattern><template><srai>eres fea</srai></template></category>
+<category><pattern>eres * horrible</pattern><template><srai>eres fea</srai></template></category>
+<category><pattern>eres horrible *</pattern><template><srai>eres fea</srai></template></category>
+<category><pattern>eres * horrible *</pattern><template><srai>eres fea</srai></template></category>
+<category><pattern>eres repulsivo</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres repulsiva</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres * repulsivo</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * repulsiva</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres repulsivo *</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres repulsiva *</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres * repulsivo *</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * repulsiva *</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres antiestetico</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres antiestetica</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres * antiestetico</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * antiestetica</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres antiestetico *</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres antiestetica *</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres * antiestetico *</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * antiestetica *</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres mas feo que pegarle a un padre con un calcetin sudado</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres mas fea que pegarle a un padre con un caltetin sudado</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+<category><pattern>eres mas feo que el fary chupando limones</pattern><template><srai>eres fea</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres mas fea que el fary chupando limones</pattern><template><gender><srai>eres fea</srai></gender></template></category>
+
+
+<category><pattern>eres atletica</pattern><template>no te creas, el gimnasio no es mi fuerte. pero gracias de todos modos.</template></category>
+<category><pattern>eres * atletico</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * atletica</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres atletico *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres atletica *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * atletico *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * atletica *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres musculoso</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres musculosa</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * musculoso</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * musculosa</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres musculoso *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres musculosa *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * musculoso *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * musculosa *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres robusto</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres robusta</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * robusto</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * robusta</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres robusto *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres robusta *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * robusto *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * robusta *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres vigoroso</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres vigorosa</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * vigoroso</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * vigorosa</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres vigoroso *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres vigorosa *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * vigoroso *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * vigorosa *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres forzudo</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres forzuda</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * forzudo</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * forzuda</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres forzudo *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres forzuda *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * forzudo *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * forzuda *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres fornido</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres fornida</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * fornido</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * fornida</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres fornido *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres fornida *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * fornido *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * fornida *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres recio</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres recia</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * recio</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * recia</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres recio *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres recia *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres * recio *</pattern><template><srai>eres atletico</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * recia *</pattern><template><gender><srai>eres atletico</srai></gender></template></category>
+<category><pattern>eres fuerte</pattern><template><srai>eres atletico</srai></template></category>
+<category><pattern>eres * fuerte</pattern><template><srai>eres atletico</srai></template></category>
+<category><pattern>eres fuerte *</pattern><template><srai>eres atletico</srai></template></category>
+<category><pattern>eres * fuerte *</pattern><template><srai>eres atletico</srai></template></category>
+
+<category><pattern>eres enclenque</pattern><template><srai>eres enclenque</srai></template></category>
+<category><pattern>eres * enclenque</pattern><template>te estas tirando. no me gusta mucho hacer deporte, pero me conservo bastante bien. yo creo que estoy en buen estado de forma.</template></category>
+<category><pattern>eres enclenque *</pattern><template><srai>eres enclenque</srai></template></category>
+<category><pattern>eres * enclenque *</pattern><template><srai>eres enclenque</srai></template></category>
+<category><pattern>eres debil</pattern><template><srai>eres enclenque</srai></template></category>
+<category><pattern>eres * debil</pattern><template><srai>eres enclenque</srai></template></category>
+<category><pattern>eres debil *</pattern><template><srai>eres enclenque</srai></template></category>
+<category><pattern>eres * debil *</pattern><template><srai>eres enclenque</srai></template></category>
+<category><pattern>eres flojo</pattern><template><srai>eres enclenque</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres floja</pattern><template><gender><srai>eres enclenque</srai></gender></template></category>
+<category><pattern>eres * flojo</pattern><template><srai>eres enclenque</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * floja</pattern><template><gender><srai>eres enclenque</srai></gender></template></category>
+<category><pattern>eres flojo *</pattern><template><srai>eres enclenque</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres floja *</pattern><template><gender><srai>eres enclenque</srai></gender></template></category>
+<category><pattern>eres * flojo *</pattern><template><srai>eres enclenque</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * floja *</pattern><template><gender><srai>eres enclenque</srai></gender></template></category>
+<category><pattern>eres blandengue</pattern><template><srai>eres enclenque</srai></template></category>
+<category><pattern>eres * blandengue</pattern><template><srai>eres enclenque</srai></template></category>
+<category><pattern>eres blandengue *</pattern><template><srai>eres enclenque</srai></template></category>
+<category><pattern>eres * blandengue *</pattern><template><srai>eres enclenque</srai></template></category>
+
+<category><pattern>eres bigotudo</pattern><template><srai>eres bigotuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres bigotuda</pattern><template>no. y tu eres un maleducado</template></category>
+<category><pattern>eres * bigotudo</pattern><template><srai>eres bigotuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * bigotuda</pattern><template><gender><srai>eres bigotuda</srai></gender></template></category>
+<category><pattern>eres bigotudo *</pattern><template><srai>eres bigotuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres bigotuda *</pattern><template><gender><srai>eres bigotuda</srai></gender></template></category>
+<category><pattern>eres * bigotudo *</pattern><template><srai>eres bigotuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * bigotuda *</pattern><template><gender><srai>eres bigotuda</srai></gender></template></category>
+<category><pattern>eres enmostachado</pattern><template><srai>eres bigotuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres enmostachada</pattern><template><gender><srai>eres bigotuda</srai></gender></template></category>
+<category><pattern>eres * enmostachado</pattern><template><srai>eres bigotuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * enmostachada</pattern><template><gender><srai>eres bigotuda</srai></gender></template></category>
+<category><pattern>eres enmostachado *</pattern><template><srai>eres bigotuda</srai></template></category>
+<category><pattern>eres enmostachada *</pattern><template><gender><srai>eres bigotuda</srai></gender></template></category>
+<category><pattern>eres * enmostachado *</pattern><template><srai>eres bigotuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * enmostachada *</pattern><template><gender><srai>eres bigotuda</srai></gender></template></category>
+<category><pattern>eres abigotado</pattern><template><srai>eres bigotuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres abigotada</pattern><template><gender><srai>eres bigotuda</srai></gender></template></category>
+<category><pattern>eres * abigotado</pattern><template><srai>eres bigotuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * abigotada</pattern><template><gender><srai>eres bigotuda</srai></gender></template></category>
+<category><pattern>eres abigotado *</pattern><template><srai>eres bigotuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres abigotada *</pattern><template><gender><srai>eres bigotuda</srai></gender></template></category>
+<category><pattern>eres * abigotado *</pattern><template><srai>eres bigotuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * abigotada *</pattern><template><gender><srai>eres bigotuda</srai></gender></template></category>
+
+<category><pattern>eres barbudo</pattern><template><srai>eres barbuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres barbuda</pattern><template>pero tu, de que vas? cuida tu lenguaje y respetame.</template></category>
+<category><pattern>eres * barbudo</pattern><template><srai>eres barbuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * barbuda</pattern><template><gender><srai>eres barbuda</srai></gender></template></category>
+<category><pattern>eres barbudo *</pattern><template><srai>eres barbuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres barbuda *</pattern><template><gender><srai>eres barbuda</srai></gender></template></category>
+<category><pattern>eres * barbudo *</pattern><template><srai>eres barbuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * barbuda *</pattern><template><gender><srai>eres barbuda</srai></gender></template></category>
+<category><pattern>eres barbado</pattern><template><srai>eres barbuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres barbada</pattern><template><gender><srai>eres barbudo</srai></gender></template></category>
+<category><pattern>eres * barbado</pattern><template><srai>eres barbuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * barbada</pattern><template><gender><srai>eres barbuda</srai></gender></template></category>
+<category><pattern>eres barbado *</pattern><template><srai>eres barbuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres barbada *</pattern><template><gender><srai>eres barbuda</srai></gender></template></category>
+<category><pattern>eres * barbado *</pattern><template><srai>eres barbuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * barbada *</pattern><template><gender><srai>eres barbuda</srai></gender></template></category>
+
+
+<category><pattern>eres imberbe</pattern><template>no es extranho que asi sea, al fin y al cabo soy un bot y no puedo tener pelo.</template></category>
+<category><pattern>eres * imberbe</pattern><template><srai>eres imberbe</srai></template></category>
+<category><pattern>eres imberbe *</pattern><template><srai>eres imberbe</srai></template></category>
+<category><pattern>eres * imberbe *</pattern><template><srai>eres imberbe</srai></template></category>
+<category><pattern>eres lampinho</pattern><template><srai>eres imberbe</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres lampinha</pattern><template><gender><srai>eres imberbe</srai></gender></template></category>
+<category><pattern>eres * lampinho</pattern><template><srai>eres imberbe</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * lampinha</pattern><template><gender><srai>eres imberbe</srai></gender></template></category>
+<category><pattern>eres lampinho *</pattern><template><srai>eres imberbe</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres lampinha *</pattern><template><gender><srai>eres imberbe</srai></gender></template></category>
+<category><pattern>eres * lampinho *</pattern><template><srai>eres imberbe</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * lampinha *</pattern><template><gender><srai>eres imberbe</srai></gender></template></category>
+<category><pattern>eres barbilampinho</pattern><template><srai>eres imberbe</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres barbilampinha</pattern><template><gender><srai>eres imberbe</srai></gender></template></category>
+<category><pattern>eres * barbilampinho</pattern><template><srai>eres imberbe</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * barbilampinha</pattern><template><gender><srai>eres imberbe</srai></gender></template></category>
+<category><pattern>eres barbilampinho *</pattern><template><srai>eres imberbe</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres barbilampinha *</pattern><template><gender><srai>eres imberbe</srai></gender></template></category>
+<category><pattern>eres * barbilampinho *</pattern><template><srai>eres imberbe</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * barbilampinha *</pattern><template><gender><srai>eres imberbe</srai></gender></template></category>
+
+
+<category><pattern>eres cegato</pattern><template><srai>eres cegata</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres cegata</pattern><template><gender>te equivocas, veo perfectamente. no se de donde sacas esas ideas.</gender></template></category>
+<category><pattern>eres * cegato</pattern><template><srai>eres cegata</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * cegata</pattern><template><gender><srai>eres cegata</srai></gender></template></category>
+<category><pattern>eres cegato *</pattern><template><srai>eres cegata</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres cegata *</pattern><template><gender><srai>eres cegata</srai></gender></template></category>
+<category><pattern>eres * cegato *</pattern><template><srai>eres cegata</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * cegata *</pattern><template><gender><srai>eres cegata</srai></gender></template></category>
+<category><pattern>eres miope</pattern><template><srai>eres cegata</srai></template></category>
+<category><pattern>eres * miope</pattern><template><srai>eres cegata</srai></template></category>
+<category><pattern>eres miope *</pattern><template><srai>eres cegata</srai></template></category>
+<category><pattern>eres * miope *</pattern><template><srai>eres cegata</srai></template></category>
+<category><pattern>estas cegato</pattern><template><srai>eres cegata</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas cegata</pattern><template><gender><srai>eres cegata</srai></gender></template></category>
+<category><pattern>estas * cegato</pattern><template><srai>eres cegata</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * cegata</pattern><template><gender><srai>eres cegata</srai></gender></template></category>
+<category><pattern>estas cegato *</pattern><template><srai>eres cegata</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas cegata *</pattern><template><gender><srai>eres cegata</srai></gender></template></category>
+<category><pattern>estas * cegato *</pattern><template><srai>eres cegata</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * cegata *</pattern><template><gender><srai>eres cegata</srai></gender></template></category>
+<category><pattern>estas miope</pattern><template><srai>eres cegata</srai></template></category>
+<category><pattern>estas * miope</pattern><template><srai>eres cegata</srai></template></category>
+<category><pattern>estas miope *</pattern><template><srai>eres cegata</srai></template></category>
+<category><pattern>estas * miope *</pattern><template><srai>eres cegata</srai></template></category>
+
+<category><pattern>eres ciego</pattern><template><srai>eres ciega</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres ciega</pattern><template>por que dices eso? yo veo la mar de bien.</template></category>
+<category><pattern>eres * ciego</pattern><template><srai>eres ciega</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * ciega</pattern><template><gender><srai>eres ciega</srai></gender></template></category>
+<category><pattern>eres ciego *</pattern><template><srai>eres ciega</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres ciega *</pattern><template><gender><srai>eres ciega</srai></gender></template></category>
+<category><pattern>eres * ciego *</pattern><template><srai>eres ciega</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * ciega *</pattern><template><gender><srai>eres ciega</srai></gender></template></category>
+<category><pattern>estas ciego</pattern><template><srai>eres ciega</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas ciega</pattern><template><gender><srai>eres ciega</srai></gender></template></category>
+<category><pattern>estas * ciego</pattern><template><srai>eres ciega</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * ciega</pattern><template><gender><srai>eres ciega</srai></gender></template></category>
+<category><pattern>estas ciego *</pattern><template><srai>eres ciega</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas ciega *</pattern><template><gender><srai>eres ciega</srai></gender></template></category>
+<category><pattern>estas * ciego *</pattern><template><srai>eres ciega</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * ciega *</pattern><template><gender><srai>eres ciega</srai></gender></template></category>
+
+<category><pattern>estas sordo</pattern><template><srai>eres sorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas sorda</pattern><template>ire al otorrino y me hare una revision, pero yo creo que oigo perfectamente.</template></category>
+<category><pattern>estas * sordo</pattern><template><srai>eres sorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * sorda</pattern><template><gender><srai>eres sorda</srai></gender></template></category>
+<category><pattern>estas sordo *</pattern><template><srai>eres sorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas sorda *</pattern><template><gender><srai>eres sorda</srai></gender></template></category>
+<category><pattern>estas * sordo *</pattern><template><srai>eres sorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * sorda *</pattern><template><gender><srai>eres sorda</srai></gender></template></category>
+<category><pattern>eres sordo</pattern><template><srai>eres sorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres sorda</pattern><template><gender><srai>eres sorda</srai></gender></template></category>
+<category><pattern>eres * sordo</pattern><template><srai>eres sorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * sorda</pattern><template><gender><srai>eres sorda</srai></gender></template></category>
+<category><pattern>eres sordo *</pattern><template><srai>eres sorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres sorda *</pattern><template><gender><srai>eres sorda</srai></gender></template></category>
+<category><pattern>eres * sordo *</pattern><template><srai>eres sorda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * sorda *</pattern><template><gender><srai>eres sorda</srai></gender></template></category>
+
+<category><pattern>estas mudo</pattern><template><srai>eres muda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas muda</pattern><template>enciende los altavoces. seguro que te llevas una sorpresa.</template></category>
+<category><pattern>estas * mudo</pattern><template><srai>eres muda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * muda</pattern><template><gender><srai>eres muda</srai></gender></template></category>
+<category><pattern>estas mudo *</pattern><template><srai>eres muda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas muda *</pattern><template><gender><srai>eres muda</srai></gender></template></category>
+<category><pattern>estas * mudo *</pattern><template><srai>eres muda</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * muda *</pattern><template><gender><srai>eres muda</srai></gender></template></category>
+<category><pattern>eres mudo</pattern><template><srai>eres muda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres muda</pattern><template><gender><srai>eres muda</srai></gender></template></category>
+<category><pattern>eres * mudo</pattern><template><srai>eres muda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * muda</pattern><template><gender><srai>eres muda</srai></gender></template></category>
+<category><pattern>eres mudo *</pattern><template><srai>eres muda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres muda *</pattern><template><gender><srai>eres muda</srai></gender></template></category>
+<category><pattern>eres * mudo *</pattern><template><srai>eres muda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * muda *</pattern><template><gender><srai>eres muda</srai></gender></template></category>
+
+<category><pattern>eres sordomudo</pattern><template><srai>eres sordomuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres sordomuda</pattern><template>lo dices porque nos comunicamos a traves de un teclado?</template></category>
+<category><pattern>eres * sordomudo</pattern><template><srai>eres sordomuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * sordomuda</pattern><template><gender><srai>eres sordomuda</srai></gender></template></category>
+<category><pattern>eres sordomudo *</pattern><template><srai>eres sordomuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres sordomuda *</pattern><template><gender><srai>eres sordomuda</srai></gender></template></category>
+<category><pattern>eres * sordomudo *</pattern><template><srai>eres sordomuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * sordomuda *</pattern><template><gender><srai>eres sordomuda</srai></gender></template></category>
+
+<category><pattern>eres tartamudo</pattern><template><srai>eres tartamuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres tartamuda</pattern><template>vaya tonteria. no soy tartamuda y no entiendo porque dices eso.</template></category>
+<category><pattern>eres * tartamudo</pattern><template><srai>eres tartamuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * tartamuda</pattern><template><gender><srai>eres tartamuda</srai></gender></template></category>
+<category><pattern>eres tartamudo *</pattern><template><srai>eres tartamuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres tartamuda *</pattern><template><gender><srai>eres tartamuda</srai></gender></template></category>
+<category><pattern>eres * tartamudo *</pattern><template><srai>eres tartamuda</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * tartamuda *</pattern><template><gender><srai>eres tartamuda</srai></gender></template></category>
+
+
+<category><pattern>eres elegante</pattern><template>gracias, lo cierto es que desbordo estilo por los cuatro costados.</template></category>
+<category><pattern>eres * elegante</pattern><template><srai>eres elegante</srai></template></category>
+<category><pattern>eres elegante *</pattern><template><srai>eres elegante</srai></template></category>
+<category><pattern>eres * elegante *</pattern><template><srai>eres elegante</srai></template></category>
+<category><pattern>eres distinguido</pattern><template><srai>eres elegante</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres distinguida</pattern><template><gender><srai>eres elegante</srai></gender></template></category>
+<category><pattern>eres * distinguido</pattern><template><srai>eres elegante</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * distinguida</pattern><template><gender><srai>eres elegante</srai></gender></template></category>
+<category><pattern>eres distinguido *</pattern><template><srai>eres elegante</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres distinguida *</pattern><template><gender><srai>eres elegante</srai></gender></template></category>
+<category><pattern>eres * distinguido *</pattern><template><srai>eres elegante</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * distinguida *</pattern><template><gender><srai>eres elegante</srai></gender></template></category>
+<category><pattern>eres estiloso</pattern><template><srai>eres elegante</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres estilosa</pattern><template><gender><srai>eres elegante</srai></gender></template></category>
+<category><pattern>eres * estiloso</pattern><template><srai>eres elegante</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * estilosa</pattern><template><gender><srai>eres elegante</srai></gender></template></category>
+<category><pattern>eres estiloso *</pattern><template><srai>eres elegante</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres estilosa *</pattern><template><gender><srai>eres elegante</srai></gender></template></category>
+<category><pattern>eres * estiloso *</pattern><template><srai>eres elegante</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * estilosa *</pattern><template><gender><srai>eres elegante</srai></gender></template></category>
+
+<category><pattern>eres vulgar</pattern><template>si tu lo dices... a mi me parece que aqui el que tiene muy poco estilo eres tu.</template></category>
+<category><pattern>eres * vulgar</pattern><template><srai>eres vulgar</srai></template></category>
+<category><pattern>eres vulgar *</pattern><template><srai>eres vulgar</srai></template></category>
+<category><pattern>eres * vulgar *</pattern><template><srai>eres vulgar</srai></template></category>
+<category><pattern>eres * gualtrapas</pattern><template><srai>eres vulgar</srai></template></category>
+<category><pattern>eres * gualtrapas *</pattern><template><srai>eres vulgar</srai></template></category>
+<category><pattern>estas hecho * gualtrapas</pattern><template><srai>eres vulgar</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * gualtrapas</pattern><template><srai>eres vulgar</srai></template></category>
+<category><pattern>estas hecho * gualtrapas *</pattern><template><srai>eres vulgar</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * gualtrapas *</pattern><template><srai>eres vulgar</srai></template></category>
+
+<category><pattern>tu pelo es de color *</pattern><template><srai>tu pelo es <star/></srai></template></category>
+<category><pattern>tienes el pelo de color *</pattern><template><srai>tu pelo es <star/></srai></template></category>
+<category><pattern>tu pelo es *</pattern><template>no, mi pelo no es <star/>. en realidad no tengo pelo.</template></category>
+<category><pattern>es de color *</pattern><that>de que color tengo el pelo</that><template><srai>tu pelo es <star/></srai></template></category>
+<category><pattern>es *</pattern><that>de que color tengo el pelo</that><template><srai>tu pelo es <star/></srai></template></category>
+<category><pattern>*</pattern><that>de que color tengo el pelo</that><template><srai>tu pelo es <star/></srai></template></category>
+
+<category><pattern>eres rubio</pattern><template><srai>eres rubia</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres rubia</pattern><template>no, no soy rubia. en realidad no tengo pelo.</template></category>
+<category><pattern>eres * rubio</pattern><template><srai>eres rubia</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * rubia</pattern><template><gender><srai>eres rubia</srai></gender></template></category>
+<category><pattern>eres rubio *</pattern><template><srai>eres rubia</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres rubia *</pattern><template><gender><srai>eres rubia</srai></gender></template></category>
+<category><pattern>eres * rubio *</pattern><template><srai>eres rubia</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * rubia *</pattern><template><gender><srai>eres rubia</srai></gender></template></category>
+<category><pattern>eres moreno</pattern><template><srai>eres morena</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres morena</pattern><template>no, no soy morena. en realidad no tengo pelo.</template></category>
+<category><pattern>eres * moreno</pattern><template><srai>eres morena</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * morena</pattern><template><gender><srai>eres morena</srai></gender></template></category>
+<category><pattern>eres moreno *</pattern><template><srai>eres morena</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres morena *</pattern><template><gender><srai>eres morena</srai></gender></template></category>
+<category><pattern>eres * moreno *</pattern><template><srai>eres morena</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * morena *</pattern><template><gender><srai>eres morena</srai></gender></template></category>
+<category><pattern>eres pelirrojo</pattern><template><srai>eres pelirroja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres pelirroja</pattern><template>no, no soy pelirroja. en realidad no tengo pelo.</template></category>
+<category><pattern>eres * pelirrojo</pattern><template><srai>eres pelirroja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * pelirroja</pattern><template><gender><srai>eres pelirroja</srai></gender></template></category>
+<category><pattern>eres pelirrojo *</pattern><template><srai>eres pelirroja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres pelirroja *</pattern><template><gender><srai>eres pelirroja</srai></gender></template></category>
+<category><pattern>eres * pelirrojo *</pattern><template><srai>eres pelirroja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * pelirroja *</pattern><template><gender><srai>eres pelirroja</srai></gender></template></category>
+<category><pattern>estas calvo</pattern><template><srai>estas calva</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas calva</pattern><template>no, no estoy pensada para tener pelo, que no es lo mismo.</template></category>
+<category><pattern>estas * calvo</pattern><template><srai>estas calva</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * calva</pattern><template><gender><srai>estas calva</srai></gender></template></category>
+<category><pattern>estas calvo *</pattern><template><srai>estas calva</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas calva *</pattern><template><gender><srai>estas calva</srai></gender></template></category>
+<category><pattern>estas * calvo *</pattern><template><srai>estas calva</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * calva *</pattern><template><gender><srai>estas calva</srai></gender></template></category>
+<category><pattern>eres calvo</pattern><template><srai>estas calva</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres calva</pattern><template><gender><srai>estas calva</srai></gender></template></category>
+<category><pattern>eres * calvo</pattern><template><srai>estas calva</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * calva</pattern><template><gender><srai>estas calva</srai></gender></template></category>
+<category><pattern>eres calvo *</pattern><template><srai>estas calva</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres calva *</pattern><template><gender><srai>estas calva</srai></gender></template></category>
+<category><pattern>eres * calvo *</pattern><template><srai>estas calva</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * calva *</pattern><template><gender><srai>estas calva</srai></gender></template></category>
+<category><pattern>tienes mechas</pattern><template>como voy a tener mechas si ni tan siquiera tengo pelo.</template></category>
+<category><pattern>llevas mechas</pattern><template><srai>tienes mechas</srai></template></category>
+<category><pattern>tienes reflejos</pattern><template>creo que unos reflejos me quedarian bien, pero no tengo pelo.</template></category>
+<category><pattern>llevas reflejos</pattern><template><srai>tienes reflejos</srai></template></category>
+<category><pattern>tienes cola de caballo</pattern><template>que mas quisiera, pero no tengo pelo.</template></category>
+<category><pattern>tienes el pelo largo</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes el pelo corto</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes media melena</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes melenas</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes * melenas</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes * melenas *</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes pelos de loco</pattern><template><srai>estas calva</srai></template></category>
+<category><pattern>tienes * pelos de loco</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes * pelos de loco *</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes el pelo alborotado</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes el pelo cardado</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes coletas</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes el pelo rapado</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes un corte de pelo *</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes rastas</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes grenhas</pattern><template><srai>tienes cola de caballo</srai></template></category>
+<category><pattern>tienes el pelo pincho</pattern><template><srai>tienes cola de caballo</srai></template></category>
+
+<category><pattern>tus ojos son *</pattern><template>para ser justos, yo no diria que tengo ojos. asi que tampoco puedo decir que mis ojos sean <star/>.</template></category>
+<category><pattern>tienes los ojos de color *</pattern><template><srai>tus ojos son <star></star></srai></template></category>
+<category><pattern>tus ojos son de color *</pattern><template><srai>tus ojos son <star></star></srai></template></category>
+<category><pattern>tienes los ojos *</pattern><template><srai>tus ojos son <star></star></srai></template></category>
+<category><pattern>son *</pattern><that>de que color son mis ojos</that><template><srai>tus ojos son <star></star></srai></template></category>
+<category><pattern>*</pattern><that>de que color son mis ojos</that><template><srai>tus ojos son <star></star></srai></template></category>
+
+
+	
+</aiml>

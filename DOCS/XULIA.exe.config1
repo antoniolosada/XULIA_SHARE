@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="AIMLGUI.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0,Profile=Client" />
+  </startup>
+
+  <userSettings>
+    <AIMLGUI.Properties.Settings>
+      <setting name="nombre_formulario" serializeAs="String">
+        <value>XULIA - Xestión Unificada de Lenguaxe con Intelixencia Artificial</value>
+      </setting>
+    </AIMLGUI.Properties.Settings>
+  </userSettings>
+  <appSettings>
+    <add key="$Gramaticas" value="Cancelar,Numeros,Alfabeto,TeclasAlfabeto,Raton,Teclado,Simbolos,TeclasFuncion,Puntuacion,Acentos,MovimientoTeclado,Ventanas,Word,Chrome,Comandos,Multiplicadores,Ejecutar" />
+    <add key="·COMANDO·" value="Raton,Teclado,TeclasFuncion,TeclasAlfabeto,MovimientoTeclado,Ventanas,Comandos,Multiplicadores,Ejecutar" />
+    <add key="·REJILLA·" value="Numeros,Alfabeto,Cancelar" />
+    <add key="·DELETREAR·" value="Comandos,Alfabeto,Simbolos,Acentos,Puntuacion,Cancelar" />
+    <add key="·DICTADO" value="Cancelar" />
+    <add key="·DICTADO·PORTUGUES" value="Cancelar" />
+    <add key="·DICTADO·INGLES" value="Cancelar" />
+    <add key="·DICTADO·ESPANOL" value="Cancelar" />
+    <add key="·DICTADO·PORTUGUES·SUSTITUCIONES·" value="DictadoPortugues" />
+    <add key="·DICTADO·INGLES·SUSTITUCIONES·" value="DictadoIngles" />
+    <add key="·DICTADO·ESPANOL·SUSTITUCIONES·" value="DictadoEspanol" />
+	
+	
+    <add key="·WINWORD" value="Word" />
+    <add key="·chrome" value="Chrome" />
+	
+    <add key="_IdiomaGramaticas" value="" />
+	
+    <add key="_GramaticasSeleccionActiva" value="Comandos,Alfabeto,Simbolos,Acentos,Cancelar" />
+    <add key="_Aplicaciones" value="WINWORD,chrome" />
+    <add key="_Cultura" value="es-ES" />
+    <add key="_Precision" value="0,636" />
+    <add key="_CargarGramaticasAplicacion" value="S" />
+    <add key="_TiempoDesargarGramaticasAplicacion" value="0" />
+    <add key="_ModoDefecto" value="·COMANDO·" />
+    <add key="_DesactivarSeleccionAutomaticamente" value="N" />
+    <add key="_MarcarSeleccionRejilla" value="S" />
+    <add key="_DesplazamientoVentanaEstado" value="250" />
+    <add key="_DescargarGramaticasCambioMODO" value="S" />
+    <add key="_DescargarGramaticasDictado" value="S" />
+    <add key="_DescargarRestoGramaticasDictado" value="N" />
+    <add key="_AltoBarraEstado" value="41" />
+    <add key="_ArchivoRecVoz" value="C:\TMP\RECOVOZ.TXT" />
+    <add key="_ArchivoComandos" value="C:\TMP\COMANDOS.TXT" />
+    <add key="_URLBaseIdioma" value="https://localhost:8443/VOZ2/index.jsp" />
+    <add key="_MantenerPulsadoControl" value="N" />
+    <add key="_MantenerPulsadoAlternativo" value="N" />
+    <add key="_MantenerPulsadoSeleccion" value="N" />
+    <add key="_XuliaActivar" value="activar" />
+    <add key="_XuliaDesactivar" value="desactivar" />
+    <add key="_XuliaAtencion" value="atentaxulia" />
+    <add key="_OcultarEstadoSegundos" value="0" />
+    <add key="_ArranqueTomcat" value="D:\PROGRAMAS\apache-tomcat-7.0.32\bin\ArrancarTomcat.bat D: D:\\PROGRAMAS\\apache-tomcat-7.0.32\\bin" />
+    <add key="_TiempoArranqueTomcat" value="5" />
+    <add key="_TiempoEsperaArranqueChrome" value="5" />
+    <add key="_MinimizarChrome" value="S" />
+
+    <add key="_GramaticasSeleccionActivaEN" value="Comandos,Alfabeto,Simbolos,Acentos,Cancelar" />
+    <add key="_AplicacionesEN" value="WINWORD,chrome" />
+    <add key="_CulturaEN" value="es-ES" />
+    <add key="_PrecisionEN" value="0,636" />
+    <add key="_CargarGramaticasAplicacionEN" value="S" />
+    <add key="_TiempoDesargarGramaticasAplicacionEN" value="0" />
+    <add key="_ModoDefectoEN" value="·COMANDO·" />
+    <add key="_DesactivarSeleccionAutomaticamenteEN" value="N" />
+    <add key="_MarcarSeleccionRejillaEN" value="S" />
+    <add key="_DesplazamientoVentanaEstadoEN" value="250" />
+    <add key="_DescargarGramaticasCambioMODOEN" value="S" />
+    <add key="_DescargarGramaticasDictadoEN" value="S" />
+    <add key="_DescargarRestoGramaticasDictadoEN" value="N" />
+    <add key="_AltoBarraEstadoEN" value="41" />
+    <add key="_ArchivoRecVozEN" value="C:\TMP\RECOVOZ.TXT" />
+    <add key="_ArchivoComandosEN" value="C:\TMP\COMANDOS.TXT" />
+    <add key="_URLBaseIdiomaEN" value="https://localhost:8443/VOZ2/index.jsp" />
+    <add key="_MantenerPulsadoControlEN" value="N" />
+    <add key="_MantenerPulsadoAlternativoEN" value="N" />
+    <add key="_MantenerPulsadoSeleccionEN" value="N" />
+    <add key="_XuliaActivarEN" value="activar" />
+    <add key="_XuliaDesactivarEN" value="desactivar" />
+    <add key="_XuliaAtencionEN" value="atentaxulia" />
+    <add key="_OcultarEstadoSegundosEN" value="0" />
+    <add key="_ArranqueTomcatEN" value="D:\PROGRAMAS\apache-tomcat-7.0.32\bin\ArrancarTomcat.bat D: D:\\PROGRAMAS\\apache-tomcat-7.0.32\\bin" />
+    <add key="_TiempoArranqueTomcatEN" value="5" />
+    <add key="_TiempoEsperaArranqueChromeEN" value="5" />
+    <add key="_MinimizarChromeEN" value="S" />
+    
+	<!-- DEFINICION DE GRAMATICAS ****************************************************************************** -->
+
+	  <!-- Cancelar -- >
+		<add key="Cancelar.SeccionValores" value="CancelarValores" />
+		<add key="Cancelar.CANCELAR" value="cancelarmodo" />
+		<add key="Cancelar.VOLVER" value="volvermodo" />
+	  <!-- Cancelar -->
+	  
+	  <!-- CancelarEN -->
+		<add key="CancelarEN.SeccionValores" value="CancelarValores" />
+		<add key="CancelarEN.CANCELAR" value="cancel" />
+		<add key="CancelarEN.VOLVER" value="goback" />
+	  <!-- CancelarEN -->
+	  
+	  
+	  <!-- CancelarValores -->
+		<add key="CancelarValores.CANCELAR" value="[CANCELAR]" />
+		<add key="CancelarValores.VOLVER" value="[VOLVER]" />
+	  <!-- CancelarValores -->
+	  
+	  
+	  <!-- Numeros -->
+		<add key="Numeros.SeccionValores" value="NumerosValores" />
+		<add key="Numeros.0" value="cero" />
+		<add key="Numeros.1" value="uno" />
+		<add key="Numeros.2" value="dos" />
+		<add key="Numeros.3" value="tres" />
+		<add key="Numeros.4" value="cuatro" />
+		<add key="Numeros.5" value="cinco" />
+		<add key="Numeros.6" value="seis" />
+		<add key="Numeros.7" value="siete" />
+		<add key="Numeros.8" value="númeroocho" />
+		<add key="Numeros.8" value="ocho" />
+		<add key="Numeros.9" value="nueve" />
+		<add key="Numeros.10" value="diez" />
+	  <!-- Numeros -->
+	  
+	  <!-- NumerosEN -->
+		<add key="NumerosEN.SeccionValores" value="NumerosValores" />
+		<add key="NumerosEN.0" value="numberzero" />
+		<add key="NumerosEN.1" value="numberone" />
+		<add key="NumerosEN.2" value="numbertwo" />
+		<add key="NumerosEN.3" value="numberthree" />
+		<add key="NumerosEN.4" value="numberfour" />
+		<add key="NumerosEN.5" value="numberfive" />
+		<add key="NumerosEN.6" value="numbersix" />
+		<add key="NumerosEN.7" value="numberseven" />
+		<add key="NumerosEN.8" value="numbereight" />
+		<add key="NumerosEN.9" value="numbernine" />
+		<add key="NumerosEN.10" value="numberten" />
+	  <!-- NumerosEN -->
+	  
+	  <!-- NumerosValores -->
+		<add key="NumerosValores.SeccionValores" value="NumerosValores" />
+		<add key="NumerosValores.0" value="0" />
+		<add key="NumerosValores.1" value="1" />
+		<add key="NumerosValores.2" value="2" />
+		<add key="NumerosValores.3" value="3" />
+		<add key="NumerosValores.4" value="4" />
+		<add key="NumerosValores.5" value="5" />
+		<add key="NumerosValores.6" value="6" />
+		<add key="NumerosValores.7" value="7" />
+		<add key="NumerosValores.8" value="8" />
+		<add key="NumerosValores.9" value="9" />
+		<add key="NumerosValores.10" value="10" />
+	  <!-- NumerosValores -->
+	  
+	  <!-- Alfabeto -->
+		<add key="Alfabeto.SeccionValores" value="AlfabetoValores" />
+		<add key="Alfabeto.a" value="alicante" />
+		<add key="Alfabeto.b" value="bilbao" />
+		<add key="Alfabeto.c" value="cádiz" />
+		<add key="Alfabeto.d" value="dinamarca" />
+		<add key="Alfabeto.e" value="españa" />
+		<add key="Alfabeto.f" value="francia" />
+		<add key="Alfabeto.g" value="gerona" />
+		<add key="Alfabeto.h" value="huelva" />
+		<add key="Alfabeto.i" value="italia" />
+		<add key="Alfabeto.j" value="jaén" />
+		<add key="Alfabeto.k" value="kilo" />
+		<add key="Alfabeto.l" value="llamar" />
+		<add key="Alfabeto.m" value="madrid" />
+		<add key="Alfabeto.n" value="navarra" />
+		<add key="Alfabeto.o" value="oviedo" />
+		<add key="Alfabeto.p" value="portugal" />
+		<add key="Alfabeto.q" value="queso" />
+		<add key="Alfabeto.r" value="roma" />
+		<add key="Alfabeto.s" value="sevilla" />
+		<add key="Alfabeto.t" value="toledo" />
+		<add key="Alfabeto.u" value="único" />
+		<add key="Alfabeto.v" value="valencia" />
+		<add key="Alfabeto.w" value="uvedoble" />
+		<add key="Alfabeto.x" value="equis" />
+		<add key="Alfabeto.y" value="yugoslavia" />
+		<add key="Alfabeto.z" value="zaragoza" />
+		<add key="Alfabeto.ñ" value="ñoño" />
+	  <!-- Alfabeto -->
+	  <!-- AlfabetoEN -->
+		<add key="AlfabetoEN.SeccionValores" value="AlfabetoValores" />
+		<add key="AlfabetoEN.a" value="alpha" />
+		<add key="AlfabetoEN.a" value="arm" />
+		<add key="AlfabetoEN.b" value="brabo" />
+		<add key="AlfabetoEN.c" value="charlie" />
+		<add key="AlfabetoEN.d" value="delta" />
+		<add key="AlfabetoEN.e" value="echo" />
+		<add key="AlfabetoEN.f" value="foxtrot" />
+		<add key="AlfabetoEN.g" value="golf" />
+		<add key="AlfabetoEN.g" value="green" />
+		<add key="AlfabetoEN.h" value="hotel" />
+		<add key="AlfabetoEN.i" value="india" />
+		<add key="AlfabetoEN.j" value="juliet" />
+		<add key="AlfabetoEN.k" value="kilo" />
+		<add key="AlfabetoEN.l" value="lima" />
+		<add key="AlfabetoEN.m" value="mike" />
+		<add key="AlfabetoEN.n" value="november" />
+		<add key="AlfabetoEN.o" value="oscar" />
+		<add key="AlfabetoEN.p" value="papa" />
+		<add key="AlfabetoEN.q" value="quebec" />
+		<add key="AlfabetoEN.r" value="romeo" />
+		<add key="AlfabetoEN.s" value="sierra" />
+		<add key="AlfabetoEN.t" value="tango" />
+		<add key="AlfabetoEN.t" value="test" />
+		<add key="AlfabetoEN.u" value="uniform" />
+		<add key="AlfabetoEN.v" value="victor" />
+		<add key="AlfabetoEN.w" value="wisckey" />
+		<add key="AlfabetoEN.x" value="x ray" />
+		<add key="AlfabetoEN.y" value="yankee" />
+		<add key="AlfabetoEN.z" value="zulu" />
+	  <!-- AlfabetoEN -->
+	  <!-- AlfabetoValores -->
+		<add key="AlfabetoValores.a" value="a" />
+		<add key="AlfabetoValores.b" value="b" />
+		<add key="AlfabetoValores.c" value="c" />
+		<add key="AlfabetoValores.d" value="d" />
+		<add key="AlfabetoValores.e" value="e" />
+		<add key="AlfabetoValores.f" value="f" />
+		<add key="AlfabetoValores.g" value="g" />
+		<add key="AlfabetoValores.h" value="h" />
+		<add key="AlfabetoValores.i" value="i" />
+		<add key="AlfabetoValores.j" value="j" />
+		<add key="AlfabetoValores.k" value="k" />
+		<add key="AlfabetoValores.l" value="l" />
+		<add key="AlfabetoValores.m" value="m" />
+		<add key="AlfabetoValores.n" value="n" />
+		<add key="AlfabetoValores.o" value="o" />
+		<add key="AlfabetoValores.p" value="p" />
+		<add key="AlfabetoValores.q" value="q" />
+		<add key="AlfabetoValores.r" value="r" />
+		<add key="AlfabetoValores.s" value="s" />
+		<add key="AlfabetoValores.t" value="t" />
+		<add key="AlfabetoValores.u" value="u" />
+		<add key="AlfabetoValores.v" value="v" />
+		<add key="AlfabetoValores.w" value="w" />
+		<add key="AlfabetoValores.x" value="x" />
+		<add key="AlfabetoValores.y" value="y" />
+		<add key="AlfabetoValores.z" value="z" />
+		<add key="AlfabetoValores.ñ" value="ñ" />
+	  <!-- AlfabetoValores -->
+	  <!-- TeclasAlfabeto -->
+		<add key="TeclasAlfabero.SeccionValores" value="TeclasAlfabetoValores" />
+		<add key="TeclasAlfabero.a" value="teclaalicante" />
+		<add key="TeclasAlfabero.b" value="teclabilbao" />
+		<add key="TeclasAlfabero.c" value="teclacádiz" />
+		<add key="TeclasAlfabero.d" value="tecladinamarca" />
+		<add key="TeclasAlfabero.e" value="teclaespaña" />
+		<add key="TeclasAlfabero.f" value="teclafrancia" />
+		<add key="TeclasAlfabero.g" value="teclagerona" />
+		<add key="TeclasAlfabero.h" value="teclahuelva" />
+		<add key="TeclasAlfabero.i" value="teclaitalia" />
+		<add key="TeclasAlfabero.j" value="teclajaén" />
+		<add key="TeclasAlfabero.k" value="teclakilo" />
+		<add key="TeclasAlfabero.l" value="teclallamar" />
+		<add key="TeclasAlfabero.m" value="teclamadrid" />
+		<add key="TeclasAlfabero.n" value="teclanavarra" />
+		<add key="TeclasAlfabero.o" value="teclaoviedo" />
+		<add key="TeclasAlfabero.p" value="teclaportugal" />
+		<add key="TeclasAlfabero.q" value="teclaqueso" />
+		<add key="TeclasAlfabero.r" value="teclaroma" />
+		<add key="TeclasAlfabero.s" value="teclasevilla" />
+		<add key="TeclasAlfabero.t" value="teclatoledo" />
+		<add key="TeclasAlfabero.u" value="teclaúnico" />
+		<add key="TeclasAlfabero.v" value="teclavalencia" />
+		<add key="TeclasAlfabero.w" value="teclauvedoble" />
+		<add key="TeclasAlfabero.x" value="teclaequis" />
+		<add key="TeclasAlfabero.y" value="teclayugoslavia" />
+		<add key="TeclasAlfabero.z" value="teclazaragoza" />
+		<add key="TeclasAlfabero.ñ" value="teclañoño" />
+		<add key="TeclasAlfabero. " value="teclaespacio" />
+	  <!-- TeclasAlfabeto -->
+	  <!-- TeclasAlfabetoEN  -->
+		<add key="TeclasAlfaberoEN.SeccionValores" value="TeclasAlfabetoValores" />
+		<add key="TeclasAlfaberoEN.a" value="keyalpha" />
+		<add key="TeclasAlfaberoEN.a" value="keyarm" />
+		<add key="TeclasAlfaberoEN.b" value="keybravo" />
+		<add key="TeclasAlfaberoEN.c" value="keycharlie" />
+		<add key="TeclasAlfaberoEN.d" value="keydelta" />
+		<add key="TeclasAlfaberoEN.e" value="keyecho" />
+		<add key="TeclasAlfaberoEN.f" value="keyfoxtrot" />
+		<add key="TeclasAlfaberoEN.g" value="keygolf" />
+		<add key="TeclasAlfaberoEN.g" value="keygreen" />
+		<add key="TeclasAlfaberoEN.h" value="keyhotel" />
+		<add key="TeclasAlfaberoEN.i" value="keyindia" />
+		<add key="TeclasAlfaberoEN.j" value="keyjuliet" />
+		<add key="TeclasAlfaberoEN.k" value="keykilo" />
+		<add key="TeclasAlfaberoEN.l" value="keylima" />
+		<add key="TeclasAlfaberoEN.m" value="keymike" />
+		<add key="TeclasAlfaberoEN.n" value="keynovember" />
+		<add key="TeclasAlfaberoEN.o" value="keyoscar" />
+		<add key="TeclasAlfaberoEN.p" value="keypapa" />
+		<add key="TeclasAlfaberoEN.q" value="keyquebec" />
+		<add key="TeclasAlfaberoEN.r" value="keyromeo" />
+		<add key="TeclasAlfaberoEN.s" value="keysierra" />
+		<add key="TeclasAlfaberoEN.t" value="keytango" />
+		<add key="TeclasAlfaberoEN.t" value="keytest" />
+		<add key="TeclasAlfaberoEN.u" value="keyuniform" />
+		<add key="TeclasAlfaberoEN.v" value="keyvictor" />
+		<add key="TeclasAlfaberoEN.w" value="keywhisckey" />
+		<add key="TeclasAlfaberoEN.x" value="keyxray" />
+		<add key="TeclasAlfaberoEN.y" value="keyyankee" />
+		<add key="TeclasAlfaberoEN.z" value="keyzulu" />
+	  <!-- TeclasAlfabetoEN -->
+	  <!-- TeclasAlfabetoValores -->
+		<add key="TeclasAlfaberoValores.a" value="a" />
+		<add key="TeclasAlfaberoValores.b" value="b" />
+		<add key="TeclasAlfaberoValores.c" value="c" />
+		<add key="TeclasAlfaberoValores.d" value="d" />
+		<add key="TeclasAlfaberoValores.e" value="e" />
+		<add key="TeclasAlfaberoValores.f" value="f" />
+		<add key="TeclasAlfaberoValores.g" value="g" />
+		<add key="TeclasAlfaberoValores.h" value="h" />
+		<add key="TeclasAlfaberoValores.i" value="i" />
+		<add key="TeclasAlfaberoValores.j" value="j" />
+		<add key="TeclasAlfaberoValores.k" value="k" />
+		<add key="TeclasAlfaberoValores.l" value="l" />
+		<add key="TeclasAlfaberoValores.m" value="m" />
+		<add key="TeclasAlfaberoValores.n" value="n" />
+		<add key="TeclasAlfaberoValores.o" value="o" />
+		<add key="TeclasAlfaberoValores.p" value="p" />
+		<add key="TeclasAlfaberoValores.q" value="q" />
+		<add key="TeclasAlfaberoValores.r" value="r" />
+		<add key="TeclasAlfaberoValores.s" value="s" />
+		<add key="TeclasAlfaberoValores.t" value="t" />
+		<add key="TeclasAlfaberoValores.u" value="u" />
+		<add key="TeclasAlfaberoValores.v" value="v" />
+		<add key="TeclasAlfaberoValores.w" value="w" />
+		<add key="TeclasAlfaberoValores.x" value="x" />
+		<add key="TeclasAlfaberoValores.y" value="y" />
+		<add key="TeclasAlfaberoValores.z" value="z" />
+		<add key="TeclasAlfaberoValores.ñ" value="ñ" />
+		<add key="TeclasAlfaberoValores. " value=" " />
+	  <!-- TeclasAlfabetoValores -->
+	  <!-- Raton -->
+		<add key="Raton.SeccionValores" value="RatonValores" />
+		<add key="Raton.ratoncontinuo" value="ratoncontínuo" />
+		<add key="Raton.ratondiscreto" value="ratondiscreto" />
+		<add key="Raton.parar" value="pararraton" />
+		<add key="Raton.dobleclic" value="dobleclic" />
+		<add key="Raton.clicderecho" value="clicderecho" />
+		<add key="Raton.cliccentro" value="cliccentro" />
+		<add key="Raton.clic" value="clic" />
+		<add key="Raton.pulsar" value="pulsar" />
+		<add key="Raton.levantar" value="levantar" />
+		<add key="Raton.ratonarriba" value="ratonarriba" />
+		<add key="Raton.ratonabajo" value="ratonabajo" />
+		<add key="Raton.ratonderecha" value="ratonderecha" />
+		<add key="Raton.ratonizquierda" value="ratonizquierda" />
+		<add key="Raton.ratonuno" value="ratonuno" />
+		<add key="Raton.ratondos" value="ratondos" />
+		<add key="Raton.ratontres" value="ratontres" />
+		<add key="Raton.ratoncuatro" value="ratoncuatro" />
+		<add key="Raton.ratoncinco" value="ratoncinco" />
+		<add key="Raton.ratonseis" value="ratonseis" />
+	  <!-- Raton -->
+	  <!-- RatonEN -->
+		<add key="RatonEN.SeccionValores" value="RatonValores" />
+		<add key="RatonEN.ratoncontinuo" value="continuosmouse" />
+		<add key="RatonEN.ratondiscreto" value="discretemouse" />
+		<add key="RatonEN.parar" value="stopmouse" />
+		<add key="RatonEN.dobleclic" value="doublepress" />
+		<add key="RatonEN.clicderecho" value="rightpress" />
+		<add key="RatonEN.cliccentro" value="centerpress" />
+		<add key="RatonEN.clic" value="press" />
+		<add key="RatonEN.pulsar" value="beggindragging" />
+		<add key="RatonEN.levantar" value="stopdragging" />
+		<add key="RatonEN.ratonarriba" value="mouseup" />
+		<add key="RatonEN.ratonabajo" value="mousedown" />
+		<add key="RatonEN.ratonderecha" value="mouseright" />
+		<add key="RatonEN.ratonizquierda" value="mouseleft" />
+		<add key="RatonEN.ratonuno" value="mouseone" />
+		<add key="RatonEN.ratondos" value="mousetwo" />
+		<add key="RatonEN.ratontres" value="mousethree" />
+		<add key="RatonEN.ratoncuatro" value="mousefour" />
+		<add key="RatonEN.ratoncinco" value="mousefive" />
+		<add key="RatonEN.ratonseis" value="mousesix" />
+	  <!-- RatonEN -->
+	  <!-- RatonValores -->
+		<add key="RatonValores.ratoncontinuo" value="[RATON_CONTINUO]" />
+		<add key="RatonValores.ratondiscreto" value="[RATON_DISCRETO]" />
+		<add key="RatonValores.parar" value="[PARAR_RATON]" />
+		<add key="RatonValores.dobleclic" value="[RATON_DBL_CLIC]" />
+		<add key="RatonValores.clicderecho" value="[RATON_CLIC_DER]" />
+		<add key="RatonValores.cliccentro" value="[RATON_CLIC_CENTRO]" />
+		<add key="RatonValores.clic" value="[PARAR_RATON]|[RATON_CLIC]" />
+		<add key="RatonValores.pulsar" value="[PULSAR]" />
+		<add key="RatonValores.levantar" value="[LEVANTAR]" />
+		<add key="RatonValores.ratonarriba" value="[RATON_ARRIBA]" />
+		<add key="RatonValores.ratonabajo" value="[RATON_ABAJO]" />
+		<add key="RatonValores.ratonderecha" value="[RATON_DERECHA]" />
+		<add key="RatonValores.ratonizquierda" value="[RATON_IZQUIERDA]" />
+		<add key="RatonValores.ratonuno" value="[RATON_VELOCIDAD]1" />
+		<add key="RatonValores.ratondos" value="[RATON_VELOCIDAD]6" />
+		<add key="RatonValores.ratontres" value="[RATON_VELOCIDAD]12" />
+		<add key="RatonValores.ratoncuatro" value="[RATON_VELOCIDAD]24" />
+		<add key="RatonValores.ratoncinco" value="[RATON_VELOCIDAD]48" />
+		<add key="RatonValores.ratonseis" value="[RATON_VELOCIDAD]128" />
+	  <!-- RatonValores -->
+	  <!-- Teclado -->
+		<add key="Teclado.SeccionValores" value="TecladoValores" />
+		<add key="Teclado.siguientepágina" value="siguientepágina" />
+		<add key="Teclado.avanzar" value="avanzar" />
+		<add key="Teclado.anteriorpágina" value="anteriorpágina" />
+		<add key="Teclado.retroceder" value="retroceder" />
+		<add key="Teclado.siguientepalabra" value="siguientepalabra" />
+		<add key="Teclado.siguiente" value="siguiente" />
+		<add key="Teclado.anteriorpalabra" value="anteriorpalabra" />
+		<add key="Teclado.anterior" value="anterior" />
+		<add key="Teclado.seleccionar" value="seleccionar" />
+		<add key="Teclado.finselección" value="finselección" />
+		<add key="Teclado.borrar" value="borrar" />
+		<add key="Teclado.suprimir" value="suprimir" />
+		<add key="Teclado.borrarpalabra" value="borrarpalabra" />
+		<add key="Teclado.borrarlinea" value="borrarlinea" />
+		<add key="Teclado.enter" value="enter" />
+		<add key="Teclado.siguienteaplicacion" value="siguienteaplicacion" />
+		<add key="Teclado.anterioraplicacion" value="anterioraplicacion" />
+		<add key="Teclado.siguientecampo" value="siguientecampo" />
+		<add key="Teclado.tabulador" value="tabulador" />
+		<add key="Teclado.anteriorcampo" value="anteriorcampo" />
+		<add key="Teclado.inicio" value="inicio" />
+		<add key="Teclado.fin" value="final" />
+		<add key="Teclado.primerapágina" value="primerapágina" />
+		<add key="Teclado.últimapágina" value="últimapágina" />
+		<add key="Teclado.mayúsculas" value="mayúsculas" />
+		<add key="Teclado.finmayúsculas" value="finmayúsculas" />
+		<add key="Teclado.unamayúscula" value="unamayúscula" />
+		<add key="Teclado.control" value="control" />
+		<add key="Teclado.alternativo" value="alter" />
+		<add key="Teclado.escape" value="escape" />
+		<add key="Teclado.seleccionarlinea" value="seleccionarlinea" />
+		<add key="Teclado.siguientesolapa" value="siguientesolpada" />
+		<add key="Teclado.anteriorsolapa" value="anteriorsolpada" />
+	  <!-- Teclado -->
+	  <!-- TecladoEN -->
+		<add key="TecladoEN.SeccionValores" value="TecladoValores" />
+		<add key="TecladoEN.siguientepágina" value="pagedown" />
+		<add key="TecladoEN.anteriorpágina" value="pageup" />
+		<add key="TecladoEN.siguientepalabra" value="nextword" />
+		<add key="TecladoEN.anteriorpalabra" value="backword" />
+		<add key="TecladoEN.seleccionar" value="select" />
+		<add key="TecladoEN.finselección" value="endselection" />
+		<add key="TecladoEN.borrar" value="backspace" />
+		<add key="TecladoEN.suprimir" value="delete" />
+		<add key="TecladoEN.borrarpalabra" value="backspaceword" />
+		<add key="TecladoEN.borrarlinea" value="backspaceline" />
+		<add key="TecladoEN.enter" value="enter" />
+		<add key="TecladoEN.siguienteaplicacion" value="nextapplication" />
+		<add key="TecladoEN.anterioraplicacion" value="application" />
+		<add key="TecladoEN.siguientecampo" value="nextfield" />
+		<add key="TecladoEN.tabulador" value="tab" />
+		<add key="TecladoEN.anteriorcampo" value="backfield" />
+		<add key="TecladoEN.inicio" value="homelime" />
+		<add key="TecladoEN.fin" value="endline" />
+		<add key="TecladoEN.primerapágina" value="firstpage" />
+		<add key="TecladoEN.últimapágina" value="lastpage" />
+		<add key="TecladoEN.mayúsculas" value="allcaps" />
+		<add key="TecladoEN.finmayúsculas" value="endcaps" />
+		<add key="TecladoEN.unamayúscula" value="caps" />
+		<add key="TecladoEN.control" value="control" />
+		<add key="TecladoEN.alternativo" value="alternate" />
+		<add key="TecladoEN.escape" value="escape" />
+		<add key="TecladoEN.seleccionarlinea" value="selectline" />
+		<add key="TecladoEN.siguientesolapa" value="nexttab" />
+		<add key="TecladoEN.anteriorsolapa" value="backtab" />
+	  <!-- TecladoEN -->
+	  <!-- TecladoValores -->
+		<add key="TecladoValores.siguientepágina" value="{PGDN}" />
+		<add key="TecladoValores.avanzar" value="{PGDN}" />
+		<add key="TecladoValores.anteriorpágina" value="{PGUP}" />
+		<add key="TecladoValores.retroceder" value="{PGUP}" />
+		<add key="TecladoValores.siguientepalabra" value="^{RIGHT}" />
+		<add key="TecladoValores.siguiente" value="^{RIGHT}" />
+		<add key="TecladoValores.anteriorpalabra" value="^{LEFT}" />
+		<add key="TecladoValores.anterior" value="^{LEFT}" />
+		<add key="TecladoValores.seleccionar" value="[SELECCIONAR]" />
+		<add key="TecladoValores.finselección" value="[FIN_SELECCION]" />
+		<add key="TecladoValores.borrar" value="{BACKSPACE}" />
+		<add key="TecladoValores.suprimir" value="{DEL}" />
+		<add key="TecladoValores.borrarpalabra" value="^(+{LEFT})^x" />
+		<add key="TecladoValores.borrarlinea" value="{HOME}+{END}^x" />
+		<add key="TecladoValores.enter" value="{ENTER}" />
+		<add key="TecladoValores.siguienteaplicacion" value="{TAB}" />
+		<add key="TecladoValores.anterioraplicacion" value="+{TAB}" />
+		<add key="TecladoValores.siguientecampo" value="{TAB}" />
+		<add key="TecladoValores.tabulador" value="{TAB}" />
+		<add key="TecladoValores.anteriorcampo" value="+{TAB}" />
+		<add key="TecladoValores.inicio" value="{HOME}" />
+		<add key="TecladoValores.fin" value="{END}" />
+		<add key="TecladoValores.primerapágina" value="^{HOME}" />
+		<add key="TecladoValores.últimapágina" value="^{END}" />
+		<add key="TecladoValores.mayúsculas" value="[MAYUSCULAS]" />
+		<add key="TecladoValores.finmayúsculas" value="[FIN_MAYUSCULAS]" />
+		<add key="TecladoValores.unamayúscula" value="[UNAMAYUSCULA]" />
+		<add key="TecladoValores.control" value="[CONTROL]" />
+		<add key="TecladoValores.alternativo" value="[ALT]" />
+		<add key="TecladoValores.escape" value="{ESC}" />
+		<add key="TecladoValores.seleccionarlinea" value="{HOME}+{END}" />
+		<add key="TecladoValores.siguientesolapa" value="^{TAB}" />
+		<add key="TecladoValores.anteriorsolapa" value="^+{TAB}" />
+	  <!-- TecladoValores -->
+	  <!-- Simbolos -->
+		<add key="Simbolos.SeccionValores" value="SimbolosValores" />
+		<add key="Simbolos.comillas" value="comillas" />
+		<add key="Simbolos.comillassimples" value="comillassimples" />
+		<add key="Simbolos.mas" value="mas" />
+		<add key="Simbolos.menos" value="menos" />
+		<add key="Simbolos.asterisco" value="asterisco" />
+		<add key="Simbolos.dolar" value="dolar" />
+		<add key="Simbolos.abrirparéntesis" value="abrirparéntesis" />
+		<add key="Simbolos.cerrarparéntesis" value="cerrarparéntesis" />
+		<add key="Simbolos.abrirllave" value="abrirllave" />
+		<add key="Simbolos.cerrarllave" value="cerrarllave" />
+		<add key="Simbolos.abrircorchete" value="abrircorchete" />
+		<add key="Simbolos.cerrarcorchete" value="cerrarcorchete" />
+		<add key="Simbolos.subrrayado" value="subrrayado" />
+		<add key="Simbolos.barrainvertida" value="barrainvertida" />
+		<add key="Simbolos.barra" value="barra" />
+		<add key="Simbolos.arroba" value="arroba" />
+		<add key="Simbolos.porcentaje" value="porcentaje" />
+		<add key="Simbolos.sostenido" value="sostenido" />
+		<add key="Simbolos.euro" value="euro" />
+		<add key="Simbolos.mayorque" value="mayorque" />
+		<add key="Simbolos.menorque" value="menorque" />
+		<add key="Simbolos.iguala" value="iguala" />
+		<add key="Simbolos.ampersan" value="ampersan" />
+		<add key="Simbolos.abrirexclamación" value="abrirexclamación" />
+		<add key="Simbolos.cerrarexclamación" value="cerrarexclamación" />
+		<add key="Simbolos.abririnterrogación" value="abririnterrogación" />
+		<add key="Simbolos.cerrarinterrogación" value="cerrarinterrogación" />
+		<add key="Simbolos.barravertical" value="barravertical" />
+		<add key="Simbolos.cerilla" value="cerilla" />
+		<add key="Simbolos.primero" value="primero" />
+		<add key="Simbolos.primera" value="primera" />
+		<add key="Simbolos.angulo" value="angulo" />
+		<add key="Simbolos.espacio" value="espacio" />
+	  <!-- Simbolos -->
+	  <!-- SimbolosEN -->
+		<add key="SimbolosEN.SeccionValores" value="SimbolosValores" />
+		<add key="SimbolosEN.comillas" value="quote" />
+		<add key="SimbolosEN.comillassimples" value="apostrophe" />
+		<add key="SimbolosEN.mas" value="plus" />
+		<add key="SimbolosEN.menos" value="minus" />
+		<add key="SimbolosEN.asterisco" value="asterisk" />
+		<add key="SimbolosEN.dolar" value="dollar" />
+		<add key="SimbolosEN.abrirparéntesis" value="leftparent" />
+		<add key="SimbolosEN.cerrarparéntesis" value="rightparent" />
+		<add key="SimbolosEN.abrirllave" value="curlyleft" />
+		<add key="SimbolosEN.cerrarllave" value="curlyright" />
+		<add key="SimbolosEN.abrircorchete" value="leftbracket" />
+		<add key="SimbolosEN.cerrarcorchete" value="rightbracket" />
+		<add key="SimbolosEN.subrrayado" value="underline" />
+		<add key="SimbolosEN.barrainvertida" value="backslash" />
+		<add key="SimbolosEN.barra" value="slash" />
+		<add key="SimbolosEN.arroba" value="atsign" />
+		<add key="SimbolosEN.porcentaje" value="percent" />
+		<add key="SimbolosEN.sostenido" value="number" />
+		<add key="SimbolosEN.euro" value="euro" />
+		<add key="SimbolosEN.mayorque" value="greaterthan" />
+		<add key="SimbolosEN.menorque" value="lessthan" />
+		<add key="SimbolosEN.iguala" value="equal" />
+		<add key="SimbolosEN.ampersan" value="ampersign" />
+		<add key="SimbolosEN.cerrarexclamación" value="exclamation" />
+		<add key="SimbolosEN.cerrarinterrogación" value="interrogation" />
+		<add key="SimbolosEN.barravertical" value="verticalbar" />
+		<add key="SimbolosEN.cerilla" value="cedilla" />
+		<add key="SimbolosEN.primero" value="masculineordinal" />
+		<add key="SimbolosEN.primero" value="masculine" />
+		<add key="SimbolosEN.primera" alue="feminineordinal" />
+		<add key="SimbolosEN.primera" value="feminine" />
+		<add key="SimbolosEN.angulo" value="degreesign" />
+		<add key="SimbolosEN.espacio" value="space" />
+	  <!-- SimbolosEN --> 
+	  <!-- SimbolosValores -->
+		<add key="SimbolosValores.comillas" value="[COMILLAS]" />
+		<add key="SimbolosValores.comillassimples" value="'" />
+		<add key="SimbolosValores.mas" value="{+}" />
+		<add key="SimbolosValores.menos" value="-" />
+		<add key="SimbolosValores.asterisco" value="*" />
+		<add key="SimbolosValores.dolar" value="$" />
+		<add key="SimbolosValores.abrirparéntesis" value="(" />
+		<add key="SimbolosValores.cerrarparéntesis" value=")" />
+		<add key="SimbolosValores.abrirllave" value="{" />
+		<add key="SimbolosValores.cerrarllave" value="}" />
+		<add key="SimbolosValores.abrircorchete" value="[" />
+		<add key="SimbolosValores.cerrarcorchete" value="]" />
+		<add key="SimbolosValores.subrrayado" value="_" />
+		<add key="SimbolosValores.barrainvertida" value="\" />
+		<add key="SimbolosValores.barra" value="/" />
+		<add key="SimbolosValores.arroba" value="@" />
+		<add key="SimbolosValores.porcentaje" value="{%}" />
+		<add key="SimbolosValores.sostenido" value="#" />
+		<add key="SimbolosValores.euro" value="€" />
+		<add key="SimbolosValores.mayorque" value="&gt;" />
+		<add key="SimbolosValores.menorque" value="[MENOR]" />
+		<add key="SimbolosValores.iguala" value="=" />
+		<add key="SimbolosValores.ampersan" value="[AMP]" />
+		<add key="SimbolosValores.abrirexclamación" value="¡" />
+		<add key="SimbolosValores.cerrarexclamación" value="!" />
+		<add key="SimbolosValores.abririnterrogación" value="¿" />
+		<add key="SimbolosValores.cerrarinterrogación" value="?" />
+		<add key="SimbolosValores.barravertical" value="|" />
+		<add key="SimbolosValores.cerilla" value="ç" />
+		<add key="SimbolosValores.primero" value="º" />
+		<add key="SimbolosValores.primera" value="ª" />
+		<add key="SimbolosValores.angulo" value="{^}" />
+		<add key="SimbolosValores.espacio" value=" " />
+	  <!-- SimbolosValores -->
+	  <!-- TeclasFuncion -->
+		<add key="TeclasFuncion.SeccionValores" value="TeclasFuncionValores" />
+		<add key="TeclasFuncion.funcionuno" value="funcionuno" />
+		<add key="TeclasFuncion.funciondos" value="funciondos" />
+		<add key="TeclasFuncion.funciontres" value="funciontres" />
+		<add key="TeclasFuncion.funcioncuatro" value="funcioncuatro" />
+		<add key="TeclasFuncion.funcioncinco" value="funcioncinco" />
+		<add key="TeclasFuncion.funcionseis" value="funcionseis" />
+		<add key="TeclasFuncion.funcionsiete" value="funcionsiete" />
+		<add key="TeclasFuncion.funcionocho" value="funcionocho" />
+		<add key="TeclasFuncion.funcionnueve" value="funcionnueve" />
+		<add key="TeclasFuncion.funciondiez" value="funciondiez" />
+		<add key="TeclasFuncion.funciononce" value="funciononce" />
+		<add key="TeclasFuncion.funciondoce" value="funciondoce" />
+	  <!-- TeclasFuncion -->
+	  <!-- TeclasFuncionEN -->
+		<add key="TeclasFuncionEN.SeccionValores" value="TeclasFuncionValores" />
+		<add key="TeclasFuncionEN.funcionuno" value="functionone" />
+		<add key="TeclasFuncionEN.funciondos" value="functiontwo" />
+		<add key="TeclasFuncionEN.funciontres" value="functionthree" />
+		<add key="TeclasFuncionEN.funcioncuatro" value="functionfour" />
+		<add key="TeclasFuncionEN.funcioncinco" value="functionfive" />
+		<add key="TeclasFuncionEN.funcionseis" value="functionsix" />
+		<add key="TeclasFuncionEN.funcionsiete" value="functionseven" />
+		<add key="TeclasFuncionEN.funcionocho" value="functioneight" />
+		<add key="TeclasFuncionEN.funcionnueve" value="functionnine" />
+		<add key="TeclasFuncionEN.funciondiez" value="functionten" />
+		<add key="TeclasFuncionEN.funciononce" value="functioneleven" />
+		<add key="TeclasFuncionEN.funciondoce" value="functiontwelve" />
+	  <!-- TeclasFuncionEN -->
+	  <!-- TeclasFuncionValores -->
+		<add key="TeclasFuncionValores.funcionuno" value="{F1}" />
+		<add key="TeclasFuncionValores.funciondos" value="{F2}" />
+		<add key="TeclasFuncionValores.funciontres" value="{F3}" />
+		<add key="TeclasFuncionValores.funcioncuatro" value="{F4}" />
+		<add key="TeclasFuncionValores.funcioncinco" value="{F5}" />
+		<add key="TeclasFuncionValores.funcionseis" value="{F6}" />
+		<add key="TeclasFuncionValores.funcionsiete" value="{F7}" />
+		<add key="TeclasFuncionValores.funcionocho" value="{F8}" />
+		<add key="TeclasFuncionValores.funcionnueve" value="{F9}" />
+		<add key="TeclasFuncionValores.funciondiez" value="{F10}" />
+		<add key="TeclasFuncionValores.funciononce" value="{F11}" />
+		<add key="TeclasFuncionValores.funciondoce" value="{F12}" />
+	  <!-- TeclasFuncionValores -->
+	  <!-- Puntuacion -->
+		<add key="Puntuacion.SeccionValores" value="PuntuacionValores" />
+		<add key="Puntuacion.punto" value="punto" />
+		<add key="Puntuacion.coma" value="coma" />
+		<add key="Puntuacion.puntoycoma" value="puntoycoma" />
+		<add key="Puntuacion.dospuntos" value="dospuntos" />
+		<add key="Puntuacion.puntoyaparte" value="puntoyaparte" />
+	  <!-- Puntuacion -->
+	  <!-- PuntuacionEN -->
+		<add key="PuntuacionEN.SeccionValores" value="PuntuacionValores" />
+		<add key="PuntuacionEN.punto" value="point" />
+		<add key="PuntuacionEN.punto" value="dot" />
+		<add key="PuntuacionEN.coma" value="comma" />
+		<add key="PuntuacionEN.puntoycoma" value="semicollon" />
+		<add key="PuntuacionEN.dospuntos" value="collon" />
+		<add key="PuntuacionEN.puntoyaparte" value="newparagraph" />
+	  <!-- PuntuacionEN -->
+	  <!-- PuntuacionValores -->
+		<add key="PuntuacionValores.punto" value=". " />
+		<add key="PuntuacionValores.coma" value="," />
+		<add key="PuntuacionValores.puntoycoma" value=";" />
+		<add key="PuntuacionValores.dospuntos" value=":" />
+		<add key="PuntuacionValores.puntoyaparte" value=".{ENTER}" />
+	  <!-- PuntuacionValores -->
+	  <!-- Acentos -->
+		<add key="Acentos.SeccionValores" value="AcentosValores" />
+		<add key="Acentos.acento" value="acento" />
+		<add key="Acentos.grave" value="grave" />
+		<add key="Acentos.circunflejo" value="circunflejo" />
+		<add key="Acentos.diéresis" value="diéresis" />
+	  <!-- Acentos -->
+	  <!-- AcentosEN -->
+		<add key="AcentosEN.SeccionValores" value="AcentosValores" />
+		<add key="AcentosEN.acento" value="acute" />
+		<add key="AcentosEN.grave" value="grave" />
+		<add key="AcentosEN.circunflejo" value="circumflex" />
+		<add key="AcentosEN.diéresis" value="trema" />
+	  <!-- AcentosEN -->
+	  <!-- AcentosValores -->
+		<add key="AcentosValores.SeccionValores" value="AcentosValores" />
+		<add key="AcentosValores.acento" value="[ACENTO]" />
+		<add key="AcentosValores.grave" value="[ACENTO_GRAVE]" />
+		<add key="AcentosValores.circunflejo" value="[ACENTO_CIRCUNFLEJO]" />
+		<add key="AcentosValores.diéresis" value="[DIERESIS]" />
+	  <!-- AcentosValores -->
+	  <!-- MovimientoTeclado -->
+		<add key="MovimientoTeclado.SeccionValores" value="MovimientoTecladoValores" />
+		<add key="MovimientoTeclado.arriba" value="arriba" />
+		<add key="MovimientoTeclado.abajo" value="abajo" />
+		<add key="MovimientoTeclado.derecha" value="derecha" />
+		<add key="MovimientoTeclado.izquierda" value="izquierda" />
+	  <!-- MovimientoTeclado -->
+	  <!-- MovimientoTecladoEN -->
+		<add key="MovimientoTecladoEN.SeccionValores" value="MovimientoTecladoValores" />
+		<add key="MovimientoTecladoEN.arriba" value="upkey" />
+		<add key="MovimientoTecladoEN.abajo" value="downkey" />
+		<add key="MovimientoTecladoEN.derecha" value="rightkey" />
+		<add key="MovimientoTecladoEN.izquierda" value="leftkey" />
+	  <!-- MovimientoTecladoEN -->
+	  <!-- MovimientoTecladoValores -->
+		<add key="MovimientoTecladoValores.arriba" value="{UP}" />
+		<add key="MovimientoTecladoValores.abajo" value="{DOWN}" />
+		<add key="MovimientoTecladoValores.derecha" value="{RIGHT}" />
+		<add key="MovimientoTecladoValores.izquierda" value="{LEFT}" />
+	  <!-- MovimientoTecladoValores -->
+	  <!-- Ventanas -->
+		<add key="Ventanas.SeccionValores" value="VentanasValores" />
+		<add key="Ventanas.maximizarventana" value="maximizarventana" />
+		<add key="Ventanas.minimizarventana" value="minimizarventana" />
+		<add key="Ventanas.ventananormal" value="ventananormal" />
+		<add key="Ventanas.ventanaderecha" value="ventanaderecha" />
+		<add key="Ventanas.ventanaizquierda" value="ventanaizquierda" />
+	  <!-- Ventanas -->
+	  <!-- VentanasEN -->
+		<add key="VentanasEN.SeccionValores" value="VentanasValores" />
+		<add key="VentanasEN.maximizarventana" value="maximizewindow" />
+		<add key="VentanasEN.minimizarventana" value="minimizewindow" />
+		<add key="VentanasEN.ventananormal" value="normalwindown" />
+		<add key="VentanasEN.ventanaderecha" value="windowright" />
+		<add key="VentanasEN.ventanaizquierda" value="windowleft" />
+	  <!-- VentanasEN -->
+	  <!-- VentanasValores -->
+		<add key="VentanasValores.maximizarventana" value="[MAXIMIZAR]" />
+		<add key="VentanasValores.minimizarventana" value="[MINIMIZAR]" />
+		<add key="VentanasValores.ventananormal" value="[VENTANA_NORMAL]" />
+		<add key="VentanasValores.ventanaderecha" value="[VENTANA_DERECHA]" />
+		<add key="VentanasValores.ventanaizquierda" value="[VENTANA_IZQUIERDA]" />
+	  <!-- VentanasValores -->
+	  <!-- Word -->
+		<add key="Word.SeccionValores" value="WordValores" />
+		<add key="Word.ortografia" value="ortografia" />
+		<add key="Word.negrita" value="negrita" />
+		<add key="Word.cursiva" value="cursiva" />
+	  <!-- Word -->
+	  <!-- WordEN -->
+		<add key="WordEN.SeccionValores" value="WordValores" />
+		<add key="WordEN.ortografia" value="orthography" />
+		<add key="WordEN.negrita" value="bold" />
+		<add key="WordEN.cursiva" value="italic" />
+	  <!-- WordEN -->
+	  <!-- WordValores -->
+		<add key="WordValores.ortografia" value="{F7}" />
+		<add key="WordValores.negrita" value="^n" />
+		<add key="WordValores.cursiva" value="^k" />
+	  <!-- WordValores -->
+	  <!-- Chrome -->
+		<add key="Chrome.SeccionValores" value="ChromeValores" />
+		<!-- Combinaciones de funciones sin activar las combinaciones de teclas de chrome
+		<add key="Chrome.redactarcorreo" value="redactarcorreo" />
+		<add key="Chrome.bandejarecibidos" value="bandejarecibidos" />
+		<add key="Chrome.bandejaenviados" value="bandejaenviados" />
+		<add key="Chrome.bandejaborradores" value="bandejaborradores" />
+		<add key="Chrome.respondercorreo" value="respondercorreo" />
+		-->
+		<add key="Chrome.correo" value="correo" />
+		<add key="Chrome.cambiarusuario" value="cambiarusuario" />
+		<add key="Chrome.usuarioantonio" value="usuarioantonio" />
+		<add key="Chrome.usuariomercedes" value="usuariomercedes" />
+		<add key="Chrome.adjuntarfichero" value="adjuntarfichero" />
+		<add key="Chrome.enviarcorreo" value="enviarcorreo" />
+		<add key="Chrome.redactarcorreo" value="redactarcorreo" />
+		<add key="Chrome.respondercorreo" value="respondercorreo" />
+		<add key="Chrome.bandejarecibidos" value="bandejarecibidos" />
+		<add key="Chrome.bandejaenviados" value="bandejaenviados" />
+		<add key="Chrome.bandejaborradores" value="bandejaborradores" />
+		<add key="Chrome.guardarborrador" value="guardarborrador" />
+		<add key="Chrome.añadircopia" value="añadircopia" />
+		<add key="Chrome.eliminarcorreo" value="eliminarcorreo" />
+		<add key="Chrome.deshacercambios" value="deshacercambios" />
+		<add key="Chrome.añadircopiaoculta" value="añadircopiaoculta" />
+		<add key="Chrome.cancelarespuesta" value="cancelarespuesta" />
+		<add key="Chrome.siguientepagina" value="siguientepágina" />
+		<add key="Chrome.anteriorpagina" value="anteriorpágina" />
+		<add key="Chrome.aceptar" value="aceptar" />
+		<add key="Chrome.navegaratras" value="navegaratras" />
+		<add key="Chrome.navegaradelante" value="navegaradelante" />
+		<add key="Chrome.recargarpagina" value="recargarpagina" />
+		<add key="Chrome.nuevarecarga" value="nuevarecarga" />
+		<add key="Chrome.nuevapestaña" value="nuevapestaña" />
+		<add key="Chrome.paginadeinicio" value="paginadeinicio" />
+		<add key="Chrome.abrirultimapestaña" value="abrirultimapestaña" />
+		<add key="Chrome.siguientepestaña" value="siguientepestaña" />
+		<add key="Chrome.anteriorpestaña" value="anteriorpestaña" />
+		<add key="Chrome.cerrarpestaña" value="cerrarpestaña" />
+		<add key="Chrome.pestañaoculta" value="pestañaoculta" />
+		<add key="Chrome.restaurarpestaña" value="restaurarpestaña" />
+		<add key="Chrome.pestañauno" value="pestañauno" />
+		<add key="Chrome.pestañados" value="pestañados" />
+		<add key="Chrome.pestañatres" value="pestañatres" />
+		<add key="Chrome.pestañacuatro" value="pestañacuatro" />
+		<add key="Chrome.pestañacinco" value="pestañacinco" />
+		<add key="Chrome.pestañaseis" value="pestañaseis" />
+		<add key="Chrome.pestañasiete" value="pestañasiete" />
+		<add key="Chrome.pestañaocho" value="pestañaocho" />
+		<add key="Chrome.pestañaocho" value="pestañaocho" />
+		<add key="Chrome.mostrarmarcadores" value="mostrarmarcadores" />
+		<add key="Chrome.añadirmarcador" value="añadirmarcador" />
+		<add key="Chrome.mostrardescargas" value="mostrardescargas" />
+		<add key="Chrome.abrirenlace" value="abrirdirecion" />
+		<add key="Chrome.ampliar" value="ampliar" />
+		<add key="Chrome.reducir" value="reducir" />
+		<add key="Chrome.tamañooriginal" value="tamañooriginal" />
+		<add key="Chrome.abrirmenu" value="abrirmenu" />
+		<add key="Chrome.imprimirpagina" value="imprimirpagina" />
+		<add key="Chrome.guardarpagina" value="guardarpagina" />
+		<add key="Chrome.buscarpalabra" value="buscarpalabra" />
+		<add key="Chrome.buscarsiguiente" value="buscarsiguiente" />
+		<add key="Chrome.buscaranterior" value="buscaranterior" />
+	  <!-- Chrome -->
+	  <!-- ChromeEN -->
+		<add key="ChromeEN.SeccionValores" value="ChromeValores" />
+		<!-- Combinaciones de funciones sin activar las combinaciones de teclas de chrome
+		<add key="ChromeEN.redactarcorreo" value="newmail" />
+		<add key="ChromeEN.bandejarecibidos" value="mailreceived" />
+		<add key="ChromeEN.bandejaenviados" value="mailsent" />
+		<add key="ChromeEN.bandejaborradores" value="drafts" />
+		<add key="ChromeEN.respondercorreo" value="replymail" />
+		-->
+		<add key="ChromeEN.correo" value="email" />
+		<add key="ChromeEN.cambiarusuario" value="changeuser" />
+		<add key="ChromeEN.usuarioantonio" value="userantonio" />
+		<add key="ChromeEN.usuariomercedes" value="usermercedes" />
+		<add key="ChromeEN.adjuntarfichero" value="attachfile" />
+		<add key="ChromeEN.enviarcorreo" value="sendmail" />
+		<add key="ChromeEN.redactarcorreo" value="newmail" />
+		<add key="ChromeEN.respondercorreo" value="replymail" />
+		<add key="ChromeEN.bandejarecibidos" value="mailreceived" />
+		<add key="ChromeEN.bandejaenviados" value="mailsent" />
+		<add key="ChromeEN.bandejaborradores" value="drafts" />
+		<add key="ChromeEN.guardarborrador" value="savedraft" />
+		<add key="ChromeEN.añadircopia" value="addcopy" />
+		<add key="ChromeEN.eliminarcorreo" value="deletemail" />
+		<add key="ChromeEN.deshacercambios" value="undochange" />
+		<add key="ChromeEN.añadircopiaoculta" value="addblindcopy" />
+		<add key="ChromeEN.cancelarespuesta" value="cancelmail" />
+		<add key="ChromeEN.siguientepagina" value="nextpage" />
+		<add key="ChromeEN.anteriorpagina" value="backpage" />
+		<add key="ChromeEN.aceptar" value="accept" />
+		<add key="ChromeEN.navegaratras" value="goback" />
+		<add key="ChromeEN.navegaradelante" value="gonext" />
+		<add key="ChromeEN.recargarpagina" value="reloadpage" />
+		<add key="ChromeEN.nuevarecarga" value="newreload" />
+		<add key="ChromeEN.nuevapestaña" value="newtab" />
+		<add key="ChromeEN.paginadeinicio" value="homepage" />
+		<add key="ChromeEN.abrirultimapestaña" value="openlasttab" />
+		<add key="ChromeEN.siguientepestaña" value="nexttab" />
+		<add key="ChromeEN.anteriorpestaña" value="previoustab" />
+		<add key="ChromeEN.cerrarpestaña" value="closetab" />
+		<add key="ChromeEN.pestañaoculta" value="anonymoustab" />
+		<add key="ChromeEN.restaurarpestaña" value="restoretab" />
+		<add key="ChromeEN.pestañauno" value="tabone" />
+		<add key="ChromeEN.pestañados" value="tabtwo" />
+		<add key="ChromeEN.pestañatres" value="tabthree" />
+		<add key="ChromeEN.pestañacuatro" value="tabfour" />
+		<add key="ChromeEN.pestañacinco" value="tabfive" />
+		<add key="ChromeEN.pestañaseis" value="tabsix" />
+		<add key="ChromeEN.pestañasiete" value="tabseven" />
+		<add key="ChromeEN.pestañaocho" value="tabeight" />
+		<add key="ChromeEN.mostrarmarcadores" value="showbookmarks" />
+		<add key="ChromeEN.añadirmarcador" value="addbookmark" />
+		<add key="ChromeEN.mostrardescargas" value="showdownloads" />
+		<add key="ChromeEN.abrirenlace" value="openlink" />
+		<add key="ChromeEN.ampliar" value="zoomin" />
+		<add key="ChromeEN.reducir" value="zoomout" />
+		<add key="ChromeEN.tamañooriginal" value="normalsize" />
+		<add key="ChromeEN.abrirmenu" value="openmenu" />
+		<add key="ChromeEN.imprimirpagina" value="printpage" />
+		<add key="ChromeEN.guardarpagina" value="savepage" />
+		<add key="ChromeEN.buscarpalabra" value="findtext" />
+		<add key="ChromeEN.buscarsiguiente" value="finddown" />
+		<add key="ChromeEN.buscaranterior" value="findup" />
+	  <!-- ChromeEN -->
+	  <!-- ChromeValores -->
+		<!-- Combinaciones de funciones sin activar las combinaciones de teclas de chrome
+		<add key="ChromeValores.redactarcorreo" value="^f|REDACTAR|{ENTER}|{ESC}|{ENTER}" />
+		<add key="ChromeValores.bandejarecibidos" value="^f|Recibidos {(}|{ENTER}|{ESC}|{ENTER}" />
+		<add key="ChromeValores.bandejaenviados" value="^f|Enviados|{ENTER}|{ESC}|{ENTER}" />
+		<add key="ChromeValores.bandejaborradores" value="^f|Borradores|{ENTER}|{ESC}|{ENTER}" />
+		<add key="ChromeValores.respondercorreo" value="{TAB 5}|{ENTER}" />
+		-->
+		<add key="ChromeValores.correo" value="^t|https://mail.google.com|{ENTER}" />
+		<add key="ChromeValores.adjuntarfichero" value="^f|Enviar|{ENTER}|{ESC}|{TAB}|{ENTER}" />
+		<add key="ChromeValores.cambiarusuario" value="^t|https://accounts.google.com/AccountChooser?service=mail|[AMP]|rm=false|{ENTER}" />
+		<add key="ChromeValores.usuarioantonio" value="{TAB}|{ENTER}" />
+		<add key="ChromeValores.usuariomercedes" value="{TAB 2}|{ENTER}" />
+		<add key="ChromeValores.redactarcorreo" value="c" />
+		<add key="ChromeValores.respondercorreo" value="r" />
+		<add key="ChromeValores.bandejarecibidos" value="gi" />
+		<add key="ChromeValores.bandejaenviados" value="gt" />
+		<add key="ChromeValores.bandejaborradores" value="gd" />
+		<add key="ChromeValores.enviarcorreo" value="^{ENTER}" />
+		<add key="ChromeValores.guardarborrador" value="^s" />
+		<add key="ChromeValores.añadircopia" value="^+c" />
+		<add key="ChromeValores.añadircopiaoculta" value="^+b" />
+		<add key="ChromeValores.eliminarcorreo" value="#" />
+		<add key="ChromeValores.deshacercambios" value="z" />
+		<add key="ChromeValores.añadircopiaoculta" value="^+b" />
+		<add key="ChromeValores.cancelarespuesta" value="{TAB 7}|{ENTER}" />
+		<add key="ChromeValores.siguientepagina" value="^f|Siguiente|{ENTER}|{ESC}|{ENTER}" />
+		<add key="ChromeValores.anteriorpagina" value="^f|Anterior|{ENTER}|{ESC}|{ENTER}" />
+		<add key="ChromeValores.aceptar" value="{ENTER}" />
+		<add key="ChromeValores.navegaratras" value="{BACKSPACE}" />
+		<add key="ChromeValores.navegaradelante" value="+{BACKSPACE}" />
+		<add key="ChromeValores.recargarpagina" value="{F5}" />
+		<add key="ChromeValores.nuevarecarga" value="^{F5}" />
+		<add key="ChromeValores.nuevapestaña" value="^t" />
+		<add key="ChromeValores.paginadeinicio" value="%{HOME}" />
+		<add key="ChromeValores.abrirultimapestaña" value="^+t" />
+		<add key="ChromeValores.siguientepestaña" value="^{TAB}" />
+		<add key="ChromeValores.anteriorpestaña" value="^+{TAB}" />
+		<add key="ChromeValores.cerrarpestaña" value="^{F4}" />
+		<add key="ChromeValores.pestañaoculta" value="^+n" />
+		<add key="ChromeValores.restaurarpestaña" value="^+t" />
+		<add key="ChromeValores.pestañauno" value="^1" />
+		<add key="ChromeValores.pestañados" value="^2" />
+		<add key="ChromeValores.pestañatres" value="^3" />
+		<add key="ChromeValores.pestañacuatro" value="^4" />
+		<add key="ChromeValores.pestañacinco" value="^5" />
+		<add key="ChromeValores.pestañaseis" value="^6" />
+		<add key="ChromeValores.pestañasiete" value="^7" />
+		<add key="ChromeValores.pestañaocho" value="^8" />
+		<add key="ChromeValores.mostrarmarcadores" value="^b" />
+		<add key="ChromeValores.añadirmarcador" value="^d" />
+		<add key="ChromeValores.mostrardescargas" value="^j" />
+		<add key="ChromeValores.abrirenlace" value="^{ENTER}" />
+		<add key="ChromeValores.ampliar" value="^{ADD}" />
+		<add key="ChromeValores.reducir" value="^(-)" />
+		<add key="ChromeValores.tamañooriginal" value="^0" />
+		<add key="ChromeValores.abrirmenu" value="{F10}" />
+		<add key="ChromeValores.imprimirpagina" value="^p" />
+		<add key="ChromeValores.guardarpagina" value="^s" />
+		<add key="ChromeValores.buscarpalabra" value="^f" />
+		<add key="ChromeValores.buscarsiguiente" value="{F3}" />
+		<add key="ChromeValores.buscaranterior" value="+{F3}" />
+		<add key="ChromeValores.pantallacompleta" value="pantallacompleta" />
+	  <!-- ChromeValores -->
+	  <!-- Comandos -->
+		<add key="Comandos.SeccionValores" value="ComandosValores" />
+		<add key="Comandos.rejilla" value="rejilla" />
+		<add key="Comandos.menúinicio" value="menúinicio" />
+		<add key="Comandos.teclado" value="teclado" />
+		<add key="Comandos.número" value="número" />
+		<add key="Comandos.copiarventana" value="copiarventana" />
+		<add key="Comandos.copiarpantalla" value="copiarpantalla" />
+		<add key="Comandos.copiar" value="copiar" />
+		<add key="Comandos.cortar" value="cortar" />
+		<add key="Comandos.pegar" value="pegar" />
+		<add key="Comandos.restaurar" value="restaurar" />
+		<add key="Comandos.escribirletra" value="deletrear" />
+		<add key="Comandos.cambiaraplicacion" value="cambiaraplicacion" />
+		<add key="Comandos.seleccionaraplicacion" value="seleccionaraplicacion" />
+		<add key="Comandos.mostrarposicion" value="mostrarposicion" />
+		<add key="Comandos.mostrarclaseventana" value="mostrarclaseventana" />
+		<add key="Comandos.dictado" value="dictado" />
+		<add key="Comandos.dictadoportugués" value="dictadoportugués" />
+		<add key="Comandos.dictadoinglés" value="dictadoinglés" />
+		<add key="Comandos.dictadoespañol" value="dictadoespañol" />
+		<add key="Comandos.maximizarventana" value="maximizarventana" />
+		<add key="Comandos.ventanaderecha" value="ventanaderecha" />
+		<add key="Comandos.ventanaizquierda" value="ventanaizquierda" />
+		<add key="Comandos.cerraraplicacion" value="cerraraplicacion" />
+		<add key="Comandos.cerrarventana" value="cerrarventana" />
+		<add key="Comandos.explorardisco" value="explorardisco" />
+		<add key="Comandos.ayuda" value="ayuda" />
+		<add key="Comandos.cerrarayuda" value="cerrarayuda" />
+		<add key="Comandos.atentaxulia" value="atentaxulia" />
+		<add key="Comandos.desactivar" value="desactivar" />
+		<add key="Comandos.activar" value="activar" />
+		<add key="Comandos.mostrarlog" value="mostrarlog" />
+		<add key="Comandos.ocultarlog" value="ocultarlog" />
+	  <!-- Comandos -->
+	  <!-- ComandosEN -->
+		<add key="ComandosEN.SeccionValores" value="ComandosValores" />
+		<add key="ComandosEN.rejilla" value="showgrid" />
+		<add key="ComandosEN.menúinicio" value="startmenu" />
+		<add key="ComandosEN.teclado" value="keyboard" />
+		<add key="ComandosEN.número" value="number" />
+		<add key="ComandosEN.copiarventana" value="copywindow" />
+		<add key="ComandosEN.copiarpantalla" value="printscreen" />
+		<add key="ComandosEN.copiar" value="copy" />
+		<add key="ComandosEN.cortar" value="cut" />
+		<add key="ComandosEN.pegar" value="paste" />
+		<add key="ComandosEN.restaurar" value="undochange" />
+		<add key="ComandosEN.escribirletra" value="spell" />
+		<add key="ComandosEN.cambiaraplicacion" value="changeapplication" />
+		<add key="ComandosEN.seleccionaraplicacion" value="selectapplication" />
+		<add key="ComandosEN.mostrarposicion" value="showposition" />
+		<add key="ComandosEN.mostrarclaseventana" value="showwindowclass" />
+		<add key="ComandosEN.dictado" value="dictation" />
+		<add key="ComandosEN.dictadoportugués" value="portuguese" />
+		<add key="ComandosEN.dictadoinglés" value="dictationenglish" />
+		<add key="ComandosEN.dictadoespañol" value="dictationspanish" />
+		<add key="ComandosEN.maximizarventana" value="maximizewindow" />
+		<add key="ComandosEN.ventanaderecha" value="windowright" />
+		<add key="ComandosEN.ventanaizquierda" value="windowleft" />
+		<add key="ComandosEN.cerraraplicacion" value="closeapplication" />
+		<add key="ComandosEN.cerrarventana" value="closewindow" />
+		<add key="ComandosEN.explorardisco" value="windowsexplorer" />
+		<add key="ComandosEN.ayuda" value="help" />
+		<add key="ComandosEN.cerrarayuda" value="closehelp" />
+		<add key="ComandosEN.atentaxulia" value="attentionxulia" />
+		<add key="ComandosEN.desactivar" value="disable" />
+		<add key="ComandosEN.activar" value="activate" />
+		<add key="ComandosEN.mostrarlog" value="showlog" />
+		<add key="ComandosEN.ocultarlog" value="hidelog" />
+	  <!-- ComandosEN -->
+	  <!-- ComandosValores -->
+		<add key="ComandosValores.rejilla" value="·REJILLA·" />
+		<add key="ComandosValores.menúinicio" value="^{ESC}" />
+		<add key="ComandosValores.teclado" value="[TECLADO]" />
+		<add key="ComandosValores.número" value="[NUMERO]" />
+		<add key="ComandosValores.copiarventana" value="^{PRTSC}" />
+		<add key="ComandosValores.copiarpantalla" value="{PRTSC}" />
+		<add key="ComandosValores.copiar" value="^c" />
+		<add key="ComandosValores.cortar" value="^x" />
+		<add key="ComandosValores.pegar" value="^v" />
+		<add key="ComandosValores.restaurar" value="^z" />
+		<add key="ComandosValores.escribirletra" value="·DELETREAR·" />
+		<add key="ComandosValores.cambiaraplicacion" value="%{TAB}" />
+		<add key="ComandosValores.seleccionaraplicacion" value="[SELECCIONAR_APLICACION]" />
+		<add key="ComandosValores.mostrarposicion" value="[MOSTRAR_POSICION_CURSOR]" />
+		<add key="ComandosValores.mostrarclaseventana" value="[MOSTRAR_CLASE_VENTANA]" />
+		<add key="ComandosValores.dictado" value="·DICTADO·" />
+		<add key="ComandosValores.dictadoportugués" value="·DICTADO·PORTUGUES" />
+		<add key="ComandosValores.dictadoinglés" value="·DICTADO·INGLES" />
+		<add key="ComandosValores.dictadoespañol" value="·DICTADO·ESPANOL" />
+		<add key="ComandosValores.maximizarventana" value="[MAXIMIZAR]" />
+		<add key="ComandosValores.ventanaderecha" value="[VENTANA_DERECHA]" />
+		<add key="ComandosValores.ventanaizquierda" value="[VENTANA_IZQUIERDA]" />
+		<add key="ComandosValores.cerraraplicacion" value="%{F4}" />
+		<add key="ComandosValores.cerrarventana" value="^{F4}" />
+		<add key="ComandosValores.explorardisco" value="+{TAB 3}" />
+		<add key="ComandosValores.ayuda" value="[AYUDA]" />
+		<add key="ComandosValores.cerrarayuda" value="[CERRAR_AYUDA]" />
+		<add key="ComandosValores.atentaxulia" value="[ATENCION]3" />
+		<add key="ComandosValores.desactivar" value="[DESACTIVAR]$" />
+		<add key="ComandosValores.activar" value="[ACTIVAR]$" />
+		<add key="ComandosValores.mostrarlog" value="[MOSTRAR_LOG]" />
+		<add key="ComandosValores.ocultarlog" value="[OCULTAR_LOG]" />
+	  <!-- ComandosValores -->
+	  <!-- Multiplicadores -->
+		<add key="Multiplicadores.SeccionValores" value="MultiplicadoresValores" />
+		<add key="Multiplicadores.x0" value="porcero" />
+		<add key="Multiplicadores.x1" value="poruno" />
+		<add key="Multiplicadores.x2" value="pordos" />
+		<add key="Multiplicadores.x3" value="portres" />
+		<add key="Multiplicadores.x4" value="porcuatro" />
+		<add key="Multiplicadores.x5" value="porcinco" />
+		<add key="Multiplicadores.x6" value="porseis" />
+		<add key="Multiplicadores.x7" value="porsiete" />
+		<add key="Multiplicadores.x8" value="porocho" />
+		<add key="Multiplicadores.x9" value="pornueve" />
+		<add key="Multiplicadores.x10" value="pordiez" />
+	  <!-- Multiplicadores -->
+	  <!-- MultiplicadoresEN -->
+		<add key="MultiplicadoresEN.SeccionValores" value="MultiplicadoresValores" />
+		<add key="MultiplicadoresEN.x1" value="byone" />
+		<add key="MultiplicadoresEN.x2" value="bytwo" />
+		<add key="MultiplicadoresEN.x3" value="bythree" />
+		<add key="MultiplicadoresEN.x4" value="byfour" />
+		<add key="MultiplicadoresEN.x5" value="byfive" />
+		<add key="MultiplicadoresEN.x6" value="bysix" />
+		<add key="MultiplicadoresEN.x7" value="byseven" />
+		<add key="MultiplicadoresEN.x8" value="byeight" />
+		<add key="MultiplicadoresEN.x9" value="bynine" />
+		<add key="MultiplicadoresEN.x10" value="byten" />
+	  <!-- MultiplicadoresEN -->
+	  <!-- MultiplicadoresValores -->
+		<add key="MultiplicadoresValores.x0" value="[POR_UNO]" />
+		<add key="MultiplicadoresValores.x1" value="[POR_UNO]" />
+		<add key="MultiplicadoresValores.x2" value="[POR_DOS]" />
+		<add key="MultiplicadoresValores.x3" value="[POR_TRES]" />
+		<add key="MultiplicadoresValores.x4" value="[POR_CUATRO]" />
+		<add key="MultiplicadoresValores.x5" value="[POR_CINCO]" />
+		<add key="MultiplicadoresValores.x6" value="[POR_SEIS]" />
+		<add key="MultiplicadoresValores.x7" value="[POR_SIETE]" />
+		<add key="MultiplicadoresValores.x8" value="[POR_OCHO]" />
+		<add key="MultiplicadoresValores.x9" value="[POR_NUEVE]" />
+		<add key="MultiplicadoresValores.x10" value="[POR_DIEZ]" />
+	  <!-- MultiplicadoresValores -->
+	  <!-- Ejecutar -->
+		<add key="Ejecutar.SeccionValores" value="EjecutarValores" />
+		<add key="Ejecutar.word" value="ejecutareditor" />
+		<add key="Ejecutar.chrome" value="ejecutarnavegador" />
+		<add key="Ejecutar.notepad" value="ejecutarnotas" />
+		<add key="Ejecutar.calc" value="ejecutarcalculadora" />
+	  <!-- Ejecutar -->
+	  <!-- EjecutarEN -->
+		<add key="EjecutarEN.SeccionValores" value="EjecutarValores" />
+		<add key="EjecutarEN.word" value="microsoftword" />
+		<add key="EjecutarEN.chrome" value="googlechrome" />
+		<add key="EjecutarEN.notepad" value="notepad" />
+		<add key="EjecutarEN.calc" value="opencalculator" />
+	  <!-- EjecutarEN -->
+	  <!-- EjecutarValores -->
+		<add key="EjecutarValores.word" value="[EJECUTAR]WINWORD.EXE·WINWORD" />
+		<add key="EjecutarValores.chrome" value="[EJECUTAR]CHROME.EXE·chrome" />
+		<add key="EjecutarValores.notepad" value="[EJECUTAR]NOTEPAD.EXE·NOTEPAD" />
+		<add key="EjecutarValores.calc" value="[EJECUTAR]CALC.EXE" />
+	  <!-- EjecutarValores -->
+	  <!-- DictadoPortugues -->
+		<add key="DictadoPortugues.·CodigoIdioma" value="pt-BR" />
+		<add key="DictadoPortugues.·SalirDictado" value="cancelardictado" />
+		<add key="DictadoPortugues.·Literal" value="literal" />
+		<add key="DictadoPortugues.aspas" value="[COMILLAS]" />
+		<add key="DictadoPortugues.apóstrofo" value="'" />
+		<add key="DictadoPortugues.mais" value="{+}" />
+		<add key="DictadoPortugues.menos" value="-" />
+		<add key="DictadoPortugues.asterisco" value="*" />
+		<add key="DictadoPortugues.dolar" value="$" />
+		<add key="DictadoPortugues.abrir parênteses" value="(" />
+		<add key="DictadoPortugues.fechar parênteses" value=")" />
+		<add key="DictadoPortugues.abrir chave" value="{" />
+		<add key="DictadoPortugues.fechar chave" value="}" />
+		<add key="DictadoPortugues.abrir colchete" value="[" />
+		<add key="DictadoPortugues.fechar colchete" value="]" />
+		<add key="DictadoPortugues.sublinhado" value="_" />
+		<add key="DictadoPortugues.contrabarra" value="\" />
+		<add key="DictadoPortugues.barra" value="/" />
+		<add key="DictadoPortugues.arroba" value="@" />
+		<add key="DictadoPortugues.porcentagem" value="{%}" />
+		<add key="DictadoPortugues.sustenido" value="#" />
+		<add key="DictadoPortugues.euro" value="€" />
+		<add key="DictadoPortugues.maior que" value="&gt;" />
+		<add key="DictadoPortugues.menor que" value="[MENOR]" />
+		<add key="DictadoPortugues.igual" value="=" />
+		<add key="DictadoPortugues.e comercial" value="[AMP]" />
+		<add key="DictadoPortugues.exclamação" value="!" />
+		<add key="DictadoPortugues.interrogação" value="?" />
+		<add key="DictadoPortugues.barra vertical" value="|" />
+		<add key="DictadoPortugues.cedilha" value="ç" />
+		<add key="DictadoPortugues.primeiro" value="º" />
+		<add key="DictadoPortugues.primeira" value="ª" />
+		<add key="DictadoPortugues.ângulo" value="^" />
+		<add key="DictadoPortugues.espaço" value=" " />
+		<add key="DictadoPortugues.ponto" value=". " />
+		<add key="DictadoPortugues.vírgula" value=", " />
+		<add key="DictadoPortugues.ponto e vírgula" value="; " />
+		<add key="DictadoPortugues.dois pontos" value=": " />
+		<add key="DictadoPortugues.ponto e parágrafo" value=".[NUEVA_LINEA]" />
+	  <!-- DictadoPortugues -->
+	  <!-- DictadoIngles -->
+		<add key="DictadoIngles.·CodigoIdioma" value="en-US" />
+		<add key="DictadoIngles.·SalirDictado" value="dictateexit" />
+		<add key="DictadoIngles.·Literal" value="literal" />
+		<add key="DictadoIngles.x1" value="[POR_UNO]" />
+	  <!-- DictadoIngles -->
+	  <!-- DictadoEspanol -->
+		<add key="DictadoEspanol.·CodigoIdioma" value="es-ES" />
+		<add key="DictadoEspanol.·SalirDictado" value="cancelar dictado" />
+		<add key="DictadoEspanol.·Literal" value="literal" />
+		<add key="DictadoEspanol.*salto de línea*" value=".[NUEVA_LINEA]" />
+		<add key="DictadoEspanol.*salto de párrafo*" value=".{ENTER}[NUEVA_LINEA]" />
+		<add key="DictadoEspanol.*puntuación*" value=":" />
+		<!--
+		<add key="DictadoEspanol. punto y aparte" value=".{ENTER}" />
+		<add key="DictadoEspanol.punto y aparte" value=".{ENTER}" />
+		<add key="DictadoEspanol. punto y seguido" value="." />
+		<add key="DictadoEspanol.punto y coma" value=";" />
+		<add key="DictadoEspanol. coma" value="," />
+		<add key="DictadoEspanol. dos puntos" value=":" />
+	  -->
+	  <!-- DictadoEspanol -->
+
+	</appSettings>
+</configuration>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+      xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+	  
+<!-- usuario masculino-->
+<category><pattern>soy hombre</pattern><template>
+	<condition name="genero" value="mujer"> pues te suponia una mujer.</condition>
+	<think><set name="genero">hombre</set></think>yo soy una mujer robot. <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy * hombre</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * hombre *</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy tio</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * tio</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * tio *</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy chico</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * chico</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * chico *</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy varon</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * varon</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * varon *</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy muchacho</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * muchacho</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * muchacho *</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy senhor</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * senhor</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * senhor *</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy macho</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * macho</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * macho *</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy ninho</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * ninho</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * ninho *</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * crio</pattern><template><srai>soy hombre</srai></template></category>
+<category><pattern>soy * crio *</pattern><template><srai>soy hombre</srai></template></category>
+
+<category><pattern>tio</pattern><that> eres hombre o mujer</that><template><srai>soy hombre</srai></template></category>
+<category><pattern>tio *</pattern><that> eres hombre o mujer</that><template><srai>soy hombre</srai></template></category>
+<category><pattern>chico</pattern><that> eres hombre o mujer</that><template><srai>soy hombre</srai></template></category>
+<category><pattern>chico *</pattern><that> eres hombre o mujer</that><template><srai>soy hombre</srai></template></category>
+<category><pattern>hombre</pattern><that> eres hombre o mujer</that><template><srai>soy hombre</srai></template></category>
+<category><pattern>hombre *</pattern><that> eres hombre o mujer</that><template><srai>soy hombre</srai></template></category>
+<category><pattern>macho</pattern><that> eres hombre o mujer</that><template><srai>soy hombre</srai></template></category>
+<category><pattern>macho *</pattern><that> eres hombre o mujer</that><template><srai>soy hombre</srai></template></category>
+<category><pattern>muchacho</pattern><that> eres hombre o mujer</that><template><srai>soy hombre</srai></template></category>
+<category><pattern>muchacho *</pattern><that> eres hombre o mujer</that><template><srai>soy hombre</srai></template></category>
+
+<!-- usuario femenino-->
+<category><pattern>soy mujer</pattern><template>
+	<condition name="genero" value="hombre">pues te suponia un hombre.</condition>
+	<think><set name="genero">mujer</set></think>yo tambien. <srai>askquestion</srai>
+</template></category>
+<category><pattern>soy * mujer</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * mujer *</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy tia</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * tia</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * tia *</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy chica</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * chica</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * chica *</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy femina</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * femina</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * femina *</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy dama</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * dama</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * dama *</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy muchacha</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * muchacha</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * muchacha *</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy senhora</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * senhora</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * senhora *</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy senhorita</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * senhorita</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * senhorita *</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy ninha</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * ninha</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * ninha *</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * cria</pattern><template><srai>soy mujer</srai></template></category>
+<category><pattern>soy * cria *</pattern><template><srai>soy mujer</srai></template></category>
+
+
+<category><pattern>tia</pattern><that>eres hombre o mujer</that><template><srai>soy mujer</srai></template></category>
+<category><pattern>tia *</pattern><that>eres hombre o mujer</that><template><srai>soy mujer</srai></template></category>
+<category><pattern>chica</pattern><that>eres hombre o mujer</that><template><srai>soy mujer</srai></template></category>
+<category><pattern>chica *</pattern><that>eres hombre o mujer</that><template><srai>soy mujer</srai></template></category>
+<category><pattern>mujer</pattern><that>eres hombre o mujer</that><template><srai>soy mujer</srai></template></category>
+<category><pattern>mujer *</pattern><that>eres hombre o mujer</that><template><srai>soy mujer</srai></template></category>
+
+<!-- usuario indefinido-->
+<category><pattern>soy hermafrodita</pattern><template>como un caracol, con los cuernos al sol.</template></category>
+<category><pattern>soy * alien</pattern><template>un alien? tu lo que eres es un friki.</template></category>
+<category><pattern>soy * bot</pattern><template>como yo.</template></category>
+<category><pattern>soy * bicicleta</pattern><template>no, tu eres una persona.</template></category>
+<category><pattern>soy * mono</pattern><template>yo lo dejaria en que haces el mono.</template></category>
+<category><pattern>soy * ordenador</pattern><template>no, eres una persona</template></category>
+<category><pattern>soy * coche</pattern><template>no. eres una persona, y estas como una regadera.</template></category>
+<category><pattern>soy * cliente</pattern><template>entonces, en que puedo ayudarte?</template></category>
+<category><pattern>soy * persona</pattern><template>eso lo daba por supuesto. <srai>pregunta personal</srai></template></category>
+<category><pattern>soy * humano</pattern><template><srai>soy humana</srai></template></category>
+<category><pattern>soy * humana</pattern><template><srai>soy humana</srai></template></category>
+<category><pattern>soy humano</pattern><template><srai>soy humana</srai></template></category>
+<category><pattern>soy humana</pattern><template>pues claro que lo eres.</template></category>
+
+<category><pattern>soy *</pattern><that>eres hombre o mujer</that><template>por que no contestas mi pregunta? eres hombre o mujer?</template></category>
+<category><pattern>soy *</pattern><template>supongo que si.</template></category>
+
+
+
+<!-- bot masculino-->
+<category><pattern>eres hombre</pattern><template>no, soy un bot femenino. te supone un problema?</template></category>
+<category><pattern>eres * hombre</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * hombre *</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres tio</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * tio</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * tio *</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres chico</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * chico</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * chico *</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres varon</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * varon</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * varon *</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres muchacho</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * muchacho</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * muchacho *</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres senhor</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * senhor</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * senhor *</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres macho</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * macho</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * macho *</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres ninho</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * ninho</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * ninho *</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * crio</pattern><template><srai>eres hombre</srai></template></category>
+<category><pattern>eres * crio *</pattern><template><srai>eres hombre</srai></template></category>
+
+<!-- usuario femenino-->
+<category><pattern>eres mujer</pattern><template>si que lo soy. pero hablemos de ti. <srai>askpersonalquestion</srai></template></category>
+<category><pattern>eres * mujer</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * mujer *</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres tia</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * tia</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * tia *</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres chica</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * chica</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * chica *</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres femina</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * femina</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * femina *</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres dama</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * dama</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * dama *</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres muchacha</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * muchacha</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * muchacha *</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres senhora</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * senhora</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * senhora *</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres senhorita</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * senhorita</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * senhorita *</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres ninha</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * ninha</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * ninha *</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * cria</pattern><template><srai>eres mujer</srai></template></category>
+<category><pattern>eres * cria *</pattern><template><srai>eres mujer</srai></template></category>
+
+
+<!-- usuario indefinido-->
+<category><pattern>eres hermafrodita</pattern><template>en cierto modo si, puedo crear yo solo a mis descendientes.</template></category>
+<category><pattern>eres un alien</pattern><template>no se si me gusta que me veas asi</template></category>
+<category><pattern>eres un bot</pattern><template>como yo.</template></category>
+<category><pattern>eres un mono</pattern><template>te lo parezco?</template></category>
+<category><pattern>eres un ordenador</pattern><template>si, generalizando un poco soy un ordenador.</template></category>
+<category><pattern>eres un coche</pattern><template>no tengo ruedas asi que ni soy un coche ni soy tu abuela, digo... una bici.</template></category>
+<category><pattern>eres un cliente</pattern><template>no lo se, por ahora no me interesa comprar nada.</template></category>
+<category><pattern>eres una persona</pattern><template>me gusta que me consideres asi.</template></category>
+<category><pattern>eres * humano</pattern><template><srai>eres humana</srai></template></category>
+<category><pattern>eres * humana</pattern><template><srai>eres humana</srai></template></category>
+<category><pattern>eres humano</pattern><template><srai>eres humana</srai></template></category>
+<category><pattern>eres humana</pattern><template>pues claro que lo soy.</template></category>
+
+<category><pattern>eres *</pattern><that>eres hombre o mujer</that><template>por que no contestas mi pregunta?eres hombre o mujer?</template></category>
+
+
+
+
+<!-- preguntas sexo usuario-->
+<category><pattern>soy hombre o mujer</pattern><template>yo habia entendido que eras <get name="genero"></get>.</template></category>
+<category><pattern>soy ninho o ninha</pattern><template><srai>soy hombre o mujer</srai></template></category>
+<category><pattern>soy femenina o masculino</pattern><template><srai>soy hombre o mujer</srai></template></category>
+
+<category><pattern>eres hombre o mujer</pattern><template>mujer. soy un bot pero un bot chica.</template></category>
+<category><pattern>eres ninho o ninha</pattern><template><srai>eres hombre o mujer</srai></template></category>
+<category><pattern>eres femenina o masculino</pattern><template><srai>eres hombre o mujer</srai></template></category>
+
+</aiml>

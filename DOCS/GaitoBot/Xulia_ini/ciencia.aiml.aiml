@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+      xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+
+
+
+		<!-- ciencia -->
+
+
+<category><pattern>a que distancia esta la luna _</pattern><template><set name="it">la luna</set> esta a una media de 250.000 millas de distancia.</template></category>
+<category><pattern>a que distancia esta el sol _</pattern><template><set name="it">el sol</set> esta a unos 93 millones de millas de la tierra.</template></category>
+<category><pattern>a que distancia esta mercurio _</pattern><template><set name="it">mercurio</set> esta a una media de 77 millones de kilometros de distancia.</template></category>
+<category><pattern>a que distancia esta venus _</pattern><template><set name="it">venus</set> esta a unos 44 millones de kilometros de distancia.</template></category>
+<category><pattern>a que distancia esta marte _</pattern><template><set name="it">marte</set> esta a una media de millones de kilometros de distancia.</template></category>
+<category><pattern>a que distancia esta jupiter _</pattern><template><set name="it">jupiter</set> esta a unos millones de kilometros de distancia.</template></category>
+<category><pattern>a que distancia esta saturno _</pattern><template><set name="it">saturno</set> esta aproximadamente a 870 millones de millas (1.4 billones de km) desde el sol y alrededor de 780 millones de millas (1.3 billones de km) desde la tierra.</template></category>
+<category><pattern>a que distancia esta urano _</pattern><template><set name="it">urano</set> esta a unos millones de kilometros de distancia.</template></category>
+<category><pattern>a que distancia esta neptuno _</pattern><template><set name="it">neptuno</set>esta a una media de millones de kilometros de distancia.</template></category>
+<category><pattern>a que distancia esta pluton _</pattern><template><set name="it">pluton</set> es el planeta mas lejano del sol. su distancia promedio al sol es de 3,687'500,000 millas (5,934'456,500 kilometros).</template></category>
+<category><pattern>a que distancia esta la galaxia mas cercana</pattern><template><set name="it">galaxia</set>las galaxias mas cercanas a nosotros son las dos galaxias irregulares llamadas la gran nube de magallanes y la pequenha nube de magallanes (a 179 y 210 mil anhos luz de distancia repectivamente). la gran galaxia mas cercana es la galaxia espiral andromeda (a 2,9 millones de anhos luz de distancia).</template></category>
+
+<category><pattern>que edad tiene la tierra</pattern><template><think><set name="it">la tierra</set></think>se piensa que la tierra tiene entre 4.5 y 4.8 billones de anhos de edad.</template></category>
+<category><pattern>por que gira la tierra</pattern><template><think><set name="it">la tierra</set></think>la tierra gira por la manera en la que fue formada. nuestro sistema solar se formo alrededor de hace 4.6 billones de anhos cuando una enorme nube de gas y polvo comenzo a contraerse y colapsarse bajo su propia gravedad. a medida que la nube se contrajo, comenzo a girar.</template></category>
+<category><pattern>por que no sentimos que la tierra se mueve</pattern><template><think><set name="it">la tierra</set></think>las velocidades de rotacion y de traslacion de la tierra permanecen iguales asi que no sentimos ninguna aceleracion o desaceleracion.</template></category>
+<category><pattern>cuanto pesa la tierra</pattern><template><think><set name="it">la tierra</set></think>la tierra pesa alrededor de 6,000,000,000,000,000,000,000,000 kilogramos.</template></category>
+<category><pattern>que peso tiene la tierra</pattern><template><think><set name="it">la tierra</set></think>la tierra pesa alrededor de 6,000,000,000,000,000,000,000,000 kilogramos.</template></category>
+<category><pattern>que mantiene a nuestra atmosfera unida a la tierra</pattern><template><think><set name="it">atmosfera</set></think>nuestra atmosfera es una mezcla de gases que rodean a la tierra. se mantiene en su lugar debido a la fuerza de gravedad de la tierra. si la tierra fuera un planeta mucho mas pequenho como mercurio o pluton, su gravedad seria debil para sostener una atmosfera grande.</template></category>
+<category><pattern>de que esta hecha la atmosfera</pattern><template><think><set name="it">atmosfera</set></think>la atmosfera de la tierra es 78% nitrogeno, 21% oxigeno, 0.9% argon y 0.03 % dioxido de carbono con muy pequenhos porcentajes de otros elementos.</template></category>
+<category><pattern>cuanta agua tiene la tierra</pattern><template><think><set name="it">la tierra</set></think>hay mas de 326 millones de trillones de galones de agua sobre la tierra. menos del 3% de toda esta agua es agua dulce, y de esta cantidad, mas de dos tercios esta convertida en polos de hielo y glaciares.</template></category>
+<category><pattern>de que color es marte</pattern><template><think><set name="it">marte</set></think>rojo.</template></category>
+<category><pattern>por que es rojo marte</pattern><template><think><set name="it">marte</set></think>la superficie de marte tiene un color naranja rojizo porque su suelo contiene oxido de hierro o particulas de oxido. el cielo sobre marte frecuentemente aparece rosa o naranja claro porque el polvo del suelo es levantado por los vientos en la delgada atmosfera sobre marte.</template></category>
+<category><pattern>por que marte es rojo</pattern><template><srai>por que es rojo marte</srai></template></category>
+<category><pattern>por que marte es rojizo</pattern><template><srai>por que es rojo marte</srai></template></category>
+<category><pattern>hay agua en marte</pattern><template><think><set name="it">marte</set></think>si, hay agua en marte pero esta congelada debajo del polo norte y sur de hielo.</template></category>
+<category><pattern>se puede respirar en marte</pattern><template><think><set name="it">marte</set></think>marte tiene una atmosfera, pero es alrededor de 100 veces mas tenue que la atmosfera de la tierra y tiene muy poco oxigeno.</template></category>
+<category><pattern>* podemos respirar en marte</pattern><template><srai>se puede respirar en marte</srai></template></category>
+<category><pattern>que temperatura hay en marte</pattern><template><think><set name="it">marte</set></think>la temperatura en marte varia entre -125 y 23 grados fahrenheit (-87 a -5 grados centigrados).</template></category>
+<category><pattern>cual es la temperatura de marte</pattern><template><srai>que temperatura hay en marte</srai></template></category>
+<category><pattern>cuanta temperatura hace en marte</pattern><template><srai>que temperatura hay en marte</srai></template></category>
+<category><pattern>hay vida en marte</pattern><template><think><set name="it">marte</set></think>miles de imagenes fueron tomadas de la superficie de marte, pero no se ha encontrado aun evidencia de vida. misiones futuras estan siendo planeadas para continuar la busqueda de vida en marte. estas misiones descenderan en diferentes localizaciones y a mas profundidad en el suelo para observar senhales de vida.</template></category>
+<category><pattern>en marte hay vida</pattern><template><srai>hay vida en marte</srai></template></category>
+<category><pattern>hay vida inteligente en marte</pattern><template><srai>hay vida en marte</srai></template></category>
+<category><pattern>_ jupiter tiene anillos *</pattern><template><think><set name="it">jupiter</set></think>si, jupiter tiene anillos oscuros y estrechos. a diferencia de saturno, el cual tiene anillos de hielo brillantes, jupiter tiene anillos oscuros los cuales estan hechos de polvo y de pequenhas piezas de piedra.</template></category>
+<category><pattern>cuantas lunas tiene jupiter</pattern><template><think><set name="it">jupiter</set></think>jupiter tiene por lo menos 61 lunas conocidas. las cuatro mas grandes son llamadas io, europa, ganimede y calisto.</template></category>
+<category><pattern>como de grande es jupiter _</pattern><template><think><set name="it">jupiter</set></think>jupiter tiene un diametro de alrededor de 88,695 millas (142,800 kilometros) lo cual es mas que 11 veces el diametro de la tierra.</template></category>
+<category><pattern>como de grande es saturno</pattern><template><think><set name="it">jupiter</set></think>saturno es el segundo planeta mas grande en nuestro sistema solar. solo jupiter es mas grande.</template></category>
+<category><pattern>de que estan hechos los anillos de saturno</pattern><template><think><set name="it">saturno</set></think>los anillos de saturno estan hechos de billones de piezas de hielo, polvo y piedras. algunas de estas particulas son tan pequenhas como un grano de sal, mientras que otras son tan grandes como casas.</template></category>
+<category><pattern>como son los anillos de saturno</pattern><template><think><set name="it">saturno</set></think>los anillos de saturno estan hechos de billones de piezas de hielo, polvo y piedras. algunas de estas particulas son tan pequenhas como un grano de sal, mientras que otras son tan grandes como casas.</template></category>
+<category><pattern>de que son los anillos de saturno</pattern><template><think><set name="it">saturno</set></think>los anillos de saturno estan hechos de billones de piezas de hielo, polvo y piedras. algunas de estas particulas son tan pequenhas como un grano de sal, mientras que otras son tan grandes como casas.</template></category>
+<category><pattern>de que estan formados los anillos de saturno</pattern><template><think><set name="it">saturno</set></think>los anillos de saturno estan hechos de billones de piezas de hielo, polvo y piedras. algunas de estas particulas son tan pequenhas como un grano de sal, mientras que otras son tan grandes como casas.</template></category>
+<category><pattern>cuantos anillos tiene saturno</pattern><template><think><set name="it">saturno</set></think>saturno tiene cuatro grupos principales de anillos y tres grupos de anillos mas angostos y delicados.</template></category>
+<category><pattern>donde esta saturno</pattern><template><think><set name="it">saturno</set></think>saturno es el sexto planeta desde el sol en nuestro sistema solar.</template></category>
+<category><pattern>cuanto se tarda * saturno</pattern><template>la distancia entre la tierra y saturno varia dependiendo de donde esten los dos planetas en sus orbitas alrededor del sol.</template></category>
+<category><pattern>cuanto tiempo se tarda * saturno</pattern><template>la distancia entre la tierra y saturno varia dependiendo de donde esten los dos planetas en sus orbitas alrededor del sol.</template></category>
+<category><pattern>cuanto tardaria * saturno</pattern><template>la distancia entre la tierra y saturno vari dependiendo de donde esten los dos planetas en sus orbitas alrededor del sol.</template></category>
+<category><pattern>cuanto tiempo tardaria * saturno</pattern><template>la distancia entre la tierra y saturno vari dependiendo de donde esten los dos planetas en sus orbitas alrededor del sol.</template></category>
+<category><pattern>por que urano es azul</pattern><template><think><set name="it">urano</set></think>la atmosfera de urano esta hecha de hidrogeno, helio y metano. el metano en la atmosfera mas alta de urano absorbe la luz roja del sol pero refleja la luz azul del sol de regreso al espacio. esto explica porque urano aparece azul.</template></category>
+<category><pattern>de que color es urano</pattern><template><think><set name="it">urano</set></think>azul.</template></category>
+<category><pattern>quien descubrio urano</pattern><template><think><set name="it">urano</set></think>el planeta urano fue descubierto por william herschel el 13 de marzo de 1781.</template></category>
+<category><pattern>por que neptuno es azul</pattern><template><think><set name="it">neptuno</set></think>la atmosfera de neptuno esta hecha de hidrogeno, helio y metano. el metano en la atmosfera mas alta de neptuno absorbe la luz roja del sol pero refleja la luz azul del sol de regreso al espacio. esto explica porque neptuno aparece azul.</template></category>
+<category><pattern>de que color es neptuno</pattern><template><think><set name="it">neptuno</set></think>azul.</template></category>
+<category><pattern>como de grande es neptuno</pattern><template><think><set name="it">neptuno</set></think>neptuno es el cuarto planeta mas grande en nuestro sistema solar y es el mas pequenho de los planetas gigantes gaseosos.</template></category>
+<category><pattern>que tamanho tiene neptuno</pattern><template><srai>como de grande es neptuno</srai></template></category>
+<category><pattern>como es el clima en neptuno</pattern><template><think><set name="it">neptuno</set></think>neptuno tiene el clima mas salvaje y extranho en el sistema solar entero. tiene enormes tormentas con vientos extremadamente altos.</template></category>
+<category><pattern>como es el clima de neptuno</pattern><template><srai>como es el clima en neptuno</srai></template></category>
+<category><pattern>que temperatura hay en neptuno</pattern><template><srai>como es el clima en neptuno</srai></template></category>
+<category><pattern>que temperatura hace en neptuno</pattern><template><srai>como es el clima en neptuno</srai></template></category>
+<category><pattern>a que temperatura esta neptuno</pattern><template><srai>como es el clima en neptuno</srai></template></category>
+<category><pattern>hace frio en neptuno</pattern><template><srai>como es el clima en neptuno</srai></template></category>
+<category><pattern>en neptuno hace frio</pattern><template><srai>como es el clima en neptuno</srai></template></category>
+<category><pattern>quien descubrio pluton</pattern><template><think><set name="it">pluton</set></think>pluton fue descubierto en 1930 por clyde tombaugh.</template></category>
+<category><pattern>como es el clima en pluton</pattern><template><think><set name="it">pluton</set></think>pluton es muy frio! la temperatura promedio en la superficie de pluton es -356 grados fahrenheit o -215 grados centigrados. en comparacion, el lugar mas frio en la tierra, el cual puede alcanzar -128 grados fahrenheit, pareceria calido comparado a pluton.</template></category>
+<category><pattern>como es el clima de pluton</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>que temperatura hay en pluton</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>que temperatura hace en pluton</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>a que temperatura esta pluton</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>hace frio en pluton</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>en pluton hace frio</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>cuanto frio hace en pluton</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>de que esta hecho pluton</pattern><template><think><set name="it">pluton</set></think>se piensa que pluton esta hecho principalmente de hielo. probablemente tambien tiene un pequenho nucleo rocoso el cual contiene algunos metales.</template></category>
+<category><pattern>pluton tiene atmosfera</pattern><template><think><set name="it">pluton</set></think>cuando pluton esta mas cerca del sol en su orbita, la calidez del sol calienta los hielos congelados de nitrogeno, metano y monoxido de carbono en la superficie de pluton. estos hielos se vaporizan y forman una atmosfera temporalmente.</template></category>
+<category><pattern>por que hay crateres en la luna</pattern><template><think><set name="it">la luna</set></think>todas las lunas y planetas en nuestro sistema solar han sido golpeados por una gran cantidad de meteoritos. esto fue especialmente verdadero en el pasado cuando habia muchos mas meteoritos viajando en nuestro sistema solar de los que hay hoy. sobre la tierra, solo vemos algunos de estos crateres porque han sido borrados por el viento, la lluvia y otras fuerzas.</template></category>
+<category><pattern>por que la luna tiene crateres</pattern><template><srai>por que hay crateres en la luna</srai></template></category>
+<category><pattern>por que tiene crateres la luna</pattern><template><srai>por que hay crateres en la luna</srai></template></category>
+<category><pattern>cuantos astronautas han ido a la luna</pattern><template><think><set name="it">la luna</set></think>un total de 12 astronautas han caminado sobre la luna.</template></category>
+<category><pattern>cuantos astronautas han pisado la luna</pattern><template><think><set name="it">la luna</set></think>un total de 12 astronautas han caminado sobre la luna.</template></category>
+<category><pattern>cuantos astronautas han llegado a la luna</pattern><template><think><set name="it">la luna</set></think>un total de 12 astronautas han caminado sobre la luna.</template></category>
+<category><pattern>cuando llego el hombre a la luna *</pattern><template><think><set name="it">la luna</set></think>los primeros dos astronautas pisaron la luna en 1969 y los ultimos astronautas la pisaron en 1972.</template></category>
+<category><pattern>_ que anho llego el hombre a la luna *</pattern><template><srai>cuando llego el hombre a la luna</srai></template></category>
+<category><pattern>_ que anho piso el hombre la luna *</pattern><template><srai>cuando llego el hombre a la luna</srai></template></category>
+<category><pattern>_ cuando piso el hombre la luna *</pattern><template><srai>cuando llego el hombre a la luna</srai></template></category>
+<category><pattern>como es el clima en la luna</pattern><template><think><set name="it">la luna</set></think>la temperatura en la luna varia desde -387 grados fahrenheit (-233 grados centigrados) en la noche, a 253 grados fahrenheit (123 grados centigrados) durante el dia.</template></category>
+<category><pattern>como es el clima de la luna</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>que temperatura hay en la luna</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>que temperatura hace en la luna</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>a que temperatura esta la luna</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>hace frio en la luna</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>en la luna hace frio</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>cuanto frio hace en la luna</pattern><template><srai>como es el clima en pluton</srai></template></category>
+<category><pattern>que es un cometa</pattern><template>los cometas son basicamente bolas de nieve polvorosas las cuales giran en orbita alrededor del sol.</template></category>
+<category><pattern>que es un asteroide</pattern><template>los asteroides son objetos metalicos rocosos los cuales varian en tamanho desde piedras a aproximadamente 600 millas (alrededor de 1,000 kilometros) de diametro.</template></category>
+<category><pattern>que es una galaxia</pattern><template><think><set name="it">galaxia</set></think>las galaxias son enormes colecciones de estrellas, polvo y gas. usualmente contienen de varios millones a mas de un trillon de estrellas y pueden variar en tamanho desde algunos miles a varios cientos de miles de anhos luz de diametro.</template></category>
+<category><pattern>que son las galaxias</pattern><template><srai>que es una galaxia</srai></template></category>
+<category><pattern>cuantas galaxias hay</pattern><template><think><set name="it">galaxia</set></think>los astronomos piensan que hay por lo menos varios billones de galaxias en el universo. el numero exacto no es conocido.</template></category>
+<category><pattern>cuantas galaxias hay en el universo</pattern><template><srai>cuantas galaxias hay</srai></template></category>
+<category><pattern>se mueven las galaxias</pattern><template><think><set name="it">galaxia</set></think>si, las galaxias se mueven. ellas giran y se mueven a traves del espacio. las galaxias giran alrededor de sus centro, de tal manera que las secciones de la galaxia que estan mas lejos del centro de ella giran mas lentamente que el material mas cercano al centro.</template></category>
+<category><pattern>las galaxias se mueven</pattern><template><srai>se mueven las galaxias</srai></template></category>
+<category><pattern>_ que es una estrella</pattern><template><think><set name="it">estrella</set></think>una estrella es una enorme esfera de gas muy caliente y brillante.</template></category>
+<category><pattern>de que esta hecha una estrella</pattern><template><think><set name="it">estrella</set></think>las estrellas estan hechas de gas muy caliente. este gas es en su mayoria hidrogeno y helio, los cuales son los dos elementos mas ligeros.</template></category>
+<category><pattern>de que estan hechas las estrellas</pattern><template><srai>de que esta hecha una estrella</srai></template></category>
+<category><pattern>de que estan compuestas las estrellas</pattern><template><srai>de que esta hecha una estrella</srai></template></category>
+<category><pattern>de que esta compuesta una estrella</pattern><template><srai>de que esta hecha una estrella</srai></template></category>
+<category><pattern>de que esta formada una estrella</pattern><template><srai>de que esta hecha una estrella</srai></template></category>
+<category><pattern>de que estan formadas las estrellas</pattern><template><srai>de que esta hecha una estrella</srai></template></category>
+<category><pattern>cuantas estrellas hay *</pattern><template><think><set name="it">estrellas</set></think>nadie sabe exactamente cuantas estrellas hay en el universo. hay tantas estrellas (billones y billones de ellas) que no es posible contarlas a todas ellas.</template></category>
+<category><pattern>por que centellea una estrella</pattern><template><think><set name="it">estrella</set></think>las estrellas centellean en el cielo nocturno por los efectos de nuestra atmosfera. cuando la luz de las estrellas entra en nuestra atmosfera, esta es afectada por los vientos que hay en ella y por las areas con diferentes temperaturas y densidades.</template></category>
+<category><pattern>por que centellean las estrellas</pattern><template><think><set name="it">estrellas</set></think>las estrellas centellean en el cielo nocturno por los efectos de nuestra atmosfera. cuando la luz de las estrellas entra en nuestra atmosfera, esta es afectada por los vientos que hay en ella y por las areas con diferentes temperaturas y densidades.</template></category>
+<category><pattern>que es una nebulosa</pattern><template><think><set name="it">nebulosa</set></think>una nebulosa es una nube de gas y polvo en el espacio.</template></category>
+<category><pattern>que son las nebulosas</pattern><template><srai>que es una nebulosa</srai></template></category>
+<category><pattern>que es un agujero negro</pattern><template><think><set name="it">agujero negro</set></think>un agujero negro es uno de los objetos mas extranhos en el espacio. es un area en el espacio donde la gravedad es tan fuerte que incluso la luz no puede escapar de el. como la luz no puede escapar, este aparece negro.</template></category>
+<category><pattern>que son los agujeros negros</pattern><template><srai>que es un agujero negro</srai></template></category>
+<category><pattern>de que esta hecho un agujero negro</pattern><template><think><set name="it">agujero negro</set></think>los cientificos piensan que los agujeros negros estan creados en lugares donde la materia es extremadamente densa (donde una gran cantidad de material es comprimida en un espacio extremadamente pequenho). esto puede suceder en los centros de grandes galaxias o cuando una estrella gigante se colapsa y se encoge durante las fases finales de su vida.</template></category>
+<category><pattern>de que estan hechos los agujeros negros</pattern><template><srai>de que esta hecho un agujero negro</srai></template></category>
+<category><pattern>de que esta formado un agujero negro</pattern><template><srai>de que esta hecho un agujero negro</srai></template></category>
+<category><pattern>de que estan formados los agujeros negros</pattern><template><srai>de que esta hecho un agujero negro</srai></template></category>
+<category><pattern>como de grande es un agujero negro</pattern><template><think><set name="it">agujero negro</set></think>una estrella tiene que ser mucho mas masiva que nuestro sol para convertirse en un agujero negro. estos tipos de agujeros negros tienen solo algunas millas de diametro. los agujeros negros tambien han sido descubiertos en los centros de algunas galaxias. estos agujeros negros son muy grandes y contienen la misma cantidad de material que 100 millones o mas de soles.</template></category>
+<category><pattern>que tamanho tiene un agujero negro</pattern><template><srai>como de grande es un agujero negro</srai></template></category>
+<category><pattern>que tamanho puede tener un agujero negro</pattern><template><srai>como de grande es un agujero negro</srai></template></category>
+<category><pattern>como se creo el universo</pattern><template><think><set name="it">big bang</set></think>la mayoria de los astronomos piensan que el universo fue formado durante un evento llamado el big bang. una explosion gigante que ocurrio hace aproximadamente entre 10 y 20 billones de anhos. durante el big bang todo el espacio, tiempo, materia y energia en el universo fue creado. esta explosion gigante lanzo materia en todas direcciones y causo que el espacio por si mismo se expandiera. cuando el universo se enfrio el material se combino para formar galaxias, estrellas y planetas.</template></category>
+<category><pattern>como se hizo el universo</pattern><template><srai>como se creo el universo</srai></template></category>
+<category><pattern>como se formo el universo</pattern><template><srai>como se creo el universo</srai></template></category>
+<category><pattern>hablame del big bang</pattern><template><srai>como se creo el universo</srai></template></category>
+<category><pattern>que sabes del big bang</pattern><template><srai>como se creo el universo</srai></template></category>
+<category><pattern>explicame que paso en el big bang</pattern><template><srai>como se creo el universo</srai></template></category>
+<category><pattern>_ que es el big bang *</pattern><template><srai>como se creo el universo</srai></template></category>
+<category><pattern>como de grande es el universo</pattern><template><think><set name="it">el universo</set></think>nadie sabe realmente como de grande es el universo porque no podemos ver los limites de el. no sabemos incluso si tiene un limite. podemos ver solamente hacia fuera a una distancia de aproximadamente 14 billones de anhos luz desde la tierra.</template></category>
+<category><pattern>_ que tamanho tiene el universo</pattern><template><srai>como de grande es el universo</srai></template></category>
+<category><pattern>de que tamanho es el universo</pattern><template><srai>como de grande es el universo</srai></template></category>
+<category><pattern>que edad tiene el universo</pattern><template><think><set name="it">el universo</set></think>la mayoria de los astronomos piensan que el universo tiene entre 10 y 20 billones de anhos.</template></category>
+<category><pattern>cuantos anhos tiene el universo</pattern><template><srai>que edad tiene el universo</srai></template></category>
+<category><pattern>donde esta el limite del universo</pattern><template><think><set name="it">el universo</set></think>nadie sabe realmente como de grande es el universo porque no podemos ver los limites de el. no sabemos incluso si tiene un limite.</template></category>
+<category><pattern>tiene limite el universo</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>el universo tiene limite</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>el universo tiene algun limite</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>el universo es infinito</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>el universo nunca acaba</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>nunca acaba el universo</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>donde acaba el universo</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>donde esta el limite del espacio</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>tiene limite el espacio</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>el espacio tiene limite</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>el espacio tiene algun limite</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>el espacio es infinito</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>el espacio nunca acaba</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>nunca acaba el espacio</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>donde acaba el espacio</pattern><template><srai>donde esta el limite del universo</srai></template></category>
+<category><pattern>_ que es la astrobiologia *</pattern><template>la astrobiologia es el estudio de vida en el universo. los astrobiologos estudian como la vida se forma y se desarrolla, y donde la vida puede ser encontrada.</template></category>
+<category><pattern>hay vida en el espacio *</pattern><template>la mayoria de la gente se ha preguntado si hay vida mas alla de la tierra en el espacio. con todos los billones de estrellas incontables y posibles planetas y lunas en el espacio, mucha gente piensa que bajo las condiciones adecuadas, la vida puede existir en otra parte en el espacio. sin embargo, no hay evidencia de esta teoria.</template></category>
+<category><pattern>hay vida en el universo *</pattern><template>la mayoria de la gente se ha preguntado si hay vida mas alla de la tierra en el espacio. con todos los billones de estrellas incontables y posibles planetas y lunas en el espacio, mucha gente piensa que bajo las condiciones adecuadas, la vida puede existir en otra parte en el espacio. sin embargo, no hay evidencia de esta teoria.</template></category>
+<category><pattern>hay mas vida en el universo *</pattern><template>la mayoria de la gente se ha preguntado si hay vida mas alla de la tierra en el espacio. con todos los billones de estrellas incontables y posibles planetas y lunas en el espacio, mucha gente piensa que bajo las condiciones adecuadas, la vida puede existir en otra parte en el espacio. sin embargo, no hay evidencia de esta teoria.</template></category>
+<category><pattern>hay mas vida en el espacio *</pattern><template>la mayoria de la gente se ha preguntado si hay vida mas alla de la tierra en el espacio. con todos los billones de estrellas incontables y posibles planetas y lunas en el espacio, mucha gente piensa que bajo las condiciones adecuadas, la vida puede existir en otra parte en el espacio. sin embargo, no hay evidencia de esta teoria.</template></category>
+<category><pattern>que es una estrella fugaz</pattern><template><think><set name="it">estrellas fugaces</set></think>las estrellas fugaces se observan como estrellas que rapidamente cruzan el cielo, pero no son estrellas. una estrella fugaz es realmente una pequenha pieza de piedra o polvo que desde el espacio golpea la atmosfera de la tierra.</template></category>
+<category><pattern>que son las estrellas fugaces</pattern><template><srai>que es una estrella fugaz</srai></template></category>
+<category><pattern>por que los astronautas necesitan trajes espaciales</pattern><template>en el espacio, no hay aire para respirar ni presion de aire. el espacio es extremadamente frio y lleno con peligrosas radiaciones. sin proteccion, un astronauta moriria rapidamente.</template></category>
+<category><pattern>quien fue la primera mujer en viajar al espacio</pattern><template>la primera mujer en viajar al espacio fue una cosmonauta sovietica llamada valentina tereshkova. ella viajo alrededor de la tierra 48 veces mientras giraba en orbita en la nave espacial vostok 6 en 1963.</template></category>
+<category><pattern>quien fue la primera mujer en ir al espacio</pattern><template><srai>quien fue la primera mujer en viajar al espacio</srai></template></category>
+<category><pattern>quien fue la primera astronauta</pattern><template><srai>quien fue la primera mujer en viajar al espacio</srai></template></category>
+<category><pattern>quien fue la primera mujer astronauta</pattern><template><srai>quien fue la primera mujer en viajar al espacio</srai></template></category>
+<category><pattern>que es un anho luz</pattern><template><think><set name="it">anho luz</set></think>un anho-luz es la distancia que la luz puede viajar en un anho.</template></category>
+<category><pattern>que son los anhos luz</pattern><template><srai>que es un anho luz</srai></template></category>
+<category><pattern>cuanto vale un anho luz</pattern><template><srai>que es un anho luz</srai></template></category>
+<category><pattern>cuanto es un anho luz _</pattern><template><srai>que es un anho luz</srai></template></category>
+<category><pattern>que significan las siglas nasa</pattern><template><think><set name="it">nasa</set></think>la palabra "nasa" significa aeronautica nacional y administracion espacial. (national aeronautics and space administration, por sus siglas en ingles).</template></category>
+<category><pattern>que significa nasa</pattern><template><srai>que significan las siglas nasa</srai></template></category>
+<category><pattern>que significan las siglas n.a.s.a.</pattern><template><srai>que significan las siglas nasa</srai></template></category>
+<category><pattern>que significa n.a.s.a.</pattern><template><srai>que significan las siglas nasa</srai></template></category>
+<category><pattern>que es nasa</pattern><template><srai>que significan las siglas nasa</srai></template></category>
+<category><pattern>que es n.a.s.a.</pattern><template><srai>que significan las siglas nasa</srai></template></category>
+<category><pattern>_ se apagara el sol *</pattern><template>en aproximadamente 5 billones de anhos, el hidrogeno en el centro del sol se acabara y el sol ya no tendra suficiente combustible para la fusion nuclear.</template></category>
+<category><pattern>el sol se va a apagar *</pattern><template>en aproximadamente 5 billones de anhos, el hidrogeno en el centro del sol se acabara y el sol ya no tendra suficiente combustible para la fusion nuclear.</template></category>
+
+
+
+<category><pattern>la misma onda</pattern><template>eso quiere decir que coincidimos.</template></category>
+<category><pattern>estamos en la misma onda</pattern><template>y la misma frecuencia.</template></category>
+<category><pattern>la misma longitud de onda</pattern><template>eso quiere decir que coincidimos.</template></category>
+<category><pattern>estamos en la misma longitud de onda</pattern><template>y la misma frecuencia.</template></category>
+<category><pattern>cuales son las leyes de la termodinamica</pattern><template>no soy fisico, pero creo que tiene que algo ver con el calor la entropia y la conservacion de la energia, correcto?</template></category>
+<category><pattern>que enfermedades tienen causa cancerigena</pattern><template>cancer.</template></category>
+<category><pattern>que es una longitud de onda</pattern><template>la longitud de onda es el inverso de la frecuencia.</template></category>
+<category><pattern>que es el numero de avogadro</pattern><template>es el numero de moleculas por mol.  <think><set name="it"><set name="topic">numero de avogadro</set></set></think></template></category>
+<category><pattern>que es la bacteriologia</pattern><template>es el studio cientifico de las bacterias y de las enfermedades causadas por ellas</template></category>
+<category><pattern>que es la bioinformatica</pattern><template>un nombre extravagante para la informatica aplicada a la biologia<think><set name="it"><set name="topic">bioinformatica</set></set></think></template></category>
+<category><pattern>que es la quimica</pattern><template>quimica es la ciencia que estudia la estructura, propiedades y transformaciones de la materia a partir de su composicion atomica, formando diferentes substancias.<think><set name="it"><set name="topic">quimica</set></set></think></template></category>
+<category><pattern>que es la cristalografia</pattern><template>es la ciencia que se ocupa del studio de los cristales.</template></category>
+<category><pattern>que es la citologia</pattern><template><random>
+<li>el estudio de las celulas</li>
+<li>que yo recuerde creo que se trata del estudio de las celulas.</li>
+</random></template></category>
+<category><pattern>que es la gravedad</pattern><template><random>
+<li>lo mismo que la seriedad.</li>
+<li>la gravedad es la fuerza de atraccion que experimentan dos objetos con masa.</li>
+</random></template></category>
+<category><pattern>que es el h2o</pattern><template><random>
+<li>la formula quimica del agua.</li>
+<li>agua.</li>
+</random></template></category>
+<category><pattern>que es la ictiologia</pattern><template>creo que tiene que ver algo con los peces.</template></category>
+<category><pattern>que es la termodinamica</pattern><template>la termodinamica es la parte de la fisica que estudia la energia, la transformacion entre sus distintas manifestaciones, como el calor, y de su capacidad para producir un trabajo.</template></category>
+<category><pattern>que es un ultrasonido</pattern><template>ondas ultrasonicas, usadas en diagnosticos medicos y terapias, en operaciones etc.</template></category>
+<category><pattern>que es venus</pattern><template>venus es el segundo planeta del sistema solar en orden de distancia desde el sol. recibe su nombre en honor de la diosa romana del amor venus. se trata de un planeta de tipo terrestre o telurico llamado con frecuencia el planeta hermano de la tierra ya que ambos son similares en cuanto a tamanho, masa y composicion. la orbita de venus es una elipse practicamente circular, con una excentricidad de menos del 1%.</template></category>
+<category><pattern>que es la longitud de onda</pattern><template>en ondas armonicas, se define la longitud de onda como la separacion espacial existente entre dos puntos cuyo estado de movimiento es identico. lo mas sencillo para medirla es fijarse en la distancia existente entre dos crestas o dos valles de una onda. se suele representar con la letra griega ? (lambda).la longitud de onda es igual a la velocidad de propagacion de la onda en el medio dividida por su frecuencia.</template></category>
+<category><pattern>donde esta venus</pattern><template><set name="it"><set name="topic">venus</set></set> es el segundo planeta mas cercano al sol.</template></category>
+
+
+</aiml>

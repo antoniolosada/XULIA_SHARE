@@ -1,0 +1,6 @@
+-Añadir modo si das un nombre incorrecto saca un mensaje que bloque axulia
+-la gramatica eBuscarInformación tiene un error
+-Al abrir una ventana de configuración-gramatica-edición comando, si se cierra con close windows la ventana padre queda bloqueada
+- Buscar comandos xulia - por comando
+- Maximizar configuración, buscar comando y ayuda
+- 

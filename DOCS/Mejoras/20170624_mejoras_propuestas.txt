@@ -1,0 +1,19 @@
+1) cuando el comando disable ballon se activa para eliminar el cuadro de texto y los sonidos producidos a cada comando en Windows 10, la rejilla y el dictado Google todavia dejan de funcionar
+
+2) acentuación: (a) cuando se acciona el comando acute, no se apaga al repetir el comando; (B) el comando tilde no funciona; (C) retirar el acento trema, no más utilizado en la gramática portuguesa; (D) ¿Para qué sirve el comando snake?
+
+3) "comprobar actualizaciones" no funciona
+
+4) la última versión de XULIA no funciona en mi Windows 8 y el comando "show mouse" está dejando de funcionar
+
+5) opción de "un comando" a veces se interpreta a sí mismo, lo mismo sucede con el comando "literal"
+
+6) sugiero quitar comandos sin clara utilidad, por ejemplo, keyboard, showwindonsclass,...
+
+7) corregir el comando activar dictado google: son cinco tabulaciones en lugar de cuatro
+
+8) revisar el comando de selección de párrafos (no se selecciona el párrafo correctamente) y endword (no funciona con el comando de repetición -twotimes, threetimes ...- y cuando tiene dos puntos o punto y coma al final de la palabra)
+
+9) hacer que el comando select desactive después de la mayoría de las acciones, principalmente comandos selectcorrection, copy / cute / copybox / cutbox (excepciones: flechas a la derecha, izquierda, abajo, arriba, home, end, pageup, pagedown, nextword, Backword). OBS: El comando select se desactiva pero no interpreta el segundo comando.
+
+10) El dictado Google parece que sólo funciona en el idioma configurado en Google Chrome. Si ese es realmente el caso, sugiero eliminar los comandos de dictado en otros idiomas y mantener sólo el comando "Dictado Google"

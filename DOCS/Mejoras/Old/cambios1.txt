@@ -1,0 +1,20 @@
+no marca las VK
+activar ventana de la barra de tareas no activa directamente si está minimizado10
+show windows acceder a programas > 10
+pasar a modo deletrear desde dictadoportugues
+selectcorrect en primerplano
+pantalla de correccio queda detrás de word
+Si no haces corección pega lo que pegó la ultima vez
+
+parentesis, llaves
+literal
+sustituciones parciales
+
+command no funcionando
+
+tab no funcoina configuración
+tabulacion correción no está en orden
+con un dígito llegar a la palabra
+las palabras se ven cortadas cuando hay más de una o son grandes
+Cancelar edición y pega lo que recuperó
+

@@ -1,0 +1,2588 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: antonio-->
+<!--licence: Standard-->
+<!--created with: GaitoBot AIML Editor V2.10.0.42867--> 
+<!-- adverbios -->
+<category>
+	<pattern>un pedacito *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mucho *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>un poco *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>muchos de *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>arriba *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>al exterior *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>precipitadamente *</pattern>
+	<template><srai><star /></srai></template>
+</category>
+<category>
+	<pattern>absolutamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>accidentalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>por consiguiente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>exactamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>activamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>realmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>adecuadamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>luego *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>otra vez *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>a continuacion *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>todo a la derecha *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>casi *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>solamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>ya *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>bien *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>tambien *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>alternativamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en conjunto *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>siempre *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>y asi sucesivamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>airadamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>anualmente *</pattern>
+	<template><srai><star /></srai></template>
+</category>
+<category>
+	<pattern>ansiosamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>de todas formas *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>dondequiera *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>aparte *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>al parecer *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>aproximadamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>alrededor *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>como de costumbre *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>hasta ahora *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>a un lado *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en todos *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>al principio *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en el ultimo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>por lo menos *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inmediatamente *</pattern>
+	<template><srai><star /></srai></template>
+</category>
+<category>
+	<pattern>actualmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>automaticamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>torpe *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>al reves *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>gravemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>apenas *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>basicamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>maravillosamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>antes *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>detras *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>abajo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>ademas de *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>lo mejor posible *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mejorar *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mas alla *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>amargamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>oculto *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* presumido</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* audazmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ambos</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* airosamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* brevemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* brillantemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ampliamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* afanosamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* de ninguna manera</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ahora</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* tranquilamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* cuidadosamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* negligentemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* cautelosamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ciertamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* alegre</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* claramente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* de cerca</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mas cerca</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* comunmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* comparativamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* totalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* concebible</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* por lo tanto</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* considerablemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* constantemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* continuamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* correctamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* valeroso</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* valerosa</pattern>
+	<template><srai><star /></srai></template>
+</category>
+<category>
+	<pattern>* cruel</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* actualmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* diario</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* profundamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* desafiantemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* definitivamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* deliberadamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* desesperadamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* diferentemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* directamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* dudoso</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* dudosa</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* abajo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* dramaticamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>sangriento *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>sangrienta *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>anterior *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>temprano *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mas facil *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>facilmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>con eficacia *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>eficientemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>cualquiera *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>elegante *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>a otra parte *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>enormemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>bastantes *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* igualmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>esencialmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>y otros *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* etc</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>sin embargo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* siempre</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* por todas partes</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* evidentemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>exclusivamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* extremadamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>fielmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* rapido</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mas rapidamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* fatal</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>finalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en primer lugar</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>absurdo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* para siempre</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* por ejemplo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* por siempre</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>delantero *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>remite enteramente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* especialmente eventual</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>gradualmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* explicitamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* firmemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* bastante lejos</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ferozmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>afortunadamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>freneticamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* con frecuencia</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>completamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* libremente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>de vez en cuando *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>ademas *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>generalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>suavemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>genuino *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>genuina *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>alegre *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>agraciado *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>agraciada *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>grandemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>codicioso *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>codiciosa *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>feliz *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>precipitado *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>pesadamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>altamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>por lo tanto *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* esperanzadamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* cada hora</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* sin embargo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* hambriento</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* hambrienta</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* es decir</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* idealmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>casero *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>casera *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>importantemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en general *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en parte *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>particularmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en fin *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inadvertidamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>cada vez mas *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>de hecho *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>indefinidamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>independientemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>individualmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inevitable *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inicialmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inocente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inquisitivamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>interior *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en lugar *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>invariable *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>irritablemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en comun *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>apenas alrededor *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>justo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>amablemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en gran parte *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>tarde *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mas adelante *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>perezoso *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>perezosa *</pattern>
+	<template><srai><star /></srai></template>
+</category>
+<category>
+	<pattern>ligeramente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>asimismo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>literalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>poco *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>localmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mas de largo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>libremente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en alta voz *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>enojado *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>enojada *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>principalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>quiza *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>quizas *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mientras tanto *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mentalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>simplemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mensual *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mas *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mas que *</pattern>
+	<template><srai><star /></srai></template>
+</category>
+<category>
+	<pattern>por otra parte *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>mortalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>la mayoria *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>sobre todo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>misterioso *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>misteriosa *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>a saber *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>naturalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>cerca *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>cuidadosamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>nervioso *</pattern>
+	<template><srai><star /></srai></template>
+</category>
+<category>
+	<pattern>nerviosa *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>nuevamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>ninguna duda *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>ruidoso *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>ruidosa *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>no obstante *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>normalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>notablemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>ahora *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>hoy en dia *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en ninguna parte *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>obedientemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>desagradable *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>obviamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>por supuesto *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>oficialmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>a menudo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>a bordo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>una vez *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>de nuevo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>una vez mas *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>hacia adelante *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>abiertamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>originalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>si no *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>exterior *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>alla *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>total *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>excesivamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>durante la noche *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>doloroso *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>dolorosa *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>parcialmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>perfectamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>permanentemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>personalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>fisicamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>por favor *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>cortesmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>positivamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>posiblemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>potencialmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>de gran alcance *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>practicamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>exacto *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>predominante *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>probablemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>bastante *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>previamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>privado *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>puntualmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>correctamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>puramente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>rapidamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>reservado *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>raramente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>algo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>razonablemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>recientemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>cueste lo que cueste *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>regularmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>relativamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>renuente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>notable *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en varias ocasiones *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>segun se informa *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>respectivamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>groseramente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>tristemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>con seguridad *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en segundo lugar *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>aparentemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>derecho *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>por separado *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>seriamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>varios *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inestable *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>agudamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>pronto *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>perceptiblemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>silenciosamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>semejantemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>simultaneamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>sinceramente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>levemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>lentamente *</pattern>
+	<template><srai><star /></srai></template>
+</category>
+<category>
+	<pattern>tan *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>social *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>solemnemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>de alguna manera *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>a veces *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en alguna parte *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>clase de *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>especialmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>especificamente *</pattern>
+	<template><srai><star /></srai></template>
+</category>
+<category>
+	<pattern>constantemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>cautelosamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>aun *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>terminantemente *</pattern>
+	<template><srai><star /></srai></template>
+</category>
+<category>
+	<pattern>fuertemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>posteriormente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>substancialmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>con exito *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>repentinamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>suficientemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>seguramente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>asombrosamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>temporalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>blando *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>terrible *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>despues de eso *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>de tal modo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>a fondo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>a traves *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>firmemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>hoy *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>junto *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>esta noche *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>demasiado *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>totalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>tradicionalmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>verdad *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>verazmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>tipicamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en ultima instancia *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>indudablemente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inesperado *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>desafortunadamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>muy *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>victoriosamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>violentamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>virtualmente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>con gusto *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>debil *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>con fatiga *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>siempre que *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>por el que *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>dondequiera que *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>enteramente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>extensamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>dentro *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>por todo el mundo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>con todo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* cruzado</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* un pedacito</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mucho</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* un poco</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* sobre</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* al exterior</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* precipitadamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* absolutamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* por consiguiente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* exactamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* activamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* realmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* adecuadamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* luego</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* otra vez</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* a continuacion</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* todo a la derecha</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* casi</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* solamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ya</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* bien</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* tambien</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* alternativamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en conjunto</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* y asi sucesivamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* airadamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* anualmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ansiosamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* de todos modos</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* dondequiera</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* aparte</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* al parecer</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* aproximadamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* alrededor</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* como de costumbre</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* hasta ahora</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* a un lado</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en todos</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* al principio</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en el ultimo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* por lo menos</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* inmediatamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* automaticamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* torpe</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* al reves</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* gravemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* apenas</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* basicamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* maravillosamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* antes</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* detras</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* debajo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ademas</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mas alla</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* amargamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* oculto</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* sangriento</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* elegante</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* a otra parte</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* enormemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* bastantes</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* entusiastico</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* enteramente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* especialmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* esencialmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* y otros</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* uniforme</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* eventual</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* exclusivamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* bastante</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* fielmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* finalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en primer lugar *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>por ejemplo *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* delantero</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* remite</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>antes afortunadamente *</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* freneticamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* de vez en cuando</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* completamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* generalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* suavemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* genuino</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* agraciado</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* gradualmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* grandemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* codicioso</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* precipitado</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* pesadamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* altamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>de la parte * particularmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>particularmente * en fin</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en fin * inadvertidamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inadvertidamente * cada vez mas</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>cada vez mas * de hecho</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>de hecho * indefinidamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>indefinidamente * independientemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>independientemente * individualmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>individualmente * inevitable</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inevitable * inicialmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inicialmente * inocente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>inocente * inquisitivamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en lugar de otro</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* invariable</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* irritablemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en comun</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* felizmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* apenas sobre</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* justo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* amablemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en gran parte</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* tarde</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mas adelante</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* perezoso</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ligeramente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* literalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* poco</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* localmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mas de largo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en voz alta</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* enojado</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* principalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* quiza</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mientras tanto</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mentalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* simplemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mensual</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mas que</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mas</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* por otra parte</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* mortalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* la mayoria</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* sobre todo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* misterioso</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* naturalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* cerca</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* necesariamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* nervioso</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* nuevamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ninguna duda</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ruidoso</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* no obstante</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* normalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* notablemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* hoy en dia</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en ninguna parte</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* obedientemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* obviamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* oficialmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* a menudo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* a bordo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* de nuevo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* una vez mas</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* una vez</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* hacia adelante</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* abiertamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* originalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* de otra manera</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* exterior</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* alla</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* total</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* parcialmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* particularmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en parte</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* perfectamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* quizas</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* permanentemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* personalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* fisicamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* por favor</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* cortesmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* positivamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* posiblemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* potencialmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* de gran alcance</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* practicamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* exacto</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* predominante</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* probablemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* previamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* privado</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* puntualmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* puramente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* rapidamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* raramente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* facilmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* razonablemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* recientemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* cueste lo que cueste</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* regularmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* relativamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* renuente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* segun se informa</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* respectivamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* groseramente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* tristemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en segundo lugar</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* aparentemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* por separado</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* seriamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* inestable</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* agudamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* pronto</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* perceptiblemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* silenciosamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* semejantemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* simultaneamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* desde</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* sinceramente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>levemente * lentamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>lentamente * suavemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>suavemente * social</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>social * suavemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>suavemente * solamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>solamente * solemnemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>solemnemente * de alguna manera</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>de alguna manera * a veces</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>a veces * algo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>algo * en alguna parte</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>en alguna parte * pronto</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* de especialmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* especificamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* con</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* junto</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* esta noche</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* demasiado</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* tradicionalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* verdad</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* verazmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* tipicamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* en ultima instancia</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* indudablemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* inesperado</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* desafortunadamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* hasta</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* arriba</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* muy</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* victoriosamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* virtualmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* con gusto</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* debil</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* con fatiga</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* siempre que</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* por el que</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* dondequiera que</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* extensamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* violentamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* dentro</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* por todo el mundo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* ayer</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* aun</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* derecho</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* terminantemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* fuertemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* posteriormente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* substancialmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* con exito</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* repentinamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* suficientemente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* seguramente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* asombrosamente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* temporalmente</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* blando</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* terrible</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* despues de eso</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* de tal modo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+<category>
+	<pattern>* a fondo</pattern>
+	<template><srai><star /></srai></template>
+</category> 
+</aiml> 

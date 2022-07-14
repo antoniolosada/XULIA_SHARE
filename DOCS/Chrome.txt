@@ -1,0 +1,13 @@
+c redactar correo
+r responder
+u conversaciones
+Ctrl-intro enviar
+c nuevo correo
+Ctrl-May-B CCo
+Cuutrl-May-c copia
+Ctrl-S guardfar borrador
+# Eliminar
+z deshacer
+g+d borradores
+g+i recibidos
+g+t enviados

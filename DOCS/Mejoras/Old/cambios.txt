@@ -1,0 +1,48 @@
+ running/slower
+- maiusculas
+- mousehead
+- comandos redundantes
+- parenteses
+- ponto
+- skype	
+- caixa de entrada gmail
+
+Cambios hechos
+- comando delete por deletekey (Xulia atende mejor)
+- comandos teclaone por keyone etc.
+- comando byone por dobyone etc. 
+- modo spell por spell mode
+- skype por openskype
+
+comando para posicionar en seis lugares
+ocultar ventana de xuliapanel de control
+mostrar ventana de xuliapanel de control                                                
+impedir que se mueva el panel de control
+al pulsar en el micro 
+Dictado en multiples idiomas
+reconocer comandos en modo dictado chrome
+mail responder a todos
+mail forward
+enter en dictado continuo
+Al pulsar encima del mi
+
+multiplicador
+
+onetimes
+twotimes
+threetimes
+comando [NUEVA_FRASE] con mayúscula sin salto de línea
+
+()
+mostrar configuración
+
+
+Provider=Microsoft.Ace.OLEDB.12.0;
+
+copiartexto en multiples portapapeles
+copiar coordeandas de showmouse
+no borra parametros
+no funciona recargar
+al salir de editarcomando a veces deja bloqueda la pantalla
+windowsup mueve pantalla de control
+

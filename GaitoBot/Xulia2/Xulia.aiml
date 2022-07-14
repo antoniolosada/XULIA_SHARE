@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+
+
+<aiml>
+<!--author: antonio-->
+<!--licence: Standard-->
+<!--created with: GaitoBot AIML Editor V2.10.0.42867-->
+<category>
+	<pattern>INIT</pattern>
+	<template><set name="nombre">undefined</set><set name="trabajo">undefined</set><set name="gender">undefined</set><set name="location">undefined</set><set name="genero">undefined</set><set name="bot_name">xulia</set></template>
+</category>
+</aiml>

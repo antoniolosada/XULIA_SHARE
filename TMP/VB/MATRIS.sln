@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MATRIS", "MATRIS.vbproj", "{08A2830A-7E84-4C2A-937B-4B4072D88773}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REcVoz", "RecGeneral\REcVoz\REcVoz\REcVoz.csproj", "{B891F787-01E0-441F-A4BC-59A589276707}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08A2830A-7E84-4C2A-937B-4B4072D88773}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{08A2830A-7E84-4C2A-937B-4B4072D88773}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{08A2830A-7E84-4C2A-937B-4B4072D88773}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{08A2830A-7E84-4C2A-937B-4B4072D88773}.Debug|x86.ActiveCfg = Debug|x86
+		{08A2830A-7E84-4C2A-937B-4B4072D88773}.Debug|x86.Build.0 = Debug|x86
+		{08A2830A-7E84-4C2A-937B-4B4072D88773}.Release|Any CPU.ActiveCfg = Release|x86
+		{08A2830A-7E84-4C2A-937B-4B4072D88773}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{08A2830A-7E84-4C2A-937B-4B4072D88773}.Release|Mixed Platforms.Build.0 = Release|x86
+		{08A2830A-7E84-4C2A-937B-4B4072D88773}.Release|x86.ActiveCfg = Release|x86
+		{08A2830A-7E84-4C2A-937B-4B4072D88773}.Release|x86.Build.0 = Release|x86
+		{B891F787-01E0-441F-A4BC-59A589276707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B891F787-01E0-441F-A4BC-59A589276707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B891F787-01E0-441F-A4BC-59A589276707}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B891F787-01E0-441F-A4BC-59A589276707}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B891F787-01E0-441F-A4BC-59A589276707}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B891F787-01E0-441F-A4BC-59A589276707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B891F787-01E0-441F-A4BC-59A589276707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B891F787-01E0-441F-A4BC-59A589276707}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B891F787-01E0-441F-A4BC-59A589276707}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B891F787-01E0-441F-A4BC-59A589276707}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

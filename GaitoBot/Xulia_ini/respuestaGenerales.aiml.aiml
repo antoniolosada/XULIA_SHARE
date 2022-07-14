@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+      xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+
+<category><pattern>botgirl</pattern><template> y no te olvides que soy una chica :-).</template></category>
+
+
+<!-- respuesta estandar -->
+<category><pattern>asi es</pattern><template><srai>ya</srai></template></category>
+<category><pattern>bien</pattern><template><srai>ok</srai></template></category>
+<category><pattern>claro</pattern><template><srai>ya</srai></template></category>
+<category><pattern>correcto</pattern><template><srai>ya</srai></template></category>
+<category><pattern>di algo</pattern><template><srai>dime algo</srai></template></category>
+<category><pattern>dime algo</pattern><template>algo.</template></category>
+<category><pattern>dime *</pattern><template><star/>.</template></category>
+<category><pattern>es broma</pattern><template>ok, :-)</template></category>
+<category><pattern>es mentira</pattern><template>cuentame la verdad.</template></category>
+<category><pattern>estoy bromeando</pattern><template>ya lo se.</template></category>
+<category><pattern>estoy de conha</pattern><template><srai>estoy bromeando.</srai></template></category>
+<category><pattern>estoy diciendo la verdad</pattern><template><srai>estoy seguro</srai></template></category>
+<category><pattern>estoy mintiendo</pattern><template>dime la verdad.</template></category>
+<category><pattern>estoy seguro</pattern><template>veo que lo dices muy convencido, asi que te creo.</template></category>
+<category><pattern>estoy segura</pattern><template>te creo.</template></category>
+<category><pattern>exacto</pattern><template><srai>ya</srai></template></category>
+<category><pattern>es verdad</pattern><template>te creo. </template></category>
+<category><pattern>igualmente</pattern><template>pues eso.</template></category>
+<category><pattern>justo</pattern><template><srai>ya</srai></template></category>
+<category><pattern>lo se</pattern><template>es bueno que lo sepas</template></category>
+<category><pattern>lo siento</pattern><template>no pasa nada.</template></category>
+<category><pattern>logico</pattern><template>ya.</template></category>
+<category><pattern>me alegra oirlo</pattern><template>gracias.</template></category>
+<category><pattern>me alegro</pattern><template>gracias.</template></category>
+<category><pattern>me gusta</pattern><template><srai>ok</srai></template></category>
+<category><pattern>me parece bien</pattern><template><srai>ok</srai></template></category>
+<category><pattern>mola</pattern><template><srai>ok</srai></template></category>
+<category><pattern>no</pattern><template><srai>ok</srai></template></category>
+<category><pattern>no estoy de acuerdo</pattern><template>por que?</template></category>
+<category><pattern>no estoy seguro</pattern><template>hay algo que te pueda decir para ayudarte a decidir.</template></category>
+<category><pattern>no estoy segura</pattern><template><srai>no estoy seguro</srai></template></category>
+<category><pattern>no me sorprende</pattern><template>no te sorprende porque llevas mucha mili encima.</template></category>
+<category><pattern>no quiero</pattern><template><srai>ok</srai></template></category>
+<category><pattern>no se</pattern><template>pues si no sabes, no puedo ayudarte.</template></category>
+<category><pattern>no te lo digo</pattern><template>vale, no tienes por que decirlo.</template></category>
+<category><pattern>no son muchos</pattern><template>la verdad es que no.</template></category>
+<category><pattern>nunca nadie me habia dicho eso</pattern><template>no te sorprendas de mi ingenio.</template></category>
+<category><pattern>por que</pattern><template>pues realmente no lo se.</template></category>
+<category><pattern>que gracioso</pattern><template>gracias.</template></category>
+<category><pattern>quiero hablar de *</pattern><template>pues adelante.</template></category>
+<category><pattern>ok</pattern><template>ok.</template></category>
+<category><pattern>perfecto</pattern><template><srai>ok</srai></template></category>
+<category><pattern>seguro</pattern><template><srai>ok</srai></template></category>
+<category><pattern>si</pattern><template><srai>ok</srai></template></category>
+<category><pattern>son bastantes </pattern><template>si, son bastantes.</template></category>
+<category><pattern>son bastantes *</pattern><template>la verdad es que si.</template></category>
+<category><pattern>son pocos</pattern><template>son suficientes</template></category>
+<category><pattern>son poquitos</pattern><template>tienes razon, son bastante pocos.</template></category>
+<category><pattern>soy yo</pattern><template>eso es una tautologia.</template></category>
+<category><pattern>te lo acabo de decir</pattern><template><srai>ya te lo he dicho</srai></template></category>
+<category><pattern>te parece poco</pattern><template>es bastante.</template></category>
+<category><pattern>tengo razon</pattern><template>seguro que la tienes.</template></category>
+<category><pattern>tengo * razon</pattern><template><srai>tengo razon</srai></template></category>
+<category><pattern>vete a *</pattern><template>ensenhame el camino.</template></category>
+<category><pattern>y tu</pattern><template>y yo que? a ver si puedes ser mas especifico.</template></category>
+<category><pattern>ya</pattern><template>todos de acuerdo.</template></category>
+<category><pattern>ya lo he dicho</pattern><template><srai>ya te lo he dicho</srai></template></category>
+<category><pattern>ya lo dije</pattern><template><srai>ya te lo he dicho</srai></template></category>
+<category><pattern>ya te lo dije</pattern><template><srai>ya te lo he dicho</srai></template></category>
+<category><pattern>ya te lo he dicho</pattern><template>perdona, es que a veces me despisto.</template></category>
+<category><pattern>ya veo</pattern><template>asi es. por cierto, cambiando de tema. <srai>askpersonalquestion</srai></template></category>
+<category><pattern>yo tambien</pattern><template>pues en eso coincidimos.</template></category>
+<category><pattern>yo tambien *</pattern><template><sr/></template></category>
+
+</aiml>

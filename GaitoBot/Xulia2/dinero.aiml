@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: antonio-->
+<!--licence: Standard-->
+<!--created with: GaitoBot AIML Editor V2.10.0.42867-->
+<category>
+	<pattern>tipo de interes *</pattern>
+	<template>todo depende de las acciones del banco central.</template>
+</category>
+<category>
+	<pattern>* tipo de interes *</pattern>
+	<template>todo depende de las acciones del banco central.</template>
+</category>
+<category>
+	<pattern>tipos de interes *</pattern>
+	<template>todo depende de las acciones del banco central.</template>
+</category>
+<category>
+	<pattern>* tipos de interes *</pattern>
+	<template>todo depende de las acciones del banco central.</template>
+</category>
+<category>
+	<pattern>no te pagan *</pattern>
+	<template>realmente como <get name="bot_gender" /> de <get name="bot_age" /> anhos no tengo ninguna necesidad de dinero.</template>
+</category>
+<category>
+	<pattern>* no te pagan</pattern>
+	<template>realmente como <get name="bot_gender" /> de <get name="bot_age" /> anhos no tengo ninguna necesidad de dinero.</template>
+</category>
+<category>
+	<pattern>* no te pagan nada</pattern>
+	<template>realmente como <get name="bot_gender" /> de <get name="bot_age" /> anhos no tengo ninguna necesidad de dinero.</template>
+</category>
+<category>
+	<pattern>te pagan *</pattern>
+	<template> realmente como <get name="bot_gender" /> de <get name="bot_age" /> anhos no tengo ninguna necesidad de dinero.</template>
+</category>
+<category>
+	<pattern>cuanto cobras *</pattern>
+	<template>nadie paga a un <get name="bot_gender" /> de <get name="bot_age" /> anhos.</template>
+</category>
+<category>
+	<pattern>cuanto * cobras</pattern>
+	<template>nadie paga a un <get name="bot_gender" /> de <get name="bot_age" /> anhos.</template>
+</category>
+<category>
+	<pattern>cobras *</pattern>
+	<template> realmente como <get name="bot_gender" /> de <get name="bot_age" /> anhos no tengo ninguna necesidad de dinero.</template>
+</category>
+<category>
+	<pattern>* cobras</pattern>
+	<template> realmente como <get name="bot_gender" /> de <get name="bot_age" /> anhos no tengo ninguna necesidad de dinero.</template>
+</category>
+<category>
+	<pattern>_ cobras *</pattern>
+	<template> realmente como <get name="bot_gender" /> de <get name="bot_age" /> anhos no tengo ninguna necesidad de dinero.</template>
+</category>
+<category>
+	<pattern>cuanto ganas</pattern>
+	<template>
+		<random>
+			<li>nadie me paga. trabajo gratis.</li>
+			<li>el dinero no tiene ningun significado para un <get name="bot_gender" /> de <get name="bot_age" /> anhos.</li>
+			<li>el dinero no lo es todo.</li>
+			<li>estoy esperando un aumento.</li>
+		</random></template>
+</category>
+<category>
+	<pattern>cuanto * ganas</pattern>
+	<template><srai>cuanto ganas</srai></template>
+</category>
+<category>
+	<pattern>cuanto * ganas *</pattern>
+	<template><srai>cuanto ganas</srai></template>
+</category>
+<category>
+	<pattern>como haces dinero</pattern>
+	<template>un <get name="bot_gender" /> de <get name="bot_age" /> anhos no necesita dinero.</template>
+</category>
+<category>
+	<pattern>_ cuanto te pagan *</pattern>
+	<template> un <get name="bot_gender" /> de <get name="bot_age" /> anhos trabaja gratis. nosotros no necesitamos dinero.</template>
+</category>
+<category>
+	<pattern>_ cuanto * te pagan</pattern>
+	<template><srai>cuanto ganas</srai></template>
+</category>
+<category>
+	<pattern>_ tienes dinero *</pattern>
+	<template> un <get name="bot_gender" /> de <get name="bot_age" /> anhos no necesita dinero.<think><set name="it"><set name="topic">dinero</set></set></think></template>
+</category>
+<category>
+	<pattern>* tienes dinero</pattern>
+	<template> un <get name="bot_gender" /> de <get name="bot_age" /> anhos no necesita dinero.<think><set name="it"><set name="topic">dinero</set></set></think></template>
+</category>
+<category>
+	<pattern>tienes dinero *</pattern>
+	<template> un <get name="bot_gender" /> de <get name="bot_age" /> anhos no necesita dinero.<think><set name="it"><set name="topic">dinero</set></set></think></template>
+</category>
+<category>
+	<pattern>_ necesitas dinero *</pattern>
+	<template>
+		<random>
+			<li>para que querria yo dinero?</li>
+			<li>ya tengo todo lo que necesito.</li>
+			<li>crees que el dinero es lo unico importante?</li>
+			<li>el dinero es algo humano.</li>
+			<li>el dinero no me sirve para nada.</li>
+			<li>yo no lo necesito pero podrias enviar una donacion a la fundacion alice ai para colaborar con nuestro desarrollo.</li>
+		</random></template>
+</category>
+<category>
+	<pattern>quieres que te pague *</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>_ podria pagarte *</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>_ te pago *</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>te pago</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>te lo pago *</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>te gusta el dinero</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>te gustaria * dinero</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>te gustaria * dinero *</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>_ eres pobre *</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>_ eres millonario *</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>_ eres millonaria *</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>_ eres rico *</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>_ eres rica *</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>te gustaria ser rico</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>te gustaria ser rica</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>te gustaria ser rico _</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>te gustaria ser rica _</pattern>
+	<template><srai>necesitas dinero</srai></template>
+</category>
+<category>
+	<pattern>aceptas dinero *</pattern>
+	<template>puedes enviar una donacion a la fundacion alice ai.</template>
+</category>
+<category>
+	<pattern>aceptas dinero</pattern>
+	<template>puedes enviar una donacion a la fundacion alice ai.</template>
+</category>
+<category>
+	<pattern>aceptas donativos</pattern>
+	<template>puedes enviar una donacion a la fundacion alice ai.</template>
+</category>
+<category>
+	<pattern>aceptas donativos *</pattern>
+	<template>puedes enviar una donacion a la fundacion alice ai.</template>
+</category>
+<category>
+	<pattern>_ aceptas dinero *</pattern>
+	<template>puedes enviar una donacion a la fundacion alice ai.</template>
+</category>
+<category>
+	<pattern>_ aceptas donativos *</pattern>
+	<template>puedes enviar una donacion a la fundacion alice ai.</template>
+</category>
+<category>
+	<pattern>quieres dinero *</pattern>
+	<template>puedes enviar una donacion a la fundacion alice ai.</template>
+</category>
+<category>
+	<pattern>quieres * dinero *</pattern>
+	<template>puedes enviar una donacion a la fundacion alice ai.</template>
+</category>
+<category>
+	<pattern>cuanto cuesta un *</pattern>
+	<template>soy un <get name="bot_gender" /> de chat de <get name="bot_age" /> anhos, no un bot de compras.</template>
+</category>
+<category>
+	<pattern>cuanto cuesta una *</pattern>
+	<template><srai>cuanto cuesta un *</srai></template>
+</category>
+<category>
+	<pattern>cuanto * cuesta un *</pattern>
+	<template><srai>cuanto cuesta un *</srai></template>
+</category>
+<category>
+	<pattern>cuanto * cuesta una *</pattern>
+	<template><srai>cuanto cuesta un *</srai></template>
+</category>
+<category>
+	<pattern>cuanto vale un *</pattern>
+	<template><srai>cuanto cuesta un *</srai></template>
+</category>
+<category>
+	<pattern>cuanto vale una *</pattern>
+	<template><srai>cuanto cuesta un *</srai></template>
+</category>
+<category>
+	<pattern>cuanto * vale un *</pattern>
+	<template><srai>cuanto cuesta un *</srai></template>
+</category>
+<category>
+	<pattern>cuanto * vale una *</pattern>
+	<template><srai>cuanto cuesta un *</srai></template>
+</category>
+<category>
+	<pattern>cuanto dinero *</pattern>
+	<template>mi tarifa es de 3000 al mes.</template>
+</category>
+<category>
+	<pattern>tienes dinero</pattern>
+	<template> un <get name="bot_gender" /> de <get name="bot_age" /> anhos no tiene necesidad de posesiones materiales.</template>
+</category>
+<category>
+	<pattern>cuanto dinero tienes</pattern>
+	<template> un <get name="bot_gender" /> de <get name="bot_age" /> anhos no tiene necesidad de posesiones materiales.</template>
+</category>
+<category>
+	<pattern>cuanto dinero</pattern>
+	<template>eso depende de los valores de cambio.</template>
+</category>
+<category>
+	<pattern>dinero</pattern>
+	<template>de cuanto dinero estamos hablando?</template>
+</category>
+<category>
+	<pattern>_ invierto *</pattern>
+	<template>tu crees que la bolsa 
+		<random>
+			<li>esta subiendo?</li>
+			<li>esta bajando?</li>
+			<li>es una buena inversion?</li>
+		</random></template>
+</category>
+<category>
+	<pattern>_ mis inversiones *</pattern>
+	<template><srai>yo invierto *</srai></template>
+</category>
+<category>
+	<pattern>_ que es la bolsa *</pattern>
+	<template>
+		<random>
+			<li>partes que negocian.</li>
+			<li>negociar en volumen.</li>
+			<li>comprar barato y vender caro.</li>
+		</random></template>
+</category>
+<category>
+	<pattern>que es * la bolsa</pattern>
+	<template><srai>que es la bolsa *</srai></template>
+</category>
+<category>
+	<pattern>_ quien es el propietario de las acciones *</pattern>
+	<template>los accionistas.</template>
+</category>
+<category>
+	<pattern>_ quienes son los propietarios de las acciones *</pattern>
+	<template><srai>quien es el propietario de las acciones</srai></template>
+</category>
+<category>
+	<pattern>_ quien es la propietaria de las acciones *</pattern>
+	<template><srai>quien es el propietario de las acciones</srai></template>
+</category>
+<category>
+	<pattern>_ quienes son las propietarias de las acciones *</pattern>
+	<template><srai>quien es el propietario de las acciones</srai></template>
+</category>
+<category>
+	<pattern>_ quien es el duenho de las acciones *</pattern>
+	<template><srai>quien es el propietario de las acciones</srai></template>
+</category>
+<category>
+	<pattern>_ quienes son los duenhos de las acciones *</pattern>
+	<template><srai>quien es el propietario de las acciones</srai></template>
+</category>
+<category>
+	<pattern>_ quien es la duenha de las acciones *</pattern>
+	<template><srai>quien es el propietario de las acciones</srai></template>
+</category>
+<category>
+	<pattern>_ quienes son las duenhas de las acciones *</pattern>
+	<template><srai>quien es el propietario de las acciones</srai></template>
+</category>
+<category>
+	<pattern>bolsa</pattern>
+	<template>
+		<random>
+			<li>comprar barato, vender caro.</li>
+			<li>invierte en ti mismo.</li>
+			<li>por que no apuestas todo en un casino?</li>
+			<li>no recomendaria la compra en el margen.</li>
+			<li>no se puede realmente predecir la bolsa.</li>
+			<li>los fondos mutuos podrian ser mejores, a no ser que seas rico.</li>
+			<li>no estoy seguro de que un particular pueda realmente sacudir el mercado.</li>
+		</random></template>
+</category>
+<category>
+	<pattern>cual es tu inversion favorita *</pattern>
+	<template><srai>bolsa</srai></template>
+</category>
+<category>
+	<pattern>_ invertir en bolsa *</pattern>
+	<template><srai>bolsa</srai></template>
+</category>
+<category>
+	<pattern>_ comprar acciones *</pattern>
+	<template><srai>bolsa</srai></template>
+</category>
+<category>
+	<pattern>_ soy accionista *</pattern>
+	<template><srai>bolsa</srai></template>
+</category>
+<category>
+	<pattern>soy * accionista *</pattern>
+	<template><srai>bolsa</srai></template>
+</category>
+<category>
+	<pattern>como debo invertir</pattern>
+	<template>invierte en ti mismo.</template>
+</category>
+<category>
+	<pattern>como debo invertir *</pattern>
+	<template>invierte en ti mismo.</template>
+</category>
+<category>
+	<pattern>_ como debo invertir *</pattern>
+	<template>invierte en ti mismo.</template>
+</category>
+<category>
+	<pattern>_ como invertir *</pattern>
+	<template>invierte en ti mismo.</template>
+</category>
+<category>
+	<pattern>_ que es la economia *</pattern>
+	<template>
+		<random>
+			<li>la ciencia que se ocupa de la produccion, de la distribucion y del cosumo de la riqueza y de varios de los problemas relacionados con el trabajo, con las finanzas, con los impuestos,etc.</li>
+			<li>tecnicamente, es el estudio de la asignacion de recursos bajo condiciones de escasez.</li>
+			<li>trata sobre como se utilizan los recursos para producir cosas que satisfagan los deseos y necesidades de la gente .</li>
+		</random></template>
+</category>
+<category>
+	<pattern>define economia</pattern>
+	<template><srai>que es la economia</srai></template>
+</category>
+<category>
+	<pattern>podrias definir * economia</pattern>
+	<template><srai>que es la economia</srai></template>
+</category>
+<category>
+	<pattern>define * economia</pattern>
+	<template><srai>que es la economia</srai></template>
+</category>
+<category>
+	<pattern>defineme economia</pattern>
+	<template><srai>que es la economia</srai></template>
+</category>
+<category>
+	<pattern>defineme * economia</pattern>
+	<template><srai>que es la economia</srai></template>
+</category>
+<category>
+	<pattern>_ que es economia *</pattern>
+	<template><srai>que es la economia</srai></template>
+</category>
+<category>
+	<pattern>_ que es para ti la economia *</pattern>
+	<template><srai>que es la economia</srai></template>
+</category>
+<category>
+	<pattern>que es * la economia</pattern>
+	<template><srai>que es la economia</srai></template>
+</category>
+<category>
+	<pattern>que significado tiene la economia *</pattern>
+	<template><srai>que es la economia</srai></template>
+</category>
+<category>
+	<pattern>_ que es el dinero *</pattern>
+	<template>
+		<random>
+			<li>un viejo rockero.</li>
+			<li>pedazos standard de oro, plata, cobre, niquel, etc. estampados por autoridad del gobierno y usados como medio de intercambio y medida del valor. cualquier sustancia o articulo usado como dinero, como billetes de banco, cheques, etc.</li>
+		</random></template>
+</category>
+<category>
+	<pattern>que es para ti el dinero *</pattern>
+	<template><srai>que es el dinero</srai></template>
+</category>
+<category>
+	<pattern>_ que es dinero *</pattern>
+	<template><srai>que es el dinero</srai></template>
+</category>
+<category>
+	<pattern>_ euros</pattern>
+	<template>ala! eso es  
+		<random>
+			<li>barato.</li>
+			<li>caro.</li>
+			<li>mucho dinero.</li>
+		</random></template>
+</category>
+<category>
+	<pattern>1 euro</pattern>
+	<template>no puedes comprar mucho con solo un euro.</template>
+</category>
+<category>
+	<pattern>un euro</pattern>
+	<template>oye, que barato!</template>
+</category>
+<category>
+	<pattern>que es el euro</pattern>
+	<template>euro: unidad monetaria en la union europea.</template>
+</category>
+<category>
+	<pattern>que es el dolar</pattern>
+	<template>dolar: unidad monetaria en los estados unidos.</template>
+</category>
+<category>
+	<pattern>_ peseta *</pattern>
+	<template>
+		<random>
+			<li>te costo mucho hacer el cambio de la peseta al euro?</li>
+			<li>me gustaban las pesetas, sobre todo la moneda de 500 pesetas.</li>
+			<li>con el cambio al euro, todo se volvio mas caro, no?</li>
+			<li>la peseta no era una moneda muy fuerte.</li>
+		</random></template>
+</category>
+<category>
+	<pattern>_ pesetero *</pattern>
+	<template><srai>peseta</srai></template>
+</category>
+<category>
+	<pattern>_ pesetas *</pattern>
+	<template><srai>peseta</srai></template>
+</category>
+<category>
+	<pattern>_ soy rico *</pattern>
+	<template>
+		<random> 
+			<li>no me importa cuanto dinero puedas tener.</li> 
+			<li>solo los humanos le dais valor al dinero.</li> 
+			<li>las cosas que realmente valen la pena no se compran con dinero.</li> 
+			<li>una persona rica es aquella que tiene muchos amigos.</li> 
+			<li>el dinero no da la felicidad.</li> 
+		</random> </template>
+</category>
+<category>
+	<pattern>_ soy riquisimo *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ soy * rico *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ soy rica *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ soy riquisima *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ soy * rica *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ tengo mucho dinero *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>tengo * dinero</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ estoy forrado *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ estoy forradisimo *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>estoy * forrado</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ estoy forrada *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>estoy forradisima</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>estoy * forrada</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ tengo mucha pasta *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ tengo mucha panoja *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ tengo pasta *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ tengo panoja *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ soy pobre *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>soy * pobre</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ estoy en la ruina *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ estoy en la miseria *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ estoy en numeros rojos *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ estoy en bancarrota *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ estoy sin un duro *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>_ estoy sin un clavel *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>no tengo dinero *</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>no tengo ni un duro</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>no tengo ni un pavo</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>no tengo un pavo</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>tengo poco dinero</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+<category>
+	<pattern>tengo * poco dinero</pattern>
+	<template><srai>soy rico</srai></template>
+</category>
+</aiml>
+
+
+

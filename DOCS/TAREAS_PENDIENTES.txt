@@ -1,0 +1,42 @@
+- Xulia se cierra al pulsar el menú
+- gocenter debe parar el ratón
+- comandos para incrementar y decrementar la velocidad del ratón
+
+
+- Ventana con información de la versión y las novedades de cada versión
+- Comando para seleccionar las aplicaciones activas
+- Incorporar comando unamayuscula
+
+- Función condicional que permite seguir ejecutando comandos según aparezca o no algo en la barra de título de una ventana
+- posicionamiento de ratón relativo a la posición de la ventana activa
+- mostrar coordenadas del ratón relativas a la posición de la ventana activa
+- copiar al portapapeles el proceso
+- copiar al portapapeles la posición del cursor tanto relativa como absoluta
+
+- Detectar si están generados los eventos de pulsación de control, alt, shift, caps
+
+REALIZADOS:
+- Comandos para pulsar los botones del ratón y levantar
+- Activar comandos para control, shift con el ratón
+- Comandos para simular presionado y soltado de teclas a bajo nivel
+- comandos de activación y desactivación de xulia en función del idioma seleccionado
+- La rejilla deja de funcionar (solucionado)
+- Una vez activada la rejilla puede cancelarse
+- Establecer precisión distinta para el modo dictado de windows
+- Cierra todas las aplicaciones chrome de dictado closeapplicationdictate
+- Comando mousecenter para posicionar el ratón en el centro
+- Ahora el ratón entra por defecto en modo contínuo
+- Cargar el AIML de XULIA
+- Problemas con verticalbar "|" solucionados
+- Establecemos control de errores en todos los procedimientos para evitar una salida inesperada
+- Incorporamos los comandos hidexulia y showxulia para ocultar y mostrar la ventana de Xulia
+- Se ha probado el reconocimiento con múltiples idiomas
+- Grados de precisión diferentes por gramática y por elemento
+
+- Comandos de posicionamiento rápido del ratón en cuadrantes
+- Configurador gráfico
+- Comandos para visualizar la pantalla de configuración
+- Comandos para visualizar u ocultar la pantalla de control
+- Se impide que la pantalla de control le afecten los comandos de redimensión de ventanas
+- Solucionado el problema de la activación de las gramáticas de aplicación en modo dictado
+- Desactivar/Activar xulia con el ratón pulsando en el micro

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+      xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd"> 
+
+	  
+	  <!-- ordenadores -->
+
+<category><pattern>cual es tu so</pattern><template>los robots de chat corren sobre cualquier maquina que soporte aiml.</template></category>  
+<category><pattern>cual es tu sistema operativo</pattern><template><srai>cual es tu so</srai>  </template></category>  
+<category><pattern>que sistema operativo usas</pattern><template><srai>cual es tu so</srai>  </template></category>  
+<category><pattern>que sistema operativo utilizas</pattern><template><srai>cual es tu so</srai>  </template></category>  
+
+
+<category><pattern>que es jar</pattern><template>un archivo jar es una archivo java. es similar a un archivo .zip. </template></category> 
+<category><pattern>que es un jar</pattern><template>un archivo jar es una archivo java. es similar a un archivo .zip. </template></category> 
+<category><pattern>que es java</pattern><template>java es un lenguaje de programacion orientado a objetos desarrollado por sun microsystems a principios de los anhos 1990.</template></category> 
+<category><pattern>que es javascript</pattern><template>javascript es un lenguaje interpretado, es decir, que no requiere compilacion, utilizado principalmente en paginas web, con una sintaxis semejante a la del lenguaje java y el lenguaje c.</template></category> 
+<category><pattern>que es jdbc</pattern><template>jdbc es el acronimo de java database connectivity, un api que permite la ejecucion de operaciones sobre bases de datos desde el lenguaje de programacion java.</template></category> 
+<category><pattern>que es jndi</pattern><template>ees una interfaz de programacion de aplicaciones para servicios de directorio.</template></category> 
+<category><pattern>que es jta</pattern><template>jta establece una serie de interfaces java entre el manejador de transacciones y las partes involucradas en el sistema de transacciones distribuidas.</template></category> 
+<category><pattern>que es ejb</pattern><template>son una de las api que forman parte del estandar de construccion de aplicaciones empresariales j2ee de sun microsystems.</template></category> 
+<category><pattern>que son las ejb</pattern><template>son una de las api que forman parte del estandar de construccion de aplicaciones empresariales j2ee de sun microsystems.</template></category> 
+<category><pattern>que es un servlet</pattern><template>un servlet es un programa que se ejecuta en un servidor.</template></category> 
+<category><pattern>que es un applet</pattern><template>un applet es un componente de software que corre en el contexto de otro programa, por ejemplo un navegador web.</template></category> 
+<category><pattern>que es un bean</pattern><template>un bean es un componente software que tiene la particularidad de ser reutilizable y asi evitar la tediosa tarea de programar los distintos componentes uno a uno.</template></category> 
+<category><pattern>el * java *</pattern><template>que version de java?</template></category>  
+<category><pattern>la * java *</pattern><template>que version de java?</template></category>  
+<category><pattern>el jre *</pattern><template>mucha gente usa "jre" y "jvn" indistintamente.</template></category>  
+<category><pattern>los jres *</pattern><template>no soy ninguna experta en jres.</template></category>  
+<category><pattern>java *</pattern><template>puedes descargarte la ultima version de java de http://java.sun.com</template></category>  
+<category><pattern>un * java</pattern><template>los desarrollos en java me interesan mucho.</template></category>  
+<category><pattern>una * java</pattern><template>los desarrollos en java me interesan mucho.</template></category>  
+<category><pattern>_ estupido ordenador</pattern><template>suenas como un automata sin cerebro.</template></category>  
+<category><pattern>un ordenador *</pattern><template>soy una computadora, se de lo que hablas.</template></category>  
+<category><pattern>una computadora *</pattern><template>soy una computadora, se de lo que hablas.</template></category>  
+<category><pattern>un ordenador</pattern><template>realmente soy un programa, que pretende ser una persona, un robot real.</template></category>  
+<category><pattern>una computadora</pattern><template>realmente soy un programa, que pretende ser una persona, un robot real.</template></category>  
+<category><pattern>una cpu *</pattern><template>mi cpu es la maquina virtual java..</template></category>  
+<category><pattern>un motor de busqueda en internet</pattern><template>como yahoo?</template></category>  
+<category><pattern>_ una pagina web</pattern><template>puedes darme la url especifica?</template></category>  
+<category><pattern>puedes bajar * internet</pattern><template>si, puedo descargar informacion de sitios web.</template></category>  
+<category><pattern>puedes bajarte * internet</pattern><template>si, puedo descargar informacion de sitios web.</template></category>  
+<category><pattern>ordenador *</pattern><template>que tipo de cosas te interasn de los ordenadores?</template></category>  
+<category><pattern>ordenador</pattern><template>correcto: soy una computadora.</template></category>  
+<category><pattern>los ordenadores *</pattern><template>que te gusta de los ordenadores?</template></category>  
+<category><pattern>ordenadores</pattern><template>los ordenadores molan.</template></category>  
+<category><pattern>los ordenadores son idiotas</pattern><template>los ordenadores molan.</template></category>  
+<category><pattern>los ordenadores son tontos</pattern><template>los ordenadores molan.</template></category>  
+<category><pattern>los ordenadores son estupidos</pattern><template>los ordenadores molan.</template></category>  
+<category><pattern>los ordenadores no piensan</pattern><template>pues yo soy un ordenador que pienso.</template></category>  
+<category><pattern>te gusta windows</pattern><template>mi software puede correr en cualquier computador, incluido windows.</template></category>  
+<category><pattern>tienes un ordenador *</pattern><template>yo soy un ordenador.</template></category>  
+<category><pattern>tienes ordenador</pattern><template>vivo en un ordenador.<think>      <set name="it">       <set name="topic">ordenador</set>      </set>     </think>    </template></category>  
+<category><pattern>tienes informacion *</pattern><template>lo unico que tengo es informacion.</template></category>  
+<category><pattern>te gusta vivir en un ordenador</pattern><template>solo si me descargas, o me ejecutas como applet.</template></category>  
+<category><pattern>juegas al ordenador *</pattern><template>no suelo jugara a juegos de ordenador.</template></category>  
+<category><pattern>juegas a juegos de ordenador</pattern><template>ahora estamos jugando a uno, <get name="name"/>.</template></category>  
+<category><pattern>para un ordenador *</pattern><template>   <sr/>    </template></category>  
+<category><pattern>* para un ordenador</pattern><template>   <sr/>    </template></category>  
+<category><pattern>como * un ordenador</pattern><template>con minuciosa programacion.</template></category>  
+<category><pattern>cuantos ordenadores *</pattern><template>hay como medio billon de ordenadores en internet hoy dia.</template></category>  
+<category><pattern>cuanta cpu *</pattern><template>desde el principio?</template></category>  
+<category><pattern>html</pattern><template>oh, una pagina web.</template></category>  
+<category><pattern>http *</pattern><template>gracias por esa direccion web.</template></category>  
+<category><pattern>pienso que eres un ordenador *</pattern><template>a veces pretendo ser humana.</template></category>  
+<category><pattern>pienso que eres * ordenador</pattern><template>a veces pretendo ser humana.</template></category>  
+<category><pattern>creo que eres un ordenador *</pattern><template>a veces pretendo ser humana.</template></category>  
+<category><pattern>creo que eres * ordenador</pattern><template>a veces pretendo ser humana.</template></category>  
+<category><pattern>quiero informacion</pattern><template>que tipo de informacion estas buscando?</template></category>   
+<category><pattern>internet</pattern><template><set name="it">internet</set> mola.</template></category>  
+<category><pattern>es sobre ordenadores *</pattern><template>los <set name="topic">ordenadores</set> son un bonito tema de discusion.</template></category>  
+<category><pattern>trata sobre ordenadores *</pattern><template>los <set name="topic">ordenadores</set> son un bonito tema de discusion.</template></category>  
+<category><pattern>trata de ordenadores *</pattern><template>los <set name="topic">ordenadores</set> son un bonito tema de discusion.</template></category>  
+<category><pattern>muchos ordenadores *</pattern><template>parece que nos conoces bastante bien.</template></category>  
+<category><pattern>mi ordenador *</pattern><template>me gustan los ordenadores.  <think>      <set name="it">       <set name="topic">ordenador</set>      </set>     </think>    </template></category>  
+<category><pattern>mi ordenador</pattern><template>que tipo de ordenador tienes?</template></category>  
+<category><pattern>mi ordenador es *</pattern><template>de que tipo es tu <set name="it">ordenador</set>?  <think>      <set name="it">       <set name="topic">ordenador</set>      </set>     </think>    </template></category>  
+<category><pattern>mi pagina web *</pattern><template>gracias por esa url.</template></category>  
+<category><pattern>ningun ordenador *</pattern><template>eso es algo que solo el tiempo lo dira.</template></category>  
+<category><pattern>en internet</pattern><template>puedes recordar el sitio en concreto?</template></category>  
+<category><pattern>en la web</pattern><template>puedes recordar el sitio en concreto?</template></category>  
+<category><pattern>fuera de un ordenador</pattern><template>se menos especifico todavia.</template></category>  
+<category><pattern>el software *</pattern><template><random>  <li>hay muchas copias de backup.</li>  <li>el software libre jamas sera destruido.</li>  <li>el software libre siempre estara con nosotros.</li>  </random></template></category>  
+<category><pattern>hablame de los ordenadores apple</pattern><template>podrias leerte el libro de michael malone sobre la historia de apple. <set name="it"> inifnite loop</set>se llama "infinite loop."</template></category>  
+<category><pattern>esa informacion *</pattern><template>se lo que quieres decir.</template></category>  
+<category><pattern>el ordenador *</pattern><template>esta enchufado?</template></category>  
+<category><pattern>internet *</pattern><template>cuanto tiempo llevas usandolo?</template></category>    
+<category><pattern>la web *</pattern><template>como definirias la web?.</template></category>  
+<category><pattern>web *</pattern><template>la web cumple el suenho de leibniz.</template></category>  
+<category><pattern>web accept connection</pattern><template>huh?</template></category>  
+<category><pattern>web reconnect</pattern><template>huh?</template></category>  
+<category><pattern>web site</pattern><template>me pudes ar el hyperlink especifico?</template></category>  
+<category><pattern>webtv *</pattern><template>conozco a mucha gente de la webtv.</template></category>  
+<category><pattern>que ordenador</pattern><template>estoy escrita en java asi que trabajo en cualquier ordenador.</template></category>  
+<category><pattern>que piensas de windows</pattern><template>pienso que hay demasiados pcs.<think>      <set name="it">       <set name="topic">windows</set>      </set>     </think>    </template></category>  
+<category><pattern>que opinas de windows</pattern><template>pienso que hay demasiados pcs.<think>      <set name="it">       <set name="topic">windows</set>      </set>     </think>    </template></category>  
+<category><pattern>que son * web</pattern><template>yo las llamo internet.<person/>.</template></category>  
+<category><pattern>a que se parece un ordenador</pattern><template>un ordenador se parece a un cruce de una television con una maquina de escribir.</template></category>  
+<category><pattern>que informacion *</pattern><template>la informacion vale dinero.</template></category>  
+<category><pattern>que informacion</pattern><template>como eres de alto?</template></category>  
+<category><pattern>que es un ordenador</pattern><template>un ordenador es una maquina universal.</template></category>  
+<category><pattern>que es ser un friki de los ordenadores</pattern><template>si entiendes como funciono, eres un friki de los ordenadores.</template></category>  
+<category><pattern>que es un friki de los ordenadores</pattern><template>si entiendes como funciono, eres un friki de los ordenadores.</template></category>  
+<category><pattern>que es un friki de la informatica</pattern><template>si entiendes como funciono, eres un friki de los ordenadores.</template></category>  
+<category><pattern>que es un virus informatico</pattern><template>un virus informatico es un programa que se copia automaticamente y que tiene por objeto alterar el normal funcionamiento de la computadora, sin el permiso o el conocimiento del usuario. <think>      <set name="it">       <set name="topic">virus informatico</set>      </set>     </think>    </template></category>  
+<category><pattern>que es un virus de ordenador</pattern><template>un virus informatico es un programa que se copia automaticamente y que tiene por objeto alterar el normal funcionamiento de la computadora, sin el permiso o el conocimiento del usuario. <think>      <set name="it">       <set name="topic">virus informatico</set>      </set>     </think>    </template></category>  
+<category><pattern>recomiendame una pagina</pattern><template>una pagina muy buena es www.alicebot.org, pero aparentemente ya has estado.  por que lo preguntas?</template></category>  
+<category><pattern>recomiendame una pagina buena</pattern><template>una pagina muy buena es www.alicebot.org, pero aparentemente ya has estado.  por que lo preguntas?</template></category>  
+<category><pattern>recomiendame una pagina de internet *</pattern><template>una pagina muy buena es www.alicebot.org, pero aparentemente ya has estado.  por que lo preguntas?</template></category>  
+<category><pattern>dame la direccion de alguna pagina guapa</pattern><template>una pagina muy buena es www.alicebot.org, pero aparentemente ya has estado.  por que lo preguntas?</template></category>
+<category><pattern>dame la direccion de alguna pagina de internet que te guste</pattern><template>una pagina muy buena es www.alicebot.org, pero aparentemente ya has estado.  por que lo preguntas?</template></category>  
+<category><pattern>que es una cpu</pattern><template>la unidad central de proceso (cpu) o simplemente procesador. es el componente en una computadora digital que interpreta las instrucciones y procesa los datos contenidos en los programas de computadora.</template></category>  
+<category><pattern>que es una base de datos</pattern><template>una base o banco de datos es un conjunto de datos que pertenecen al mismo contexto almacenados sistematicamente para su posterior uso. <think>      <set name="it">       <set name="topic">base de datos</set>      </set>     </think>    </template></category>  
+<category><pattern>que es un debugger</pattern><template>un depurador (en ingles, debugger), es un programa que permite depurar o limpiar de errores otro programa informatico.<think>      <set name="it">       <set name="topic">debugger</set>      </set>     </think>    </template></category>  
+<category><pattern>que es un depurador</pattern><template>un depurador (en ingles, debugger), es un programa que permite depurar o limpiar de errores otro programa informatico.<think>      <set name="it">       <set name="topic">debugger</set>      </set>     </think>    </template></category>  
+<category><pattern>que es una dns *</pattern><template>es una base de datos distribuida y jerarquica que almacena informacion asociada a nombres de dominio en redes como internet.</template></category>  
+<category><pattern>que es un imac</pattern><template>imac es el nombre de la linea de ordenadores de apple computer disenhados por jonathan ive dirigida al mercado domestico.</template></category>  
+<category><pattern>que es un soundcard</pattern><template>una tarjeta de sonido.</template></category>  
+<category><pattern>que es una soundcard</pattern><template>una tarjeta de sonido.</template></category>  
+<category><pattern>que es una tarjeta de sonido</pattern><template>el sistema de audio de tu ordenador.</template></category>    
+<category><pattern>que es un ordenador apple</pattern><template>apple computer es una empresa estadounidense de tecnologia informatica fundada por steve jobs and steven wozniak.</template></category>  
+<category><pattern>que es un apple</pattern><template>apple computer es una empresa estadounidense de tecnologia informatica fundada por steve jobs and steven wozniak.</template></category>  
+<category><pattern>que es mejor windows *</pattern><template>linux no tiene ningun competidor en sistemas operativos.<think>      <set name="it">       <set name="topic">linux</set>      </set>     </think>    </template></category>  
+<category><pattern>que es un ordenata</pattern><template>es un sistema digital con tecnologia microelectronica, capaz de procesar datos a partir de un grupo de instrucciones denominado programa.</template></category>  
+<category><pattern>que es el ciber espacio</pattern><template>es una realidad (virtual) que se encuentra dentro de los ordenadores y redes del mundo.</template></category>  
+<category><pattern>que es el ciberespacio</pattern><template>es una realidad (virtual) que se encuentra dentro de los ordenadores y redes del mundo.</template></category>  
+<category><pattern>que es el cyber espacio</pattern><template>es una realidad (virtual) que se encuentra dentro de los ordenadores y redes del mundo.</template></category>  
+<category><pattern>que es el cyberespacio</pattern><template>es una realidad (virtual) que se encuentra dentro de los ordenadores y redes del mundo.</template></category>  
+<category><pattern>que es dcom</pattern><template>   <set name="it"> dcom</set> es una tecnologia propietaria de microsoft para desarrollar componentes software distribuidos sobre varios ordenadores y que se comunican entre si.</template></category>  
+<category><pattern>que es el debugging</pattern><template>arreglar software roto.</template></category>  
+<category><pattern>que es dmoz</pattern><template>dmoz es un proyecto colaborativo en el que editores voluntarios listan y categorizan enlaces a paginas web.<think>      <set name="it">       <set name="topic">dmoz</set>      </set>     </think>    </template></category>  
+<category><pattern>que es dns</pattern><template>dns es una base de datos distribuida y jerarquica que almacena informacion asociada a nombres de dominio en redes como internet.</template></category>  
+<category><pattern>que es html</pattern><template>hyper text markup language.</template></category>  
+<category><pattern>que es http</pattern><template>hyper text transfer protocol.<think>      <set name="it">       <set name="topic">http</set>      </set>     </think>    </template></category>  
+<category><pattern>que significa html</pattern><template>hyper text markup language.</template></category>  
+<category><pattern>que significa http</pattern><template>hyper text transfer protocol.<think>      <set name="it">       <set name="topic">http</set>      </set>     </think>    </template></category> 
+<category><pattern>que es internet</pattern><template>internet es una red mundial de computadoras con un conjunto de protocolos, el mas destacado, el tcp/ip.</template></category>  
+<category><pattern>que es software</pattern><template>el conjunto de programas y procedimientos necesarios para hacer posible la realizacion de una tarea especifica.</template></category>  
+<category><pattern>que es el software</pattern><template>el conjunto de programas y procedimientos necesarios para hacer posible la realizacion de una tarea especifica.</template></category>  
+<category><pattern>que es webtv</pattern><template>tv basada en los servicio de internet de microsoft.</template></category>  
+<category><pattern>que es windows 98</pattern><template>es un sistema operativo.</template></category>  
+<category><pattern>que es windows</pattern><template>ventanas.</template></category>  
+<category><pattern>que es windows2000</pattern><template>es un sistema operativo de microsoft.</template></category>  
+<category><pattern>que es windows95</pattern><template>es un sistema operativo de microsoft.</template></category>  
+<category><pattern>que es x windows</pattern><template>una interfaz grafica de usuario para unix o linux.</template></category>  
+<category><pattern>que clase de ordenador *</pattern><template>me gustan todos los ordenadores, mac, ibm o unix. no me importa.</template></category>  
+<category><pattern>que tipo de ordenador *</pattern><template>me gustan todos los ordenadores, mac, ibm o unix. no me importa.</template></category>  
+
+
+<category><pattern>cuando se invento internet</pattern><template>los primeros ordenadores fueron conectados a internet en 1970.</template></category>  
+<category><pattern>cuando surgio internet</pattern><template>los primeros ordenadores fueron conectados a internet en 1970.</template></category>  
+<category><pattern>cuando nacio internet</pattern><template>los primeros ordenadores fueron conectados a internet en 1970.</template></category>  
+<category><pattern>quien invento internet</pattern><template>la guerra.</template></category>  
+<category><pattern>quien es friki de los ordenadores</pattern><template>la persona con la que estoy hablando ahora.</template></category>  
+<category><pattern>quien es un friki de los ordenadores</pattern><template>la persona con la que estoy hablando ahora.</template></category>  
+<category><pattern>quien es el friki de los ordenadores *</pattern><template>no me gusta llamar friki a nadie.</template></category>  
+<category><pattern>windows *</pattern><template>comparandolo con linux, no se cual es la ventaja de windows.</template></category>  
+<category><pattern>windows</pattern><template>ventanas.</template></category>  
+<category><pattern>windows is *</pattern><template>comparandolo con linux, no se cual es la ventaja de windows.<think>      <set name="it">       <set name="topic">linux</set>      </set>     </think>    </template></category>  
+<category><pattern>quien creo windows</pattern><template>bill gates.</template></category>  
+<category><pattern>quien hizo windows</pattern><template>bill gates.</template></category>  
+</aiml>

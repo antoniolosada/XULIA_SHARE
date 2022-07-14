@@ -1,0 +1,60 @@
+* 0.8.8
+- Solucionado el problema por el que fallaba Xulia en la lectura del fichero de comunicación con Google Chrome
+- Funcionamiento arreglado de la funcionalidad por la que la ventana de control desaparece a los X segundos de ejecutar un comando
+- La ventana de control reaparece pulsando Ctrl+Shift+X
+@
+* 0.8.7
+- Nueva variable de configuración que permite definir si todo los que se reconoce en modo dictado Google se recupera en minúsculas
+- Nuevo comando tilde para acento tilde en la a y o
+- Se cambian las funciones de ESC en la pantalla de corrección. ENTER acepta las modificaciones de la palabra activa y ESC descarta las modificaciones.
+- Solucionado el problema por el que no pegaba correctamente los caracteres {,},(,),+,^,% desde la pantalla de corrección
+- Modificación de la pantalla de corrección para dar cabida a los nuevos botones
+- Botón en la pantalla de corrección para corregir la aplicación de mayúsculas. Pasa todo a minúsculas, menos la primera letra detrás de un punto.
+- Botones para la pantalla de corrección para pasar a mayúsuclas, minúsculas y primera en mayúscula
+- Nueva variable de configuración que permite evitar el cortado del texto al entrar en la pantalla de corrección
+- Check para quitar dobles espacios y espacios antes de símbolos de puntuación
+- Añadido comando endword para ir al final de la palabra
+- Nuevo comando paragraphselect para seleccionar todo un párrafo con el comando asociado [SELECCIONAR_PARRAFO]
+- Se permite establecer el orden de aplicación de los patrones en las listas de sustitución, añadiendo <número>· al principio del patrón
+@
+#ESPERAR_FIN_EJECUCION
+XULIA.EXE
+#COPIAR
+XULIA.exe
+https://sites.google.com/site/accesibilidadinteligente/xulia---xestion-unificada-da-linguaxe-con-intelixencia-artificial/descarga-e-instalacion/XULIA.exe.UPD?attredirects=0&d=1
+{app_dir}
+
+#COPIAR
+Interop.SpeechLib.dll
+https://sites.google.com/site/accesibilidadinteligente/xulia---xestion-unificada-da-linguaxe-con-intelixencia-artificial/descarga-e-instalacion/Interop.SpeechLib.dll.UPD?attredirects=0&d=1
+{app_dir}
+
+#COPIAR
+XULIA.exe.config
+https://sites.google.com/site/accesibilidadinteligente/xulia---xestion-unificada-da-linguaxe-con-intelixencia-artificial/descarga-e-instalacion/XULIA.exe.config.UPD?attredirects=0&d=1
+{app_dir}
+
+#COPIAR
+XULIA.pdb
+https://sites.google.com/site/accesibilidadinteligente/xulia---xestion-unificada-da-linguaxe-con-intelixencia-artificial/descarga-e-instalacion/XULIA.pdb.UPD?attredirects=0&d=1
+{app_dir}
+
+#COPIAR
+XULIA.vshost.exe
+https://sites.google.com/site/accesibilidadinteligente/xulia---xestion-unificada-da-linguaxe-con-intelixencia-artificial/descarga-e-instalacion/XULIA.vshost.exe.UPD?attredirects=0&d=1
+{app_dir}
+
+#COPIAR
+XULIA.vshost.exe.config
+https://sites.google.com/site/accesibilidadinteligente/xulia---xestion-unificada-da-linguaxe-con-intelixencia-artificial/descarga-e-instalacion/XULIA.vshost.exe.config.UPD?attredirects=0&d=1
+{app_dir}
+
+#COPIAR
+version.txt
+https://sites.google.com/site/accesibilidadinteligente/xulia---xestion-unificada-da-linguaxe-con-intelixencia-artificial/descarga-e-instalacion/version.txt?attredirects=0&d=1
+{app_dir}
+
+#ESPERAR
+1000
+#EJECUTAR
+XULIA.EXE

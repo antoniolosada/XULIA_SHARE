@@ -1,0 +1,4 @@
+- Desactivar acentos si no se ejecuta un comando de letra minúscula en dos operaciones
+- Permitir desplazar el ratón un número de milimetros
+- Visualizar ventana con forma de cursor en los movimientos de raton en los tablet. Debe configurarse
+- Permitir seleccionar las opciones de los menús por voz. Probar recuperando GetMenu de la ActiveWindows

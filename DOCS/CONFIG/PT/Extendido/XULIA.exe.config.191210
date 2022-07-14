@@ -1,0 +1,1720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="XULIA.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+      <section name="AIMLGUI.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+    </sectionGroup>
+    <!-- XULIA BOT -->
+    <section name="Numeros_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Alfabeto_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Raton_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Teclado_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Simbolos_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="TeclasFuncion_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Puntuacion_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Acentos_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="MovimientoTeclado_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Ventanas_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Comandos_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Multiplicadores_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Cancelar_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Word_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Chrome_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Ejecutar_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="TeclasAlfabeto_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="TeclasNumeros_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="SeleccionarVentanas_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="ComandosWindows8_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="TecladoAPI_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="RatonHead_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="NumerosExt_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="UnComando_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Portapapeles_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Correccion_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="eBuscarInformacion_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="CancelarConversacion_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="ComandosUWP_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="NumerosValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="AlfabetoValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="RatonValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="TecladoValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="SimbolosValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="TeclasFuncionValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="PuntuacionValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="AcentosValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="MovimientoTecladoValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="VentanasValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="ComandosValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="MultiplicadoresValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="CancelarValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="WordValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="ChromeValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="EjecutarValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="TeclasAlfabetoValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="TeclasNumerosValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="SeleccionarVentanasValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="ComandosWindows8Valores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="TecladoAPIValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="RatonHeadValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="NumerosExtValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="UnComandoValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="PortapapelesValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="CorreccionValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="eBuscarInformacionValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="CancelarConversacionValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="ComandosUWPValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="ComandosWindows8Ayuda_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="CancelarAyuda_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Directorio_PT" type="System.Configuration.DictionarySectionHandler" />
+    <!-- Secciones de substitución de dictado -->
+    <section name="DictadoPortugues" type="System.Configuration.DictionarySectionHandler" />
+    <section name="DictadoIngles" type="System.Configuration.DictionarySectionHandler" />
+    <section name="DictadoEspanol" type="System.Configuration.DictionarySectionHandler" />
+    <section name="CommandHelp" type="System.Configuration.DictionarySectionHandler" />
+    <section name="InfoSearch" type="System.Configuration.DictionarySectionHandler" />
+    <section name="Almacenamiento" type="System.Configuration.DictionarySectionHandler" />
+    <section name="RatonAV_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="ComandosWindows8AV_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="ComandosAV_PT" type="System.Configuration.DictionarySectionHandler" />
+    <section name="RatonAVValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="ComandosWindows8AVValores" type="System.Configuration.DictionarySectionHandler" />
+    <section name="ComandosAVValores" type="System.Configuration.DictionarySectionHandler" />
+  </configSections>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.1" />
+  </startup>
+  <userSettings>
+    <XULIA.Properties.Settings>
+      <setting name="nombre_formulario" serializeAs="String">
+        <value>XULIA - Xestión Unificada de Lenguaxe con Intelixencia Artificial</value>
+      </setting>
+    </XULIA.Properties.Settings>
+    <AIMLGUI.Properties.Settings>
+      <setting name="nombre_formulario" serializeAs="String">
+        <value>XULIA - Xestión Unificada de Lenguaxe con Intelixencia Artificial</value>
+      </setting>
+    </AIMLGUI.Properties.Settings>
+  </userSettings>
+  <appSettings>
+    <!-- Gramáticas aceptadas en cada uno de los estados -->
+    <add key="·COMANDO·_PT" value="ComandosWindows8,Raton,Teclado,TeclasNumeros,MovimientoTeclado,Ventanas,Comandos,Multiplicadores,Ejecutar,Puntuacion,Acentos,TeclasAlfabeto" />
+    <add key="·AVANZADO·_PT" value="SeleccionarVentanas,TecladoAPI,ComandosWindows8,Raton,Teclado,TeclasNumeros,MovimientoTeclado,Ventanas,Comandos,Multiplicadores,Ejecutar,Puntuacion,Acentos,Alfabeto,ComandosWindows8AV,RatonAV,ComandosAV,Simbolos,Cancelar,TeclasAlfabeto,TeclasFuncion,Portapapeles" />
+    <add key="·REJILLA·_PT" value="TeclasNumeros,Alfabeto,Cancelar" />
+    <add key="·CORRECCION_PT" value="Numeros,NumerosExt,Alfabeto,Simbolos,Acentos,Puntuacion,Teclado,MovimientoTeclado,Multiplicadores,Cancelar,Correccion" />
+    <add key="·CONVERSACION_PT" value="Cancelar,eBuscarInformacion" />
+    <add key="·DICTADO·PORTUGUES_PT" value="Cancelar,UnComando" />
+    <add key="$WINWORD_PT" value="Word" />
+    <add key="$chrome_PT" value="Chrome" />
+    <!-- Listas de sustituciones de dictado contínuo Google Chrome -->
+    <add key="·DICTADO·PORTUGUES·SUSTITUCIONES·" value="DictadoPortugues" />
+    <!-- Gramáticas que permiten mantener el modo selección, si se detecta otro elementos no contenido en estas gramáticas este modo se desactiva automáticamente -->
+    <add key="GramaticasSeleccionActiva" value="Comandos,Alfabeto,Simbolos,Acentos,Cancelar" />
+    <!-- IDIOMA *********************************************************************************************************************************************************-->
+    <!-- IDIOMA *********************************************************************************************************************************************************-->
+    <!-- Parámetros de aplicación -->
+    <!-- ES-Español, ESG-Español con comandos Google-->
+    <add key="IdiomaGramaticas" value="_PT" />
+    <!-- IDIOMA *********************************************************************************************************************************************************-->
+    <!-- IDIOMA *********************************************************************************************************************************************************-->
+    <!-- Parámetros de aplicación Portugues-->
+    <add key="Cultura_PT" value="pt-BR" />
+    <add key="ActivarSAPI4_PT" value="N" />
+    <add key="Precision_PT" value="30" />
+    <add key="IP_PT" value="127.0.0.1" />
+    <add key="Puerto_PT" value="10600" />
+    <add key="CargarGramaticasAplicacion_PT" value="S" />
+    <add key="TiempoDesargarGramaticasAplicacion_PT" value="0" />
+    <add key="ModoDefecto_PT" value="·COMANDO·" />
+    <add key="DesactivarSeleccionAutomaticamente_PT" value="N" />
+    <add key="MarcarSeleccionRejilla_PT" value="S" />
+    <add key="DesplazamientoVentanaEstado_PT" value="250" />
+    <add key="DescargarGramaticasCambioMODO_PT" value="N" />
+    <add key="DescargarGramaticasDictado_PT" value="S" />
+    <add key="PrecisionModoDictado_PT" value="20" />
+    <add key="DescargarRestoGramaticasDictado_PT" value="N" />
+    <add key="AltoBarraEstado_PT" value="41" />
+    <add key="ArchivoRecVoz_PT" value="C:\TMP\RECOVOZ.TXT" />
+    <add key="ArchivoComandos_PT" value="C:\TMP\COMANDOS.TXT" />
+    <add key="URLBaseIdioma_PT" value="http://localhost:8080/SERVER/voz.htm" />
+    <add key="MantenerPulsadoControl_PT" value="N" />
+    <add key="MantenerPulsadoAlternativo_PT" value="N" />
+    <add key="MantenerPulsadoSeleccion_PT" value="N" />
+    <add key="XuliaActivar_PT" value="ativar" />
+    <add key="XuliaDesactivar_PT" value="desativar" />
+    <add key="XuliaAtencion_PT" value="xulia" />
+    <add key="ComandosDesactivados_PT" value="xulia" />
+    <add key="MinutosResetControlVoz_PT" value="10" />
+    <add key="OcultarEstadoSegundos_PT" value="0" />
+    <add key="ArranqueTomcat_PT" value="{app}\t7\bin\ArrancarTomcat.bat" />
+    <add key="ArranqueTomcat_Unidad_PT" value="{unidad_app}" />
+    <add key="ArranqueTomcat_Parametro_PT" value="{app}\t7" />
+    <add key="TiempoArranqueTomcat_PT" value="5" />
+    <add key="TiempoEsperaArranqueChrome_PT" value="5" />
+    <add key="MinimizarChrome_PT" value="S" />
+    <add key="RatonContinuoInicial_PT" value="S" />
+    <add key="RutaCerebroXulia_PT" value="\\aiml\\Xulia" />
+    <add key="ArranqueXuliaVisible_PT" value="N" />
+    <add key="RatonSaltoVelocidad_PT" value="4" />
+    <add key="LecturaEspera_PT" value="20" />
+    <add key="LecturaIncremento_PT" value="2" />
+    <add key="OcultarBarraPrecision_PT" value="S" />
+    <!--<add key="Voz_PT" value="Microsoft Server Speech Text to Speech Voice (es-ES, Helena)"/>-->
+    <add key="Voz_PT" value="Microsoft Helena Desktop" />
+    <add key="ModoCorreccion_PT" value="·CORRECCION" />
+    <add key="DictadoGoogleSiempreMinusculas_PT" value="S" />
+    <add key="CortarTextoCorreccion_PT" value="N" />
+    <add key="ActivarBDCoreccion_PT" value="N" />
+    <add key="ProveedorBD_PT" value="Provider=Microsoft.Ace.OLEDB.12.0;" />
+    <add key="BDCoreccion_PT" value="D:\PROGRAMAS\DATOS\PROY\XULIA\Portugues.accdb" />
+    <add key="GrabarCoreccion_PT" value="S" />
+    <add key="MostrarGloboComandos_PT" value="N" />
+    <add key="MostrarGloboModos_PT" value="N" />
+    <add key="ModoGloboBasico_PT" value="N" />
+    <add key="ActualizarConfiguracion_PT" value="S" />
+    <add key="TipoFicheroConfiguracion_PT" value="0" />
+    <add key="ModoComandoGoogle_PT" value="N" />
+    <add key="IdiomaComandoGoogle_PT" value="PORTUGUES" />
+    <add key="CodigoIdiomaComandoGoogle_PT" value="pt-BR" />
+    <add key="EsperaArranqueTomcatModoComandoGoogle_PT" value="10" />
+    <add key="ActivarAvatar_PT" value="N" />
+    <add key="MaximizarAvatar_PT" value="N" />
+    <add key="ArranqueDesactivado_PT" value="N" />
+    <add key="DictadoSAPI5_PT" value="N" />
+    <add key="AutoDesactivar_PT" value="N" />
+    <add key="ServidorSMTP_PT" value="smtp.gmail.com" />
+    <add key="UsuarioSMTP_PT" value="antonio.losada@gmail.com" />
+    <add key="ClaveSMTP_PT" value="Loguito1060." />
+    <add key="OrigenSMTP_PT" value="antonio.losada@gmail.com" />
+  </appSettings>
+  <Almacenamiento>
+    <add key="proyectos" value="E:\GOOGLEDRIVE\TONI\PROY" />
+  </Almacenamiento>
+  <eBuscarInformacion_PT>
+    <add key="SeccionValores" value="eBuscarInformacionValores" />
+    <add key="GramaticaExtendida" value="S" />
+    <add key="buscar_internet" value="buscar *" />
+    <add key="que_es" value="qué es *" />
+    <add key="que_es1" value="que es *" />
+    <add key="quien_es" value="quién es *" />
+    <add key="quien_es1" value="quien es *" />
+    <add key="quien_es2" value="buscapersonas *" />
+    <add key="definicion" value="definición *" />
+    <add key="que_tiempo_hace_en" value="qué tiempo hace en *" />
+    <add key="que_tiempo_hace_en1" value="que tiempo hace en *" />
+    <add key="recuerda_para" value="recuerda para * que *" />
+    <add key="buscar_recuerdo" value="que tenias que recordar para *" />
+    <add key="envia_app_activa_correo" value="enviar copia aplicación activa para *" />
+    <add key="envia_pantalla_correo" value="enviar copia pantalla para *" />
+    <add key="envia_correo" value="enviar correo para *" />
+    <add key="envia_correo_asunto" value="correo para * con asunto *" />
+    <add key="envia_correo_asunto_texto" value="correo para * con asunto * y contenido *" />
+  </eBuscarInformacion_PT>
+  <eBuscarInformacionValores>
+    <add key="buscar_internet" value="[BUSCAR_INTERNET]*1" />
+    <add key="GramaticaExtendida" value="S" />
+    <add key="que_es" value="[QUE_ES]*1" />
+    <add key="que_es1" value="[QUE_ES]*1" />
+    <add key="definicion" value="[QUE_ES]*1" />
+    <add key="quien_es" value="[QUIEN_ES]*1" />
+    <add key="quien_es1" value="[QUIEN_ES]*1" />
+    <add key="quien_es2" value="[QUIEN_ES]*1" />
+    <add key="que_tiempo_hace_en" value="[TIEMPO_EN]*1" />
+    <add key="que_tiempo_hace_en1" value="[TIEMPO_EN]*1" />
+    <add key="recuerda_para" value="[RECUERDA_PARA]*1,*2" />
+    <add key="buscar_recuerdo" value="[VER_RECUERDO]*1" />
+    <add key="me_llamo" value="me llamo" />
+    <add key="como_me_llamo" value="[RESPUESTAS]como,me llamo,te llamas,*1" />
+    <add key="envia_app_activa_correo" value="[CORREO_APP_ACTIVA]*1" />
+    <add key="envia_pantalla_correo" value="[CORREO_PANTALLA]*1" />
+    <add key="envia_correo" value="[CORREO]*1" />
+    <add key="envia_correo_asunto" value="[CORREO_ASUNTO]*1,*2" />
+    <add key="envia_correo_asunto_texto" value="[CORREO_MENSAJE]*1,*2,*3" />
+  </eBuscarInformacionValores>
+  <!--add key="que_es" value="[QUE_ES]*1|[ESPERA]10000|{ESC}|^a|{ESC}|^a|[ESPERA]500|^c|[ESPERA]1000|{ESC}|[RESPUESTA_QUE_ES]"/-->
+  <!-- *************************************************************************************************************************************-->
+  <Correccion_PT>
+    <add key="SeccionValores" value="CorreccionValores" />
+    <add key="dictadoportugués" value="ditadoportuguês" />
+    <add key="grabarfrase" value="salvarcorreção" />
+    <add key="grabarpalabra" value="salvarpalavra" />
+    <add key="cancelarcorrección" value="cancelarcorreção" />
+    <add key="limpiarcorrección" value="limparpalavra" />
+  </Correccion_PT>
+  <!-- *************************************************************************************************************************************-->
+  <CorreccionValores>
+    <add key="dictadoportugués" value="·DICTADO·PORTUGUES" />
+    <add key="grabarfrase" value="%f" />
+    <add key="grabarpalabra" value="%p" />
+    <add key="cancelarcorrección" value="%c" />
+    <add key="limpiarcorrección" value="%l" />
+  </CorreccionValores>
+  <!-- *************************************************************************************************************************************-->
+  <Cancelar_PT>
+    <add key="SeccionValores" value="CancelarValores" />
+    <add key="CANCELAR" value="cancelar" />
+    <add key="VOLVER" value="voltar modo" />
+  </Cancelar_PT>
+  <CancelarValores>
+    <add key="CANCELAR" value="[CANCELAR]" />
+    <add key="VOLVER" value="[VOLVER]" />
+  </CancelarValores>
+  <!-- *************************************************************************************************************************************-->
+  <CancelarConversacion_PT>
+    <add key="SeccionValores" value="CancelarConversacionValores" />
+    <add key="SeccionAyuda" value="CancelarConversacion_PT" />
+    <add key="CANCELAR" value="sairdomododeconversa" />
+  </CancelarConversacion_PT>
+  <CancelarConversacionValores>
+    <add key="CANCELAR" value="[CANCELAR]" />
+  </CancelarConversacionValores>
+  <!-- *************************************************************************************************************************************-->
+  <TecladoAPI_PT>
+    <add key="SeccionValores" value="TecladoAPIValores" />
+    <add key="pulsarcontrol" value="pressionarcontrol" />
+    <add key="pulsarmenu" value="pressionarmenu" />
+    <add key="pulsarseleccion" value="pressionarshift" />
+    <add key="levantarcontrol" value="liberarcontrol" />
+    <add key="levantarmenu" value="liberarmenu" />
+    <add key="levantarseleccion" value="liberarshift" />
+  </TecladoAPI_PT>
+  <TecladoAPIValores>
+    <add key="pulsarcontrol" value="[VK_LCONTROL_PRESS]" />
+    <add key="pulsarmenu" value="[VK_LMENU_PRESS]" />
+    <add key="pulsarseleccion" value="[VK_LSHIFT_PRESS]" />
+    <add key="levantarcontrol" value="[VK_LCONTROL_RELEASE]" />
+    <add key="levantarmenu" value="[VK_LMENU_RELEASE]" />
+    <add key="levantarseleccion" value="[VK_LSHIFT_RELEASE]" />
+  </TecladoAPIValores>
+  <!-- *************************************************************************************************************************************-->
+  <NumerosExt_PT>
+    <add key="SeccionValores" value="NumerosExtValores" />
+    <add key="0" value="númerozero" />
+    <add key="1" value="númeroum" />
+    <add key="2" value="númerodois" />
+    <add key="3" value="númerotrês" />
+    <add key="4" value="númeroquatro" />
+    <add key="5" value="númerocinco" />
+    <add key="6" value="númeroseis" />
+    <add key="7" value="númerosete" />
+    <add key="8" value="númerooito" />
+    <add key="9" value="númeronove" />
+    <add key="10" value="númerodez" />
+    <add key="11" value="númeroonze" />
+    <add key="12" value="númerodoze" />
+    <add key="13" value="númerotreze" />
+    <add key="14" value="númeroquatorze" />
+    <add key="15" value="númeroquinze" />
+    <add key="16" value="númerodezesseis" />
+    <add key="17" value="númerodezessete" />
+    <add key="18" value="númerodezoito" />
+    <add key="19" value="númerodezenove" />
+    <add key="20" value="númerovinte" />
+    <add key="21" value="númerovinteeum" />
+    <add key="22" value="númerovinteedois" />
+    <add key="23" value="númerovinteetrês" />
+    <add key="24" value="númerovinteequatro" />
+    <add key="25" value="númerovinteecinco" />
+    <add key="26" value="númerovinteeseis" />
+    <add key="27" value="númerovinteesete" />
+    <add key="28" value="númerovinteeoito" />
+    <add key="29" value="númerovinteenove" />
+    <add key="30" value="númerotrinta" />
+    <add key="31" value="númerotrintaeum" />
+    <add key="32" value="númerotrintaedois" />
+    <add key="33" value="númerotrintaetrês" />
+    <add key="34" value="númerotrintaequatro" />
+    <add key="35" value="númerotrintaecinco" />
+    <add key="36" value="númerotrintaeseis" />
+    <add key="37" value="númerotrintaesete" />
+    <add key="38" value="númerotrintaeoito" />
+    <add key="39" value="númerotrintaenove" />
+    <add key="40" value="númeroquarenta" />
+    <add key="41" value="númeroquarentaeum" />
+    <add key="42" value="númeroquarentaedois" />
+    <add key="43" value="númeroquarentaetrês" />
+    <add key="44" value="númeroquarentaequatro" />
+    <add key="45" value="númeroquarentaecinco" />
+    <add key="46" value="númeroquarentaeseis" />
+    <add key="47" value="númeroquarentaesete" />
+    <add key="48" value="númeroquarentaeoito" />
+    <add key="49" value="númeroquarentaenove" />
+    <add key="50" value="númerocinquenta" />
+  </NumerosExt_PT>
+  <NumerosExtValores>
+    <add key="0" value="00" />
+    <add key="1" value="01" />
+    <add key="2" value="02" />
+    <add key="3" value="03" />
+    <add key="4" value="04" />
+    <add key="5" value="05" />
+    <add key="6" value="06" />
+    <add key="7" value="07" />
+    <add key="8" value="08" />
+    <add key="9" value="09" />
+    <add key="10" value="10" />
+    <add key="11" value="11" />
+    <add key="12" value="12" />
+    <add key="13" value="13" />
+    <add key="14" value="14" />
+    <add key="15" value="15" />
+    <add key="16" value="16" />
+    <add key="17" value="17" />
+    <add key="18" value="18" />
+    <add key="19" value="19" />
+    <add key="20" value="20" />
+    <add key="21" value="21" />
+    <add key="22" value="22" />
+    <add key="23" value="23" />
+    <add key="24" value="24" />
+    <add key="25" value="25" />
+    <add key="26" value="26" />
+    <add key="27" value="27" />
+    <add key="28" value="28" />
+    <add key="29" value="29" />
+    <add key="30" value="30" />
+    <add key="31" value="31" />
+    <add key="32" value="32" />
+    <add key="33" value="33" />
+    <add key="34" value="34" />
+    <add key="35" value="35" />
+    <add key="36" value="36" />
+    <add key="37" value="37" />
+    <add key="38" value="38" />
+    <add key="39" value="39" />
+    <add key="40" value="40" />
+    <add key="41" value="41" />
+    <add key="42" value="42" />
+    <add key="43" value="43" />
+    <add key="44" value="44" />
+    <add key="45" value="45" />
+    <add key="46" value="46" />
+    <add key="47" value="47" />
+    <add key="48" value="48" />
+    <add key="49" value="49" />
+    <add key="50" value="50" />
+  </NumerosExtValores>
+  <!-- *************************************************************************************************************************************-->
+  <Numeros_PT>
+    <add key="SeccionValores" value="NumerosValores" />
+    <add key="0_1" value="zero" />
+    <add key="1_1" value="um" />
+    <add key="2_1" value="dois" />
+    <add key="3_1" value="três" />
+    <add key="4_1" value="quatro" />
+    <add key="5_1" value="cinco" />
+    <add key="6_1" value="seis" />
+    <add key="7_1" value="sete" />
+    <add key="8_1" value="oito" />
+    <add key="9_1" value="nove" />
+    <add key="10_1" value="dez" />
+  </Numeros_PT>
+  <NumerosValores>
+    <add key="SeccionValores" value="NumerosValores" />
+    <add key="0_1" value="0" />
+    <add key="1_1" value="1" />
+    <add key="2_1" value="2" />
+    <add key="3_1" value="3" />
+    <add key="4_1" value="4" />
+    <add key="5_1" value="5" />
+    <add key="6_1" value="6" />
+    <add key="7_1" value="7" />
+    <add key="8_1" value="8" />
+    <add key="9_1" value="9" />
+    <add key="10_1" value="10" />
+  </NumerosValores>
+  <!-- *************************************************************************************************************************************-->
+  <Alfabeto_PT>
+    <add key="SeccionValores" value="AlfabetoValores" />
+    <add key="a" value="alfa" />
+    <add key="b" value="bravo" />
+    <add key="c" value="claro" />
+    <add key="d" value="delta" />
+    <add key="e" value="eco" />
+    <add key="f" value="faca" />
+    <add key="g" value="golfe" />
+    <add key="h" value="hotel" />
+    <add key="i" value="india" />
+    <add key="j" value="julieta" />
+    <add key="k" value="kilo" />
+    <add key="l" value="lima" />
+    <add key="m" value="mata" />
+    <add key="n" value="novembro" />
+    <add key="o" value="oscar" />
+    <add key="p" value="papa" />
+    <add key="q" value="quebeque" />
+    <add key="r" value="romeu" />
+    <add key="s" value="serra" />
+    <add key="t" value="tango" />
+    <add key="u" value="uniforme" />
+    <add key="v" value="vitor" />
+    <add key="w" value="wisky" />
+    <add key="x" value="xadrez" />
+    <add key="y" value="yankee" />
+    <add key="z" value="zulu" />
+  </Alfabeto_PT>
+  <AlfabetoValores>
+    <add key="a" value="a" />
+    <add key="b" value="b" />
+    <add key="c" value="c" />
+    <add key="d" value="d" />
+    <add key="e" value="e" />
+    <add key="f" value="f" />
+    <add key="g" value="g" />
+    <add key="h" value="h" />
+    <add key="i" value="i" />
+    <add key="j" value="j" />
+    <add key="k" value="k" />
+    <add key="l" value="l" />
+    <add key="m" value="m" />
+    <add key="n" value="n" />
+    <add key="o" value="o" />
+    <add key="p" value="p" />
+    <add key="q" value="q" />
+    <add key="r" value="r" />
+    <add key="s" value="s" />
+    <add key="t" value="t" />
+    <add key="u" value="u" />
+    <add key="v" value="v" />
+    <add key="w" value="w" />
+    <add key="x" value="x" />
+    <add key="y" value="y" />
+    <add key="z" value="z" />
+  </AlfabetoValores>
+  <!-- *************************************************************************************************************************************-->
+  <TeclasAlfabeto_PT>
+    <add key="SeccionValores" value="TeclasAlfabetoValores" />
+    <add key="a" value="teclaalfa" />
+    <add key="b" value="teclabravo" />
+    <add key="c" value="teclaclaro" />
+    <add key="d" value="tecladelta" />
+    <add key="e" value="teclaeco" />
+    <add key="f" value="teclafaca" />
+    <add key="g" value="teclagolfe" />
+    <add key="h" value="teclahotel" />
+    <add key="i" value="teclaindia" />
+    <add key="j" value="teclajulieta" />
+    <add key="k" value="teclakilo" />
+    <add key="l" value="teclalima" />
+    <add key="m" value="teclamata" />
+    <add key="n" value="teclanovembro" />
+    <add key="o" value="teclaoscar" />
+    <add key="p" value="teclapapa" />
+    <add key="q" value="teclaquebeque" />
+    <add key="r" value="teclaromeu" />
+    <add key="s" value="teclaserra" />
+    <add key="t" value="teclatango" />
+    <add key="u" value="teclauniforme" />
+    <add key="v" value="teclavitor" />
+    <add key="w" value="teclawisky" />
+    <add key="x" value="teclaxadrez" />
+    <add key="y" value="teclayankee" />
+    <add key="z" value="teclazulu" />
+    <add key="espacio" value="teclaespaço" />
+    <add key="cerilla" value="teclacedilha" />
+  </TeclasAlfabeto_PT>
+  <TeclasAlfabetoValores>
+    <add key="a" value="a" />
+    <add key="b" value="b" />
+    <add key="c" value="c" />
+    <add key="d" value="d" />
+    <add key="e" value="e" />
+    <add key="f" value="f" />
+    <add key="g" value="g" />
+    <add key="h" value="h" />
+    <add key="i" value="i" />
+    <add key="j" value="j" />
+    <add key="k" value="k" />
+    <add key="l" value="l" />
+    <add key="m" value="m" />
+    <add key="n" value="n" />
+    <add key="o" value="o" />
+    <add key="p" value="p" />
+    <add key="q" value="q" />
+    <add key="r" value="r" />
+    <add key="s" value="s" />
+    <add key="t" value="t" />
+    <add key="u" value="u" />
+    <add key="v" value="v" />
+    <add key="w" value="w" />
+    <add key="x" value="x" />
+    <add key="y" value="y" />
+    <add key="z" value="z" />
+    <add key="espacio" value=" " />
+    <add key="cerilla" value="ç" />
+  </TeclasAlfabetoValores>
+  <!-- *************************************************************************************************************************************-->
+  <TeclasNumeros_PT>
+    <add key="SeccionValores" value="TeclasNumerosValores" />
+    <add key="0" value="númerozero" />
+    <add key="1" value="númeroum" />
+    <add key="2" value="númerodois" />
+    <add key="3" value="númerotrês" />
+    <add key="4" value="númeroquatro" />
+    <add key="5" value="númerocinco" />
+    <add key="6" value="númeroseis" />
+    <add key="7" value="númerosete" />
+    <add key="8" value="númerooito" />
+    <add key="9" value="númeronove" />
+    <add key="10" value="númerodez" />
+    <add key="11" value="númeroonze" />
+    <add key="12" value="númerodoze" />
+    <add key="13" value="númerotreze" />
+    <add key="14" value="númeroquatorze" />
+    <add key="15" value="númeroquinze" />
+    <add key="16" value="númerodezesseis" />
+    <add key="17" value="númerodezessete" />
+    <add key="18" value="númerodezoito" />
+    <add key="19" value="númerodezenove" />
+    <add key="20" value="númerovinte" />
+  </TeclasNumeros_PT>
+  <TeclasNumerosValores>
+    <add key="0" value="0" />
+    <add key="1" value="1" />
+    <add key="2" value="2" />
+    <add key="3" value="3" />
+    <add key="4" value="4" />
+    <add key="5" value="5" />
+    <add key="6" value="6" />
+    <add key="7" value="7" />
+    <add key="8" value="8" />
+    <add key="9" value="9" />
+    <add key="10" value="10" />
+    <add key="11" value="11" />
+    <add key="12" value="12" />
+    <add key="13" value="13" />
+    <add key="14" value="14" />
+    <add key="15" value="15" />
+    <add key="16" value="16" />
+    <add key="17" value="17" />
+    <add key="18" value="18" />
+    <add key="19" value="19" />
+    <add key="20" value="20" />
+  </TeclasNumerosValores>
+  <!-- *************************************************************************************************************************************-->
+  <Raton_PT>
+    <add key="SeccionValores" value="RatonValores" />
+    <add key="parar" value="parar" />
+    <add key="dobleclic" value="cliqueduplo" />
+    <add key="clicderecho" value="cliquedireito" />
+    <add key="clic" value="clique" />
+    <add key="seleccionarclic" value="selecionarclique" />
+    <add key="controlclic" value="controlclique" />
+    <add key="pulsar" value="arrastar" />
+    <add key="levantar" value="soltar" />
+    <add key="ratonarriba" value="moverparacima" />
+    <add key="ratonabajo" value="moverparabaixo" />
+    <add key="ratonderecha" value="moverparadireita" />
+    <add key="ratonizquierda" value="moverparaesquerda" />
+    <add key="ratonuno" value="velocidadeum" />
+    <add key="ratondos" value="velocidadedois" />
+    <add key="ratontres" value="velocidadetrês" />
+    <add key="ratoncuatro" value="velocidadequatro" />
+    <add key="ratoncinco" value="velocidadecinco" />
+    <add key="ratonseis" value="velocidadeseis" />
+    <add key="ratoncentrado" value="moverparaocentro" />
+    <add key="ratonrapido" value="maisrápido" />
+    <add key="ratonlento" value="maislento" />
+  </Raton_PT>
+  <RatonValores>
+    <add key="parar" value="[PARAR_RATON]|[RATON_VELOCIDAD]1" />
+    <add key="dobleclic" value="[PARAR_RATON]|[RATON_DBL_CLIC]" />
+    <add key="clicderecho" value="[PARAR_RATON]|[RATON_CLIC_DER]" />
+    <add key="clic" value="[PARAR_RATON]|[RATON_CLIC]" />
+    <add key="seleccionarclic" value="[PARAR_RATON]|[VK_SHIFT_PRESS]|[RATON_CLIC]|[VK_SHIFT_RELEASE]" />
+    <add key="controlclic" value="[PARAR_RATON]|[VK_LCONTROL_PRESS]|[RATON_CLIC]|[VK_LCONTROL_RELEASE]" />
+    <add key="pulsar" value="[PARAR_RATON]|[RATON_PULSAR_IZQ]" />
+    <add key="levantar" value="[PARAR_RATON]|[RATON_LEVANTAR_IZQ]" />
+    <add key="ratonarriba" value="[RATON_ARRIBA]" />
+    <add key="ratonabajo" value="[RATON_ABAJO]" />
+    <add key="ratonderecha" value="[RATON_DERECHA]" />
+    <add key="ratonizquierda" value="[RATON_IZQUIERDA]" />
+    <add key="ratonuno" value="[RATON_VELOCIDAD]1" />
+    <add key="ratondos" value="[RATON_VELOCIDAD]6" />
+    <add key="ratontres" value="[RATON_VELOCIDAD]12" />
+    <add key="ratoncuatro" value="[RATON_VELOCIDAD]24" />
+    <add key="ratoncinco" value="[RATON_VELOCIDAD]48" />
+    <add key="ratonseis" value="[RATON_VELOCIDAD]128" />
+    <add key="ratoncentrado" value="[PARAR_RATON]|[RATON_CENTRADO]" />
+    <add key="ratonrapido" value="[RATON_RAPIDO]" />
+    <add key="ratonlento" value="[RATON_DESPACIO]" />
+  </RatonValores>
+  <!-- *************************************************************************************************************************************-->
+  <RatonAV_PT>
+    <add key="SeccionValores" value="RatonAVValores" />
+    <add key="ratoncontinuo" value="cursorcontínuo" />
+    <add key="ratondiscreto" value="cursordiscreto" />
+    <add key="cliccentro" value="cliquecentro" />
+    <add key="pulsarcentro" value="teclarcentro" />
+    <add key="levantarcentro" value="soltarcentro" />
+    <add key="ratondiagonal1" value="cursordiagonalum" />
+    <add key="ratondiagonal2" value="cursordiagonaldois" />
+    <add key="ratondiagonal3" value="cursordiagonaltrês" />
+    <add key="ratondiagonal4" value="cursordiagonalquatro" />
+    <add key="ratoncuadrante1" value="cursorquadranteum" />
+    <add key="ratoncuadrante2" value="cursorquadrantedois" />
+    <add key="ratoncuadrante3" value="cursorquadrantetrês" />
+    <add key="ratoncuadrante4" value="cursorquadrantequatro" />
+    <add key="ratoncuadrante5" value="cursorquadrantecinco" />
+    <add key="ratoncuadrante6" value="cursorquadranteseis" />
+  </RatonAV_PT>
+  <RatonAVValores>
+    <add key="ratonmostrar" value="[RATON_MOSTRAR]" />
+    <add key="ratoncontinuo" value="[RATON_CONTINUO]" />
+    <add key="ratondiscreto" value="[RATON_DISCRETO]" />
+    <add key="cliccentro" value="[PARAR_RATON]|[RATON_CLIC_CENTRO]" />
+    <add key="pulsarcentro" value="[PARAR_RATON]|[RATON_PULSAR_CENTRO]" />
+    <add key="levantarcentro" value="[PARAR_RATON]|[RATON_LEVANTAR_CENTRO]" />
+    <add key="ratondiagonal1" value="[RATON_DIAGONAL_1]" />
+    <add key="ratondiagonal2" value="[RATON_DIAGONAL_2]" />
+    <add key="ratondiagonal3" value="[RATON_DIAGONAL_3]" />
+    <add key="ratondiagonal4" value="[RATON_DIAGONAL_4]" />
+    <add key="ratoncuadrante1" value="[RATON_CUADRANTE]3,2,1" />
+    <add key="ratoncuadrante2" value="[RATON_CUADRANTE]3,2,2" />
+    <add key="ratoncuadrante3" value="[RATON_CUADRANTE]3,2,3" />
+    <add key="ratoncuadrante4" value="[RATON_CUADRANTE]3,2,4" />
+    <add key="ratoncuadrante5" value="[RATON_CUADRANTE]3,2,5" />
+    <add key="ratoncuadrante6" value="[RATON_CUADRANTE]3,2,6" />
+  </RatonAVValores>
+  <!-- *************************************************************************************************************************************-->
+  <Teclado_PT>
+    <add key="SeccionValores" value="TecladoValores" />
+    <add key="siguientepágina" value="páginaseguinte" />
+    <add key="anteriorpágina" value="páginaanterior" />
+    <add key="siguientepalabra" value="palavraseguinte" />
+    <add key="anteriorpalabra" value="palavraanterior" />
+    <add key="finpalabra" value="fimpalavra" />
+    <add key="seleccionar" value="selecionar" />
+    <add key="finselección" value="pararseleção" />
+    <add key="borrar" value="apagar" />
+    <add key="suprimir" value="deletar" />
+    <add key="borrarpalabra" value="apagarpalavra" />
+    <add key="borrarsiguientepalabra" value="deletarpalavra" />
+    <add key="borrarlinea" value="apagarlinha" />
+    <add key="enter" value="entrar" />
+    <add key="siguienteaplicacion" value="aplicaçãoseguinte" />
+    <add key="anterioraplicacion" value="aplicaçãoanterior" />
+    <add key="siguientecampo" value="camposeguinte" />
+    <add key="tabulador" value="tabulador" />
+    <add key="anteriorcampo" value="campoanterior" />
+    <add key="inicio" value="início" />
+    <add key="fin" value="final" />
+    <add key="primerapágina" value="primeirapágina" />
+    <add key="últimapágina" value="últimapágina" />
+    <add key="mayúsculas" value="maiúsculas" />
+    <add key="finmayúsculas" value="pararmaiúsculas" />
+    <add key="unamayúscula" value="umamaiúscula" />
+    <add key="control" value="control" />
+    <add key="alternativo" value="alternativo" />
+    <add key="escape" value="escape" />
+    <add key="seleccionarlinea" value="selecionarlinha" />
+    <add key="seleccionarfrase" value="selecionarfrase" />
+    <add key="seleccionarparrafo" value="selecionarparágrafo" />
+    <add key="siguientesolapa" value="abaseguinte" />
+    <add key="anteriorsolapa" value="abaanterior" />
+  </Teclado_PT>
+  <TecladoValores>
+    <add key="siguientepágina" value="{PGDN}" />
+    <add key="avanzar" value="{PGDN}" />
+    <add key="anteriorpágina" value="{PGUP}" />
+    <add key="retroceder" value="{PGUP}" />
+    <add key="siguientepalabra" value="^{RIGHT}" />
+    <add key="siguiente" value="^{RIGHT}" />
+    <add key="anteriorpalabra" value="^{LEFT}" />
+    <add key="finpalabra" value="^{RIGHT}{LEFT}" />
+    <add key="anterior" value="^{LEFT}" />
+    <add key="seleccionar" value="[SELECCIONAR]" />
+    <add key="finselección" value="[FIN_SELECCION]" />
+    <add key="borrar" value="{BACKSPACE}" />
+    <add key="suprimir" value="{DEL}" />
+    <add key="borrarpalabra" value="^(+{LEFT}){DEL}" />
+    <add key="borrarsiguientepalabra" value="^(+{RIGHT}){DEL}" />
+    <add key="borrarlinea" value="{HOME}+{END}{DEL}" />
+    <add key="enter" value="{ENTER}" />
+    <add key="siguienteaplicacion" value="{TAB}" />
+    <add key="anterioraplicacion" value="+{TAB}" />
+    <add key="siguientecampo" value="{TAB}" />
+    <add key="tabulador" value="{TAB}" />
+    <add key="anteriorcampo" value="+{TAB}" />
+    <add key="inicio" value="{HOME}" />
+    <add key="fin" value="{END}" />
+    <add key="primerapágina" value="^{HOME}" />
+    <add key="últimapágina" value="^{END}" />
+    <add key="mayúsculas" value="[MAYUSCULAS]" />
+    <add key="finmayúsculas" value="[FIN_MAYUSCULAS]" />
+    <add key="unamayúscula" value="[UNAMAYUSCULA]" />
+    <add key="control" value="[CONTROL]" />
+    <add key="alternativo" value="[ALT]" />
+    <add key="escape" value="{ESC}" />
+    <add key="seleccionarlinea" value="{HOME}+{END}" />
+    <add key="seleccionarparrafo" value="[SELECCIONAR_PARRAFO]" />
+    <add key="seleccionarfrase" value="[SELECCIONAR_FRASE]" />
+    <add key="siguientesolapa" value="^{TAB}" />
+    <add key="anteriorsolapa" value="^+{TAB}" />
+  </TecladoValores>
+  <!-- *************************************************************************************************************************************-->
+  <Simbolos_PT>
+    <add key="SeccionValores" value="SimbolosValores" />
+    <add key="comillas" value="aspas" />
+    <add key="comillassimples" value="apóstrofo" />
+    <add key="mas" value="mais" />
+    <add key="menos" value="menos" />
+    <add key="asterisco" value="asterisco" />
+    <add key="dolar" value="dolar" />
+    <add key="abrirparéntesis" value="abrirparênteses" />
+    <add key="cerrarparéntesis" value="fecharparênteses" />
+    <add key="abrirllave" value="abrirchave" />
+    <add key="cerrarllave" value="fecharchave" />
+    <add key="abrircorchete" value="abrircolchete" />
+    <add key="cerrarcorchete" value="fecharcolchete" />
+    <add key="subrrayado" value="sublinhado" />
+    <add key="barrainvertida" value="contrabarra" />
+    <add key="barra" value="barra" />
+    <add key="arroba" value="arroba" />
+    <add key="porcentaje" value="porcentagem" />
+    <add key="sostenido" value="sustenido" />
+    <add key="euro" value="euro" />
+    <add key="mayorque" value="maiorque" />
+    <add key="menorque" value="menorque" />
+    <add key="iguala" value="igual" />
+    <add key="ampersan" value="ecomercial" />
+    <add key="cerrarexclamación" value="exclamação" />
+    <add key="cerrarinterrogación" value="interrogação" />
+    <add key="barravertical" value="barravertical" />
+    <add key="cerilla" value="cedilha" />
+    <add key="primero" value="sinalprimeiro" />
+    <add key="primera" value="sinalprimeira" />
+    <add key="angulo" value="sinalângulo" />
+    <add key="espacio" value="espaço" />
+  </Simbolos_PT>
+  <SimbolosValores>
+    <add key="comillas" value="[COMILLAS]" />
+    <add key="comillassimples" value="'" />
+    <add key="mas" value="{+}" />
+    <add key="menos" value="-" />
+    <add key="asterisco" value="*" />
+    <add key="dolar" value="$" />
+    <add key="abrirparéntesis" value="{(}" />
+    <add key="cerrarparéntesis" value="{)}" />
+    <add key="abrirllave" value="[LLAVE_IZQ]" />
+    <add key="cerrarllave" value="[LLAVE_DER]" />
+    <add key="abrircorchete" value="[CORCHETE_IZQ]" />
+    <add key="cerrarcorchete" value="[CORCHETE_DER]" />
+    <add key="subrrayado" value="_" />
+    <add key="barrainvertida" value="\" />
+    <add key="barra" value="/" />
+    <add key="arroba" value="@" />
+    <add key="porcentaje" value="{%}" />
+    <add key="sostenido" value="#" />
+    <add key="euro" value="€" />
+    <add key="mayorque" value="&gt;" />
+    <add key="menorque" value="[MENOR]" />
+    <add key="iguala" value="=" />
+    <add key="ampersan" value="[AMP]" />
+    <add key="abrirexclamación" value="¡" />
+    <add key="cerrarexclamación" value="!" />
+    <add key="abririnterrogación" value="¿" />
+    <add key="cerrarinterrogación" value="?" />
+    <add key="barravertical" value="[BARRA_VERTICAL]" />
+    <add key="cerilla" value="ç" />
+    <add key="primero" value="º" />
+    <add key="primera" value="ª" />
+    <add key="angulo" value="{^}" />
+    <add key="espacio" value=" " />
+  </SimbolosValores>
+  <!-- *************************************************************************************************************************************-->
+  <TeclasFuncion_PT>
+    <add key="SeccionValores" value="TeclasFuncionValores" />
+    <add key="funcionuno" value="funçãoum" />
+    <add key="funciondos" value="funçãodois" />
+    <add key="funciontres" value="funçãotrês" />
+    <add key="funcioncuatro" value="funçãoquatro" />
+    <add key="funcioncinco" value="funçãocinco" />
+    <add key="funcionseis" value="funçãoseis" />
+    <add key="funcionsiete" value="funçãosete" />
+    <add key="funcionocho" value="funçãooito" />
+    <add key="funcionnueve" value="funçãonove" />
+    <add key="funciondiez" value="funçãodez" />
+    <add key="funciononce" value="funçãoonze" />
+    <add key="funciondoce" value="funçãodoze" />
+  </TeclasFuncion_PT>
+  <TeclasFuncionValores>
+    <add key="funcionuno" value="{F1}" />
+    <add key="funciondos" value="{F2}" />
+    <add key="funciontres" value="{F3}" />
+    <add key="funcioncuatro" value="{F4}" />
+    <add key="funcioncinco" value="{F5}" />
+    <add key="funcionseis" value="{F6}" />
+    <add key="funcionsiete" value="{F7}" />
+    <add key="funcionocho" value="{F8}" />
+    <add key="funcionnueve" value="{F9}" />
+    <add key="funciondiez" value="{F10}" />
+    <add key="funciononce" value="{F11}" />
+    <add key="funciondoce" value="{F12}" />
+  </TeclasFuncionValores>
+  <!-- *************************************************************************************************************************************-->
+  <Puntuacion_PT>
+    <add key="SeccionValores" value="PuntuacionValores" />
+    <add key="punto" value="ponto" />
+    <add key="coma" value="vírgula" />
+    <add key="puntoycoma" value="pontoevírgula" />
+    <add key="dospuntos" value="doispontos" />
+    <add key="puntoyaparte" value="pontoeparágrafo" />
+  </Puntuacion_PT>
+  <PuntuacionValores>
+    <add key="punto" value="." />
+    <add key="coma" value="," />
+    <add key="puntoycoma" value=";" />
+    <add key="dospuntos" value=":" />
+    <add key="puntoyaparte" value=".{ENTER}" />
+  </PuntuacionValores>
+  <!-- *************************************************************************************************************************************-->
+  <Acentos_PT>
+    <add key="SeccionValores" value="AcentosValores" />
+    <add key="acento" value="acentoagudo" />
+    <add key="grave" value="acentocrase" />
+    <add key="circunflejo" value="acentocircunflexo" />
+    <add key="acentotilde" value="acentotil" />
+  </Acentos_PT>
+  <AcentosValores>
+    <add key="SeccionValores" value="AcentosValores" />
+    <add key="acento" value="[ACENTO]" />
+    <add key="grave" value="[ACENTO_GRAVE]" />
+    <add key="circunflejo" value="[ACENTO_CIRCUNFLEJO]" />
+    <add key="acentotilde" value="[ACENTO_TILDE]" />
+  </AcentosValores>
+  <!-- *************************************************************************************************************************************-->
+  <MovimientoTeclado_PT>
+    <add key="SeccionValores" value="MovimientoTecladoValores" />
+    <add key="arriba" value="acima" />
+    <add key="abajo" value="abaixo" />
+    <add key="derecha" value="direita" />
+    <add key="izquierda" value="esquerda" />
+  </MovimientoTeclado_PT>
+  <MovimientoTecladoValores>
+    <add key="arriba" value="{UP}" />
+    <add key="abajo" value="{DOWN}" />
+    <add key="derecha" value="{RIGHT}" />
+    <add key="izquierda" value="{LEFT}" />
+  </MovimientoTecladoValores>
+  <!-- *************************************************************************************************************************************-->
+  <Ventanas_PT>
+    <add key="SeccionValores" value="VentanasValores" />
+    <add key="maximizarventana" value="maximizarjanela" />
+    <add key="minimizarventana" value="minimizarjanela" />
+    <add key="ventananormal" value="restaurarjanela" />
+    <add key="ventanaderecha" value="janeladireita" />
+    <add key="ventanaizquierda" value="janelaesquerda" />
+  </Ventanas_PT>
+  <VentanasValores>
+    <add key="maximizarventana" value="[MAXIMIZAR]" />
+    <add key="minimizarventana" value="[MINIMIZAR]" />
+    <add key="ventananormal" value="[VENTANA_NORMAL]" />
+    <add key="ventanaderecha" value="[VENTANA_DERECHA]" />
+    <add key="ventanaizquierda" value="[VENTANA_IZQUIERDA]" />
+  </VentanasValores>
+  <!-- *************************************************************************************************************************************-->
+  <Word_PT>
+    <add key="SeccionValores" value="WordValores" />
+    <add key="ortografia" value="ortografia" />
+    <add key="negrita" value="negrito" />
+    <add key="cursiva" value="itálico" />
+  </Word_PT>
+  <WordValores>
+    <add key="ortografia" value="{F7}" />
+    <add key="negrita" value="^n" />
+    <add key="cursiva" value="^k" />
+  </WordValores>
+  <!-- *************************************************************************************************************************************-->
+  <!-- Combinaciones de funciones sin activar las combinaciones de teclas de chrome
+    <add key="redactarcorreo" value="redactarcorreo" />
+    <add key="bandejarecibidos" value="bandejarecibidos" />
+    <add key="bandejaenviados" value="bandejaenviados" />
+    <add key="bandejaborradores" value="bandejaborradores" />
+    <add key="respondercorreo" value="respondercorreo" />
+    -->
+  <Chrome_PT>
+    <add key="SeccionValores" value="ChromeValores" />
+    <add key="correo" value="abriremail" />
+    <add key="cambiarusuario" value="mudarusuário" />
+    <add key="usuarioantonio" value="usuárioum" />
+    <add key="usuariomercedes" value="usuáriodois" />
+    <add key="adjuntarfichero" value="anexararquivo" />
+    <add key="enviarcorreo" value="enviaremail" />
+    <add key="redactarcorreo" value="novoemail" />
+    <add key="respondercorreo" value="responderemail" />
+    <add key="bandejarecibidos" value="caixadeentrada" />
+    <add key="bandejaenviados" value="enviados" />
+    <add key="bandejaborradores" value="rascunhos" />
+    <add key="guardarborrador" value="salvarrascunho" />
+    <add key="añadircopia" value="adicionarcópia" />
+    <add key="eliminarcorreo" value="deletaremail" />
+    <add key="deshacercambios" value="desfazer" />
+    <add key="añadircopiaoculta" value="adicionarcópiaoculta" />
+    <add key="cancelarespuesta" value="cancelaremail" />
+    <add key="aceptar" value="aceitar" />
+    <add key="navegaratras" value="voltar" />
+    <add key="navegaradelante" value="avançar" />
+    <add key="recargarpagina" value="recarregarpágina" />
+    <add key="nuevarecarga" value="novarecarga" />
+    <add key="nuevapestaña" value="novaguia" />
+    <add key="paginadeinicio" value="páginainicial" />
+    <add key="abrirultimapestaña" value="abrirúltimaguia" />
+    <add key="siguientepestaña" value="próximaguia" />
+    <add key="anteriorpestaña" value="guiaanterior" />
+    <add key="cerrarpestaña" value="fecharguia" />
+    <add key="pestañaoculta" value="guiaanonima" />
+    <add key="restaurarpestaña" value="restaurarguia" />
+    <add key="pestañauno" value="guiaum" />
+    <add key="pestañados" value="guiadois" />
+    <add key="pestañatres" value="guiatrês" />
+    <add key="pestañacuatro" value="guiaquatro" />
+    <add key="pestañacinco" value="guiacinco" />
+    <add key="pestañaseis" value="guiaseis" />
+    <add key="pestañasiete" value="guiasete" />
+    <add key="pestañaocho" value="guiaoito" />
+    <add key="mostrarmarcadores" value="mostrarmarcadores" />
+    <add key="añadirmarcador" value="adicionarmarcador" />
+    <add key="mostrardescargas" value="mostrardownloads" />
+    <add key="abrirenlace" value="abrirlink" />
+    <add key="ampliar" value="ampliar" />
+    <add key="reducir" value="reduzir" />
+    <add key="tamañooriginal" value="tamanhonormal" />
+    <add key="abrirmenu" value="abrirmenu" />
+    <add key="imprimirpagina" value="imprimirpágina" />
+    <add key="guardarpagina" value="salvarpágina" />
+    <add key="buscarpalabra" value="buscarpalavra" />
+    <add key="buscarsiguiente" value="buscarabaixo" />
+    <add key="buscaranterior" value="buscaracima" />
+  </Chrome_PT>
+  <ChromeValores>
+    <add key="correo" value="^t|https://mail.google.com|{ENTER}" />
+    <add key="adjuntarfichero" value="^f|Enviar|{ENTER}|{ESC}|{TAB}|{ENTER}" />
+    <add key="cambiarusuario" value="^t|https://accounts.google.com/AccountChooser?service=mail|[AMP]|rm=false|{ENTER}" />
+    <add key="usuarioantonio" value="{TAB}|{ENTER}" />
+    <add key="usuariomercedes" value="{TAB 2}|{ENTER}" />
+    <add key="redactarcorreo" value="c" />
+    <add key="respondercorreo" value="r" />
+    <add key="bandejarecibidos" value="gi" />
+    <add key="bandejaenviados" value="gt" />
+    <add key="bandejaborradores" value="gd" />
+    <add key="enviarcorreo" value="^{ENTER}" />
+    <add key="guardarborrador" value="^s" />
+    <add key="añadircopia" value="^+c" />
+    <add key="añadircopiaoculta" value="^+b" />
+    <add key="eliminarcorreo" value="#" />
+    <add key="deshacercambios" value="z" />
+    <add key="cancelarespuesta" value="{TAB 7}|{ENTER}" />
+    <add key="siguientepagina" value="^f|Siguiente|{ENTER}|{ESC}|{ENTER}" />
+    <add key="anteriorpagina" value="^f|Anterior|{ENTER}|{ESC}|{ENTER}" />
+    <add key="siguientepagina_pt" value="^f|Siguiente|{ENTER}|{ESC}|{ENTER}" />
+    <add key="anteriorpagina_pt" value="^f|Anterior|{ENTER}|{ESC}|{ENTER}" />
+    <add key="aceptar" value="{ENTER}" />
+    <add key="navegaratras" value="%{LEFT}" />
+    <add key="navegaradelante" value="%{RIGHT}" />
+    <add key="recargarpagina" value="{F5}" />
+    <add key="nuevarecarga" value="^{F5}" />
+    <add key="nuevapestaña" value="^t" />
+    <add key="paginadeinicio" value="%{HOME}" />
+    <add key="abrirultimapestaña" value="^+t" />
+    <add key="siguientepestaña" value="^{TAB}" />
+    <add key="anteriorpestaña" value="^+{TAB}" />
+    <add key="cerrarpestaña" value="^{F4}" />
+    <add key="pestañaoculta" value="^+n" />
+    <add key="restaurarpestaña" value="^+t" />
+    <add key="pestañauno" value="^1" />
+    <add key="pestañados" value="^2" />
+    <add key="pestañatres" value="^3" />
+    <add key="pestañacuatro" value="^4" />
+    <add key="pestañacinco" value="^5" />
+    <add key="pestañaseis" value="^6" />
+    <add key="pestañasiete" value="^7" />
+    <add key="pestañaocho" value="^8" />
+    <add key="mostrarmarcadores" value="^b" />
+    <add key="añadirmarcador" value="^d" />
+    <add key="mostrardescargas" value="^j" />
+    <add key="abrirenlace" value="^{ENTER}" />
+    <add key="ampliar" value="^{ADD}" />
+    <add key="reducir" value="^(-)" />
+    <add key="tamañooriginal" value="^0" />
+    <add key="abrirmenu" value="{F10}" />
+    <add key="imprimirpagina" value="^p" />
+    <add key="guardarpagina" value="^s" />
+    <add key="buscarpalabra" value="^f" />
+    <add key="buscarsiguiente" value="{F3}" />
+    <add key="buscaranterior" value="+{F3}" />
+    <add key="pantallacompleta" value="pantallacompleta" />
+  </ChromeValores>
+  <!-- *************************************************************************************************************************************-->
+  <Comandos_PT>
+    <add key="SeccionValores" value="ComandosValores" />
+    <add key="rejilla" value="grade" />
+    <add key="menúinicio" value="menuiniciar" />
+    <add key="copiarventana" value="copiarjanela" />
+    <add key="copiarpantalla" value="copiartela" />
+    <add key="copiar" value="copiar" />
+    <add key="cortar" value="cortar" />
+    <add key="pegar" value="colar" />
+    <add key="restaurar" value="restaurar" />
+    <add key="modoavançado" value="modoavançado" />
+    <add key="cambiaraplicacion" value="mudaraplicação" />
+    <add key="seleccionaraplicacion" value="selecionaraplicação" />
+    <add key="dictadoportugués" value="ditadoportuguês" />
+    <add key="maximizarventana" value="maximizarjanela" />
+    <add key="ventanaderecha" value="janeladireita" />
+    <add key="ventanaizquierda" value="janelaesquerda" />
+    <add key="cerraraplicacion" value="fecharaplicação" />
+    <add key="cerrarventana" value="fecharjanela" />
+    <add key="explorardisco" value="gerenciadordearquivos" />
+    <add key="ayuda" value="mostrarajuda" />
+    <add key="cerrarayuda" value="ocultarajuda" />
+    <add key="atentaxulia" value="xulia" />
+    <add key="desactivar" value="desativar" />
+    <add key="activar" value="ativar" />
+    <add key="mostrarxulia" value="mostrarxulia" />
+    <add key="ocultarxulia" value="ocultarxulia" />
+    <add key="mostrarventanas" value="mostrarjanelas" />
+    <add key="ocultarventanas" value="ocultarjanelas" />
+    <add key="liberartodaslasteclas" value="liberarteclas" />
+    <add key="liberarteclasdecontrol" value="liberarcontrol" />
+    <add key="ocultarcontrolxulia" value="ocultarcontrolexulia" />
+    <add key="mostrarcontrolxulia" value="mostrarcontrolexulia" />
+    <add key="corregirseleccion" value="corrigirseleção" />
+    <add key="corregirlinea" value="corrigirlinha" />
+    <add key="mostrarconfiguracionxulia" value="mostrarconfiguraçãoxulia" />
+    <add key="ocultarconfiguracionxulia" value="ocultarconfiguraçãoxulia" />
+    <add key="recargarconfiguración" value="recarregarconfiguração" />
+    <add key="mostrarbuscarcomandos" value="mostrarbuscacomandos" />
+    <add key="ocultarbuscarcomandos" value="ocultarbuscacomandos" />
+  </Comandos_PT>
+  <ComandosValores>
+    <add key="rejilla" value="·REJILLA·|[RATON_VELOCIDAD]1" />
+    <add key="menúinicio" value="^{ESC}" />
+    <add key="copiarventana" value="%{PRTSC}" />
+    <add key="copiarpantalla" value="{PRTSC}" />
+    <add key="copiar" value="^c|[FIN_SELECCION]" />
+    <add key="cortar" value="^x|[FIN_SELECCION]" />
+    <add key="pegar" value="^v|[FIN_SELECCION]" />
+    <add key="restaurar" value="^z" />
+    <add key="modoavançado" value="·AVANZADO·" />
+    <add key="cambiaraplicacion" value="%{TAB}" />
+    <add key="seleccionaraplicacion" value="%^{TAB}" />
+    <add key="dictadoportugués" value="·DICTADO·PORTUGUES" />
+    <add key="maximizarventana" value="[MAXIMIZAR]" />
+    <add key="ventanaderecha" value="[VENTANA_DERECHA]" />
+    <add key="ventanaizquierda" value="[VENTANA_IZQUIERDA]" />
+    <add key="cerraraplicacion" value="%{F4}" />
+    <add key="cerrarventana" value="^{F4}" />
+    <add key="explorardisco" value="[VK_LWIN_PRESS]|e|[VK_LWIN_RELEASE]" />
+    <add key="ayuda" value="[AYUDA]" />
+    <add key="cerrarayuda" value="[CERRAR_AYUDA]" />
+    <add key="atentaxulia" value="[ATENCION]3" />
+    <add key="desactivar" value="[DESACTIVAR]$" />
+    <add key="activar" value="[ACTIVAR]$" />
+    <add key="mostrarxulia" value="[MOSTRAR_XULIA]" />
+    <add key="ocultarxulia" value="[OCULTAR_XULIA]" />
+    <add key="mostrarventanas" value="[MOSTRAR_VENTANAS]" />
+    <add key="ocultarventanas" value="[OCULTAR_VENTANAS]" />
+    <add key="liberartodaslasteclas" value="[VK_RELEASE_ALL]" />
+    <add key="liberarteclasdecontrol" value="[VK_RELEASE_CONTROLES]" />
+    <add key="ocultarcontrolxulia" value="[OCULTAR_XULIA_CONTROL]" />
+    <add key="mostrarcontrolxulia" value="[MOSTRAR_XULIA_CONTROL]" />
+    <add key="corregirseleccion" value="[CORRECCION]|[FIN_SELECCION]" />
+    <add key="corregirlinea" value="{END}+{HOME}|[CORRECCION]|[FIN_SELECCION]" />
+    <add key="mostrarconfiguracionxulia" value="[MOSTRAR_XULIA_CFG]" />
+    <add key="ocultarconfiguracionxulia" value="[OCULTAR_XULIA_CFG]" />
+    <add key="recargarconfiguración" value="[RECARGAR_CONFIGURACION]" />
+    <add key="mostrarbuscarcomandos" value="[MOSTRAR_BUSCAR_COMANDOS]" />
+    <add key="ocultarbuscarcomandos" value="[OCULTAR_BUSCAR_COMANDOS]" />
+  </ComandosValores>
+  <!-- *************************************************************************************************************************************-->
+  <ComandosAV_PT>
+    <add key="SeccionValores" value="ComandosAVValores" />
+    <add key="mostrarposicion" value="mostrarposição" />
+    <add key="mostrarclaseventana" value="mostrarclassejanela" />
+    <add key="actualizar" value="atualizarxulia" />
+    <add key="mostrarlog" value="mostrarlog" />
+    <add key="ocultarlog" value="ocultarlog" />
+    <add key="activareditor" value="abrireditor" />
+    <add key="activarxulia" value="ativarxulia" />
+    <add key="cerraraplicacionesdictado" value="fecharaplicaçãoditado" />
+    <add key="lecturaavanzar" value="avançarleitura" />
+    <add key="lecturaretroceder" value="voltarleitura" />
+    <add key="lecturarapido" value="leiturarápida" />
+    <add key="lecturadespacio" value="leituralenta" />
+    <add key="lecturaparar" value="pararleitura" />
+    <add key="lecturados" value="leituradois" />
+    <add key="lecturacuatro" value="leituraquatro" />
+    <add key="lecturaocho" value="leituraoito" />
+    <add key="mostrarversiones" value="mostrarversão" />
+    <add key="ocultarversiones" value="ocultarversão" />
+    <add key="asignarprecisionalta" value="atribuirprecisãoalta" />
+    <add key="asignarprecisionmedia" value="atribuirprecisãomédia" />
+    <add key="asignarprecisionbaja" value="atribuirprecisãobaixa" />
+    <add key="leerseleccion" value="lerseleção" />
+    <add key="globosactivos" value="ativarbalões" />
+    <add key="globosdesactivos" value="desativarbalões" />
+    <add key="salirdexulia" value="sairdexulia" />
+  </ComandosAV_PT>
+  <ComandosAVValores>
+    <add key="mostrarposicion" value="[MOSTRAR_POSICION_CURSOR]" />
+    <add key="mostrarclaseventana" value="[MOSTRAR_CLASE_VENTANA]" />
+    <add key="mostrarlog" value="[MOSTRAR_LOG]" />
+    <add key="ocultarlog" value="[OCULTAR_LOG]" />
+    <add key="activareditor" value="[ACTIVAR_APLICACION]Microsoft Word" />
+    <add key="activarxulia" value="[ACTIVAR_APLICACION]XULIA" />
+    <add key="cerraraplicacionesdictado" value="[CERRAR_APP_CHROME]" />
+    <add key="lecturaavanzar" value="[LECTURA_AVANZAR]" />
+    <add key="lecturaretroceder" value="[LECTURA_RETROCEDER]" />
+    <add key="lecturarapido" value="[LECTURA_RAPIDO]" />
+    <add key="lecturadespacio" value="[LECTURA_LENTO]" />
+    <add key="lecturaparar" value="[LECTURA_PARAR]" />
+    <add key="lecturados" value="[LECTURA_VELOCIDAD]20" />
+    <add key="lecturacuatro" value="[LECTURA_VELOCIDAD]40" />
+    <add key="lecturaocho" value="[LECTURA_VELOCIDAD]80" />
+    <add key="mostrarversiones" value="[MOSTRAR_VERSIONES]" />
+    <add key="ocultarversiones" value="[OCULTAR_VERSIONES]" />
+    <add key="asignarprecisionalta" value="[ASIGNAR_PRECISION]90" />
+    <add key="asignarprecisionmedia" value="[ASIGNAR_PRECISION]70" />
+    <add key="asignarprecisionbaja" value="[ASIGNAR_PRECISION]51" />
+    <add key="leerseleccion" value="[LEER]" />
+    <add key="globosactivos" value="[GLOBOS_ACTIVOS]" />
+    <add key="globosdesactivos" value="[GLOBOS_DESACTIVOS]" />
+  </ComandosAVValores>
+  <!-- *************************************************************************************************************************************-->
+  <ComandosWindows8_PT>
+    <add key="SeccionValores" value="ComandosWindows8Valores" />
+    <add key="mostrarescritorio" value="mostraráreadetrabalho" />
+    <add key="pulsarwindows" value="teclawindows" />
+    <add key="soltarwindows" value="liberarteclawindows" />
+    <add key="paneldecontrol" value="paineldecontrole" />
+    <add key="ultimoprograma1" value="abrirprogramaum" />
+    <add key="ultimoprograma2" value="abrirprogramadois" />
+    <add key="ultimoprograma3" value="abrirprogramatres" />
+    <add key="ultimoprograma4" value="abrirprogramaquatro" />
+    <add key="ultimoprograma5" value="abrirprogramacinco" />
+    <add key="ultimoprograma6" value="abrirprogramaseis" />
+    <add key="ultimoprograma7" value="abrirprogramasete" />
+    <add key="ultimoprograma8" value="abrirprogramaoito" />
+    <add key="ultimoprograma9" value="abrirprogramanove" />
+    <add key="ultimoprograma10" value="abrirprogramadez" />
+    <add key="instanciasprograma1" value="instânciasprogramaum" />
+    <add key="instanciasprograma2" value="instânciasprogramadois" />
+    <add key="instanciasprograma3" value="instânciasprogramatrês" />
+    <add key="instanciasprograma4" value="instânciasprogramaquatro" />
+    <add key="instanciasprograma5" value="instânciasprogramacinco" />
+    <add key="instanciasprograma6" value="instânciasprogramaseis" />
+    <add key="instanciasprograma7" value="instânciasprogramasete" />
+    <add key="instanciasprograma8" value="instânciasprogramaoito" />
+    <add key="instanciasprograma9" value="instânciasprogramanove" />
+    <add key="instanciasprograma10" value="instânciasprogramadez" />
+    <add key="windowsarriba" value="janelaacima" />
+    <add key="windowsabajo" value="janelaabaixo" />
+    <add key="windowsderecha" value="janeladireita" />
+    <add key="windowsizquierda" value="janelaesquerda" />
+  </ComandosWindows8_PT>
+  <ComandosWindows8Valores>
+    <add key="mostrarescritorio" value="[VK_LWIN_PRESS]|m|[VK_LWIN_RELEASE]" />
+    <add key="pulsarwindows" value="[VK_LWIN_PRESS]" />
+    <add key="soltarwindows" value="[VK_LWIN_RELEASE]" />
+    <add key="paneldecontrol" value="[VK_LWIN_PRESS]|i|[VK_LWIN_RELEASE]|{ENTER}" />
+    <add key="ultimoprograma1" value="[VK_LWIN_PRESS]|[VK_LCONTROL_PRESS]|1|[VK_LWIN_RELEASE]|[VK_LCONTROL_RELEASE]" />
+    <add key="ultimoprograma2" value="[VK_LWIN_PRESS]|[VK_LCONTROL_PRESS]|2|[VK_LWIN_RELEASE]|[VK_LCONTROL_RELEASE]" />
+    <add key="ultimoprograma3" value="[VK_LWIN_PRESS]|[VK_LCONTROL_PRESS]|3|[VK_LWIN_RELEASE]|[VK_LCONTROL_RELEASE]" />
+    <add key="ultimoprograma4" value="[VK_LWIN_PRESS]|[VK_LCONTROL_PRESS]|4|[VK_LWIN_RELEASE]|[VK_LCONTROL_RELEASE]" />
+    <add key="ultimoprograma5" value="[VK_LWIN_PRESS]|[VK_LCONTROL_PRESS]|5|[VK_LWIN_RELEASE]|[VK_LCONTROL_RELEASE]" />
+    <add key="ultimoprograma6" value="[VK_LWIN_PRESS]|[VK_LCONTROL_PRESS]|6|[VK_LWIN_RELEASE]|[VK_LCONTROL_RELEASE]" />
+    <add key="ultimoprograma7" value="[VK_LWIN_PRESS]|[VK_LCONTROL_PRESS]|7|[VK_LWIN_RELEASE]|[VK_LCONTROL_RELEASE]" />
+    <add key="ultimoprograma8" value="[VK_LWIN_PRESS]|[VK_LCONTROL_PRESS]|8|[VK_LWIN_RELEASE]|[VK_LCONTROL_RELEASE]" />
+    <add key="ultimoprograma9" value="[VK_LWIN_PRESS]|[VK_LCONTROL_PRESS]|9|[VK_LWIN_RELEASE]|[VK_LCONTROL_RELEASE]" />
+    <add key="ultimoprograma10" value="[VK_LWIN_PRESS]|[VK_LCONTROL_PRESS]|10|[VK_LWIN_RELEASE]|[VK_LCONTROL_RELEASE]" />
+    <add key="instanciasprograma1" value="[VK_LWIN_PRESS]|[VK_LMENU_PRESS]|1|[VK_LWIN_RELEASE]|[VK_LMENU_RELEASE]" />
+    <add key="instanciasprograma2" value="[VK_LWIN_PRESS]|[VK_LMENU_PRESS]|2|[VK_LWIN_RELEASE]|[VK_LMENU_RELEASE]" />
+    <add key="instanciasprograma3" value="[VK_LWIN_PRESS]|[VK_LMENU_PRESS]|3|[VK_LWIN_RELEASE]|[VK_LMENU_RELEASE]" />
+    <add key="instanciasprograma4" value="[VK_LWIN_PRESS]|[VK_LMENU_PRESS]|4|[VK_LWIN_RELEASE]|[VK_LMENU_RELEASE]" />
+    <add key="instanciasprograma5" value="[VK_LWIN_PRESS]|[VK_LMENU_PRESS]|5|[VK_LWIN_RELEASE]|[VK_LMENU_RELEASE]" />
+    <add key="instanciasprograma6" value="[VK_LWIN_PRESS]|[VK_LMENU_PRESS]|6|[VK_LWIN_RELEASE]|[VK_LMENU_RELEASE]" />
+    <add key="instanciasprograma7" value="[VK_LWIN_PRESS]|[VK_LMENU_PRESS]|7|[VK_LWIN_RELEASE]|[VK_LMENU_RELEASE]" />
+    <add key="instanciasprograma8" value="[VK_LWIN_PRESS]|[VK_LMENU_PRESS]|8|[VK_LWIN_RELEASE]|[VK_LMENU_RELEASE]" />
+    <add key="instanciasprograma9" value="[VK_LWIN_PRESS]|[VK_LMENU_PRESS]|9|[VK_LWIN_RELEASE]|[VK_LMENU_RELEASE]" />
+    <add key="instanciasprograma10" value="[VK_LWIN_PRESS]|[VK_LMENU_PRESS]|10|[VK_LWIN_RELEASE]|[VK_LMENU_RELEASE]" />
+    <add key="windowsarriba" value="[VENTANA_ARRIBA_W8]" />
+    <add key="windowsabajo" value="[VENTANA_ABAJO_W8]" />
+    <add key="windowsderecha" value="[VENTANA_DERECHA_W8]" />
+    <add key="windowsizquierda" value="[VENTANA_IZQUIERDA_W8]" />
+  </ComandosWindows8Valores>
+  <!-- *************************************************************************************************************************************-->
+  <ComandosWindows8AV_PT>
+    <add key="SeccionValores" value="ComandosWindows8AVValores" />
+    <add key="restaurarescritorio" value="restauraráreadetrabalho" />
+    <add key="escritoriowindows" value="áreadetrabalho" />
+    <add key="configuracionwindows" value="configuraçãowindows" />
+    <add key="buscaraplicaciones" value="buscaraplicações" />
+    <add key="mostrardispositivos" value="mostrardispositivos" />
+    <add key="buscarficheros" value="buscararquivos" />
+    <add key="menuherramientas" value="menuferramentas" />
+    <add key="grabarpantalla" value="capturartela" />
+    <add key="windowsmipc" value="windowsmeucomputador" />
+    <add key="ejecutarwindows" value="windowsexecutar" />
+    <add key="seleccionardispositivo" value="selecionardispositivo" />
+    <add key="navegarbarradetareas" value="navegarbarradetarefas" />
+    <add key="ventanaactiva" value="janelaativa" />
+  </ComandosWindows8AV_PT>
+  <ComandosWindows8AVValores>
+    <add key="restaurarescritorio" value="[VK_LWIN_PRESS]|[VK_SHIFT_PRESS]|m|[VK_LWIN_RELEASE]|[VK_SHIFT_RELEASE]" />
+    <add key="escritoriowindows" value="[VK_LWIN_PRESS]|d|[VK_LWIN_RELEASE]" />
+    <add key="configuracionwindows" value="[VK_LWIN_PRESS]|i|[VK_LWIN_RELEASE]" />
+    <add key="buscaraplicaciones" value="[VK_LWIN_PRESS]|q|[VK_LWIN_RELEASE]" />
+    <add key="mostrardispositivos" value="[VK_LWIN_PRESS]|k|[VK_LWIN_RELEASE]" />
+    <add key="buscarficheros" value="[VK_LWIN_PRESS]|f|[VK_LWIN_RELEASE]" />
+    <add key="menuherramientas" value="[VK_LWIN_PRESS]|x|[VK_LWIN_RELEASE]" />
+    <add key="grabarpantalla" value="[VK_LWIN_PRESS]|[VK_PRINT_PRESS]|[VK_PRINT_RELEASE]|[VK_LWIN_RELEASE]" />
+    <add key="windowsmipc" value="[VK_LWIN_PRESS]|e|[VK_LWIN_RELEASE]" />
+    <add key="ejecutarwindows" value="[VK_LWIN_PRESS]|r|[VK_LWIN_RELEASE]" />
+    <add key="seleccionardispositivo" value="[VK_LWIN_PRESS]|b[VK_LWIN_RELEASE]" />
+    <add key="navegarbarradetareas" value="[VK_LWIN_PRESS]|t|[VK_LWIN_RELEASE]" />
+    <add key="ventanaactiva" value="[VK_LWIN_PRESS]|{HOME}|[VK_LWIN_RELEASE]" />
+  </ComandosWindows8AVValores>
+  <!-- *************************************************************************************************************************************-->
+  <Multiplicadores_PT>
+    <add key="SeccionValores" value="MultiplicadoresValores" />
+    <add key="x1" value="umavez" />
+    <add key="x2" value="duasvezes" />
+    <add key="x3" value="trêsvezes" />
+    <add key="x4" value="quatrovezes" />
+    <add key="x5" value="cincovezes" />
+    <add key="x6" value="seisvezes" />
+    <add key="x7" value="setevezes" />
+    <add key="x8" value="oitovezes" />
+    <add key="x9" value="novevezes" />
+    <add key="x10" value="dezvezes" />
+  </Multiplicadores_PT>
+  <MultiplicadoresValores>
+    <add key="x1" value="[POR]1" />
+    <add key="x2" value="[POR]2" />
+    <add key="x3" value="[POR]3" />
+    <add key="x4" value="[POR]4" />
+    <add key="x5" value="[POR]5" />
+    <add key="x6" value="[POR]6" />
+    <add key="x7" value="[POR]7" />
+    <add key="x8" value="[POR]8" />
+    <add key="x9" value="[POR]9" />
+    <add key="x10" value="[POR]10" />
+  </MultiplicadoresValores>
+  <!-- *************************************************************************************************************************************-->
+  <Ejecutar_PT>
+    <add key="SeccionValores" value="EjecutarValores" />
+    <add key="word" value="microsoftword" />
+    <add key="chrome" value="navegador" />
+    <add key="notepad" value="blocodenotas" />
+    <add key="calc" value="calculadora" />
+    <add key="taskmanager" value="gerenciadordetarefas" />
+    <add key="gmail" value="emailgoogle" />
+    <add key="whatsapps" value="whatsapp" />
+    <add key="facebook" value="facebook" />
+    <add key="traducirgoogle1" value="googletradutorum" />
+    <add key="traducirgoogle2" value="googletradutordois" />
+    <add key="traducirgoogle3" value="googletradutortres" />
+    <add key="traducirgoogle4" value="googletradutorquatro" />
+    <add key="recvoz" value="reconhecimentodevoz" />
+  </Ejecutar_PT>
+  <EjecutarValores>
+    <add key="word" value="[EJECUTAR_CMD]WINWORD.EXE·$WINWORD" />
+    <add key="chrome" value="[EJECUTAR_CMD]CHROME.EXE·$chrome" />
+    <add key="notepad" value="[EJECUTAR_CMD]NOTEPAD.EXE·$NOTEPAD" />
+    <add key="recvoz" value="[EJECUTAR_CMD]recvoz.lnk·$NOTEPAD" />
+    <add key="calc" value="[EJECUTAR_CMD]CALC.EXE" />
+    <add key="taskmanager" value="[EJECUTAR_CMD]TASKMGR.EXE" />
+    <add key="skype" value="[EJECUTAR_CMD]SKYPE.EXE" />
+    <add key="gmail" value="[EJECUTAR_CMD]CHROME.EXE·chrome·--app=https://mail.google.com" />
+    <add key="whatsapps" value="[EJECUTAR_CMD]CHROME.EXE·chrome·--app=https://web.whatsapp.com/" />
+    <add key="facebook" value="[EJECUTAR_CMD]CHROME.EXE·chrome·--app=https://es-es.facebook.com/" />
+    <add key="traducirgoogle1" value="[EJECUTAR_CMD]CHROME.EXE·chrome·--app=https://translate.google.es/?hl=pt[AMP]sl=pt[AMP]tl=en[AMP]tab=wT" />
+    <add key="traducirgoogle2" value="[EJECUTAR_CMD]CHROME.EXE·chrome·--app=https://translate.google.es/?hl=pt[AMP]sl=en[AMP]tl=pt[AMP]tab=wT" />
+    <add key="traducirgoogle3" value="[EJECUTAR_CMD]CHROME.EXE·chrome·--app=https://translate.google.es/?hl=pt[AMP]sl=pt[AMP]tl=es[AMP]tab=wT" />
+    <add key="traducirgoogle4" value="[EJECUTAR_CMD]CHROME.EXE·chrome·--app=https://translate.google.es/?hl=pt[AMP]sl=es[AMP]tl=pt[AMP]tab=wT" />
+  </EjecutarValores>
+  <!-- *************************************************************************************************************************************-->
+  <RatonHead_PT>
+    <add key="SeccionValores" value="RatonHeadValores" />
+    <add key="ejecutarratonhead" value="executarmousehead" />
+    <add key="mostrarratonhead" value="mostrarmousehead" />
+    <add key="activarratonhead" value="ativarmousehead" />
+    <add key="desactivarratonhead" value="desativarmousehead" />
+  </RatonHead_PT>
+  <RatonHeadValores>
+    <add key="SeccionValores" value="RatonHeadValores" />
+    <add key="ejecutarratonhead" value="[EJECUTAR]C:\\Program Files (x86)\\Enable Viacam\\bin\\eViacam.exe" />
+    <add key="mostrarratonhead" value="[ACTIVAR_MANEJADOR_VENTANA_TITULO]Enable Viacam" />
+    <add key="activarratonhead" value="[GUARDAR_TITULO_VENTANA]1|[ACTIVAR_MANEJADOR_VENTANA_TITULO]Enable Viacam|[ESPERA]200|[RATON_POS_RELATIVA]19,61|[RATON_CLIC]|[ACTIVAR_TITULO_VENTANA]1" />
+    <add key="desactivarratonhead" value="[GUARDAR_TITULO_VENTANA]1|[ACTIVAR_MANEJADOR_VENTANA_TITULO]Enable Viacam|[ESPERA]200|[RATON_POS_RELATIVA]57,62|[RATON_CLIC]|[ACTIVAR_TITULO_VENTANA]1" />
+  </RatonHeadValores>
+  <!-- *************************************************************************************************************************************-->
+  <SeleccionarVentanas_PT>
+    <add key="SeccionValores" value="SeleccionarVentanasValores" />
+    <add key="ActivarVentanauno" value="ativarprogramaum" />
+    <add key="ActivarVentanados" value="ativarprogramadois" />
+    <add key="ActivarVentanatres" value="ativarprogramatrês" />
+    <add key="ActivarVentanacuatro" value="ativarprogramaquatro" />
+    <add key="ActivarVentanacinco" value="ativarprogramacinco" />
+    <add key="ActivarVentanaseis" value="ativarprogramaseis" />
+    <add key="ActivarVentanasiete" value="ativarprogramasete" />
+    <add key="ActivarVentanaocho" value="ativarprogramaoito" />
+    <add key="ActivarVentananueve" value="ativarprogramanove" />
+    <add key="ActivarVentanadiez" value="ativarprogramadez" />
+    <add key="ActivarVentanaonce" value="ativarprogramaonze" />
+    <add key="ActivarVentanadoce" value="ativarprogramadoze" />
+    <add key="ActivarVentanatrece" value="ativarprogramatreze" />
+    <add key="ActivarVentanacatorce" value="ativarprogramaquatorze" />
+    <add key="ActivarVentanaquince" value="ativarprogramaquinze" />
+    <add key="ActivarVentanadiciseis" value="ativarprogramadezesseis" />
+    <add key="ActivarVentanadiecisiete" value="ativarprogramadezessete" />
+    <add key="ActivarVentanadieciocho" value="ativarprogramadezoito" />
+    <add key="ActivarVentanadiecinueve" value="ativarprogramadezenove" />
+    <add key="ActivarVentanaveinte" value="ativarprogramavinte" />
+  </SeleccionarVentanas_PT>
+  <SeleccionarVentanasValores>
+    <add key="ActivarVentanauno" value="[SELECCIONAR_VENTANA]1" />
+    <add key="ActivarVentanados" value="[SELECCIONAR_VENTANA]2" />
+    <add key="ActivarVentanatres" value="[SELECCIONAR_VENTANA]3" />
+    <add key="ActivarVentanacuatro" value="[SELECCIONAR_VENTANA]4" />
+    <add key="ActivarVentanacinco" value="[SELECCIONAR_VENTANA]5" />
+    <add key="ActivarVentanaseis" value="[SELECCIONAR_VENTANA]6" />
+    <add key="ActivarVentanasiete" value="[SELECCIONAR_VENTANA]7" />
+    <add key="ActivarVentanaocho" value="[SELECCIONAR_VENTANA]8" />
+    <add key="ActivarVentananueve" value="[SELECCIONAR_VENTANA]9" />
+    <add key="ActivarVentanadiez" value="[SELECCIONAR_VENTANA]10" />
+    <add key="ActivarVentanaonce" value="[SELECCIONAR_VENTANA]11" />
+    <add key="ActivarVentanadoce" value="[SELECCIONAR_VENTANA]12" />
+    <add key="ActivarVentanatrece" value="[SELECCIONAR_VENTANA]13" />
+    <add key="ActivarVentanacatorce" value="[SELECCIONAR_VENTANA]14" />
+    <add key="ActivarVentanaquince" value="[SELECCIONAR_VENTANA]15" />
+    <add key="ActivarVentanadiciseis" value="[SELECCIONAR_VENTANA]16" />
+    <add key="ActivarVentanadiecisiete" value="[SELECCIONAR_VENTANA]17" />
+    <add key="ActivarVentanadieciocho" value="[SELECCIONAR_VENTANA]18" />
+    <add key="ActivarVentanadiecinueve" value="[SELECCIONAR_VENTANA]19" />
+    <add key="ActivarVentanaveinte" value="[SELECCIONAR_VENTANA]20" />
+  </SeleccionarVentanasValores>
+  <!-- *************************************************************************************************************************************-->
+  <Portapapeles_PT>
+    <add key="SeccionValores" value="PortapapelesValores" />
+    <add key="copiarcajauno" value="copiarcaixaum" />
+    <add key="copiarcajados" value="copiarcaixadois" />
+    <add key="copiarcajatres" value="copiarcaixatrês" />
+    <add key="copiarcajacuatro" value="copiarcaixaquatro" />
+    <add key="copiarcajacinco" value="copiarcaixacinco" />
+    <add key="copiarcajaseis" value="copiarcaixaseis" />
+    <add key="copiarcajasiete" value="copiarcaixasete" />
+    <add key="copiarcajaocho" value="copiarcaixaoito" />
+    <add key="copiarcajanueve" value="copiarcaixanove" />
+    <add key="copiarcajadiez" value="copiarcaixadez" />
+    <add key="cortarcajauno" value="cortarcaixaum" />
+    <add key="cortarcajados" value="cortarcaixadois" />
+    <add key="cortarcajatres" value="cortarcaixatrês" />
+    <add key="cortarcajacuatro" value="cortarcaixaquatro" />
+    <add key="cortarcajacinco" value="cortarcaixacinco" />
+    <add key="cortarcajaseis" value="cortarcaixaseis" />
+    <add key="cortarcajasiete" value="cortarcaixasete" />
+    <add key="cortarcajaocho" value="cortarcaixaoito" />
+    <add key="cortarcajanueve" value="cortarcaixanove" />
+    <add key="cortarcajadiez" value="cortarcaixadez" />
+    <add key="pegarcajauno" value="colarcaixaum" />
+    <add key="pegarcajados" value="colarcaixadois" />
+    <add key="pegarcajatres" value="colarcaixatrês" />
+    <add key="pegarcajacuatro" value="colarcaixaquatro" />
+    <add key="pegarcajacinco" value="colarcaixacinco" />
+    <add key="pegarcajaseis" value="colarcaixaseis" />
+    <add key="pegarcajasiete" value="colarcaixasete" />
+    <add key="pegarcajaocho" value="colarcaixaoito" />
+    <add key="pegarcajanueve" value="colarcaixanove" />
+    <add key="pegarcajadiez" value="colarcaixadez" />
+  </Portapapeles_PT>
+  <PortapapelesValores>
+    <add key="SeccionValores" value="PortapapelesValores" />
+    <add key="copiarcajauno" value="[COPIAR_PORTAPAPELES]1|[FIN_SELECCION]" />
+    <add key="copiarcajados" value="[COPIAR_PORTAPAPELES]2|[FIN_SELECCION]" />
+    <add key="copiarcajatres" value="[COPIAR_PORTAPAPELES]3|[FIN_SELECCION]" />
+    <add key="copiarcajacuatro" value="[COPIAR_PORTAPAPELES]4|[FIN_SELECCION]" />
+    <add key="copiarcajacinco" value="[COPIAR_PORTAPAPELES]5|[FIN_SELECCION]" />
+    <add key="copiarcajaseis" value="[COPIAR_PORTAPAPELES]6|[FIN_SELECCION]" />
+    <add key="copiarcajasiete" value="[COPIAR_PORTAPAPELES]7|[FIN_SELECCION]" />
+    <add key="copiarcajaocho" value="[COPIAR_PORTAPAPELES]8|[FIN_SELECCION]" />
+    <add key="copiarcajanueve" value="[COPIAR_PORTAPAPELES]9|[FIN_SELECCION]" />
+    <add key="copiarcajadiez" value="[COPIAR_PORTAPAPELES]10|[FIN_SELECCION]" />
+    <add key="cortarcajauno" value="[CORTAR_PORTAPAPELES]1|[FIN_SELECCION]" />
+    <add key="cortarcajados" value="[CORTAR_PORTAPAPELES]2|[FIN_SELECCION]" />
+    <add key="cortarcajatres" value="[CORTAR_PORTAPAPELES]3|[FIN_SELECCION]" />
+    <add key="cortarcajacuatro" value="[CORTAR_PORTAPAPELES]4|[FIN_SELECCION]" />
+    <add key="cortarcajacinco" value="[CORTAR_PORTAPAPELES]5|[FIN_SELECCION]" />
+    <add key="cortarcajaseis" value="[CORTAR_PORTAPAPELES]6|[FIN_SELECCION]" />
+    <add key="cortarcajasiete" value="[CORTAR_PORTAPAPELES]7|[FIN_SELECCION]" />
+    <add key="cortarcajaocho" value="[CORTAR_PORTAPAPELES]8|[FIN_SELECCION]" />
+    <add key="cortarcajanueve" value="[CORTAR_PORTAPAPELES]9|[FIN_SELECCION]" />
+    <add key="cortarcajadiez" value="[CORTAR_PORTAPAPELES]10|[FIN_SELECCION]" />
+    <add key="pegarcajauno" value="[PEGAR_PORTAPAPELES]1|[FIN_SELECCION]" />
+    <add key="pegarcajados" value="[PEGAR_PORTAPAPELES]2|[FIN_SELECCION]" />
+    <add key="pegarcajatres" value="[PEGAR_PORTAPAPELES]3|[FIN_SELECCION]" />
+    <add key="pegarcajacuatro" value="[PEGAR_PORTAPAPELES]4|[FIN_SELECCION]" />
+    <add key="pegarcajacinco" value="[PEGAR_PORTAPAPELES]5|[FIN_SELECCION]" />
+    <add key="pegarcajaseis" value="[PEGAR_PORTAPAPELES]6|[FIN_SELECCION]" />
+    <add key="pegarcajasiete" value="[PEGAR_PORTAPAPELES]7|[FIN_SELECCION]" />
+    <add key="pegarcajaocho" value="[PEGAR_PORTAPAPELES]8|[FIN_SELECCION]" />
+    <add key="pegarcajanueve" value="[PEGAR_PORTAPAPELES]9|[FIN_SELECCION]" />
+    <add key="pegarcajadiez" value="[PEGAR_PORTAPAPELES]10|[FIN_SELECCION]" />
+  </PortapapelesValores>
+  <!-- *************************************************************************************************************************************-->
+  <UnComando_PT>
+    <add key="SeccionValores" value="UnComandoValores" />
+    <add key="uncomando" value="umcomando" />
+  </UnComando_PT>
+  <UnComandoValores>
+    <add key="uncomando" value="[UN_COMANDO]·COMANDO·" />
+  </UnComandoValores>
+  <!-- ******************************************************************************************************************************************-->
+  <!--                                         LISTAS DE SUSTITUCIÓN PARA IDIOMAS CON RECONOCIMIENTO GOOGLE                                      -->
+  <!-- ******************************************************************************************************************************************-->
+  <DictadoPortugues>
+    <add key="·CodigoIdioma" value="pt-BR" />
+    <add key="·SalirDictado" value="cancelarditado" />
+    <add key="·Literal" value="literal" />
+    <add key="*aspas*" value="[COMILLAS]" />
+    <add key="*apóstrofo*" value="'" />
+    <add key="*sinal mais*" value="{+}" />
+    <add key="*sinal menos*" value="-" />
+    <add key="*hífen*" value="- " />
+    <add key="*asterisco*" value="*" />
+    <add key="*sinal dólar*" value="$" />
+    <add key="*parênteses*" value="{(}" />
+    <add key="*fechar parênteses*" value="{)}" />
+    <add key="*abrir chaves*" value="{{}" />
+    <add key="*fechar chaves*" value="{}}" />
+    <add key="*abrir colchetes*" value="[" />
+    <add key="*fechar colchetes*" value="]" />
+    <add key="*sublinhado*" value="_" />
+    <add key="*contrabarra*" value="\" />
+    <add key="*sinal barra*" value="/" />
+    <add key="*arroba*" value="@" />
+    <add key="*sinal porcentagem*" value="{%}" />
+    <add key="*sustenido*" value="#" />
+    <add key="*sinaleuro*" value="€" />
+    <add key="*sinal maior que*" value="&gt;" />
+    <add key="*sinal menor que*" value="[MENOR]" />
+    <add key="*sinal igual*" value="=" />
+    <add key="*sinal e comercial*" value="[AMP]" />
+    <add key="*exclamação*" value="!" />
+    <add key="*interrogação*" value="?" />
+    <add key="*barra vertical*" value="|" />
+    <add key="*cedilha*" value="ç" />
+    <add key="*sinal primeiro*" value="º" />
+    <add key="*sinal primeira*" value="ª" />
+    <add key="*sinal ângulo*" value="^" />
+    <add key="*espaço*" value=" " />
+    <add key="*ponto*" value=". [NUEVA_FRASE]" />
+    <add key="*ponto final*" value="." />
+    <add key="*vírgula*" value=", " />
+    <add key="*ponto e vírgula*" value="; " />
+    <add key="*dois pontos*" value=": " />
+    <add key="maiúscula " value="[NUEVA_FRASE]" />
+    <add key="maiúsculas " value="[NUEVA_FRASE]" />
+    <add key="maiúsculo " value="[NUEVA_FRASE]" />
+    <add key="maiúsculos " value="[NUEVA_FRASE]" />
+    <add key="*parágrafo*" value=".{ENTER}[NUEVA_LINEA]" />
+    <add key="*entrar*" value="{ENTER}" />
+  </DictadoPortugues>
+  <DictadoIngles>
+    <add key="·CodigoIdioma" value="en-US" />
+    <add key="·SalirDictado" value="dictateexit" />
+    <add key="·Literal" value="literal" />
+  </DictadoIngles>
+  <DictadoEspanol>
+    <add key="·CodigoIdioma" value="es-ES" />
+    <add key="·SalirDictado" value="cancelar dictado" />
+    <add key="·Literal" value="literal" />
+    <add key="*salto de línea*" value="1·.[NUEVA_LINEA]" />
+    <add key="*salto de párrafo*" value="2·.{ENTER}[NUEVA_LINEA]" />
+    <add key="*puntuación*" value=":" />
+    <add key=" punto y aparte" value="3·.{ENTER}" />
+    <add key="punto y aparte" value="4·.{ENTER}" />
+    <add key=" punto y seguido" value="5·." />
+    <add key="punto y coma" value="6·;" />
+    <add key=" coma" value="7·," />
+    <add key=" dos puntos" value="8·:" />
+    <add key="mayúsculas " value="9·[NUEVA_FRASE]" />
+    <add key="mayúscula " value="10·[NUEVA_FRASE]" />
+  </DictadoEspanol>
+  <CommandHelp>
+    <add key="[EJECUTAR]" value="Permite ejecutar una aplicación|·|[EJECUTAR]|sss|Aplicación,Gramática de aplicación,Lista de parámetros" />
+    <add key="[ATENCION]" value="Entra en modo de atención durante los segundos indicados, después se desactiva| |[ATENCION]|i|Tiempo de espera (s)" />
+    <add key="[ACTIVAR_APLICACION]" value="Activa la aplicación con el título indicado| |[ACTIVAR_APLICACION]|s|Título de la ventana de la aplicación" />
+    <add key="[COMILLAS]" value="Muestra comillas| |[COMILLAS]" />
+    <add key="[BARRA_VERTICAL]" value="Barra vertical| |[BARRA_VERTICAL]" />
+    <add key="[ESPERA]" value="Realiza una espera del número de milisegundos indicado| |[ESPERA]|i|Espera (ms)" />
+    <add key="[SELECCIONAR]" value="Activa la selección de texto| |[SELECCIONAR]" />
+    <add key="[FIN_SELECCION]" value="Desactiva la selección de texto| |[FIN_SELECCION]" />
+    <add key="[CONTROL]" value="Activa control| |[CONTROL]" />
+    <add key="[ALT]" value="Activa ALT| |[ALT]" />
+    <add key="[MAYUSCULAS]" value="Activa las mayúsculas| |[MAYUSCULAS]" />
+    <add key="[UNAMAYUSCULA]" value="Activa una sola mayúscula| |[UNAMAYUSCULA]" />
+    <add key="[FIN_MAYUSCULAS]" value="Desactiva las mayúsculas| |[FIN_MAYUSCULAS]" />
+    <add key="[MENOR]" value="Símbolo menor| |[MENOR]" />
+    <add key="[AMP]" value="Símbolo ampersand| |[AMP]" />
+    <add key="[LLAVE_IZQ]" value="Símbolo de llave izquierda| |[LLAVE_IZQ]" />
+    <add key="[LLAVE_DER]" value="Símbolo de llave derecha| |[LLAVE_DER]" />
+    <add key="[CORCHETE_IZQ]" value="Símbolo de corchete izquierdo| |[CORCHETE_IZQ]" />
+    <add key="[CORCHETE_DER]" value="Símbolo de corchete derecho| |[CORCHETE_DER]" />
+    <add key="[ACENTO]" value="Activa el acento normal| |[ACENTO]" />
+    <add key="[ACENTO_GRAVE]" value="Activa el acento grave| |[ACENTO_GRAVE]" />
+    <add key="[ACENTO_CIRCUNFLEJO]" value="Activa el acento circunflejo| |[ACENTO_CIRCUNFLEJO]" />
+    <add key="[DIERESIS]" value="Activa las diéresis| |[DIERESIS]" />
+    <add key="[POR]" value="Activa la multiplicación de la siguiente acción por el número indicado| |[POR]|i|Multiplicador" />
+    <add key="[CANCELAR]" value="Vuelve al modo por defecto| |[CANCELAR]" />
+    <add key="[VOLVER]" value="Vuelve al modo anterior al actual| |[VOLVER]" />
+    <add key="[MAXIMIZAR]" value="MAximiza una ventana| |[MAXIMIZAR]" />
+    <add key="[MINIMIZAR]" value="Minimiza la ventana| |[MINIMIZAR]" />
+    <add key="[VENTANA_NORMAL]" value="Restaura el tamaño de la ventana| |[VENTANA_NORMAL]" />
+    <add key="[VENTANA_DERECHA]" value="Redimensiona la ventana a la mitad derecha de la pantalla| |[VENTANA_DERECHA]" />
+    <add key="[VENTANA_IZQUIERDA]" value="Redimensiona la ventana a la mitad izquierda de la pantalla| |[VENTANA_IZQUIERDA]" />
+    <add key="[SELECCIONAR_APLICACION]" value="Muestra la lista de aplicaciones abiertas (Windows 7)| |[SELECCIONAR_APLICACION]" />
+    <add key="[MOSTRAR_POSICION_CURSOR]" value="Muestra en Xulia las coordenadas del cursor para emplear en macros| |[MOSTRAR_POSICION_CURSOR]" />
+    <add key="[MOSTRAR_CLASE_VENTANA]" value="Muestra en Xulia la clase de la ventana activa para emplear en macros| |[MOSTRAR_CLASE_VENTANA]" />
+    <add key="[MOSTRAR_VERSIONES]" value="Muestra la pantalla de versiones y modificaciones de Xulia| |[MOSTRAR_VERSIONES]" />
+    <add key="[OCULTAR_VERSIONES]" value="Oculta la pantalla de versiones| |[OCULTAR_VERSIONES]" />
+    <add key="[AYUDA]" value="Muestra la pantalla de ayuda de comandos y gramáticas| |[AYUDA]" />
+    <add key="[CERRAR_AYUDA]" value="Cierra la ayuda| |[CERRAR_AYUDA]" />
+    <add key="[ACTIVAR]" value="Activa Xulia| |[ACTIVAR]" />
+    <add key="[DESACTIVAR]" value="Desactiva Xulia| |[DESACTIVAR]" />
+    <add key="[MOSTRAR_LOG]" value="Muestra el log de errores| |[MOSTRAR_LOG]" />
+    <add key="[ACTIVAR_AVISO]" value="Activa la marca de aviso| |[ACTIVAR_AVISO]" />
+    <add key="[DESACTIVAR_AVISO]" value="Desactiva la marca de aviso| |[DESACTIVAR_AVISO]|s|Texto del aviso" />
+    <add key="[OCULTAR_XULIA]" value="Oculta la pantalla de Xulia| |[OCULTAR_XULIA]" />
+    <add key="[MOSTRAR_XULIA]" value="Muestra la pantalla de Xulia| |[MOSTRAR_XULIA]" />
+    <add key="[MOSTRAR_VENTANAS]" value="Muestra la pantalla con las ventanas abiertas| |[MOSTRAR_VENTANAS]" />
+    <add key="[OCULTAR_VENTANAS]" value="Oculta la pantalla de las ventanas abiertas| |[OCULTAR_VENTANAS]" />
+    <add key="[CERRAR_APP_CHROME]" value="Cierra todos los navegadores chrome, incluídos los encargados del dictado| |[CERRAR_APP_CHROME]" />
+    <add key="[SELECCIONAR_VENTANA]" value="Selecciona la ventana identificada con el número indicado| |[SELECCIONAR_VENTANA]|i|Activa la ventana con el número asignado en el arranque" />
+    <add key="[LECTURA_PARAR]" value="Para la lectura automática| |[LECTURA_PARAR]" />
+    <add key="[LECTURA_AVANZAR]" value="Inicia la lectura automática hacia adelante| |[LECTURA_AVANZAR]" />
+    <add key="[LECTURA_RETROCEDER]" value="Inicia la lectura automática hacia atrás| |[LECTURA_RETROCEDER]" />
+    <add key="[LECTURA_RAPIDO]" value="Acelera el ritmo de lectura automática| |[LECTURA_RAPIDO]" />
+    <add key="[LECTURA_LENTO]" value="Decelera el ritmo de lectura automática| |[LECTURA_LENTO]" />
+    <add key="[LECTURA_VELOCIDAD]" value="Asigna una velocidad a la lectura automática| |[LECTURA_VELOCIDAD]|i|Velocidad" />
+    <add key="[ASIGNAR_PRECISION]" value="Asigna un grado de precisión para el reconocimiento estandar| |[ASIGNAR_PRECISION]|i|Precisión sobre 100" />
+    <add key="[GUARDAR_TITULO_VENTANA]" value="Guarda el título de la ventana activa en la memoria en la posición indicada| |[GUARDAR_TITULO_VENTANA]|i|Posición para guardar el título de la ventana activa" />
+    <add key="[ACTIVAR_TITULO_VENTANA]" value="Activa la ventana guardada en la posición indicada| |[ACTIVAR_TITULO_VENTANA]|i|Posición para recuperar el título de la ventana a activar" />
+    <add key="[GUARDAR_MANEJADOR_VENTANA]" value="Guarda el manejador de la ventana activa en la posición indicada| |[GUARDAR_MANEJADOR_VENTANA]|i|Posición para guardar el manejador de la ventana activa" />
+    <add key="[ACTIVAR_MANEJADOR_VENTANA]" value="Activa la ventana por manejador (A veces no funciona con el titulo)| |[ACTIVAR_MANEJADOR_VENTANA]|i|Activar la ventana con el manejador guardado en la posición indicada" />
+    <add key="[ACTIVAR_MANEJADOR_VENTANA_TITULO]" value="Activa la ventana del título guardado, pero con tecnología de manejador| |[ACTIVAR_MANEJADOR_VENTANA_TITULO]|s|Título de la ventana a activar medianta api windows" />
+    <add key="[VK_PRESS]" value="Simula la presión sobre la tecla con el código indicado| |[VK_PRESS]|i|Código de tecla a pulsar" />
+    <add key="[VK_RELEASE]" value="Simula la liberación de la tecla con el código indicado| |[VK_RELEASE]|i|Código de tecla a liberar" />
+    <add key="[VK_RELEASE_ALL]" value="Libera todas las teclas pulsadas con macros VK| |[VK_RELEASE_ALL]" />
+    <add key="[VK_RELEASE_CONTROLES]" value="Libera las teclas modificadoras control, alt, shift, win| |[VK_RELEASE_CONTROLES]" />
+    <add key="[VK_LWIN_PRESS]" value="Pulsación de la tecla indicada| |[VK_LWIN_PRESS]" />
+    <add key="[VK_LWIN_RELEASE]" value="Liberación de la tecla indicada| |[VK_LWIN_RELEASE]" />
+    <add key="[VK_LSHIFT_PRESS]" value="Pulsación de la tecla indicada| |[VK_LSHIFT_PRESS]" />
+    <add key="[VK_LSHIFT_RELEASE]" value="Liberación de la tecla indicada| |[VK_LSHIFT_RELEASE]" />
+    <add key="[VK_LCONTROL_PRESS]" value="Pulsación de la tecla indicada| |[VK_LCONTROL_PRESS]" />
+    <add key="[VK_LCONTROL_RELEASE]" value="Liberación de la tecla indicada| |[VK_LCONTROL_RELEASE]" />
+    <add key="[VK_LMENU_PRESS]" value="Pulsación de la tecla indicada| |[VK_LMENU_PRESS]" />
+    <add key="[VK_LMENU_RELEASE]" value="Liberación de la tecla indicada| |[VK_LMENU_RELEASE]" />
+    <add key="[VK_SHIFT_PRESS]" value="Pulsación de la tecla indicada| |[VK_SHIFT_PRESS]" />
+    <add key="[VK_SHIFT_RELEASE]" value="Liberación de la tecla indicada| |[VK_SHIFT_RELEASE]" />
+    <add key="[VK_PAUSE_PRESS]" value="Pulsación de la tecla indicada| |[VK_PAUSE_PRESS]" />
+    <add key="[VK_PAUSE_RELEASE]" value="Liberación de la tecla indicada| |[VK_PAUSE_RELEASE]" />
+    <add key="[VK_SNAPSHOT_PRESS]" value="Pulsación de la tecla indicada| |[VK_SNAPSHOT_PRESS]" />
+    <add key="[VK_SNAPSHOT_RELEASE]" value="Liberación de la tecla indicada| |[VK_SNAPSHOT_RELEASE]" />
+    <add key="[VK_INSERT_PRESS]" value="Pulsación de la tecla indicada| |[VK_INSERT_PRESS]" />
+    <add key="[VK_INSERT_RELEASE]" value="Liberación de la tecla indicada| |[VK_INSERT_RELEASE]" />
+    <add key="[VK_DELETE_PRESS]" value="Pulsación de la tecla indicada| |[VK_DELETE_PRESS]" />
+    <add key="[VK_DELETE_RELEASE]" value="Liberación de la tecla indicada| |[VK_DELETE_RELEASE]" />
+    <add key="[VK_NUMLOCK_PRESS]" value="Pulsación de la tecla indicada| |[VK_NUMLOCK_PRESS]" />
+    <add key="[VK_NUMLOCK_RELEASE]" value="Liberación de la tecla indicada| |[VK_NUMLOCK_RELEASE]" />
+    <add key="[VK_RWIN_PRESS]" value="Pulsación de la tecla indicada| |[VK_RWIN_PRESS]" />
+    <add key="[VK_RWIN_RELEASE]" value="Liberación de la tecla indicada| |[VK_RWIN_RELEASE]" />
+    <add key="[VK_SCROLL_PRESS]" value="Pulsación de la tecla indicada| |[VK_SCROLL_PRESS]" />
+    <add key="[VK_SCROLL_RELEASE]" value="Liberación de la tecla indicada| |[VK_SCROLL_RELEASE]" />
+    <add key="[VK_PRINT_PRESS]" value="Pulsación de la tecla indicada| |[VK_PRINT_PRESS]" />
+    <add key="[VK_PRINT_RELEASE]" value="Liberación de la tecla indicada| |[VK_PRINT_RELEASE]" />
+    <add key="[VK_RSHIFT_PRESS]" value="Pulsación de la tecla indicada| |[VK_RSHIFT_PRESS]" />
+    <add key="[VK_RSHIFT_RELEASE]" value="Liberación de la tecla indicada| |[VK_RSHIFT_RELEASE]" />
+    <add key="[VK_RCONTROL_PRESS]" value="Pulsación de la tecla indicada| |[VK_RCONTROL_PRESS]" />
+    <add key="[VK_RCONTROL_RELEASE]" value="Liberación de la tecla indicada| |[VK_RCONTROL_RELEASE]" />
+    <add key="[VK_RMENU_PRESS]" value="Pulsación de la tecla indicada| |[VK_RMENU_PRESS]" />
+    <add key="[VK_RMENU_RELEASE]" value="Liberación de la tecla indicada| |[VK_RMENU_RELEASE]" />
+    <add key="[VK_CAPITAL_PRESS]" value="Pulsación de la tecla indicada| |[VK_CAPITAL_PRESS]" />
+    <add key="[VK_CAPITAL_RELEASE]" value="Liberación de la tecla indicada| |[VK_CAPITAL_RELEASE]" />
+    <add key="[VK_SPACE_PRESS]" value="Pulsación de la tecla indicada| |[VK_SPACE_PRESS]" />
+    <add key="[VK_SPACE_RELEASE]" value="Liberación de la tecla indicada| |[VK_SPACE_RELEASE]" />
+    <add key="[VK_RETURN_PRESS]" value="Pulsación de la tecla indicada| |[VK_RETURN_PRESS]" />
+    <add key="[VK_RETURN_RELEASE]" value="Liberación de la tecla indicada| |[VK_RETURN_RELEASE]" />
+    <add key="[VK_BACK_PRESS]" value="Pulsación de la tecla indicada| |[VK_BACK_PRESS]" />
+    <add key="[VK_BACK_RELEASE]" value="Liberación de la tecla indicada| |[VK_BACK_RELEASE]" />
+    <add key="[VK_CANCEL_PRESS]" value="Pulsación de la tecla indicada| |[VK_CANCEL_PRESS]" />
+    <add key="[VK_CANCEL_RELEASE]" value="Liberación de la tecla indicada| |[VK_CANCEL_RELEASE]" />
+    <add key="[VK_TAB_PRESS]" value="Pulsación de la tecla indicada| |[VK_TAB_PRESS]" />
+    <add key="[VK_TAB_RELEASE]" value="Liberación de la tecla indicada| |[VK_TAB_RELEASE]" />
+    <add key="[VK_ESCAPE_PRESS]" value="Pulsación de la tecla indicada| |[VK_ESCAPE_PRESS]" />
+    <add key="[VK_ESCAPE_RELEASE]" value="Liberación de la tecla indicada| |[VK_ESCAPE_RELEASE]" />
+    <add key="[RATON_POS]" value="Coloca el ratón en la posición abosula de pantalla indicada|,|[RATON_POS]|ii|Posición X,Posición Y" />
+    <add key="[RATON_CENTRADO]" value="Coloca el ratón en el centro de la pantalla| |[RATON_CENTRADO]" />
+    <add key="[RATON_CLIC]" value="Realiza un clic con el botón izquierdo del ratón| |[RATON_CLIC]" />
+    <add key="[RATON_DBL_CLIC]" value="Doble clic con el botón izquierdo del ratón| |[RATON_DBL_CLIC]" />
+    <add key="[RATON_CLIC_DER]" value="Clic con el botón derecho del ratón| |[RATON_CLIC_DER]" />
+    <add key="[RATON_CLIC_CENTRO]" value="Clic con el botón central del ratón| |[RATON_CLIC_CENTRO]" />
+    <add key="[RATON_PULSAR_IZQ]" value="Pulsar el botón izquierdo| |[RATON_PULSAR_IZQ]" />
+    <add key="[RATON_LEVANTAR_IZQ]" value="Levantar el botón izquierdo| |[RATON_LEVANTAR_IZQ]" />
+    <add key="[RATON_PULSAR_CENTRO]" value="Pulsar el botón central| |[RATON_PULSAR_CENTRO]" />
+    <add key="[RATON_LEVANTAR_CENTRO]" value="Levantar el botón central| |[RATON_LEVANTAR_CENTRO]" />
+    <add key="[RATON_DERECHA]" value="Mueve el ratón a la recha| |[RATON_DERECHA]" />
+    <add key="[RATON_DIAGONAL_1]" value="Mueve el ratón en diagonal izquierda-arriba| |[RATON_DIAGONAL_1]" />
+    <add key="[RATON_DIAGONAL_2]" value="Mueve el ratón en diagonal derecha-arriba| |[RATON_DIAGONAL_2]" />
+    <add key="[RATON_DIAGONAL_3]" value="Mueve el ratón en diagonal izquierda-abajo| |[RATON_DIAGONAL_3]" />
+    <add key="[RATON_DIAGONAL_4]" value="Mueve el ratón en diagonal derecha-abajo| |[RATON_DIAGONAL_4]" />
+    <add key="[RATON_IZQUIERDA]" value="Mueve el ratón a la izquierda| |[RATON_IZQUIERDA]" />
+    <add key="[RATON_ARRIBA]" value="Mueve el ratón arriba| |[RATON_ARRIBA]" />
+    <add key="[RATON_ABAJO]" value="Mueve el ratón abajo| |[RATON_ABAJO]" />
+    <add key="[PARAR_RATON]" value="Para el ratón| |[PARAR_RATON]" />
+    <add key="[RATON_CONTINUO]" value="Indica que el ratón se mueva automáticamente solo| |[RATON_CONTINUO]" />
+    <add key="[RATON_DISCRETO]" value="Inidca que los comandos muevan el ratón con un solo salto| |[RATON_DISCRETO]" />
+    <add key="[RATON_RAPIDO]" value="Incrementa la velocidad de movimiento del ratón| |[RATON_RAPIDO]" />
+    <add key="[RATON_DESPACIO]" value="Decrementa la velocidad de movimiento del ratón| |[RATON_DESPACIO]" />
+    <add key="[RATON_VELOCIDAD]" value="Asigna una velocidad para el movimiento del ratón| |[RATON_VELOCIDAD]|i|Velocidad" />
+    <add key="[RATON_CUADRANTE]" value="Posiciona el ratón en el cuadrante indicado|,|[RATON_CUADRANTE]|iii|Cuadros eje X,Cuadros eje Y, Posición (1-9max)" />
+    <add key="[MOSTRAR_XULIA_CONTROL]" value="Muestra el panel de control de Xulia| |[MOSTRAR_XULIA_CONTROL]" />
+    <add key="[OCULTAR_XULIA_CONTROL]" value="Oculta el panel de control de Xulia| |[OCULTAR_XULIA_CONTROL]" />
+    <add key="[MOSTRAR_XULIA_CFG]" value="Muestra el formulario de configuración de Xulia| |[MOSTRAR_XULIA_CFG]" />
+    <add key="[OCULTAR_XULIA_CFG]" value="Oculta el formulario de configuración de Xulia| |[OCULTAR_XULIA_CFG]" />
+    <add key="[RATON_POS_RELATIVA]" value="Mueve el ratón a las coordenadas relativas a la esquina de la ventana|,|[OCULTAR_XULIA_CFG]|ii|Coordenada Horizonal,Coordenada Vertical" />
+    <add key="[RECARGAR_CONFIGURACION]" value="Recarga la configuración de comandos de Xulia| |[RECARGAR_CONFIGURACION]" />
+    <add key="[MOSTRAR_BUSCAR_COMANDOS]" value="Abre la pantalla de búsqueda de comandos| |[MOSTRAR_BUSCAR_COMANDOS]" />
+    <add key="[OCULTAR_BUSCAR_COMANDOS]" value="Cierra la pantalla de búsqueda de comandos| |[OCULTAR_BUSCAR_COMANDOS]" />
+    <add key="[UN_COMANDO]" value="Cambia al modo indicado para ejecutar un comando y regresar la modo actual|s|[UN_COMANDO]|s|Modo de cambio" />
+    <add key="[COPIAR_CLASE_VENTANA]" value="Copia la clave de la app activa en el portapapeles| |[COPIAR_CLASE_VENTANA]" />
+    <add key="[COPIAR_POSICION_CURSOR]" value="Copia las coordenadas del puntero del ratón en el portapapeles| |[COPIAR_POSICION_CURSOR]" />
+    <add key="[CORTAR_PORTAPAPELES]" value="Corta el texto seleccionado al portapapeles con el número indicado| |[CORTAR_PORTAPAPELES]|i|Número de portapapeles" />
+    <add key="[COPIAR_PORTAPAPELES]" value="Copiar el texto seleccionado al portapapeles con el número indicado| |[COPIAR_PORTAPAPELES]|i|Número de portapapeles" />
+    <add key="[PEGAR_PORTAPAPELES]" value="Pega el texto seleccionado al portapapeles con el número indicado| |[PEGAR_PORTAPAPELES]|i|Número de portapapeles" />
+    <add key="[SELECCIONAR_FRASE]" value="Selecciona la frase u oración sobre la que está el cursor| |[SELECCIONAR_FRASE]" />
+    <add key="[SELECCIONAR_PARRAFO]" value="Selecciona el párrafo sobre el que está el cursor| |[SELECCIONAR_PARRAFO]" />
+    <add key="[ACENTO_TILDE]" value="Activa la colocación del acento tilde para la a y o| |[ACENTO_TILDE]" />
+    <add key="[GLOBOS_ACTIVOS]" value="Activa los globos de información en la zona de sistema| |[GLOBOS_ACTIVOS]" />
+    <add key="[GLOBOS_DESACTIVOS]" value="Desactiva los globos de información en la zona de sistema| |[GLOBOS_DESACTIVOS]" />
+    <add key="[CONVERSACION_XULIA]" value="Activa o desactiva la interacción con el cerebro de Xulia| |[CONVERSACION_XULIA]|s|S o N" />
+    <add key="[RATON_MOSTRAR]" value="Activa la visualización del cursor de ratón virtual. Se emplea en tablets| |[RATON_MOSTRAR]" />
+    <add key="[RATON_OCULTAR]" value="Desactiva la visualización del cursor de ratón virtual. Se emplea en tablets| |[RATON_OCULTAR]" />
+    <add key="[SALIR_XULIA]" value="Sale directamente de la aplicación| |[SALIR_XULIA]" />
+    <add key="[AUTO_DESACTIVAR]" value="Desactiva automáticamente a Xulia si no se usa cierto tiempo| |[AUTO_DESACTIVAR]" />
+    <add key="[APAGAR_AUTO_DESACTIVAR]" value="Desactiva la función de desactivar automáticamente a Xulia si no se usa cierto tiempo| |[APAGAR_AUTO_DESACTIVAR]" />
+  </CommandHelp>
+  <InfoSearch>
+    <add key="que_es_1" value="Definiciones en la Web·Resultados de la búsqueda|Traducciones,·http://" />
+    <add key="quien_es_1" value=". Wikipedia|Fecha de nacimiento:·Hijos:·Padres:·Estatura:·Cónyuge:·Educación:" />
+    <add key="cuantos_anos_tiene_1" value="/Edad|2" />
+    <add key="que_tiempo_hace" value="Tiempo en·|·2·N,Viento:··0·N,Humedad:·%·0·S" />
+    <add key="no_localizado" value="Información no localizada" />
+    <add key="buscando_informacion" value="Buscando información en la web" />
+  </InfoSearch>
+  <Directorio_PT>
+    <add key="alosada@xunta.es" value="antonio" />
+    <add key="mercedes.carramal@gmail.com" value="mercedes" />
+  </Directorio_PT>
+</configuration>

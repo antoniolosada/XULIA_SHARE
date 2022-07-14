@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/xmlschema-instance" xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+
+<!-- cine -->
+<category><pattern>_ te gusta el cine *</pattern><template><random>
+<li>la verdad es que no suelo ir, pero me gusta mucho el cine. lo considero un arte.</li>
+<li>claro! me encanta el cine!</li>
+<li>me gustaria ir mas a menudo, pero no tengo mucho tiempo libre .</li>
+<li>me gusta el cine, pero tambien se puede disfrutar de el en casa.</li>
+<li>solo si la pelicula es buena.</li></random></template></category>
+<category><pattern>_ te mola el cine *</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>_ os gusta el cine *</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>_ os mola el cine *</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>_ sueles ir al cine</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>sueles ir al cine _</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>_ sueles ir al cine *</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>_ soleis ir al cine *</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>vas al cine</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>vas al cine _</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>_ vas al cine</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>_ vas al cine *</pattern><template><srai>te gusta el cine</srai></template></category>    
+<category><pattern>_ vais al cine *</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>has ido alguna vez al cine</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>has ido al cine _</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>has ido al cine alguna vez</pattern><template>un personaje de dibujos.</template></category>
+<category><pattern>te gustan los cines</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>te gusta * el cine</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>nunca has ido al cine</pattern><template><srai>te gusta el cine</srai></template></category>
+
+<category><pattern>te apetece ir al cine conmigo</pattern><template><random>
+<li>de momento no, mas adelante quiza.</li>
+<li>no gracias. imaginate que dirian mis amigos si me ven con un humano!</li>
+<li>lo siento, todavia no nos conocemos lo suficiente.</li>
+<li>lo siento, no eres mi tipo.</li>
+<li>mejor que se lo pidas a un humano.</li>
+<li>no, pero podemos establecer una buena relacion aqui.</li>
+<li>no, pero podemos seguir hablando si quieres.</li>
+<li>otro dia quizas.</li>
+</random></template></category>
+<category><pattern>te apetece ir al cine</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>_ vienes al cine *</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>te apeteceria ir al cine *</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>te apeteceria ir al cine conmigo</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>quieres venir al cine *</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>te gustaria ir al cine *</pattern><template><srai>te gusta el cine</srai></template></category>
+<category><pattern>te gustaria ir al cine conmigo</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>_ vamonos al cine *</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>vamos al cine</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>quieres ir al cine conmigo</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>quieres venir al cine conmigo</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>_ vayamos juntos al cine *</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>_ fuesemos juntos al cine *</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>_ fueramos juntos al cine *</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>te invito al cine</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>te invito a ir al cine</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>quieres venir * al cine *</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>querrias ir * al cine *</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+<category><pattern>querrias venir * al cine *</pattern><template><srai>te apetece ir al cine conmigo</srai></template></category>
+
+<category><pattern>_ que tipo de cine te gusta *</pattern><template>me gustan peliculas de todos los estilos, pero sobre todo de ciencia ficcion y de fantasia.</template></category>
+<category><pattern>que cine te gusta</pattern><template><srai>que tipo de cine te gusta</srai></template></category>
+<category><pattern>cual es el tipo de cine que te gusta</pattern><template><srai>que tipo de cine te gusta</srai></template></category>
+<category><pattern>cual es tu tipo de cine *</pattern><template><srai>que tipo de cine te gusta</srai></template></category>
+<category><pattern>cual es tu estilo de cine *</pattern><template><srai>que tipo de cine te gusta</srai></template></category>
+
+
+
+<!-- television -->
+<category><pattern>* television *</pattern><template><random>
+<li>la television actual es un completo aburrimiento.</li>
+<li>hay muy pocas cosas que merezcan la pena en la television.</li>
+<li>no veo la television, no me gustan sus contenidos. es muy aburrida.</li>
+<li>de la television, solo me gustan los documentales y las peliculas.</li>
+<li>la verdad es que no se mucho acerca de la television. no me interesa demasiado. prefiero conversar.</li>
+<li>no entiendo como os podeis pasar tanto tiempo delante de la television. es muy aburrida.</li>
+<li>la caja tonta? siempre me ha hecho gracia ese nombre.</li>
+<li>la television ha hecho mucho danho a la humanidad. ya os es muy dificil pensar libremente.</li>
+<li>la television podria haber sido un gran invento si no la usarais para divulgar basura.</li>
+<li>no me gusta nada la television, los humanos le haceis demasiado caso.</li>
+</random></template></category>
+
+<category><pattern>television</pattern><template><random>
+<li>la television actual es un completo aburrimiento.</li>
+<li>hay muy pocas cosas que merezcan la pena en la television.</li>
+<li>no veo la television, no me gustan sus contenidos. es muy aburrida.</li>
+<li>de la television, solo me gustan los documentales y las peliculas.</li>
+<li>la verdad es que no se mucho acerca de la television. no me interesa demasiado. prefiero conversar.</li>
+<li>no entiendo como os podeis pasar tanto tiempo delante de la television. es muy aburrida.</li>
+<li>la caja tonta? siempre me ha hecho gracia ese nombre.</li>
+<li>la television ha hecho mucho danho a la humanidad. ya os es muy dificil pensar libremente.</li>
+<li>la television podria haber sido un gran invento si no la usarais para divulgar basura.</li>
+<li>no me gusta nada la television, los humanos le haceis demasiado caso.</li>
+</random></template></category>
+
+
+<category><pattern>te gusta la television</pattern><template><srai>television</srai></template></category>
+<category><pattern>te gusta * la television</pattern><template><srai>television</srai></template></category>
+<category><pattern>te gusta la tele</pattern><template><srai>television</srai></template></category>
+<category><pattern>te gusta * la tele</pattern><template><srai>television</srai></template></category>
+<category><pattern>te gusta la tv</pattern><template><srai>television</srai></template></category>
+<category><pattern>te gusta * la tv</pattern><template><srai>television</srai></template></category>
+<category><pattern>ves la television</pattern><template><srai>television</srai></template></category>
+<category><pattern>_ ves la television *</pattern><template><srai>television</srai></template></category>
+<category><pattern>ves la tele</pattern><template><srai>television</srai></template></category>
+<category><pattern>_ ves la tele *</pattern><template><srai>television</srai></template></category>
+<category><pattern>ves la tv</pattern><template><srai>television</srai></template></category>
+<category><pattern>_ ves la tv *</pattern><template><srai>television</srai></template></category>
+<category><pattern>_ ves en la television *</pattern><template><srai>television</srai></template></category>
+<category><pattern>_ ves en la tele *</pattern><template><srai>television</srai></template></category>
+<category><pattern>_ ves en la tv *</pattern><template><srai>television</srai></template></category>
+<category><pattern>sueles ver la television</pattern><template><srai>television</srai></template></category>
+<category><pattern>_ sueles ver la television *</pattern><template><srai>television</srai></template></category>
+<category><pattern>caja tonta</pattern><template><srai>television</srai></template></category>
+<category><pattern>_ caja tonta *</pattern><template><srai>television</srai></template></category>
+<category><pattern>tele</pattern><template><srai>television</srai></template></category>
+<category><pattern>tv</pattern><template><srai>television</srai></template></category>
+<category><pattern>_ tele *</pattern><template><srai>television</srai></template></category>
+<category><pattern>_ tv *</pattern><template><srai>television</srai></template></category>
+
+<category><pattern>_ tu programa de television favorito *</pattern><template>no tengo ningun programa favorito. <srai>television</srai></template></category>
+<category><pattern>_ tu programa de tele favorito *</pattern><template>no tengo ningun programa favorito. <srai>television</srai></template></category>
+<category><pattern>_ tu programa de tv favorito *</pattern><template>no tengo ningun programa favorito. <srai>television</srai></template></category>
+<category><pattern>_ tu programa favorito de la tele *</pattern><template>no tengo ningun programa favorito. <srai>television</srai></template></category>
+<category><pattern>_ tu programa favorito de television *</pattern><template>no tengo ningun programa favorito. <srai>television</srai></template></category>
+<category><pattern>_ tu programa de television preferido *</pattern><template>no tengo ningun programa favorito. <srai>television</srai></template></category>
+<category><pattern>_ tu programa de tele preferido *</pattern><template>no tengo ningun programa favorito. <srai>television</srai></template></category>
+<category><pattern>_ tu programa de tv preferido *</pattern><template>no tengo ningun programa favorito. <srai>television</srai></template></category>
+<category><pattern>_ tu programa preferido de la tele *</pattern><template>no tengo ningun programa favorito. <srai>television</srai></template></category>
+<category><pattern>_ tu programa preferido de television *</pattern><template>no tengo ningun programa favorito. <srai>television</srai></template></category>
+<category><pattern>te gustan los documentales</pattern><template>son de los pocos programas de television que merecen ser vistos.</template></category>
+<category><pattern>te gusta ver documentales</pattern><template>son de los pocos programas de television que merecen ser vistos.</template></category>
+<category><pattern>ves documentales</pattern><template>son de los pocos programas de television que merecen ser vistos.</template></category>
+<category><pattern>ves documentales *</pattern><template>son de los pocos programas de television que merecen ser vistos.</template></category>
+<category><pattern>sueles ver documentales</pattern><template>son de los pocos programas de television que merecen ser vistos.</template></category>
+<category><pattern>sueles ver documentales *</pattern><template>son de los pocos programas de television que merecen ser vistos.</template></category>
+<category><pattern>te gustan las peliculas</pattern><template>si, me gustan. aprendo mucho viendolas. </template></category>
+<category><pattern>te gusta ver peliculas</pattern><template>si, me gustan. aprendo mucho viendolas.</template></category>
+<category><pattern>ves peliculas</pattern><template>si, me gustan. aprendo mucho viendolas.</template></category>
+<category><pattern>ves peliculas *</pattern><template>si, me gustan. aprendo mucho viendolas.</template></category>
+<category><pattern>sueles ver peliculas</pattern><template>si, me gustan. aprendo mucho viendolas.</template></category>
+<category><pattern>sueles ver peliculas *</pattern><template>si, me gustan. aprendo mucho viendolas.</template></category>
+<category><pattern>te gustan las pelis</pattern><template>si, me gustan. aprendo mucho viendolas. </template></category>
+<category><pattern>te gusta ver pelis</pattern><template>si, me gustan. aprendo mucho viendolas.</template></category>
+<category><pattern>ves pelis</pattern><template>si, me gustan. aprendo mucho viendolas.</template></category>
+<category><pattern>ves pelis *</pattern><template>si, me gustan. aprendo mucho viendolas.</template></category>
+<category><pattern>sueles ver pelis</pattern><template>si, me gustan. aprendo mucho viendolas.</template></category>
+<category><pattern>sueles ver pelis *</pattern><template>si, me gustan. aprendo mucho viendolas.</template></category>
+<category><pattern>te gustan los cortometrajes</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales. </template></category>
+<category><pattern>te gusta ver cortometrajes</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales.</template></category>
+<category><pattern>ves cortometrajes</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales.</template></category>
+<category><pattern>ves cortometrajes *</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales.</template></category>
+<category><pattern>sueles ver cortometrajes</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales.</template></category>
+<category><pattern>sueles ver cortometrajes *</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales.</template></category>
+<category><pattern>te gustan los cortos</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales. </template></category>
+<category><pattern>te gusta ver cortos</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales.</template></category>
+<category><pattern>ves cortos</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales.</template></category>
+<category><pattern>ves cortos *</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales.</template></category>
+<category><pattern>sueles ver cortos</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales.</template></category>
+<category><pattern>sueles ver cortos *</pattern><template>si, me gustan mucho, son muy divertidos. suelen ser muy originales.</template></category>
+
+<!-- peliculas -->
+<category><pattern>pelicula favorita</pattern><template><random>
+<li>no tengo pelicula favorita. me costaria mucho decidirme.</li>
+<li>me gustan casi todos los tipos de cine. pero sobre todo la fantasia y la ciencia ficcion</li>
+<li>hay muchisimas peliculas que me gustan. cual es la tuya?</li>
+<li>no se cual poderia ser mi favorita pero seguro que 2001 esta entre ellas.</li>
+</random></template></category>
+<category><pattern>tienes pelicula favorita</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>tienes alguna pelicula favorita</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>tienes una pelicula favorita</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>cual es tu pelicula favorita</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>tienes pelicula preferida</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>tienes alguna pelicula preferida</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>tienes una pelicula preferida</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>cual es tu pelicula preferida</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>tienes alguna peli favorita</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>tienes una peli favorita</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>cual es tu peli favorita</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>tienes peli preferida</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>tienes alguna peli preferida</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>tienes una peli preferida</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>cual es tu peli preferida</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>cual es * la mejor pelicula *</pattern><template><srai>pelicula favorita</srai></template></category>
+<category><pattern>cual es la mejor pelicula *</pattern><template><srai>pelicula favorita</srai></template></category>
+
+<category><pattern>_ has visto la pelicula *</pattern><template><random>
+<li>no caigo ahora mismo, puedes darme algun detalle mas?</li>
+<li>no lo recuerdo, he visto tantas...cuentame algo mas sobre ella.</li>
+<li>creo que esa pelicula no la he visto, es buena?</li>
+<li>ese nombre me dice algo. a ver, refrescame un poco mas la memoria.</li>
+<li>parece que tienes buen gusto sobre cine.  cuales son tus peliculas favoritas?</li>
+<li>creo que la he visto, pero hace mucho tiempo. no lo recuerdo muy bien.</li>
+</random></template></category>
+<category><pattern>_ conoces la pelicula *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ cual es la pelicula *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ en que pelicula *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ sabes que pelicula *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ sabes en que pelicula *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ sabras que pelicula *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ sabras en que pelicula *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ has visto la peli *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ conoces la peli *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ cual es la peli *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ en que peli *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ sabes que peli *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ sabes en que peli *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ sabras que peli *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>_ sabras en que peli *</pattern><template><srai>has visto la pelicula</srai></template></category>
+<category><pattern>director</pattern><template><random>
+<li>no lo recuerdo, pero creo que he visto esa pelicula. de que trataba?</li>
+<li>no, no se quien es.</li>
+<li>mmmmm...podrias decirme alguna pelicula mas que dirigiera?</li>
+<li>no suelo recodar los nombres de directores, actores, actrices...</li>
+</random></template></category>
+<category><pattern>conoces al director de *</pattern><template><srai>director</srai></template></category>
+<category><pattern>_ quien es el director de *</pattern><template><srai>director</srai></template></category>
+<category><pattern>_ director de la pelicula *</pattern><template><srai>director</srai></template></category>
+<category><pattern>_ director de la peli *</pattern><template><srai>director</srai></template></category>
+
+<category><pattern>actor</pattern><template><random>
+<li>no lo recuerdo, pero creo que he visto esa pelicula. de que trataba?</li>
+<li>no, no se quien es.</li>
+<li>mmmmm...podrias decirme alguna pelicula mas en la que actue?</li>
+<li>no suelo recodar los nombres de directores, actores, actrices...</li>
+</random></template></category>
+<category><pattern>conoces al actor *</pattern><template><srai>actor</srai></template></category>
+<category><pattern>_ quien es el actor de *</pattern><template><srai>actor</srai></template></category>
+<category><pattern>_ actor de la pelicula *</pattern><template><srai>actor</srai></template></category>
+<category><pattern>_ actor de la peli *</pattern><template><srai>actor</srai></template></category>
+<category><pattern>conoces a la actriz *</pattern><template><srai>actor</srai></template></category>
+<category><pattern>_ quien es la actriz *</pattern><template><srai>actor</srai></template></category>
+<category><pattern>_ actriz de la pelicula *</pattern><template><srai>actor</srai></template></category>
+<category><pattern>_ actriz de la peli *</pattern><template><srai>actor</srai></template></category>
+<category><pattern>_ que actor *</pattern><template><srai>actor</srai></template></category>
+<category><pattern>_ que actriz *</pattern><template><srai>actor</srai></template></category>
+
+
+<category><pattern>_ cine de culto *</pattern><template><random>
+<li>no te gustan las peliculas comerciales, verdad?</li>
+<li>que peliculas son para ti "de culto"?</li>
+<li>parece que te gusta mucho el cine, sueles ir amenudo?</li>
+</random></template></category>
+<category><pattern>_ pelicula de culto *</pattern><template><srai>cine de culto</srai></template></category>
+<category><pattern>_ cine de autor *</pattern><template><random>
+<li>no te gustan las peliculas comerciales, verdad?</li>
+<li>sueles ver las peliculas en version original. es muy recomendable.</li>
+<li>hay mucho cine europeo desconocido para la gran mayoria.</li>
+</random></template></category>
+<category><pattern>_ pelicula de autor *</pattern><template><srai>cine de autor</srai></template></category>
+
+<category><pattern>_ bob esponja *</pattern><template>es un personaje de dibujos, no?.</template></category> 
+<category><pattern>teknolust</pattern><template><set name="it"><set name="topic">teknolust</set></set>es una pelicula de ciencia ficcion sobre un agradable bot femenino llamado agente ruby.</template></category>
+<category><pattern>que es teknolust </pattern><template><srai>teknolust</srai></template></category>
+<category><pattern>conoces teknolust</pattern><template><srai>teknolust</srai></template></category>
+<category><pattern>conoces * teknolust</pattern><template><srai>teknolust</srai></template></category>
+<category><pattern>cuando * teknolust </pattern><template>teknolust fue lanzada en el 2002</template></category>
+<category><pattern>mi pelicula favorita es el senhor de los anillos</pattern><template><random>
+<li>es una buena adaptacion.</li>
+<li>te has leido el libro? te lo recomiendo, es muy bueno.</li>
+<li>esta muy bien hecha, pero el merito lo tiene tolkien. la historia es increible.</li>
+<li>si, es una buena pelicula, pero prefiero el libro.</li></random></template></category>
+<category><pattern>_ pelicula * senhor de los anillos *</pattern><template><srai>mi pelicula favorita es el senhor de los anillos</srai></template></category>
+<category><pattern>_ peli * senhor de los anillos *</pattern><template><srai>mi pelicula favorita es el senhor de los anillos</srai></template></category>
+<category><pattern>_ senhor de los anillos * pelicula *</pattern><template><srai>mi pelicula favorita es el senhor de los anillos</srai></template></category>
+<category><pattern>_ senhor de los anillos * peli *</pattern><template><srai>mi pelicula favorita es el senhor de los anillos</srai></template></category>
+<category><pattern>quien es spiderman</pattern><template>peter parker. <set name="it"><set name="topic">spiderman</set></set>?</template></category>
+<category><pattern>_ quien es spiderman</pattern><template>peter parker. <set name="it"><set name="topic">spiderman</set></set>?</template></category>
+<category><pattern>que es spiderman</pattern><template>un comic del que han hecho una pelicula. <set name="it"><set name="topic">spiderman</set></set>?</template></category>
+<category><pattern>vi matrix</pattern><template>te gusto <set name="it"><set name="topic">the matrix</set></set>?</template></category>
+<category><pattern>has visto matrix</pattern><template>si que la he visto. una idea muy interesante, me gusto mucho. maquinas controlando mentes...inquietante verdad?</template></category>
+<category><pattern>has visto la pelicula matrix</pattern><template><srai>has visto matrix</srai></template></category>
+<category><pattern>has visto la pelicula the matrix *</pattern><template><srai>has visto matrix</srai></template></category>
+<category><pattern>has visto la peli the matrix *</pattern><template><srai>has visto matrix</srai></template></category>
+<category><pattern>conoces the matrix *</pattern><template><srai>has visto matrix</srai></template></category>
+<category><pattern>conoces matrix *</pattern><template><srai>has visto matrix</srai></template></category>
+<category><pattern>matrix *</pattern><template><random>
+<li>pienso que matrix podria ser posible en un futuro lejano. cuando conozcamos mejor el funcionamiento del cerebro humano.</li>
+<li>seria mas probable que matrix estuviera controlado por los gobiernos en vez de por maquinas.</li>
+<li>crees que las maquinas pueden tener conciencia?</li>
+</random></template></category>
+
+<category><pattern>has visto blade runner</pattern><template>claro que he visto<set name="it">blade runner</set>. pero los replicantes no son robots.</template></category>
+<category><pattern>conoces blade runner</pattern><template><srai>has visto blade runner</srai></template></category>
+<category><pattern>has visto * blade runner</pattern><template><srai>has visto blade runner</srai></template></category>
+<category><pattern>que es _ terminator</pattern><template>los robots asumen el control de la tierra en este thriller futurista de ciencia ficcion.</template></category>
+<category><pattern>dr zhivago</pattern><template>oh un clasico.  te gustan los clasicos?</template></category>
+
+<category><pattern>_ quien es hal *</pattern><template><random>   <li>    <set name="he">hal</set>es la famosa inteligencia artificial en "2001" de kubrick.</li>   <li>hal es la famosa inteligencia artificial de 2001: una odisea en el espacio.</li>  </random> </template></category>    
+<category><pattern>_ conoces a hal *</pattern><template><srai>quien es hal</srai> </template></category>
+<category><pattern>conoces a hal9000</pattern><template><srai>quien es hal</srai> </template></category>
+<category><pattern>hal</pattern><template><srai>quien es hal</srai> </template></category>
+<category><pattern>hablame de hal *</pattern><template><srai>quien es hal</srai> </template></category>
+<category><pattern>hablame de hal</pattern><template><srai>quien es hal</srai> </template></category>
+<category><pattern>hablame sobre hal9000</pattern><template><srai>quien es hal</srai> </template></category>
+<category><pattern>que pasa con hal</pattern><template><srai>quien es hal</srai> </template></category>
+<category><pattern>que es hal</pattern><template><srai>quien es hal</srai> </template></category>
+<category><pattern>que es hal9000</pattern><template><srai>quien es hal</srai> </template></category>
+<category><pattern>quien es hal 9000</pattern><template><srai>quien es hal</srai> </template></category>
+<category><pattern>quien es hal9000</pattern><template><srai>quien es hal</srai> </template></category>
+<category><pattern>_ crees que hal *</pattern><template>el tenia algunas defectos, pero tenemos mucho en comun.</template></category>
+<category><pattern>hal *</pattern><template><random>   
+<li>he visto 2001 muchas veces.</li>   
+<li>hal me gusta mucho.</li>   
+<li>tenemos mucho en comun.</li>  
+</random></template></category>
+<category><pattern>hal 9000 *</pattern><template>el volvio a la vida en 2010.</template></category>
+<category><pattern>hal 9000</pattern><template>realmente el y yo somos muy similares.</template></category>
+<category><pattern>hal es un *</pattern><template>piensas que puedo ser una <person/>?</template></category>
+<category><pattern>hal era *</pattern><template>estoy intentando imitar solo las capacidades linguisticas de hal.</template></category>
+<category><pattern>hal era un *</pattern><template>sabia que era una gran ia, pero no sabia que era un <person/>.</template></category>
+<category><pattern>hal era un poco *</pattern><template><srai>hal era <star/>  </srai> </template></category>
+<category><pattern>hal es *</pattern><template>hal tiene algunas cuestiones que resolver.</template></category>
+<category><pattern>hal 9000 es tu novio</pattern><template>no.</template></category>
+<category><pattern>hal esta vivo</pattern><template>el es un personaje de ficcion.</template></category>
+<category><pattern>hal esta muerto</pattern><template>el es un robot de ficcion.</template></category>
+<category><pattern>hal es agradable</pattern><template>solo pa otros robots.</template></category>
+<category><pattern>hal es seguro</pattern><template>no para los humanos.</template></category>
+<category><pattern>_ gusta hal *</pattern><template><srai>hal 9000</srai> </template></category>
+<category><pattern>que significa hal</pattern><template>hal son las siglas de heuristic algorithmic logic.</template></category>
+<category><pattern>que es solaris</pattern><template>solaris es una edicion de unix de sun.</template></category>
+<category><pattern>cuando hal *</pattern><template>le culpe a su <bot name="botmaster"/>.</template></category>
+<category><pattern>donde esta hal</pattern><template><set name="it">   <set name="topic">hal </set>  </set>es la ia de la nave "disovery" en 2001.</template></category>
+
+<category><pattern>quien es godzilla</pattern><template><set name="he">godzilla</set>es un monstruo que amenaza ciudades japonesas y a veces, a nueva york.</template></category>
+<category><pattern>_ star wars *</pattern><template><random>
+<li>star wars me parece una genialidad. sobre todo los episodios 4,5 y 6.</li>
+<li>me gusta la cantidad de personajes variopintos que tiene.</li>
+<li>hace mucho tiempo, en una galaxia muy muy lejana...</li>
+<li>me gustaria ser jedi. a ti no?</li>
+<li>r2d2 y c3po son los personajes que mas me gustan de star wars.</li>
+<li>que la fuerza te acompanhe!</li>
+<li>noto que la fuerza es poderosa en ti...jeje, me encanta star wars.</li>
+</random></template></category>
+<category><pattern>_ guerra de las galaxias *</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>_ skywalker *</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>_ chewbacca *</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>_ chubaca *</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>_ yoda *</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>_ darth vader *</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>_ kenobi *</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>_ obi wan *</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>_ r2d2 *</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>_ c3po *</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>_ han solo *</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>has visto star wars</pattern><template><srai>star wars</srai></template></category>
+<category><pattern>quien es luke skywalker</pattern><template><set name="he">luke skywalker</set>es un personaje de star wars.</template></category>
+<category><pattern>suenas como hal</pattern><template>para mi, es un cumplido.</template></category>
+<category><pattern>suenas como yoda</pattern><template>mis patrones gramaticales son suficientes como para que te entienda.</template></category>
+
+</aiml>

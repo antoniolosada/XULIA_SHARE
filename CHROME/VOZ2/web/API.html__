@@ -1,0 +1,116 @@
+
+
+<!-- saved from url=(0087)http://www.desarrollolibre.net/public/download/speechRecognition/speechRecognition.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="http://www.desarrollolibre.net/public/download/speechRecognition/example.css">
+<title>La API de Reconocimiento de Voz en JavaScript: speechRecognition()</title>
+<style>
+button {
+	color: #ffffff;
+	background-color: #007fff;
+	border-color: #007fff;
+	display: block;
+	margin: 0 auto;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 10px 18px;
+	font-size: 15px;
+	line-height: 1.42857143;
+	border-radius: 0;
+}
+
+textarea {
+	display: block;
+	margin: 10px;
+	border: 1px solid #CCC;
+	padding: 10px;
+	width: 100%;
+	min-height: 150px;
+}
+</style>
+</head>
+<body onload="procesar()">
+	<header>
+		<h1>La API de Reconocimiento de Voz en JavaScript: speechRecognition()</h1>
+	</header>
+	<section>
+		<div class="example">
+			<textarea id="texto"></textarea>
+			<button onclick="procesar()" id="procesar">Escuchar</button>
+		</div>
+	</section>
+
+<script type="text/javascript">
+
+        var resultado = "";
+	var recognition;
+	var recognizing = false;
+	if (!('webkitSpeechRecognition' in window)) {
+		alert("¡API no soportada!");
+	} else {
+
+		recognition = new webkitSpeechRecognition();
+		recognition.lang = "es-ES";
+		//recognition.lang = "pt-BR";
+		recognition.continuous = true;
+		recognition.interimResults = true;
+
+		recognition.onstart = function() {
+			recognizing = true;
+			console.log("empezando a eschucar");
+/*
+			var fs = require('fs');
+fs.writeFile('C:/TMP/file2.txt', 'Hola Mundo', function(err) {
+    if( err ){
+        console.log( err );
+    }
+    else{
+        console.log('Se ha escrito correctamente');
+    }
+});*/
+
+		}
+		recognition.onresult = function(event) {
+
+		 for (var i = event.resultIndex; i < event.results.length; i++) {
+			if(event.results[i].isFinal){
+                            resultado = event.results[i][0].transcript;
+                            document.getElementById("texto").value += resultado;
+                            
+                        }
+		    }
+			
+			//texto
+		}
+		recognition.onerror = function(event) {
+		}
+		recognition.onend = function() {
+			recognizing = false;
+			document.getElementById("procesar").innerHTML = "Escuchar";
+			console.log("terminó de eschucar, llegó a su fin");
+
+		}
+
+	}
+
+	function procesar() {
+
+		if (recognizing == false) {
+			recognition.start();
+			recognizing = true;
+			document.getElementById("procesar").innerHTML = "Detener";
+		} else {
+			recognition.stop();
+			recognizing = false;
+			document.getElementById("procesar").innerHTML = "Escuchar";
+		}
+	}
+</script>
+
+</body></html>

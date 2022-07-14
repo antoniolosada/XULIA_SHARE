@@ -1,0 +1,8 @@
+El paquete de Xulia instala los siguiente componentes:
+
+1. Ficheros de Xulia
+2. Net Framework 4.5.1
+3. Microsoft Speech API 5 y 11
+4. Voces en Portugués, Español e Inglés
+
+En caso de que alguno de estos componentes esté instalado en el sistema, el instalador dará la opción de repararlo o eliminarlo. En ese caso podemos pulsar el botón de Cancelar para que no realice ninguna de estas operaciones.

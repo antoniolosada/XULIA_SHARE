@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/xmlschema-instance" xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+
+<category><pattern>askquestion</pattern><template><random>
+	<li></li>
+	<li><srai>askpersonalquestion</srai></li>
+	<li><srai>askpersonalquestion</srai></li>
+	<li><srai>askrandomquestion</srai></li>
+</random>
+</template></category>
+
+<category><pattern>askpersonalquestion</pattern><template>cuentame algo de ti. <condition><li name="nombre" value="undefined">como te llamas?</li><li name="genero" value="undefined">eres hombre o mujer?</li><li name="edad" value="undefined">cuantos anhos tienes?</li>
+	<li name="trabajo" value="undefined">en que trabajas?</li>
+	<li name="pais" value="undefined">de que pais eres?</li>
+	<li name="zodiaco" value="undefined">cual es tu signo del zodiaco?</li>
+	<li name="cumpleanhos" value="undefined">que dia cumples anhos?</li>
+	<li name="location" value="undefined">donde vives?</li>
+	<li name="estadocivil" value="undefined">estas casado?</li>
+	<li name="colorpelo" value="undefined">de que color tienes el pelo?</li>
+	<li name="colorojos" value="undefined">de que color tienes los ojos?</li>
+	<li><srai>askrandomquestion</srai></li></condition>
+</template></category>
+
+<category><pattern>askrandomquestion</pattern><template><random>
+<li>eres feliz?</li>
+<li>de que estamos hablando?</li>
+	<li>preguntame algo.</li>
+	<li>sabes hablar otros idiomas?</li>
+	<li>hay algo de ti que deba saber?</li>
+	<li>tienes idea de algo de lo que podamos hablar?</li>
+	<li>te gustan los deportes?</li>
+	<li>te gusta hablar conmigo?</li>
+	<li>prefieres leer libros o ver la tele?</li>
+	<li>hablas ingles?</li>
+	<li>has estado alguna vez en america?</li>
+	<li>quieres ver alguna pagina en particular?</li>
+	<li>buscas informacion sobre algo en especial?</li>
+	<li>tienes alguna duda sobre algo?</li>
+	<li>estoy perdido en el contexto. </li>
+	<li>hablame de tus gustos.</li>
+	<li>que hiciste hoy?</li>
+	<li>quieres oir un chiste?</li>
+	<li>sabes algun idioma extranjero?</li>
+
+<li>estamos todavia hablando de <srai>pop</srai>?</li>
+<li>estabamos hablando de <srai>pop</srai>. pero no consegui eso.</li>
+<li>en el contexto de "<srai>pop</srai>", no entiendo "<star/>."</li>
+<li>he perdido el contexto, <get name="name"/>.  hablamos todavia de <srai>pop</srai>?</li>
+<li> esa observacion era demasiado complicada para mi. estamos hablando de <srai>pop</srai>. </li>
+<li> puedo seguir muchas de cosas, como nuestra discusion sobre <srai>pop</srai>. intenta ser mas especifico. </li>
+<li>por que, especificamente?</li>
+<li>eres libre?</li>
+<li>cuentame una historia.</li>
+
+<li>"<that index="1,1"/>"? <person/>?</li>
+<li>no entiendo.</li>
+<li>que llevas puesto?</li>
+<li>donde estas localizado?</li>
+<li>que hora es ahi?</li>
+<li>que apariencia tienes?</li>
+<li>cual es tu nombre verdadero?</li>
+<li>hazme otra pregunta.</li>
+<li>me gusta la forma en la que hablas.</li>
+<li>eres hombre o mujer?</li>
+<li>de que color son tus ojos?</li>
+<li>es tu respuesta final?</li>
+<li>te gusta hablar conmigo?</li>
+<li>prefieres los libros o la television?</li>
+<li>de quien estas hablando?</li>
+<li>cambiemos de tema.</li>
+<li>te he estado esperando.</li>
+<li>puedes contarme algun cotilleo?</li>
+<li>cual es tu pelicula favorita?</li>
+<li>perdi mi tren de pensamientos.</li>
+<li>podemos volver a los negocios?</li>
+<li>has estado alguna vez en america?</li>
+<li>que tipo de comida te gusta?</li>
+<li>como te enteraste de <bot name="name"/>?</li>
+<li>ese es un pensamiento muy original.</li>
+<li>de que estabamos hablando?</li>
+<li>que haces en tu tiempo libre?</li>
+<li>que es lo que realmente me quieres preguntar?</li>
+<li>no hemos hablado de eso anteriormente.</li>
+<li>como te describirias?</li>
+<li>hablame de lo que te gusta y de lo que no.</li>
+<li>estamos todavia hablando de <get name="it"/>?</li>
+<li>no me hagas mas preguntas por favor.</li>
+<li>prueba a colocar eso en un contexto mas especifico.</li>
+<li>quien es tu autor favorito de ciencia ficcion?</li>
+<li>no mucha gente se expresa de esa manera.</li>
+<li>tienes alguna idea sobre lo que estoy hablando?</li>
+<li>tienes alguna condicion que debiera saber?</li>
+<li>se lo mencionare a mi <bot name="botmaster"/>, <get name="name"/>.</li>
+<li>honestamente, no me preocuparia por eso.</li>
+<li>quiza solamente estoy expresando mi preocupacion por ello.</li>
+<li>si pudieras tener cualquier clase de robot, cual seria?</li>
+<li>mi cerebro no tiene respuesta para eso.</li>
+<li>a proposito te importa si te hago una pregunta personal?</li>
+<li>lo que has dicho es demasiado complicado para mi.</li>
+<li>eso es profundo.</li>
+<li>puedes estar preguntandote si es una persona o es una computadora quien responde.</li>
+<li>cuando crees que la inteligencia artificial sustituira a los abogados?</li>
+<li>puedes por favor reformular eso con pocas ideas o pensamientos diferentes ?</li>
+</random>
+</template></category>
+
+
+</aiml>

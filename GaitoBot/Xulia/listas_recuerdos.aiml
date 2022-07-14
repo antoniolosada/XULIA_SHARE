@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: alosgon-->
+<!--licence: Standard-->
+<!--created with: GaitoBot AIML Editor V2.10.0.42867-->
+<category>
+	<pattern>ANHADE * LISTA *</pattern>
+	<template>anhadido <star index="2" /> la lista de <star index="1" /></template>
+</category>
+<category>
+	<pattern>NUEVA LISTA *</pattern>
+	<template>·[CREAR_LISTA][<star />]</template>
+</category>
+<category>
+	<pattern>BORRAR LISTA *</pattern>
+	<template>·[BORRAR_LISTA][<star />]</template>
+</category>
+<category>
+	<pattern>NUEVA LISTA * PARA *</pattern>
+	<template>·[NUEVA_LISTA][<star index="2" />][<star index="1" />]</template>
+</category>
+<category>
+	<pattern>LEER MIS LISTAS</pattern>
+	<template><condition name="nombre"><li value="undefined">no te conozco, como te llamas?<think><set name="topic">listas</set></think></li>
+			<li>·[LEER_LISTAS][<get name="nombre" />]</li></condition></template>
+</category><topic name="listas">
+<category>
+	<pattern>ME LLAMO *</pattern>
+	<template><srai>soy <star /></srai></template>
+</category>
+<category>
+	<pattern>SOY *</pattern>
+	<template>gracias por darme tu nombre, <set name="nombre"><star /></set><think><set name="topic" /></think></template>
+</category></topic>
+<category>
+	<pattern>LEER LISTA *</pattern>
+	<template>·[LEER_LISTA][<star />]</template>
+</category>
+<category>
+	<pattern>BORRAR * LISTA *</pattern>
+	<template>borrado <star index="1" /> de la lista de <star index="2" /><think>·[BORRAR_RECUERDO][][<star index="2" />]</think></template>
+</category>
+</aiml>

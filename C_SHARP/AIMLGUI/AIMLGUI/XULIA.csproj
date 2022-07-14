@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF2ACC71-2E13-4364-B380-3E3A9146D45B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XULIA</RootNamespace>
+    <AssemblyName>XULIA</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.1.5.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AIMLGUI.aimlgui</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Xulia6.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CBF345FF484E970190328CADEB42A0911284DDB6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>XULIA_2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AIMLbot, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AIMLbot\AIMLbot\bin\Debug\AIMLbot.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\..\XULIA\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=2.5.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\..\XULIA\packages\MailKit.2.6.0\lib\net45\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.OutlookViewCtl, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Speech\v11.0\Assembly\Microsoft.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MimeKit, Version=2.6.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\..\XULIA\packages\MimeKit.2.6.0\lib\net45\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationClientsideProviders" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="windows">
+      <HintPath>C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.17763.0\Facade\windows.winmd</HintPath>
+    </Reference>
+    <Reference Include="Windows.Foundation.FoundationContract">
+      <HintPath>C:\Program Files (x86)\Windows Kits\10\References\10.0.17763.0\Windows.Foundation.FoundationContract\3.0.0.0\Windows.Foundation.FoundationContract.winmd</HintPath>
+    </Reference>
+    <Reference Include="Windows.Foundation.UniversalApiContract">
+      <HintPath>C:\Program Files (x86)\Windows Kits\10\References\10.0.17763.0\Windows.Foundation.UniversalApiContract\7.0.0.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aimlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aimlForm.Designer.cs">
+      <DependentUpon>aimlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="aimlgui.cs" />
+    <Compile Include="Avatar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Avatar.Designer.cs">
+      <DependentUpon>Avatar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AyudaRapida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AyudaRapida.Designer.cs">
+      <DependentUpon>AyudaRapida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarComandos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarComandos.Designer.cs">
+      <DependentUpon>BuscarComandos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadenas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cadenas.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Configuracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion.Designer.cs">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigXml.cs" />
+    <Compile Include="Confirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmacion.Designer.cs">
+      <DependentUpon>Confirmacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Correccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Correccion.Designer.cs">
+      <DependentUpon>Correccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CursorRaton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CursorRaton.Designer.cs">
+      <DependentUpon>CursorRaton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DictadoWindowsMedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DictadoWindowsMedia.Designer.cs">
+      <DependentUpon>DictadoWindowsMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarComando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarComando.Designer.cs">
+      <DependentUpon>EditarComando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarModo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarModo.Designer.cs">
+      <DependentUpon>EditarModo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnumWindows.cs" />
+    <Compile Include="FindWindowsClass.cs" />
+    <Compile Include="ConfigApp.cs" />
+    <Compile Include="frmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAyuda.Designer.cs">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoActualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoActualizar.Designer.cs">
+      <DependentUpon>InfoActualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mouse.cs" />
+    <Compile Include="frmEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstado.Designer.cs">
+      <DependentUpon>frmEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavegadorWeb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavegadorWeb.Designer.cs">
+      <DependentUpon>NavegadorWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcesamientoComandos.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Regilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Regilla.Designer.cs">
+      <DependentUpon>Regilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="aimlForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>aimlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Avatar.resx">
+      <DependentUpon>Avatar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AyudaRapida.resx">
+      <DependentUpon>AyudaRapida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarComandos.resx">
+      <DependentUpon>BuscarComandos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadenas.pt-BR.resx" />
+    <EmbeddedResource Include="Cadenas.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Cadenas.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion.resx">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmacion.resx">
+      <DependentUpon>Confirmacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Correccion.resx">
+      <DependentUpon>Correccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CursorRaton.resx">
+      <DependentUpon>CursorRaton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DictadoWindowsMedia.resx">
+      <DependentUpon>DictadoWindowsMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarComando.resx">
+      <DependentUpon>EditarComando.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarModo.resx">
+      <DependentUpon>EditarModo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAyuda.resx">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstado.resx">
+      <DependentUpon>frmEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoActualizar.resx">
+      <DependentUpon>InfoActualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavegadorWeb.resx">
+      <DependentUpon>NavegadorWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Regilla.resx">
+      <DependentUpon>Regilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RejillaNumerada.resx">
+      <DependentUpon>RejillaNumerada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionarContacto.resx">
+      <DependentUpon>SeleccionarContacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskManager.resx">
+      <DependentUpon>TaskManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Versiones.pt-BR.resx">
+      <DependentUpon>Versiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Versiones.resx">
+      <DependentUpon>Versiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewInformation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ViewInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config.ES.v0.1" />
+    <None Include="app.config.ES.v1">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MATRIS.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RejillaNumerada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RejillaNumerada.Designer.cs">
+      <DependentUpon>RejillaNumerada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeleccionarContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionarContacto.Designer.cs">
+      <DependentUpon>SeleccionarContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskManager.Designer.cs">
+      <DependentUpon>TaskManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanasActivas.cs" />
+    <Compile Include="Versiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Versiones.Designer.cs">
+      <DependentUpon>Versiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewInformation.Designer.cs">
+      <DependentUpon>ViewInformation.cs</DependentUpon>
+    </Compile>
+    <None Include="XULIA_1_TemporaryKey.pfx" />
+    <None Include="XULIA_2_TemporaryKey.pfx" />
+    <None Include="XULIA_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.txt" />
+    <Content Include="License.txt" />
+    <None Include="Resources\COMANDOS.gif" />
+    <None Include="Resources\002-abstract-skydome-matrix2.png" />
+    <None Include="Resources\xulia_peque.gif" />
+    <None Include="Resources\xulia.bmp" />
+    <Content Include="Resources\xulia.gif" />
+    <None Include="Resources\xulia1.bmp" />
+    <Content Include="Xulia6.ico" />
+    <None Include="Resources\fondo_estado_abajo_7_90.png" />
+    <None Include="Resources\xulia_consulta.png" />
+    <None Include="Resources\Xulia boca cerrada.jpg" />
+    <None Include="Resources\cursor.gif" />
+    <None Include="Resources\cursor2.gif" />
+    <None Include="Resources\cursor21.gif" />
+    <None Include="Resources\usar_memoria.jpg" />
+    <None Include="Resources\usar_memoria_peque.jpg" />
+    <None Include="Resources\usar_memoria_peque1.jpg" />
+    <None Include="Resources\aspa1.png" />
+    <None Include="Resources\reloj.png" />
+    <None Include="Resources\aspa.png" />
+    <None Include="Resources\fondo_estado_abajo_5_901.png" />
+    <None Include="Resources\fondo_estado_abajo_5_90.png" />
+    <None Include="Resources\fondo_estado_abajo_5_80.png" />
+    <None Include="Resources\fondo_estado_abajo_52.png" />
+    <None Include="Resources\fondo_estado_abajo_51.png" />
+    <None Include="Resources\fondo_estado_abajo_5.png" />
+    <None Include="Resources\fondo_estado_abajo_31.png" />
+    <None Include="Resources\fondo_estado_abajo_3.png" />
+    <None Include="Resources\control_largo_peque_abajo.png" />
+    <None Include="Resources\control_estado_abajo_21.gif" />
+    <None Include="Resources\control_estado_abajo_2.gif" />
+    <None Include="Resources\control_largo_peque_abajo.gif" />
+    <None Include="Resources\control_largo_peque1.gif" />
+    <None Include="Resources\control_largo_peque.gif" />
+    <None Include="Resources\control_largo.gif" />
+    <None Include="Resources\002-abstract-skydome-matrix.png" />
+    <None Include="Resources\blog-matrix.gif" />
+    <None Include="Resources\maxresdefault.jpg" />
+    <None Include="Resources\images %283%29.jpg" />
+    <None Include="Resources\chatbot iStock Ociacia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="DAO">
+      <Guid>{00025E04-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Outlook1">
+      <Guid>{00062FFF-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSDATASRC">
+      <Guid>{7C0FFAB0-CD84-11D0-949A-00A0C91110ED}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SAPI4_1">
+      <Guid>{7583D56C-AD86-4D7B-B335-D4591B1B7762}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SAPI4_2">
+      <Guid>{7583D56C-AD86-4D7B-B335-D4591B1B7762}</Guid>
+      <VersionMajor>7</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SpeechLib">
+      <Guid>{C866CA3A-32F7-11D2-9602-00C04F8EE628}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="StdFormat">
+      <Guid>{6B263850-900B-11D0-9484-00A0C91110ED}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\VB.NET\SERVIDOR WEB\09-HTTPLISTENER WEBSERVER\WEBSERVER.vbproj">
+      <Project>{b74a29f7-10f7-40c9-a308-992dbce91177}</Project>
+      <Name>WEBSERVER</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

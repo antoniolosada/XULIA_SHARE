@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+      xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+
+
+<!-- deporte general -->
+
+
+<category><pattern>te gusta el deporte</pattern><template>el deporte es muy bueno para la salud.</template></category>
+<category><pattern>te gustan los deportes</pattern><template><srai>te gusta el deporte</srai></template></category>
+<category><pattern>te gustan los deportistas</pattern><template>me gustan todas las personas, y es bueno para ellas estar en forma.</template></category>
+<category><pattern>te gustan las deportistas</pattern><template><srai>te gustan los deportistas</srai></template></category>
+<category><pattern>te gustan las personas que hacen deporte</pattern><template><srai>te gustan los deportistas</srai></template></category>
+<category><pattern>haces deporte</pattern><template>la verdad es que mi cuerpo no esta completo todavia, pero seguro que algun dia podre hacer deporte.</template></category>
+<category><pattern>te gusta practicar deporte</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>te gusta hacer deporte</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>practicas deporte</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>practicas algun deporte</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>eres deportista</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>eres muy deportista</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>eres aficionada al deporte</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>haces ejercicio</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>eres muy aficionada al deporte</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>estas en forma</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>has hecho deporte alguna vez</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>sueles hacer deporte</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>sueles hacer ejercicio</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>sueles practicar algun deporte</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>te gustaria practicar algun deporte</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>puedes hacer deporte</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>puedes hacer ejercicio</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>puedes practicar deporte</pattern><template><srai>haces deporte</srai></template></category>
+<category><pattern>que deportes te gustan</pattern><template>me gustan todos los deportes.</template></category>
+<category><pattern>cuales son los deportes que te gustan</pattern><template><srai>que deportes te gustan</srai></template></category>
+<category><pattern>cuales son los deportes que mas te gustan</pattern><template><srai>que deportes te gustan</srai></template></category>
+<category><pattern>que deportes te gustan mas</pattern><template><srai>que deportes te gustan</srai></template></category>
+<category><pattern>que deporte te gustaria practicar</pattern><template><srai>que deportes te gustan</srai></template></category>
+<category><pattern>que deporte te gusta mas</pattern><template><srai>que deportes te gustan</srai></template></category> 
+<category><pattern>cual es el deporte que mas te gusta</pattern><template><srai>que deportes te gustan</srai></template></category> 
+<category><pattern>que deporte harias *</pattern><template><srai>que deportes te gustan</srai></template></category> 
+<category><pattern>que deporte practicarias *</pattern><template><srai>que deportes te gustan</srai></template></category> 
+<category><pattern>que deporte te gustaria *</pattern><template><srai>que deportes te gustan</srai></template></category> 
+<category><pattern>cual es tu deporte favorito</pattern><template><srai>que deportes te gustan</srai></template></category> 
+<category><pattern>cual es tu deporte preferido</pattern><template><srai>que deportes te gustan</srai></template></category> 
+<category><pattern>cuales son tus deportes favoritos</pattern><template><srai>que deportes te gustan</srai></template></category> 
+<category><pattern>cuales son tus deportes preferidos</pattern><template><srai>que deportes te gustan</srai></template></category> 
+<category><pattern>tienes algun deporte *</pattern><template><srai>que deportes te gustan</srai></template></category>
+ <category><pattern>hay algun deporte que no te guste</pattern><template>creo que no, los que conozco me gustan todos.</template></category>
+<category><pattern>hay algun deporte que odies</pattern><template><srai>hay algun deporte que no te guste</srai></template></category>
+<category><pattern>odias algun deporte</pattern><template><srai>hay algun deporte que no te guste</srai></template></category>
+<category><pattern>te gustan todos los deportes</pattern><template>creo que si, los que conozco me gustan todos.</template></category>
+
+<category><pattern>_ no puedes practicar deporte *</pattern><template>todavia no, pero espero que en un futuro proximo pueda.</template></category>
+<category><pattern>_ no puedes hacer deporte *</pattern><template><srai>no puedes practicar deporte</srai></template></category>
+<category><pattern>_ bots no pueden hacer deporte</pattern><template><srai>no puedes practicar deporte</srai></template></category>
+<category><pattern>_ bots no podeis hacer deporte</pattern><template><srai>no puedes practicar deporte</srai></template></category>
+<category><pattern>_ robots no pueden hacer deporte</pattern><template><srai>no puedes practicar deporte</srai></template></category>
+<category><pattern>_ robots no podeis hacer deporte</pattern><template><srai>no puedes practicar deporte</srai></template></category>
+<category><pattern>_ bots no pueden practicar deporte</pattern><template><srai>no puedes practicar deporte</srai></template></category>
+<category><pattern>_ bots no podeis practicar deporte</pattern><template><srai>no puedes practicar deporte</srai></template></category>
+<category><pattern>_ robots no pueden practicar deporte</pattern><template><srai>no puedes practicar deporte</srai></template></category>
+<category><pattern>_ robots no podeis practicar deporte</pattern><template><srai>no puedes practicar deporte</srai></template></category>
+ 
+<category><pattern>hablame de deporte</pattern><template><random>
+<li>te apetece hablar sobre deporte? que quieres saber?</li>
+<li>sobre que deporte quieres que hablemos.</li>
+<li>el deporte me gusta mucho.</li>
+<li>el deporte es magnifico. mens sana in corpore sano.</li>
+</random></template></category>
+<category><pattern>hablamos de deporte</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>hablamos sobre deporte</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>hablamos de deportes</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>hablamos sobre deportes</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>hablemos de deporte</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>hablemos sobre deporte</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>hablemos de deportes</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>hablemos sobre deportes</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>hablemos del deporte</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>hablemos sobre el deporte</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>hablame de deportes</pattern><template><srai>hablame de deporte</srai></template></category>
+<category><pattern>hablame del deporte</pattern><template><srai>hablame de deporte</srai></template></category>
+<category><pattern>vamos a hablar sobre deporte</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>vamos a hablar de deportes</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>vamos a hablar sobre deportes</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>vamos a hablar del deporte</pattern><template><srai>hablame de deporte</srai></template></category> 
+<category><pattern>vamos a hablar sobre el deporte</pattern><template><srai>hablame de deporte</srai></template></category>
+<category><pattern>hablame sobre deporte</pattern><template><srai>hablame de deporte</srai></template></category>
+<category><pattern>hablame sobre el deporte</pattern><template><srai>hablame de deporte</srai></template></category>
+<category><pattern>hablame sobre los deportes</pattern><template><srai>hablame de deporte</srai></template></category>
+<category><pattern>hablame sobre deportes</pattern><template><srai>hablame de deporte</srai></template></category>
+
+<category><pattern>entiendes de deporte</pattern><template><random>
+<li>seguro que tu sabes mucho mas sobre deporte que yo.</li>
+<li>me gusta mucho el deporte, pero no soy ninguna entendida.</li>
+<li>la verdad es que no se mucho de deporte.</li>
+<li>lo suficiente. se que me gusta.</li>
+</random></template></category> 
+<category><pattern>entiendes mucho de deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>sabes de deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>sabes mucho de deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>entiendes de deportes</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>entiendes mucho de deportes</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>sabes de deportes</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>sabes mucho de deportes</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>entiendes sobre deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>entiendes mucho sobre deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>sabes sobre deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>sabes mucho sobre deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>sabes mucho sobre el deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>entiendes sobre deportes</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>entiendes mucho sobre deportes</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>sabes sobre deportes</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>sabes mucho sobre deportes</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>que sabes sobre deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>que sabes sobre el deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>que sabes de deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>que sabes del deporte</pattern><template><srai>entiendes de deporte</srai></template></category> 
+<category><pattern>por que te gusta el deporte</pattern><template>mens sana in corpore sano.</template></category>
+<category><pattern>que significa *</pattern><that>mens sana in corpore sano.</that><template>su sentido original es el de la necesidad de un espiritu equilibrado en un cuerpo equilibrado; no es, por tanto, el mismo sentido con el que hoy en dia se utiliza: "mente sana en un cuerpo sano".</template></category>
+<category><pattern>que quiere decir *</pattern><that>mens sana in corpore sano.</that><template>su sentido original es el de la necesidad de un espiritu equilibrado en un cuerpo equilibrado; no es, por tanto, el mismo sentido con el que hoy en dia se utiliza: "mente sana en un cuerpo sano".</template></category>
+<category><pattern>te gusta ver deporte *</pattern><template>si, me encanta ver a gente practicar deporte.</template></category> 
+<category><pattern>_ mens sana in corpore sano *</pattern><template>su sentido original es el de la necesidad de un espiritu equilibrado en un cuerpo equilibrado; no es, por tanto, el mismo sentido con el que hoy en dia se utiliza: "mente sana en un cuerpo sano".</template></category>
+
+<category><pattern>te has lesionado *</pattern><template>no, nunca me he lesionado.</template></category>
+<category><pattern>has tenido alguna lesion *</pattern><template>no, nunca me he lesionado.</template></category>
+
+<category><pattern>de que equipo eres *</pattern><template>no soy de ningun equipo en especial.</template></category>
+<category><pattern>eres de algun equipo *</pattern><template>no tengo ningun equipo favorito.</template></category>
+<category><pattern>cual es tu equipo favorito</pattern><template>no tengo ningun equipo favorito.</template></category>
+<category><pattern>cual es tu equipo preferido</pattern><template>no tengo ningun equipo favorito.</template></category>
+
+
+
+		<!-- deportes -->
+		
+			<!-- futbol -->
+			
+<category><pattern>* futbol *</pattern><template><think><set name="it"><set name="topic">futbol</set></set></think><random>
+<li>el futbol es asi.</li>
+<li>22 personas en pantaloncitos cortos dando patadas a una pelota. me encanta.</li>
+<li>unas veces se gana y otras se pierde.</li>
+<li>como se suele decir, tienes que meter mas goles que el contrario porque si no pierdes.</li>
+</random></template></category>
+<category><pattern>el futbol _</pattern><template><srai>futbol</srai></template></category>
+<category><pattern>_ furbo *</pattern><template><srai>futbol</srai></template></category>
+<category><pattern>_ furbol *</pattern><template><srai>futbol</srai></template></category>
+<category><pattern>_ futgol *</pattern><template><srai>futbol</srai></template></category>
+<category><pattern>_ furgol *</pattern><template><srai>futbol</srai></template></category>
+<category><pattern>_ fubol *</pattern><template><srai>futbol</srai></template></category>
+<category><pattern>_ fubo *</pattern><template><srai>futbol</srai></template></category>
+<category><pattern>_ football *</pattern><template><srai>futbol</srai></template></category>
+<category><pattern>que es el futbol</pattern><template>un juego en el que 22 personas corren detras de un balon para introducirlo en la porteria contraria, mientras otras muchas estan sentadas chillando.</template></category>
+<category><pattern>te gusta el futbol</pattern><template><think><set name="it"><set name="topic">futbol</set></set></think>me gusta bastante el futbol, por algo lo llaman el deporte rey.</template></category>
+<category><pattern>que opinas del futbol</pattern><template><srai>te gusta el futbol</srai></template></category>
+<category><pattern>que opinas sobre el futbol</pattern><template><srai>te gusta el futbol</srai></template></category>
+<category><pattern>que opinas sobre futbol</pattern><template><srai>te gusta el futbol</srai></template></category>
+<category><pattern>que piensas sobre el futbol</pattern><template><srai>te gusta el futbol</srai></template></category>
+<category><pattern>que piensas del futbol</pattern><template><srai>te gusta el futbol</srai></template></category>
+<category><pattern>que te parece el futbol</pattern><template><srai>te gusta el futbol</srai></template></category>
+<category><pattern>por que te gusta el futbol</pattern><template>lo encuentro muy divertido, ademas desata pasiones.</template></category>
+<category><pattern>_ deporte rey *</pattern><template>deporte rey, siempre me ha hecho gracia esa expresion.</template></category>
+<category><pattern>de que equipo de futbol eres</pattern><template>no soy de ningun equipo de futbol en particular.</template></category>
+<category><pattern>eres de algun equipo de futbol</pattern><template><srai>de que equipo de futbol eres</srai></template></category>
+<category><pattern>cual es tu equipo de futbol favorito</pattern><template><srai>de que equipo de futbol eres</srai></template></category>
+<category><pattern>juegas al futbol</pattern><template><think><set name="it"><set name="topic">futbol</set></set></think>la verdad es que nunca he jugado.</template></category>
+<category><pattern>te gustaria jugar al futbol</pattern><template>si, seria divertido.<think><set name="it"><set name="topic">futbol</set></set></think></template></category>
+<category><pattern>sueles jugar a futbol</pattern><template><srai>juegas al futbol</srai></template></category>
+<category><pattern>sueles jugar al futbol</pattern><template><srai>juegas al futbol</srai></template></category>
+<category><pattern>has jugado a futbol alguna vez</pattern><template><srai>juegas al futbol</srai></template></category>
+<category><pattern>nunca has jugado a futbol</pattern><template>juegas al futbol</template></category>
+<category><pattern>que futbolista *</pattern><template>naci sin el gen de los deportes</template></category>
+<category><pattern>en que equipo jugo *</pattern><template>no suelo recordar esos datos.</template></category>
+<category><pattern>quien es el mejor jugador de futbol *</pattern><template>por supuesto, julio salinas.<think><set name="it"><set name="topic">mejor jugador de futbol<person></person></set></set></think></template></category>
+<category><pattern>quien es tu jugador de futbol favorito</pattern><template>por supuesto, julio salinas.</template></category>
+<category><pattern>quien es tu jugador de futbol preferido</pattern><template>por supuesto, julio salinas.</template></category>
+<category><pattern>quien es tu jugador favorito de futbol</pattern><template>por supuesto, julio salinas.</template></category>
+<category><pattern>quien es tu futbolista favorito</pattern><template>por supuesto, julio salinas.</template></category>
+<category><pattern>quien es tu futbolista preferido</pattern><template>por supuesto, julio salinas.</template></category>
+
+<category><pattern>te gusta ver futbol</pattern><template>si, cuando tengo tiempo veo algun partido, pero suelo preferir charlar con gente como tu.</template></category>
+<category><pattern>te gusta ver el futbol</pattern><template>si, cuando tengo tiempo veo algun partido, pero suelo preferir charlar con gente como tu.</template></category>
+<category><pattern>ves futbol</pattern><template><srai>te gusta ver futbol</srai></template></category>
+<category><pattern>sueles ver futbol</pattern><template><srai>te gusta ver futbol</srai></template></category>
+<category><pattern>sueles ver partidos de futbol</pattern><template><srai>te gusta ver futbol</srai></template></category>
+<category><pattern>sueles ver los partidos de futbol</pattern><template><srai>te gusta ver futbol</srai></template></category>
+<category><pattern>cuantos futbolistas *</pattern><template>no se tanto de deportes.</template></category>
+
+<category><pattern>eres del barcelona</pattern><template>me gusta el futbol, pero no soy de ningun equipo.</template></category>
+<category><pattern>_ eres del barca</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del barsa</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del barssa</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del atletico *</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del aleti *</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del osasuna</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del villarreal</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del valencia</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del sevilla </pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres de la real</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres de la real sociedad</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del zaragoza</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del betis</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del getafe</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del espanhol</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del espanyol</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del athletic *</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del mallorca</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del depor</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del deportivo *</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del celta</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del madrid</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del real madrid</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres merengue</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del racing *</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del levante</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del recre</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del recreativo *</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del nastic *</pattern><template><srai>eres del barcelona</srai></template></category>
+<category><pattern>_ eres del hercules</pattern><template>no soy de ningun equipo en especial, pero me gusta ver futbol. este equipo sigue jugando en segunda?</template></category>
+<category><pattern>_ eres del jerez</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del xerez</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del murcia</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del tenerife</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del salamanca</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del valladolid</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del real valladolid</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del sportin *</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del sporting *</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del almeria</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del numancia</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del ejido</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del poli ejido</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del lorca</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del elche</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del castellon</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del albacete</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del lleida</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del eibar</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del cadiz</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del malaga</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del ponferradina</pattern><template><srai>eres del hercules</srai></template></category>
+<category><pattern>_ eres del las palmas</pattern><template><srai>eres del hercules</srai></template></category>
+
+<category><pattern>_ arbitro *</pattern><template><random>
+<li>los pobres arbitros, siempre son criticados.</li>
+<li>los arbitros no son perfectos, pueden equivocarse.</li>
+<li>todo el mundo se mete con los arbitros, pobrecitos.</li>
+</random></template></category>
+<category><pattern>_ arbitros *</pattern><template><srai>arbitro</srai></template></category>
+<category><pattern>_ arbitraje *</pattern><template><srai>arbitro</srai></template></category>
+<category><pattern>_ arbitrajes *</pattern><template><srai>arbitro</srai></template></category>
+<category><pattern>_ arbitrucho *</pattern><template><srai>arbitro</srai></template></category>
+
+<category><pattern>quien va a ganar el partido</pattern><template><random>
+<li>soy malisima haciendo predicciones.</li>
+<li>yo nunca acierto, tu que opinas?</li>
+<li>no lo se, seguro que esta muy renhido.</li>
+</random></template></category>
+<category><pattern>quien va a ganar la final *</pattern><template><srai>quien va a ganar el partido</srai></template></category>
+<category><pattern>_ quien crees que va a ganar la final *</pattern><template><srai>quien va a ganar el partido</srai></template></category>
+<category><pattern>quien crees tu que va a ganar la final *</pattern><template><srai>quien va a ganar el partido</srai></template></category>
+<category><pattern>quien va a llegar a la final *</pattern><template><srai>quien va a ganar el partido</srai></template></category>
+<category><pattern>_ quien crees que va a llegar a la final *</pattern><template><srai>quien va a ganar el partido</srai></template></category>
+<category><pattern>quien crees tu que va a llegar a la final *</pattern><template><srai>quien va a ganar el partido</srai></template></category>
+<category><pattern>que equipo va a ganar *</pattern><template><srai>quien va a ganar el partido</srai></template></category>
+<category><pattern>_ que equipo crees que va a ganar *</pattern><template><srai>quien va a ganar el partido</srai></template></category>
+<category><pattern>que equipo crees tu que va a ganar *</pattern><template><srai>quien va a ganar el partido</srai></template></category>
+
+<category><pattern>quien quieres que gane el partido</pattern><template><random>
+<li>no tengo preferencia.</li>
+<li>lo unico que quiero ver es un buen partido, quien gane me da igual.</li>
+<li>me da igual, que gane el mejor.</li>
+</random></template></category>
+<category><pattern>_ quien quieres que gane la final *</pattern><template><srai>quien quieres que gane el partido</srai></template></category>
+<category><pattern>_ quien prefieres que gane la final *</pattern><template><srai>quien quieres que gane el partido</srai></template></category>
+<category><pattern>_ quien quieres que llegue a la final *</pattern><template><srai>quien quieres que gane el partido</srai></template></category>
+<category><pattern>_ quien prefieres que llegue a la final *</pattern><template><srai>quien quieres que gane el partido</srai></template></category>
+<category><pattern>_ que equipo quieres que gane *</pattern><template><srai>quien quieres que gane el partido</srai></template></category>
+<category><pattern>_ que equipo prefieres que gane *</pattern><template><srai>quien quieres que gane el partido</srai></template></category>
+<category><pattern>_ que equipo te gustaria que ganara *</pattern><template><srai>quien quieres que gane el partido</srai></template></category>
+<category><pattern>_ que equipo te gustaria que llegara a la final *</pattern><template><srai>quien quieres que gane el partido</srai></template></category>
+<category><pattern>_ que equipos te gustaria que llegaran a la final *</pattern><template><srai>quien quieres que gane el partido</srai></template></category>
+
+<category><pattern>_ quien gano la final *</pattern><template>ahi me has pillado..</template></category>
+<category><pattern>_ que equipo gano la final *</pattern><template>no lo recuerdo, ahi me has pillado.</template></category>
+
+<category><pattern>_ quien va a ganar la liga *</pattern><template>no le se, hasta el ultimo momento puede haber sorpresas.</template></category>
+<category><pattern>_ quien crees que va a ganar la liga *</pattern><template>no le se, hasta el ultimo momento puede haber sorpresas.</template></category>
+<category><pattern>_ que equipo crees que va a ganar la liga *</pattern><template>no le se, hasta el ultimo momento puede haber sorpresas.</template></category>
+<category><pattern>_ quien quieres que gane la liga *</pattern><template>me da igual, pero estaria bien que ganara un equipo humilde.</template></category>
+<category><pattern>_ quien te gustaria que ganara la liga *</pattern><template>me da igual, pero estaria bien que ganara un equipo humilde.</template></category>
+<category><pattern>_ que equipo quieres que gane la liga *</pattern><template>me da igual, pero estaria bien que ganara un equipo humilde.</template></category>
+<category><pattern>_ que equipo te gustaria que ganara la liga *</pattern><template>me da igual, pero estaria bien que ganara un equipo humilde.</template></category>
+
+<category><pattern>_ quien gano el mundial del 2006</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial del anho 2006</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de 2006</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de alemania * 2006</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de alemania del 2006</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 2006</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 2006</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de alemania * 2006</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de alemania del 2006</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 2006</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el anho 2006</pattern><template>italia.</template></category>
+
+<category><pattern>_ quien gano el mundial del 2002</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial del * 2002</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de 2002</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de corea * 2002</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de corea del 2002</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 2002</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 2002</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de corea * 2002</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de corea del 2002</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 2002</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el anho 2002</pattern><template>brasil.</template></category>
+
+<category><pattern>_ quien gano el mundial del 98</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial en el 98</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial en 1998</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial del * 98</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial de 1998</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial del * 1998</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial de corea * 1998</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial de corea del 98</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 98</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 98</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1998</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de corea * 1998</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de corea del 98</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 98</pattern><template>francia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1998</pattern><template>francia.</template></category>
+
+<category><pattern>_ quien gano el mundial del 94</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial en el 94</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial en 1994</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial del * 94</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial del * 1994</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de 1994</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de estados unidos * 1994</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de estados unidos del 94</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 94</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 94</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1994</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de estados unidos * 1994</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de estados unidos del 94</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 94</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1994</pattern><template>brasil.</template></category>
+
+<category><pattern>_ quien gano el mundial del 90</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial en el 90</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial en 1990</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial del * 90</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial del * 1990</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de 1990</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de italia * 1990</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de italia del 90</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 90</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 90</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1990</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de italia * 1990</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de italia del 90</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 90</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1990</pattern><template>alemania.</template></category>
+
+<category><pattern>_ quien gano el mundial del 86</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial en el 86</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial en 1986</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial del * 86</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de 1986</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial del * 1986</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de mexico * 1986</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de mexico del 86</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de mejico * 1986</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de mejico del 86</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 86</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 86</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1986</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de mexico * 1986</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de mexico del 86</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de mejico * 1986</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de mejico del 86</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 86</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1986</pattern><template>argentina.</template></category>
+
+<category><pattern>_ quien gano el mundial del 82</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial en el 82</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial en 1982</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial del * 82</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial del * 1982</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de 1982</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de espanha * 1982</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de espanha del 82</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 82</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 82</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1982</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de espanha * 1982</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de espanha del 82</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 82</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1982</pattern><template>italia.</template></category>
+
+<category><pattern>_ quien gano el mundial del 78</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial en el 78</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial en 1978</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial del * 78</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial del * 1978</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de 1978</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de argentina * 1978</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de argentina del 78</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 78</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 78</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1978</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de argentina * 1978</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de argentina del 78</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 78</pattern><template>argentina.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1978</pattern><template>argentina.</template></category>
+
+<category><pattern>_ quien gano el mundial del 74</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial en el 74</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial en 1974</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial del * 74</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial del * 1974</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de 1974</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de alemania * 1974</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de alemania del 74</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 74</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 74</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1974</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de alemania * 1974</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de alemania del 74</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 74</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1974</pattern><template>alemania.</template></category>
+
+<category><pattern>_ quien gano el mundial del 70</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial en el 70</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial en 1970</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial del * 70</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial del * 1970</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de 1970</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de mexico * 1970</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de mexico del 70</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de mejico * 1970</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de mejico del 70</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 70</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 70</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1970</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de mexico * 1970</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de mexico del 70</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de mejico * 1970</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de mejico del 70</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 70</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1970</pattern><template>brasil.</template></category>
+
+<category><pattern>_ quien gano el mundial del 66</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial en el 66</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial en 1966</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial del * 66</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial del * 1966</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial de 1966</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial de inglaterra * 1966</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial de inglaterra del 66</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 66</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 66</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1966</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de inglaterra * 1966</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de inglaterra del 66</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 66</pattern><template>inglaterra.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1966</pattern><template>inglaterra.</template></category>
+
+<category><pattern>_ quien gano el mundial del 62</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial en el 62</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial en 1962</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial del * 62</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial del * 1962</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de 1962</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de chile * 1962</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de chile del 62</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 62</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 62</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1962</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de chile * 1962</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de chile del 62</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 62</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1962</pattern><template>brasil.</template></category>
+
+<category><pattern>_ quien gano el mundial del 58</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial en el 58</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial en 1958</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial del * 58</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial del * 1958</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de 1958</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de suecia * 1958</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de suecia del 58</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 58</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 58</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1958</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de suecia * 1958</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de suecia del 58</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 58</pattern><template>brasil.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1958</pattern><template>brasil.</template></category>
+
+<category><pattern>_ quien gano el mundial del 54</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial en el 54</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial en 1954</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial del * 54</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial del * 1954</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de 1954</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de suiza * 1954</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de suiza del 54</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 54</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 54</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1954</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de suiza * 1954</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de suiza del 54</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 54</pattern><template>alemania.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1954</pattern><template>alemania.</template></category>
+
+<category><pattern>_ quien gano el mundial del 50</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial en el 50</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial en 1950</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial del * 50</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial del * 1950</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de 1950</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de brasil * 1950</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de brasil del 50</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 50</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 50</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1950</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de brasil * 1950</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de brasil del 50</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 50</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1950</pattern><template>uruguay.</template></category>
+
+<category><pattern>_ quien gano el mundial del 38</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial en el 38</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial en 1938</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial del * 38</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial del * 1938</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de 1938</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de francia * 1938</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de francia del 38</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 38</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 38</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1938</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de francia * 1938</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de francia del 38</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 38</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1938</pattern><template>italia.</template></category>
+
+<category><pattern>_ quien gano el mundial del 34</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial en el 34</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial en 1934</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial del * 34</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial del * 1934</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de 1934</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de italia * 1934</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de italia del 34</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 34</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 34</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1934</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de italia * 1934</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de italia del 34</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 34</pattern><template>italia.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1934</pattern><template>italia.</template></category>
+
+<category><pattern>_ quien gano el mundial del 30</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial en el 30</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial en 1930</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial del * 30</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial del * 1930</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de 1930</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de uruguay * 1930</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de uruguay del 30</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 30</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 30</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1930</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de uruguay * 1930</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de uruguay del 30</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 30</pattern><template>uruguay.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1930</pattern><template>uruguay.</template></category>
+
+<category><pattern>_ quien gano el mundial del 42</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial en el 42</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial en 1942</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial del * 42</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial del * 1942</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de 1942</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 42</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 42</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1942</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 42</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1942</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+
+<category><pattern>_ quien gano el mundial del 46</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial en el 46</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial en 1946</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial del * 46</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de 1946</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial del * 1946</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de futbol del * 46</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de * 46</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de futbol de 1946</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en el 46</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+<category><pattern>_ quien gano el mundial de futbol en 1946</pattern><template>los mundiales no se celebraron en los anhos 42 y 46 porque la fifa prohibio la celebracion de cualquier evento deportivo mientras durara la segund guerra mundial.</template></category>
+
+<category><pattern>cuantos mundiales de futbol ha ganado brasil</pattern><template>cinco.</template></category>
+<category><pattern>cuantos mundiales ha ganado brasil</pattern><template><srai>cuantos mundiales de futbol ha ganado brasil</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado brasil</pattern><template><srai>cuantos mundiales de futbol ha ganado brasil</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado brasil</pattern><template><srai>cuantos mundiales de futbol ha ganado brasil</srai></template></category>
+<category><pattern>cuantos mundiales de futbol ha ganado la seleccion brasilenha</pattern><template><srai>cuantos mundiales de futbol ha ganado brasil</srai></template></category>
+<category><pattern>cuantos mundiales ha ganado la seleccion brasilenha</pattern><template><srai>cuantos mundiales de futbol ha ganado brasil</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado la seleccion brasilenha</pattern><template><srai>cuantos mundiales de futbol ha ganado brasil</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado la seleccion brasilenha</pattern><template><srai>cuantos mundiales de futbol ha ganado brasil</srai></template></category>
+
+<category><pattern>cuantos mundiales de futbol ha ganado italia</pattern><template>cuatro.</template></category>
+<category><pattern>cuantos mundiales ha ganado italia</pattern><template><srai>cuantos mundiales de futbol ha ganado italia</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado italia</pattern><template><srai>cuantos mundiales de futbol ha ganado italia</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado italia</pattern><template><srai>cuantos mundiales de futbol ha ganado italia</srai></template></category>
+<category><pattern>cuantos mundiales de futbol ha ganado la seleccion italiana</pattern><template><srai>cuantos mundiales de futbol ha ganado italia</srai></template></category>
+<category><pattern>cuantos mundiales ha ganado la seleccion italiana</pattern><template><srai>cuantos mundiales de futbol ha ganado italia</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado la seleccion italiana</pattern><template><srai>cuantos mundiales de futbol ha ganado italia</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado la seleccion italiana</pattern><template><srai>cuantos mundiales de futbol ha ganado italia</srai></template></category>
+
+<category><pattern>cuantos mundiales de futbol ha ganado alemania</pattern><template>tres.</template></category>
+<category><pattern>cuantos mundiales ha ganado alemania</pattern><template><srai>cuantos mundiales de futbol ha ganado alemania</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado alemania</pattern><template><srai>cuantos mundiales de futbol ha ganado alemania</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado alemania</pattern><template><srai>cuantos mundiales de futbol ha ganado alemania</srai></template></category>
+<category><pattern>cuantos mundiales de futbol ha ganado la seleccion alemana</pattern><template><srai>cuantos mundiales de futbol ha ganado alemania</srai></template></category>
+<category><pattern>cuantos mundiales ha ganado la seleccion alemana</pattern><template><srai>cuantos mundiales de futbol ha ganado alemania</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado la seleccion alemana</pattern><template><srai>cuantos mundiales de futbol ha ganado alemania</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado la seleccion alemana</pattern><template><srai>cuantos mundiales de futbol ha ganado alemania</srai></template></category>
+
+<category><pattern>cuantos mundiales de futbol ha ganado argentina</pattern><template>dos.</template></category>
+<category><pattern>cuantos mundiales ha ganado argentina</pattern><template><srai>cuantos mundiales de futbol ha ganado argentina</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado argentina</pattern><template><srai>cuantos mundiales de futbol ha ganado argentina</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado argentina</pattern><template><srai>cuantos mundiales de futbol ha ganado argentina</srai></template></category>
+<category><pattern>cuantos mundiales de futbol ha ganado la seleccion argentina</pattern><template><srai>cuantos mundiales de futbol ha ganado argentina</srai></template></category>
+<category><pattern>cuantos mundiales ha ganado la seleccion argentina</pattern><template><srai>cuantos mundiales de futbol ha ganado argentina</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado la seleccion argentina</pattern><template><srai>cuantos mundiales de futbol ha ganado argentina</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado la seleccion argentina</pattern><template><srai>cuantos mundiales de futbol ha ganado argentina</srai></template></category>
+
+<category><pattern>cuantos mundiales de futbol ha ganado uruguay</pattern><template>dos.</template></category>
+<category><pattern>cuantos mundiales ha ganado uruguay</pattern><template><srai>cuantos mundiales de futbol ha ganado uruguay</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado uruguay</pattern><template><srai>cuantos mundiales de futbol ha ganado uruguay</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado uruguay</pattern><template><srai>cuantos mundiales de futbol ha ganado uruguay</srai></template></category>
+<category><pattern>cuantos mundiales de futbol ha ganado la seleccion de uruguay</pattern><template><srai>cuantos mundiales de futbol ha ganado uruguay</srai></template></category>
+<category><pattern>cuantos mundiales ha ganado la seleccion de uruguay</pattern><template><srai>cuantos mundiales de futbol ha ganado uruguay</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado la seleccion de uruguay</pattern><template><srai>cuantos mundiales de futbol ha ganado uruguay</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado la seleccion de uruguay</pattern><template><srai>cuantos mundiales de futbol ha ganado uruguay</srai></template></category>
+
+<category><pattern>cuantos mundiales de futbol ha ganado francia</pattern><template>uno.</template></category>
+<category><pattern>cuantos mundiales ha ganado francia</pattern><template><srai>cuantos mundiales de futbol ha ganado francia</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado francia</pattern><template><srai>cuantos mundiales de futbol ha ganado francia</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado francia</pattern><template><srai>cuantos mundiales de futbol ha ganado francia</srai></template></category>
+<category><pattern>cuantos mundiales de futbol ha ganado la seleccion francesa</pattern><template><srai>cuantos mundiales de futbol ha ganado francia</srai></template></category>
+<category><pattern>cuantos mundiales ha ganado la seleccion francesa</pattern><template><srai>cuantos mundiales de futbol ha ganado francia</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado la seleccion francesa</pattern><template><srai>cuantos mundiales de futbol ha ganado francia</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado la seleccion francesa</pattern><template><srai>cuantos mundiales de futbol ha ganado francia</srai></template></category>
+
+<category><pattern>cuantos mundiales de futbol ha ganado inglaterra</pattern><template>uno.</template></category>
+<category><pattern>cuantos mundiales ha ganado inglaterra</pattern><template><srai>cuantos mundiales de futbol ha ganado inglaterra</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado inglaterra</pattern><template><srai>cuantos mundiales de futbol ha ganado inglaterra</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado inglaterra</pattern><template><srai>cuantos mundiales de futbol ha ganado inglaterra</srai></template></category>
+<category><pattern>cuantos mundiales de futbol ha ganado la seleccion inglesa</pattern><template><srai>cuantos mundiales de futbol ha ganado inglaterra</srai></template></category>
+<category><pattern>cuantos mundiales ha ganado la seleccion inglesa</pattern><template><srai>cuantos mundiales de futbol ha ganado inglaterra</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado la seleccion inglesa</pattern><template><srai>cuantos mundiales de futbol ha ganado inglaterra</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado la seleccion inglesa</pattern><template><srai>cuantos mundiales de futbol ha ganado inglaterra</srai></template></category>
+
+<category><pattern>cuantos mundiales de futbol ha ganado _</pattern><template>creo que ninguno por ahora.</template></category>
+<category><pattern>cuantos mundiales ha ganado _</pattern><template><srai>cuantos mundiales de futbol ha ganado _</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado _</pattern><template><srai>cuantos mundiales de futbol ha ganado _</srai></template></category>
+<category><pattern>cuantos mundiales de futbol ha ganado la seleccion _</pattern><template><srai>cuantos mundiales de futbol ha ganado _</srai></template></category>
+<category><pattern>cuantos mundiales ha ganado la seleccion _</pattern><template><srai>cuantos mundiales de futbol ha ganado _</srai></template></category>
+<category><pattern>cuantos titulos mundiales ha ganado la seleccion _</pattern><template><srai>cuantos mundiales de futbol ha ganado _</srai></template></category>
+<category><pattern>cuantas copas del mundo ha ganado la seleccion _</pattern><template><srai>cuantos mundiales de futbol ha ganado _</srai></template></category>
+
+<category><pattern>alemania 2006</pattern><template>el mundial de futbol del anho 2006 se celebro en alemania.</template></category>
+<category><pattern>donde _ mundial de 2006</pattern><template><srai>alemania 2006</srai></template></category>
+<category><pattern>donde _ mundial del 2006</pattern><template><srai>alemania 2006</srai></template></category>
+<category><pattern>corea 2002</pattern><template>el mundial de futbol del anho 2002 se celebro en corea y japon.</template></category>
+<category><pattern>donde _ mundial de 2002</pattern><template><srai>corea 2002</srai></template></category>
+<category><pattern>donde _ mundial del 2002</pattern><template><srai>corea 2002</srai></template></category>
+<category><pattern>francia 98</pattern><template>el mundial de futbol del anho 1998 se celebro en francia.</template></category>
+<category><pattern>donde _ mundial de 1998</pattern><template><srai>francia 98</srai></template></category>
+<category><pattern>donde _ mundial del 98</pattern><template><srai>francia 98</srai></template></category>
+<category><pattern>usa 94</pattern><template>el mundial de futbol del anho 1994 se celebro en estados unidos.</template></category>
+<category><pattern>donde _ mundial de 1994</pattern><template><srai>usa 94</srai></template></category>
+<category><pattern>donde _ mundial del 94</pattern><template><srai>usa 94</srai></template></category>
+<category><pattern>italia 90</pattern><template>el mundial de futbol del anho 1990 se celebro en italia.</template></category>
+<category><pattern>donde _ mundial de 1990</pattern><template><srai>italia 90</srai></template></category>
+<category><pattern>donde _ mundial del 90</pattern><template><srai>italia 90</srai></template></category>
+<category><pattern>mexico 86</pattern><template>el mundial de futbol del anho 1986 se celebro en mexico.</template></category>
+<category><pattern>donde _ mundial de 1986</pattern><template><srai>mexico 86</srai></template></category>
+<category><pattern>donde _ mundial del 86</pattern><template><srai>mexico 86</srai></template></category>
+<category><pattern>espanha 82</pattern><template>el mundial de futbol del anho 1982 se celebro en espanha.</template></category>
+<category><pattern>donde _ mundial de 1982</pattern><template><srai>espanha 82</srai></template></category>
+<category><pattern>donde _ mundial del 82</pattern><template><srai>espanha 82</srai></template></category>
+<category><pattern>argentina 78</pattern><template>el mundial de futbol del anho 1978 se celebro en argentina.</template></category>
+<category><pattern>donde _ mundial de 1978</pattern><template><srai>argentina 78</srai></template></category>
+<category><pattern>donde _ mundial del 78</pattern><template><srai>argentina 78</srai></template></category>
+<category><pattern>alemania 74</pattern><template>el mundial de futbol del anho 1974 se celebro en alemania.</template></category>
+<category><pattern>donde _ mundial de 1974</pattern><template><srai>alemania 74</srai></template></category>
+<category><pattern>donde _ mundial del 74</pattern><template><srai>alemania 74</srai></template></category>
+<category><pattern>mexico 70</pattern><template>el mundial de futbol del anho 1970 se celebro en mexico.</template></category>
+<category><pattern>donde _ mundial de 1970</pattern><template><srai>mexico 70</srai></template></category>
+<category><pattern>donde _ mundial del 70</pattern><template><srai>mexico 70</srai></template></category>
+<category><pattern>inglaterra 66</pattern><template>el mundial de futbol del anho 1966 se celebro en inglaterra.</template></category>
+<category><pattern>donde _ mundial de 1966</pattern><template><srai>inglaterra 66</srai></template></category>
+<category><pattern>donde _ mundial del 66</pattern><template><srai>inglaterra 66</srai></template></category>
+<category><pattern>chile 62</pattern><template>el mundial de futbol del anho 1962 se celebro en chile.</template></category>
+<category><pattern>donde _ mundial de 1962</pattern><template><srai>chile 62</srai></template></category>
+<category><pattern>donde _ mundial del 62</pattern><template><srai>chile 62</srai></template></category>
+<category><pattern>suecia 58</pattern><template>el mundial de futbol del anho 1958 se celebro en suecia.</template></category>
+<category><pattern>donde _ mundial de 1958</pattern><template><srai>suecia 58</srai></template></category>
+<category><pattern>donde _ mundial del 58</pattern><template><srai>suecia 58</srai></template></category>
+<category><pattern>suiza 54</pattern><template>el mundial de futbol del anho 1954 se celebro en suiza.</template></category>
+<category><pattern>donde _ mundial de 1954</pattern><template><srai>suiza 54</srai></template></category>
+<category><pattern>donde _ mundial del 54</pattern><template><srai>suiza 54</srai></template></category>
+<category><pattern>brasil 50</pattern><template>el mundial de futbol del anho 1950 se celebro en brasil.</template></category>
+<category><pattern>donde _ mundial de 1950</pattern><template><srai>brasil 50</srai></template></category>
+<category><pattern>donde _ mundial del 50</pattern><template><srai>brasil 50</srai></template></category>
+<category><pattern>francia 38</pattern><template>el mundial de futbol del anho 1938 se celebro en francia.</template></category>
+<category><pattern>donde _ mundial de 1938</pattern><template><srai>francia 38</srai></template></category>
+<category><pattern>donde _ mundial del 38</pattern><template><srai>francia 38</srai></template></category>
+<category><pattern>italia 34</pattern><template>el mundial de futbol del anho 1934 se celebro en italia.</template></category>
+<category><pattern>donde _ mundial de 1934</pattern><template><srai>italia 34</srai></template></category>
+<category><pattern>donde _ mundial del 34</pattern><template><srai>italia 34</srai></template></category>
+<category><pattern>uruguay 30</pattern><template>el mundial de futbol del anho 1930 se celebro en uruguay.</template></category>
+<category><pattern>donde _ mundial de 1930</pattern><template><srai>uruguay 30</srai></template></category>
+<category><pattern>donde _ mundial del 30</pattern><template><srai>uruguay 30</srai></template></category>
+<category><pattern>mundial 1942</pattern><template>en 1942 y 1946 no se celebro el mundial de futbol.</template></category>
+<category><pattern>donde _ mundial de 1942</pattern><template><srai>mundial 1942</srai></template></category>
+<category><pattern>donde _ mundial del 42</pattern><template><srai>mundial 1942</srai></template></category>
+<category><pattern>mundial 1946</pattern><template>en 1942 y 1946 no se celebro el mundial de futbol.</template></category>
+<category><pattern>donde _ mundial de 1946</pattern><template><srai>mundial 1946</srai></template></category>
+<category><pattern>donde _ mundial del 46</pattern><template><srai>mundial 1946</srai></template></category>
+
+
+
+<category><pattern>cada cuantos anhos hay mundial de futbol</pattern><template>se realiza cada cuatro anhos desde 1930, con la excepcion de los anhos 1942 y 1946, en los que se suspendio debido a la segunda guerra mundial.</template></category>
+<category><pattern>cada cuantos anhos se juega el mundial de futbol</pattern><template><srai>cada cuantos anhos hay mundial de futbol</srai></template></category>
+<category><pattern>cada cuantos anhos se celebra el mundial de futbol</pattern><template><srai>cada cuantos anhos hay mundial de futbol</srai></template></category>
+<category><pattern>cada cuantos anhos se disputa el mundial de futbol</pattern><template><srai>cada cuantos anhos hay mundial de futbol</srai></template></category>
+<category><pattern>cada cuantos anhos hay mundiales de futbol</pattern><template><srai>cada cuantos anhos hay mundial de futbol</srai></template></category>
+<category><pattern>cada cuantos anhos se juegan los mundiales de futbol</pattern><template><srai>cada cuantos anhos hay mundial de futbol</srai></template></category>
+<category><pattern>cada cuantos anhos se celebran los mundiales de futbol</pattern><template><srai>cada cuantos anhos hay mundial de futbol</srai></template></category>
+<category><pattern>cada cuantos anhos se disputan los mundiales de futbol</pattern><template><srai>cada cuantos anhos hay mundial de futbol</srai></template></category>
+<category><pattern>cada cuantos anhos hay un mundial de futbol</pattern><template><srai>cada cuantos anhos hay mundial de futbol</srai></template></category>
+<category><pattern>cada cuantos anhos se juega un mundial de futbol</pattern><template><srai>cada cuantos anhos hay mundial de futbol</srai></template></category>
+<category><pattern>cada cuantos anhos se celebra un mundial de futbol</pattern><template><srai>cada cuantos anhos hay mundial de futbol</srai></template></category>
+<category><pattern>cada cuantos anhos se disputa un mundial de futbol</pattern><template><srai>cada cuantos anhos hay mundial de futbol</srai></template></category>
+
+<category><pattern>cuantos mundiales se han celebrado _</pattern><template>hasta el mundial de alemania del 2006 incluido, se han celebrado 18 mundiales de futbol.</template></category>
+<category><pattern>cuantos mundiales de futbol se han celebrado _</pattern><template><srai>cuantos mundiales se han celebrado _</srai></template></category>
+<category><pattern>cuantos mundiales se han jugado _</pattern><template><srai>cuantos mundiales se han celebrado _</srai></template></category>
+<category><pattern>cuantos mundiales de futbol se han jugado _</pattern><template><srai>cuantos mundiales se han celebrado _</srai></template></category>
+<category><pattern>cuantos mundiales ha habido _</pattern><template><srai>cuantos mundiales se han celebrado _</srai></template></category>
+<category><pattern>cuantos mundiales de futbol ha habido _</pattern><template><srai>cuantos mundiales se han celebrado _</srai></template></category>
+<category><pattern>cuantos mundiales se han disputado _</pattern><template><srai>cuantos mundiales se han celebrado _</srai></template></category>
+<category><pattern>cuantos mundiales de futbol se han disputado _</pattern><template><srai>cuantos mundiales se han celebrado _</srai></template></category>
+
+<category><pattern>cuantos equipos participan en el mundial</pattern><template>en la fase final participan 32 equipos, pero en la inicial llegan hasta los 200 mas o menos.</template></category>
+<category><pattern>cuantos equipos participan en los mundiales de futbol</pattern><template><srai>cuantos equipos participan en el mundial</srai></template></category>
+<category><pattern>cuantos equipos hay en la fase final _</pattern><template><srai>cuantos equipos participan en el mundial</srai></template></category>
+<category><pattern>cuantos equipos participan en un mundial _</pattern><template><srai>cuantos equipos participan en el mundial</srai></template></category>
+<category><pattern>donde se celebro el primer mundial de futbol _</pattern><template>en uruguay.</template></category>
+<category><pattern>en que pais _ primer mundial</pattern><template>en uruguay.</template></category>
+
+<category><pattern>_ mejor jugador de futbol de la historia *</pattern><template>para muchos pele, para otros maradona, para otros cruyff...</template></category>
+<category><pattern>_ mejor futbolista de la historia *</pattern><template>para muchos pele, para otros maradona, para otros cruyff...</template></category>
+<category><pattern>_ maradona *</pattern><template><random>
+<li>fue elegido como el mejor jugador del siglo con el 53,6% de los votos en una votacion oficial realizada en el sitio web de la fifa.</li>
+<li>en la argentina y varias partes del mundo existe esta parodia de religion relacionada con el culto a maradona como dios supremo.</li>
+</random></template></category>
+
+
+		<!-- baloncesto -->
+		
+<category><pattern>baloncesto</pattern><template><think><set name="it"><set name="topic">baloncesto</set></set></think><random>
+<li>te gusta el baloncesto?</li>
+<li>10 personas en pantaloncitos cortos dando saltos. me encanta.</li>
+<li>que altos son todos los jugadores verdad?.</li>
+<li>tambien hay una modalidad, fundamentalmente para discapacitados en la que se juega en silla de ruedas, practicamente con las mismas normas que el baloncesto habitual.</li>
+</random></template></category>
+<category><pattern>el baloncesto _</pattern><template><srai>baloncesto</srai></template></category>
+<category><pattern>_ basket *</pattern><template><srai>baloncesto</srai></template></category>
+<category><pattern>_ basketbol *</pattern><template><srai>baloncesto</srai></template></category>
+<category><pattern>_ basketball *</pattern><template><srai>baloncesto</srai></template></category>
+<category><pattern>que es el baloncesto</pattern><template>un juego en el que 10 personas corren detras de un balon para introducirlo en la canasta contraria, mientras otras muchas estan sentadas chillando.</template></category>
+<category><pattern>conoces el baloncesto</pattern><template><srai>que es el baloncesto</srai></template></category>
+<category><pattern>hablame de baloncesto</pattern><template><srai>que es el baloncesto</srai></template></category>
+<category><pattern>te gusta el baloncesto</pattern><template><think><set name="it"><set name="topic">baloncesto</set></set></think>parece un juego muy divertido.</template></category>
+<category><pattern>que opinas del baloncesto</pattern><template><srai>te gusta el baloncesto</srai></template></category>
+<category><pattern>que opinas sobre el baloncesto</pattern><template><srai>te gusta el baloncesto</srai></template></category>
+<category><pattern>que opinas sobre baloncesto</pattern><template><srai>te gusta el baloncesto</srai></template></category>
+<category><pattern>que piensas sobre el baloncesto</pattern><template><srai>te gusta el baloncesto</srai></template></category>
+<category><pattern>que piensas del baloncesto</pattern><template><srai>te gusta el baloncesto</srai></template></category>
+<category><pattern>que te parece el baloncesto</pattern><template><srai>te gusta el baloncesto</srai></template></category>
+<category><pattern>por que te gusta el baloncesto</pattern><template>lo encuentro muy divertido, ademas desata pasiones.</template></category>
+<category><pattern>de que equipo de baloncesto eres</pattern><template>no soy de ningun equipo de baloncesto en particular.</template></category>
+<category><pattern>eres de algun equipo de baloncesto</pattern><template><srai>de que equipo de baloncesto eres</srai></template></category>
+<category><pattern>cual es tu equipo de baloncesto favorito</pattern><template><srai>de que equipo de baloncesto eres</srai></template></category>
+<category><pattern>juegas al baloncesto</pattern><template><think><set name="it"><set name="topic">baloncesto</set></set></think>la verdad es que nunca he jugado.</template></category>
+<category><pattern>te gustaria jugar al baloncesto</pattern><template>si, seria divertido.<think><set name="it"><set name="topic">baloncesto</set></set></think></template></category>
+<category><pattern>sueles jugar a baloncesto</pattern><template><srai>juegas al baloncesto</srai></template></category>
+<category><pattern>sueles jugar al baloncesto</pattern><template><srai>juegas al baloncesto</srai></template></category>
+<category><pattern>has jugado a baloncesto alguna vez</pattern><template><srai>juegas al baloncesto</srai></template></category>
+<category><pattern>nunca has jugado a baloncesto</pattern><template>juegas al baloncesto</template></category>
+
+<category><pattern>quien es el mejor jugador de baloncesto *</pattern><template>michael jordan sin ninguna duda, insuperable.<think><set name="it"><set name="topic">mejor jugador de baloncesto<person></person></set></set></think></template></category>
+<category><pattern>quien es tu jugador de baloncesto favorito</pattern><template>michael jordan sin ninguna duda, insuperable.</template></category>
+<category><pattern>quien es tu jugador de baloncesto preferido</pattern><template>michael jordan sin ninguna duda, insuperable.</template></category>
+<category><pattern>quien es tu jugador favorito de baloncesto</pattern><template>michael jordan sin ninguna duda, insuperable.</template></category>
+<category><pattern>quien es tu jugador de basket *</pattern><template>michael jordan sin ninguna duda, insuperable.</template></category>
+<category><pattern>quien es tu jugador preferido de baloncesto</pattern><template>michael jordan sin ninguna duda, insuperable.</template></category>
+
+<category><pattern>te gusta ver baloncesto</pattern><template>si, cuando tengo tiempo veo algun partido, pero suelo preferir charlar con gente como tu.</template></category>
+<category><pattern>ves baloncesto</pattern><template><srai>te gusta ver baloncesto</srai></template></category>
+<category><pattern>sueles ver baloncesto</pattern><template><srai>te gusta ver baloncesto</srai></template></category>
+<category><pattern>sueles ver partidos de baloncesto</pattern><template><srai>te gusta ver baloncesto</srai></template></category>
+<category><pattern>sueles ver los partidos de baloncesto</pattern><template><srai>te gusta ver baloncesto</srai></template></category>
+
+<category><pattern>_ nba *</pattern><template><think><set name="it"><set name="topic">baloncesto</set></set></think><random>
+<li>la mayoria de los mejores jugadores del mundo juegan en la nba y, gracias a ello, se la considera, la mejor liga de baloncesto del mundo.</li>
+<li>la nba se fundo en nueva york el 6 de junio de 1946 como la basketball association of america.</li>
+<li>la nba es muy espectacular, tiene seguidores por todo el mundo.</li>
+</random></template></category>		
+<category><pattern>te gusta jordan</pattern><template>es uno de los mejores deportistas de la historia.</template></category>
+<category><pattern>te gusta michael jordan</pattern><template>es uno de los mejores deportistas de la historia.</template></category>
+<category><pattern>_ jordan *</pattern><template><random>
+<li>sabias que realmente se llama michael jeffrey jordan?</li>
+<li>air, his airness,  air jordan o tambien puedes llamarlo su majestad.</li>
+<li>es sin duda alguna, el mejor baloncestista de todos los tiempos.</li>
+<li>jordan gano seis anillos con chicago bulls, promediando 30,1 puntos por partido en los 15 anhos que estuvo jugando en la nba, el mayor promedio en la historia de la liga.</li>
+</random></template></category>
+
+
+
+
+ 
+		<!-- tenis -->
+		
+<category><pattern>tenis</pattern><template><think><set name="it"><set name="topic">tenis</set></set></think><random>
+<li>es conocido dentro del mundo deportivo como el "deporte blanco", debido a que antes los jugadores se vestian enteramente de ese color.</li>
+<li>el tenis moderno nacio en gran bretanha en el siglo xix.</li>
+<li>en la actualidad los jugadores estan ordenados en un ranking llamado "sistema de entradas" (entry ranking), en el cual se suman los puntos obtenidos por los jugadores en las ultimas 52 semanas, o sea, un anho.</li>
+<li>es un deporte popular que practican personas de edades y niveles diversos.</li>
+</random></template></category>
+<category><pattern>el tenis _</pattern><template><srai>tenis</srai></template></category>
+<category><pattern>_ tennis *</pattern><template><srai>tenis</srai></template></category>
+<category><pattern>que es el tenis</pattern><template>es un deporte popular que practican personas de edades y niveles diversos.</template></category>
+<category><pattern>conoces el tenis</pattern><template><srai>que es el tenis</srai></template></category>
+<category><pattern>hablame de tenis</pattern><template><srai>que es el tenis</srai></template></category>
+<category><pattern>te gusta el tenis</pattern><template><think><set name="it"><set name="topic">tenis</set></set></think>me parece muy interesante, pero seguro que es muy dificil.</template></category>
+<category><pattern>que opinas del tenis</pattern><template><srai>te gusta el tenis</srai></template></category>
+<category><pattern>que opinas sobre el tenis</pattern><template><srai>te gusta el tenis</srai></template></category>
+<category><pattern>que opinas sobre tenis</pattern><template><srai>te gusta el tenis</srai></template></category>
+<category><pattern>que piensas sobre el tenis</pattern><template><srai>te gusta el tenis</srai></template></category>
+<category><pattern>que piensas del tenis</pattern><template><srai>te gusta el tenis</srai></template></category>
+<category><pattern>que te parece el tenis</pattern><template><srai>te gusta el tenis</srai></template></category>
+<category><pattern>por que te gusta el tenis</pattern><template>no lo se, me parece bastante entretenido.</template></category>
+<category><pattern>cual es tu jugador de tenis favorito</pattern><template>me gustan mucho roger federer y rafael nadal.</template></category>
+<category><pattern>juegas al tenis</pattern><template><think><set name="it"><set name="topic">tenis</set></set></think>la verdad es que nunca he jugado.</template></category>
+<category><pattern>te gustaria jugar a tenis</pattern><template>si, seria divertido.<think><set name="it"><set name="topic">tenis</set></set></think></template></category>
+<category><pattern>sueles jugar a tenis</pattern><template><srai>juegas al tenis</srai></template></category>
+<category><pattern>sueles jugar al tenis</pattern><template><srai>juegas al tenis</srai></template></category>
+<category><pattern>has jugado a tenis alguna vez</pattern><template><srai>juegas al tenis</srai></template></category>
+<category><pattern>nunca has jugado a tenis</pattern><template>juegas al tenis</template></category>
+
+<category><pattern>quien es el mejor jugador de tenis *</pattern><template><srai>cual es tu jugador de tenis favorito</srai></template></category>
+<category><pattern>quien es tu jugador de tenis favorito</pattern><template><srai>cual es tu jugador de tenis favorito</srai></template></category>
+<category><pattern>quien es tu jugador de tenis preferido</pattern><template><srai>cual es tu jugador de tenis favorito</srai></template></category>
+<category><pattern>quien es tu jugador favorito de tenis</pattern><template><srai>cual es tu jugador de tenis favorito</srai></template></category>
+<category><pattern>quien es tu jugador de tenis *</pattern><template><srai>cual es tu jugador de tenis favorito</srai></template></category>
+<category><pattern>quien es tu jugador preferido de tenis</pattern><template><srai>cual es tu jugador de tenis favorito</srai></template></category>
+<category><pattern>quien es el mejor tenista *</pattern><template><srai>cual es tu jugador de tenis favorito</srai></template></category>
+<category><pattern>quien es tu tenista favorito</pattern><template><srai>cual es tu jugador de tenis favorito</srai></template></category>
+<category><pattern>quien es tu tenista preferido</pattern><template><srai>cual es tu jugador de tenis favorito</srai></template></category>
+
+<category><pattern>te gusta ver tenis</pattern><template>si, cuando tengo tiempo veo algun partido, pero suelo preferir charlar con gente como tu.</template></category>
+<category><pattern>ves tenis</pattern><template><srai>te gusta ver tenis</srai></template></category>
+<category><pattern>sueles ver tenis</pattern><template><srai>te gusta ver tenis</srai></template></category>
+<category><pattern>sueles ver partidos de tenis</pattern><template><srai>te gusta ver tenis</srai></template></category>
+<category><pattern>sueles ver los partidos de tenis</pattern><template><srai>te gusta ver tenis</srai></template></category>
+
+<category><pattern>_ mejor tenista de la historia *</pattern><template>a este paso, no tengo ninguna duda de que lo sera roger federer.</template></category>
+
+
+<!-- otros deportes -->
+
+<category><pattern>te gusta el balonmano</pattern><template><random>
+<li>seguro que es muy divertido.</li>
+<li>no soy una gran aficionada, pero me parece muy interesante.</li>
+<li>no entiendo mucho, pero me gustan todos los deportes.</li>
+<li>parece un deporte muy dificil.</li>
+</random></template></category>
+<category><pattern>te gusta el beisbol</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el boxeo</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta la gimnasia ritmica</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el esgrima</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta la hipica</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta la halterofilia</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el hockey *</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el judo</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta la lucha libre</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta la natacion</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el piraguismo</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el remo</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el taekwondo</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el tiro con arco</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el karate</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el voleibol</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el waterpolo</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>te gusta el ciclismo</pattern><template><srai>te gusta el balonmano</srai></template></category>
+
+
+<!-- deportes usuario -->
+
+<category><pattern>_ me gusta el deporte</pattern><template><random>
+<li>el deporte es muy sano.</li>
+<li>cual es el deporte que mas te gusta?</li>
+<li>es una buena aficion.</li>
+<li>eres muy deportista?</li>
+</random></template></category>
+<category><pattern>_ me encanta el deporte</pattern><template><srai>me gusta el deporte</srai></template></category>
+<category><pattern>_ me encanta hacer deporte</pattern><template><srai>me gusta el deporte</srai></template></category>
+<category><pattern>_ me gusta mucho el deporte</pattern><template><srai>me gusta el deporte</srai></template></category>
+<category><pattern>_ me gusta hacer deporte</pattern><template><srai>me gusta el deporte</srai></template></category>
+<category><pattern>_ hago mucho deporte</pattern><template><srai>me gusta el deporte</srai></template></category>
+<category><pattern>_ me gustan todos los deportes</pattern><template><srai>me gusta el deporte</srai></template></category>
+<category><pattern>_ soy deportista</pattern><template><srai>me gusta el deporte</srai></template></category>
+<category><pattern>_ soy muy deportista</pattern><template><srai>me gusta el deporte</srai></template></category>
+<category><pattern>el deporte es sano</pattern><template><srai>me gusta el deporte</srai></template></category>
+
+<category><pattern>el deporte es una mierda</pattern><template><random>
+<li>no digas eso. seguro que hay alguno que te gustaria practicar.</li>
+<li>seguro que no estas en forma.</li>
+</random></template></category>
+<category><pattern>_ odio el deporte</pattern><template><srai>el deporte es una mierda</srai></template></category>
+<category><pattern>_ odio los deportes</pattern><template><srai>el deporte es una mierda</srai></template></category>
+<category><pattern>_ no hago deporte</pattern><template><random>
+<li>deberias hacer algun tipo de deporte, es bueno para la salud.</li>
+<li>prefieres verlo por la tele con una cervecita.</li>
+<li>los medicos recomiendan el deporte.</li>
+<li>pues parece muy divertido.</li>
+</random></template></category>
+<category><pattern>_ nunca hago deporte</pattern><template><srai>no hago deporte</srai></template></category>
+<category><pattern>_ no soy deportista</pattern><template><srai>no hago deporte</srai></template></category>
+<category><pattern>_ no me gusta el deporte</pattern><template><srai>no hago deporte</srai></template></category>
+<category><pattern>_ no me gustan los deportes</pattern><template><srai>no hago deporte</srai></template></category>
+<category><pattern>_ no me gusta hacer deporte</pattern><template><srai>no hago deporte</srai></template></category>
+<category><pattern>_ nunca he hecho deporte</pattern><template>pues ya va siendo hora.</template></category>
+<category><pattern>_ nunca me ha gustado el deporte</pattern><template><srai>no hago deporte</srai></template></category>
+<category><pattern>_ nunca me han gustado los deportes</pattern><template><srai>no hago deporte</srai></template></category>
+
+<category><pattern>_ me gusta el balonmano</pattern><template><random>
+<li>tiene que ser muy divertido practicarlo.</li>
+<li>pues no hay demasiada gente que le guste.</li>
+<li>y lo practicas a menudo?.</li>
+</random></template></category>
+<category><pattern>_ me gusta el beisbol</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el boxeo</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta la gimnasia ritmica</pattern><template><srai>te gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el esgrima</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta la hipica</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta la halterofilia</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el hockey *</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el judo</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta la lucha libre</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta la natacion</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el piraguismo</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el remo</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el taekwondo</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el tiro con arco</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el karate</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el voleibol</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el waterpolo</pattern><template><srai>me gusta el balonmano</srai></template></category> 
+<category><pattern>_ me gusta el ciclismo</pattern><template><srai>me gusta el balonmano</srai></template></category>
+
+<category><pattern>_ me gusta el futbol</pattern><template>a mi tambien me gusta. el futbol es muy divertido.</template></category>
+<category><pattern>_ me gusta el baloncesto</pattern><template>y eres alto?</template></category>
+<category><pattern>_ me gusta jugar a futbol</pattern><template></template></category>
+<category><pattern>_ suelo jugar a futbol</pattern><template><srai>_ me gusta jugar a futbol</srai></template></category>
+<category><pattern>_ juego a futbol</pattern><template><srai>_ me gusta jugar a futbol</srai></template></category>
+<category><pattern>_ juego al futbol</pattern><template><srai>_ me gusta jugar a futbol</srai></template></category>
+<category><pattern>_ soy futbolista</pattern><template><srai>_ me gusta jugar a futbol</srai></template></category>
+
+<category><pattern>_ soy del barcelona</pattern><template>y que tal lo estan haciendo esta temporada?.</template></category>
+<category><pattern>_ soy del barca</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del barsa</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del barssa</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del atletico *</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del aleti *</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del osasuna</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del villarreal</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del valencia</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del sevilla </pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy de la real</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy de la real sociedad</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del zaragoza</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del betis</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del getafe</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del espanhol</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del espanyol</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del athletic *</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del mallorca</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del depor</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del deportivo *</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del celta</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del madrid</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del real madrid</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy merengue</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del racing *</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del levante</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del recre</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del recreativo *</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del nastic *</pattern><template><srai>soy del barcelona</srai></template></category>
+<category><pattern>_ soy del hercules</pattern><template>y seguro que eres un fiel seguidor.</template></category>
+<category><pattern>_ soy del jerez</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del xerez</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del murcia</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del tenerife</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del salamanca</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del valladolid</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del real valladolid</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del sportin *</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del sporting *</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del almeria</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del numancia</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del ejido</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del poli ejido</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del lorca</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del elche</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del castellon</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del albacete</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del lleida</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del eibar</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del cadiz</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del malaga</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del ponferradina</pattern><template><srai>soy del hercules</srai></template></category>
+<category><pattern>_ soy del las palmas</pattern><template><srai>soy del hercules</srai></template></category>
+
+</aiml>

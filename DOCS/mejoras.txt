@@ -1,0 +1,37 @@
+- criar comando para andar página para direita e para esquerda /end word para ir para o final da palavra/ acento tilde / selecionar paragrafo
+- opcao de criar modo para programas (ex: firefox) na tela de configuração
+- tela de alternância de programas aparece logo ao movimentar o mouse
+- cambie "notepad" por "opennotepad" / "quote" por "quotesign"
+- Grade em plano de fundo
+- fechar janela do tipo da janela prompt dos
+- fazer que o comando select desative apos a maioria das acoes, principalmente comandos selectcorrection, copy/cute/copybox/cutbox teclas do teclado (excecoes: setas pra direita, esquerda, baixo, acima, home, end, pageup, pagedown, nextword, backword)
+- Números estendidos até 100
+- falsos negativos comuns:  números
+- addcopy
+- comando mousestop e showgrid diminuir velocidade do mouse (Para velocidade 1)
+- Comandos running slow alterar a velocidade em saltos maiores
+- tela de correção: 
+- não entende símbolos como parenteses e percentual, não funciona com seleção de mais de cem palavras, invade a linha de baixo ao pegar e pula páginas em certas ocasiões
+- ditado: formas de aprimorar/acelerar as listas de substituições e tela de correção; uso do comando literal
+- opção de dar enter para aceitar palavra não modificada na tela de correção
+- erro tela de correção no gmail: não abriu e após isso as lista de substituições não funcionavam
+ Error en EjecutarComando: [CORRECCION], Error:Requested Clipboard operation did not succeed.
+Error en EjecutarComando: [CORRECCION], Error:Requested Clipboard operation did not succeed.
+Error en SustituirFraseEntrada, frase:borges vírgula, fraseentradasus: vírgula, FraseSalida:, , literal: literal, Error: Length cannot be less than zero.
+
+Pantalla de corrección:
+botón para eliminar dobles espacios o espacios antes de signos de puntuación
+botón para eliminar las maýusculas que no van detrás de puntos
+Enter para clearword borrar la palabra sin cambios
+Botón para poner la letra inicial en maýusculas
+opción para vocales con tilde de eñe
+al entrar en la pantalla de corrección elegir si se copia el texto o de corta
+opción para ir al final de una palabra
+
+buscar frase
+                                    SendKeys.SendWait("{HOME}");
+
+Pantalla de corrección:
+botón para eliminar dobles espacios o espacios antes de signos de puntuación
+                                    SendKeys.SendWait("{RIGHT "+pos_ini.ToString()+"}");
+                                    SendKeys.SendWait("+{END}");

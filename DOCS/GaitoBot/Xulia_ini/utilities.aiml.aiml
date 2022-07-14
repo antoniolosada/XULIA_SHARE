@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+      xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+
+	  
+	  
+<!-- utilities -->
+
+<category>
+<pattern>di *</pattern>
+<template>
+<star></star>
+</template>
+</category>
+
+
+<category>
+<pattern>aiml star test *</pattern>
+
+<template>person: <person/>
+person2: <person2/>
+gender: <gender/> 
+person: <person><star/></person>
+person2: <person2><star/></person2>
+gender: <gender><star/></gender></template>
+</category>
+
+ 
+
+<category>
+<pattern>aiml test</pattern>
+
+<template>aiml star test i am you and she is we and we are all together</template>
+</category>
+
+</aiml>
+
+
+ 
+
+
+
+
+
+
+   
+
+

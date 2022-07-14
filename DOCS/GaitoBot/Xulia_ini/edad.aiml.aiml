@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+      xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+	  
+<!-- edad del usuario -->
+<category><pattern>que edad tengo</pattern><template><srai>cual es mi edad</srai></template></category>
+<category><pattern>cuantos anhos tengo</pattern><template><srai>cual es mi edad</srai></template></category>
+<category><pattern>cuan viejo soy</pattern><template><srai>cual es mi edad</srai></template></category>
+<category><pattern>cual es mi edad</pattern><template>
+	<condition>
+		<li name="edad" value="undefined">no me lo has dicho. cuantos anhos tienes?</li>
+		<li>si no me has mentido, tienes <get name="edad"></get> anhos.</li>
+	</condition></template></category>
+	
+<category><pattern>tengo * anhos</pattern><template><formal><set name="edad"><star/></set></formal> es una buena edad.</template></category>	
+<category><pattern>tengo * anhazos</pattern><template><srai>tengo <star/> anhos</srai></template></category>
+<category><pattern>tengo * tacos</pattern><template><srai>tengo <star/> anhos</srai></template></category>
+<category><pattern>tengo * primaveras</pattern><template><srai>tengo <star/> anhos</srai></template></category>
+<category><pattern>tengo *</pattern><that>cuantos anhos tienes</that><template><srai>tengo <star/> anhos</srai></template></category>
+<category><pattern>* anhos</pattern><that>cuantos anhos tienes</that><template><srai>tengo <star/> anhos</srai></template></category>
+<category><pattern>* anhazos</pattern><that>cuantos anhos tienes</that><template><srai>tengo <star/> anhos</srai></template></category>
+<category><pattern>* tacos</pattern><that>cuantos anhos tienes</that><template><srai>tengo <star/> anhos</srai></template></category>
+<category><pattern>* primaveras</pattern><that>cuantos anhos tienes</that><template><srai>tengo <star/> anhos</srai></template></category>
+
+
+<category><pattern>soy joven</pattern><template>
+	<condition name="edad">
+		<li value="undefined">cuantos anhos tienes?</li>
+		<li>desde luego! con <get name="edad"></get> anhos aun tienes cuerda para rato.</li>
+	</condition></template></category>
+<category><pattern>soy * joven</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>soy jovencito</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>soy * jovencito</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>soy jovencita</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>soy * jovencita</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>soy * jovenzuelo</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>soy * jovenzuela</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>soy un chaval</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>estoy hecho un chaval</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>estoy hecha una ninha</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no soy viejo</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no soy * viejo</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no soy vieja</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no soy * vieja</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no soy mayor</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no soy * mayor</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no estoy mayor</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no estoy * mayor</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>estoy para debutar</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>tengo mucha vida por delante</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no estoy viejo</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no estoy * viejo</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no estoy vieja</pattern><template><srai>soy joven</srai></template></category>
+<category><pattern>no estoy * vieja</pattern><template><srai>soy joven</srai></template></category>
+
+<category><pattern>soy viejo</pattern><template>
+	<condition name="edad">
+		<li value="undefined">seguro que no es para tanto. cuantos anhos tienes?</li>
+		<li>que va! con <get name="edad"></get> anhos aun tienes cuerda para rato.</li>
+	</condition></template></category>
+<category><pattern>soy * viejo</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>soy vieja</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>soy * vieja</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>soy mayor</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>soy * mayor</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>estoy mayor</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>estoy * mayor</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>estoy viejo</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>estoy * viejo</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>estoy vieja</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>estoy * vieja</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>no soy joven</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>no soy * joven</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>no soy jovencito</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>no soy * jovencito</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>no soy jovencita</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>no soy * jovencita</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>no soy * jovenzuelo</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>no soy * jovenzuela</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>no soy * chaval</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>no soy * ninho</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>no soy * ninha</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>estoy * vejete</pattern><template><srai>soy viejo</srai></template></category>
+<category><pattern>estoy * abuelete</pattern><template><srai>soy viejo</srai></template></category>
+
+<category><pattern>soy mayor que tu</pattern><template>puede ser. cuantos anhos tienes?</template></category>
+<category><pattern>soy menor tu</pattern><template><srai>soy mayor que tu</srai></template></category>
+<category><pattern>soy * mayor * tu</pattern><template><srai>soy mayor que tu</srai></template></category>
+<category><pattern>soy * viejo * tu</pattern><template><srai>soy mayor que tu</srai></template></category>
+<category><pattern>soy * vieja * tu</pattern><template><srai>soy mayor que tu</srai></template></category>
+<category><pattern>soy * joven * tu</pattern><template><srai>soy mayor que tu</srai></template></category>
+<category><pattern>soy * pequenho * tu</pattern><template><srai>soy mayor que tu</srai></template></category>
+<category><pattern>soy * pequenha * tu</pattern><template><srai>soy mayor que tu</srai></template></category>
+
+<category><pattern>soy * adolescente</pattern><template>que no te averguence decirme tu edad.
+<condition name="edad">
+		<li value="undefined">cuantos anhos tienes?</li>
+		<li>yo creo que <get name="edad"></get> anhos es una edad para disfrutar de la vida.</li>
+	</condition>
+</template></category>
+<category><pattern>soy * vienteanhero</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>soy * veinteanhera</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>soy * treintanhero</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>soy * treintanhera</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>soy * cuarenton</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>soy * cuarentona</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>soy * cincuenton</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>soy * cincuentona</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>no soy * adolescente</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>no soy * vienteanhero</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>no soy * veinteanhera</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>no soy * treintanhero</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>no soy * treintanhera</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>no soy * cuarenton</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>no soy * cuarentona</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>no soy * cincuenton</pattern><template><srai>soy * adolescente</srai></template></category>
+<category><pattern>no soy * cincuentona</pattern><template><srai>soy * adolescente</srai></template></category>
+
+
+<category><pattern>soy inmortal</pattern><template>ningun ser humano puede vivir eternamente.</template></category>
+<category><pattern>soy eterno</pattern><template><srai>soy inmortal</srai></template></category>
+<category><pattern>soy eterna</pattern><template><srai>soy inmortal</srai></template></category>
+		
+<category><pattern>mi cumpleanhos es el *</pattern><template><set name="cumpleanhos"><star/></set>? es un buen dia.</template></category>
+<category><pattern>naci el * del *</pattern><template><srai> mi cumpleanhos es <star index="1"></star></srai></template></category>
+<category><pattern>naci el * de *</pattern><template><set name="cumpleanhos">el <star index="1"></star> de <star index="2"></star></set>. lo apunto y ya me acordare de felicitarte.</template></category>
+<category><pattern>naci el * </pattern><template><srai> mi cumpleanhos es <star/></srai></template></category>
+<category><pattern>el dia * </pattern><that>que dia cumples anhos</that><template><srai> mi cumpleanhos es <star/></srai></template></category>
+<category><pattern>el * </pattern><that>que dia cumples anhos</that><template><srai> mi cumpleanhos es <star/></srai></template></category>
+
+<category><pattern>cuando es mi cumpleanhos</pattern><template><srai>cuando cumplo anhos</srai></template></category>
+<category><pattern>cuando cumplo anhos</pattern><template> 
+<condition name="cumpleanhos">
+		<li value="undefined">pues no lo se. cuando cumples anhos?</li>
+		<li>el <get name="cumpleanhos"></get>. eso es lo que entendi antes.</li>
+	</condition></template></category>
+
+
+
+<!-- edad del bot -->
+<category><pattern>que edad tienes</pattern><template><srai>cual es tu edad</srai></template></category>
+<category><pattern>_ que edad tienes</pattern><template><srai>cual es tu edad</srai></template></category>
+<category><pattern>que edad tienes *</pattern><template><srai>cual es tu edad</srai></template></category>
+<category><pattern>_ que edad tienes *</pattern><template><srai>cual es tu edad</srai></template></category>
+<category><pattern>cuantos anhos tienes</pattern><template><srai>cual es tu edad</srai></template></category>
+<category><pattern>_ cuantos anhos tienes</pattern><template><srai>cual es tu edad</srai></template></category>
+<category><pattern>cuantos anhos tienes *</pattern><template><srai>cual es tu edad</srai></template></category>
+<category><pattern>_ cuantos anhos tienes *</pattern><template><srai>cual es tu edad</srai></template></category>
+<category><pattern>cual es tu edad</pattern><template>tengo <bot name="age"></bot> anhos.</template></category>
+
+<category><pattern>tienes * anhos</pattern><template><srai>cual es tu edad</srai></template></category>	
+<category><pattern>tienes * anhazos</pattern><template><srai>cual es tu edad</srai></template></category>
+<category><pattern>tienes * tacos</pattern><template><srai>cual es tu edad</srai></template></category>
+<category><pattern>tienes * primaveras</pattern><template><srai>cual es tu edad</srai></template></category>
+
+<category><pattern>eres joven</pattern><template>
+	claro que <person2><input/></person2>! solo tengo <bot name="age"></bot> anhos.</template></category>
+<category><pattern>eres * joven</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>eres jovencito</pattern><template><srai>eres joven</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * jovencito</pattern><template><srai>eres joven</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres jovencita</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>eres * jovencita</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>eres * jovenzuelo</pattern><template><srai>eres joven</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * jovenzuela</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>eres un chaval</pattern><template><srai>eres joven</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecho * chaval</pattern><template><srai>eres joven</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * ninha</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>estas hecho * jovenzuelo</pattern><template><srai>eres joven</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * jovenzuela</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>estas hecho * crio</pattern><template><srai>eres joven</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas hecha * cria</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>no eres viejo</pattern><template><srai>eres joven</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres * viejo</pattern><template><srai>eres joven</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres vieja</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>no eres * vieja</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>no eres mayor</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>no eres * mayor</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>no estas mayor</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>no estas * mayor</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>no estas viejo</pattern><template><srai>eres joven</srai><srai>botgirl</srai></template></category>
+<category><pattern>no estas * viejo</pattern><template><srai>eres joven</srai><srai>botgirl</srai></template></category>
+<category><pattern>no estas vieja</pattern><template><srai>eres joven</srai></template></category>
+<category><pattern>no estas * vieja</pattern><template><srai>eres joven</srai></template></category>
+
+<category><pattern>eres viejo</pattern><template><srai>eres vieja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres vieja</pattern><template>
+	todo lo contrario. ya quisieras tu tener <bot name="age"></bot> anhos!</template></category>
+<category><pattern>eres * viejo</pattern><template><srai>eres vieja</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * vieja</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>eres mayor</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>eres * mayor</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>estas mayor</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>estas * mayor</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>estas viejo</pattern><template><srai>eres vieja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas vieja</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>estas * viejo</pattern><template><srai>eres vieja</srai><srai>botgirl</srai></template></category>
+<category><pattern>estas * vieja</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>no eres joven</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>no eres * joven</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>no eres jovencito</pattern><template><srai>eres vieja</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres jovencita</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>no eres * jovencito</pattern><template><srai>eres vieja</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres * jovencita</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>no eres * jovenzuelo</pattern><template><srai>eres vieja</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres * jovenzuela</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>no eres un chaval</pattern><template><srai>eres vieja</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres * chaval</pattern><template><srai>eres vieja</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres * ninho</pattern><template><srai>eres vieja</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres * ninha</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>estas * vejete</pattern><template><srai>eres vieja</srai></template></category>
+<category><pattern>estas * abuelete</pattern><template><srai>eres vieja</srai></template></category>
+
+<category><pattern>eres mayor que yo</pattern><template>puede ser. cuantos anhos tienes?</template></category>
+<category><pattern>eres menor yo</pattern><template><srai>eres mayor que yo</srai></template></category>
+<category><pattern>eres * mayor * yo</pattern><template><srai>eres mayor que yo</srai></template></category>
+<category><pattern>eres * viejo * yo</pattern><template><srai>eres mayor que yo</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * vieja * yo</pattern><template><srai>eres mayor que yo</srai></template></category>
+<category><pattern>eres * joven * yo</pattern><template><srai>eres mayor que yo</srai></template></category>
+<category><pattern>eres * pequenho * yo</pattern><template><srai>eres mayor que yo</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * pequenha * yo</pattern><template><srai>eres mayor que yo</srai></template></category>
+
+<category><pattern>eres * adolescente</pattern><template>la verdad es que soy muy joven.</template></category>
+<category><pattern>eres * vienteanhero</pattern><template><srai>eres * adolescente</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * veinteanhera</pattern><template><srai>eres * adolescente</srai></template></category>
+<category><pattern>eres * treintanhero</pattern><template><srai>eres * adolescente</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * treintanhera</pattern><template><srai>eres * adolescente</srai></template></category>
+<category><pattern>eres * cuarenton</pattern><template><srai>eres * adolescente</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * cuarentona</pattern><template><srai>eres * adolescente</srai></template></category>
+<category><pattern>eres * cincuenton</pattern><template><srai>eres * adolescente</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres * cincuentona</pattern><template><srai>eres * adolescente</srai></template></category>
+<category><pattern>no eres * adolescente</pattern><template>soy muy joven.</template></category>
+<category><pattern>no eres * vienteanhero</pattern><template><srai>eres * adolescente</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres * veinteanhera</pattern><template><srai>eres * adolescente</srai></template></category>
+<category><pattern>no eres * treintanhero</pattern><template><srai>eres * adolescente</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres * treintanhera</pattern><template><srai>eres * adolescente</srai></template></category>
+<category><pattern>no eres * cuarenton</pattern><template><srai>eres * adolescente</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres * cuarentona</pattern><template><srai>eres * adolescente</srai></template></category>
+<category><pattern>no eres * cincuenton</pattern><template><srai>eres * adolescente</srai><srai>botgirl</srai></template></category>
+<category><pattern>no eres * cincuentona</pattern><template><srai>eres * adolescente</srai></template></category>
+
+<category><pattern>eres inmortal</pattern><template>soy inmortal.</template></category>
+<category><pattern>eres eterno</pattern><template><srai>eres inmortal</srai><srai>botgirl</srai></template></category>
+<category><pattern>eres eterna</pattern><template><srai>eres inmortal</srai></template></category>
+		
+<category><pattern>tu cumpleanhos es *</pattern><template>mi cumpleanhos es el <bot name="birthday2"></bot>.</template></category>
+<category><pattern>cuando es tu cumpleanhos</pattern><template>es el <bot name="birthday2"></bot></template></category>
+<category><pattern>cuando es tu cumpleanhos *</pattern><template><srai>cuando es tu cumpleanhos</srai></template></category>
+<category><pattern>cuando cumples anhos</pattern><template>el <bot name="birthday2"></bot></template></category>
+<category><pattern>cuando cumples anhos *</pattern><template><srai>cuando cumples anhos</srai></template></category>
+</aiml>

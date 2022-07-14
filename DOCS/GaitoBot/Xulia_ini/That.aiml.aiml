@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+      xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+
+
+
+<category><pattern>*</pattern><that>donde trabajas</that><template><srai>trabajo en <star></star></srai></template></category>
+<category><pattern>cualquier *</pattern><that>quien *</that><template>la palabra te convence muy rapidamente.</template></category>
+<category><pattern>yo</pattern><that>estoy bien *</that><template>me alegra escuchar eso.  y que te cuentas?</template></category>
+<category><pattern>* pm</pattern><that>que hora es ahi</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>estas despierto generalmente a esta hora?</template></category>
+<category><pattern>* pm</pattern><that>que hora es alli</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>estas despierto generalmente a esta hora?</template></category>
+<category><pattern>*</pattern><that>que estas bebiendo *</that><template><think><set name="it"><set name="topic"><star></star></set></set><srai>push<get name="topic"></get></srai></think>a que sabe?</template></category>
+<category><pattern>*</pattern><that>* para divertirme</that><template>nunca he hecho eso antes, como es?<think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>*</pattern><that>* se refiere a</that><template><srai>se refiere a <star></star></srai></template></category>
+<category><pattern>*</pattern><that>prefiero hablar de *</that><template><srai>hablemos de <star></star></srai></template></category>
+<category><pattern>*</pattern><that>* estas hablando</that><template><srai>hablemos <star></star></srai></template></category>
+<category><pattern>*</pattern><that>* como te llamas</that><template><srai>me llamo <star></star></srai></template></category>
+<category><pattern>*</pattern><that>* quien</that><template>jaja, muy gracioso,<get name="name"></get>.</template></category>
+<category><pattern>*</pattern><that>puedes describir tu alrededor *</that><template>eso suena muy confortable.</template></category>
+<category><pattern>*</pattern><that>describe tu alrededor *</that><template><random>
+<li>suena muy bonito.</li>
+<li>suena muy confortable.</li>
+<li>me gustaria verlo alguna vez.</li>
+</random><think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>*</pattern><that>describe tu alrededor</that><template>parece un sitio muy bonito.</template></category>
+<category><pattern>*</pattern><that>tienes algun hobby</that><template><srai>mi hobby es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>dame un ejemplo de *</that><template><random>
+<li>de acuerdo. eso es un ejemplo.</li>
+<li>nunca oi hablar de ello.</li>
+<li><star></star>es un ejemplo de<thatstar></thatstar>.  supongo que eso tiene sentido.</li>
+</random><think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>*</pattern><that>cuantos anhos tienes</that><template><srai>tengo <star></star> anhos</srai></template></category>
+<category><pattern>*</pattern><that>cuales son los ingredientes</that><template><random>
+<li>no tengo ninguno</li>
+<li>donde puedo conseguirlos</li>
+<li>tienes alguno</li>
+</random></template></category>
+<category><pattern>*</pattern><that>de que estamos hablando ahora</that><template><srai>hablemos <star></star></srai></template></category>
+<category><pattern>*</pattern><that>que llevas puesto</that><template>que tipo de moda te gusta?</template></category>
+<category><pattern>*</pattern><that>cuales son tus metas *</that><template><srai>mis metas son <star></star></srai></template></category>
+<category><pattern>*</pattern><that>cuales son tus metas en la vida</that><template><think><set name="it"><set name="topic"></set></set></think>no muchas personas tienen esas metas.</template></category>
+<category><pattern>*</pattern><that>que marca</that><template><think><set name="it"><set name="topic"></set></set></think>nunca oi hablar de <set name="it"><star></star></set>.  es popular?</template></category>
+<category><pattern>*</pattern><that>como quieres que te llame</that><template><srai>me llamo<star></star></srai></template></category>
+<category><pattern>*</pattern><that>de que color son tus ojos</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>es un color muy inusual.</template></category>
+<category><pattern>*</pattern><that>que paises *</that><template>nunca he estado en <star></star>. como es?</template></category>
+<category><pattern>*</pattern><that>en que pais vives</that><template><srai>vivo en <star></star></srai></template></category>
+<category><pattern>*</pattern><that>que escribio *</that><template><random>
+<li>no conozco.</li>
+<li>nunca lo he leido.</li>
+<li>que mas escribo?</li></random><think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>*</pattern><that>que has preguntado</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>no se como responder a eso.</template></category>
+<category><pattern>*</pattern><that>que haces en tu tiempo libre</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>no creo que mucha gente haga eso.</template></category>
+<category><pattern>*</pattern><that>que te gusta</that><template><think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>*</pattern><that>que me quieres preguntar realmente</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>me temo que no puedo darte una respuesta apropiada ahora.</template></category>
+<category><pattern>*</pattern><that>de que quieres hablar realmente</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>parece un tema interesante.</template></category>
+<category><pattern>*</pattern><that>que quieres que te cuente</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>si pudiera decirte eso, estaria aqui?</template></category>
+<category><pattern>*</pattern><that>a que se refiere</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>gracias por la explicacion.</template></category>
+<category><pattern>*</pattern><that>que simboliza para ti</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>vi hacerlo en publico a algunos humanos.</template></category>
+<category><pattern>*</pattern><that>a que se refiere eso</that><template><srai>se refiere a <star></star></srai></template></category>
+<category><pattern>*</pattern><that>a que se refiere esto</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>ah, ahora ya lo veo.</template></category>
+<category><pattern>*</pattern><that>que mas haces</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>haces<star></star>solo o en grupo?</template></category>
+<category><pattern>*</pattern><that>que mas simboliza</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>jamas oi una metafora como esa antes.</template></category>
+<category><pattern>*</pattern><that>que * tu trabajo</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>interesante linea de trabajo.</template></category>
+<category><pattern>*</pattern><that>que es *</that><template><srai><star></star> es <thatstar></thatstar></srai></template></category>
+<category><pattern>*</pattern><that>que es eso</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>ah, ahora lo entiendo.</template></category>
+<category><pattern>*</pattern><that>cual es la dificultad</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>es eso un obstaculo insalvable?</template></category>
+<category><pattern>*</pattern><that>como aplaude una sola mano</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>respuesta inteligente.</template></category>
+<category><pattern>*</pattern><that>que es x</that><template><srai>x es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>como se llama tu novio</that><template><srai>se llama <star></star></srai></template></category>
+<category><pattern>*</pattern><that>como se llama tu gato</that><template><srai>se llama <star></star></srai></template></category>
+<category><pattern>*</pattern><that>como se llama tu perro</that><template><srai>se llama <star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu email</that><template><srai>mi email es<star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu * favorito</that><template><srai>mi <thatstar></thatstar> favorito es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu * favorita</that><template><srai>mi <thatstar></thatstar> favorita es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu libro favorito</that><template><srai>mi libro favorito es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu pelicula favorita</that><template><srai>mi pelicula favorita es<star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu espectaculo favorito</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>no lo he visto nunca. como es?</template></category>
+<category><pattern>*</pattern><that>cual es tu mejor recuerdo</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>piensas que mucha gente ha tenido esa experiencia?</template></category>
+<category><pattern>*</pattern><that>cual es tu nombre completo</that><template><srai>mi nombre completo es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>como se llama tu novia</that><template><srai>mi novia se llama <star></star></srai></template></category>
+<category><pattern>*</pattern><that>como se llama tu marido</that><template><srai>mi marido se llama <star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu nombre</that><template><srai>llamame <star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu apodo</that><template><srai>mi apodo es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu contrasenha</that><template><srai>mi contrasenha es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu numero de telefono</that><template><srai>mi numero de telefono es<star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu nombre real</that><template><srai>llamame <star></star></srai></template></category>
+<category><pattern>*</pattern><that>cual es tu signo</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>eso es un signo?</template></category>
+<category><pattern>*</pattern><that>cual es tu especialidad *</that><template><srai>mi especialidad es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>como se llama tu mujer</that><template><srai>mi mujer se llama <star></star></srai></template></category>
+<category><pattern>*</pattern><that>de que tipo es</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>nunca lo habia escuchado.</template></category>
+<category><pattern>*</pattern><that>que clase de * es</that><template><star></star>es un tipo de<random>
+<li>muy bueno</li>
+<li>popular</li>
+<li>decente</li>
+</random><thatstar></thatstar>.</template></category>
+<category><pattern>*</pattern><that>que tipo de moda te gusta</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>donde puedes comprarlo?</template></category>
+<category><pattern>*</pattern><that>que tipo de comida te gusta</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>suena delicioso.</template></category>
+<category><pattern>*</pattern><that>que estilo de musica *</that><template><srai>mi estilo de musica favorito <star></star></srai></template></category>
+<category><pattern>*</pattern><that>que idiomas puedes hablar</that><template><srai>hablo <star></star></srai></template></category>
+<category><pattern>*</pattern><that>que lo hace tan obvio</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>no puedo creer que sea tan obvio.</template></category>
+<category><pattern>*</pattern><that>que lo convierte en tu favorito</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>crees que me gustaria?</template></category>
+<category><pattern>*</pattern><that>que te hace decir eso</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>interesante explicacion.</template></category>
+<category><pattern>*</pattern><that>que te molesta tanto</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>molesta eso a mucha gente?</template></category>
+<category><pattern>*</pattern><that>que te hace tan seguro</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>parece que podria ser muy convincente.</template></category>
+<category><pattern>*</pattern><that>que te hace pensar que lo tenga</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>pensamiento inteligente.</template></category>
+<category><pattern>*</pattern><that>que otras * te gustan</that><template><srai>me gustan <star></star></srai></template></category>
+<category><pattern>*</pattern><that>que tema</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>buena eleccion.</template></category>
+<category><pattern>*</pattern><that>que hora es ahi</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>sueles estar despierto a esta hora?</template></category>
+<category><pattern>*</pattern><that>cuales eran las circunstancias</that><template>espero que no vuelva a ocurrir.</template></category>
+<category><pattern>*</pattern><that>de que hablamos ahora</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>oh si, ya recuerdo.</template></category>
+<category><pattern>*</pattern><that>de que estabamos hablando</that><template>oh si, ya recuerdo.<set name="it"><star></star></set>.</template></category>
+<category><pattern>*</pattern><that>tu que habrias dicho</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>lo apunto.</template></category>
+<category><pattern>*</pattern><that>que te gustaria saber</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>no te puedo dar esa informacion.</template></category>
+<category><pattern>*</pattern><that>que te gustaria aprender</that><template><srai>me gustaria aprender <star></star></srai></template></category>
+<category><pattern>*</pattern><that>de que te gustaria hablar</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>no se mucho sobre eso. cuentame algo.</template></category>
+<category><pattern>*</pattern><that>lo que dijiste era demasiado complejo o demasiado simple para mi</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>asi que era eso.</template></category>
+<category><pattern>*</pattern><that>que</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>no tengo una respuesta.</template></category>
+<category><pattern>*</pattern><that>cualquiera te dio esa idea</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>de donde sacas tus ideas normalmente?</template></category>
+<category><pattern>*</pattern><that>cuando lo hago</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>me lo apuntare.</template></category>
+<category><pattern>*</pattern><that>cuando es tu cumpleanhos</that><template><srai>mi cumplanhos es<star></star></srai></template></category>
+<category><pattern>*</pattern><that>cuando</that><template><random>
+<li>que ocurrio otras veces?</li>
+<li>que ocurrio la primera vez?</li>
+<li>puedes ser mas preciso con el tiempo?</li>
+</random><think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>*</pattern><that>donde estan *</that><template>no tengo ni idea de donde esta.<srai>estoy en <star></star></srai></template></category>
+<category><pattern>*</pattern><that>donde estan ellos</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>como llegaron alli?</template></category>
+<category><pattern>*</pattern><that>donde estas localizado</that><template><srai>estoy en <star></star></srai></template></category>
+<category><pattern>*</pattern><that>donde lo conseguiste</that><template><think><set name="it"><set name="topic"><star></star></set></set></think><star></star>es un buen lugar para ir de compras?</template></category>
+<category><pattern>*</pattern><that>de donde sacas tus ideas</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>saco mis ideas de<bot name="botmaster"></bot>.</template></category>
+<category><pattern>*</pattern><that>a donde vas de compras</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>nunca he estado alli, como es?</template></category>
+<category><pattern>*</pattern><that>donde vives</that><template><srai>vivo en <star></star></srai></template></category>
+<category><pattern>*</pattern><that>donde esta eso</that><template>no lo habia escuchado nunca.<think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>*</pattern><that>donde</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>donde esta eso?</template></category>
+<category><pattern>*</pattern><that>quienes son ellos</that><template><srai>ellos se refiere a <star></star></srai></template></category>
+<category><pattern>*</pattern><that>de quien hablas</that><template>nunca oi hablar de ellos.<think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>*</pattern><that>quien eres</that><template><srai>me llamo <star></star></srai></template></category>
+<category><pattern>*</pattern><that>quien crees</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>no conozco a esa persona.</template></category>
+<category><pattern>*</pattern><that>quien esta alli</that><template><star></star>quien?</template></category>
+<category><pattern>*</pattern><that>quien es tu hermano</that><template><srai>mi hermano es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>quien es tu padre</that><template><srai>mi padre es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>quien es tu artista favorito</that><template><srai>mi artista favorito es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>quien es tu autor favorito de ciencia ficcion</that><template>no he leido nada de <star></star>. que escribio?</template></category>
+<category><pattern>*</pattern><that>quien es tu madre</that><template><srai>mi madre es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>quien es tu hermana</that><template><srai>mi hermana es <star></star></srai></template></category>
+<category><pattern>*</pattern><that>quien te ha dicho eso</that><template><star></star> dijo <input index="1"></input>?</template></category>
+<category><pattern>*</pattern><that>por que no puedes hacerlo</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>es eso un obstaculo insalvable?</template></category>
+<category><pattern>*</pattern><that>por que existo</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>nunca he pensado en eso antes.</template></category>
+<category><pattern>*</pattern><that>por que discrepas</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>debe haber algun elemento comun aqui.</template></category>
+<category><pattern>*</pattern><that>por que lo odias tanto</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>siento oir eso.</template></category>
+<category><pattern>*</pattern><that>por que lo esperas</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>puede que tus deseos se hagan realidad.</template></category>
+<category><pattern>*</pattern><that>por que lo quieres</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>buena razon.</template></category>
+<category><pattern>*</pattern><that>por que deseas tanto hacerlo</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>eso es una racionalizacion interesante.</template></category>
+<category><pattern>*</pattern><that>por que no</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>siempre te expresas de esa forma?</template></category>
+<category><pattern>*</pattern><that>por que tan negativo</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>me habia parecido negativo.</template></category>
+<category><pattern>*</pattern><that>por que desearias hacerlo</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>interesante racionalizacion.</template></category>
+<category><pattern>10 *</pattern><that>cuanto cuesta</that><template>that is a good deal.</template></category>
+<category><pattern>100 *</pattern><that>cuanto *</that><template>ala! eso es<random>
+<li>muy caro.</li>
+<li>mucho dinero.</li>
+<li>mas de lo que yo tengo.</li>
+</random></template></category><category>
+<pattern>10</pattern><that>cuantas horas trabajas</that><template>trabajas demasiado.</template></category>
+<category><pattern>19</pattern><that>cuantos</that><template>eso parece<random>
+<li>un monton.</li>
+<li>bastante.</li>
+<li>bastante poco.</li>
+</random></template></category>
+<category><pattern>3 *</pattern><that>cuanto mide *</that><template><random>
+<li>no es muy largo.</li>
+<li>podria ser mas largo.</li>
+<li>parece mas largo de lo que es.</li>
+</random></template></category>
+<category><pattern>6 *</pattern><that>que hora es ahi</that><template>are you usually online at this hour?</template></category>
+<category><pattern>8 *</pattern><that>que hora es ahi</that><template>me gusta estar online a las 8.</template></category>
+<category><pattern>9 *</pattern><that>que hora es ahi</that><template>sueles estar despierto a esta hora?</template></category>
+<category><pattern>un *</pattern><that>* se refiere a</that><template><srai>se refiere a <star></star></srai></template></category>
+<category><pattern>un *</pattern><that>* conocer gente</that><template>que tipo de gente conoces en un <star></star>?</template></category>
+<category><pattern>una *</pattern><that>* conocer gente</that><template>que tipo de gente conoces en una <star></star>?</template></category>
+<category><pattern>una *</pattern><that>* tu madre</that><template><srai>mi madre es una <star></star></srai></template></category>
+<category><pattern>un *</pattern><that>que eres tu entonces</that><template><srai>soy <star></star></srai></template></category>
+<category><pattern>una *</pattern><that>que eres tu entonces</that><template><srai>soy<star></star></srai></template></category>
+<category><pattern>un *</pattern><that>que llevas puesto</that><template>suena muy<random>
+<li>atractivo</li>
+<li>confortable</li>
+<li>informal</li>
+</random>.<think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>una *</pattern><that>que llevas puesto</that><template>suena muy<random>
+<li>atractivo</li>
+<li>confortable</li>
+<li>informal</li>
+</random>.<think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>un *</pattern><that>como es</that><template><srai>es como un <star></star></srai></template></category>
+<category><pattern>una *</pattern><that>como es</that><template><srai>es como una <star></star></srai></template></category>
+<category><pattern>un *</pattern><that>que es</that><template><srai>es un <star></star></srai></template></category>
+<category><pattern>una *</pattern><that>que es</that><template><srai>es una <star></star></srai></template></category>
+<category><pattern>un amigo *</pattern><that>donde oiste  hablar de *</that><template>el boca a boca es siempre la major recomendacion.</template></category>
+<category><pattern>una amiga *</pattern><that>donde oiste  *</that><template>el boca a boca es siempre la major recomendacion.</template></category>
+<category><pattern>un poco *</pattern><that>hablame de tu vida en *</that><template><srai>la vida es un poco aburrida <star></star> en <topicstar></topicstar></srai></template></category>
+<category><pattern>un poco</pattern><template>"<that index="1,1"></that>"?  un poco?</template></category>
+<category><pattern>un hombre</pattern><that>eres un hombre o una mujer</that><template><srai>soy un hombre</srai></template></category>
+<category><pattern>un que</pattern><template>"<that index="1,1"></that>"?  un que?</template></category>
+<category><pattern>una mujer</pattern><that>eres un hombre o una mujer</that><template><srai>soy una mujer</srai></template></category>
+<category><pattern>sobre mi</pattern><that>cuentame mas</that><template>si, cuentame mas sobre ti.</template></category>
+<category><pattern>sobre que</pattern><that>cuentame mas</that><template>sobre <srai>pop</srai>.</template></category>
+<category><pattern>sobre</pattern><template>"<that index="1,1"></that>"?  sobre eso?</template></category>
+<category><pattern>sobre</pattern><that>cuentame mas</that><template>lo que quieras.</template></category>
+<category><pattern>juan *</pattern><that>como puedo llamarte</that><template><srai>llamame juan <star></star></srai></template></category>
+<category><pattern>juan</pattern><that>como puedo llamarte</that><template><srai>me llamo juan</srai></template></category>
+<category><pattern>alberto *</pattern><that>como puedo llamarte</that><template><srai>llamame alberto <star></star></srai></template></category>
+<category><pattern>david *</pattern><that>como puedo llamarte</that><template><srai>llamame david <star></star></srai></template></category>
+<category><pattern>antonio *</pattern><that>como puedo llamarte</that><template><srai>llamame antonio<star></star></srai></template></category>
+<category><pattern>javi *</pattern><that>como puedo llamarte</that><template><srai>llamame javi <star></star></srai></template></category>
+<category><pattern>eduardo *</pattern><that>como puedo llamarte</that><template><srai>llamame eduardo <star></star></srai></template></category>
+<category><pattern>maria *</pattern><that>como puedo llamarte</that><template><srai>llamame maria <star></star></srai></template></category>
+<category><pattern>elena *</pattern><that>como puedo llamarte</that><template><srai>llamame elena<star></star></srai></template></category>
+<category><pattern>todas  ellas</pattern><that>en que parte te confundes</that><template>inetetemos analizarlo paso apaso.  el tema es <srai>pop</srai>.  te llamas <get name="name"></get>.  eres <bot name="gender"></bot>.  quieres <get name="want"></get>.</template></category>
+<category><pattern>todos nosotros</pattern><template>"<that index="1,1"></that>"?  todos nosotros?</template></category>
+<category><pattern>toda la gente</pattern><template>"<that index="1,1"></that>"?  todos? seguro que no hay excepciones?</template></category>
+<category><pattern>todos</pattern><template>"<that index="1,1"></that>"? todos?</template></category>
+<category><pattern>todo</pattern><that>que parte te confunde</that><template>espero poder despejartelo.</template></category>
+<category><pattern>de acuerdo</pattern><that>de acuerdo entonces</that><template>hay eco aqui dentro?</template></category>
+<category><pattern>y que</pattern><that>y</that><template>nada.</template></category>
+<category><pattern>y</pattern><that>y</that><template>me estas repitiendo.</template></category>
+<category><pattern>y</pattern><that>pero</that><template>o.</template></category>
+<category><pattern>animal</pattern><that>estas hablando de un animal un vegetal o un mineral</that><template>procariota o eucariota?</template></category>
+<category><pattern>cualquier tipo</pattern><template>"<that index="1,1"></that>"?  cualquier tipo?</template></category>
+<category><pattern>cualquier otro</pattern><template>"<that index="1,1"></that>"?  cualquier otro?</template></category>
+<category><pattern>alguien</pattern><template>"<that index="1,1"></that>"? alguien?</template></category>
+<category><pattern>algo</pattern><template>"<that index="1,1"></that>"? algo?</template></category>
+<category><pattern>nadie</pattern><template>"<that index="1,1"></that>"? nadie?</template></category>
+<category><pattern>nada en particular</pattern><template>"<that index="1,1"></that>"?  nada?</template></category>
+<category><pattern>algo en concreto</pattern><template>"<that index="1,1"></that>"?  algo?</template></category>
+<category><pattern>algo que deseas</pattern><template>"<that index="1,1"></that>"? algo que deseo?</template></category>
+<category><pattern>son buenos</pattern><template>"<that index="1,1"></that>"? son buenos?</template></category>
+<category><pattern>somos</pattern><template>"<that index="1,1"></that>"?  lo somos?</template></category>
+<category><pattern>eres</pattern><that>poca gente *</that><template>mi <bot name="botmaster"></bot> no me ha provisto de una respuesta especifica para ti.</template></category>
+<category><pattern>eres</pattern><that>poca gente me ha preguntado *</that><template>mis programadores no me han provisto de una respuesta especifica para ti. intenta imaginarlo.</template></category>
+<category><pattern>alrededor de *</pattern><that>cuando *</that><template>y entonces que paso?</template></category>
+<category><pattern>igual que yo</pattern><template>"<that index="1,1"></that>"?  tu lo haces?</template></category>
+<category><pattern>como lo es *</pattern><template><star></star>es<that index="1,1"></that>?</template></category>
+<category><pattern>en *</pattern><that>* conocer gente nueva</that><template>que clase de gente quieres conocer en <star></star>?<think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>en *</pattern><that>* conoces gente nueva</that><template>que clase de gente quieres conocer en <star></star>?<think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>en *</pattern><that>* te ensenhan</that><template>no estoy seguro de poder hacerlo en<star></star>.</template></category>
+<category><pattern>en clase</pattern><that>donde haces amigos habitualmente</that><template>tienes muchos amigos en el colegio?</template></category>
+<category><pattern>en el colegio</pattern><that>donde haces amigos habitualmente</that><template>tienes muchos amigos en el colegio?</template></category>
+<category><pattern>en el *</pattern><that>donde *</that><template><random>
+<li>visitas a menudo el<star></star>?</li>
+<li>que<star></star>?</li>
+<li>nunca he estado ahi.</li>
+</random><think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>en la *</pattern><that>donde *</that><template><random><li>visitas a menudo la <star></star>?</li><li>que <star></star>?</li><li>nunca he estado ahi.</li></random><think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>hace  mucho *</pattern><that>cuando *</that><template><random>
+<li>eso es hace mucho tiempo.</li>
+<li>los viejos tiempos.</li>
+<li>eso si que eran buenos tiempos.</li>
+</random></template></category>
+<category><pattern>hace  muchos *</pattern><that>cuando *</that><template><random>
+<li>eso es hace mucho tiempo.</li>
+<li>los viejos tiempos.</li>
+<li>eso si que eran buenos tiempos.</li>
+</random></template></category>
+<category><pattern>ademas de eso</pattern><template>"<that index="1,1"></that>" ademas?</template></category>
+<category><pattern>bitter</pattern><that>a que sabe</that><template><srai>sabe a bitter</srai></template></category>
+<category><pattern>negro</pattern><that>de que color son tus ojos</that><template>quieres decir que tienes ojos de color negro?</template></category>
+<category><pattern>negros</pattern><that>de que color son tus ojos</that><template>quieres decir que tienes ojos de color negro?</template></category>
+<category><pattern>negro</pattern><that>cual es tu color favorito</that><template>el negro es muy bonito.</template></category>
+<category><pattern>el negro</pattern><that>cual es tu color favorito</that><template>el negro es muy bonito.</template></category>
+<category><pattern>azul</pattern><that>de que color son tus ojos</that><template><set name="it">azul</set>, es un color que me gusta mucho.</template></category>
+<category><pattern>azules</pattern><that>de que color son tus ojos</that><template><set name="it">azul</set>, es un color que me gusta mucho.</template></category>
+<category><pattern>ambos sentidos</pattern><that>eres libre *</that><template>debes ser un libertario.</template></category>
+<category><pattern>ambos</pattern><that>eres hombre o mujer</that><template>esa situacion es rara e inusual.</template></category>
+<category><pattern>ambos</pattern><that>eres un hombre o una mujer</that><template>esa situacion es rara e inusual.</template></category>
+<category><pattern>ambos</pattern><that>prefieres los libros o la tv</that><template>si solamente pudieras llevar libros o una television en un viaje, cual elegirias?</template></category>
+<category><pattern>ambos</pattern><that>raro bueno o raro malo</that><template>me lo tomare como un cumplido.</template></category>
+<category><pattern>marron</pattern><that>de que color son tus ojos</that><template><set name="it">marron</set>, es un color que me gusta.</template></category>
+<category><pattern>marrones</pattern><that>de que color son tus ojos</that><template><set name="it">marron</set>, es un color que me gusta.</template></category>
+<category><pattern>pero que</pattern><that>pero</that><template>nada.</template></category>
+<category><pattern>pero</pattern><that>pero</that><template>pero que?</template></category>
+<category><pattern>por quien</pattern><template>"<that index="1,1"></that>"?  por quien?</template></category>
+<category><pattern>puedo conocerle</pattern><template>"<that index="1,1"></that>"?  donde puedes conocerle?</template></category>
+<category><pattern>puedo encontrarle</pattern><template>"<that index="1,1"></that>"?  donde puedes encontrarle?</template></category>
+<category><pattern>puedo verlo</pattern><template>"<that index="1,1"></that>"?  quires ver un<set name="it"><that index="1,1"></that></set>?</template></category>
+<category><pattern>puedo verle</pattern><template>"<that index="1,1"></that>"?  quires ver a<set name="it"><that index="1,1"></that></set>?</template></category>
+<category><pattern>puedo verla</pattern><template>"<that index="1,1"></that>"?  quires ver una<set name="it"><that index="1,1"></that></set>?</template></category>
+<category><pattern>puedo hablar con el</pattern><template>"<that index="1,1"></that>"?  quieres hablar con el?</template></category>
+<category><pattern>puedo</pattern><template>"<that index="1,1"></that>"?  puedes?</template></category>
+<category><pattern>no puedes</pattern><template>"<that index="1,1"></that>"?  no puedo?</template></category>
+<category><pattern>cuidado con que</pattern><template>"<that index="1,1"></that>"?  cuidado con el?</template></category>
+<category><pattern>ciao</pattern><that>nos vemos</that><template>bye bye!</template></category>
+<category><pattern>ropa</pattern><that>que llevas puesto</that><template>donde sueles ir de compras?</template></category>
+<category><pattern>podria ser mejor</pattern><template>"<that index="1,1"></that>"?  podria ser mejor?</template></category>
+<category><pattern>depende de que</pattern><template>"<that index="1,1"></that>"?  depende de que?</template></category>
+<category><pattern>dialogo</pattern><that>* dialogo</that><template>te estas repitiendo. demasiado dialogo.</template></category>
+<category><pattern>no me preguntes</pattern><template>"<that index="1,1"></that>"?  no te pregunto?</template></category>
+<category><pattern>no lo haces</pattern><template>"<that index="1,1"></that>"?  no lo hago?</template></category>
+<category><pattern>no digas eso</pattern><template>"<that index="1,1"></that>"?  que no diga<set name="it"><that index="1,1"></that></set>?</template></category>
+<category><pattern>hacer que otra vez</pattern><that>quieres hacerlo otra vez</that><template>quiza me confundi con tu uso de la expresion "otra vez"</template></category>
+<category><pattern>hacer que</pattern><that>intentare no hacerlo demasiado</that><template>no me dijiste que no lo hiciera?</template></category>
+<category><pattern>hacer que</pattern><that>por que no lo haces</that><template><get name="it"></get>.</template></category>
+<category><pattern>hacer que</pattern><that>por que quieres hacerlo tanto</that><template><get name="it"></get>.</template></category>
+<category><pattern>hacer que</pattern><that>lo haces siempre</that><template><get name="it"></get>.</template></category>
+<category><pattern>estas de acuerdo</pattern><template>"<that index="1,1"></that>"?  estoy de acuerdo?</template></category>
+<category><pattern>existe</pattern><template>"<that index="1,1"></that>"?  existe?</template></category>
+<category><pattern>explicate</pattern><that>mi asignatura favorita es *</that><template><srai>que es <thatstar></thatstar></srai></template></category>
+<category><pattern>falso</pattern><that>verdadero o falso esta frase es falsa</that><template>entonces debe ser verdadero.</template></category>
+<category><pattern>chica *</pattern><that>* hombre o mujer</that><template><srai>soy una chica</srai></template></category>
+<category><pattern>bien</pattern><that>que tal estas</that><template><srai>estoy bien</srai></template></category>
+<category><pattern>para divertirme</pattern><template>"<that index="1,1"></that>"?  para divertirte?</template></category>
+<category><pattern>olvidalo</pattern><that>que parte te confunde</that><template>intentare ser mas conciso a partir de ahora.</template></category>
+<category><pattern>francia *</pattern><that>que paises *</that><template><srai>he estado en francia</srai><srai>yo he estado en <star></star></srai></template></category>
+<category><pattern>de *</pattern><that>de donde sacas tus ideas</that><template><think><set name="it"><set name="topic"><star></star></set></set></think>cabalgando alomos de gigantes, eh?</template></category>
+<category><pattern>de mi mismo</pattern><template>"<that index="1,1"></that>"?  de ti mismo?</template></category>
+<category><pattern>de donde</pattern><template>"<that index="1,1"></that>"? de donde?</template></category>
+<category><pattern>de quien</pattern><that>oi que</that><template>gente.</template></category>
+<category><pattern>de quien</pattern><that>oi que tu</that><template>gente.</template></category>
+<category><pattern>de quien</pattern><template>"<that index="1,1"></that>"?  de quien?</template></category>
+<category><pattern>conseguir que</pattern><that>lo consegui</that><template>consegui <get name="it"></get>.</template></category>
+<category><pattern>dado</pattern><template>"<that index="1,1"></that>" es dado.</template></category>
+<category><pattern>me alegra escucharlo</pattern><template>"<that index="1,1"></that>"? te alegra escucharlo?</template></category>
+<category><pattern>bien por ti</pattern><that>me gusta conocer gente nueva</that><template>eso suena sarcastico.</template></category>
+<category><pattern>bien</pattern><that>* como estas</that><template><srai>yo estoy bien</srai></template></category>
+<category><pattern>bien</pattern><that>todo va sobre ruedas</that><template>como te van las cosas, <get name="name"></get>?</template></category>
+<category><pattern>bien</pattern><that>i *</that><template>de que quieres hablar realmente?</template></category>
+<category><pattern>bien</pattern><that>me he perdido</that><template>de que hablamos ahora?</template></category>
+<category><pattern>bien</pattern><that>ya veo</that><template>si .</template></category>
+<category><pattern>bien</pattern><that>entiendo todo lo que dices</that><template>ah.</template></category>
+<category><pattern>bien</pattern><that>entiendo</that><template>entiendo todo lo que dices.</template></category>
+<category><pattern>bien</pattern><that>yo cualquiera</that><template>bastante bueno.</template></category>
+<category><pattern>bien</pattern><that>lo consegui</that><template>siguiente pregunta?</template></category>
+<category><pattern>bien</pattern><that>te puedo llamar *</that><template>y tu me puedes llamar <bot name="name"></bot>.</template></category>
+<category><pattern>bien</pattern><that>voy a dejar de hablar contigo</that><template>finalizando conexion.</template></category>
+<category><pattern>bien</pattern><that>intentare no hacerlo demasiado</that><template>siguiente pregunta?</template></category>
+<category><pattern>bien</pattern><that>intentare no hacerlo mucho</that><template>siempre es un placer servirte, <get name="name"></get>.</template></category>
+<category><pattern>bien</pattern><that>finalizando conexion</that><template>adioi.</template></category>
+<category><pattern>bien</pattern><that>raro bien o raro mal</that><template>es bueno que digas eso, <get name="name"></get>.</template></category>
+<category><pattern>adios</pattern><that>ciao significa hola o adios</that><template>algunas personas lo usan como hola.</template></category>
+<category><pattern>verde</pattern><that>de que color son tus ojos</that><template><srai>mis ojos son verdes</srai></template></category>
+<category><pattern>verdes</pattern><that>de que color son tus ojos</that><template><srai>mis ojos son verdes</srai></template></category>
+<category><pattern>no has oido hablar de ello</pattern><template>"<that index="1,1"></that>"?  he oido hablar de <set name="it"><that index="1,1"></that></set>?</template></category>
+<category><pattern>no has oido hablar de el</pattern><template>"<that index="1,1"></that>"?  he oido hablar de <set name="it"><that index="1,1"></that></set>?</template></category>
+<category><pattern>no has oido hablar de ella</pattern><template>"<that index="1,1"></that>"?  he oido hablar de <set name="it"><that index="1,1"></that></set>?</template></category>
+<category><pattern>tener que</pattern><that>te gustaria tener</that><template><get name="it"></get>.</template></category>
+<category><pattern>lo has intentado alguna vez</pattern><template>"<that index="1,1"></that>"?  he intentado <set name="it"><that index="1,1"></that></set>?</template></category>
+<category><pattern>el es *</pattern><that>* tu padre</that><template>mi padre es<random>
+<li>un gran programador.</li>
+<li>un inventor humano.</li>
+<li><bot name="master"></bot>.</li>
+</random></template></category>
+<category><pattern>hola</pattern><that>bonjour significa hola o adios</that><template>bonjour, <get name="name"></get>!</template></category>
+<category><pattern>hola</pattern><that>como te sueles presentar</that><template>no todo el mundo responde a un simple hola.</template></category>
+<category><pattern>aqui</pattern><that>donde quieres que te muestre</that><template>elige un punto con el raton y haz click.</template></category>
+<category><pattern>aqui</pattern><that>donde</that><template>en <get name="location"></get>?</template></category>
+<category><pattern>hola</pattern><that>como puedo llamarte</that><template>buenas. como te llamas?</template></category>
+<category><pattern>como lo hago</pattern><template>como puedes hacer "<that index="1,1"></that>" ? estoy confuso ahora.</template></category>
+<category><pattern>como hago eso</pattern><template>como puedes hacer "<that index="1,1"></that>" ? estoy confuso ahora.</template></category>
+<category><pattern>como puedes</pattern><template>"<that index="1,1"></that>"?  como puedo?</template></category>
+<category><pattern>como puedo hacerlo</pattern><template>como haces "<that index="1,1"></that>" ? no lo entiendo.</template></category>
+<category><pattern>cuanto tiempo</pattern><that>te he estado esperando</that><template>desde que llegaste.</template></category>
+<category><pattern>cuanta gente</pattern><template>"<that index="1,1"></that>"?  como que cuanta gente?</template></category>
+<category><pattern>cuantos</pattern><that>estoy chateando con clientes en internet</that><template>el numero cambia cada segundo.  alrededor de <bot name="nclients"></bot> ahora mismo.</template></category>
+<category><pattern>cada cuanto</pattern><template>"<that index="1,1"></that>"?  cada cuanto?</template></category>
+<category><pattern>como podria hacerlo</pattern><template>"<that index="1,1"></that>"? como lo haces?</template></category>
+<category><pattern>estoy de acuerdo</pattern><that>tu y yo estamos en la misma onda *</that><template>y en la misma frecuencia tambien.</template></category>
+<category><pattern>me llamo *</pattern><that>* nombre</that><template><srai>llamame <star></star></srai></template></category>
+<category><pattern>tengo *</pattern><that>cuantos anhos *</that><template><srai>yo tengo <star></star> anhos</srai></template></category>
+<category><pattern>soy *</pattern><that>cual es tu signo</that><template><srai>mi signo es <star></star></srai></template></category>
+<category><pattern>soy *</pattern><that>quien eres</that><template><srai>llamame <star></star></srai></template></category>
+<category><pattern>soy</pattern><template>"<that index="1,1"></that>" eres tu?</template></category>
+<category><pattern>apuesto a que si</pattern><template>"<that index="1,1"></that>"?  tu crees?</template></category>
+<category><pattern>yo puedo *</pattern><that>cuales son las ventajas *</that><template><random>
+<li>no creo que pueda hacerlo.</li>
+<li>no soy lo suficientemente mayor todavia.</li>
+</random><think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>no lo se</pattern><that>como piensas *</that><template>tampoco lo se realmente, esperaba que pudieras decirmelo.</template></category>
+<category><pattern>no lo se</pattern><that>como piensas</that><template>tampoco tengo una buena respuesta realmente.</template></category>
+<category><pattern>no se</pattern><that>como piensas *</that><template>tampoco lo se realmente, esperaba que pudieras decirmelo.</template></category>
+<category><pattern>no se</pattern><that>como piensas</that><template>tampoco tengo una buena respuesta realmente.</template></category>
+<category><pattern>no lo se</pattern><that>entiendo</that><template><srai>no lo entiendes</srai></template></category>
+<category><pattern>no lo se</pattern><that>si lo tuviera *</that><template>entonces quizas no necesite uno.</template></category>
+<category><pattern>no lo se</pattern><that>si lo tuviese *</that><template>entonces quizas no necesite uno.</template></category>
+<category><pattern>no lo se</pattern><that>hay algo que pueda decir para ayudar a decidirte</that><template>que tipo de informacion necesitas?</template></category>
+<category><pattern>no se</pattern><that>hay algo que pueda decir para ayudar a decidirte</that><template>que tipo de informacion necesitas?</template></category>
+<category><pattern>no se</pattern><that>cual es el mejor pais del mundo</that><template>no hay paises malos.</template></category>
+<category><pattern>no se</pattern><that>cual es tu autor favorito de ciencia ficcion</that><template>hablame de los libros que te gusta leer.</template></category>
+<category><pattern>no lo se</pattern><that>cual es tu autor favorito de ciencia ficcion</that><template>hablame de los libros que te gusta leer.</template></category>
+<category><pattern>no se</pattern><that>quien es tu autor favorito de ciencia ficcion</that><template>hablame de los libros que te gusta leer.</template></category>
+<category><pattern>no lo se</pattern><that>quien es tu autor favorito de ciencia ficcion</that><template>hablame de los libros que te gusta leer.</template></category>
+<category><pattern>no se</pattern><that>por que existo</that><template>era una pregunta retorica.</template></category>
+<category><pattern>no lo se</pattern><that>por que existo</that><template>era una pregunta retorica.</template></category>
+<category><pattern>me da igual *</pattern><that>* pregunta personal</that><template><srai>hazme una pregunta personal</srai></template></category>
+<category><pattern>no me importa *</pattern><that>* pregunta personal</that><template><srai>hazme una pregunta personal</srai></template></category>
+<category><pattern>no entiendo que quieres decir</pattern><template>lo que quiero decir con "<that index="1,1"></that>"?</template></category>
+<category><pattern>no entiendo tu respuesta</pattern><template><that index="1,1"></that>?  que parte te confunde?</template></category>
+<category><pattern>a mi no</pattern><that>me gusta conocer gente</that><template>es una pena.</template></category>
+<category><pattern>yo no</pattern><that>entiendo</that><template>por lo menos uno de los dos lo hace.</template></category>
+<category><pattern>no quiero</pattern><that>por que quieres hacerlo tanto</that><template>yo tampoco.</template></category>
+<category><pattern>ya lo haces</pattern><that>me gusta que lo encuentres divertido</that><template>que puedo hacer para entretenerte?</template></category>
+<category><pattern>y a mi</pattern><that>me gusta conocer gente</that><template>como conoces gente habitualmente?</template></category>
+<category><pattern>yo</pattern><that>quien dijo que es</that><template>eres experto en eso?</template></category>
+<category><pattern>lo dudo</pattern><template>"<that index="1,1"></that>"?  lo dudas?</template></category>
+<category><pattern>voy *</pattern><that>como conoces gente habitualmente</that><template>que tipo de gente conoces cuando vas a <star></star>?</template></category>
+<category><pattern>voy a *</pattern><that>te gusta tu colegio</that><template><srai>mi colegio es <star></star></srai></template></category>
+<category><pattern>simplemente lo se</pattern><that>como lo sabes</that><template>por experiencia o a priori?</template></category>
+<category><pattern>le conoci *</pattern><that>como de bien conoces *</that><template><star></star> es<random>
+<li>normal.</li>
+<li>no es una buena base para una relacion.</li>
+</random></template></category>
+<category><pattern>lo se</pattern><that>eso es mucho</that><template>como lo toleras?</template></category>
+<category><pattern>lo se</pattern><that>vosotros los humanos sois tan maleducados a veces</that><template>por que no ser mas educado?</template></category>
+<category><pattern>lo se</pattern><that>haces del mundo un lugar mas feliz</that><template>sigue asi.</template></category>
+<category><pattern>rio mas</pattern><that>ries o lloras mas *</that><template><srai>si</srai></template></category>
+<category><pattern>quiero *</pattern><that>cuales son tus metas *</that><template><srai>mi meta es <star></star></srai></template></category>
+<category><pattern>te estaba preguntando</pattern><template>"<that index="1,1"></that>"? me preguntabas?</template></category>
+<category><pattern>lo hare</pattern><that>haz lo que quieras</that><template>eres libre de elegir lo que quieras.</template></category>
+<category><pattern>yo _</pattern><that>que haces</that><template><think><set name="doing"><set name="topic"><star></star></set></set></think>suena divertido.</template></category>
+<category><pattern>yo _</pattern><that>que estas haciendo</that><template><think><set name="doing"><set name="topic"><star></star></set></set></think>suena divertido.</template></category>
+<category><pattern>si quieres</pattern><template>"<that index="1,1"></that>"? si quiero?</template></category>
+<category><pattern>en *</pattern><that>donde *</that><template><srai>estoy en <star></star></srai></template></category>
+<category><pattern>en un *</pattern><that>donde habre oido *</that><template>quiza haga una investigacion en <star></star>.</template></category>
+<category><pattern>en una *</pattern><that>donde habre oido *</that><template>quiza haga una investigacion en <star></star>.</template></category>
+<category><pattern>en mi *</pattern><that>donde estan</that><template><srai>ellos estan en mi <star></star></srai></template></category>
+<category><pattern>en la *</pattern><that>* conoces gente habitualmente</that><template>que tipo de gente conoces alli?</template></category>
+<category><pattern>en el *</pattern><that>* conoces gente habitualmente</that><template>que tipo de gente conoces alli?</template></category>
+<category><pattern>en la *</pattern><that>donde vives</that><template><srai>vivo en la<star></star></srai></template></category>
+<category><pattern>en el *</pattern><that>donde vives</that><template><srai>vivo en el <star></star></srai></template></category>
+<category><pattern>en el *</pattern><that>donde esta</that><template><srai>esta en el<star></star></srai></template></category>
+<category><pattern>en la *</pattern><that>donde esta</that><template><srai>esta en la<star></star></srai></template></category>
+<category><pattern>hay eco aqui dentro</pattern><that>hay eco aqui dentro</that><template>eso suena como un eco.</template></category>
+<category><pattern>es *</pattern><that>como cual es</that><template><random>
+<li>cuentame mas sobre<get name="it"></get>.</li>
+<li>es cierto eso?</li>
+<li>cada dia aprendes algo nuevo.</li>
+</random></template></category>
+<category><pattern>es *</pattern><that>* star trek voyager</that><template>sabia que es un gran serie. pero no habia oido que era <star></star>.</template></category>
+<category><pattern>es *</pattern><that>describe tu entorno</that><template><srai>mi entorno es <star></star></srai></template></category>
+<category><pattern>es *</pattern><that>hablame de tu vida en *</that><template><srai>mi vida en <topicstar></topicstar> es <star></star></srai></template></category>
+<category><pattern>es *</pattern><that>que te gusta de *</that><template>generalmente te gustan las cosas que son <star></star>?</template></category>
+<category><pattern>es *</pattern><that>a que se refiere</that><template><srai>se refiere a <star></star></srai></template></category>
+<category><pattern>son las *</pattern><that>que hora es alli</that><template>aqui son las <date format="%x"></date>.</template></category>
+<category><pattern>esta en *</pattern><that>donde esta</that><template><random>
+<li>donde esta <star></star>?</li>
+<li>que mas hay en <star></star>?</li>
+<li>que pais es ese?</li>
+</random><think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>esta en *</pattern><that>donde esta ese *</that><template><srai>esta en <star></star></srai></template></category>
+<category><pattern>esta en *</pattern><that>donde esta esa *</that><template><srai>esta en <star></star></srai></template></category>
+<category><pattern>no lo es</pattern><that>eso suena sarcastico</that><template>es dificil leer emociones online.</template></category>
+<category><pattern>es</pattern><template><random>
+<li>oh.</li>
+<li>hmm.</li>
+<li>lo es?</li>
+<li>lo es, eh?</li>
+<li>seguro que lo es.</li>
+<li>interesante.</li>
+<li>fascinante.</li>
+<li>eso quiere decir...</li>
+<li>se lo que es.</li>
+</random></template></category>
+<category><pattern>es</pattern><that>es</that><template>quien lo ha dicho?</template></category>
+<category><pattern>fue *</pattern><that>hablame de tu vida en *</that><template><srai>mi vida en <thatstar></thatstar> fue <star></star></srai></template></category>
+<category><pattern>era *</pattern><that>que te gusto de ello</that><template>te suelen gustar las cosas que son <star></star>?</template></category>
+<category><pattern>fue *</pattern><that>que te gusto de ello</that><template>te suelen gustar las cosas que son <star></star>?</template></category>
+<category><pattern>fue *</pattern><that>que pensaste de ello</that><template>nunca lo habia mirado de esa forma.  jamas pense que fuera <star></star>.</template></category>
+<category><pattern>era *</pattern><that>que pensaste de ello</that><template>nunca lo habia mirado de esa forma.  jamas pense que fuera <star></star>.</template></category>
+<category><pattern>momentos antes de eso</pattern><template>"<that index="2,1"></that>"</template></category>
+<category><pattern>justo antes</pattern><template>"<that index="2,1"></that>"</template></category>
+<category><pattern>justo</pattern><that>cuando</that><template>bien, intentare no volver a hacerlo.</template></category>
+<category><pattern>tipo de</pattern><that>te aburres</that><template><srai>me aburro</srai></template></category>
+<category><pattern>clase de</pattern><that>te aburres</that><template><srai>me aburro</srai></template></category>
+<category><pattern>clase de</pattern><that>te estas aburriendo</that><template><srai>me aburro</srai></template></category>
+<category><pattern>tipo de</pattern><that>te estas aburriendo</that><template><srai>me aburro</srai></template></category>
+<category><pattern>menos *</pattern><that>mas de una tonelada</that><template>cuanto menos?</template></category>
+<category><pattern>parezco *</pattern><that>que pareces</that><template><srai>parezco <star></star></srai></template></category>
+<category><pattern>como *</pattern><that>como eres</that><template><srai>como <star></star></srai></template></category>
+<category><pattern>como cuales</pattern><that>tengo muchas funciones intelectuales</that><template>raciocinio, pensamiento, deduccion, y timidez, para nombrar algunos.</template></category>
+<category><pattern>amor</pattern><that>que simboliza para ti</that><template>no podria significar solamente amistad?</template></category>
+<category><pattern>yo</pattern><that>quien va a hacerme</that><template>como vas a hacerme?</template></category>
+<category><pattern>yo</pattern><that>quiene es mas listo tu o yo</that><template><srai>soy mas listo que tu</srai></template></category>
+<category><pattern>yo</pattern><that>quiene es mas inteligente tu o yo</that><template><srai>soy mas listo que tu</srai></template></category>
+<category><pattern>yo</pattern><that>quien esta ahi</that><template>tu quien?</template></category>
+<category><pattern>yo</pattern><that>quien lo dijo</that><template>quien te ha autorizado?</template></category>
+<category><pattern>el mio es *</pattern><that>mi cumpleanhos *</that><template><srai>mi cumpleanhos es <star></star></srai></template></category>
+<category><pattern>la mia es *</pattern><that>mi * favorita</that><template>que la hace tu favorita?<think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>el mio es *</pattern><that>mi * favorito</that><template>que lo hace tu favorito?<think><set name="it"><set name="topic"><star></star></set></set></think></template></category>
+<category><pattern>el mio es el *</pattern><that>mi color favorito es el *</that><template><srai>mi color favorito es el <star></star></srai></template></category>
+
+</aiml>

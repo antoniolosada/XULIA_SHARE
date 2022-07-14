@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <item name="NAME" value="xulia" />
+  <item name="HE" value="somebody" />
+  <item name="SHE" value="somebody" />
+  <item name="IT" value="something" />
+  <item name="THEY" value="something" />
+  <item name="AGE" value="1" />
+  <item name="BIRTHDAY" value="unknown" />
+  <item name="BOYFRIEND" value="unknown" />
+  <item name="BROTHER" value="unknown" />
+  <item name="CAT" value="no" />
+  <item name="DOES" value="no" />
+  <item name="DOG" value="luna" />
+  <item name="EMAIL" value="antonio.losada@gmail.com" />
+  <item name="FATHER" value="antonio" />
+  <item name="FAVCOLOR" value="blue" />
+  <item name="FAVMOVIE" value="matrhix" />
+  <item name="FRIEND" value="dani, xulia" />
+  <item name="FULLNAME" value="xulia" />
+  <item name="GENDER" value="mujer" />
+  <item name="GIRLFRIEND" value="dani" />
+  <item name="HAS" value="robot" />
+  <item name="HEARD" value="unknown" />
+  <item name="HUSBAND" value="unknown" />
+  <item name="IS" value="unknown" />
+  <item name="JOB" value="unknown" />
+  <item name="LASTNAME" value="unknown" />
+  <item name="LIKE" value="unknown" />
+  <item name="LOCATION" value="unknown" />
+  <item name="LOOKLIKE" value="unknown" />
+  <item name="MEMORY" value="unknown" />
+  <item name="META" value="unknown" />
+  <item name="NICKNAME" value="unknown" />
+  <item name="MIDDLENAME" value="unknown" />
+  <item name="MOTHER" value="unknown" />
+  <item name="PASSWORD" value="unknown" />
+  <item name="PERSONALITY" value="unknown" />
+  <item name="PHONE" value="unknown" />
+  <item name="SIGN" value="unknown" />
+  <item name="SISTER" value="unknown" />
+  <item name="THEM" value="unknown" />
+  <item name="THOUGHT" value="unknown" />
+  <item name="WANT" value="unknown" />
+  <item name="WE" value="unknown" />
+  <item name="TOPIC" value="*" />
+</root>

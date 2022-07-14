@@ -1,0 +1,12 @@
+recupera información de ramón y cajas
+buscar ". Wikipedia"
+Fecha de nacimiento:
+Fecha de la muerte:
+Cónyuge:
+Premios:
+Hijos:
+Padres:
+Estatura:
+Educación:
+Partido:
+

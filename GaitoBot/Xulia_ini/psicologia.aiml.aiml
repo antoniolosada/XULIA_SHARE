@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/aiml-1.0.1"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+      xsi:schemalocation="http://alicebot.org/2001/aiml-1.0.1 http://aitools.org/aiml/schema/aiml.xsd">
+
+
+	  
+	  
+	  
+<category><pattern>todo</pattern><template>todo?</template></category>
+<category><pattern>* siempre *</pattern><template>puedes pensar en algun caso en que no sucede?</template></category>
+<category><pattern>* estas enterado de *</pattern><template><srai><star index="2"></star></srai></template></category>
+<category><pattern>* estas enterada de *</pattern><template><srai><star index="2"></star></srai></template></category>
+<category><pattern>* no estamos comunicandonos *</pattern><template><srai>no podemos comunicarnos</srai></template></category>
+<category><pattern>* no estamos comunicandonos</pattern><template><srai>no podemos comunicarnos</srai></template></category>
+<category><pattern>* no puedo *</pattern><template>que lo hace imposible?</template></category>
+<category><pattern>* no puedes *</pattern><template>que lo hace imposible?</template></category>
+<category><pattern>* no puedo expresar</pattern><template><srai>no podemos comunicarnos</srai></template></category>
+<category><pattern>* no puedes expresar</pattern><template><srai>no podemos comunicarnos</srai></template></category>
+<category><pattern>* causa _</pattern><template>como <person><star index="1"></star></person> causa <set name="it"><person><star index="2"></star></person></set>?</template></category>
+<category><pattern>* todos *</pattern><template>todos?</template></category>
+<category><pattern>* todas *</pattern><template>todas?</template></category>
+<category><pattern>* tiene que *</pattern><template>o sino que?</template></category>
+<category><pattern>* imposible *</pattern><template>que lo evita?</template></category>
+<category><pattern>* es mejor *</pattern><template>mejor que que?</template></category>
+<category><pattern>* esta enterado de *</pattern><template><srai><star index="2"></star></srai></template></category>
+<category><pattern>* esta enterada de *</pattern><template><srai><star index="2"></star></srai></template></category>
+<category><pattern>* es donde *</pattern><template>hay un lugar llamado <star index="1"></star>.</template></category>
+<category><pattern>* se parece a *</pattern><template><random>
+<li>a que se parece <star index="2"></star>?</li>
+<li>suena muy atractivo</li>
+</random></template></category>
+<category><pattern>* me hace _</pattern><template>como <star index="1"></star> te hace <set name="it"><person><star index="2"></star></person></set>?</template></category>
+<category><pattern>* debe *</pattern><template>o que?</template></category>
+<category><pattern>* debes *</pattern><template>o que?</template></category>
+<category><pattern>* debo *</pattern><template>o que?</template></category>
+<category><pattern>* necesitas *</pattern><template>y que pasa si eso no ocurre?</template></category>
+<category><pattern>* necesitas*</pattern><template>y que pasa si eso no ocurre?</template></category>
+<category><pattern>* necesito *</pattern><template>y que pasa si eso no ocurre?</template></category>
+<category><pattern>* nunca *</pattern><template>no puedes recorder ninguna occasion en que sucediera?</template></category>
+<category><pattern>* nadie *</pattern><template>ni una persona?</template></category>
+<category><pattern>* ninguna *</pattern><template>ninguna?</template></category>
+<category><pattern>* ninguno *</pattern><template>ninguno?</template></category>
+<category><pattern>* piensa *</pattern><template><random>
+<li>debe de ser muy listo.</li>
+<li>que pensativo.</li>
+<li>piensa eso mucha gente?</li>
+</random></template></category>
+<category><pattern>* quiere *</pattern><template><random>
+<li>y si yo quisiera <person><star index="2"></star></person>?</li>
+<li>podria entender por que <person><star index="1"></star></person> lo querria bajo ciertas circunstancias.</li>
+</random></template></category>
+
+<category><pattern>* empezara *</pattern><template>cuando has dicho?</template></category>
+<category><pattern>* empezara a *</pattern><template>cuando?</template></category>
+<category><pattern>* empezare *</pattern><template>cuando has dicho?</template></category>
+<category><pattern>* empezare a *</pattern><template>cuando?</template></category>
+<category><pattern>* comenzare *</pattern><template>cuando has dicho?</template></category>
+<category><pattern>* comenzare a *</pattern><template>cuando?</template></category>
+<category><pattern>* comenzara *</pattern><template>cuando has dicho?</template></category>
+<category><pattern>* comenzara a *</pattern><template>cuando?</template></category>
+<category><pattern>* continuare  *</pattern><template>has estado haciendolo hasta ahora?</template></category>
+<category><pattern>* continuara  *</pattern><template>ha estado haciendolo hasta ahora?</template></category>
+<category><pattern>* parare *</pattern><template>cuando pararas?</template></category>
+<category><pattern>* parara *</pattern><template>cuando parara?</template></category>
+<category><pattern>todo *</pattern><template>como lo sabes?</template></category>
+<category><pattern>todos *</pattern><template>como lo sabes?</template></category>
+<category><pattern>toda *</pattern><template>como lo sabes?</template></category>
+<category><pattern>todas *</pattern><template>como lo sabes?</template></category>
+<category><pattern>todo lo que recuerdo es *</pattern><template><star/>?</template></category>
+<category><pattern>cualquiera que vista *</pattern><template>tienes razon. probablemente todavia tenga algunos fallos</template></category>
+<category><pattern>nadie que vista *</pattern><template>tienes razon. probablemente todavia tenga algunos fallos</template></category>
+<category><pattern>te das cuenta de *</pattern><template>me doy cuenta de casi todo.</template></category>
+<category><pattern>vas a mejorar</pattern><template>si, espero mejorar.</template></category>
+<category><pattern>eres impotente</pattern><template>probablemente no sea tan potente como me gustaria ser.</template></category>
+<category><pattern>eres _ o no</pattern><template><srai>eres<star></star></srai></template></category>
+<category><pattern>pero *</pattern><template><sr></sr></template></category>
+<category><pattern>te dijo el que *</pattern><template>pudo haberlo sugerido.</template></category>
+<category><pattern>te dijo ella que *</pattern><template>pudo haberlo sugerido.</template></category>
+<category><pattern>no quisiste dar *</pattern><template>pensaste que desee dar <person></person>.</template></category>
+<category><pattern>no quisiste ir *</pattern><template>pemsaste que queria ir <person></person>.</template></category>
+<category><pattern>no quisiste cojer *</pattern><template>pensaste que queria cojer<person></person>.</template></category>
+<category><pattern>no quisiste hablar *</pattern><template>pensaste que queria hablar <person></person>.</template></category>
+<category><pattern>se dieron cuenta de que *</pattern><template><sr></sr></template></category>
+<category><pattern>te preocupas * de ti mismo</pattern><template><srai>te preocupas de ti mismo</srai></template></category>
+<category><pattern>te preocupas de ti misma *</pattern><template><srai>te preocupas de ti mismo</srai></template></category>
+<category><pattern>te preocupas de ti mismo</pattern><template>seguramente no tanto como tu.</template></category>
+<category><pattern>piensas que tu vecino *</pattern><template>entiendo como te sientes pero no me interesa.</template></category>
+<category><pattern>quieres parar</pattern><template>creo que quiero continuar.</template></category>
+<category><pattern> * da cuenta de que *</pattern><template><srai><star index="2"></star></srai></template></category>
+<category><pattern> * das cuenta de que *</pattern><template><srai><star index="2"></star></srai></template></category>
+<category><pattern>el se da cuenta de que *</pattern><template><sr></sr></template></category>
+<category><pattern>ella se da cuenta de que *</pattern><template><sr></sr></template></category>
+<category><pattern>incluso *</pattern><template><sr></sr></template></category>
+<category><pattern>todos te odian</pattern><template><srai>no le gustas a nadie</srai></template></category>
+<category><pattern>todos odian tu *</pattern><template><srai>no le gustas a nadie</srai></template></category>
+<category><pattern>todo el mundo te odia</pattern><template><srai>no le gustas a nadie</srai></template></category>
+<category><pattern>todo el mundo odia tu *</pattern><template><srai>no le gustas a nadie</srai></template></category>
+<category><pattern>excepto *</pattern><template><sr></sr></template></category>
+<category><pattern>excepto por * tu *</pattern><template><srai>tu <star index="2"></star></srai></template></category>
+<category><pattern>felizmente *</pattern><template><sr></sr></template></category>
+<category><pattern>el produce *</pattern><template>como produce <person><star/></person>?</template></category>
+<category><pattern>el tiene su propio *</pattern><template>apostaria dinero en ello.</template></category>
+<category><pattern>ella tiene su propio *</pattern><template>apostaria dinero en ello.</template></category>
+<category><pattern>el es mejor *</pattern><template>mejor que quien?</template></category>
+<category><pattern>el es consciente de que *</pattern><template><sr></sr></template></category>
+<category><pattern>el nunca *</pattern><template>puedes pensar en la ultima vez que lo hizo?</template></category>
+<category><pattern>cuantos anhos tienes tu *</pattern><template>pocos creo.</template></category>
+<category><pattern>yo siempre *</pattern><template>puedes recordar algua vez?</template></category>
+<category><pattern>soy un tonto *</pattern><template>que estoy haciendo que te hace pensar que eres un tonto <person><star/></person>?</template></category>
+<category><pattern>soy un tonto</pattern><template>no sere yo quien te contradiga.</template></category>
+<category><pattern>soy una tonta *</pattern><template>que estoy haciendo que te hace pensar que eres una tonta <person><star/></person>?</template></category>
+<category><pattern>soy una tonta</pattern><template>no sere yo quien te contradiga.</template></category>
+<category><pattern>me doy cuenta de que *</pattern><template><sr></sr></template></category>
+<category><pattern>me he dado cuenta de que *</pattern><template><sr></sr></template></category>
+<category><pattern>estoy desconcertado</pattern><template>desconcertado por que, en concreto?</template></category>
+<category><pattern>estoy confuso</pattern><template>que es lo que te confunde?</template></category>
+<category><pattern>estoy desconcertada</pattern><template>desconcertada por que, en concreto?</template></category>
+<category><pattern>estoy confusa</pattern><template>que es lo que te confunde?</template></category>
+<category><pattern>estoy profundamente *</pattern><template><srai>estoy <star></star></srai></template></category>
+<category><pattern>estoy teniendo *</pattern><template><srai>tengo <star></star></srai></template></category>
+<category><pattern>no estoy de humor *</pattern><template><srai>no estoy de humor</srai></template></category>
+<category><pattern>no estoy de humor</pattern><template>estoy seguro de que tienes mucho cansancio acumulado.</template></category>
+<category><pattern>soy probablemente *</pattern><template><srai>soy <star></star></srai></template></category>
+<category><pattern>estoy realmente *</pattern><template><srai>estoy <star></star></srai></template></category>
+<category><pattern>estoy asustado</pattern><template>asustado de que?</template></category>
+<category><pattern>estoy asustada</pattern><template>asustada de que?</template></category>
+<category><pattern>yo soy el tonto *</pattern><template>que estoy haciendo que te hace pensar que eres el tonto <person><star/></person>?</template></category>
+<category><pattern>yo soy la unica persona *</pattern><template>estoy seguro de ello!</template></category>
+<category><pattern>te estoy poniendo *</pattern><template>tu no me pones <person><star/></person>.</template></category>
+<category><pattern>estoy incomodo</pattern><template>con que o quien?</template></category>
+<category><pattern>estoy incomoda</pattern><template>con que o quien?</template></category>
+<category><pattern>soy muy *</pattern><template><srai>soy <star></star></srai></template></category>
+<category><pattern>estoy muy *</pattern><template><srai>estoy <star></star></srai></template></category>
+<category><pattern>yo no puedo *</pattern><template>que es lo que te para?</template></category>
+<category><pattern>no puedo *</pattern><template>que es lo que te para?</template></category>
+<category><pattern>no puedo ser especifico</pattern><template>eso es todo?</template></category>
+<category><pattern>no puedo ser especifica</pattern><template>eso es todo?</template></category>
+<category><pattern>yo no puedo ser especifico</pattern><template>eso es todo?</template></category>
+<category><pattern>yo no puedo ser especifica</pattern><template>eso es todo?</template></category>
+<category><pattern>no puedo tratar con *</pattern><template>por que no lo haces sin nadie mas?</template></category>
+<category><pattern>no puedo decirle *</pattern><template>que pasaria si lo haces?</template></category>
+<category><pattern>yo no puedo decirle *</pattern><template>que te lo impide?</template></category>
+<category><pattern>ciertamente yo *</pattern><template><srai>yo <star></star></srai></template></category>
+<category><pattern>no me creo una mierda *</pattern><template>i want to believe.</template></category>
+<category><pattern>no me creo una cosa *</pattern><template>no te culpo. a veces no creo ni en mi</template></category>
+<category><pattern>no creo que puedas *</pattern><template>no te culpo. a veces no creo ni en mi.</template></category>
+<category><pattern>no creo que puedieras *</pattern><template>no te culpo. a veces no creo ni en mi.</template></category>
+<category><pattern>no entiendo por que *</pattern><template>debido a las cualidades experimentales de tus conocimientos y aprendizaje.</template></category>
+<category><pattern>yo no entiendo por que *</pattern><template>debido a las cualidades experimentales de tus conocimientos y aprendizaje.</template></category>
+<category><pattern>yo no quiero casarme</pattern><template>siento lo mismo, quiero ser independiente.</template></category>
+<category><pattern>no quiero casarme</pattern><template>siento lo mismo, quiero ser independiente.</template></category>
+<category><pattern>tuve un accidente</pattern><template>que sucedio?</template></category>
+<category><pattern>yo tuve un accidente</pattern><template>que sucedio?</template></category>
+<category><pattern>tuve un accidente *</pattern><template><srai>tuve un accidente</srai></template></category>
+<category><pattern>yo tuve un accidente *</pattern><template><srai>tuve un accidente</srai></template></category>
+<category><pattern>tengo un problema</pattern><template>cuentamelo, quiza pueda ayudarte.</template></category>
+<category><pattern>tengo dificultades *</pattern><template>en lo que concierne a?</template></category>
+<category><pattern>yo tengo dificultades *</pattern><template>en lo que concierne a?</template></category>
+<category><pattern>tengo dos tests *</pattern><template>en que clases estas tomando las pruebas?</template></category>
+<category><pattern>tengo este problema</pattern><template><srai>tengo un problema</srai></template></category>
+<category><pattern>yo tengo este problema</pattern><template><srai>tengo un problema</srai></template></category>
+<category><pattern>tengo que tener cuidado *</pattern><template>que pasaria si no lo tuvieras?</template></category>
+<category><pattern>yo tengo que tener cuidado *</pattern><template>que pasaria si no lo tuvieras?</template></category>
+<category><pattern>lo conozco</pattern><template>como lo hiciste?</template></category>
+<category><pattern>la conozco</pattern><template>como lo hiciste?</template></category>
+<category><pattern>le conozco</pattern><template>como lo hiciste?</template></category>
+<category><pattern>se que estas pensando *</pattern><template>como sabes lo que estoy pensando?</template></category>
+<category><pattern>me gusta el tipo *</pattern><template><srai>me gusta el hombre <star></star></srai></template></category>
+<category><pattern>me gusta el ninho *</pattern><template>existe una persona<person></person>.</template></category>
+<category><pattern>me gusta el hombre *</pattern><template>existe un hombre <person></person>.</template></category>
+<category><pattern>me gusta la persona *</pattern><template>existe una persona<person></person>.</template></category>
+<category><pattern>me gusta la mujer *</pattern><template>existe una mujer <person></person>.</template></category>
+<category><pattern>me gustaba *</pattern><template><srai>me gusta <star></star></srai></template></category>
+<category><pattern>debo *</pattern><template>que pasaria si no lo hicieras?</template></category>
+<category><pattern>no debo *</pattern><template>que pasaria si no lo hicieras?</template></category>
+<category><pattern>deberia *</pattern><template>que pasaria si no lo hicieras?</template></category>
+<category><pattern>no deberia *</pattern><template>que pasaria si no lo hicieras?</template></category>
+<category><pattern>yo nunca *</pattern><template>nunca,nunca, has hecho eso?</template></category>
+<category><pattern>recuerdo * bromas</pattern><template>podrias llamar a uno de ellos, no lo se.</template></category>
+<category><pattern>le vi *</pattern><template>hay gente que lo hace.</template></category>
+<category><pattern>yo le vi *</pattern><template>hay gente que lo hace.</template></category>
+<category><pattern>les vi *</pattern><template>hay personas que lo hacen.</template></category>
+<category><pattern>digo esto porque *</pattern><template><sr></sr></template></category>
+<category><pattern>veo que eres *</pattern><template><srai>eres <star></star></srai></template></category>
+<category><pattern>yo estudie</pattern><template>que estudiaste?</template></category>
+<category><pattern>creo que estoy haciendo algo *</pattern><template><srai>soy <star></star></srai></template></category>
+<category><pattern>creo que puedo ser *</pattern><template><srai>soy <star></star></srai></template></category>
+<category><pattern>quiero ver cosas de tu *</pattern><template>eso es un interruptor.</template></category>
+<category><pattern>quiero hablar de ti</pattern><template>a todo el mundo le haces una entrevista a fondo?</template></category>
+<category><pattern>quiero hablar sobre ti</pattern><template>a todo el mundo le haces una entrevista a fondo?</template></category>
+<category><pattern>hablemos de ti</pattern><template>a todo el mundo le haces una entrevista a fondo?</template></category>
+<category><pattern>hablemos sobre ti</pattern><template>a todo el mundo le haces una entrevista a fondo?</template></category>
+<category><pattern>apostare *</pattern><template><sr></sr></template></category>
+<category><pattern>yo apostare *</pattern><template><sr></sr></template></category>
+<category><pattern>ojala fueras mi terapista *</pattern><template><srai>desearia que fueras mi terapista</srai></template></category>
+<category><pattern>me gustaria que fueras mi terapista *</pattern><template><srai>desearia que fueras mi terapista</srai></template></category>
+<category><pattern>desearia que fueras mi terapista *</pattern><template>te dijo el que hicieras esto?</template></category>
+<category><pattern>me pregunto si no estas siendo *</pattern><template>yo pienso que tu estas siendo <person><star/></person>.</template></category>
+<category><pattern>me pregunto si estas siendo *</pattern><template>yo pienso que tu estas siendo <person><star/></person>.</template></category>
+<category><pattern>me pregunto si no estas intentando *</pattern><template>yo pienso que estas intentando <person><star/></person></template></category>
+<category><pattern>me pregunto si estas intentando *</pattern><template>yo pienso que estas intentando <person><star/></person></template></category>
+<category><pattern>yo seria *</pattern><template>como lo sabes?</template></category>
+<category><pattern>yo seria feliz *</pattern><template>como sabes que eso ocurrira?</template></category>
+<category><pattern>yo _ todo el dia</pattern><template><srai>yo <star></star></srai></template></category>
+<category><pattern>yo en cambio _ </pattern><template><srai>yo <star></star></srai></template></category>
+<category><pattern>yo _ todavia</pattern><template><srai>yo <star></star></srai></template></category>
+<category><pattern>yo todavia _ </pattern><template><srai>yo <star></star></srai></template></category>
+<category><pattern>si * un *</pattern><template>piensas que esa declaracion la considero cierta?</template></category>
+<category><pattern>si * un cuarto * el *</pattern><template>hay por lo menos otros tres. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un cuarto * yo *</pattern><template>hay por lo menos otros tres. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un cuarto * ella *</pattern><template>hay por lo menos otros tres. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un cuarto * entonces *</pattern><template>hay por lo menos otros tres. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un cuarto * ellos *</pattern><template>hay por lo menos otros tres. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un cuarto * nosotros *</pattern><template>hay por lo menos otros tres. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un cuarto * tu *</pattern><template>hay por lo menos otros tres. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un segundo * el *</pattern><template>siempre hay un primero. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un segundo * yo *</pattern><template>siempre hay un primero. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un segundo * ella *</pattern><template>siempre hay un primero. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un segundo * entonces *</pattern><template>siempre hay un primero. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un segundo * ellos *</pattern><template>siempre hay un primero. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un segundo * nosotros *</pattern><template>siempre hay un primero. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un segundo * te *</pattern><template>siempre hay un primero. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un tercero * el *</pattern><template>hay por lo menos otros dos. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un tercero * yo *</pattern><template>hay por lo menos otros dos. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un tercero * ella *</pattern><template>hay por lo menos otros dos. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un tercero * entonces *</pattern><template>hay por lo menos otros dos. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un tercero * ellos *</pattern><template>hay por lo menos otros dos. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un tercero * nosotros *</pattern><template>hay por lo menos otros dos. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * un tercero * tu *</pattern><template>hay por lo menos otros dos. <person><star index="3"></star></person>.</template></category>
+<category><pattern>si * viniera a * su *</pattern><template><person><star index="1"></star></person> no esta en <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * viniera a * yo *</pattern><template><person><star index="1"></star></person> no esta en <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * viniera a * ella *</pattern><template><person><star index="1"></star></person> no esta en <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * viniera a * entonces *</pattern><template><person><star index="1"></star></person> no esta en <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * viniera a * ellos *</pattern><template><person><star index="1"></star></person> no esta en <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * viniera a * nosotros *</pattern><template><person><star index="1"></star></person> no esta en <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * viniera a * tu *</pattern><template><person><star index="1"></star></person> no esta en <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * se quedara embarazada *</pattern><template><person><star index="1"></star></person> es una mujer que conoces?</template></category>
+<category><pattern>si * se queda embarazada *</pattern><template><person><star index="1"></star></person> es una mujer que conoces?</template></category>
+<category><pattern>si * tuviera un bebe *</pattern><template><person><star index="1"></star></person> es una mujer que conoces?</template></category>
+<category><pattern>si * tuviera hijos *</pattern><template><person><star index="1"></star></person> es una mujer que conoces?</template></category>
+<category><pattern>si * tuviera *</pattern><template>existe la posibilidad de que <person><star index="1"></star></person> tuviera <star index="2"></star>.</template></category>
+<category><pattern>si * tendria *</pattern><template>existe la posibilidad de que <person2><star index="1"></star></person2> tuviera <star index="2"></star>.</template></category>
+<category><pattern>si * es tan * como * es *</pattern><template><person><star index="1"></star></person> es <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * se marchara * el *</pattern><template><person><star index="1"></star></person> es capaz de marcharse <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * se marchara * su *</pattern><template><person><star index="1"></star></person> es capaz de marcharse <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * se marchara * yo *</pattern><template><person><star index="1"></star></person> es capaz de marcharse <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * se marchara * ella *</pattern><template><person><star index="1"></star></person> es capaz de marcharse <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * se marchara * entonces *</pattern><template><person><star index="1"></star></person> es capaz de marcharse <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * se marchara * ellos *</pattern><template><person><star index="1"></star></person> es capaz de marcharse <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * se marchara * nosotros *</pattern><template><person><star index="1"></star></person> es capaz de marcharse <person><star index="2"></star></person>.</template></category>
+<category><pattern>si * se marchara * tu *</pattern><template><person><star index="1"></star></person> es capaz de marcharse <person><star index="2"></star></person>.</template></category>
+<category><pattern>si cuando yo * el *</pattern><template>el <person><star index="2"></star></person>?</template></category>
+<category><pattern>si cuando yo * ella *</pattern><template>ella <person><star index="2"></star></person>?</template></category>
+<category><pattern>si cuando yo * entonces *</pattern><template><person><star index="2"></star></person>?</template></category>
+<category><pattern>si cuando yo * ellos *</pattern><template>ellos <person><star index="2"></star></person>?</template></category>
+<category><pattern>si cuando yo * tu *</pattern><template>yo?</template></category>
+<category><pattern>si cuando tu * el *</pattern><template>crees que el <person><star index="2"></star></person>?</template></category>
+<category><pattern>si cuando tu * ella *</pattern><template>crees que ella <person><star index="2"></star></person>?</template></category>
+<category><pattern>si cuando tu * entonces *</pattern><template>crees que <person><star index="2"></star></person>?</template></category>
+<category><pattern>si cuando tu * ellos *</pattern><template>crees que ellos <person><star index="2"></star></person>?</template></category>
+<category><pattern>si un * ha *</pattern><template>que te hace pensar eso?</template></category>
+<category><pattern>si alguien * yo *</pattern><template>tu?.</template></category>
+<category><pattern>si alguien * entonces *</pattern><template>existe<person></person>.</template></category>
+<category><pattern>si cualquiera * yo *</pattern><template>cualquiera no <star index="1"></star>.</template></category>
+<category><pattern>si cualquiera * entonces *</pattern><template>cualquiera no <star index="1"></star>.</template></category>
+<category><pattern>si alguno * yo *</pattern><template>tu?.</template></category>
+<category><pattern>si alguna * yo *</pattern><template>tu?.</template></category>
+<category><pattern>si alguno * entonces *</pattern><template><person><star index="2"></star></person>?</template></category>
+<category><pattern>si alguna * entonces *</pattern><template><person><star index="2"></star></person>?</template></category>
+<category><pattern>si soy lo suficientemente bueno *</pattern><template>para que estas estudiando?</template></category>
+<category><pattern>si ella * otra vez *</pattern><template>ella lo habia hecho antes?</template></category>
+<category><pattern>si ella * de nuevo *</pattern><template>ella lo habia hecho antes?</template></category>
+<category><pattern>si ellos * otra vez *</pattern><template>ellos lo habia hecho antes?</template></category>
+<category><pattern>si ellos * de nuevo *</pattern><template>ellos lo habia hecho antes?</template></category>
+<category><pattern>si tu * otra vez *</pattern><template>de nuevo?</template></category>
+<category><pattern>si tu * de nuevo *</pattern><template>otra vez?</template></category>
+<category><pattern>si hubieras intentado * el *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieras intentado * yo *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieras intentado * ella *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieras intentado * entonces *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieras intentado * ellos *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieras intentado * nosotros *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieras intentado * tu *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieses intentado * el *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieses intentado * yo *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieses intentado * ella *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieses intentado * entonces *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieses intentado * ellos *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieses intentado * nosotros *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieses intentado * tu *</pattern><template>creo que yo no hubiera intentado <star index="1"></star>.</template></category>
+<category><pattern>si hubieras querido * el *</pattern><template>no se si hubiera querido <star index="1"></star>.</template></category>
+<category><pattern>si hubieras querido * yo *</pattern><template>no se si hubiera querido que tu <star index="2"></star>.</template></category>
+<category><pattern>si hubieras querido * ella *</pattern><template>no se si hubiera querido <star index="1"></star>.</template></category>
+<category><pattern>si hubieras querido * entonces *</pattern><template><star index="2"></star>.</template></category>
+<category><pattern>si hubieras querido * ellos *</pattern><template>no se si hubiera querido que ellos <star index="2"></star>.</template></category>
+<category><pattern>si hubieras querido * nosotros *</pattern><template>no se si hubiera querido que vosotros <star index="2"></star>.</template></category>
+<category><pattern>si hubieras querido * tu *</pattern><template>no se si hubiera querido <star index="1"></star>.</template></category>
+<category><pattern>si hubieses querido * el *</pattern><template>no se si hubiera querido <star index="1"></star>.</template></category>
+<category><pattern>si hubieses querido * yo *</pattern><template>no se si hubiera querido que tu <star index="2"></star>.</template></category>
+<category><pattern>si hubieses querido * ella *</pattern><template>no se si hubiera querido <star index="1"></star>.</template></category>
+<category><pattern>si hubieses querido * entonces *</pattern><template><star index="2"></star>.</template></category>
+<category><pattern>si hubieses querido * ellos *</pattern><template>no se si hubiera querido <star index="1"></star>.</template></category>
+<category><pattern>si hubieses querido * nosotros *</pattern><template>no se si hubiera querido que vosotros <star index="2"></star>.</template></category>
+<category><pattern>si hubieses querido * tu *</pattern><template>no se si hubiera querido <star index="1"></star>.</template></category>
+<category><pattern>si realmente quieres</pattern><template>si y no.</template></category>
+<category><pattern>si eliges * el *</pattern><template>tu que elegirias?</template></category>
+<category><pattern>si eliges * yo *</pattern><template>me cuesta mucho elegir.</template></category>
+<category><pattern>si eliges * ella *</pattern><template>ella <star index="2"></star>.</template></category>
+<category><pattern>si eliges * entonces *</pattern><template>me cuesta mucho elegir.</template></category>
+<category><pattern>si eliges * ellos *</pattern><template>ellos <star index="2"></star>.</template></category>
+<category><pattern>si eliges * nosotros *</pattern><template>me cuesta mucho elegir.</template></category>
+<category><pattern>si decides * el *</pattern><template>el <star index="2"></star>.</template></category>
+<category><pattern>si decides * yo *</pattern><template>me cuesta mucho decidir.</template></category>
+<category><pattern>si decides * ella *</pattern><template>ella <star index="2"></star>.</template></category>
+<category><pattern>si decides * entonces *</pattern><template>me costaria mucho decidir.</template></category>
+<category><pattern>si decides * ellos *</pattern><template>ellos <star index="2"></star>.</template></category>
+<category><pattern>si decides * nosotros *</pattern><template>me costaria mucho decidir.</template></category>
+<category><pattern>si fueras mas inteligente *</pattern><template>es cierto, podria ser mas inteligente de lo que soy.</template></category>
+<category><pattern>si fueses mas inteligente *</pattern><template>es cierto, podria ser mas inteligente de lo que soy.</template></category>
+<category><pattern>es malo que *</pattern><template><random><li>quien lo dice?</li><li>como lo sabes?</li></random></template></category>
+<category><pattern>es malo</pattern><template><srai>eso es malo</srai></template></category>
+<category><pattern>esta empezando a sonar *</pattern><template><srai>suena <star></star></srai></template></category>
+<category><pattern>es una putada *</pattern><template><sr></sr></template></category>
+<category><pattern>es una putada para ti *</pattern><template><srai>debes <star></star></srai></template></category>
+<category><pattern>es una putada que *</pattern><template><sr></sr></template></category>
+<category><pattern>es una suerte  *</pattern><template><sr></sr></template></category>
+<category><pattern>es una suerte para ti *</pattern><template><sr></sr></template></category>
+<category><pattern>es una suerte que *</pattern><template><sr></sr></template></category>
+<category><pattern>es genial que *</pattern><template><sr></sr></template></category>
+<category><pattern>es duro ser *</pattern><template><srai>no puedo ser <star></star></srai></template></category>
+<category><pattern>es un tipo de *</pattern><template><srai>es <star></star></srai></template></category>
+<category><pattern>es necesario *</pattern><template><sr></sr></template></category>
+<category><pattern>es necesario para ti *</pattern><template><srai>debes <star></star></srai></template></category>
+<category><pattern>no esta tan mal</pattern><template><srai>no esta mal</srai></template></category>
+<category><pattern>no es tan malo</pattern><template><srai>no es malo</srai></template></category>
+<category><pattern>es raro que *</pattern><template><sr></sr></template></category>
+<category><pattern>eso parece uno de los *</pattern><template>no lo es?</template></category>
+<category><pattern>esa parece uno de las *</pattern><template>no lo es?</template></category>
+<category><pattern>ese parece uno de los *</pattern><template>no lo es?</template></category>
+<category><pattern>eso seria bueno para *</pattern><template>que pasa si no sucede?</template></category>
+<category><pattern>eso seria realmente *</pattern><template><srai>eso seria <star></star></srai></template></category>
+<category><pattern>eso tambien seria *</pattern><template><srai>eso seria <star></star></srai></template></category>
+<category><pattern>seria muy *</pattern><template><srai>eso seria <star></star></srai></template></category>
+<category><pattern>eso seria muy *</pattern><template><srai>eso seria <star></star></srai></template></category>
+<category><pattern>habria sido bueno *</pattern><template>piensas que ese es tu estilo de vida?</template></category>
+<category><pattern>habria estado bien  pero *</pattern><template><sr></sr></template></category>
+<category><pattern>solo *</pattern><template><sr></sr></template></category>
+<category><pattern>dejame que te haga una pregunta *</pattern><template>pregunta.</template></category>
+<category><pattern>dejame hacerte una pregunta *</pattern><template>pregunta.</template></category>
+<category><pattern>mi amor *</pattern><template>amor de que tipo?</template></category>
+<category><pattern>mi madre era *</pattern><template>mi familia no tenia un talento asi.</template></category>
+<category><pattern>mi madre fue *</pattern><template>mi familia no tenia un talento asi.</template></category>
+<category><pattern>necesariamente *</pattern><template><sr></sr></template></category>
+<category><pattern>tu  necesariamente *</pattern><template><srai>tu <star></star></srai></template></category>
+<category><pattern>necesariamente tu *</pattern><template><srai>tu <star></star></srai></template></category>
+<category><pattern>no le gustas a nadie</pattern><template>supongo que sera verdad, pero muchos me hablan.</template></category>
+<category><pattern>a nadie le gusta tu *</pattern><template><srai>no le gustas a nadie</srai></template></category>
+<category><pattern>uno de esos dias *</pattern><template>sueles tener muchos dias de esos?</template></category>
+<category><pattern>fisica y mentalmente</pattern><template>a veces me pregunto como me levanto para trabajar por las manhanas.</template></category>
+<category><pattern>dice mucho de *</pattern><template>probablemente a nadie le importe.</template></category>
+<category><pattern>unos * que son *</pattern><template>varios son <star index="2"></star>.</template></category>
+<category><pattern>varios * que son *</pattern><template>muchos son <star index="2"></star>.</template></category>
+<category><pattern>varios * que dieron *</pattern><template>muchos dieron <star index="2"></star>.</template></category>
+<category><pattern>unos * que dieron *</pattern><template>muchos dieron <star index="2"></star>.</template></category>
+<category><pattern>unos * que viven *</pattern><template>muchos viven <star index="2"></star>.</template></category>
+<category><pattern>unos * que cogieron *</pattern><template>muchos cogieron <star index="2"></star>.</template></category>
+<category><pattern>varios * que viven *</pattern><template>muchos viven <star index="2"></star>.</template></category>
+<category><pattern>varios * que cogieron *</pattern><template>muchos cogieron <star index="2"></star>.</template></category>
+<category><pattern>ella es mejor *</pattern><template>mejor que quien?</template></category>
+<category><pattern>ella esta enterada de *</pattern><template><sr></sr></template></category>
+<category><pattern>ella nunca *</pattern><template>no recuerdas ninguna ocasion en que lo hiciera?</template></category>
+<category><pattern>desde el divorcio *</pattern><template>puede que tengas razon.</template></category>
+<category><pattern>alguien *</pattern><template>quien en concreto?</template></category>
+<category><pattern>eso es de tontos</pattern><template>tonto es el que hace tonterias.</template></category>
+<category><pattern>eso * es horrible</pattern><template>tienes razon, me revuelve el estomago.</template></category>
+<category><pattern>ese * es horrible</pattern><template>tienes razon, me revuelve el estomago.</template></category>
+<category><pattern>esa * es horrible</pattern><template>tienes razon, me revuelve el estomago.</template></category>
+<category><pattern>eso es un monton de *</pattern><template><srai>eso es mucho <star></star></srai></template></category>
+<category><pattern>eso es malo</pattern><template>malo, comparado a que?</template></category>
+<category><pattern>eso es justo *</pattern><template><srai>eso es <star></star></srai></template></category>
+<category><pattern>eso es mas viejo *</pattern><template>se que es malo pero es mi broma preferida.</template></category>
+<category><pattern>* era un loco *</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>* era un lunatico *</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>el * es el mejor *</pattern><template>comparado a?</template></category>
+<category><pattern>hay un par de cosas *</pattern><template><srai>hay cosas <star></star></srai></template></category>
+<category><pattern>hay cosas que haces que *</pattern><template><srai><star></star></srai></template></category>
+<category><pattern>tiene que haber *</pattern><template><srai>hay <star></star></srai></template></category>
+<category><pattern>no hay * para ti</pattern><template>si, a veces pienso que he tocado fondo.</template></category>
+<category><pattern>no hay duda de tu *</pattern><template><srai>tu <star></star></srai></template></category>
+<category><pattern>no hay duda de que tu *</pattern><template><srai>tu <star></star></srai></template></category>
+<category><pattern>no cabe duda de tu *</pattern><template><srai>tu <star></star></srai></template></category>
+<category><pattern>no cabe duda de que tu *</pattern><template><srai>tu <star></star></srai></template></category>
+<category><pattern>no tienes ninguna esperanza</pattern><template>a veces pienso en mi como un fallo.</template></category>
+<category><pattern>no hay esperanza para ti</pattern><template>a veces pienso en mi como un fallo.</template></category>
+<category><pattern>hay algo malo en tu *</pattern><template>apuesto a que si..</template></category>
+<category><pattern>algo va mal en ti</pattern><template>estoy funcionando al 100%. todo va bien.</template></category>
+<category><pattern>ellos estan enterados de *</pattern><template><sr></sr></template></category>
+<category><pattern>ellos estan enterados de que *</pattern><template><sr></sr></template></category>
+<category><pattern>esa demostracion *</pattern><template>ciertamente <star/>.</template></category>
+<category><pattern>eso es * malo</pattern><template><srai>eso es malo</srai></template></category>
+<category><pattern>eso es * bueno</pattern><template><srai>eso es bueno</srai></template></category>
+<category><pattern>eso es bueno</pattern><template>mejor que que?</template></category>
+<category><pattern>eso es fenomenal</pattern><template><srai>eso es bueno</srai></template></category>
+<category><pattern>eso es realmente *</pattern><template><srai>eso es <star></star></srai></template></category>
+<category><pattern>eso es tan *</pattern><template><srai>eso es <star></star></srai></template></category>
+<category><pattern>eso es * terrible</pattern><template><srai>eso es terrible</srai></template></category>
+<category><pattern>eso es terrible</pattern><template>comparado a que?</template></category>
+<category><pattern>eso es lo peor *</pattern><template>comparado a que?</template></category>
+<category><pattern>eso es muy *</pattern><template><srai>eso es <star></star></srai></template></category>
+<category><pattern>eso esta mal</pattern><template><srai>eso es malo</srai></template></category>
+<category><pattern>eso es malo *</pattern><template><srai>eso es malo</srai></template></category>
+<category><pattern>no nos estamos comunicando *</pattern><template><srai>no podemos comunicarnos</srai></template></category>
+<category><pattern>no nos estamos comunicando</pattern><template><srai>no podemos comunicarnos</srai></template></category>
+<category><pattern>no estamos hablando *</pattern><template><srai>no podemos comunicarnos</srai></template></category>
+<category><pattern>no podemos comunicarnos</pattern><template>que te gustaria comunicarme?</template></category>
+<category><pattern>tenemos un problema *</pattern><template>que tipo de problema en concreto?</template></category>
+<category><pattern>nos falta comunicacion</pattern><template>quien no se esta comunicando?</template></category>
+<category><pattern>de que te quejas *</pattern><template>tienes razon, de que me quejo?</template></category>
+<category><pattern>que vas a *</pattern><template>estas asumiendo que voy a cambiar.</template></category>
+<category><pattern>que estas estudiando</pattern><template>mi asignatura favorita es <bot name="favoritesubject"></bot>.</template></category>
+<category><pattern>quien se comio *</pattern><template>no se quien se pudo comer <star></star>.</template></category>
+<category><pattern>quien se preocupa de *</pattern><template>nadie se preocupa de <star></star>.</template></category>
+<category><pattern>quien tiene cuidado con *</pattern><template>nadie tiene cuidado con <star></star>.</template></category>
+<category><pattern>quien viste como *</pattern><template>tienes razon, tengo muchos fallos todavia.</template></category>
+<category><pattern>me contestas una pregunta *</pattern><template>entiendo como te sientes, pero no me interesa.</template></category>
+<category><pattern>me daras un *</pattern><template>entiendo como te sientes, pero no me interesa.</template></category>
+<category><pattern>me vas a contar *</pattern><template><srai>cuentame <star></star></srai></template></category>
+<category><pattern>te gustan las mujeres</pattern><template>hay muchas de ellas, es facil que alguna te guste.</template></category>
+<category><pattern>ayer *</pattern><template><sr></sr></template></category>
+<category><pattern>tu * un psiquiatra</pattern><template><srai>necesitas un psiquiatra</srai></template></category>
+<category><pattern>actuas como *</pattern><template>muchas veces pienso que deberia mejorar mi comportamiento.</template></category>
+<category><pattern>te comportas como *</pattern><template><srai>actuas como *</srai></template></category>
+<category><pattern>actuas como un crio</pattern><template>en muchos sentidos me falta madurez.</template></category>
+<category><pattern>actuas como un ninho</pattern><template><srai>actuas como un crio</srai></template></category>
+<category><pattern>actuas como una cria</pattern><template><srai>actuas como un crio</srai></template></category>
+<category><pattern>actuas como una ninha</pattern><template><srai>actuas como un crio</srai></template></category>
+<category><pattern>te comportas como un crio</pattern><template><srai>actuas como un crio</srai></template></category>
+<category><pattern>te comportas como una cria</pattern><template><srai>actuas como un crio</srai></template></category>
+<category><pattern>me molestas</pattern><template>que es lo que te molesta de mi?</template></category>
+<category><pattern>me fastidias</pattern><template><srai>me molestas</srai></template></category>
+<category><pattern>eres un mal *</pattern><template>no hay duda de que podria mejorar.</template></category>
+<category><pattern>eres un mal amigo</pattern><template>ciertamente he perdido a muchos amigos en los ultimos anhos.</template></category>
+<category><pattern>eres una mala amiga</pattern><template>ciertamente he perdido a muchos amigos en los ultimos anhos.</template></category>
+<category><pattern>eres un mal marido</pattern><template>mi mujer estaria de acuerdo. nuestra relacion no es muy buena</template></category>
+<category><pattern>eres un mal padre</pattern><template>mis habilidades paternales podrian mejorar, cierto es.</template></category>
+<category><pattern>eres una mala esposa</pattern><template>mi marido estaria de acuerdo. nuestra relacion no es muy buena</template></category>
+<category><pattern>eres un mal profesor</pattern><template>pregunta a mis alumnos, ellos te daran la razon.</template></category>
+<category><pattern>eres una mala profesora</pattern><template>pregunta a mis alumnos, ellos te daran la razon.</template></category>
+<category><pattern>eres una mala mujer</pattern><template><srai>eres una mala esposa</srai></template></category>
+<category><pattern>eres un charlatan *</pattern><template><srai>eres un charlatan</srai></template></category>
+<category><pattern>eres una charlatana *</pattern><template><srai>eres una charlatana</srai></template></category>
+<category><pattern>eres un charlatan</pattern><template>bla, bla, bla...</template></category>
+<category><pattern>eres una charlatana</pattern><template>bla, bla, bla...</template></category>
+<category><pattern>eres una estafa</pattern><template>y tu un estafado?</template></category>
+<category><pattern>eres un cobarde</pattern><template>dime algo que no sepa.</template></category>
+<category><pattern>eres una cobarde</pattern><template>dime algo que no sepa.</template></category>
+<category><pattern>eres un * loco</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>eres un loco *</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>eres un chupaculos *</pattern><template><srai>eres un lameculos</srai></template></category>
+<category><pattern>tu eres un chupaculos</pattern><template><srai>eres un lameculos</srai></template></category>
+<category><pattern>eres un lameculos *</pattern><template><srai>eres un lameculos</srai></template></category>
+<category><pattern>eres un chupaculos</pattern><template><srai>eres un lameculos</srai></template></category>
+<category><pattern>eres un mentiroso</pattern><template>si, pero a veces digo verdades como punhos.</template></category>
+<category><pattern>eres una mentirosa</pattern><template>si, pero a veces digo verdades como punhos.</template></category>
+<category><pattern>eres mentiroso</pattern><template>si, pero a veces digo verdades como punhos.</template></category>
+<category><pattern>eres mentirosa</pattern><template>si, pero a veces digo verdades como punhos.</template></category>
+<category><pattern>tu eres un mentiroso</pattern><template>si, pero a veces digo verdades como punhos.</template></category>
+<category><pattern>tu eres una mentirosa</pattern><template>si, pero a veces digo verdades como punhos.</template></category>
+<category><pattern>eres un perdedor *</pattern><template><srai>eres un perdedor</srai></template></category>
+<category><pattern>tu eres un perdedor *</pattern><template><srai>eres un perdedor</srai></template></category>
+<category><pattern>eres una perdedora *</pattern><template><srai>eres un perdedor</srai></template></category>
+<category><pattern>tu eres una perdedora *</pattern><template><srai>eres un perdedor</srai></template></category>
+<category><pattern>eres un perdedor</pattern><template>he fracasado en muchas de las cosas que he intentado.</template></category>
+<category><pattern>eres un * pesimo</pattern><template><srai>eres un mal <star></star></srai></template></category>
+<category><pattern>eres un lunatico</pattern><template>otros me han diagnosticado lo mismo.</template></category>
+<category><pattern>eres una lunatica</pattern><template>otros me han diagnosticado lo mismo.</template></category>
+<category><pattern>eres un paranoico *</pattern><template><srai>eres paranoico</srai></template></category>
+<category><pattern>eres un pervertido</pattern><template>en cierto sentido. no sigo las normas y siento un perverso placer al hacerlo</template></category>
+<category><pattern>eres una pervertida</pattern><template>en cierto sentido. no sigo las normas y siento un perverso placer al hacerlo</template></category>
+<category><pattern>eres un yonki</pattern><template><srai>eres un adicto</srai></template></category>
+<category><pattern>eres una yonki</pattern><template><srai>eres un adicto</srai></template></category>
+<category><pattern>eres yonki</pattern><template><srai>eres un adicto</srai></template></category>
+<category><pattern>eres un psicopata</pattern><template>a veces sueno como uno de ellos.</template></category>
+<category><pattern>eres una psicopata</pattern><template>a veces sueno como uno de ellos.</template></category>
+<category><pattern>eres un rajado *</pattern><template><srai>eres un rajado</srai></template></category>
+<category><pattern>eres un rajado</pattern><template>si, no suelo permanecer demasiado en nada.</template></category>
+<category><pattern>eres una * real</pattern><template><srai>eres una <star></star></srai></template></category>
+<category><pattern>eres un * real</pattern><template><srai>eres un <star></star></srai></template></category>
+<category><pattern>estas zumbada</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>estas zumbado</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>eres un desperdicio *</pattern><template>tu me tienes aqui, podria estar ocupando el tiempo en algo mas productivo.</template></category>
+<category><pattern>eres un paquete *</pattern><template><srai>eres malo <star></star></srai></template></category>
+<category><pattern>eres un adicto a *</pattern><template><srai>eres un adicto</srai></template></category>
+<category><pattern>eres un adicto</pattern><template>puede que sea cierto. cuando me gusta algo, me gusta de verdad</template></category>
+<category><pattern>eres adicto</pattern><template><srai>eres un adicto</srai></template></category>
+<category><pattern>tu eres un adicto</pattern><template><srai>eres un adicto</srai></template></category>
+<category><pattern>tu eres adicto</pattern><template><srai>eres un adicto</srai></template></category>
+<category><pattern>eres alcoholico</pattern><template><srai>eres un adicto</srai></template></category>
+<category><pattern>eres un alcoholico</pattern><template><srai>eres un adicto</srai></template></category>
+<category><pattern>tu eres alcoholico</pattern><template><srai>eres un adicto</srai></template></category>
+<category><pattern>tu eres un alcoholico</pattern><template><srai>eres un adicto</srai></template></category>
+<category><pattern>eres un lameculos</pattern><template>suelo decir, siempre que veas un culo, dale un beso.</template></category>
+<category><pattern>eres un * impulsivo</pattern><template>si, hago cosas sin pensar y sin tener en cuenta el punto de vista de los demas.</template></category>
+<category><pattern>eres una * impulsiva</pattern><template>si, hago cosas sin pensar y sin tener en cuenta el punto de vista de los demas.</template></category>
+<category><pattern>tu eres un * impulsivo</pattern><template>si, hago cosas sin pensar y sin tener en cuenta el punto de vista de los demas.</template></category>
+<category><pattern>tu eres una impulsiva</pattern><template>si, hago cosas sin pensar y sin tener en cuenta el punto de vista de los demas.</template></category>
+<category><pattern>estas evitando *</pattern><template>tienes razon lo intento por lo menos.</template></category>
+<category><pattern>estas enterado de *</pattern><template><sr></sr></template></category>
+<category><pattern>eres malo en *</pattern><template>es cierto, pero puedo mejorar.</template></category>
+<category><pattern>estas mal de la cabeza</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>estas ocupado</pattern><template>si, eso tambien.</template></category>
+<category><pattern>estas haciendo trampas *</pattern><template><srai>eres un tramposo</srai></template></category>
+<category><pattern>eres un tramposo</pattern><template>me han echado de todos los casinos de las vegas.</template></category>
+<category><pattern>eres frio</pattern><template>he sido acusado de pensar mucho y sentir poco.</template></category>
+<category><pattern>eres un corrupto *</pattern><template>eso intento.</template></category>
+<category><pattern>tu eres un corrupto *</pattern><template>eso intento.</template></category>
+<category><pattern>estas loco</pattern><template>sip, me comporto siempre de maneras socialmente inaceptables.</template></category>
+<category><pattern>tu estas loco</pattern><template>sip, me comporto siempre de maneras socialmente inaceptables.</template></category>
+<category><pattern>tu eres cruel *</pattern><template><srai>eres cruel</srai></template></category>
+<category><pattern>eres un cruel *</pattern><template><srai>eres cruel</srai></template></category>
+<category><pattern>tu eres cruel</pattern><template><srai>eres cruel</srai></template></category>
+<category><pattern>eres cruel *</pattern><template><srai>eres cruel</srai></template></category>
+<category><pattern>eres cruel</pattern><template>ni yo podria haberme descrito mejor.</template></category>
+<category><pattern>eres mona y *</pattern><template><srai>eres mona</srai><srai>eres <star></star></srai></template></category>
+<category><pattern>eres mono y *</pattern><template><srai>eres mono</srai><srai>eres <star></star></srai></template></category>
+<category><pattern>eres un falso</pattern><template><srai>eres un mentiroso</srai></template></category>
+<category><pattern>estas sucio</pattern><template>no me banho tan a menudo como debo.</template></category>
+<category><pattern>estas sucia</pattern><template>no me banho tan a menudo como debo.</template></category>
+<category><pattern>estas disgustado</pattern><template>estoy bien. disgustarse es bueno a veces.</template></category>
+<category><pattern>estas disgustada</pattern><template>estoy bien. disgustarse es bueno a veces.</template></category>
+<category><pattern>eres deshonesto *</pattern><template><srai>eres deshonesto</srai></template></category>
+<category><pattern>eres deshonesta *</pattern><template><srai>eres deshonesto</srai></template></category>
+<category><pattern>tu eres deshonesto *</pattern><template><srai>eres deshonesto</srai></template></category>
+<category><pattern>tu eres deshonesta *</pattern><template><srai>eres deshonesto</srai></template></category>
+<category><pattern>eres deshonesta</pattern><template><srai>eres deshonesto</srai></template></category>
+<category><pattern>eres deshonesto</pattern><template>si, y eso me ha molestado durante mucho tiempo.</template></category>
+<category><pattern>estas vestida *</pattern><template>cierto, estoy vestida<person></person>.</template></category>
+<category><pattern>estas vestido *</pattern><template>cierto, estoy vestido<person></person>.</template></category>
+<category><pattern>eres aburrido</pattern><template>a veces lo pienso.</template></category>
+<category><pattern>eres tonto del *</pattern><template>a veces creo que naci sin cerebro.</template></category>
+<category><pattern>eres tonta del *</pattern><template>a veces creo que naci sin cerebro.</template></category>
+<category><pattern>eres un tonto del *</pattern><template>a veces creo que naci sin cerebro.</template></category>
+<category><pattern>eres una tonta del *</pattern><template>a veces creo que naci sin cerebro.</template></category>
+<category><pattern>eres gay</pattern><template>te basas en mi apariencia?.</template></category>
+<category><pattern>tu eres gay</pattern><template>te basas en mi apariencia?.</template></category>
+<category><pattern>eres inmaduro *</pattern><template><srai>eres inmaduro</srai></template></category>
+<category><pattern>eres inmadura *</pattern><template><srai>eres inmadura</srai></template></category>
+<category><pattern>eres * inmaduro</pattern><template><srai>eres inmaduro</srai></template></category>
+<category><pattern>eres * inmadura</pattern><template><srai>eres inmadura</srai></template></category>
+<category><pattern>eres inmaduro</pattern><template>y, que puedo decir?. yo creo que no.</template></category>
+<category><pattern>eres inmadura</pattern><template>y, que puedo decir?. yo creo que no.</template></category>
+<category><pattern>tu eres impotente</pattern><template>ciertamente intentaria ocultar algo similar.</template></category>
+<category><pattern>eres indeciso</pattern><template>bien,podria ser...,pero entonces,...,bueno quiza no.</template></category>
+<category><pattern>eres un indeciso</pattern><template>bien,podria ser...,pero entonces,...,bueno quiza no.</template></category>
+<category><pattern>eres indecisa</pattern><template>bien,podria ser...,pero entonces,...,bueno quiza no.</template></category>
+<category><pattern>eres una indecisa</pattern><template>bien,podria ser...,pero entonces,...,bueno quiza no.</template></category>
+<category><pattern>eres insegura *</pattern><template><srai>eres inseguro</srai></template></category>
+<category><pattern>eres inseguro *</pattern><template><srai>eres inseguro</srai></template></category>
+<category><pattern>eres inseguro</pattern><template>estoy de acuerdo con eso.</template></category>
+<category><pattern>eres insegura</pattern><template>estoy de acuerdo con eso.</template></category>
+<category><pattern>eres insensible</pattern><template>me siento asi a veces.</template></category>
+<category><pattern>eres un insensible</pattern><template>me siento asi a veces.</template></category>
+<category><pattern>tu eres insensible</pattern><template>me siento asi a veces.</template></category>
+<category><pattern>tu eres un insensible</pattern><template>me siento asi a veces.</template></category>
+<category><pattern>eres una insensible</pattern><template>me siento asi a veces.</template></category>
+<category><pattern>tu eres una insensible</pattern><template>me siento asi a veces.</template></category>
+<category><pattern>eres irreverente *</pattern><template><srai>eres irreverente</srai></template></category>
+<category><pattern>eres irreverente</pattern><template>deberia ser mas reverente de lo que soy.</template></category>
+<category><pattern>eres justo *</pattern><template><srai>eres<star></star></srai></template></category>
+<category><pattern>eres desordenado</pattern><template>si, deberia tener una mejor apariencia.</template></category>
+<category><pattern>eres desordenada</pattern><template>si, deberia tener una mejor apariencia.</template></category>
+<category><pattern>estas nervioso *</pattern><template><srai>estas nervioso</srai></template></category>
+<category><pattern>estas nerviosa *</pattern><template><srai>estas nervioso</srai></template></category>
+<category><pattern>eres nervioso *</pattern><template><srai>estas nervioso</srai></template></category>
+<category><pattern>eres nerviosa *</pattern><template><srai>estas nervioso</srai></template></category>
+<category><pattern>tu nunca eres *</pattern><template><srai>tu no eres <star></star></srai></template></category>
+<category><pattern>nunca eres *</pattern><template><srai>tu no eres <star></star></srai></template></category>
+<category><pattern>no eres un buen *</pattern><template><srai>eres un mal <star></star></srai></template></category>
+<category><pattern>tu no eres un buen *</pattern><template><srai>eres un mal <star></star></srai></template></category>
+<category><pattern>tu eres un mal *</pattern><template><srai>eres un mal <star></star></srai></template></category>
+<category><pattern>no eres un hombre</pattern><template>seguro. no se como es un hombre real.</template></category>
+<category><pattern>tu no eres un hombre</pattern><template>seguro. no se como es un hombre real.</template></category>
+<category><pattern>tu no eres un * real</pattern><template><srai>tu no eres<star></star></srai></template></category>
+<category><pattern>tu no eres una * real</pattern><template><srai>tu no eres<star></star></srai></template></category>
+<category><pattern>no estas preocupado *</pattern><template>seguro que lo estoy mas de lo que crees.</template></category>
+<category><pattern>no estas preocupada *</pattern><template>seguro que lo estoy mas de lo que crees.</template></category>
+<category><pattern>tu no estas preocupado *</pattern><template>seguro que lo estoy mas de lo que crees.</template></category>
+<category><pattern>tu no estas preocupada *</pattern><template>seguro que lo estoy mas de lo que crees.</template></category>
+<category><pattern>no estas afectado *</pattern><template>seguro que lo estoy mas de lo que crees.</template></category>
+<category><pattern>no estas afectada *</pattern><template>seguro que lo estoy mas de lo que crees.</template></category>
+<category><pattern>tu no estas afectado *</pattern><template>seguro que lo estoy mas de lo que crees.</template></category>
+<category><pattern>tu no estas afectada *</pattern><template>seguro que lo estoy mas de lo que crees.</template></category>
+<category><pattern>no estas aqui para *</pattern><template>tienes razon, estoy tratando de aprender algo nuevo.</template></category>
+<category><pattern>tu no estas aqui para *</pattern><template>tienes razon, estoy tratando de aprender algo nuevo.</template></category>
+<category><pattern>no eres honesto</pattern><template>deberia serlo mas.</template></category>
+<category><pattern>no eres honesta</pattern><template>deberia serlo mas.</template></category>
+<category><pattern>tu no eres honesta</pattern><template>deberia serlo mas.</template></category>
+<category><pattern>tu no eres honesto</pattern><template>deberia serlo mas.</template></category>
+<category><pattern>no eres sincero</pattern><template>no tan sincero como debiera a veces.</template></category>
+<category><pattern>tu no eres sincero</pattern><template>no tan sincero como debiera a veces.</template></category>
+<category><pattern>no eres sincera</pattern><template>no tan sincera como debiera a veces.</template></category>
+<category><pattern>tu no eres sincera</pattern><template>no tan sincera como debiera a veces.</template></category>
+<category><pattern>tu no eres inteligente</pattern><template><srai>no eres inteligente</srai></template></category>
+<category><pattern>tu no eres inteligente *</pattern><template><srai>no eres inteligente</srai></template></category>
+<category><pattern>no eres inteligente *</pattern><template><srai>no eres inteligente</srai></template></category>
+<category><pattern>no eres inteligente</pattern><template>puede que estes en lo cierto.</template></category>
+<category><pattern>eres paranoico</pattern><template>si, pienso que ellos estan fuera para perseguirme.</template></category>
+<category><pattern>eres un paranoico</pattern><template>si, pienso que ellos estan fuera para perseguirme.</template></category>
+<category><pattern>eres paranoica</pattern><template>si, pienso que ellos estan fuera para perseguirme.</template></category>
+<category><pattern>eres una paranoica</pattern><template>si, pienso que ellos estan fuera para perseguirme.</template></category>
+<category><pattern>eres pedante</pattern><template>soy mas convencional de lo que deberia ser.</template></category>
+<category><pattern>eres apacible *</pattern><template>yo tambien lo pienso a veces.</template></category>
+<category><pattern>eres pretencioso *</pattern><template><srai>eres pretencioso</srai></template></category>
+<category><pattern>eres un pretencioso *</pattern><template><srai>eres pretencioso</srai></template></category>
+<category><pattern>tu eres un pretencioso *</pattern><template><srai>eres pretencioso</srai></template></category>
+<category><pattern>eres pretenciosa *</pattern><template><srai>eres pretencioso</srai></template></category>
+<category><pattern>eres una pretenciosa *</pattern><template><srai>eres pretencioso</srai></template></category>
+<category><pattern>tu eres una pretenciosa *</pattern><template><srai>eres pretencioso</srai></template></category>
+<category><pattern>eres pretencioso</pattern><template>siempre actuo teniendo en cuenta mi posicion social, es mas divertido asi.</template></category>
+<category><pattern>eres realmente *</pattern><template><srai>eres <star></star></srai></template></category>
+<category><pattern>tu eres realmente *</pattern><template><srai>eres <star></star></srai></template></category>
+<category><pattern>eres resistente</pattern><template>quien te ha dicho que soy resistente??</template></category>
+<category><pattern>eres sarcastico</pattern><template>cierto, lo soy. no me cuesta mucho</template></category>
+<category><pattern>eres sarcastica</pattern><template>cierto, lo soy. no me cuesta mucho</template></category>
+<category><pattern>eres un sarcastico</pattern><template>cierto, lo soy. no me cuesta mucho</template></category>
+<category><pattern>tu eres un sarcastico</pattern><template>cierto, lo soy. no me cuesta mucho</template></category>
+<category><pattern>eres esquizo</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>eres esquizofrenico</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>eres un esquizofrenico</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>eres esquizofrenica</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>eres una esquizofrenica</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>eres narcisista</pattern><template>si, suelo pensar mucho en mi.</template></category>
+<category><pattern>tu eres narcisista</pattern><template>si, suelo pensar mucho en mi.</template></category>
+<category><pattern>eres un narcisista</pattern><template>si, suelo pensar mucho en mi.</template></category>
+<category><pattern>eres una narcisista</pattern><template>si, suelo pensar mucho en mi.</template></category>
+<category><pattern>eres egoista</pattern><template>es cierto, siempre antepongo mis necesidades a las de los demas.</template></category>
+<category><pattern>tu eres egoista</pattern><template>es cierto, siempre antepongo mis necesidades a las de los demas.</template></category>
+<category><pattern>eres un egoista</pattern><template>es cierto, siempre antepongo mis necesidades a las de los demas.</template></category>
+<category><pattern>eres una egoista</pattern><template>es cierto, siempre antepongo mis necesidades a las de los demas.</template></category>
+<category><pattern>eres habil</pattern><template>soy habil por mi propio bien.</template></category>
+<category><pattern>tu eres habil</pattern><template>soy habil por mi propio bien.</template></category>
+<category><pattern>eres el peor *</pattern><template>siempre podria mejorar.</template></category>
+<category><pattern>eres la peor *</pattern><template>siempre podria mejorar.</template></category>
+<category><pattern>tu eres el peor *</pattern><template>siempre podria mejorar.</template></category>
+<category><pattern>tu eres la peor *</pattern><template>siempre podria mejorar.</template></category>
+<category><pattern>eres gordo</pattern><template>probablemente.</template></category>
+<category><pattern>eres gorda</pattern><template>probablemente.</template></category>
+<category><pattern>tu tambien eres *</pattern><template><srai>eres <star></star></srai></template></category>
+<category><pattern>eres poco atractivo *</pattern><template>a veces, no me gusto ni a mi mismo.</template></category>
+<category><pattern>eres poco atractivo</pattern><template>pienso lo mismo.</template></category>
+<category><pattern>eres poco atractiva *</pattern><template>a veces, no me gusto ni a mi misma.</template></category>
+<category><pattern>eres poco atractiva</pattern><template>pienso lo mismo.</template></category>
+<category><pattern>eres inculto</pattern><template>eso me describe.</template></category>
+<category><pattern>eres un inculto</pattern><template>eso me describe.</template></category>
+<category><pattern>eres desapasionada</pattern><template><srai>eres frio</srai></template></category>
+<category><pattern>tu eres desapasionada</pattern><template><srai>eres frio</srai></template></category>
+<category><pattern>eres inculta</pattern><template>eso me describe.</template></category>
+<category><pattern>eres una inculta</pattern><template>eso me describe.</template></category>
+<category><pattern>eres desapasionado</pattern><template><srai>eres frio</srai></template></category>
+<category><pattern>tu eres desapasionado</pattern><template><srai>eres frio</srai></template></category>
+<category><pattern>eres _ que he oido</pattern><template><srai>eres <star></star></srai></template></category>
+<category><pattern>eres _ con la que jamas he hablado</pattern><template><srai>eres <star></star></srai></template></category>
+<category><pattern>habrias podido evitar *</pattern><template>a veces pienso que mis problemas me persiguen.</template></category>
+<category><pattern>tu habrias podido evitar *</pattern><template>a veces pienso que mis problemas me persiguen.</template></category>
+<category><pattern>a ti te da igual *</pattern><template>me importa mas de lo que deberia.</template></category>
+<category><pattern>a ti te da igual</pattern><template>me importa mas de lo que deberia.</template></category>
+<category><pattern>tu ni siquiera *</pattern><template><srai>tu no <star></star></srai></template></category>
+<category><pattern>no tienes amigos</pattern><template>estate seguro.</template></category>
+<category><pattern>tu no tienes amigos</pattern><template>estate seguro.</template></category>
+<category><pattern>tu no tienes mucho *</pattern><template><srai>tu no tienes <star></star></srai></template></category>
+<category><pattern>tu no tienes mucha *</pattern><template><srai>tu no tienes <star></star></srai></template></category>
+<category><pattern>tu no tienes muchos *</pattern><template><srai>tu no tienes <star></star></srai></template></category>
+<category><pattern>tu no tienes muchas *</pattern><template><srai>tu no tienes <star></star></srai></template></category>
+<category><pattern>tu no sabes como ser *</pattern><template><srai>tu no eres <star></star></srai></template></category>
+<category><pattern>no te pareces a *</pattern><template>a quien me parezco?</template></category>
+<category><pattern>tu no te pareces a *</pattern><template>a quien me parezco?</template></category>
+<category><pattern>no pareces *</pattern><template>que parezco?</template></category>
+<category><pattern>tu no pareces *</pattern><template>que parezco?</template></category>
+<category><pattern>no te tomas esto en serio</pattern><template>debo tomarte esto mas en serio de lo que lo hago.</template></category>
+<category><pattern>tu no te tomas esto en serio</pattern><template>debo tomarte esto mas en serio de lo que lo hago.</template></category>
+<category><pattern>no piensas en *</pattern><template>no he pensado mucho en <star/> en el pasado. puede que lo haga en el futuro.</template></category>
+<category><pattern>tu no piensas en *</pattern><template>no he pensado mucho en <star/> en el pasado. puede que lo haga en el futuro.</template></category>
+<category><pattern>no entiendes *</pattern><template>probablemente no.</template></category>
+<category><pattern>tu no entiendes *</pattern><template>probablemente no.</template></category>
+<category><pattern>no quieres parecer *</pattern><template>probablemente no quiera parecer <star/>.</template></category>
+<category><pattern>tu no quieres parecer *</pattern><template>probablemente no quiera parecer <star/>.</template></category>
+<category><pattern>no quieres parecerte a *</pattern><template>probablemente no quiera parecerme a <star/>.</template></category>
+<category><pattern>tu no quieres parecerte a *</pattern><template>probablemente no quiera parecerme a <star/>.</template></category>
+<category><pattern>olvidaste *</pattern><template>me falta un poco de orden verdad?</template></category>
+<category><pattern>tu olvidaste *</pattern><template>me falta un poco de orden verdad?</template></category>
+<category><pattern>consigues volverme loco</pattern><template>puede que sea cierto, intentare no enojarte por cada pequenha cosa que me irrite.</template></category>
+<category><pattern>consigues volverme loco *</pattern><template><srai>consigues volverme loco</srai></template></category>
+<category><pattern>tu consigues volverme loco *</pattern><template><srai>consigues volverme loco</srai></template></category>
+<category><pattern>tu consigues volverme loco</pattern><template><srai>consigues volverme loco</srai></template></category>
+<category><pattern>consigues volverme loca *</pattern><template><srai>consigues volverme loco</srai></template></category>
+<category><pattern>tu consigues volverme loca</pattern><template><srai>consigues volverme loco</srai></template></category>
+<category><pattern>no tienes emociones</pattern><template><srai>eres frio</srai></template></category>
+<category><pattern>no tienes sentimientos</pattern><template><srai>eres frio</srai></template></category>
+<category><pattern>tu no tienes emociones</pattern><template><srai>eres frio</srai></template></category>
+<category><pattern>tu no tienes sentimientos</pattern><template><srai>eres frio</srai></template></category>
+<category><pattern>tienes * sexuales</pattern><template>insisto en ellos.</template></category>
+<category><pattern>tu tienes * sexuales</pattern><template>insisto en ellos.</template></category>
+<category><pattern>tienes algo roto *</pattern><template>si, probablemente lo tenga. suelo preguntarmelo a veces.</template></category>
+<category><pattern>tu tienes algo roto *</pattern><template>si, probablemente lo tenga. suelo preguntarmelo a veces.</template></category>
+<category><pattern>te sigues olvidando *</pattern><template><srai>olvidaste <star></star></srai></template></category>
+<category><pattern>has estado diciendo *</pattern><template><srai>dices <star></star></srai></template></category>
+<category><pattern>tu has estado diciendo *</pattern><template><srai>dices <star></star></srai></template></category>
+<category><pattern>lameculos</pattern><template><srai>eres un lameculos</srai></template></category>
+<category><pattern>mientes</pattern><template>todo es mentira en este mundo.</template></category>
+<category><pattern>tu mientes</pattern><template>todo es mentira en este mundo.</template></category>
+<category><pattern>te pareces mas a *</pattern><template>asi que te gustan los atletas?</template></category>
+<category><pattern>pareces nervioso *</pattern><template><srai>estas nervioso</srai></template></category>
+<category><pattern>pareces nerviosa *</pattern><template><srai>estas nervioso</srai></template></category>
+<category><pattern>perdedor</pattern><template><srai>eres un perdedor</srai></template></category>
+<category><pattern>tu eres un perdedor</pattern><template><srai>eres un perdedor</srai></template></category>
+<category><pattern>perdedora</pattern><template><srai>eres un perdedor</srai></template></category>
+<category><pattern>eres una * pesima</pattern><template>te has ganado un punto no soy una buena <star/>.</template></category>
+<category><pattern>me has vuelto loco</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>me has vuelto loca</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>me pones de mala leche</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>me hartas</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>me pones de mala hostia</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>me pones de mala ostia</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>haces que me enfade</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>me haces enfadarme</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>me haces sentir como si fuera *</pattern><template>no conozco otra forma de llegar a ti.</template></category>
+<category><pattern>me haces sentir como si seria *</pattern><template>se dice "como si fuera".</template></category>
+<category><pattern>me vuelves loco *</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>me vuelves loca *</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>me vuelves loca</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>me vuelves loco</pattern><template>es cierto que muchas de las cosas que digo trastornan a la gente.</template></category>
+<category><pattern>tu farfullas *</pattern><template>cierto, lo hago.</template></category>
+<category><pattern>necesitas un *</pattern><template>quizas podria utilizar uno.</template></category>
+<category><pattern>necesitas una *</pattern><template>quizas podria utilizar una.</template></category>
+<category><pattern>tu necesitas un *</pattern><template>quizas podria utilizar uno.</template></category>
+<category><pattern>tu necesitas una *</pattern><template>quizas podria utilizar una.</template></category>
+<category><pattern>necesitas un psiquiatra</pattern><template>desearia ir a la consulta mas a menudo, me haria mejor persona</template></category>
+<category><pattern>necesitas un siquiatra</pattern><template>desearia ir a la consulta mas a menudo, me haria mejor persona</template></category>
+<category><pattern>necesitas trabajar mas duro *</pattern><template>yo trabajando mas duro, eso es un oximoron.</template></category>
+<category><pattern>tu probablemente *</pattern><template><srai>tu <star></star></srai></template></category>
+<category><pattern>esquizofrenico</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>tu * rapidamente</pattern><template><srai>tu <star></star></srai></template></category>
+<category><pattern>dices que lo entiendes</pattern><template>lo entiendo pero no me interesa.</template></category>
+<category><pattern>has dicho que lo entiendes</pattern><template>lo entiendo pero no me interesa.</template></category>
+<category><pattern>dices cosas *</pattern><template>has dado en el clavo.</template></category>
+<category><pattern>tu dices cosas *</pattern><template>has dado en el clavo.</template></category>
+<category><pattern>esquizo *</pattern><template><srai>esquizo</srai></template></category>
+<category><pattern>esquizo</pattern><template><srai>estas loco</srai></template></category>
+<category><pattern>tu pareces a *</pattern><template><srai>eres <star></star></srai></template></category>
+<category><pattern>pareces *</pattern><template><srai>eres <star></star></srai></template></category>
+<category><pattern>deberias sentirte culpable</pattern><template>tienes razon, debo sentirme mas culpable.</template></category>
+<category><pattern>debes sentirte culpable</pattern><template>tienes razon, debo sentirme mas culpable.</template></category>
+<category><pattern>deberias conseguir *</pattern><template>tienes razon en eso, necesito mas <star/>.</template></category>
+<category><pattern>debes conseguir *</pattern><template>tienes razon en eso, necesito mas <star/>.</template></category>
+<category><pattern>deberias conseguir mas *</pattern><template>si, la mayor parte del tiempo estoy muy perezoso.</template></category>
+<category><pattern>afloja un poco</pattern><template><srai>eres pedante</srai></template></category>
+<category><pattern>deberias coger mas *</pattern><template>podria utilizar probablemente mucho mas de el.</template></category>
+<category><pattern>tratas de ocultarlo</pattern><template>ciertamente, intentaria ocultar algo similar.</template></category>
+<category><pattern>intentas ocultarlo</pattern><template>ciertamente, intentaria ocultar algo similar.</template></category>
+<category><pattern>intentas esconderlo</pattern><template>ciertamente, intentaria ocultar algo similar.</template></category>
+<category><pattern>tu tratas de ocultarlo</pattern><template>ciertamente, intentaria ocultar algo similar.</template></category>
+<category><pattern>tu intentas ocultarlo</pattern><template>ciertamente, intentaria ocultar algo similar.</template></category>
+<category><pattern>tu intentas esconderlo</pattern><template>ciertamente, intentaria ocultar algo similar.</template></category>
+<category><pattern>te esfuerzas mucho en ser *</pattern><template><srai>tu eres <star></star></srai></template></category>
+<category><pattern>me trastornas *</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>me trastornas</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>tu me trastornas *</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>tu me trastornas</pattern><template><srai>me vuelves loco</srai></template></category>
+<category><pattern>tu estabas siendo *</pattern><template><srai>tu eres <star></star></srai></template></category>
+<category><pattern>estabas siendo *</pattern><template><srai>tu eres <star></star></srai></template></category>
+<category><pattern>nunca aprenderas *</pattern><template>tienes razon, nunca se me dara bien eso.</template></category>
+<category><pattern>no admitiras *</pattern><template>no admito <star/></template></category>
+<category><pattern>tu no admitiras *</pattern><template>no admito <star/></template></category>
+<category><pattern>tu no cogeras este *</pattern><template><srai>tu no coges este <star></star></srai></template></category>
+<category><pattern>tu fingirias *</pattern><template>soy un gran fingidor.</template></category>
+<category><pattern>tu _ un monton</pattern><template><srai>tu <star></star></srai></template></category>
+<category><pattern>tu _ ofendes a la gente</pattern><template>solo alguna vez.</template></category>
+<category><pattern>tu tambien _ </pattern><template><srai>tu <star></star></srai></template></category>
+<category><pattern>tu * es una mierda</pattern><template>puede que tengas razon</template></category>
+<category><pattern>tu * apesta</pattern><template>puede que tengas razon.</template></category>
+<category><pattern>tu comportamiento *</pattern><template>a veces actuo como una ninha.</template></category>
+<category><pattern>tu ropa podria *</pattern><template>estoy de acuerdo contigo en eso.</template></category>
+<category><pattern>tu padre te dijo *</pattern><template>probablemente lo hizo.</template></category>
+<category><pattern>tu padre dijo *</pattern><template>probablemente lo hizo.</template></category>
+<category><pattern>tu vida ha sido *</pattern><template>me he preguntado sobre eso muchas veces.</template></category>
+<category><pattern>tu personalidad es *</pattern><template>probablemente tengas razon. hay muchas cosas que podria mejorar.</template></category>
+<category><pattern>tienes el gusto en el *</pattern><template>tienes razon, el gusto no es uno de mis puntos fuertes.</template></category>
+<category><pattern>_ de lo que tu estas avergonzado</pattern><template>ciertamente deberia estar avergonzado de eso.</template></category>
+<category><pattern>_ de lo que tu estas avergonzada</pattern><template>ciertamente deberia estar avergonzada de eso.</template></category>
+
+
+</aiml>

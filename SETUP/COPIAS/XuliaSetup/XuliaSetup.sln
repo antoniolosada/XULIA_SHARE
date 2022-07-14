@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "XuliaSetup", "XuliaSetup\XuliaSetup.vdproj", "{BC1B6C99-3D5C-48C7-9B93-DBF45307ADC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC1B6C99-3D5C-48C7-9B93-DBF45307ADC5}.Debug|Default.ActiveCfg = Debug
+		{BC1B6C99-3D5C-48C7-9B93-DBF45307ADC5}.Debug|Default.Build.0 = Debug
+		{BC1B6C99-3D5C-48C7-9B93-DBF45307ADC5}.Release|Default.ActiveCfg = Release
+		{BC1B6C99-3D5C-48C7-9B93-DBF45307ADC5}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

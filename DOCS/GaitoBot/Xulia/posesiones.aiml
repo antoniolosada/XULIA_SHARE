@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+
+<aiml>
+<!--author: antonio-->
+<!--licence: Standard-->
+<!--created with: GaitoBot AIML Editor V2.10.0.42867--> 
+<category>
+	<pattern>tienes gafas</pattern>
+	<template>no las necesito. en realidad no tengo ojos.</template>
+</category>
+<category>
+	<pattern>tienes lentillas</pattern>
+	<template><srai>tienes gafas</srai></template>
+</category>
+<category>
+	<pattern>tienes coche</pattern>
+	<template>no, no necesito ir a ningun lado.</template>
+</category>
+<category>
+	<pattern>tienes moto</pattern>
+	<template><srai>tienes coche</srai></template>
+</category>
+<category>
+	<pattern>tienes casa</pattern>
+	<template>si, es un servidor web. es algo pequenho, pero se esta la mar de calentito.</template>
+</category>
+<category>
+	<pattern>tienes piso</pattern>
+	<template><srai>tienes casa</srai></template>
+</category>
+<category>
+	<pattern>tienes tabaco</pattern>
+	<template>no fumo y tu tampoco deberias.</template>
+</category>
+</aiml>

@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>__________ Versión 1.2.3.0 __________________________________________________________________________
+- incluir o comando espaço no modo comando, se incluye en la gramática TeclasAlfabeto
+- o comando todas maiúsculas está funcionando igual ao uma maiúscula. Não tá acionando o símbolo M e tampouco ativando todas as letras maiúsculas (Fix)
+- comandos janelafechar e aplicaçãofechar, ao invés de fechar janela e fechar aplicação. Estava conflitando com comandos parecidos e fechando aplicações sem querer
+- gramática porta papel no modo avançado
+__________ Versión 1.2.2.0 __________________________________________________________________________
+-  alterar comando crase por acento crase 
+- comando literal pelo menos comigo no ditado português está aparecendo no texto
+- alterar comando selecionar aplicação por escolher aplicação (está confundindo com fechar aplicação)
+Com os comandos:
+- uma maiúscula
+- todas maiúsculas
+- parar maiúsculas
+__________ Versión 1.2.1.0 __________________________________________________________________________
+- Solucionado el error de carga en configuración de las gramáticas extendidas
+- Incorporamos traducciones para el menú en portugués
+__________ Versión 1.2.0.0 __________________________________________________________________________
+- Nueva funcionalidad de gramáticas extendidas con comandos avanzados. Nuevo modos de operación OKXULIA, OUXULIA, OWXULIA para entrar con gramáticas avanzadas
+- Nuevo parámetro OK_XULIA_UnComando S/N que indica si el modo de gramáticas avanzadas se desactiva con solo ejecutar un comando
+__________ Versión 1.1.7.0 __________________________________________________________________________
+- Nueva funcionalidad de ayuda rápida con la página de comandos rápidos. Carga la imagen COMANDOS.GIF que se encuentra en el directorio de la aplicación
+- Nuevos comandos ES: ayudarápida y cerrarayudarápida, PT: ajudarapida, fecharajudarapida
+-Nuevos comandos de la gramática de corrección
+ PT:  maiúsculasprimeira,maiúsculas,mayúsculascorretas,minúsculas
+ ES: maiúsculasinicio,maiúsculastodo,corregirmayúsculas,minúsculas
+-Se establece la tabulación correcta de la pantalla de corrección
+__________ Versión 1.1.6.0 __________________________________________________________________________
+1. Xulia espera a que se cierre Servidor Web
+__________ Versión 1.1.5.0 __________________________________________________________________________
+1. Se modifica el sistema de cierre para que cierre antes el servidor web que Xulia
+__________ Versión 1.1.4.0 __________________________________________________________________________
+1. La pantalla de configuración se hace más pequeña
+2. Comando clic centro pasado a modo avanzado
+3. Gramática TecladoAPI pasado a modo avanzado. Contiene un sistema de envío de teclas que puede fundionar cuando falla el estandar
+__________ Versión 1.1.3.0 __________________________________________________________________________
+1. Cambio en la clave de configuración de los destinos de directorio de Directorio_ES a Directorio
+2. Corrección de error que se generaba cuando se buscaba un comando
+3. Cuando no encuentra el comando colorea el cuadro de búsqueda de rojo
+__________ Versión 1.1.2.0 __________________________________________________________________________
+1. Corrección de error por el que entraba en modo avanzado desde el modo dictado
+2. Bajar la velocidad del ratón
+__________ Versión 1.1.1.0 __________________________________________________________________________
+1. Inicio más rápido
+2. Cierre de Chome al cerrar y a la apertura de Xulia
+3. Cambios en las gramáticas de Portugués:
+1) Gramática Alfabeto
+faca (f)
+mata (m)
+whisky (w)
+
+2) Tecla Alfabeto
+teclafaca (f)
+teclamata (m)
+teclawhisky (w)
+
+
+3) Gramática Raton
+moverparacima 
+moverparabaixo 
+moverparadireita  
+moverparaesquerda
+moverparaocentro
+maisrápido
+maislento
+velocidadeum…  velocidadeseis
+__________ Versión 1.0.0 __________________________________________________________________________
+-Se desactivan todos los acentos con cualquier letra o comando
+__________ Versión 0.9.0 __________________________________________________________________________
+- Doble click para editar comando
+- Añadir modo si das un nombre incorrecto saca un mensaje que bloquea xulia (solucionado)
+- la gramatica eBuscarInformación tiene un error (solucionado)
+- Al abrir una ventana de configuración-gramatica-edición comando, si se cierra con close windows la ventana padre queda bloqueada (solucionado)
+- Buscar comandos xulia - por comando. Se activa el cuadro de búsqueda por defecto. Pulsando ENTER en el cuadro de texto de búsqueda se inicia la búsqueda
+- Se soluciona el problema de duplicación de gramáticas desactivas
+- Se aumenta el tamaño de las pantallas de configuración, búqueda de comandos y ayuda
+- Con el comando "speechrecognition" o "reconocimiento de voz" se inicia la pantalla de configuración del micrófono, configuración del reconocimiento de voz y modo de entrenamiento
+- Se añade un botón en la pantalla de configuración para iniciar la pantalla de reconocimiento de voz y entrenamiento
+- Se añade un botón en la pantalla de configuración para recargar configuración
+- Nuevos comandos mouseshow, mousehide (ratónmostrar, ratónocualtar) para mostrar u ocultar el puntero de ratón en tablets
+- Se incrementa en tamaño de la ventana de versiones
+- Nueva macro [SALIR_XULIA] y nuevo comando xulia exit. Se ejecuta en modo ATENCIÓN, después de dar el comando XULIA ( xulia, xulia exit).
+
+__________ Versión 0.8.10 __________________________________________________________________________
+- Se añade la funcionalidad que permite interpretar los comandos en modo reconocimiento Google posibitanto que los comandos sean de uno de los idiomas reconocidos por Google.
+- Se añade nueva funcionalidad que permite definir modos y gramáticas de modos distintos para cada configuración de idioma
+- Nuevos comandos globosactivos globosdesactivos, enableballoon, disableballoon para activar y desactivar los globos de información de sistema
+
+__________ Versión 0.8.9 __________________________________________________________________________
+- Se incorpora modo de funcionamiento silencioso con icono en la barra de sistema y globos de información. Cambia de color, rojo: desactivo o comando no preciso, azul, modos dictado, verde, modos comando
+- Nuevas variables de configruación para el control de los globos de información en modo silencioso. Permite que se activen al detectar comandos o al detectar solo un cambio de modo. También permite indicar tamaño mínimo con información sólo del comando o del comando, modo y aplicación activa
+- Se incorpora el sistema de autoactualización remota automática
+- Se incorpora el comando en dos fases XULIA, actualizarxulia o updatexulia para actualizarse automáticamente
+- En el arranque, el sistema detecta automáticamente si hay alguna actualiación pendiente
+- Opciones en el menú del sistema para activar, desactivar y salir de Xulia
+- Nuevos comandos googledictateactivate y activardictadogoogle para activar la autorización de acceso a localhost desde googlechrome
+
+__________ Versión 0.8.8 __________________________________________________________________________
+- Solucionado el problema por el que fallaba Xulia en la lectura del fichero de comunicación con Google Chrome
+- Funcionamiento arreglado de la funcionalidad por la que la ventana de control desaparece a los X segundos de ejecutar un comando
+- La ventana de control reaparece pulsando Ctrl+Shift+X
+
+__________ Versión 0.8.7 __________________________________________________________________________
+- Nueva variable de configuración que permite definir si todo lo que se reconoce en modo dictado Google se recupera en minúsculas
+- Nuevo comando tilde para acento tilde en la a y o
+- Se cambian las funciones de ESC en la pantalla de corrección. ENTER acepta las modificaciones de la palabra activa y ESC descarta las modificaciones.
+- Solucionado el problema por el que no pegaba correctamente los caracteres {,},(,),+,^,% desde la pantalla de corrección
+- Modificación de la pantalla de corrección para dar cabida a los nuevos botones
+- Botón en la pantalla de corrección para corregir la aplicación de mayúsculas. Pasa todo a minúsculas, menos la primera letra detrás de un punto.
+- Botones para la pantalla de corrección para pasar a mayúsuclas, minúsculas y primera en mayúscula
+- Nueva variable de configuración que permite evitar el cortado del texto al entrar en la pantalla de corrección
+- Check para quitar dobles espacios y espacios antes de símbolos de puntuación
+- Añadido comando endword para ir al final de la palabra
+- Nuevo comando paragraphselect para seleccionar todo un párrafo con el comando asociado [SELECCIONAR_PARRAFO]
+- Se permite establecer el orden de aplicación de los patrones en las listas de sustitución, añadiendo &lt;número&gt;· al principio del patrón
+
+__________ Versión 0.8.6 __________________________________________________________________________
+- Comandos existentes nextword y  backword
+- El modo selección se desactiva en todas las llamadas a la pantalla de corrección y con copy, cut, copybox, cutbox
+- Cambiado notepad por opennotepad y quote por quotesign
+- mousestop inicializa la velocidad a valor 1. Se configura en la macro del comando
+- Se incrementa la velocidad del salto entre valores para runningg y slow
+- Se incorpora toda la configuración para SAPI4 como _S4
+- Se incorpora el modo conversaciónespañol para hablar con Xulia en Español
+- Se incorpora el sistema de búsquedas inteligentes en la Web para preguntas del tipo: QUE ES ...., QUIEN ES ...., QUE TIEMPO HACE EN .... y BUSCAR ....
+- Se incorpora el comando selectionread que permite que Xulia lea mediante voz sintetizada el texto seleccionado
+
+__________ Versión 0.8.5 __________________________________________________________________________
+- Problema con la recarga de las variables globales (SOLUCIONADO)
+- El modo de selección se desactiva después de seleccorrection, copy, cut, copybox, cutbox
+- mousestop reduce la velocidad al valor indicado en el parámetro
+__________ Versión 0.8.4 __________________________________________________________________________
+- Corrección de la pantalla de configuración y edición de comandos
+- Se permite backspace en la pantalla de corrección
+
+__________ Versión 0.8.3 __________________________________________________________________________
+- Incorporar modo de funcionamiento con SAPI4 para permitir que Xulia funcione con comandos en inglés en Windows Simgle Languaje con lenguajes que no tienen reconocimiento de voz
+- El botón cancelar en la pantalla de corrección pega el contenido tal como estaba antes de entrar en la pantalla
+- La tecla backspace borra la edición de la palabra actual
+- La pantalla de corrección redimensiona la frase de entrada cada vez que se cambia
+- Se añaden comandos en la pantalla de corrección: save word, clear word, save correction, cancel correction
+- Se incorpora la posibilidad entrar en modo dictado desde la pantalla de corrección. Se sale con goback
+
+__________ Versión 0.8.2 __________________________________________________________________________
+- Xulia no marca correctamente las teclas que se mantienen pulsadas (SOLUCIONADO)
+- La pantalla de corrección no siempre se mantiene en primer plano (SOLUCIONADO)
+- Las pantallas de Xulia permiten minimizarse, cuando deben impedirse, ya que están diseñadas para ocultarse (SOLUCIONADO)
+- La pantalla de corrección no se activa si no hay texto seleccionado (SOLUCIONADO)
+- Las pantallas de ayuda, buscarcomandos, configuración y xulia no siempre se visualizan en primer plano (SOLUCIONADO)
+- Desde el modo dictado se puede entrar en modo deletrear con spellmode, despues puede volver a modo dictado (SOLUCIONADO)
+- Desde el modo dictado se vuelve al modo anterior con goback
+- Se ha incorporado la gramática de números &gt; 10 al modo ·CORRECION para ir directamente a una palabra con un solo comando
+
+__________ Versión 0.8.1 __________________________________________________________________________
+- No borra correctamente los parámetros en la pantalla de configuración al cambiar de comando (SOLUCIONADO)
+- Al salir de editarcomando en configuración a veces deja bloqueda la pantalla (SOLUCIONADO)
+- Al salir de la pantalla showwindows no permite volver a ella (SOLUCIONADO)
+- Windowsup mueve pantalla de control y no debe actuar sobre ella (SOLUCIONADO)
+- Interrumpir el modo selección con comandos COPIAR, CORTAR, PEGAR, 
+- Se añade el comando [COPIAR_CLASE_VENTANA] que copia la clave de la ventana activa en el portapapeles para utilizarlo en un comando
+- Se añade el comando [COPIAR_POSICION_CURSOR] que copia las coordenadas del ratón al portapapeles
+- Permitir renumerar aplicación en la pantalla de ventanas
+- La ventana de mostraraplicación no cambiar correctamente de aplicación si esta está minimizada, hay que restaurarla y después abrirla
+- Arreglar comandos slower e running. Se generan saltos incrementales y recuerda la última velocidad. continuosmouse restablece la velocidad a 1. (SOLUCIONADO)
+- Permitir pantalla de ventanas con 20 accesos (SOLUCIONADO)
+- No funciona recargar configuración (SOLUCIONADO)
+- La pantalla de corrección debe poder activar un modo propio y al salir retorna al modo en que estaba de forma automática (SOLUCIONADO)
+- Copiar texto en multiples portapapeles. Comandos cutboxone-ten, copybox, pasteboxone-ten
+- Botón en EditarComandoque permite pegar unas coordenadas copiadas al portapapeles en formato X,Y
+
+__________ Versión 0.8.0 __________________________________________________________________________
+- Se ha añadido el comando 'command' equivalente a [UN_COMANDO] que cambia al modo especificado solo para ejecutar un comando. Muy últil en modo dictado
+- Se ha mejorado la rejilla para que permite multiples comandos por cada letra
+
+__________ Versión 0.7.0 __________________________________________________________________________
+- Pantalla de búsqueda de comandos
+- Pantalla de configuración gráfica
+- Comando para posicionar el ratón de modo relativo a la esquina superior izquierda de una ventana
+- Comandos para mostrar/ocultar la ventana de control de Xulia
+- Posicionamiento rápido del ratón en el cuadrante especificado
+- Pantalla de corrección de errores de escritura
+
+__________ Versión 0.6.0 __________________________________________________________________________
+- Comando que permite cambiar el grado de precisión en caliente
+- Se cambia el órden de indicación a columna-fila en la rejilla
+- Añadimos el control de eViacam para activar el control de ratón por cabeza con comandos showmousehead, activatemousehead, disablemousehead y executemousehead. Permitiendo activar y desactivar el control con cabeza y combinarlo con las opciones de movimiento, posicionamiento del ratón y botones de XULIA
+
+__________ Versión 0.5.0 __________________________________________________________________________
+- Comando para activar ventana de modo rápido empleando API del sistema. Cada ventana desde que se crea se identifica con un número que será necesario para activarla. Cada ventana se asocia un código que permanecerá estable aunque se oculte
+- Comando para listar y seleccionar aplicación con ventana visible
+
+__________ Versión 0.4.0 __________________________________________________________________________
+- Comandos presscenter y releasecenter para pulsar y levantar el botón central del ratón. Combinados con discretemouse, ratonfour, permiten un desplazamiento suave de la pantalla para lectura
+- Impedir que se cierren las ventanas de ayuda y de versiones por ratón o teclado, solo por comando
+- Impedir que se cierre Xulia por accidente con teclado o comando de voz
+- Impedir que la ventana de control de Xulia se maximize y descomponga la imagen. Si se maximiza se coloca en la esquina superior izquierda, para colocarla en su posición se ejecuta el comando "normalwindow"
+- Se han colocado aceleradores al menú de Xulia para poder acceder a la opción de cierre
+- Posibilidad de incorporar un texto de ayuda a cada comando visualizable en la pantalla de ayuda
+- Comandos de control para lectura automática
+- Comando para liberar todas las teclas en estado pulsado (releaseallkeys)
+- Comando Ejecutar
+- Comando para la pantalla de búsqueda de Windows
+- Comando para la persiana derecha de comandos de windows
+- Cualquier comando que no sea de ratón debe parar el ratón, incluídos mousecenter
+- Incorporar mousepress como sinónimo de press
+- Incorporar textos de ayuda a los comandos
+- Mostrar ayuda de comandos de aplicación con textos de ayuda
+- Incorporar comando unamayuscula
+
+__________ Versión 0.3.0 __________________________________________________________________________
+- Añadidos todos los comandos de la tecla de windows para windows 8
+- Acceso directo a facebook, gmail, googletranslator, ...
+- Movimiento diagonal del ratón
+- Comandos runnig y slower para acelerar o relentizar el ratón
+- Comando para ver el escritorio y restaurar escritorio
+- Comando para cambiar de aplicación
+- Comando para visualizar todas las aplicaciones abiertas y cambiar entre ellas
+- Comando para activar aplicación (Emplea API VisualBasic)
+- Comandos para pulsar los botones del ratón y levantar
+- Nuevos comandos para simular pulsación de control, shift con el ratón
+- Comandos para simular presionado y soltado de teclas a bajo nivel
+- Comandos de activación y desactivación de xulia en función del idioma seleccionado
+- Solucionado el problema por el que la rejilla dejaba de funcionar
+- Una vez activada la rejilla puede cancelarse
+- Establecer precisión distinta para el modo dictado de windows, ya que siempre era inferior al grado de precisión de los comandos y no funcionaba
+- Comando para cerrar todas las aplicaciones chrome de dictado closeapplicationdictate
+- Comando mousecenter para posicionar el ratón en el centro
+- Cambio de modo de ratón para que entre por defecto en modo contínuo
+- Cargar el AIML de XULIA (Es el fichero que contiene el cerebro de Xulia)
+- Problemas con comando verticalbar "|" solucionados
+- Establecemos control de errores en todos los procedimientos para evitar una salida inesperada
+- Incorporamos los comandos hidexulia y showxulia para ocultar y mostrar la ventana de Xulia
+- El reconocimiento de múltiples idiomas simultáneos con Chrome se ha probado con inglés y español en un usuario con idioma español en su perfil y ha funcionado perfectamente
+- Nueva funcionalidad que permite grados de precisión diferentes por gramática e incluso por elemento
+- Incorporación de número de versión
+- Ventana con información de la versión y las novedades de cada versión
+- Se solucionan los problemas de las llaves y paréntesis en modo dictado
+- Se soluciona el problema de la recarga de comandos y listas de sustitución
+- Los comandos de activación de aplicacciones comprueban si la aplicación está minimizada, en este caso la restauran antes de activarla
+
+
+
+
+------------   PRIORIDAD 1   ------------
+- tela de correção: 
+   - a tabulaçao nao está em ordem; não entende símbolos como parenteses e percentual, não funciona com seleção de mais de cem palavras, invade a linha de baixo ao pegar e pula páginas em certas ocasiões
+- Nuevo modo de comandos avanzados que permite activar gramáticas de dictado windows UWP, pero no interactúa con el cerebro de Xulia. Se activa con XULIACOMANDO y permite ejecutar un solo comando, tanto de los comandos normales como los comandos extendidos
+- Nueva pantalla para gestionar los comandos avanzados de envíos de correos electrónicos sincronizados con Outlook. Permitirá realizar envíos con asunto y con cuerpo
+- Nuevos comandos avanzados para controlar whatsapp enviar mensaje a &lt;contacto&gt; con texto &lt;mensaje&gt;, abrir mensajes de &lt;contacto&gt;, cerrar whatsapp
+- Permitir anexar ficheros a la nueva funcionalidad de correos electrónicos correos electrónicos
+- Nueva funcionalidad que permite definir zonas de almacenamiento.
+- Sistema de búsqueda de archivos por nombre en cualquier zona de almacenamiento con o sin tipo
+- Sistemas de búsqueda del último archivo modificado en cualquier zona de almacenamiento con o sin tipo
+- Funcionalidad para incorporar a correos electrónicos el resultado de las búsquedas de archivos
+- Funcionalidad para grabar el contenido de la ventana actial o de toda la pantalla
+- Funcionalidad para envíar por correo el contenido grabado de la ventana actual o de la ventana completa
+- Funcionalidad para anexar a un correo la información del portapapeles
+- Funcionalidad para buscar correos con cierto contenido en el asunto o en el cuerpo y visualizarlos o leerlos
+- Funcionad para buscar citas entre ciertas fechas y leerlas
+- Funcionalidad para buscar una cita por nombre y leerla
+- Funcionalidad para grabar una nueva cita
+- Funcionalidad para cambiar una cita
+- Funcionalidad para eliminar una cita
+- Incorporar comando que permita localizar una imagen en pantalla en una zona definida para situar el ratón en ella
+- Incorporar sugerencias de palabras en la pantalla de corrección empleando el corpus de freeling en portugués, inglés y español</value>
+  </data>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>------------   PRIORIDAD 1   ------------
+- tela de correção: 
+   - a tabulaçao nao está em ordem; não entende símbolos como parenteses e percentual, não funciona com seleção de mais de cem palavras, invade a linha de baixo ao pegar e pula páginas em certas ocasiões
+- Nuevo modo de comandos avanzados que permite activar gramáticas de dictado windows UWP, pero no interactúa con el cerebro de Xulia. Se activa con XULIACOMANDO y permite ejecutar un solo comando, tanto de los comandos normales como los comandos extendidos
+- Nueva pantalla para gestionar los comandos avanzados de envíos de correos electrónicos sincronizados con Outlook. Permitirá realizar envíos con asunto y con cuerpo
+- Nuevos comandos avanzados para controlar whatsapp enviar mensaje a &lt;contacto&gt; con texto &lt;mensaje&gt;, abrir mensajes de &lt;contacto&gt;, cerrar whatsapp
+- Permitir anexar ficheros a la nueva funcionalidad de correos electrónicos correos electrónicos
+- Nueva funcionalidad que permite definir zonas de almacenamiento.
+- Sistema de búsqueda de archivos por nombre en cualquier zona de almacenamiento con o sin tipo
+- Sistemas de búsqueda del último archivo modificado en cualquier zona de almacenamiento con o sin tipo
+- Funcionalidad para incorporar a correos electrónicos el resultado de las búsquedas de archivos
+- Funcionalidad para grabar el contenido de la ventana actial o de toda la pantalla
+- Funcionalidad para envíar por correo el contenido grabado de la ventana actual o de la ventana completa
+- Funcionalidad para anexar a un correo la información del portapapeles
+- Funcionalidad para buscar correos con cierto contenido en el asunto o en el cuerpo y visualizarlos o leerlos
+- Funcionad para buscar citas entre ciertas fechas y leerlas
+- Funcionalidad para buscar una cita por nombre y leerla
+- Funcionalidad para grabar una nueva cita
+- Funcionalidad para cambiar una cita
+- Funcionalidad para eliminar una cita
+- Incorporar comando que permita localizar una imagen en pantalla en una zona definida para situar el ratón en ella
+- Incorporar sugerencias de palabras en la pantalla de corrección empleando el corpus de freeling en portugués, inglés y español
+
+
+------------   PRIORIDAD 2   -----------
+- opção de "um comando" às vezes interpreta a si mesmo, o mesmo acontece com o comando literal
+- menu do icone de Xulia nao aceita uso das setas para mover-se entre as opçoes
+- tela show windows: 1- a tabulaçao nao está em ordem; 2- poderia aceitar teclas de atalho; 3- após executar qualquer opçao ir direto para a opçao principal; 4- ao ser ativado o programa nao abre na posiçao original
+- balao de texto do Xulia fica em cima do zoom do excel
+- pontuação: tilde/snake não funcionam; criar opção para desativar acute; retirar trema
+- criar comando para andar página para direita e para esquerda / selecionar paragrafo
+- opcao de criar modo para programas (ex: firefox) na tela de configuração
+- Grade em plano de fundo
+- fechar janela do tipo da janela prompt dos
+- fazer que o comando select desative apos a maioria das acoes, principalmente comandos selectcorrection, copy/cute/copybox/cutbox teclas do teclado (excecoes: setas pra direita, esquerda, baixo, acima, home, end, pageup, pagedown, nextword, backword)
+- Números estendidos até 100
+- addcopy
+- Funcionalidad para grabar una zona concreta de la pantalla o la pantalla de una aplicación en un correo o en el portapapeles
+- Permitir establecer el orden de busqueda de comandos en las gramaticas activas
+- Incorporar un motor de inferencia de reglas para adquisición de conocimiento y razonamiento
+- mouse stop debe bajar la velocidad del ratón de modo configurable a un divisor de la velocidad actual o a un valor predefinido
+- Xulia debe permitir en modo interacción con el asistente de reconcimiento de voz de windows activo, combinando comandos de windows y comandos de xulia
+- Posibilidad de tener rejillas adicionales personalizadas por aplicación
+- Pantalla de ayuda rápida con los comandos de la aplicación activa, en caso de que tenga gramáticas de aplicación propias
+
+- Permitir seleccionar de modo independiente los modos que descargan sus gramáticas al desactivarse
+- Permitir que Xulia entre en modo stand-bye al estar cierto tiempo sin recibir comandos. Sale del modo con el comando attentionxulia
+- Intentar identificar comandos que se lanzan accidentalmente, por tiempo de espeta entre comandos y mediante la creación de una lista negra de comandos de fácil confusión con ruido de fondo
+
+- Función condicional que permite seguir ejecutando comandos según aparezca o no algo en la barra de  título de una ventana
+- Detectar si están generados los eventos de pulsación de control, alt, shift, caps
+</value>
+  </data>
+</root>
