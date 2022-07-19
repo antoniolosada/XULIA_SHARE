@@ -525,8 +525,9 @@ namespace AIMLGUI
             catch (Exception e)
             {
                 LOG("Error cargando variables de configuración:" + e.Message);
+                MessageBox.Show("Error cargando variables de configuración:" + e.Message);
+                Application.Exit();
             }
-
 
             try
             {
@@ -554,6 +555,8 @@ namespace AIMLGUI
             catch (Exception e)
             {
                 LOG("Error inicializando en sistema de reconocimiento:" + e.Message);
+                MessageBox.Show("Error inicializando en sistema de reconocimiento:" + e.Message);
+                Application.Exit();
             }
 
             Estado.ActualizarComando("Estatus: Open Google Chrome");

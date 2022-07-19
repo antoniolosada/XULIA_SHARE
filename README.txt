@@ -15,3 +15,6 @@ Añadir referencia Windows Universal UWP AGregar referencias
 
 \Windows Kits\10\References\10.0.17763.0\Windows.Foundation.UniversalApiContract\7.0.0.0\Windows.Foundation.UniversalApiContract.winmd
 
+Descomprimir el ZIP de
+\XULIA_SHARE\C_SHARP\COPIAS
+en Debug
