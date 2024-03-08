@@ -118,7 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="textBox1.Text" xml:space="preserve">
-    <value>__________ Versión 1.2.3.0 __________________________________________________________________________
+    <value>__________ Versión 1.2.4.0 __________________________________________________________________________
+- Se incorpora la macro [CERRAR_CHROME] que permite cerrar y volver a abrir el navegador de reconocimiento de voz
+__________ Versión 1.2.3.0 __________________________________________________________________________
 - incluir o comando espaço no modo comando, se incluye en la gramática TeclasAlfabeto
 - o comando todas maiúsculas está funcionando igual ao uma maiúscula. Não tá acionando o símbolo M e tampouco ativando todas as letras maiúsculas (Fix)
 - comandos janelafechar e aplicaçãofechar, ao invés de fechar janela e fechar aplicação. Estava conflitando com comandos parecidos e fechando aplicações sem querer

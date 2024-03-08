@@ -1,0 +1,12 @@
+PROY: \TONI\PROY\GITHUB\XULIA_SHARE\C_SHARP\XULIA
+
+' Para acceder desde un usuario normal netsh http add urlacl url=http://localhost:8080/ user="Antonio Losada"
+
+' Reservar dominio para no necesitar ser administrador: netsh http add urlacl url=http://*:8080/ user=Xunta
+' Comprobar que no hay mas reservas con similares rutas, p.e. la anterior y http://+:8080, ya que da un error 503 al acceder
+
+ERROR: El tipo o el nombre del espacio de nombres 'Interop' no existe en el espacio de nombres 'Microsoft.Office' (¿falta alguna referencia de ensamblado?)-> Comprobar si está instalado Outlook
+
+ERROR: vb.net "Se ha intentado cargar un programa con un formato incorrecto" -> Todos los proyectos tienen que compilarse en x86, no hay librería x64 para Aforge
+
+ERROR: No recognizer of the required ID found.Nombre del parámetro: culture' -> Instalar: D:\INSTALL\INSTALACION\Speech SDK\v11 -> El SDK de 64bits y el módulo SR y TTS

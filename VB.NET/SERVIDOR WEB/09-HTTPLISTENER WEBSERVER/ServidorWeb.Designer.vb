@@ -70,7 +70,7 @@ Partial Class ServidorWeb
         Me.TextBoxSERVER.Name = "TextBoxSERVER"
         Me.TextBoxSERVER.Size = New System.Drawing.Size(259, 22)
         Me.TextBoxSERVER.TabIndex = 3
-        Me.TextBoxSERVER.Text = "http://localhost:8081/SERVER/"
+        Me.TextBoxSERVER.Text = "http://localhost:8080/SERVER/"
         '
         'tbLOG
         '
@@ -88,7 +88,7 @@ Partial Class ServidorWeb
         Me.chkPrefijo.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chkPrefijo.Location = New System.Drawing.Point(13, 40)
         Me.chkPrefijo.Name = "chkPrefijo"
-        Me.chkPrefijo.Size = New System.Drawing.Size(128, 20)
+        Me.chkPrefijo.Size = New System.Drawing.Size(127, 20)
         Me.chkPrefijo.TabIndex = 4
         Me.chkPrefijo.Text = "Asignar prefijo"
         Me.chkPrefijo.UseVisualStyleBackColor = True
@@ -98,7 +98,7 @@ Partial Class ServidorWeb
         Me.chkLOG.AutoSize = True
         Me.chkLOG.Location = New System.Drawing.Point(143, 40)
         Me.chkLOG.Name = "chkLOG"
-        Me.chkLOG.Size = New System.Drawing.Size(57, 20)
+        Me.chkLOG.Size = New System.Drawing.Size(56, 20)
         Me.chkLOG.TabIndex = 6
         Me.chkLOG.Text = "LOG"
         Me.chkLOG.UseVisualStyleBackColor = True

@@ -1,5 +1,7 @@
 ﻿' https://www.youtube.com/watch?v=qXMJSeZEq_8
-
+' Reservar dominio para no necesitar ser administrador: netsh http add urlacl url=http://*:8080/ user=Xunta
+' Para acceder desde un usuario normal netsh http add urlacl url=http://localhost:8080/ user="Antonio Losada"
+' Comprobar que no hay mas reservas con similares rutas, p.e. la anterior y http://+:8080, ya que da un error 503 al acceder
 
 Imports System.Net
 Imports System.Text
@@ -177,7 +179,7 @@ Public Class ServidorWeb
         Me.Hide()
     End Sub
     Private Sub ServidorWeb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MessageBox.Show(GetEntradaConfig("URL"))
+        'MessageBox.Show(GetEntradaConfig("URL"))
 
     End Sub
 

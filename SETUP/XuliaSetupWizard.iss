@@ -7,9 +7,9 @@
 ;-----------------------------------------------------------------------------
 
 #define MyAppName "Xulia"
-#define MyAppVersion "1.2.3"
+#define MyAppVersion "1.2.4"
 #define MyAppPublisher "Antonio Losada González"
-#define MyAppURL "https://sites.google.com/site/accesibilidadinteligente/home"
+#define MyAppURL "https://www.novoser.org.br/xulia.html"
 #define MyAppExeName "XULIA.exe"
 
 #ifdef PC_TRABAJO
@@ -23,11 +23,11 @@
 
 #ifdef PC_CASA
   ; Configuración PC Casa
-  #define UnidadBase "D:"
-  #define DirSalida "\GOOGLEDRIVE\TONI\PROY\XULIA"
-  #define DirBase "\GOOGLEDRIVE\TONI\PROY\XULIA\C_SHARP\AIMLGUI\AIMLGUI\bin\Debug"
+  #define UnidadBase "C:"
+  #define DirSalida "\GOOGLE_DRIVE\GDRIVE\TONI\PROY\GITHUB\XULIA_SHARE"
+  #define DirBase "\GOOGLE_DRIVE\GDRIVE\TONI\PROY\GITHUB\XULIA_SHARE\C_SHARP\AIMLGUI\AIMLGUI\bin\Debug"
   #define UnidadBaseFicherosIntall "D:"
-  #define DirBaseFicherosIntall "\INSTALL\NUEVA_INSTALL\Speech SDK\v11\setup"
+  #define DirBaseFicherosIntall "\INSTALL\INSTALACION\Speech SDK\v11\setup"
 #endif
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.

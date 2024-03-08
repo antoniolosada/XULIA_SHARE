@@ -27,9 +27,11 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 using Microsoft.VisualBasic;
 using System.Globalization;
+using Microsoft.Office;
 
 using XULIA;
 using _09_HTTPLISTENER_WEBSERVER;
+using static AIMLGUI.ProcesamientoComandos;
 
 namespace AIMLGUI
 {
@@ -200,6 +202,7 @@ namespace AIMLGUI
         string XuliaAtencion = "atencion";
         public int MinutosResetControlVoz = 10;
         public static bool DictadoSAPI5 = false;
+        string PalabrasVolverModo = "";
         public int OcultarEstadoSegundos = 0;
         string ArranqueTomcat = "";
         string ArranqueTomcat_unidad = "";
@@ -524,7 +527,7 @@ namespace AIMLGUI
             }
             catch (Exception e)
             {
-                LOG("Error cargando variables de configuración:" + e.Message);
+                MessageBox.Show("Error cargando variables de configuración:" + e.Message);
             }
 
 
@@ -555,19 +558,7 @@ namespace AIMLGUI
             {
                 LOG("Error inicializando en sistema de reconocimiento:" + e.Message);
             }
-
-            Estado.ActualizarComando("Estatus: Open Google Chrome");
-            Process p = null;
-            if ((p = EjecutarChromeRecVoz(IdiomaComandoGoogle, CodigoIdiomaComandoGoogle, ModoComandoGoogle, 5000)) == null)
-            {
-                LOG("ERROR FATAL: no se ha podido ejecutar Google Chrome para reconocimiento");
-                Estado.ActualizarComando("Error Chrome");
-            }
-            else
-            {
-                Estado.ActualizarComando("Estatus: Google Chrome Ok");
-                ProcesoChrome = p;
-            }
+            AbrirGoogleChrome();
         }
         public void EliminarRecursos()
         {
@@ -1423,7 +1414,7 @@ namespace AIMLGUI
                         }
                     }
                     #endregion REJILLA
-                    else //Comandos comunes al resto de los modos
+                    else //Comandos comunes al resto de los modos, incluído los cambios de MODO **************************************
                     {
                         Me.InterpretarSecuencia(ElementoGram);
                     }
@@ -1866,7 +1857,7 @@ namespace AIMLGUI
         }
 #endif
         #endregion reconocimiento 
-        //*********************************************************************************************************************************************************************
+        //*****************************************************************************************************************************************************************************************
         #region EjecutarComandos
 
         //Ejecución de comandos o cambio de modo de operación
@@ -1936,7 +1927,7 @@ namespace AIMLGUI
 
                 if ((MostrarGloboModos == "S") && (MostrarGloboComandos == "N"))
                     frmAIML.MostrarGlobo("", "Modo: " + Modo, "");
-                    
+
                 bool DictadoIdiomas = false;
                 //Control de cambio de estado
                 if (Modo == "·REJILLA·")
@@ -1975,6 +1966,11 @@ namespace AIMLGUI
                     string Idioma = Modo.Substring(9);
                     frmAIML.CambiarIcono(aimlForm.TipoIcono.dictado);
                     DictadoContinuo dc = CargarCadenasSustitucion(Idioma);
+                }
+                else if ((Strings.InStr(Modo, "·DICTW10") > 0))
+                { //Dictado contínuo con cuadro de reconocimiento de voz de windows 10
+                    frmAIML.CambiarIcono(aimlForm.TipoIcono.dictado);
+                    ActivarDesactivarCuadroDictadoWindows10();
                 }
                 else if ((Strings.InStr(Modo, "·DICTADO·") > 0) || (Strings.InStr(Modo, "·CONVERS·") > 0) || (Strings.InStr(Modo, "·OKXULIA·") > 0))
                 { //Dictado contínuo multi-idioma Google Chrome
@@ -2065,15 +2061,20 @@ namespace AIMLGUI
                         frmAIML.CambiarIcono(aimlForm.TipoIcono.activa);
                     }
                 }
+                else if (Strings.InStr(actual, "·DICTW10") > 0)
+                {
+                    ActivarDesactivarCuadroDictadoWindows10();
+                    BorrarComandoVolverDictadoWin10();
+                }
 
-                //if (!AdmiteGramaticasAplicacion (this.MODO))
-                //{//El modo actual no soporta gramáticas de aplicacicón
-                //    DesactivarGramaticas(true);
-                //    if (DescargarGramaticasCambioMODO == "S")
-                //        DescargarGramaticasDesactivas(true);
-                //}
+                    //if (!AdmiteGramaticasAplicacion (this.MODO))
+                    //{//El modo actual no soporta gramáticas de aplicacicón
+                    //    DesactivarGramaticas(true);
+                    //    if (DescargarGramaticasCambioMODO == "S")
+                    //        DescargarGramaticasDesactivas(true);
+                    //}
 
-                if (DescargarGramaticasCambioMODO == "S")
+                    if (DescargarGramaticasCambioMODO == "S")
                     DescargarGramaticasDesactivas(false);
             }
             catch (Exception e)
@@ -2367,6 +2368,13 @@ namespace AIMLGUI
                 else if (Strings.InStr(comando, "[SALIR_XULIA]") == 1)
                 {
                     SalirDeXulia();
+                }
+                else if (Strings.InStr(comando, "[CERRAR_CHROME]") == 1)
+                {
+                    CerrarGoogleChrome();
+                    Thread.Yield();
+                    Thread.Sleep(1000);
+                    AbrirGoogleChrome();
                 }
                 else if ((comando == "[CERRAR_AYUDA_RAPIDA]") || ((comando == "[AYUDA_RAPIDA]") && AYUDA_RAPIDA))
                 {
@@ -3183,9 +3191,9 @@ namespace AIMLGUI
             DIR_RATON = MovimientoRaton.Parar;
             return "";
         }
-        
+
         #endregion EjecutarComandos
-               
+        //*****************************************************************************************************************************************************************************************
         #region funciones_correo_outlook
         public static Boolean EnviarCorreoOutlook(string mailSubject, string mailContent, List<string> Anexos, string mailDirection)
         {
@@ -3265,8 +3273,40 @@ namespace AIMLGUI
         }
         static bool mailSent = false;
         #endregion funciones_correo_outlook
+        //*****************************************************************************************************************************************************************************************
         #region funcionesauxiliares
+        public void ActivarDesactivarCuadroDictadoWindows10()
+        {
+            KeyboardPress(VK_LWIN, HW_LWIN, KEYEVENTF_SILENT | 0);
+            SendKeys.Send("h");
+            KeyboardPress(VK_LWIN, HW_LWIN, KEYEVENTF_SILENT | KEYEVENTF_KEYUP);
+        }
+        public void BorrarComandoVolverDictadoWin10()
+        {
+            for (int i = 0; i < 1; i++)
+            {
+                KeyboardPress(VK_LCONTROL, HW_LCONTROL, KEYEVENTF_SILENT | 0);
+                KeyboardPress(VK_LSHIFT, HW_LSHIFT, KEYEVENTF_SILENT | 0);
+                SendKeys.Send("{LEFT}");
+                KeyboardPress(VK_LSHIFT, HW_LSHIFT, KEYEVENTF_SILENT | KEYEVENTF_KEYUP);
+                KeyboardPress(VK_LCONTROL, HW_LCONTROL, KEYEVENTF_SILENT | KEYEVENTF_KEYUP);
+                SendKeys.Send("^c");
 
+                bool borrado = false;
+                String s = Clipboard.GetText();
+                String[] palabras = PalabrasVolverModo.Split(',');
+                foreach (string p in palabras)
+                {
+                    if (s.ToUpper() == p.ToUpper())
+                    {
+                        SendKeys.Send("{DEL}");
+                        borrado = true;
+                    }
+                }
+                if (!borrado) break;
+            }
+            SendKeys.Send("{RIGHT}");
+        }
         public void TraducirMenu(MenuStrip menuStrip1, CultureInfo CI)
         {
             // obtener el tipo de letra original de las opciones de menú
@@ -3296,8 +3336,6 @@ namespace AIMLGUI
                 }
             }
         }
-
-
         private void CambiarOpcionesMenu(ToolStripItemCollection colOpcionesMenu, Font fntTipoOriginal, CultureInfo CI)
         {
             // recorrer el submenú
@@ -3330,7 +3368,7 @@ namespace AIMLGUI
                     // llamar recursivamente a este método para cambiar sus opciones
                     if (((ToolStripMenuItem)itmOpcion).DropDownItems.Count > 0)
                     {
-                        this.CambiarOpcionesMenu(((ToolStripMenuItem)itmOpcion).DropDownItems,fntTipoOriginal, CI);
+                        this.CambiarOpcionesMenu(((ToolStripMenuItem)itmOpcion).DropDownItems, fntTipoOriginal, CI);
                     }
                 }
             }
@@ -3338,7 +3376,7 @@ namespace AIMLGUI
         public void ActivateAppChrome(string processName)
         {
             IntPtr v = FindWindowEx((IntPtr)0, (IntPtr)0, "Chrome_WidgetWin_0", "WhatsApp");
-            if ((int)v==0)
+            if ((int)v == 0)
                 v = FindWindowEx((IntPtr)0, (IntPtr)0, "Chrome_WidgetWin_1", "WhatsApp");
             if ((int)v != 0)
                 SetForegroundWindow(v);
@@ -3349,7 +3387,7 @@ namespace AIMLGUI
             //{
             //    SetForegroundWindow(p[i].MainWindowHandle);
             //}
-                
+
         }
         Process EjecutarAplicacion(string app, string arg)
         {
@@ -3847,6 +3885,7 @@ namespace AIMLGUI
             MaximizarAvatar = (cfg.ReadAppSettingsKey("MaximizarAvatar" + IdiomaGramaticas) == "S" ? true : false);
             MinutosResetControlVoz = Convert.ToInt16(cfg.ReadAppSettingsKey("MinutosResetControlVoz" + IdiomaGramaticas));
             DictadoSAPI5 = (cfg.ReadAppSettingsKey("DictadoSAPI5" + IdiomaGramaticas) == "S" ? true : false);
+            PalabrasVolverModo= cfg.ReadAppSettingsKey("VolverModo" + IdiomaGramaticas);
             AutoDesactivacion = (cfg.ReadAppSettingsKey("AutoDesactivar" + IdiomaGramaticas) == "S" ? true : false);
             EsperaCompilacionGramaticaUWP = Convert.ToInt16(cfg.ReadAppSettingsKey("EsperaCompilacionGramaticaUWP" + IdiomaGramaticas));
             OK_XULIA_UnComando = (cfg.ReadAppSettingsKey("OK_XULIA_UnComando" + IdiomaGramaticas) == "S" ? true : false);
@@ -3907,7 +3946,34 @@ namespace AIMLGUI
             Application.Exit();
         }
 
+        public void CerrarGoogleChrome()
+        {
+            if (BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + IdiomaComandoGoogle ))
+            {
+                ActivarVentanaTitulo("RECVOZ.GOOGLE." + IdiomaComandoGoogle );
+                MaximizarMinimizarVentanaActiva(SW_SHOWMAXIMIZED);
+                SendKeys.Send("%{F4}");
+            }
+        }
+
+        public void AbrirGoogleChrome()
+        {
+            Estado.ActualizarComando("Estatus: Open Google Chrome");
+            Process p = null;
+            if ((p = EjecutarChromeRecVoz(IdiomaComandoGoogle, CodigoIdiomaComandoGoogle, ModoComandoGoogle, 5000)) == null)
+            {
+                LOG("ERROR FATAL: no se ha podido ejecutar Google Chrome para reconocimiento");
+                Estado.ActualizarComando("Error Chrome");
+            }
+            else
+            {
+                Estado.ActualizarComando("Estatus: Google Chrome Ok");
+                ProcesoChrome = p;
+            }
+        }
+
         #endregion funcionesauxiliares
+        //*****************************************************************************************************************************************************************************************
         #region SistemaReconocimientoVoz
         void InicializarReconocedorVoz()
         {
@@ -3973,6 +4039,8 @@ namespace AIMLGUI
             InicializarGramaticas();
         }
         #endregion SistemaReconocimientoVoz
+        //*****************************************************************************************************************************************************************************************
+
         #region MensajesRapidos
         String EnviarMensajeRapido(String destino, String mensaje)
         {
