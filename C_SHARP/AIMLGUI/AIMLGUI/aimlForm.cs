@@ -100,7 +100,7 @@ namespace AIMLGUI
 
             //Activa el reconocimiento y configura el servidor de captura chrome. También carga los ficheros AIML para el BOT
             m_Estado.ActualizarComando("Estatus:  Init system voice recognition");
-            ControlVoz.ActivarReconocimientoVoz(ControlVoz, this, Estado, this.richTextBoxOutput, srw);
+            ControlVoz.ActivarReconocimientoVoz_CargarCfg(ControlVoz, this, Estado, this.richTextBoxOutput, srw);
 
             Estado.EnlaceFormXulia(this, ControlVoz);
 

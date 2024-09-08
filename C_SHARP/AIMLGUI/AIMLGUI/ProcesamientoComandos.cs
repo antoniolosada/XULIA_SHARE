@@ -32,6 +32,13 @@ using Microsoft.Office;
 using XULIA;
 using _09_HTTPLISTENER_WEBSERVER;
 using static AIMLGUI.ProcesamientoComandos;
+using System.Threading.Tasks;
+using Microsoft.CognitiveServices.Speech;
+using Microsoft.CognitiveServices.Speech.Audio;
+using OpenAI_API.Completions;
+using OpenAI_API;
+using System.Runtime.Remoting.Messaging;
+
 
 namespace AIMLGUI
 {
@@ -251,6 +258,8 @@ namespace AIMLGUI
         static public bool OkXulia = false;
         int EsperaCompilacionGramaticaUWP = 2000;
         bool OK_XULIA_UnComando = true;
+        String speechKey = "";
+        String speechRegion = "";
 
         sAlmacenamiento Almacenamiento = new sAlmacenamiento();
         public enum Preguntas : int { CuantosAnos, QueEs, QuienEs, QueTiempoHace };
@@ -379,7 +388,7 @@ namespace AIMLGUI
         public struct GramaticaCargada
         {
             public string Nombre;
-            public Grammar Gramatica;
+            public Microsoft.Speech.Recognition.Grammar Gramatica;
             public int GramaticaSAPI4;
             public bool Activa;
             public bool GramCargada;
@@ -466,7 +475,7 @@ namespace AIMLGUI
 
         // Métodos ***************************************************************************************************************************************************************************************
         #region iniciacion
-        public void ActivarReconocimientoVoz(ProcesamientoComandos Com, aimlForm Form, frmEstado FormEstado, RichTextBox Salida, ServidorWeb srw)
+        public void ActivarReconocimientoVoz_CargarCfg(ProcesamientoComandos Com, aimlForm Form, frmEstado FormEstado, RichTextBox Salida, ServidorWeb srw)
         {
             /******************      IMPORTANTE   *******************************************************
              * En caso de activar el idioma _EN con SAPI11 y un idioma distinto en wl S.O., 
@@ -592,12 +601,12 @@ namespace AIMLGUI
         }
 
         //Carga la gramática en el sistema de reconocimiento
-        Grammar CargarGramaticaReconocedor(string[] palabras, string cultura, GrammarBuilder grammar)
+        Microsoft.Speech.Recognition.Grammar CargarGramaticaReconocedor(string[] palabras, string cultura, GrammarBuilder grammar)
         {
-            Grammar g;
+            Microsoft.Speech.Recognition.Grammar g;
             grammar.Culture = new System.Globalization.CultureInfo(cultura);
             grammar.Append(new Choices(palabras));
-            g = new Grammar(grammar);
+            g = new Microsoft.Speech.Recognition.Grammar(grammar);
 
             CargarGramatica(g);
 
@@ -760,7 +769,7 @@ namespace AIMLGUI
                             {
                                 if (!gc.GramaticaExtendida) //Los comandos de gramáticas extendidas no deben cargarse en el reconocedor
                                 {
-                                    Grammar gr = CargarGramaticaReconocedor(ListaElementos, Me.Cultura, new GrammarBuilder());
+                                    Microsoft.Speech.Recognition.Grammar gr = CargarGramaticaReconocedor(ListaElementos, Me.Cultura, new GrammarBuilder());
                                     gc.Gramatica = gr;
                                 }
                             }
@@ -857,12 +866,12 @@ namespace AIMLGUI
             return salida;
         }
 
-        public void CargarGramatica(Grammar gram)
+        public void CargarGramatica(Microsoft.Speech.Recognition.Grammar gram)
         {
             recognizer.LoadGrammar(gram);
         }
 
-        public void DescargarGramatica(Grammar g)
+        public void DescargarGramatica(Microsoft.Speech.Recognition.Grammar g)
         {
             recognizer.UnloadGrammar(g);
         }
@@ -4018,10 +4027,6 @@ namespace AIMLGUI
                 }
             }
         }
-        public void CancelarReconocimiento()
-        { }
-        public void RestaurarReconocimienot()
-        { }
 
         public void Hablar(string texto)
         {
@@ -4038,6 +4043,47 @@ namespace AIMLGUI
             InicializarReconocedorVoz();
             InicializarGramaticas();
         }
+
+        static void OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
+        {
+            switch (speechRecognitionResult.Reason)
+            {
+                case ResultReason.RecognizedSpeech:
+                    Console.WriteLine($"RECOGNIZED: Text={speechRecognitionResult.Text}");
+                    break;
+                case ResultReason.NoMatch:
+                    Console.WriteLine($"NOMATCH: Speech could not be recognized.");
+                    break;
+                case ResultReason.Canceled:
+                    var cancellation = CancellationDetails.FromResult(speechRecognitionResult);
+                    Console.WriteLine($"CANCELED: Reason={cancellation.Reason}");
+
+                    if (cancellation.Reason == CancellationReason.Error)
+                    {
+                        Console.WriteLine($"CANCELED: ErrorCode={cancellation.ErrorCode}");
+                        Console.WriteLine($"CANCELED: ErrorDetails={cancellation.ErrorDetails}");
+                        Console.WriteLine($"CANCELED: Did you set the speech resource key and region values?");
+                    }
+                    break;
+            }
+        }
+        async public void ReconocerTextoAzure()
+        {
+            var speechConfig = SpeechConfig.FromSubscription(speechKey, speechRegion);
+            speechConfig.SpeechRecognitionLanguage = "es-ES";
+
+            var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
+            var speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
+
+            while (true)
+            {
+
+                Console.WriteLine("Speak into your microphone.");
+                var speechRecognitionResult = await speechRecognizer.RecognizeOnceAsync();
+                OutputSpeechRecognitionResult(speechRecognitionResult);
+            }
+        }
+
         #endregion SistemaReconocimientoVoz
         //*****************************************************************************************************************************************************************************************
 
