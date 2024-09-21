@@ -38,13 +38,21 @@ using Microsoft.CognitiveServices.Speech.Audio;
 using OpenAI_API.Completions;
 using OpenAI_API;
 using System.Runtime.Remoting.Messaging;
-
+using OllamaSharp;
+using System.Security.Policy;
+using Newtonsoft.Json.Linq;
+using System.Windows.Input;
+using AIMLbot.AIMLTagHandlers;
+using OllamaSharp.Models.Chat;
+using System.Text.RegularExpressions;
 
 namespace AIMLGUI
 {
 
     public class ProcesamientoComandos
     {
+
+        #region Constantes_VK
         const Boolean SR_TOMCAT = false;
 
         const string SECCION_DIRECTORIO = "Directorio";
@@ -53,7 +61,6 @@ namespace AIMLGUI
         const int ESPERA_PARADA_REC_GOOGLE = 800; //ms
         const int MAX_ESPERA_CIERRE_CHROME_100MS = 20;
 
-        #region Constantes_VK
         const byte HW_LSHIFT = 0xAA;
         const byte HW_LWIN = 0x5B;
         const byte HW_LCONTROL = 0x9D;
@@ -423,7 +430,14 @@ namespace AIMLGUI
 
         public enum MovimientoRaton : int { Arriba, Abajo, Derecha, Izquierda, Parar, Diagonal1, Diagonal2, Diagonal3, Diagonal4 };
 
-        public string MODO = "";
+        public String ChatSpeechAPI = "Azure";
+        public String DictadoAPI = "Google";
+        public String GPT_API = "Ollama";
+        public String GPT_Modelo = "llama3.1:8b";
+        public String GPT_OllamaURL = "localhost";
+        public String GPT_OllamaPrompt = "";
+        Chat chatGPT;
+        public String MODO = "";
         string MODO_ANT = "";
         string MODO_CANCELAR = "";
         string AplicacionActiva = "";
@@ -531,6 +545,19 @@ namespace AIMLGUI
                     RATON_CONTINUO = true;
                     DIR_RATON = MovimientoRaton.Parar;
                     frmAIML.TimerRatonActivo(true);
+                }
+
+                if (GPT_API != "")
+                {
+                    switch (GPT_API)
+                    {
+                        case "Ollama":
+                            {
+                                Estado.ActualizarComando("Estatus:  Init Ollama");
+                                IniciarOllama(GPT_OllamaURL);
+                            }
+                            break;
+                    }
                 }
 
             }
@@ -928,13 +955,13 @@ namespace AIMLGUI
         {
             TextoReconocido(texto, (float)0.9999, false);
         }
-        public void TextoReconocidoComandoGoogle(string texto)
+        async public void TextoReconocidoComandoGoogle(string texto)
         {
             //Solo  llegamos aquí desde el delegado si estamos en modos GOOGLE
             while (texto != "")
             {
                 texto = texto.Trim();
-                string resultado = TextoReconocido(texto, (float)0.9999, false);
+                string resultado = await TextoReconocido(texto, (float)0.9999, false);
                 if ((resultado == "") || (resultado == null))
                     break;
                 //Eliminamos la parte del comando y comprobamos si puede haber nuevos comandos detrás
@@ -943,7 +970,7 @@ namespace AIMLGUI
         }
 
         //************************ Procesamiento inicial de entradas de eventos de reconocimiento ************************************
-        public string TextoReconocido(string texto, float GradoPrecision, bool ModoDictadoIdiomas)
+        public async Task<string> TextoReconocido(string texto, float GradoPrecision, bool ModoDictadoIdiomas)
         {
             bool OkXulia_entrada = OkXulia;
             if ((texto == "") || (!ARRANQUE_COMPLETADO)) return "";
@@ -1002,6 +1029,18 @@ namespace AIMLGUI
                     sGramatica Elemento = BuscarComandoExtendido(false, texto, (float)0.99);
                     if (Elemento.Nombre != null)
                         ComandoExtendidoEncontrado = true;
+                    else if (GPT_API != "") // Si no encontramos comando en modo OkXulia y tenemos GPT pasamos la cadena al GPT
+                    {
+                        List<string> salida = await GPT(texto);
+
+                        string salidaGPT = "";
+                        foreach (string s in salida)
+                            salidaGPT += s;
+
+                        System.Speech.Synthesis.SpeechSynthesizer voz = new System.Speech.Synthesis.SpeechSynthesizer();
+                        voz.Speak(salidaGPT);
+
+                    }
                     ElementoGram = Elemento;
                 }
                 //Si no encontramos comandos extendidos o no estamos en modo OKXulia buscamos comandos normales
@@ -1049,6 +1088,7 @@ namespace AIMLGUI
                 {
                     OkXulia = false;
                     VolverModo(MODO, MODO_CANCELAR);
+                    MODO = MODO_CANCELAR;
                 }
 
                 if (OcultarEstadoSegundos > 0)
@@ -1981,7 +2021,7 @@ namespace AIMLGUI
                     frmAIML.CambiarIcono(aimlForm.TipoIcono.dictado);
                     ActivarDesactivarCuadroDictadoWindows10();
                 }
-                else if ((Strings.InStr(Modo, "·DICTADO·") > 0) || (Strings.InStr(Modo, "·CONVERS·") > 0) || (Strings.InStr(Modo, "·OKXULIA·") > 0))
+                else if ((Strings.InStr(Modo, "·DICTADO·") > 0) || (Strings.InStr(Modo, "·CONVERS·") > 0) || ((Strings.InStr(Modo, "·OKXULIA·") > 0) && (ChatSpeechAPI == "Google")))
                 { //Dictado contínuo multi-idioma Google Chrome
                     frmAIML.CambiarIcono(aimlForm.TipoIcono.dictado);
                     DictadoIdiomas = true;
@@ -2008,6 +2048,9 @@ namespace AIMLGUI
                     if (!EsperaTituloVentanaChrome("RECVOZ.GOOGLE." + Idioma + ".ACTIVO", 4000))
                         //No se ha ejecutado chrome correctamente, cancelamos el modo
                         MODO = MODO_CANCELAR;
+                }
+                else if ((Strings.InStr(Modo, "·OKXULIA·") > 0) && (ChatSpeechAPI == "Azure"))
+                { 
                 }
 
                 Me.MODO_ANT = Me.MODO;
@@ -3898,6 +3941,12 @@ namespace AIMLGUI
             AutoDesactivacion = (cfg.ReadAppSettingsKey("AutoDesactivar" + IdiomaGramaticas) == "S" ? true : false);
             EsperaCompilacionGramaticaUWP = Convert.ToInt16(cfg.ReadAppSettingsKey("EsperaCompilacionGramaticaUWP" + IdiomaGramaticas));
             OK_XULIA_UnComando = (cfg.ReadAppSettingsKey("OK_XULIA_UnComando" + IdiomaGramaticas) == "S" ? true : false);
+            ChatSpeechAPI = cfg.ReadAppSettingsKey("ChatSpeechAPI" + IdiomaGramaticas);
+            DictadoAPI = cfg.ReadAppSettingsKey("DictadoAPI" + IdiomaGramaticas);
+            GPT_API= cfg.ReadAppSettingsKey("GPT_API" + IdiomaGramaticas);
+            GPT_Modelo = cfg.ReadAppSettingsKey("GPT_Modelo" + IdiomaGramaticas);
+            GPT_OllamaURL = cfg.ReadAppSettingsKey("GPT_OllamaURL" + IdiomaGramaticas);
+            GPT_OllamaPrompt = cfg.ReadAppSettingsKey("GPT_OllamaPrompt" + IdiomaGramaticas);
 
             ServidorSMTP = cfg.ReadAppSettingsKey("ServidorSMTP" + IdiomaGramaticas);
             UsuarioSMTP = cfg.ReadAppSettingsKey("UsuarioSMTP" + IdiomaGramaticas);
@@ -4044,46 +4093,6 @@ namespace AIMLGUI
             InicializarGramaticas();
         }
 
-        static void OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
-        {
-            switch (speechRecognitionResult.Reason)
-            {
-                case ResultReason.RecognizedSpeech:
-                    Console.WriteLine($"RECOGNIZED: Text={speechRecognitionResult.Text}");
-                    break;
-                case ResultReason.NoMatch:
-                    Console.WriteLine($"NOMATCH: Speech could not be recognized.");
-                    break;
-                case ResultReason.Canceled:
-                    var cancellation = CancellationDetails.FromResult(speechRecognitionResult);
-                    Console.WriteLine($"CANCELED: Reason={cancellation.Reason}");
-
-                    if (cancellation.Reason == CancellationReason.Error)
-                    {
-                        Console.WriteLine($"CANCELED: ErrorCode={cancellation.ErrorCode}");
-                        Console.WriteLine($"CANCELED: ErrorDetails={cancellation.ErrorDetails}");
-                        Console.WriteLine($"CANCELED: Did you set the speech resource key and region values?");
-                    }
-                    break;
-            }
-        }
-        async public void ReconocerTextoAzure()
-        {
-            var speechConfig = SpeechConfig.FromSubscription(speechKey, speechRegion);
-            speechConfig.SpeechRecognitionLanguage = "es-ES";
-
-            var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
-            var speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
-
-            while (true)
-            {
-
-                Console.WriteLine("Speak into your microphone.");
-                var speechRecognitionResult = await speechRecognizer.RecognizeOnceAsync();
-                OutputSpeechRecognitionResult(speechRecognitionResult);
-            }
-        }
-
         #endregion SistemaReconocimientoVoz
         //*****************************************************************************************************************************************************************************************
 
@@ -4224,6 +4233,97 @@ namespace AIMLGUI
             }
             return par_tmp;
         }
+        #endregion
+
+        #region AzureSpeech
+        static void OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
+        {
+            switch (speechRecognitionResult.Reason)
+            {
+                case ResultReason.RecognizedSpeech:
+                    Console.WriteLine($"RECOGNIZED: Text={speechRecognitionResult.Text}");
+                    Me.TextoReconocido(speechRecognitionResult.Text, (float)0.99, false);
+                    break;
+                case ResultReason.NoMatch:
+                    Console.WriteLine($"NOMATCH: Speech could not be recognized.");
+                    break;
+                case ResultReason.Canceled:
+                    var cancellation = CancellationDetails.FromResult(speechRecognitionResult);
+                    Console.WriteLine($"CANCELED: Reason={cancellation.Reason}");
+
+                    if (cancellation.Reason == CancellationReason.Error)
+                    {
+                        Console.WriteLine($"CANCELED: ErrorCode={cancellation.ErrorCode}");
+                        Console.WriteLine($"CANCELED: ErrorDetails={cancellation.ErrorDetails}");
+                        Console.WriteLine($"CANCELED: Did you set the speech resource key and region values?");
+                    }
+                    break;
+            }
+        }
+        async public void ReconocerTextoAzure(string RegionIdioma)
+        {
+            var speechConfig = SpeechConfig.FromSubscription(speechKey, speechRegion);
+            speechConfig.SpeechRecognitionLanguage = RegionIdioma;
+
+            var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
+            var speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
+
+            while (true)
+            {
+
+                Console.WriteLine("Speak into your microphone.");
+                var speechRecognitionResult = await speechRecognizer.RecognizeOnceAsync();
+                OutputSpeechRecognitionResult(speechRecognitionResult);
+            }
+        }
+        #endregion
+
+        #region GPT
+
+        async Task<List<string>> GPT(string texto)
+        {
+            return await chatGPT.SendAsEnumerable("hola", null, null, default);
+        }
+
+        async private void IniciarOllama(string url)
+        {
+            OllamaApiClient ollama = null;
+            var connected = false;
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(url))
+                    url = "http://localhost:11434";
+
+                if (!url.StartsWith("http"))
+                    url = "http://" + url;
+
+                if (url.IndexOf(':', 5) < 0)
+                    url += ":11434";
+
+                var uri = new Uri(url);
+
+                ollama = new OllamaApiClient(url);
+                connected = await ollama.IsRunning();
+
+                var models = await ollama.ListLocalModels();
+                if (!models.Any())
+                {
+                    MessageBox.Show("Ollama no tiene modelos cargados.Se desactiva el GPT.");
+                    GPT_API = "";
+                    return;
+                }
+                ollama.SelectedModel = GPT_Modelo;
+                chatGPT = new Chat(ollama, GPT_OllamaPrompt);
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
         #endregion
 
     }

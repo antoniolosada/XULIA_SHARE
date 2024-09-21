@@ -1710,7 +1710,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
                 String texto = TextoGoogle.Dequeue().ToString();
 
                 //ModoDictadoConversación = Debe haber fichero de voz y el modo o es dictado o es conversación con información de idioma
-                ModoDictadoConversacion = (((Strings.InStr(ControlVoz.MODO, "·DICTADO·") > 0) || (Strings.InStr(ControlVoz.MODO, "·CONVERS·") > 0) || (Strings.InStr(ControlVoz.MODO, "·OKXULIA·") > 0)) && (ControlVoz.MODO.Length > 10));
+                ModoDictadoConversacion = (((Strings.InStr(ControlVoz.MODO, "·DICTADO·") > 0) || (Strings.InStr(ControlVoz.MODO, "·CONVERS·") > 0) || 
+                                                                        (Strings.InStr(ControlVoz.MODO, "·OKXULIA·") > 0)) && (ControlVoz.MODO.Length > 10));
+
+                if ((ControlVoz.ChatSpeechAPI != "Google") && (Strings.InStr(ControlVoz.MODO, "·OKXULIA·")>0)) return;
 
                 //Solo recuperamos el contenido en modo conversación o modo dictado o modo comando google
                 if ((ModoDictadoConversacion) || (ControlVoz.ModoComandoGoogle == "S"))

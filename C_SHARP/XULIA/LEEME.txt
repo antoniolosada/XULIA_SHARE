@@ -1,0 +1,1 @@
+en TextoReconocido no cambia modo a cancelar con okxulia un comando activo en TextoReconocido
