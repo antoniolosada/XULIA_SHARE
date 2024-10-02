@@ -99,6 +99,36 @@ public class Chat
         }
         return lista;
     }
+    public delegate Task<string> RespuestaGPT(string texto);
+    
+	// TODO: SendAsEnumerableDelegado
+    public async Task<List<string>> SendAsEnumerableDelegado(string message, RespuestaGPT Respuesta, IEnumerable<Tool>? tools, IEnumerable<string>? imagesAsBase64 = default, [EnumeratorCancellation] CancellationToken cancellationToken = default)
+    {
+		string salida = "";
+		string separador = ",.:;";
+        List<string> lista = new List<string>();
+
+        IAsyncEnumerable<string> asyncEnumerable = this.SendAs(ChatRole.User, message, tools, imagesAsBase64, cancellationToken);
+
+        await foreach (var item in asyncEnumerable)
+        {
+			salida += item;
+			int p = 0;
+			foreach (char c in separador.ToCharArray())
+			{
+				p = salida.IndexOf(c);
+				if (p >= 0)
+				{ 
+					string texto = salida.Substring(0, p);
+                    salida = salida.Substring(p + 1);
+                    await Respuesta(texto);
+					break;
+                }
+            }
+        }
+        if (salida.Length > 0) await Respuesta(salida);
+        return lista;
+    }
 
     public async IAsyncEnumerable<string> SendAs(ChatRole role, string message, IEnumerable<Tool>? tools, IEnumerable<string>? imagesAsBase64 = default, [EnumeratorCancellation] CancellationToken cancellationToken = default)
 	{

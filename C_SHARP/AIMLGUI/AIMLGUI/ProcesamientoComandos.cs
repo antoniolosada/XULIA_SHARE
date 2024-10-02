@@ -430,6 +430,8 @@ namespace AIMLGUI
 
         public enum MovimientoRaton : int { Arriba, Abajo, Derecha, Izquierda, Parar, Diagonal1, Diagonal2, Diagonal3, Diagonal4 };
 
+        // EDIT: Variables modelos GPT
+        public bool RespuestaGPT = false;
         public String ChatSpeechAPI = "Azure";
         public String DictadoAPI = "Google";
         public String GPT_API = "Ollama";
@@ -441,6 +443,8 @@ namespace AIMLGUI
         string MODO_ANT = "";
         string MODO_CANCELAR = "";
         string AplicacionActiva = "";
+        public delegate Task<string> TextoReconocidoDelegado(string texto, float GradoPrecision, bool ModoDictadoIdiomas);
+
 
         ModoRejilla MODORERIJA = ModoRejilla.Fila;
         datos_rejilla DatosRejilla = new datos_rejilla();
@@ -970,6 +974,7 @@ namespace AIMLGUI
         }
 
         //************************ Procesamiento inicial de entradas de eventos de reconocimiento ************************************
+        // EDIT: TextoReconocido()
         public async Task<string> TextoReconocido(string texto, float GradoPrecision, bool ModoDictadoIdiomas)
         {
             bool OkXulia_entrada = OkXulia;
@@ -1031,15 +1036,15 @@ namespace AIMLGUI
                         ComandoExtendidoEncontrado = true;
                     else if (GPT_API != "") // Si no encontramos comando en modo OkXulia y tenemos GPT pasamos la cadena al GPT
                     {
-                        List<string> salida = await GPT(texto);
-
-                        string salidaGPT = "";
-                        foreach (string s in salida)
-                            salidaGPT += s;
-
-                        System.Speech.Synthesis.SpeechSynthesizer voz = new System.Speech.Synthesis.SpeechSynthesizer();
-                        voz.Speak(salidaGPT);
-
+                        //Desactivar Reconocedores
+                        DesactivarReconocedorOkXulia();
+                        if (GPT_API == "Ollama")
+                        {
+                            RespuestaGPT = true;
+                            await GPT(texto, RespuestaModeloGPT);
+                        }
+                        ActivarReconocedorOkXulia();
+                        //Activar Reconocedores
                     }
                     ElementoGram = Elemento;
                 }
@@ -1105,6 +1110,13 @@ namespace AIMLGUI
             {
                 LOG("Error en TextoReconocido" + e.Message);
             }
+            return "";
+        }
+
+        async Task<string> RespuestaModeloGPT(string texto)
+        {
+            System.Speech.Synthesis.SpeechSynthesizer voz = new System.Speech.Synthesis.SpeechSynthesizer();
+            voz.Speak(texto);
             return "";
         }
         public void EnviarTecla(string tecla)
@@ -1968,6 +1980,7 @@ namespace AIMLGUI
             }
             return true;
         }
+        // EDIT: CambioModo
         public bool CambioModo(string Modo)
         {
             try
@@ -4284,6 +4297,11 @@ namespace AIMLGUI
         {
             return await chatGPT.SendAsEnumerable("hola", null, null, default);
         }
+        async Task<string> GPT(string texto, OllamaSharp.Chat.RespuestaGPT RespuestaChatGPT)
+        {
+            chatGPT.SendAsEnumerableDelegado(texto, RespuestaChatGPT, null, null, default);
+            return "";
+        }
 
         async private void IniciarOllama(string url)
         {
@@ -4322,7 +4340,34 @@ namespace AIMLGUI
             }
 
         }
-
+        void DesactivarReconocedorOkXulia()
+        {
+            switch (ChatSpeechAPI)
+            {
+                case "Google":
+                    {
+                        EnviarComando("PARAR");
+                    }
+                    break;
+                case "Azure":
+                    { }
+                    break;
+            }
+        }
+        void ActivarReconocedorOkXulia()
+        {
+            switch (ChatSpeechAPI)
+            {
+                case "Google":
+                    {
+                        EnviarComando("REANUDAR");
+                    }
+                    break;
+                case "Azure":
+                    { }
+                    break;
+            }
+        }
 
         #endregion
 

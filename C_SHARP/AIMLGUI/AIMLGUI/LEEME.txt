@@ -1,3 +1,6 @@
- * En caso de activar el idioma _EN con SAPI11 y un idioma distinto en wl S.O., XULIA da un error de protección general
+* Agregar a lista de tareas Ctrl+K+H
+* En caso de activar el idioma _EN con SAPI11 y un idioma distinto en wl S.O., XULIA da un error de protección general
  
 en TextoReconocido no cambia modo a cancelar con okxulia un comando activo en TextoReconocido
+en TextoReconocido cuando procesa la salida por voz de GPT debe desactivar los reconocedores (Google, Azure, ...)
+Debe guardar la conversación del GPT y podrá mostrarla en cualquier momento en una ventana
