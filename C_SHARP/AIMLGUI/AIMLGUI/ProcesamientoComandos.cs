@@ -4364,7 +4364,9 @@ namespace AIMLGUI
                     }
                     break;
                 case "Azure":
-                    { }
+                    { 
+                        //ACtivamos Azure
+                    }
                     break;
             }
         }
