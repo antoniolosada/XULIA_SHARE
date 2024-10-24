@@ -1038,12 +1038,14 @@ namespace AIMLGUI
                     {
                         //Desactivar Reconocedores
                         DesactivarReconocedorOkXulia();
+                        DesactivarReconocimiento();
                         if (GPT_API == "Ollama")
                         {
                             RespuestaGPT = true;
                             await GPT(texto, RespuestaModeloGPT);
                         }
                         ActivarReconocedorOkXulia();
+                        ActivarReconocimiento();
                         //Activar Reconocedores
                     }
                     ElementoGram = Elemento;
@@ -2063,7 +2065,8 @@ namespace AIMLGUI
                         MODO = MODO_CANCELAR;
                 }
                 else if ((Strings.InStr(Modo, "·OKXULIA·") > 0) && (ChatSpeechAPI == "Azure"))
-                { 
+                {
+                    ReconocerTextoAzure("es-ES");
                 }
 
                 Me.MODO_ANT = Me.MODO;
@@ -3895,6 +3898,12 @@ namespace AIMLGUI
             IdiomaGramaticas = cfg.ReadAppSettingsKey("IdiomaGramaticas");
             string ComandosDesactivados;
 
+            try {
+                speechKey = Environment.GetEnvironmentVariable("SPEECH_KEY");
+                speechRegion = Environment.GetEnvironmentVariable("SPEECH_REGION");
+            }
+            catch (Exception ex) { }
+
             Cultura = cfg.ReadAppSettingsKey("Cultura" + IdiomaGramaticas);
             MODO = MODO_ANT = MODO_CANCELAR = cfg.ReadAppSettingsKey("ModoDefecto" + IdiomaGramaticas);
             MarcarSeleccionRejilla = (cfg.ReadAppSettingsKey("MarcarSeleccionRejilla" + IdiomaGramaticas) == "S" ? true : false);
@@ -4299,7 +4308,7 @@ namespace AIMLGUI
         }
         async Task<string> GPT(string texto, OllamaSharp.Chat.RespuestaGPT RespuestaChatGPT)
         {
-            chatGPT.SendAsEnumerableDelegado(texto, RespuestaChatGPT, null, null, default);
+            await chatGPT.SendAsEnumerableDelegado(texto, RespuestaChatGPT, null, null, default);
             return "";
         }
 
