@@ -88,7 +88,9 @@ namespace AIMLGUI
             //Le pasamos el delegado para que lo llame cuando reconozca texto
             //Los ficheros de configuración AIML están en el directori CONFIG
             //Hemos cambiado todos los tags <bot por get name="bot_ para poder emplear GaitoBot
-            srw.ArrancarSR(TextoRecuperadoGoogleChrome);
+
+            if (ControlVoz.ChatSpeechAPI == "Google")
+                srw.ArrancarSR(TextoRecuperadoGoogleChrome);
 
             frmEstado Estado = new frmEstado();
             m_Estado = Estado;

@@ -433,7 +433,6 @@ namespace AIMLGUI
         // EDIT: Variables modelos GPT
         public bool RespuestaGPT = false;
         public String ChatSpeechAPI = "Azure";
-        public String DictadoAPI = "Google";
         public String GPT_API = "Ollama";
         public String GPT_Modelo = "llama3.1:8b";
         public String GPT_OllamaURL = "localhost";
@@ -485,6 +484,7 @@ namespace AIMLGUI
             public string CodigoLista;
             public List<sRecordatorio> Recuerdos = new List<sRecordatorio>();
         }
+        static bool BucleReconocerAzure = false;
 
         List<sDireccion> DireccionesDestino;
         List<sListasRecuerdos> ListasRecuerdos = new List<sListasRecuerdos>();
@@ -521,7 +521,8 @@ namespace AIMLGUI
                 ListasRecuerdos = CargarListasRecuerdos();
 
                 //Configurar parámetros iniciales de idioma para GoogleChrome en la clase del servidor web
-                srw.ConfigVar(IdiomaComandoGoogle, CodigoIdiomaComandoGoogle, ModoComandoGoogle);
+                if (ChatSpeechAPI == "Google")
+                    srw.ConfigVar(IdiomaComandoGoogle, CodigoIdiomaComandoGoogle, ModoComandoGoogle);
 
                 if (ArchivoRecVoz != "")
                     System.IO.File.WriteAllText(ArchivoRecVoz, "");
@@ -598,7 +599,9 @@ namespace AIMLGUI
             {
                 LOG("Error inicializando en sistema de reconocimiento:" + e.Message);
             }
-            AbrirGoogleChrome();
+
+            if (ChatSpeechAPI == "Google")
+                AbrirGoogleChrome();
         }
         public void EliminarRecursos()
         {
@@ -1038,15 +1041,12 @@ namespace AIMLGUI
                     {
                         //Desactivar Reconocedores
                         DesactivarReconocedorOkXulia();
-                        DesactivarReconocimiento();
                         if (GPT_API == "Ollama")
                         {
                             RespuestaGPT = true;
                             await GPT(texto, RespuestaModeloGPT);
                         }
                         ActivarReconocedorOkXulia();
-                        ActivarReconocimiento();
-                        //Activar Reconocedores
                     }
                     ElementoGram = Elemento;
                 }
@@ -2031,42 +2031,46 @@ namespace AIMLGUI
                     frmAIML.CambiarIcono(aimlForm.TipoIcono.dictado);
                     DictadoContinuo dc = CargarCadenasSustitucion(Idioma);
                 }
-                else if ((Strings.InStr(Modo, "·DICTW10") > 0))
+                else if (Strings.InStr(Modo, "·DICTW10") > 0)
                 { //Dictado contínuo con cuadro de reconocimiento de voz de windows 10
                     frmAIML.CambiarIcono(aimlForm.TipoIcono.dictado);
                     ActivarDesactivarCuadroDictadoWindows10();
                 }
-                else if ((Strings.InStr(Modo, "·DICTADO·") > 0) || (Strings.InStr(Modo, "·CONVERS·") > 0) || ((Strings.InStr(Modo, "·OKXULIA·") > 0) && (ChatSpeechAPI == "Google")))
-                { //Dictado contínuo multi-idioma Google Chrome
-                    frmAIML.CambiarIcono(aimlForm.TipoIcono.dictado);
-                    DictadoIdiomas = true;
-                    string Idioma = Modo.Substring(9);
-
-                    bool ChromeEjecutandose = false;
-                    EnviarComando("PARAR");
-
-                    ChromeEjecutandose = BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + Idioma + ".ACTIVO") || BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + Idioma + ".DESACTIVO");
-                    try
-                    {
-                        System.IO.File.WriteAllText(ArchivoRecVoz, "");
-                    }
-                    catch (Exception ex) { }
-
-                    DictadoContinuo dc = CargarCadenasSustitucion(Idioma);
-
-                    if (!ChromeEjecutandose)
-                        dc.proceso = EjecutarChromeRecVoz(Idioma, dc.codigo, ModoComandoGoogle, 1000);
-
-
-                    //Activamos el nuevo idioma parando todos los demás que pudieran estar activos
-                    EnviarComando("REANUDAR." + Idioma);
-                    if (!EsperaTituloVentanaChrome("RECVOZ.GOOGLE." + Idioma + ".ACTIVO", 4000))
-                        //No se ha ejecutado chrome correctamente, cancelamos el modo
-                        MODO = MODO_CANCELAR;
-                }
-                else if ((Strings.InStr(Modo, "·OKXULIA·") > 0) && (ChatSpeechAPI == "Azure"))
+                else if ((Strings.InStr(Modo, "·DICTADO·") > 0) || (Strings.InStr(Modo, "·CONVERS·") > 0) || (Strings.InStr(Modo, "·OKXULIA·") > 0))
                 {
-                    ReconocerTextoAzure("es-ES");
+                    if (ChatSpeechAPI == "Google")
+                    {
+                        //Dictado contínuo multi-idioma Google Chrome
+                        frmAIML.CambiarIcono(aimlForm.TipoIcono.dictado);
+                        DictadoIdiomas = true;
+                        string Idioma = Modo.Substring(9);
+
+                        bool ChromeEjecutandose = false;
+                        EnviarComando("PARAR");
+
+                        ChromeEjecutandose = BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + Idioma + ".ACTIVO") || BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + Idioma + ".DESACTIVO");
+                        try
+                        {
+                            System.IO.File.WriteAllText(ArchivoRecVoz, "");
+                        }
+                        catch (Exception ex) { }
+
+                        DictadoContinuo dc = CargarCadenasSustitucion(Idioma);
+
+                        if (!ChromeEjecutandose)
+                            dc.proceso = EjecutarChromeRecVoz(Idioma, dc.codigo, ModoComandoGoogle, 1000);
+
+
+                        //Activamos el nuevo idioma parando todos los demás que pudieran estar activos
+                        EnviarComando("REANUDAR." + Idioma);
+                        if (!EsperaTituloVentanaChrome("RECVOZ.GOOGLE." + Idioma + ".ACTIVO", 4000))
+                            //No se ha ejecutado chrome correctamente, cancelamos el modo
+                            MODO = MODO_CANCELAR;
+                    }
+                    else if (ChatSpeechAPI == "Azure")
+                    {
+                        ReconocerTextoAzure("es-ES");
+                    }
                 }
 
                 Me.MODO_ANT = Me.MODO;
@@ -2125,8 +2129,8 @@ namespace AIMLGUI
                 { //Dictado de idiomas google
                     if (ModoComandoGoogle != "S")
                     {
-                        EnviarComando("PARAR");
                         frmAIML.CambiarIcono(aimlForm.TipoIcono.activa);
+                        DesactivarReconocedorOkXulia();
                     }
                 }
                 else if (Strings.InStr(actual, "·DICTW10") > 0)
@@ -3964,7 +3968,6 @@ namespace AIMLGUI
             EsperaCompilacionGramaticaUWP = Convert.ToInt16(cfg.ReadAppSettingsKey("EsperaCompilacionGramaticaUWP" + IdiomaGramaticas));
             OK_XULIA_UnComando = (cfg.ReadAppSettingsKey("OK_XULIA_UnComando" + IdiomaGramaticas) == "S" ? true : false);
             ChatSpeechAPI = cfg.ReadAppSettingsKey("ChatSpeechAPI" + IdiomaGramaticas);
-            DictadoAPI = cfg.ReadAppSettingsKey("DictadoAPI" + IdiomaGramaticas);
             GPT_API= cfg.ReadAppSettingsKey("GPT_API" + IdiomaGramaticas);
             GPT_Modelo = cfg.ReadAppSettingsKey("GPT_Modelo" + IdiomaGramaticas);
             GPT_OllamaURL = cfg.ReadAppSettingsKey("GPT_OllamaURL" + IdiomaGramaticas);
@@ -4258,13 +4261,15 @@ namespace AIMLGUI
         #endregion
 
         #region AzureSpeech
-        static void OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
+        async static Task<int> OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
         {
+            if (!BucleReconocerAzure) return 0;
+
             switch (speechRecognitionResult.Reason)
             {
                 case ResultReason.RecognizedSpeech:
                     Console.WriteLine($"RECOGNIZED: Text={speechRecognitionResult.Text}");
-                    Me.TextoReconocido(speechRecognitionResult.Text, (float)0.99, false);
+                    await Me.TextoReconocido(speechRecognitionResult.Text, (float)0.99, false);
                     break;
                 case ResultReason.NoMatch:
                     Console.WriteLine($"NOMATCH: Speech could not be recognized.");
@@ -4281,7 +4286,9 @@ namespace AIMLGUI
                     }
                     break;
             }
+            return 0;
         }
+        static int contador = 0;
         async public void ReconocerTextoAzure(string RegionIdioma)
         {
             var speechConfig = SpeechConfig.FromSubscription(speechKey, speechRegion);
@@ -4290,13 +4297,18 @@ namespace AIMLGUI
             var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
             var speechRecognizer = new SpeechRecognizer(speechConfig, audioConfig);
 
-            while (true)
-            {
+            contador++;
+            BucleReconocerAzure = true;
 
+            while (BucleReconocerAzure)
+            {
+                int control = contador;
                 Console.WriteLine("Speak into your microphone.");
                 var speechRecognitionResult = await speechRecognizer.RecognizeOnceAsync();
-                OutputSpeechRecognitionResult(speechRecognitionResult);
+                if (contador == control)
+                    await OutputSpeechRecognitionResult(speechRecognitionResult);
             }
+            Console.WriteLine("Fin bucle rec Azure "+contador);
         }
         #endregion
 
@@ -4308,6 +4320,7 @@ namespace AIMLGUI
         }
         async Task<string> GPT(string texto, OllamaSharp.Chat.RespuestaGPT RespuestaChatGPT)
         {
+            // se llama al delegado RespuestaChatGPT por cada frase de la respuesta
             await chatGPT.SendAsEnumerableDelegado(texto, RespuestaChatGPT, null, null, default);
             return "";
         }
@@ -4359,8 +4372,9 @@ namespace AIMLGUI
                     }
                     break;
                 case "Azure":
-                    { 
-                        //Azure
+                    {
+                        Console.WriteLine("Desactivar OK Xulia");
+                        BucleReconocerAzure = false;
                     }
                     break;
             }
@@ -4375,8 +4389,8 @@ namespace AIMLGUI
                     }
                     break;
                 case "Azure":
-                    { 
-                        //ACtivamos Azure
+                    {
+                        ReconocerTextoAzure("es-ES");
                     }
                     break;
             }

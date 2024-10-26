@@ -4,3 +4,5 @@
 en TextoReconocido no cambia modo a cancelar con okxulia un comando activo en TextoReconocido
 en TextoReconocido cuando procesa la salida por voz de GPT debe desactivar los reconocedores (Google, Azure, ...)
 Debe guardar la conversación del GPT y podrá mostrarla en cualquier momento en una ventana
+
+eliminar variable DictadoAPI
