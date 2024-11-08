@@ -5,6 +5,12 @@
 #define VOZ_UWP
 
 
+using System;
+using MailKit.Net.Imap;
+using MailKit.Search;
+using MailKit;
+using MimeKit;
+
 using System.Net.Mail;
 using System.Data.OleDb;
 using System.Linq;
@@ -45,6 +51,12 @@ using System.Windows.Input;
 using AIMLbot.AIMLTagHandlers;
 using OllamaSharp.Models.Chat;
 using System.Text.RegularExpressions;
+using MailKit.Security;
+using MimeKit;
+using MailKit.Net.Imap;
+using MailKit.Search;
+using MailKit;
+using Outlook = Microsoft.Office.Interop.Outlook;
 
 namespace AIMLGUI
 {
@@ -437,6 +449,8 @@ namespace AIMLGUI
         public String GPT_Modelo = "llama3.1:8b";
         public String GPT_OllamaURL = "localhost";
         public String GPT_OllamaPrompt = "";
+        public bool GPT_Ventana = false;
+        public bool GPT_Voz = false;
         Chat chatGPT;
         public String MODO = "";
         string MODO_ANT = "";
@@ -452,6 +466,7 @@ namespace AIMLGUI
         bool MarcarSeleccionRejilla = false;
 
         public Point PosCursor = new Point(0, 0);
+        public frmGPT fGPT = new frmGPT();
 
 #if SAPI11 
         Grammar GramaticaDictado;
@@ -1037,13 +1052,16 @@ namespace AIMLGUI
                     sGramatica Elemento = BuscarComandoExtendido(false, texto, (float)0.99);
                     if (Elemento.Nombre != null)
                         ComandoExtendidoEncontrado = true;
-                    else if (GPT_API != "") // Si no encontramos comando en modo OkXulia y tenemos GPT pasamos la cadena al GPT
+                    else if ((GPT_API != "") && (ModoDictadoIdiomas)) // Si no encontramos comando en modo OkXulia y tenemos GPT pasamos la cadena al GPT
                     {
                         //Desactivar Reconocedores
                         DesactivarReconocedorOkXulia();
                         if (GPT_API == "Ollama")
                         {
                             RespuestaGPT = true;
+                            Console.WriteLine("GPT: "+texto);
+                            if (GPT_Ventana) fGPT.MostrarGPT(this);
+                            fGPT.Pregunta(texto);
                             await GPT(texto, RespuestaModeloGPT);
                         }
                         ActivarReconocedorOkXulia();
@@ -1490,7 +1508,7 @@ namespace AIMLGUI
                         ProcesarEntradaModoConversacion(salida);
                     }
                     if ((Strings.InStr(MODO, "·DICTUWP·") > 0) || (Strings.InStr(MODO, "·DICTWIN·") > 0) || (Strings.InStr(MODO, "·DICTADO·") > 0) || (Strings.InStr(MODO, "·CONVERS·") > 0))
-                    { //Dictado o conversación con Google Chrome
+                    { //Dictado o conversación con Google Chrome o Azure
                         if (!ModoDictadoIdiomas) return;
                         string Idioma = MODO.Substring(9);
                         //Aplicamos las sustituciones a la cadena
@@ -2038,12 +2056,12 @@ namespace AIMLGUI
                 }
                 else if ((Strings.InStr(Modo, "·DICTADO·") > 0) || (Strings.InStr(Modo, "·CONVERS·") > 0) || (Strings.InStr(Modo, "·OKXULIA·") > 0))
                 {
+                    string Idioma = Modo.Substring(9);
                     if (ChatSpeechAPI == "Google")
                     {
                         //Dictado contínuo multi-idioma Google Chrome
                         frmAIML.CambiarIcono(aimlForm.TipoIcono.dictado);
                         DictadoIdiomas = true;
-                        string Idioma = Modo.Substring(9);
 
                         bool ChromeEjecutandose = false;
                         EnviarComando("PARAR");
@@ -2069,6 +2087,7 @@ namespace AIMLGUI
                     }
                     else if (ChatSpeechAPI == "Azure")
                     {
+                        DictadoContinuo dc = CargarCadenasSustitucion(Idioma);
                         ReconocerTextoAzure("es-ES");
                     }
                 }
@@ -3267,6 +3286,86 @@ namespace AIMLGUI
         #endregion EjecutarComandos
         //*****************************************************************************************************************************************************************************************
         #region funciones_correo_outlook
+        public void LeerCalendario(DateTime Inicio, DateTime Fin)
+        {
+            // Crear una instancia de la aplicación de Outlook
+            Outlook.Application outlookApp = new Outlook.Application();
+
+            // Obtener el namespace MAPI
+            Outlook.NameSpace mapiNamespace = outlookApp.GetNamespace("MAPI");
+
+            // Obtener la carpeta del calendario
+            Outlook.MAPIFolder calendarFolder = mapiNamespace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderCalendar);
+
+            // Establecer la fecha de inicio y fin para buscar las citas
+            DateTime startDate = new DateTime(2023, 4, 7);
+            DateTime endDate = startDate.AddDays(1);
+
+            // Crear el filtro para buscar las citas
+            string filter = $"[Start] >= '{startDate:yyyy/MM/dd}' AND [End] < '{endDate:yyyy/MM/dd}'";
+
+            // Obtener las citas usando el filtro
+            Outlook.Items calendarItems = calendarFolder.Items;
+            calendarItems.IncludeRecurrences = true;
+            calendarItems.Sort("[Start]", Type.Missing);
+            Outlook.Items restrictedItems = calendarItems.Restrict(filter);
+
+            // Mostrar las citas
+            foreach (Outlook.AppointmentItem item in restrictedItems)
+            {
+                Console.WriteLine($"Asunto: {item.Subject}, Inicio: {item.Start}, Fin: {item.End}");
+            }
+
+            // Liberar los objetos COM
+            if (calendarFolder != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(calendarFolder);
+            if (mapiNamespace != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(mapiNamespace);
+            if (outlookApp != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(outlookApp);
+        }
+
+        public void AbrirEntradaCalendario(string Asunto = "", DateTime Fecha = default(DateTime))
+        {
+            // Crear una instancia de la aplicación de Outlook
+            Outlook.Application outlookApp = new Outlook.Application();
+
+            // Obtener el namespace MAPI
+            Outlook.NameSpace mapiNamespace = outlookApp.GetNamespace("MAPI");
+
+            // Obtener la carpeta del calendario
+            Outlook.MAPIFolder calendarFolder = mapiNamespace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderCalendar);
+
+            // Buscar una cita específica por su Asunto
+            string subjectToFind = "Reunión importante";
+            Outlook.Items calendarItems = calendarFolder.Items;
+            calendarItems.IncludeRecurrences = true;
+            calendarItems.Sort("[Start]", Type.Missing);
+
+            Outlook.AppointmentItem foundAppointment = null;
+            foreach (Outlook.AppointmentItem item in calendarItems)
+            {
+                if (item.Subject == subjectToFind)
+                {
+                    foundAppointment = item;
+                    break;
+                }
+            }
+
+            if (foundAppointment != null)
+            {
+                // Abrir la cita en Outlook
+                foundAppointment.Display(true);
+                Console.WriteLine($"Abriendo la cita: {foundAppointment.Subject}");
+            }
+            else
+            {
+                Console.WriteLine($"No se encontró ninguna cita con el asunto: {subjectToFind}");
+            }
+
+            // Liberar los objetos COM
+            if (calendarFolder != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(calendarFolder);
+            if (mapiNamespace != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(mapiNamespace);
+            if (outlookApp != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(outlookApp);
+        }
+
         public static Boolean EnviarCorreoOutlook(string mailSubject, string mailContent, List<string> Anexos, string mailDirection)
         {
             try
@@ -3288,7 +3387,7 @@ namespace AIMLGUI
                 mailItem.Display(false);
 
             }
-            catch (System.Exception ñex)
+            catch (System.Exception ex)
             {
                 return false;
             }
@@ -3297,7 +3396,35 @@ namespace AIMLGUI
             }
             return true;
         }
+        // EDIT: funciones de correo
+        public void EnviarCorreoIMAP()
+        {
+                using (var client = new ImapClient())
+                {
+                    // Conectar al servidor IMAP
+                    client.Connect("correoweb.xunta.es", 443, true);
 
+                    // Autenticar usando tus credenciales
+                    client.Authenticate("XUNTA\alosgon", "DaniXulia1081.");
+
+                    // Seleccionar la bandeja de entrada
+                    var inbox = client.Inbox;
+                    inbox.Open(FolderAccess.ReadOnly);
+
+                    // Buscar y listar los mensajes
+                    foreach (var uid in inbox.Search(SearchQuery.All))
+                    {
+                        var message = inbox.GetMessage(uid);
+                        Console.WriteLine($"Asunto: {message.Subject}");
+                        Console.WriteLine($"De: {message.From}");
+                        Console.WriteLine($"Fecha: {message.Date}");
+                        Console.WriteLine();
+                    }
+
+                    // Desconectar del servidor IMAP
+                    client.Disconnect(true);
+                }
+        }
         public List<string> BuscarContactosOutLook(string findLastName)
         {
             List<string> contactos = new List<string>();
@@ -3344,9 +3471,103 @@ namespace AIMLGUI
             mailSent = true;
         }
         static bool mailSent = false;
-        #endregion funciones_correo_outlook
-        //*****************************************************************************************************************************************************************************************
-        #region funcionesauxiliares
+
+        public string LeerBandejaEntada(int DiasAntiguedad =0, string emisor="", bool Contenido=false)
+        {
+            bool inicio = true;
+            string Mensajes = "";
+            // Inicializa la aplicación de Outlook
+            Outlook.Application outlookApp = new Outlook.Application();
+            Outlook.NameSpace outlookNamespace = outlookApp.GetNamespace("MAPI");
+            Outlook.MAPIFolder inboxFolder = outlookNamespace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
+            Outlook.Items inboxItems = inboxFolder.Items;
+
+            DateTime startDate = DateTime.Now.AddDays(-15);
+            if (DiasAntiguedad > 0) startDate = DateTime.Now.AddDays(-DiasAntiguedad);
+            string filter = $"[ReceivedTime] >= '{startDate:g}'";
+            Outlook.Items filteredItems = inboxItems.Restrict(filter);
+
+            Mensajes += "{\"output\":\"";
+            foreach (object item in filteredItems)
+            {
+                if (item is Outlook.MailItem)
+                {
+                    if (!inicio)
+                    {
+                        Mensajes += "," + Environment.NewLine;
+                        inicio = false;
+                    } 
+                    Mensajes += "{" + Environment.NewLine;
+                    Outlook.MailItem mail = (Outlook.MailItem)item;
+                    Mensajes += "\"EntryId\":\"" + mail.EntryID + "\"," + Environment.NewLine;
+                    Mensajes += "\"Asunto\":\"" + mail.Subject + "\"," + Environment.NewLine;
+                    Mensajes += "\"Emisor\":\"" + mail.SenderEmailAddress + "\"," + Environment.NewLine;
+                    Mensajes += "\"Fecha\":\"" + mail.ReceivedTime + "\"";
+                    if (Contenido)
+                        Mensajes += "," + Environment.NewLine + "\"Cuerpo\",\"" + mail.Body + "\"" + Environment.NewLine;
+                    else
+                        Mensajes += Environment.NewLine;
+                    Mensajes += "}" + Environment.NewLine;
+                    Console.WriteLine(Mensajes);
+                }
+            }
+            Mensajes += Environment.NewLine + "\"}" + Environment.NewLine;
+            Console.WriteLine(Mensajes);
+            return Mensajes;
+        }
+        public void AbrirMensajeCorreo(string messageId)
+        {
+            // Reemplaza con el identificador del mensaje que deseas abrir
+            Outlook.Application outlookApp = new Outlook.Application();
+            Outlook.NameSpace outlookNamespace = outlookApp.GetNamespace("MAPI");
+            Outlook.MAPIFolder inboxFolder = outlookNamespace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
+            Outlook.Items mailItems = inboxFolder.Items;
+
+            Outlook.MailItem targetMessage = null;
+
+            foreach (object item in mailItems)
+            {
+                if (item is Outlook.MailItem mailItem && mailItem.EntryID == messageId)
+                {
+                    targetMessage = mailItem;
+                    break;
+                }
+            }
+
+            if (targetMessage != null)
+            {
+                // Abre el mensaje en una nueva ventana
+                targetMessage.Display();
+                Console.WriteLine("Mensaje abierto exitosamente.");
+            }
+            else
+            {
+                Console.WriteLine("No se encontró el mensaje con el identificador proporcionado.");
+            }
+        }
+        public void FiltrarCorreosAsunto(String asunto)
+        {
+            string subjectFilter = "entrega"; // Reemplaza con el asunto que deseas filtrar
+
+            Outlook.Application outlookApp = new Outlook.Application();
+            Outlook.NameSpace outlookNamespace = outlookApp.GetNamespace("MAPI");
+            Outlook.MAPIFolder inboxFolder = outlookNamespace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
+            Outlook.Items mailItems = inboxFolder.Items;
+
+            // Aplicar filtro por asunto
+            string filtro = $"@SQL=\"urn:schemas:httpmail:subject\" LIKE '%{subjectFilter}%'";
+            //mailItems = mailItems.Restrict($"[Subject] = '{subjectFilter}'");
+            mailItems = mailItems.Restrict(filtro);
+
+            foreach (Outlook.MailItem item in mailItems)
+            {
+                item.Display();
+            }
+        }
+
+    #endregion funciones_correo_outlook
+    //*****************************************************************************************************************************************************************************************
+    #region funcionesauxiliares
         public void ActivarDesactivarCuadroDictadoWindows10()
         {
             KeyboardPress(VK_LWIN, HW_LWIN, KEYEVENTF_SILENT | 0);
@@ -3897,6 +4118,7 @@ namespace AIMLGUI
                 Estado.MostrarBarraPrecision();
         }
 
+        // EDIT: CargarVariablesConfiguracion()
         void CargarVariablesConfiguracion()
         {
             IdiomaGramaticas = cfg.ReadAppSettingsKey("IdiomaGramaticas");
@@ -3972,6 +4194,8 @@ namespace AIMLGUI
             GPT_Modelo = cfg.ReadAppSettingsKey("GPT_Modelo" + IdiomaGramaticas);
             GPT_OllamaURL = cfg.ReadAppSettingsKey("GPT_OllamaURL" + IdiomaGramaticas);
             GPT_OllamaPrompt = cfg.ReadAppSettingsKey("GPT_OllamaPrompt" + IdiomaGramaticas);
+            GPT_Ventana = (cfg.ReadAppSettingsKey("GPT_Ventana" + IdiomaGramaticas) == "S" ? true : false);
+            GPT_Voz = (cfg.ReadAppSettingsKey("GPT_Voz" + IdiomaGramaticas) == "S" ? true : false);
 
             ServidorSMTP = cfg.ReadAppSettingsKey("ServidorSMTP" + IdiomaGramaticas);
             UsuarioSMTP = cfg.ReadAppSettingsKey("UsuarioSMTP" + IdiomaGramaticas);
@@ -4269,7 +4493,7 @@ namespace AIMLGUI
             {
                 case ResultReason.RecognizedSpeech:
                     Console.WriteLine($"RECOGNIZED: Text={speechRecognitionResult.Text}");
-                    await Me.TextoReconocido(speechRecognitionResult.Text, (float)0.99, false);
+                    await Me.TextoReconocido(speechRecognitionResult.Text, (float)0.99, true);
                     break;
                 case ResultReason.NoMatch:
                     Console.WriteLine($"NOMATCH: Speech could not be recognized.");
@@ -4318,7 +4542,7 @@ namespace AIMLGUI
         {
             return await chatGPT.SendAsEnumerable("hola", null, null, default);
         }
-        async Task<string> GPT(string texto, OllamaSharp.Chat.RespuestaGPT RespuestaChatGPT)
+        public async Task<string> GPT(string texto, OllamaSharp.Chat.RespuestaGPT RespuestaChatGPT)
         {
             // se llama al delegado RespuestaChatGPT por cada frase de la respuesta
             await chatGPT.SendAsEnumerableDelegado(texto, RespuestaChatGPT, null, null, default);

@@ -387,6 +387,10 @@ __________ Versión 0.3.0 ______________________________________________________
   </data>
   <data name="textBox2.Text" xml:space="preserve">
     <value>------------   PRIORIDAD 1   ------------
+-Nuevos funciones para comandos LLM para: crear nuevo correo vacio, buscar y visualizar ultimo correo de un emisor, buscar y visualizar correo de un emisor de determinada fecha, 
+       buscar los correos por asunto en outlook, buscar los correos por asunto en ventana y permitir abrir un correo, crear nuevo correo para un destinatario con un archivo específico,
+       crear nuevo correo de un destinatario, gestionar buzón de contactos rápidos por nombre corto, crear nuevo correo para un destinatario con el último archivo de la zona de almacenamiento,
+       crear y gestionar zonas de almacenamiento por nombre
 - tela de correção: 
    - a tabulaçao nao está em ordem; não entende símbolos como parenteses e percentual, não funciona com seleção de mais de cem palavras, invade a linha de baixo ao pegar e pula páginas em certas ocasiões
 - Nuevo modo de comandos avanzados que permite activar gramáticas de dictado windows UWP, pero no interactúa con el cerebro de Xulia. Se activa con XULIACOMANDO y permite ejecutar un solo comando, tanto de los comandos normales como los comandos extendidos

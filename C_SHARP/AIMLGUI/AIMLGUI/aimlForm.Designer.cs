@@ -53,6 +53,7 @@ namespace AIMLGUI
             this.configuraciónXULIAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recargarConfiguraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.biscarComandosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gPTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.licenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +62,7 @@ namespace AIMLGUI
             this.saveFileDialogDump = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogDump = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialogAIML = new System.Windows.Forms.FolderBrowserDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picGPT = new System.Windows.Forms.PictureBox();
             this.richTextBoxInput = new System.Windows.Forms.RichTextBox();
             this.richTextBoxOutput = new System.Windows.Forms.RichTextBox();
             this.tmrRaton = new System.Windows.Forms.Timer(this.components);
@@ -109,8 +110,10 @@ namespace AIMLGUI
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tmrRecuperarTextoGoogle = new System.Windows.Forms.Timer(this.components);
             this.tmrNuevaNotificacion = new System.Windows.Forms.Timer(this.components);
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStripMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGPT)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,13 +121,14 @@ namespace AIMLGUI
             // 
             this.menuStripMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.menuStripMain.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.menuStripMain.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.viewToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(531, 24);
+            this.menuStripMain.Size = new System.Drawing.Size(525, 24);
             this.menuStripMain.TabIndex = 0;
             this.menuStripMain.Text = "menuStrip1";
             // 
@@ -247,7 +251,8 @@ namespace AIMLGUI
             this.lastResultToolStripMenuItem,
             this.configuraciónXULIAToolStripMenuItem,
             this.recargarConfiguraciónToolStripMenuItem,
-            this.biscarComandosToolStripMenuItem});
+            this.biscarComandosToolStripMenuItem,
+            this.gPTToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.viewToolStripMenuItem.Text = "Ver";
@@ -300,6 +305,13 @@ namespace AIMLGUI
             this.biscarComandosToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.biscarComandosToolStripMenuItem.Text = "Biscar Comandos";
             this.biscarComandosToolStripMenuItem.Click += new System.EventHandler(this.biscarComandosToolStripMenuItem_Click);
+            // 
+            // gPTToolStripMenuItem
+            // 
+            this.gPTToolStripMenuItem.Name = "gPTToolStripMenuItem";
+            this.gPTToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.gPTToolStripMenuItem.Text = "GPT";
+            this.gPTToolStripMenuItem.Click += new System.EventHandler(this.gPTToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -356,18 +368,18 @@ namespace AIMLGUI
             this.folderBrowserDialogAIML.RootFolder = System.Environment.SpecialFolder.ApplicationData;
             this.folderBrowserDialogAIML.ShowNewFolderButton = false;
             // 
-            // pictureBox1
+            // picGPT
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::XULIA.Properties.Resources.xulia2;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(89, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 106;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picGPT.BackColor = System.Drawing.Color.Transparent;
+            this.picGPT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picGPT.Image = global::XULIA.Properties.Resources.xulia2;
+            this.picGPT.Location = new System.Drawing.Point(1, 27);
+            this.picGPT.Name = "picGPT";
+            this.picGPT.Size = new System.Drawing.Size(89, 86);
+            this.picGPT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGPT.TabIndex = 106;
+            this.picGPT.TabStop = false;
+            this.picGPT.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // richTextBoxInput
             // 
@@ -843,12 +855,34 @@ namespace AIMLGUI
             this.tmrNuevaNotificacion.Interval = 5000;
             this.tmrNuevaNotificacion.Tick += new System.EventHandler(this.tmrNuevaNotificacion_Tick);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(159, 535);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(92, 36);
+            this.button3.TabIndex = 135;
+            this.button3.Text = "GPT";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(301, 563);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(101, 33);
+            this.button4.TabIndex = 136;
+            this.button4.Text = "email";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // aimlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::XULIA.Properties.Resources._002_abstract_skydome_matrix2;
-            this.ClientSize = new System.Drawing.Size(531, 177);
+            this.ClientSize = new System.Drawing.Size(525, 618);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tbLOG);
@@ -863,7 +897,7 @@ namespace AIMLGUI
             this.Controls.Add(this.lblShift);
             this.Controls.Add(this.lblControl);
             this.Controls.Add(this.lblALT);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picGPT);
             this.Controls.Add(this.richTextBoxInput);
             this.Controls.Add(this.richTextBoxOutput);
             this.Controls.Add(this.menuStripMain);
@@ -873,7 +907,6 @@ namespace AIMLGUI
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "aimlForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "XULIA - Xestión Unificada da Linguaxe con Intelixencia Artificial";
             this.Activated += new System.EventHandler(this.aimlForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.aimlForm_FormClosing);
@@ -881,7 +914,7 @@ namespace AIMLGUI
             this.SizeChanged += new System.EventHandler(this.aimlForm_SizeChanged);
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGPT)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -917,7 +950,7 @@ namespace AIMLGUI
         private System.Windows.Forms.ToolStripMenuItem fromDefaultToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSaveSession;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemLoadSession;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picGPT;
         private System.Windows.Forms.RichTextBox richTextBoxInput;
         private System.Windows.Forms.RichTextBox richTextBoxOutput;
         private System.Windows.Forms.Timer tmrRaton;
@@ -970,6 +1003,9 @@ namespace AIMLGUI
         private System.Windows.Forms.Button btActivarApp;
         private System.Windows.Forms.Button TraducirMenu;
         private System.Windows.Forms.Button btClipMouse;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ToolStripMenuItem gPTToolStripMenuItem;
     }
 }
 

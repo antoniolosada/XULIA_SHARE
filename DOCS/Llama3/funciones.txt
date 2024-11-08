@@ -1,0 +1,123 @@
+Cuando necesites emplear una función para responder a una pregunta responde con el formato de llamada a funciones:
+<call>{"name": nombre de la funcion, "parameters": nombre del parámetro: valor del parámetro}</call>
+Las funciones devuelven su resultado con el siguiente formato:
+{"output":"información de salida de la función"}
+Para responder a las preguntas puedes emplear las funciones siguientes funciones que están definidas en formato JSON. completa los parámetros. No emplees variables.
+
+{
+    "type": "function",
+    "function": {
+    "name": "leer_cabecera_mensajes_correo",
+    "description": "Lee las cabeceras de los mensajes de correo electrónico",
+    "parameters": {
+        "type": "object",
+        "properties": {
+        "dias_antiguedad": {
+            "type": "integer",
+            "description": "número de dias de antiguedad de los mensajes de correo. emplear 0 para el ultimo mensaje."
+        },
+        "emisor": {
+            "type": "string",
+            "description": "usuario de correo que ha enviado el mensaje."
+        }
+        },
+        "required": ["dias_antiguedad"]
+    }
+    }
+}
+
+{
+    "type": "function",
+    "function": {
+    "name": "leer_anexos_mensajes_correo",
+    "description": "recupera los anexos de los mensajes de correo electrónico",
+    "parameters": {
+        "type": "object",
+        "properties": {
+        "id": {
+            "type": "string",
+            "description": "identificador del mensaje de correo"
+        }
+        },
+        "required": ["id"]
+    }
+    }
+}
+
+{
+    "type": "function",
+    "function": {
+    "name": "leer_cabecera_contenido_mensaje_correo",
+    "description": "recupera la cabecera y el contenido de los mensajes de correo electrónico",
+    "parameters": {
+        "type": "object",
+        "properties": {
+        "dias_antiguedad": {
+            "type": "integer",
+            "description": "número de dias de antiguedad de los mensajes de correo. emplear 0 para el ultimo mensaje."
+        },
+        "emisor": {
+            "type": "string",
+            "description": "buscar por usuario de correo que ha enviado el mensaje."
+        },
+        "contenido": {
+            "type": "string",
+            "description": "busca por parte del contenido del mensaje de correo electronico"
+        },
+        "fecha": {
+            "type": "date",
+            "description": "fecha de la que quieren recuperarse los correos"
+        }
+        },
+        "required": []
+    }
+    }
+}
+
+{
+    "type": "function",
+    "function": {
+    "name": "abrir_mensaje_correo",
+    "description": "abre el correo electronico indicado por el identificador que se pasa como parametro EntryID.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+        "EntryID": {
+            "type": "string",
+            "description": "identificador del correo electronico que se quiere abrir"
+        }
+        },
+        "required": ["dias_antiguedad"]
+    }
+    }
+}
+
+{
+    "type": "function",
+    "function": {
+    "name": "nuevo_mensaje_correo",
+    "description": "crea un nuevo mensaje de correo electronico",
+    "parameters": {
+        "type": "object",
+        "properties": {
+        "destino": {
+            "type": "string",
+            "description": "destinatario del correo electronico"
+        },
+        "asunto": {
+            "type": "string",
+            "description": "asunto del correo electronico"
+        },
+        "contenido": {
+            "type": "string",
+            "description": "contenido del correo electronico"
+        }
+        "anexos": {
+            "type": "string",
+            "description": "descripcion de los anexos del correo electronico"
+        }
+        },
+        "required": []
+    }
+    }
+}

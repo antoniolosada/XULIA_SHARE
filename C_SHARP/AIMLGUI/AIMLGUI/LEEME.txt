@@ -1,4 +1,5 @@
-* Agregar a lista de tareas Ctrl+K+H
+https://github.com/jmorganca/ollama/blob/main/docs/api.md
+
 * En caso de activar el idioma _EN con SAPI11 y un idioma distinto en wl S.O., XULIA da un error de protección general
  
 en TextoReconocido no cambia modo a cancelar con okxulia un comando activo en TextoReconocido
