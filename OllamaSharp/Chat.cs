@@ -119,8 +119,8 @@ public class Chat
 				p = salida.IndexOf(c);
 				if (p >= 0)
 				{ 
-					string texto = salida.Substring(0, p);
-                    salida = salida.Substring(p + 1);
+					string texto = salida.Substring(0, p+1);
+                    salida = salida.Substring(p+1 );
                     await Respuesta(texto);
 					break;
                 }

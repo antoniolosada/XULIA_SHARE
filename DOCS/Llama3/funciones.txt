@@ -1,7 +1,9 @@
 Cuando necesites emplear una función para responder a una pregunta responde con el formato de llamada a funciones:
 <call>{"name": nombre de la funcion, "parameters": nombre del parámetro: valor del parámetro}</call>
 Las funciones devuelven su resultado con el siguiente formato:
+
 {"output":"información de salida de la función"}
+
 Para responder a las preguntas puedes emplear las funciones siguientes funciones que están definidas en formato JSON. completa los parámetros. No emplees variables.
 
 {

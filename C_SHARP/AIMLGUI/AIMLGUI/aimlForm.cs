@@ -1813,8 +1813,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmGPT f = new frmGPT();
-            f.MostrarGPT(ControlVoz);
+            //frmGPT f = new frmGPT();
+            //f.MostrarGPT(ControlVoz);
+            ControlVoz.SampleJSON();
+            SalidaGPT fSalidaGPT = new SalidaGPT();
+            fSalidaGPT.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

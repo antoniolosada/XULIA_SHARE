@@ -51,14 +51,32 @@ namespace XULIA
             tbGPT.Focus();
         }
 
+        static bool LlamadaFuncion = false;
+        static string Funcion = "";
         public async Task<string> RespuestaGPT(string texto)
         {
+
             pbPensando.Visible = false;
-            tbSalidaGPT.Text = tbSalidaGPT.Text + Environment.NewLine+ texto;
+            EscribirTextoConColor(texto, Color.Black);
             SendMessage(tbSalidaGPT.Handle, WM_VSCROLL, (IntPtr)SB_BOTTOM, IntPtr.Zero);
 
-            if (pComandos.GPT_Voz)
+            int pos = texto.IndexOf("<call>");
+            if (pos > -1)
+            {
+                LlamadaFuncion = true;
+                texto = texto.Substring(pos + 6);
+            }
+            pos = texto.IndexOf("</call>");
+            if (pos > -1)
+            {
+                LlamadaFuncion = false;
+                Funcion += texto.Substring(0, pos - 1);
+            }
+
+            if (!LlamadaFuncion && pComandos.GPT_Voz)
                 pComandos.Hablar(texto);
+            else if (LlamadaFuncion)
+                Funcion += texto;
 
             return texto;
         }
@@ -67,7 +85,7 @@ namespace XULIA
         {
             tbGPT.Text = texto;
         }
-        void ResponderPregunta()
+        public void ResponderPregunta()
         {
             pbPensando.Visible = true;
             LlamarGPT();
@@ -87,14 +105,30 @@ namespace XULIA
         {
             //if (e.KeyChar == Convert.ToChar(13)) LlamarGPT();
         }
-
-        void LlamarGPT()
+        private void EscribirTextoConColor(string texto, Color color)
         {
-            tbSalidaGPT.Text = tbSalidaGPT.Text + Environment.NewLine + string.Concat(Enumerable.Repeat("-", 200)) +
-                                    Environment.NewLine + tbGPT.Text+ Environment.NewLine;
-            pComandos.GPT(tbGPT.Text, RespuestaGPT);
+            tbSalidaGPT.SelectionStart = tbSalidaGPT.TextLength;
+            tbSalidaGPT.SelectionLength = 0;
+            tbSalidaGPT.SelectionColor = color;
+            tbSalidaGPT.AppendText(texto);
+            tbSalidaGPT.SelectionColor = tbSalidaGPT.ForeColor; // Restablecer el color
+        }
+        public void EjecFuncion(bool ejec)
+        {
+            picEjecFuncion.Visible = ejec;
+        }
+        async void LlamarGPT()
+        {
+            EscribirTextoConColor(Environment.NewLine + string.Concat(Enumerable.Repeat("-", 100)), Color.Green);
+            EscribirTextoConColor(Environment.NewLine + tbGPT.Text, Color.Blue);
+            tbSalidaGPT.Refresh();
+            await pComandos.GPT(tbGPT.Text, RespuestaGPT);
             tbGPT.Text = "";
-
+            if (Funcion != "")
+            {
+                pComandos.LlamarFuncion(Funcion);
+                Funcion = "";
+            }
         }
 
         private void cmdCerrar_Click(object sender, EventArgs e)

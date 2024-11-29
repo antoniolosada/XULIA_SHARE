@@ -7,3 +7,27 @@ en TextoReconocido cuando procesa la salida por voz de GPT debe desactivar los r
 Debe guardar la conversación del GPT y podrá mostrarla en cualquier momento en una ventana
 
 eliminar variable DictadoAPI
+
+Preguntas que debe responder el chatbot:
+
+lee los correos de ayer
+abre el ultimo correo de dara
+recupera los correos de concha
+recupera los correos de concha de la ultima semana
+abre el correo número 5
+contesta el correo número 5
+abre el ultimo correo de concha, recupera los dnis del contenido y abrelos en matrhix
+
+abre el dni seleccionado en matrhix
+consulta la ocupacion del dni seleccionado en matrix
+abre el puesto seleccionado en matrhix
+consulta la informacion del puesto seleccionado
+abre la solictud seleccionada en moura y consulta su estado
+
+
+
+muestrame la agenda de hoy
+muestrame la agenda de ayer
+lee la agenda de esta semana
+
+abre el evento de fides de hoy/de esta semana

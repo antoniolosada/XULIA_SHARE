@@ -57,6 +57,8 @@ using MailKit.Net.Imap;
 using MailKit.Search;
 using MailKit;
 using Outlook = Microsoft.Office.Interop.Outlook;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace AIMLGUI
 {
@@ -503,6 +505,8 @@ namespace AIMLGUI
 
         List<sDireccion> DireccionesDestino;
         List<sListasRecuerdos> ListasRecuerdos = new List<sListasRecuerdos>();
+
+        SalidaGPT fSalidaGPT;
 
         #endregion variables
 
@@ -1062,7 +1066,8 @@ namespace AIMLGUI
                             Console.WriteLine("GPT: "+texto);
                             if (GPT_Ventana) fGPT.MostrarGPT(this);
                             fGPT.Pregunta(texto);
-                            await GPT(texto, RespuestaModeloGPT);
+                            fGPT.ResponderPregunta();
+                            //await GPT(texto, RespuestaModeloGPT);
                         }
                         ActivarReconocedorOkXulia();
                     }
@@ -3286,6 +3291,7 @@ namespace AIMLGUI
         #endregion EjecutarComandos
         //*****************************************************************************************************************************************************************************************
         #region funciones_correo_outlook
+        // EDIT: funciones de correo
         public void LeerCalendario(DateTime Inicio, DateTime Fin)
         {
             // Crear una instancia de la aplicación de Outlook
@@ -3396,35 +3402,6 @@ namespace AIMLGUI
             }
             return true;
         }
-        // EDIT: funciones de correo
-        public void EnviarCorreoIMAP()
-        {
-                using (var client = new ImapClient())
-                {
-                    // Conectar al servidor IMAP
-                    client.Connect("correoweb.xunta.es", 443, true);
-
-                    // Autenticar usando tus credenciales
-                    client.Authenticate("XUNTA\alosgon", "DaniXulia1081.");
-
-                    // Seleccionar la bandeja de entrada
-                    var inbox = client.Inbox;
-                    inbox.Open(FolderAccess.ReadOnly);
-
-                    // Buscar y listar los mensajes
-                    foreach (var uid in inbox.Search(SearchQuery.All))
-                    {
-                        var message = inbox.GetMessage(uid);
-                        Console.WriteLine($"Asunto: {message.Subject}");
-                        Console.WriteLine($"De: {message.From}");
-                        Console.WriteLine($"Fecha: {message.Date}");
-                        Console.WriteLine();
-                    }
-
-                    // Desconectar del servidor IMAP
-                    client.Disconnect(true);
-                }
-        }
         public List<string> BuscarContactosOutLook(string findLastName)
         {
             List<string> contactos = new List<string>();
@@ -3476,6 +3453,14 @@ namespace AIMLGUI
         {
             bool inicio = true;
             string Mensajes = "";
+            string filter = "";
+            fSalidaGPT = new SalidaGPT();
+            fSalidaGPT.AddColumn("numero", "número", 50);
+            fSalidaGPT.AddColumn("EntryID", "EntryID", 1);
+            fSalidaGPT.AddColumn("Fecha", "Fecha", 90);
+            fSalidaGPT.AddColumn("Emisor", "Emisor", 250);
+            fSalidaGPT.AddColumn("Asunto", "Asunto", 1000);
+
             // Inicializa la aplicación de Outlook
             Outlook.Application outlookApp = new Outlook.Application();
             Outlook.NameSpace outlookNamespace = outlookApp.GetNamespace("MAPI");
@@ -3484,10 +3469,17 @@ namespace AIMLGUI
 
             DateTime startDate = DateTime.Now.AddDays(-15);
             if (DiasAntiguedad > 0) startDate = DateTime.Now.AddDays(-DiasAntiguedad);
-            string filter = $"[ReceivedTime] >= '{startDate:g}'";
+            if (emisor != "")
+                filter = $"[ReceivedTime] >= '{startDate:g}' AND [SenderEmailAddress] ='{emisor}'";
+            else
+                filter = $"[ReceivedTime] >= '{startDate:g}'";
+            
             Outlook.Items filteredItems = inboxItems.Restrict(filter);
 
             Mensajes += "{\"output\":\"";
+            int num_mensaje = 1;
+            string Asunto;
+            string Emisor;
             foreach (object item in filteredItems)
             {
                 if (item is Outlook.MailItem)
@@ -3497,23 +3489,38 @@ namespace AIMLGUI
                         Mensajes += "," + Environment.NewLine;
                         inicio = false;
                     } 
-                    Mensajes += "{" + Environment.NewLine;
+                    Mensajes += "{\"Mensaje de correo\":{" + Environment.NewLine;
                     Outlook.MailItem mail = (Outlook.MailItem)item;
-                    Mensajes += "\"EntryId\":\"" + mail.EntryID + "\"," + Environment.NewLine;
-                    Mensajes += "\"Asunto\":\"" + mail.Subject + "\"," + Environment.NewLine;
-                    Mensajes += "\"Emisor\":\"" + mail.SenderEmailAddress + "\"," + Environment.NewLine;
+                    Mensajes += "\"numero\":" + num_mensaje + ","+ Environment.NewLine;
+                    Mensajes += "\"s_EntryID\":\"" + mail.EntryID + "\"," + Environment.NewLine;
                     Mensajes += "\"Fecha\":\"" + mail.ReceivedTime + "\"";
+                    Emisor = mail.SenderEmailAddress;
+                    int pos;
+                    while ((pos = Emisor.IndexOf("/CN=")) >= 0 )
+                        Emisor = Emisor.Substring(pos + 4);
+                    Mensajes += "\"Emisor\":\"" + Emisor + "\"," + Environment.NewLine;
+                    Asunto = mail.Subject;
+                    if (Asunto == null) Asunto = "";
+                    Mensajes += "\"Asunto\":\"" + Asunto.Replace("\"", "'") + "\"";
                     if (Contenido)
-                        Mensajes += "," + Environment.NewLine + "\"Cuerpo\",\"" + mail.Body + "\"" + Environment.NewLine;
+                        Mensajes += "," + Environment.NewLine + "\"Cuerpo\",\"" + mail.Body.Replace("\"", "'") + "\"" + Environment.NewLine;
                     else
                         Mensajes += Environment.NewLine;
-                    Mensajes += "}" + Environment.NewLine;
+                    Mensajes += "}}" + Environment.NewLine;
+
+                    fSalidaGPT.AddRows(num_mensaje, mail.EntryID, mail.ReceivedTime, Emisor, Asunto);
+
                     Console.WriteLine(Mensajes);
+                    num_mensaje++;
                 }
             }
             Mensajes += Environment.NewLine + "\"}" + Environment.NewLine;
+            if (num_mensaje > 1) fSalidaGPT.MostrarSalidaGPT(this);
             Console.WriteLine(Mensajes);
             return Mensajes;
+        }
+        public void AbrirMensajeNumero(int numero)
+        {
         }
         public void AbrirMensajeCorreo(string messageId)
         {
@@ -3564,10 +3571,38 @@ namespace AIMLGUI
                 item.Display();
             }
         }
+        public void EnviarCorreoIMAP()
+        {
+            using (var client = new ImapClient())
+            {
+                // Conectar al servidor IMAP
+                client.Connect("correoweb.xunta.es", 443, true);
 
-    #endregion funciones_correo_outlook
-    //*****************************************************************************************************************************************************************************************
-    #region funcionesauxiliares
+                // Autenticar usando tus credenciales
+                client.Authenticate("XUNTA\alosgon", "DaniXulia1081.");
+
+                // Seleccionar la bandeja de entrada
+                var inbox = client.Inbox;
+                inbox.Open(FolderAccess.ReadOnly);
+
+                // Buscar y listar los mensajes
+                foreach (var uid in inbox.Search(SearchQuery.All))
+                {
+                    var message = inbox.GetMessage(uid);
+                    Console.WriteLine($"Asunto: {message.Subject}");
+                    Console.WriteLine($"De: {message.From}");
+                    Console.WriteLine($"Fecha: {message.Date}");
+                    Console.WriteLine();
+                }
+
+                // Desconectar del servidor IMAP
+                client.Disconnect(true);
+            }
+        }
+
+        #endregion funciones_correo_outlook
+        //*****************************************************************************************************************************************************************************************
+        #region funcionesauxiliares
         public void ActivarDesactivarCuadroDictadoWindows10()
         {
             KeyboardPress(VK_LWIN, HW_LWIN, KEYEVENTF_SILENT | 0);
@@ -4538,6 +4573,142 @@ namespace AIMLGUI
 
         #region GPT
 
+        void DescomponerTokens(string texto)
+        {
+            // Patrón regex para dividir en palabras pero mantener las cadenas entre comillas como un solo token
+            string patron = "\"[^\"]*\"|[:{}]|\\S+";
+            texto = Regex.Replace(texto, "[{},:]", "");
+            // Lista para almacenar los tokens
+            List<string> tokens = new List<string>();
+
+            // Buscar coincidencias
+            foreach (Match match in Regex.Matches(texto, patron))
+            {
+                if (match.Value != "\"parameters\"")
+                    tokens.Add(match.Value);
+            }
+            string nombre = "";
+            // Imprimir los tokens
+            foreach (string token in tokens)
+            {
+                string par = token.Replace("\"", "");
+                if (nombre == "")
+                    nombre = par;
+                else
+                {
+                    try{
+                        parametros.Add(nombre, par);
+                    }catch (Exception ex) { Console.WriteLine(ex.Message); };
+                    nombre = "";
+                }
+            }
+        }
+        Dictionary<string, string> parametros;
+
+
+        // EDIT: funciones
+        public void LlamarFuncion(string texto)
+        {
+            parametros = new Dictionary<string, string>();
+            DescomponerTokens(texto);
+
+            string funcion = parametros["name"];
+
+            switch (funcion)
+            {
+                case "leer_cabecera_mensajes_correo":
+                    string antiguedad;
+                    string emisor = "";
+
+                    fGPT.EjecFuncion(true);
+                    parametros.TryGetValue("n_dias_antiguedad", out antiguedad);
+                    parametros.TryGetValue("s_emisor", out emisor);
+                    sDireccion lemisor = DireccionesDestino.Find(x => x.comando == emisor);
+                    if (lemisor.comando != null) emisor = lemisor.direccion.ToString();
+                    if (emisor == null) emisor = "";
+                    string Mensajes = LeerBandejaEntada(int.Parse(antiguedad), emisor);
+                    fGPT.Pregunta(Mensajes);
+                    fGPT.EjecFuncion(false);
+                    break;
+            }
+        }
+        public void LlamarFuncionOld(string texto)
+        {
+            Token("{", ref texto);
+            LeerParametro(ref texto);
+            Token("\"parameters\"", ref texto);
+            Token("{", ref texto);
+            while (LeerParametro(ref texto)) ;
+            Token("}", ref texto );
+            //Token("}", ref texto);
+
+        }
+        bool LeerParametro(ref string texto)
+        {
+            string nombre = "";
+            string valor = "";
+
+            if (texto.Trim().Substring(0, 1) == "}")
+            {
+                texto = texto.Trim();
+                return false;
+            }
+            LeerCadena(ref nombre, ref texto);
+            if (nombre == "name")
+                LeerCadena(ref valor, ref texto);
+            else
+            {
+                switch (nombre[0])
+                {
+                    case 's':
+                        LeerCadena(ref valor, ref texto);
+                        break;
+                    case 'n':
+                        LeerNumero(ref valor, ref texto);
+                        break;
+                }
+            }
+            parametros.Add(nombre, valor);
+
+            return true;
+        }
+        void LeerNumero(ref string valor, ref string texto)
+        {
+            int lon = 0;
+            List<char> validos = new List<char> { ' ','+','-','0','1','2','3','4','5','6','7','8','9'};
+
+            char[] caracteres = texto.ToCharArray();
+            foreach (char c in caracteres) 
+            {
+                if ((c == '\"') || (c == '}') || (c == '\r'))
+                    break;
+                if (!validos.Contains(c))
+                    throw new Exception("Caracter no válido:" + c);
+                else
+                    lon++;
+            }
+            valor = texto.Substring(0, lon).Trim();
+            texto = texto.Substring(lon);
+        }
+        void LeerCadena(ref string valor, ref string texto)
+        {
+            Token("\"", ref texto);
+            int pos = texto.IndexOf("\"");
+            if (pos > -1)
+            {
+                valor= texto.Substring(0, pos);
+                texto = texto.Substring(pos);
+            }
+            else throw new Exception("Cadena no encontrada");
+            Token("\"", ref texto);
+        }
+        public void Token(string token, ref string texto)
+        {
+            texto = texto.Trim();
+            if (texto.Substring(0,token.Length) != token)
+                throw new Exception("Token "+token+" no encontrado.");
+            texto = texto.Substring(token.Length);
+        }
         async Task<List<string>> GPT(string texto)
         {
             return await chatGPT.SendAsEnumerable("hola", null, null, default);
@@ -4621,6 +4792,55 @@ namespace AIMLGUI
         }
 
         #endregion
+
+# region JSON
+        public void SampleJSON()
+        {
+                string json = @"
+            {
+                ""nombre"": ""Juan"",
+                ""edad"": 30,
+                ""direccion"": {
+                    ""calle"": ""Calle Falsa 123"",
+                    ""ciudad"": ""Madrid""
+                },
+                ""telefonos"": [
+                    ""123-456-789"",
+                    ""987-654-321""
+                ]
+            }";
+
+            JObject jObject = JObject.Parse(json);
+
+            foreach (var property in jObject.Properties())
+            {
+                Console.WriteLine($"{property.Name}: {GetJsonValueType(property.Value)}");
+            }
+        }
+
+        static string GetJsonValueType(JToken token)
+        {
+            switch (token.Type)
+            {
+                case JTokenType.Object:
+                    return "Objeto";
+                case JTokenType.Array:
+                    return "Array";
+                case JTokenType.Integer:
+                    return "Entero";
+                case JTokenType.Float:
+                    return "Flotante";
+                case JTokenType.String:
+                    return "Cadena";
+                case JTokenType.Boolean:
+                    return "Booleano";
+                case JTokenType.Null:
+                    return "Nulo";
+                default:
+                    return "Otro";
+            }
+        }
+#endregion
 
     }
 }

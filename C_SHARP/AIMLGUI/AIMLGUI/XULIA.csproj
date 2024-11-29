@@ -401,6 +401,9 @@
     <EmbeddedResource Include="RejillaNumerada.resx">
       <DependentUpon>RejillaNumerada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SalidaGPT.resx">
+      <DependentUpon>SalidaGPT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SeleccionarContacto.resx">
       <DependentUpon>SeleccionarContacto.cs</DependentUpon>
     </EmbeddedResource>
@@ -444,6 +447,12 @@
     </Compile>
     <Compile Include="RejillaNumerada.Designer.cs">
       <DependentUpon>RejillaNumerada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalidaGPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalidaGPT.Designer.cs">
+      <DependentUpon>SalidaGPT.cs</DependentUpon>
     </Compile>
     <Compile Include="SeleccionarContacto.cs">
       <SubType>Form</SubType>

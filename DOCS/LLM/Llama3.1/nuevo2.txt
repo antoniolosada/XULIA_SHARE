@@ -1,0 +1,16 @@
+----------------------------------------------------------------------------------------------------
+lee los mensajes de ayer<call>{"name": "leer_cabecera_mensajes_correo", "parameters": {"n_dias_antiguedad": 1, "s_emisor": ""}}</call>
+----------------------------------------------------------------------------------------------------
+Esta es la salida de la llamada a la funcion "leer_cabecera_mensajes_correo":
+El mensaje número 1 del emisor 'antonio.losada@gmail.com' tiene como valor del campo s_EntryId "000000007A89759085359E47A0EECEADA86E41C5070047BFF4599C7230449D28F12A6FFD183D00005DEEAC4F0000703CB710673E324B810E104C7A89362300040D02CB110001"
+y asunto "RE: Porcentaje de jornada fijos discontinuos jubilación parcial "
+
+El mensaje número 2 del emisor 'begona.justa@balidea.com' tiene como valor del campo s_EntryId "000000007A89759085359E47A0EECEADA86E41C5070047BFF4599C7230449D28F12A6FFD183D00005DEEAC4F0000703CB710673E324B810E104C7A89362300040D02CB110002"
+y asunto "RE: Porcentaje de jornada fijos discontinuos jubilación parcial "
+
+El mensaje número 3 del emisor 'nilson.garcia@eviden.com' tiene como valor del campo s_EntryId "000000007A89759085359E47A0EECEADA86E41C5070047BFF4599C7230449D28F12A6FFD183D00005DEEAC4F0000703CB710673E324B810E104C7A89362300040D02CB100003"
+y asunto "RE: Consulta sobre puestos que no aparecen "<call>{"name": "leer_cabecera_contenido_mensajes_bandeja_entrada", "parameters": {"n_dias_antiguedad": 1, "s_emisor": "", "s_contenido": "", "d_fecha": ""}}</call>
+----------------------------------------------------------------------------------------------------
+abre el mensaje de begona<call>{"name": "abrir_mensaje_correo", "parameters": {"s_EntryID": "000000007A89759085359E47A0EECEADA86E41C5070047BFF4599C7230449D28F12A6FFD183D00005DEEAC4F0000703CB710673E324B810E104C7A89362300040D02CB110002"}}
+----------------------------------------------------------------------------------------------------
+abre el mensaje cuyo asunto trate de jubilación<call>{"name": "abrir_mensaje_correo", "parameters": {"s_EntryID": "000000007A89759085359E47A0EECEADA86E41C5070047BFF4599C7230449D28F12A6FFD183D00005DEEAC4F0000703CB710673E324B810E104C7A89362300040D02CB110001"}}
