@@ -952,7 +952,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ControlVoz.fGPT.MostrarGPT(ControlVoz);
+            ControlVoz.callGPT.fGPT.MostrarGPT(ControlVoz);
         }
 
         public void ActualizaPantalla(ProcesamientoComandos pc, string Comando, string ClaseVetnana, string TituloVentana)
@@ -1822,14 +1822,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ControlVoz.FiltrarCorreosAsunto("jornada");
+            ControlVoz.mailOffice.FiltrarCorreosAsunto("jornada");
             //ControlVoz.AbrirMensajeCorreo("000000007A89759085359E47A0EECEADA86E41C5070047BFF4599C7230449D28F12A6FFD183D00005DEEAC4F0000703CB710673E324B810E104C7A89362300040D02CA6E0000");
             //ControlVoz.LeerBandejaEntada();
         }
 
         private void gPTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ControlVoz.fGPT.Show();
+            ControlVoz.callGPT.fGPT.Show();
         }
     }
 }

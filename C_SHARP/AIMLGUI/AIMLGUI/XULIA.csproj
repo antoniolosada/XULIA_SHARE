@@ -262,6 +262,7 @@
     <Compile Include="Correccion.Designer.cs">
       <DependentUpon>Correccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="CorreoOffice.cs" />
     <Compile Include="CursorRaton.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +302,7 @@
     <Compile Include="frmGPT.Designer.cs">
       <DependentUpon>frmGPT.cs</DependentUpon>
     </Compile>
+    <Compile Include="FuncionesGPT.cs" />
     <Compile Include="InfoActualizar.cs">
       <SubType>Form</SubType>
     </Compile>

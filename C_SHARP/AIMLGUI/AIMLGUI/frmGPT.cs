@@ -122,11 +122,11 @@ namespace XULIA
             EscribirTextoConColor(Environment.NewLine + string.Concat(Enumerable.Repeat("-", 100)), Color.Green);
             EscribirTextoConColor(Environment.NewLine + tbGPT.Text, Color.Blue);
             tbSalidaGPT.Refresh();
-            await pComandos.GPT(tbGPT.Text, RespuestaGPT);
+            await pComandos.callGPT.GPT(tbGPT.Text, RespuestaGPT);
             tbGPT.Text = "";
             if (Funcion != "")
             {
-                pComandos.LlamarFuncion(Funcion);
+                pComandos.callGPT.LlamarFuncion(Funcion);
                 Funcion = "";
             }
         }

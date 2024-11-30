@@ -13,12 +13,12 @@ namespace XULIA
 {
     public partial class SalidaGPT : Form
     {
-        ProcesamientoComandos comandos;
+        CorreoOffice comandos;
         public SalidaGPT()
         {
             InitializeComponent();
         }
-        public void MostrarSalidaGPT(ProcesamientoComandos comandos)
+        public void MostrarSalidaGPT(CorreoOffice comandos)
         {
             this.comandos = comandos;
             RedimensionarMitadDerecha();

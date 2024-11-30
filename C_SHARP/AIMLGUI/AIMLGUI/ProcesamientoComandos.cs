@@ -193,6 +193,8 @@ namespace AIMLGUI
             public string directorio;
             public string path;
         };
+        public FuncionesGPT callGPT;
+        public CorreoOffice mailOffice = new CorreoOffice();
         List<sAlmacenamiento> Directorios = new List<sAlmacenamiento>();
         public bool XULIA_ACTIVA = true;
         public bool SELECCION = false;
@@ -453,7 +455,6 @@ namespace AIMLGUI
         public String GPT_OllamaPrompt = "";
         public bool GPT_Ventana = false;
         public bool GPT_Voz = false;
-        Chat chatGPT;
         public String MODO = "";
         string MODO_ANT = "";
         string MODO_CANCELAR = "";
@@ -468,7 +469,6 @@ namespace AIMLGUI
         bool MarcarSeleccionRejilla = false;
 
         public Point PosCursor = new Point(0, 0);
-        public frmGPT fGPT = new frmGPT();
 
 #if SAPI11 
         Grammar GramaticaDictado;
@@ -503,8 +503,8 @@ namespace AIMLGUI
         }
         static bool BucleReconocerAzure = false;
 
-        List<sDireccion> DireccionesDestino;
-        List<sListasRecuerdos> ListasRecuerdos = new List<sListasRecuerdos>();
+        public List<sDireccion> DireccionesDestino;
+        public List<sListasRecuerdos> ListasRecuerdos = new List<sListasRecuerdos>();
 
         SalidaGPT fSalidaGPT;
 
@@ -532,7 +532,7 @@ namespace AIMLGUI
             {
                 Estado.ActualizarComando("Estatus:  Config Loading");
                 cfg.IniCfg();
-
+                callGPT = new FuncionesGPT(this);
                 CargarVariablesConfiguracion();
 
                 Estado.ActualizarComando("Estatus:  Contact Loading");
@@ -578,7 +578,7 @@ namespace AIMLGUI
                         case "Ollama":
                             {
                                 Estado.ActualizarComando("Estatus:  Init Ollama");
-                                IniciarOllama(GPT_OllamaURL);
+                                callGPT.IniciarOllama(GPT_OllamaURL);
                             }
                             break;
                     }
@@ -1064,9 +1064,9 @@ namespace AIMLGUI
                         {
                             RespuestaGPT = true;
                             Console.WriteLine("GPT: "+texto);
-                            if (GPT_Ventana) fGPT.MostrarGPT(this);
-                            fGPT.Pregunta(texto);
-                            fGPT.ResponderPregunta();
+                            if (GPT_Ventana) callGPT.fGPT.MostrarGPT(this);
+                            callGPT.fGPT.Pregunta(texto);
+                            callGPT.fGPT.ResponderPregunta();
                             //await GPT(texto, RespuestaModeloGPT);
                         }
                         ActivarReconocedorOkXulia();
@@ -2944,46 +2944,46 @@ namespace AIMLGUI
                     string cuerpo;
 
                     //Localizamos el contacto
-                    List<string> contactos = BuscarContactosOutLook(parametros[0]);
+                    List<string> contactos = mailOffice.BuscarContactosOutLook(parametros[0]);
                     if (contactos.Count == 1)
                     {
                         foreach (string s in contactos)
-                            EnviarCorreoOutlook("", "", new List<string>(), s);
+                            mailOffice.EnviarCorreoOutlook("", "", new List<string>(), s);
                     }
                     else //Hay varios contactos con el nombre
                     {
                         SeleccionarContacto frmContacto = new SeleccionarContacto();
-                        frmContacto.SeleccionarContactoCorreo("", "", new List<string>(), contactos, EnviarCorreoOutlook);
+                        frmContacto.SeleccionarContactoCorreo("", "", new List<string>(), contactos, mailOffice.EnviarCorreoOutlook);
                     }
                 }
                 else if (Strings.InStr(comando, "[CORREO_ASUNTO]") == 1)
                 {
                     //Localizamos el contacto
-                    List<string> contactos = BuscarContactosOutLook(parametros[0]);
+                    List<string> contactos = mailOffice.BuscarContactosOutLook(parametros[0]);
                     if (contactos.Count == 1)
                     {
                         foreach (string s in contactos)
-                            EnviarCorreoOutlook(parametros[1], "", new List<string>(), s);
+                            mailOffice.EnviarCorreoOutlook(parametros[1], "", new List<string>(), s);
                     }
                     else //Hay varios contactos con el nombre
                     {
                         SeleccionarContacto frmContacto = new SeleccionarContacto();
-                        frmContacto.SeleccionarContactoCorreo(parametros[1], "", new List<string>(), contactos, EnviarCorreoOutlook);
+                        frmContacto.SeleccionarContactoCorreo(parametros[1], "", new List<string>(), contactos, mailOffice.EnviarCorreoOutlook);
                     }
                 }
                 else if (Strings.InStr(comando, "[CORREO_MENSAJE]") == 1)
                 {
                     //Localizamos el contacto
-                    List<string> contactos = BuscarContactosOutLook(parametros[0]);
+                    List<string> contactos = mailOffice.BuscarContactosOutLook(parametros[0]);
                     if (contactos.Count == 1)
                     {
                         foreach (string s in contactos)
-                            EnviarCorreoOutlook(parametros[1], parametros[2], new List<string>(), s);
+                            mailOffice.EnviarCorreoOutlook(parametros[1], parametros[2], new List<string>(), s);
                     }
                     else //Hay varios contactos con el nombre
                     {
                         SeleccionarContacto frmContacto = new SeleccionarContacto();
-                        frmContacto.SeleccionarContactoCorreo(parametros[1], parametros[2], new List<string>(), contactos, EnviarCorreoOutlook);
+                        frmContacto.SeleccionarContactoCorreo(parametros[1], parametros[2], new List<string>(), contactos, mailOffice.EnviarCorreoOutlook);
                     }
                 }
                 else if (Strings.InStr(comando, "[MENSAJE_RAPIDO]") == 1)
@@ -3290,317 +3290,7 @@ namespace AIMLGUI
 
         #endregion EjecutarComandos
         //*****************************************************************************************************************************************************************************************
-        #region funciones_correo_outlook
-        // EDIT: funciones de correo
-        public void LeerCalendario(DateTime Inicio, DateTime Fin)
-        {
-            // Crear una instancia de la aplicación de Outlook
-            Outlook.Application outlookApp = new Outlook.Application();
-
-            // Obtener el namespace MAPI
-            Outlook.NameSpace mapiNamespace = outlookApp.GetNamespace("MAPI");
-
-            // Obtener la carpeta del calendario
-            Outlook.MAPIFolder calendarFolder = mapiNamespace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderCalendar);
-
-            // Establecer la fecha de inicio y fin para buscar las citas
-            DateTime startDate = new DateTime(2023, 4, 7);
-            DateTime endDate = startDate.AddDays(1);
-
-            // Crear el filtro para buscar las citas
-            string filter = $"[Start] >= '{startDate:yyyy/MM/dd}' AND [End] < '{endDate:yyyy/MM/dd}'";
-
-            // Obtener las citas usando el filtro
-            Outlook.Items calendarItems = calendarFolder.Items;
-            calendarItems.IncludeRecurrences = true;
-            calendarItems.Sort("[Start]", Type.Missing);
-            Outlook.Items restrictedItems = calendarItems.Restrict(filter);
-
-            // Mostrar las citas
-            foreach (Outlook.AppointmentItem item in restrictedItems)
-            {
-                Console.WriteLine($"Asunto: {item.Subject}, Inicio: {item.Start}, Fin: {item.End}");
-            }
-
-            // Liberar los objetos COM
-            if (calendarFolder != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(calendarFolder);
-            if (mapiNamespace != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(mapiNamespace);
-            if (outlookApp != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(outlookApp);
-        }
-
-        public void AbrirEntradaCalendario(string Asunto = "", DateTime Fecha = default(DateTime))
-        {
-            // Crear una instancia de la aplicación de Outlook
-            Outlook.Application outlookApp = new Outlook.Application();
-
-            // Obtener el namespace MAPI
-            Outlook.NameSpace mapiNamespace = outlookApp.GetNamespace("MAPI");
-
-            // Obtener la carpeta del calendario
-            Outlook.MAPIFolder calendarFolder = mapiNamespace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderCalendar);
-
-            // Buscar una cita específica por su Asunto
-            string subjectToFind = "Reunión importante";
-            Outlook.Items calendarItems = calendarFolder.Items;
-            calendarItems.IncludeRecurrences = true;
-            calendarItems.Sort("[Start]", Type.Missing);
-
-            Outlook.AppointmentItem foundAppointment = null;
-            foreach (Outlook.AppointmentItem item in calendarItems)
-            {
-                if (item.Subject == subjectToFind)
-                {
-                    foundAppointment = item;
-                    break;
-                }
-            }
-
-            if (foundAppointment != null)
-            {
-                // Abrir la cita en Outlook
-                foundAppointment.Display(true);
-                Console.WriteLine($"Abriendo la cita: {foundAppointment.Subject}");
-            }
-            else
-            {
-                Console.WriteLine($"No se encontró ninguna cita con el asunto: {subjectToFind}");
-            }
-
-            // Liberar los objetos COM
-            if (calendarFolder != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(calendarFolder);
-            if (mapiNamespace != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(mapiNamespace);
-            if (outlookApp != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(outlookApp);
-        }
-
-        public static Boolean EnviarCorreoOutlook(string mailSubject, string mailContent, List<string> Anexos, string mailDirection)
-        {
-            try
-            {
-                var oApp = new Microsoft.Office.Interop.Outlook.Application();
-
-                Microsoft.Office.Interop.Outlook.NameSpace ns = oApp.GetNamespace("MAPI");
-                var f = ns.GetDefaultFolder(Microsoft.Office.Interop.Outlook.OlDefaultFolders.olFolderInbox);
-
-                System.Threading.Thread.Sleep(1000);
-
-                var mailItem = (Microsoft.Office.Interop.Outlook.MailItem)oApp.CreateItem(Microsoft.Office.Interop.Outlook.OlItemType.olMailItem);
-                mailItem.Subject = mailSubject;
-                mailItem.HTMLBody = mailContent;
-                mailItem.To = mailDirection;
-                foreach (string s in Anexos)
-                    mailItem.Attachments.Add(s);
-                //mailItem.Send();
-                mailItem.Display(false);
-
-            }
-            catch (System.Exception ex)
-            {
-                return false;
-            }
-            finally
-            {
-            }
-            return true;
-        }
-        public List<string> BuscarContactosOutLook(string findLastName)
-        {
-            List<string> contactos = new List<string>();
-            Microsoft.Office.Interop.Outlook.Application outlookApp = new Microsoft.Office.Interop.Outlook.Application();
-            Microsoft.Office.Interop.Outlook.NameSpace outlookNS = null;
-
-            outlookNS = outlookApp.GetNamespace("MAPI");
-
-            Microsoft.Office.Interop.Outlook.MAPIFolder folderContacts = outlookNS.GetDefaultFolder(Microsoft.Office.Interop.Outlook.OlDefaultFolders.olFolderContacts);
-            Microsoft.Office.Interop.Outlook.Items searchFolder = folderContacts.Items;
-            foreach (Object item in searchFolder)
-            {
-                try
-                {
-                    Microsoft.Office.Interop.Outlook.ContactItem foundContact = (Microsoft.Office.Interop.Outlook.ContactItem)item;
-                    string Nombre = foundContact.FirstName + " " + foundContact.LastName;
-                    if (Nombre.ToUpper().IndexOf(findLastName.ToUpper()) >= 0)
-                        contactos.Add(Nombre + "<" + foundContact.Email1Address + ">");
-                }
-                catch (Exception ex)
-                {
-                }
-            }
-            return contactos;
-        }
-
-        private static void SendCompletedCallback(object sender, AsyncCompletedEventArgs e)
-        {
-            // Get the unique identifier for this asynchronous operation.
-            String token = (string)e.UserState;
-
-            if (e.Cancelled)
-            {
-                Console.WriteLine("[{0}] Send canceled.", token);
-            }
-            if (e.Error != null)
-            {
-                Console.WriteLine("[{0}] {1}", token, e.Error.ToString());
-            }
-            else
-            {
-                Console.WriteLine("Message sent.");
-            }
-            mailSent = true;
-        }
-        static bool mailSent = false;
-
-        public string LeerBandejaEntada(int DiasAntiguedad =0, string emisor="", bool Contenido=false)
-        {
-            bool inicio = true;
-            string Mensajes = "";
-            string filter = "";
-            fSalidaGPT = new SalidaGPT();
-            fSalidaGPT.AddColumn("numero", "número", 50);
-            fSalidaGPT.AddColumn("EntryID", "EntryID", 1);
-            fSalidaGPT.AddColumn("Fecha", "Fecha", 90);
-            fSalidaGPT.AddColumn("Emisor", "Emisor", 250);
-            fSalidaGPT.AddColumn("Asunto", "Asunto", 1000);
-
-            // Inicializa la aplicación de Outlook
-            Outlook.Application outlookApp = new Outlook.Application();
-            Outlook.NameSpace outlookNamespace = outlookApp.GetNamespace("MAPI");
-            Outlook.MAPIFolder inboxFolder = outlookNamespace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
-            Outlook.Items inboxItems = inboxFolder.Items;
-
-            DateTime startDate = DateTime.Now.AddDays(-15);
-            if (DiasAntiguedad > 0) startDate = DateTime.Now.AddDays(-DiasAntiguedad);
-            if (emisor != "")
-                filter = $"[ReceivedTime] >= '{startDate:g}' AND [SenderEmailAddress] ='{emisor}'";
-            else
-                filter = $"[ReceivedTime] >= '{startDate:g}'";
-            
-            Outlook.Items filteredItems = inboxItems.Restrict(filter);
-
-            Mensajes += "{\"output\":\"";
-            int num_mensaje = 1;
-            string Asunto;
-            string Emisor;
-            foreach (object item in filteredItems)
-            {
-                if (item is Outlook.MailItem)
-                {
-                    if (!inicio)
-                    {
-                        Mensajes += "," + Environment.NewLine;
-                        inicio = false;
-                    } 
-                    Mensajes += "{\"Mensaje de correo\":{" + Environment.NewLine;
-                    Outlook.MailItem mail = (Outlook.MailItem)item;
-                    Mensajes += "\"numero\":" + num_mensaje + ","+ Environment.NewLine;
-                    Mensajes += "\"s_EntryID\":\"" + mail.EntryID + "\"," + Environment.NewLine;
-                    Mensajes += "\"Fecha\":\"" + mail.ReceivedTime + "\"";
-                    Emisor = mail.SenderEmailAddress;
-                    int pos;
-                    while ((pos = Emisor.IndexOf("/CN=")) >= 0 )
-                        Emisor = Emisor.Substring(pos + 4);
-                    Mensajes += "\"Emisor\":\"" + Emisor + "\"," + Environment.NewLine;
-                    Asunto = mail.Subject;
-                    if (Asunto == null) Asunto = "";
-                    Mensajes += "\"Asunto\":\"" + Asunto.Replace("\"", "'") + "\"";
-                    if (Contenido)
-                        Mensajes += "," + Environment.NewLine + "\"Cuerpo\",\"" + mail.Body.Replace("\"", "'") + "\"" + Environment.NewLine;
-                    else
-                        Mensajes += Environment.NewLine;
-                    Mensajes += "}}" + Environment.NewLine;
-
-                    fSalidaGPT.AddRows(num_mensaje, mail.EntryID, mail.ReceivedTime, Emisor, Asunto);
-
-                    Console.WriteLine(Mensajes);
-                    num_mensaje++;
-                }
-            }
-            Mensajes += Environment.NewLine + "\"}" + Environment.NewLine;
-            if (num_mensaje > 1) fSalidaGPT.MostrarSalidaGPT(this);
-            Console.WriteLine(Mensajes);
-            return Mensajes;
-        }
-        public void AbrirMensajeNumero(int numero)
-        {
-        }
-        public void AbrirMensajeCorreo(string messageId)
-        {
-            // Reemplaza con el identificador del mensaje que deseas abrir
-            Outlook.Application outlookApp = new Outlook.Application();
-            Outlook.NameSpace outlookNamespace = outlookApp.GetNamespace("MAPI");
-            Outlook.MAPIFolder inboxFolder = outlookNamespace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
-            Outlook.Items mailItems = inboxFolder.Items;
-
-            Outlook.MailItem targetMessage = null;
-
-            foreach (object item in mailItems)
-            {
-                if (item is Outlook.MailItem mailItem && mailItem.EntryID == messageId)
-                {
-                    targetMessage = mailItem;
-                    break;
-                }
-            }
-
-            if (targetMessage != null)
-            {
-                // Abre el mensaje en una nueva ventana
-                targetMessage.Display();
-                Console.WriteLine("Mensaje abierto exitosamente.");
-            }
-            else
-            {
-                Console.WriteLine("No se encontró el mensaje con el identificador proporcionado.");
-            }
-        }
-        public void FiltrarCorreosAsunto(String asunto)
-        {
-            string subjectFilter = "entrega"; // Reemplaza con el asunto que deseas filtrar
-
-            Outlook.Application outlookApp = new Outlook.Application();
-            Outlook.NameSpace outlookNamespace = outlookApp.GetNamespace("MAPI");
-            Outlook.MAPIFolder inboxFolder = outlookNamespace.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
-            Outlook.Items mailItems = inboxFolder.Items;
-
-            // Aplicar filtro por asunto
-            string filtro = $"@SQL=\"urn:schemas:httpmail:subject\" LIKE '%{subjectFilter}%'";
-            //mailItems = mailItems.Restrict($"[Subject] = '{subjectFilter}'");
-            mailItems = mailItems.Restrict(filtro);
-
-            foreach (Outlook.MailItem item in mailItems)
-            {
-                item.Display();
-            }
-        }
-        public void EnviarCorreoIMAP()
-        {
-            using (var client = new ImapClient())
-            {
-                // Conectar al servidor IMAP
-                client.Connect("correoweb.xunta.es", 443, true);
-
-                // Autenticar usando tus credenciales
-                client.Authenticate("XUNTA\alosgon", "DaniXulia1081.");
-
-                // Seleccionar la bandeja de entrada
-                var inbox = client.Inbox;
-                inbox.Open(FolderAccess.ReadOnly);
-
-                // Buscar y listar los mensajes
-                foreach (var uid in inbox.Search(SearchQuery.All))
-                {
-                    var message = inbox.GetMessage(uid);
-                    Console.WriteLine($"Asunto: {message.Subject}");
-                    Console.WriteLine($"De: {message.From}");
-                    Console.WriteLine($"Fecha: {message.Date}");
-                    Console.WriteLine();
-                }
-
-                // Desconectar del servidor IMAP
-                client.Disconnect(true);
-            }
-        }
-
-        #endregion funciones_correo_outlook
+        
         //*****************************************************************************************************************************************************************************************
         #region funcionesauxiliares
         public void ActivarDesactivarCuadroDictadoWindows10()
@@ -4376,7 +4066,39 @@ namespace AIMLGUI
             InicializarReconocedorVoz();
             InicializarGramaticas();
         }
-
+        void DesactivarReconocedorOkXulia()
+        {
+            switch (ChatSpeechAPI)
+            {
+                case "Google":
+                    {
+                        EnviarComando("PARAR");
+                    }
+                    break;
+                case "Azure":
+                    {
+                        Console.WriteLine("Desactivar OK Xulia");
+                        BucleReconocerAzure = false;
+                    }
+                    break;
+            }
+        }
+        void ActivarReconocedorOkXulia()
+        {
+            switch (ChatSpeechAPI)
+            {
+                case "Google":
+                    {
+                        EnviarComando("REANUDAR");
+                    }
+                    break;
+                case "Azure":
+                    {
+                        ReconocerTextoAzure("es-ES");
+                    }
+                    break;
+            }
+        }
         #endregion SistemaReconocimientoVoz
         //*****************************************************************************************************************************************************************************************
 
@@ -4442,7 +4164,26 @@ namespace AIMLGUI
             Console.WriteLine("Goodbye.");
             return "Mensaje enviado a " + destino;
         }
+        private static void SendCompletedCallback(object sender, AsyncCompletedEventArgs e)
+        {
+            // Get the unique identifier for this asynchronous operation.
+            String token = (string)e.UserState;
 
+            if (e.Cancelled)
+            {
+                Console.WriteLine("[{0}] Send canceled.", token);
+            }
+            if (e.Error != null)
+            {
+                Console.WriteLine("[{0}] {1}", token, e.Error.ToString());
+            }
+            else
+            {
+                Console.WriteLine("Message sent.");
+            }
+            mailSent = true;
+        }
+        static bool mailSent = false;
         private List<sDireccion> CargarDireccionesDestino()
         {
             ConfigXml mCfg;
@@ -4573,227 +4314,227 @@ namespace AIMLGUI
 
         #region GPT
 
-        void DescomponerTokens(string texto)
-        {
-            // Patrón regex para dividir en palabras pero mantener las cadenas entre comillas como un solo token
-            string patron = "\"[^\"]*\"|[:{}]|\\S+";
-            texto = Regex.Replace(texto, "[{},:]", "");
-            // Lista para almacenar los tokens
-            List<string> tokens = new List<string>();
+        //void DescomponerTokens(string texto)
+        //{
+        //    // Patrón regex para dividir en palabras pero mantener las cadenas entre comillas como un solo token
+        //    string patron = "\"[^\"]*\"|[:{}]|\\S+";
+        //    texto = Regex.Replace(texto, "[{},:]", "");
+        //    // Lista para almacenar los tokens
+        //    List<string> tokens = new List<string>();
 
-            // Buscar coincidencias
-            foreach (Match match in Regex.Matches(texto, patron))
-            {
-                if (match.Value != "\"parameters\"")
-                    tokens.Add(match.Value);
-            }
-            string nombre = "";
-            // Imprimir los tokens
-            foreach (string token in tokens)
-            {
-                string par = token.Replace("\"", "");
-                if (nombre == "")
-                    nombre = par;
-                else
-                {
-                    try{
-                        parametros.Add(nombre, par);
-                    }catch (Exception ex) { Console.WriteLine(ex.Message); };
-                    nombre = "";
-                }
-            }
-        }
-        Dictionary<string, string> parametros;
+        //    // Buscar coincidencias
+        //    foreach (Match match in Regex.Matches(texto, patron))
+        //    {
+        //        if (match.Value != "\"parameters\"")
+        //            tokens.Add(match.Value);
+        //    }
+        //    string nombre = "";
+        //    // Imprimir los tokens
+        //    foreach (string token in tokens)
+        //    {
+        //        string par = token.Replace("\"", "");
+        //        if (nombre == "")
+        //            nombre = par;
+        //        else
+        //        {
+        //            try{
+        //                parametros.Add(nombre, par);
+        //            }catch (Exception ex) { Console.WriteLine(ex.Message); };
+        //            nombre = "";
+        //        }
+        //    }
+        //}
+        //Dictionary<string, string> parametros;
 
 
-        // EDIT: funciones
-        public void LlamarFuncion(string texto)
-        {
-            parametros = new Dictionary<string, string>();
-            DescomponerTokens(texto);
+        //// EDIT: funciones
+        //public void LlamarFuncion(string texto)
+        //{
+        //    parametros = new Dictionary<string, string>();
+        //    DescomponerTokens(texto);
 
-            string funcion = parametros["name"];
+        //    string funcion = parametros["name"];
 
-            switch (funcion)
-            {
-                case "leer_cabecera_mensajes_correo":
-                    string antiguedad;
-                    string emisor = "";
+        //    switch (funcion)
+        //    {
+        //        case "leer_cabecera_mensajes_correo":
+        //            string antiguedad;
+        //            string emisor = "";
 
-                    fGPT.EjecFuncion(true);
-                    parametros.TryGetValue("n_dias_antiguedad", out antiguedad);
-                    parametros.TryGetValue("s_emisor", out emisor);
-                    sDireccion lemisor = DireccionesDestino.Find(x => x.comando == emisor);
-                    if (lemisor.comando != null) emisor = lemisor.direccion.ToString();
-                    if (emisor == null) emisor = "";
-                    string Mensajes = LeerBandejaEntada(int.Parse(antiguedad), emisor);
-                    fGPT.Pregunta(Mensajes);
-                    fGPT.EjecFuncion(false);
-                    break;
-            }
-        }
-        public void LlamarFuncionOld(string texto)
-        {
-            Token("{", ref texto);
-            LeerParametro(ref texto);
-            Token("\"parameters\"", ref texto);
-            Token("{", ref texto);
-            while (LeerParametro(ref texto)) ;
-            Token("}", ref texto );
-            //Token("}", ref texto);
+        //            fGPT.EjecFuncion(true);
+        //            parametros.TryGetValue("n_dias_antiguedad", out antiguedad);
+        //            parametros.TryGetValue("s_emisor", out emisor);
+        //            sDireccion lemisor = DireccionesDestino.Find(x => x.comando == emisor);
+        //            if (lemisor.comando != null) emisor = lemisor.direccion.ToString();
+        //            if (emisor == null) emisor = "";
+        //            string Mensajes = mailOffice.LeerBandejaEntada(int.Parse(antiguedad), emisor);
+        //            fGPT.Pregunta(Mensajes);
+        //            fGPT.EjecFuncion(false);
+        //            break;
+        //    }
+        //}
+        //public void LlamarFuncionOld(string texto)
+        //{
+        //    Token("{", ref texto);
+        //    LeerParametro(ref texto);
+        //    Token("\"parameters\"", ref texto);
+        //    Token("{", ref texto);
+        //    while (LeerParametro(ref texto)) ;
+        //    Token("}", ref texto );
+        //    //Token("}", ref texto);
 
-        }
-        bool LeerParametro(ref string texto)
-        {
-            string nombre = "";
-            string valor = "";
+        //}
+        //bool LeerParametro(ref string texto)
+        //{
+        //    string nombre = "";
+        //    string valor = "";
 
-            if (texto.Trim().Substring(0, 1) == "}")
-            {
-                texto = texto.Trim();
-                return false;
-            }
-            LeerCadena(ref nombre, ref texto);
-            if (nombre == "name")
-                LeerCadena(ref valor, ref texto);
-            else
-            {
-                switch (nombre[0])
-                {
-                    case 's':
-                        LeerCadena(ref valor, ref texto);
-                        break;
-                    case 'n':
-                        LeerNumero(ref valor, ref texto);
-                        break;
-                }
-            }
-            parametros.Add(nombre, valor);
+        //    if (texto.Trim().Substring(0, 1) == "}")
+        //    {
+        //        texto = texto.Trim();
+        //        return false;
+        //    }
+        //    LeerCadena(ref nombre, ref texto);
+        //    if (nombre == "name")
+        //        LeerCadena(ref valor, ref texto);
+        //    else
+        //    {
+        //        switch (nombre[0])
+        //        {
+        //            case 's':
+        //                LeerCadena(ref valor, ref texto);
+        //                break;
+        //            case 'n':
+        //                LeerNumero(ref valor, ref texto);
+        //                break;
+        //        }
+        //    }
+        //    parametros.Add(nombre, valor);
 
-            return true;
-        }
-        void LeerNumero(ref string valor, ref string texto)
-        {
-            int lon = 0;
-            List<char> validos = new List<char> { ' ','+','-','0','1','2','3','4','5','6','7','8','9'};
+        //    return true;
+        //}
+        //void LeerNumero(ref string valor, ref string texto)
+        //{
+        //    int lon = 0;
+        //    List<char> validos = new List<char> { ' ','+','-','0','1','2','3','4','5','6','7','8','9'};
 
-            char[] caracteres = texto.ToCharArray();
-            foreach (char c in caracteres) 
-            {
-                if ((c == '\"') || (c == '}') || (c == '\r'))
-                    break;
-                if (!validos.Contains(c))
-                    throw new Exception("Caracter no válido:" + c);
-                else
-                    lon++;
-            }
-            valor = texto.Substring(0, lon).Trim();
-            texto = texto.Substring(lon);
-        }
-        void LeerCadena(ref string valor, ref string texto)
-        {
-            Token("\"", ref texto);
-            int pos = texto.IndexOf("\"");
-            if (pos > -1)
-            {
-                valor= texto.Substring(0, pos);
-                texto = texto.Substring(pos);
-            }
-            else throw new Exception("Cadena no encontrada");
-            Token("\"", ref texto);
-        }
-        public void Token(string token, ref string texto)
-        {
-            texto = texto.Trim();
-            if (texto.Substring(0,token.Length) != token)
-                throw new Exception("Token "+token+" no encontrado.");
-            texto = texto.Substring(token.Length);
-        }
-        async Task<List<string>> GPT(string texto)
-        {
-            return await chatGPT.SendAsEnumerable("hola", null, null, default);
-        }
-        public async Task<string> GPT(string texto, OllamaSharp.Chat.RespuestaGPT RespuestaChatGPT)
-        {
-            // se llama al delegado RespuestaChatGPT por cada frase de la respuesta
-            await chatGPT.SendAsEnumerableDelegado(texto, RespuestaChatGPT, null, null, default);
-            return "";
-        }
+        //    char[] caracteres = texto.ToCharArray();
+        //    foreach (char c in caracteres) 
+        //    {
+        //        if ((c == '\"') || (c == '}') || (c == '\r'))
+        //            break;
+        //        if (!validos.Contains(c))
+        //            throw new Exception("Caracter no válido:" + c);
+        //        else
+        //            lon++;
+        //    }
+        //    valor = texto.Substring(0, lon).Trim();
+        //    texto = texto.Substring(lon);
+        //}
+        //void LeerCadena(ref string valor, ref string texto)
+        //{
+        //    Token("\"", ref texto);
+        //    int pos = texto.IndexOf("\"");
+        //    if (pos > -1)
+        //    {
+        //        valor= texto.Substring(0, pos);
+        //        texto = texto.Substring(pos);
+        //    }
+        //    else throw new Exception("Cadena no encontrada");
+        //    Token("\"", ref texto);
+        //}
+        //public void Token(string token, ref string texto)
+        //{
+        //    texto = texto.Trim();
+        //    if (texto.Substring(0,token.Length) != token)
+        //        throw new Exception("Token "+token+" no encontrado.");
+        //    texto = texto.Substring(token.Length);
+        //}
+        //async Task<List<string>> GPT(string texto)
+        //{
+        //    return await chatGPT.SendAsEnumerable("hola", null, null, default);
+        //}
+        //public async Task<string> GPT(string texto, OllamaSharp.Chat.RespuestaGPT RespuestaChatGPT)
+        //{
+        //    // se llama al delegado RespuestaChatGPT por cada frase de la respuesta
+        //    await chatGPT.SendAsEnumerableDelegado(texto, RespuestaChatGPT, null, null, default);
+        //    return "";
+        //}
 
-        async private void IniciarOllama(string url)
-        {
-            OllamaApiClient ollama = null;
-            var connected = false;
+        //async private void IniciarOllama(string url)
+        //{
+        //    OllamaApiClient ollama = null;
+        //    var connected = false;
 
-            try
-            {
-                if (string.IsNullOrWhiteSpace(url))
-                    url = "http://localhost:11434";
+        //    try
+        //    {
+        //        if (string.IsNullOrWhiteSpace(url))
+        //            url = "http://localhost:11434";
 
-                if (!url.StartsWith("http"))
-                    url = "http://" + url;
+        //        if (!url.StartsWith("http"))
+        //            url = "http://" + url;
 
-                if (url.IndexOf(':', 5) < 0)
-                    url += ":11434";
+        //        if (url.IndexOf(':', 5) < 0)
+        //            url += ":11434";
 
-                var uri = new Uri(url);
+        //        var uri = new Uri(url);
 
-                ollama = new OllamaApiClient(url);
-                connected = await ollama.IsRunning();
+        //        ollama = new OllamaApiClient(url);
+        //        connected = await ollama.IsRunning();
 
-                var models = await ollama.ListLocalModels();
-                if (!models.Any())
-                {
-                    MessageBox.Show("Ollama no tiene modelos cargados.Se desactiva el GPT.");
-                    GPT_API = "";
-                    return;
-                }
-                ollama.SelectedModel = GPT_Modelo;
-                chatGPT = new Chat(ollama, GPT_OllamaPrompt);
-            }
-            catch (Exception ex) 
-            {
-                MessageBox.Show(ex.Message);
-            }
+        //        var models = await ollama.ListLocalModels();
+        //        if (!models.Any())
+        //        {
+        //            MessageBox.Show("Ollama no tiene modelos cargados.Se desactiva el GPT.");
+        //            GPT_API = "";
+        //            return;
+        //        }
+        //        ollama.SelectedModel = GPT_Modelo;
+        //        chatGPT = new Chat(ollama, GPT_OllamaPrompt);
+        //    }
+        //    catch (Exception ex) 
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
 
-        }
-        void DesactivarReconocedorOkXulia()
-        {
-            switch (ChatSpeechAPI)
-            {
-                case "Google":
-                    {
-                        EnviarComando("PARAR");
-                    }
-                    break;
-                case "Azure":
-                    {
-                        Console.WriteLine("Desactivar OK Xulia");
-                        BucleReconocerAzure = false;
-                    }
-                    break;
-            }
-        }
-        void ActivarReconocedorOkXulia()
-        {
-            switch (ChatSpeechAPI)
-            {
-                case "Google":
-                    {
-                        EnviarComando("REANUDAR");
-                    }
-                    break;
-                case "Azure":
-                    {
-                        ReconocerTextoAzure("es-ES");
-                    }
-                    break;
-            }
-        }
+        //}
+        //void DesactivarReconocedorOkXulia()
+        //{
+        //    switch (ChatSpeechAPI)
+        //    {
+        //        case "Google":
+        //            {
+        //                EnviarComando("PARAR");
+        //            }
+        //            break;
+        //        case "Azure":
+        //            {
+        //                Console.WriteLine("Desactivar OK Xulia");
+        //                BucleReconocerAzure = false;
+        //            }
+        //            break;
+        //    }
+        //}
+        //void ActivarReconocedorOkXulia()
+        //{
+        //    switch (ChatSpeechAPI)
+        //    {
+        //        case "Google":
+        //            {
+        //                EnviarComando("REANUDAR");
+        //            }
+        //            break;
+        //        case "Azure":
+        //            {
+        //                ReconocerTextoAzure("es-ES");
+        //            }
+        //            break;
+        //    }
+        //}
 
         #endregion
 
-# region JSON
+#       region JSON
         public void SampleJSON()
         {
                 string json = @"
@@ -4840,7 +4581,7 @@ namespace AIMLGUI
                     return "Otro";
             }
         }
-#endregion
+        #endregion
 
     }
 }
