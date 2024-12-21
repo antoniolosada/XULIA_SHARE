@@ -37,6 +37,7 @@
             this.cmdCerrar = new System.Windows.Forms.Button();
             this.tbSalidaGPT = new System.Windows.Forms.RichTextBox();
             this.picEjecFuncion = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbPensando)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEjecFuncion)).BeginInit();
             this.SuspendLayout();
@@ -109,13 +110,23 @@
             this.picEjecFuncion.TabStop = false;
             this.picEjecFuncion.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(456, 867);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 53);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmGPT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(661, 837);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(661, 972);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.picEjecFuncion);
             this.Controls.Add(this.pbPensando);
             this.Controls.Add(this.tbSalidaGPT);
@@ -142,5 +153,6 @@
         private System.Windows.Forms.Button cmdCerrar;
         private System.Windows.Forms.RichTextBox tbSalidaGPT;
         private System.Windows.Forms.PictureBox picEjecFuncion;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -177,8 +177,8 @@
     <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\XULIA\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=8.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\XULIA\packages\System.Text.Json.8.0.4\lib\net462\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\XULIA\packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\XULIA\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -193,6 +193,9 @@
     <Reference Include="UIAutomationClientsideProviders" />
     <Reference Include="UIAutomationProvider" />
     <Reference Include="UIAutomationTypes" />
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\XULIA\packages\Selenium.WebDriver.4.27.0\lib\netstandard2.0\WebDriver.dll</HintPath>
+    </Reference>
     <Reference Include="windows">
       <HintPath>C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.17763.0\Facade\windows.winmd</HintPath>
     </Reference>
@@ -462,6 +465,7 @@
     <Compile Include="SeleccionarContacto.Designer.cs">
       <DependentUpon>SeleccionarContacto.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeleniumWeb.cs" />
     <Compile Include="TaskManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -583,7 +587,13 @@
       <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\XULIA\packages\Microsoft.CognitiveServices.Speech.1.40.0\build\net462\Microsoft.CognitiveServices.Speech.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\XULIA\packages\Microsoft.CognitiveServices.Speech.1.40.0\build\net462\Microsoft.CognitiveServices.Speech.targets'))" />
+    <Error Condition="!Exists('..\..\XULIA\packages\Selenium.WebDriver.4.27.0\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\XULIA\packages\Selenium.WebDriver.4.27.0\build\Selenium.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\..\XULIA\packages\Selenium.WebDriver.ChromeDriver.131.0.6778.10800\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\XULIA\packages\Selenium.WebDriver.ChromeDriver.131.0.6778.10800\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('..\..\XULIA\packages\Selenium.WebDriver.MSEdgeDriver.131.0.2903.48\build\Selenium.WebDriver.MSEdgeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\XULIA\packages\Selenium.WebDriver.MSEdgeDriver.131.0.2903.48\build\Selenium.WebDriver.MSEdgeDriver.targets'))" />
   </Target>
+  <Import Project="..\..\XULIA\packages\Selenium.WebDriver.4.27.0\build\Selenium.WebDriver.targets" Condition="Exists('..\..\XULIA\packages\Selenium.WebDriver.4.27.0\build\Selenium.WebDriver.targets')" />
+  <Import Project="..\..\XULIA\packages\Selenium.WebDriver.ChromeDriver.131.0.6778.10800\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\..\XULIA\packages\Selenium.WebDriver.ChromeDriver.131.0.6778.10800\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\..\XULIA\packages\Selenium.WebDriver.MSEdgeDriver.131.0.2903.48\build\Selenium.WebDriver.MSEdgeDriver.targets" Condition="Exists('..\..\XULIA\packages\Selenium.WebDriver.MSEdgeDriver.131.0.2903.48\build\Selenium.WebDriver.MSEdgeDriver.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -55,5 +55,10 @@ namespace XULIA
         {
             comandos.AbrirMensajeCorreo(grid[1, e.RowIndex].Value.ToString());
         }
+
+        private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

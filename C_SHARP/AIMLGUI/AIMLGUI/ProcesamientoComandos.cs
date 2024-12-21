@@ -283,6 +283,7 @@ namespace AIMLGUI
         bool OK_XULIA_UnComando = true;
         String speechKey = "";
         String speechRegion = "";
+        SeleniumWeb webdriver;
 
         sAlmacenamiento Almacenamiento = new sAlmacenamiento();
         public enum Preguntas : int { CuantosAnos, QueEs, QuienEs, QueTiempoHace };
@@ -573,6 +574,9 @@ namespace AIMLGUI
 
                 if (GPT_API != "")
                 {
+                    //Inicializamos Selenium para comandos web
+                    Estado.ActualizarComando("Estatus:  Init SeleniumWeb");
+                    webdriver = new SeleniumWeb();
                     switch (GPT_API)
                     {
                         case "Ollama":
@@ -4582,6 +4586,11 @@ namespace AIMLGUI
             }
         }
         #endregion
+
+        public void AbrirNavegador()
+        {
+            webdriver.AbrirNAvegador();
+        }
 
     }
 }
