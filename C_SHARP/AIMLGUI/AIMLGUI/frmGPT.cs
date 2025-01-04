@@ -138,7 +138,14 @@ namespace XULIA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            pComandos.AbrirNavegador();
+            //pComandos.webdriver.AbrirFIDES(SeleniumWeb.eFuncionesFides.Baremo,"alosgon","DaniXulia1082.","34996197H");
+
+            //pComandos.webdriver.AbrirMatrhix(SeleniumWeb.eFuncionesMatrhix.InformesAlmacenados, "34996197H", "logos1060", "34996197H", "FCC070000015770070");
+
+            //pComandos.webdriver.AbrirMorfeo(SeleniumWeb.eFuncionesMorfeo.ValidarPermisos, "34996197H", "logos1060");
+            pComandos.webdriver.AbrirMoura(SeleniumWeb.eFuncionesMoura.ConsultarSolicitudGestion, "34996197H", "logos1060", "DXFP SSCC", "67492");
+            
+
         }
     }
 }

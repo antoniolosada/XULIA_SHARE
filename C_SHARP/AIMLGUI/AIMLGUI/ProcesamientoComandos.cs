@@ -283,7 +283,7 @@ namespace AIMLGUI
         bool OK_XULIA_UnComando = true;
         String speechKey = "";
         String speechRegion = "";
-        SeleniumWeb webdriver;
+        public SeleniumWeb webdriver;
 
         sAlmacenamiento Almacenamiento = new sAlmacenamiento();
         public enum Preguntas : int { CuantosAnos, QueEs, QuienEs, QueTiempoHace };
@@ -4587,10 +4587,6 @@ namespace AIMLGUI
         }
         #endregion
 
-        public void AbrirNavegador()
-        {
-            webdriver.AbrirNAvegador();
-        }
 
     }
 }
