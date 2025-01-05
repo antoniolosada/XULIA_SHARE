@@ -13,6 +13,7 @@ using System.Threading;
 using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 using OpenQA.Selenium.DevTools.V129.Debugger;
+using AIMLGUI;
 
 
 namespace XULIA
@@ -20,6 +21,7 @@ namespace XULIA
     public class SeleniumWeb
     {
         IWebDriver driver;
+        ProcesamientoComandos pc;
         public enum eFuncionesFides
         {
             FormacionAcademica,
@@ -33,7 +35,6 @@ namespace XULIA
         public enum eFuncionesMatrhix
         {
             ConsultaPersonal,
-            HistoricoPersonal,
             ConsultaPuesto,
             ConsultaPermisos,
             InformesAlmacenados
@@ -58,8 +59,9 @@ namespace XULIA
             Convocatoria,
             Categoria
         };
-        public SeleniumWeb()
+        public SeleniumWeb(ProcesamientoComandos proc_com)
         {
+            pc = proc_com;
         }
         static char CalcularLetraNIF(int dniNumber)
         {
@@ -417,7 +419,7 @@ namespace XULIA
         }
         public void AbrirMorfeo(eFuncionesMorfeo Funcion, string usuario, string usrclave)
         {
-            AbrirNavegadorSelenium(ref driver, "https://morfeo.xunta.es/rcp/FAFPSOLVAC/");
+            AbrirNavegadorSelenium(ref driver, "https://morfeo.xunta.es/rcp/FAFPSOLVAC/loginForm.do");
 
             var clave = driver.FindElement(By.Name("claveAcceso"));
             var login = driver.FindElement(By.Name("idLogin"));
@@ -483,8 +485,20 @@ namespace XULIA
             }
             catch (Exception ex)
             {
+                string titulo = pc.BuscaTituloVentana("msedgedriver");
+                if (titulo != "")
+                {
+                    pc.ActivarVentanaTitulo(titulo);
+                    SendKeys.Send("%{F4}");
+                }
                 driver = new EdgeDriver(options);
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
+                titulo = pc.BuscaTituloVentana("msedgedriver");
+                if (titulo != "")
+                {
+                    pc.ActivarVentanaTitulo(titulo);
+                    pc.MaximizarMinimizarVentanaActiva(ProcesamientoComandos.SW_SHOWMINIMIZED);
+                }
                 driver.Navigate().GoToUrl(url);
             }
 

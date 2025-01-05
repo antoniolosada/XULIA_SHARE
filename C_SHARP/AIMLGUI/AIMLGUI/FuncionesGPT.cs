@@ -12,52 +12,16 @@ namespace XULIA
 {
     public class FuncionesGPT
     {
-        #region GPT
         public frmGPT fGPT = new frmGPT();
         CorreoOffice mailOffice = new CorreoOffice();
         Chat chatGPT;
         ProcesamientoComandos procesamientoComandos;
+        Dictionary<string, string> parametros;
 
         public FuncionesGPT(ProcesamientoComandos pc)
         {
             procesamientoComandos = pc;
         }
-
-        void DescomponerTokens(string texto)
-        {
-            // Patrón regex para dividir en palabras pero mantener las cadenas entre comillas como un solo token
-            string patron = "\"[^\"]*\"|[:{}]|\\S+";
-            texto = Regex.Replace(texto, "[{},:]", "");
-            // Lista para almacenar los tokens
-            List<string> tokens = new List<string>();
-
-            // Buscar coincidencias
-            foreach (Match match in Regex.Matches(texto, patron))
-            {
-                if (match.Value != "\"parameters\"")
-                    tokens.Add(match.Value);
-            }
-            string nombre = "";
-            // Imprimir los tokens
-            foreach (string token in tokens)
-            {
-                string par = token.Replace("\"", "");
-                if (nombre == "")
-                    nombre = par;
-                else
-                {
-                    try
-                    {
-                        parametros.Add(nombre, par);
-                    }
-                    catch (Exception ex) { Console.WriteLine(ex.Message); };
-                    nombre = "";
-                }
-            }
-        }
-        Dictionary<string, string> parametros;
-
-
         // EDIT: funciones
         public void LlamarFuncion(string texto)
         {
@@ -69,20 +33,84 @@ namespace XULIA
             switch (funcion)
             {
                 case "leer_cabecera_mensajes_correo":
-                    string antiguedad;
-                    string emisor = "";
+                    {
+                        string antiguedad;
+                        string emisor = "";
 
-                    fGPT.EjecFuncion(true);
-                    parametros.TryGetValue("n_dias_antiguedad", out antiguedad);
-                    parametros.TryGetValue("s_emisor", out emisor);
-                    ProcesamientoComandos.sDireccion lemisor = procesamientoComandos.DireccionesDestino.Find(x => x.comando == emisor);
-                    if (lemisor.comando != null) emisor = lemisor.direccion.ToString();
-                    if (emisor == null) emisor = "";
-                    string Mensajes = mailOffice.LeerBandejaEntada(int.Parse(antiguedad), emisor);
-                    fGPT.Pregunta(Mensajes);
-                    fGPT.EjecFuncion(false);
+                        fGPT.EjecFuncion(true);
+                        parametros.TryGetValue("n_dias_antiguedad", out antiguedad);
+                        parametros.TryGetValue("s_emisor", out emisor);
+                        ProcesamientoComandos.sDireccion lemisor = procesamientoComandos.DireccionesDestino.Find(x => x.comando == emisor);
+                        if (lemisor.comando != null) emisor = lemisor.direccion.ToString();
+                        if (emisor == null) emisor = "";
+                        string Mensajes = mailOffice.LeerBandejaEntada(int.Parse(antiguedad), emisor);
+                        fGPT.Pregunta(Mensajes);
+                        fGPT.EjecFuncion(false);
+                        break;
+                    }
+                case "lee_solicitud_moura":
+                    {
+                        string codigo = "";
+                        parametros.TryGetValue("s_codigo", out codigo);
+                        procesamientoComandos.webdriver.AbrirMoura(SeleniumWeb.eFuncionesMoura.ConsultarSolicitudGestion, procesamientoComandos.UsuarioRCP, 
+                                                                        procesamientoComandos.ClaveRCP, procesamientoComandos.GrupoMouraGestion, codigo);
+                        break;
+                    }
+                case "leer_cuadro_morfeo":
+                    {
+                        procesamientoComandos.webdriver.AbrirMorfeo(SeleniumWeb.eFuncionesMorfeo.ConsultaCuadro, procesamientoComandos.UsuarioDA, procesamientoComandos.ClaveDA);
+                        break;
+                    }
+                case "valida_permisos_morfeo":
+                    {
+                        procesamientoComandos.webdriver.AbrirMorfeo(SeleniumWeb.eFuncionesMorfeo.ValidarPermisos, procesamientoComandos.UsuarioDA, procesamientoComandos.ClaveDA);
+                        break;
+                    }
+                case "consulta_personal_matrix":
+                    {
+                        LlamadasMatrhix("consulta_personal_matrix");
+                        break;
+                    }
+                case "consulta_permisos_matrix":
+                    {
+                        LlamadasMatrhix("consulta_permisos_matrix");
+                        break;
+                    }
+                case "informes_almacenados_matrix":
+                    {
+                        break;
+                    }
+            }
+        }
+        void LlamadasMatrhix(string op)
+        {
+            string nif = "";
+            parametros.TryGetValue("s_nif", out nif);
+            if (!EsNifValido(nif))
+            {
+                nif = Clipboard.GetText();
+                if (!EsNifValido(nif))
+                {
+                    MessageBox.Show("Nif no válido");
+                    return;
+                }
+            }
+
+            SeleniumWeb.eFuncionesMatrhix funcion;
+            switch (op)
+            {
+                case "consulta_personal_matrix":
+                    funcion = SeleniumWeb.eFuncionesMatrhix.ConsultaPersonal;
+                    break;
+                case "consulta_permisos_matrix":
+                    funcion = SeleniumWeb.eFuncionesMatrhix.ConsultaPermisos;
+                    break;
+                default:
+                    funcion = SeleniumWeb.eFuncionesMatrhix.ConsultaPersonal;
                     break;
             }
+
+            procesamientoComandos.webdriver.AbrirMatrhix(funcion, procesamientoComandos.UsuarioRCP, procesamientoComandos.ClaveRCP, nif, "");
         }
         public void LlamarFuncionOld(string texto)
         {
@@ -210,7 +238,74 @@ namespace XULIA
 
         }
 
+#region Auxiliares
+        static bool EsNifValido(string nif)
+        {
+            // Comprobar longitud
+            if (nif.Length != 9)
+            {
+                return false;
+            }
 
-        #endregion    
+            // Comprobar formato: 8 dígitos seguidos de una letra
+            Regex regex = new Regex(@"^\d{8}[A-Z]$");
+            if (!regex.IsMatch(nif))
+            {
+                return false;
+            }
+
+            // Obtener los dígitos y la letra del NIF
+            string numero = nif.Substring(0, 8);
+            char letra = nif[8];
+
+            // Calcular la letra correcta
+            char letraCalculada = CalcularLetraNif(numero);
+
+            // Comprobar si la letra proporcionada es la correcta
+            return letra == letraCalculada;
+        }
+
+        static char CalcularLetraNif(string numero)
+        {
+            string letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+            int resto = int.Parse(numero) % 23;
+            return letras[resto];
+        }
+
+        void DescomponerTokens(string texto)
+        {
+            // Patrón regex para dividir en palabras pero mantener las cadenas entre comillas como un solo token
+            string patron = "\"[^\"]*\"|[:{}]|\\S+";
+            texto = Regex.Replace(texto, "[{},:]", "");
+            // Lista para almacenar los tokens
+            List<string> tokens = new List<string>();
+
+            // Buscar coincidencias
+            foreach (Match match in Regex.Matches(texto, patron))
+            {
+                if (match.Value != "\"parameters\"")
+                    tokens.Add(match.Value);
+            }
+            string nombre = "";
+            // Imprimir los tokens
+            foreach (string token in tokens)
+            {
+                string par = token.Replace("\"", "");
+                if (nombre == "")
+                    nombre = par;
+                else
+                {
+                    try
+                    {
+                        parametros.Add(nombre, par);
+                    }
+                    catch (Exception ex) { Console.WriteLine(ex.Message); };
+                    nombre = "";
+                }
+            }
+        }
+        #endregion Auxiliares
     }
-    }
+
+}
+

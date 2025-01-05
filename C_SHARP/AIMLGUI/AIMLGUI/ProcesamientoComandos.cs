@@ -284,6 +284,11 @@ namespace AIMLGUI
         String speechKey = "";
         String speechRegion = "";
         public SeleniumWeb webdriver;
+        public string UsuarioDA = "";
+        public string ClaveDA = "";
+        public string UsuarioRCP = "";
+        public string ClaveRCP = "";
+        public string GrupoMouraGestion = "";
 
         sAlmacenamiento Almacenamiento = new sAlmacenamiento();
         public enum Preguntas : int { CuantosAnos, QueEs, QuienEs, QueTiempoHace };
@@ -325,8 +330,8 @@ namespace AIMLGUI
         const int HWND_TOPMOST = -1;
         const int HWND_NOTOPMOST = -2;
         private const int SW_SHOWNORMAL = 1;
-        private const int SW_SHOWMINIMIZED = 2;
-        private const int SW_SHOWMAXIMIZED = 3;
+        public const int SW_SHOWMINIMIZED = 2;
+        public const int SW_SHOWMAXIMIZED = 3;
         // RECT structure required by WINDOWPLACEMENT structure
         [Serializable]
         [StructLayout(LayoutKind.Sequential)]
@@ -576,7 +581,7 @@ namespace AIMLGUI
                 {
                     //Inicializamos Selenium para comandos web
                     Estado.ActualizarComando("Estatus:  Init SeleniumWeb");
-                    webdriver = new SeleniumWeb();
+                    webdriver = new SeleniumWeb(this);
                     switch (GPT_API)
                     {
                         case "Ollama":
@@ -1836,7 +1841,7 @@ namespace AIMLGUI
             bool ChromeAbierto = false;
             //Comprobamos si el navegador se encuentra ya levantado
             //Si quedó mal cerrada la ventana de Chrome, primero la cierra
-            if (BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + Idioma + ".DESACTIVO"))
+            if (BuscaTituloVentanaGoogle("RECVOZ.GOOGLE." + Idioma + ".DESACTIVO"))
             {
                 //Si está abierta la cierro
                 ChromeAbierto = true;
@@ -1848,7 +1853,7 @@ namespace AIMLGUI
                 int contador = 0;
                 while (contador < MAX_ESPERA_CIERRE_CHROME_100MS)
                 {
-                    if (!BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + Idioma + ".DESACTIVO"))
+                    if (!BuscaTituloVentanaGoogle("RECVOZ.GOOGLE." + Idioma + ".DESACTIVO"))
                     {
                         ChromeAbierto = false;
                         break;
@@ -2075,7 +2080,7 @@ namespace AIMLGUI
                         bool ChromeEjecutandose = false;
                         EnviarComando("PARAR");
 
-                        ChromeEjecutandose = BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + Idioma + ".ACTIVO") || BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + Idioma + ".DESACTIVO");
+                        ChromeEjecutandose = BuscaTituloVentanaGoogle("RECVOZ.GOOGLE." + Idioma + ".ACTIVO") || BuscaTituloVentanaGoogle("RECVOZ.GOOGLE." + Idioma + ".DESACTIVO");
                         try
                         {
                             System.IO.File.WriteAllText(ArchivoRecVoz, "");
@@ -2655,7 +2660,7 @@ namespace AIMLGUI
                 {
                     try
                     {
-                        if (BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + IdiomaComandoGoogle + ".DESACTIVO"))
+                        if (BuscaTituloVentanaGoogle("RECVOZ.GOOGLE." + IdiomaComandoGoogle + ".DESACTIVO"))
                         {
                             ActivarVentanaTitulo("RECVOZ.GOOGLE." + IdiomaComandoGoogle + ".DESACTIVO");
                             MaximizarMinimizarVentanaActiva(SW_SHOWMAXIMIZED);
@@ -2908,7 +2913,7 @@ namespace AIMLGUI
                 {
                     string[] par = ExtraerParametros(comando, '·');
                     string app = par[0];
-                    if (BuscaTituloVentanaChrome(app))
+                    if (BuscaTituloVentana(app) != "")
                     {
                         ActivateAppChrome(app);
                     }
@@ -3490,7 +3495,7 @@ namespace AIMLGUI
             }
         }
 
-        void MaximizarMinimizarVentanaActiva(int cmd)
+        public void MaximizarMinimizarVentanaActiva(int cmd)
         {
             IntPtr handle = (IntPtr)GetForegroundWindow();
             if ((handle == Estado.Handle) || ((IntPtr)handle == (IntPtr)0))
@@ -3580,19 +3585,7 @@ namespace AIMLGUI
             return true;
         }
 
-        public bool BuscaTituloVentana(string titulo)
-        {
-            Process[] Processes = Process.GetProcesses();
-            IntPtr hWnd = IntPtr.Zero;
-            foreach (Process p in Processes)
-            {
-                if (Strings.InStr(p.MainWindowTitle, titulo) > 0)
-                    return true;
-            }
-            return false;
-        }
-
-        bool BuscaTituloVentanaChrome(string titulo)
+        public bool BuscaTituloVentanaGoogle(string titulo)
         {
             bool salida = false;
             List<string> ventanas = new List<string>();
@@ -3601,12 +3594,24 @@ namespace AIMLGUI
                     if (Strings.InStr(title, titulo) > 0)
                         salida = true;
 
-            foreach (var title in WindowsByClassFinder.WindowTitlesForClass("Chrome_WidgetWin_1"))
+            foreach (var title in WindowsByClassFinder.WindowTitlesForClass("Chrome_WidgetWin_0"))
                 if (!string.IsNullOrWhiteSpace(title))
                     if (Strings.InStr(title, titulo) > 0)
                         salida = true;
 
             return salida;
+        }
+
+        public string BuscaTituloVentana(string titulo)
+        {
+            Process[] Processes = Process.GetProcesses();
+            IntPtr hWnd = IntPtr.Zero;
+            foreach (Process p in Processes)
+            {
+                if (Strings.InStr(p.MainWindowTitle, titulo) > 0)
+                    return p.MainWindowTitle;
+            }
+            return "";
         }
 
         static List<IntPtr> GetAllChildrenWindowHandles(IntPtr hParent, int maxCount)
@@ -3636,7 +3641,7 @@ namespace AIMLGUI
                 Application.DoEvents();
                 Thread.Yield();
                 Thread.Sleep(ESPERA_ITERACION);
-                if (BuscaTituloVentanaChrome(titulo))
+                if (BuscaTituloVentanaGoogle(titulo))
                     return true;
             }
             return false;
@@ -3652,7 +3657,7 @@ namespace AIMLGUI
                 {
                     cont++;
                     Thread.Sleep(ESPERA_ITERACION);
-                    if (BuscaTituloVentana(titulo))
+                    if (BuscaTituloVentanaGoogle(titulo))
                         return true;
                 }
             }
@@ -3712,7 +3717,7 @@ namespace AIMLGUI
 
         }
 
-        bool ActivarVentanaTitulo(string titulo)
+        public bool ActivarVentanaTitulo(string titulo)
         {
             try
             {
@@ -3926,6 +3931,12 @@ namespace AIMLGUI
             GPT_Ventana = (cfg.ReadAppSettingsKey("GPT_Ventana" + IdiomaGramaticas) == "S" ? true : false);
             GPT_Voz = (cfg.ReadAppSettingsKey("GPT_Voz" + IdiomaGramaticas) == "S" ? true : false);
 
+            UsuarioDA = cfg.ReadAppSettingsKey("UsuarioDA" + IdiomaGramaticas);
+            ClaveDA = cfg.ReadAppSettingsKey("ClaveDA" + IdiomaGramaticas);
+            UsuarioRCP = cfg.ReadAppSettingsKey("UsuarioRCP" + IdiomaGramaticas);
+            ClaveRCP = cfg.ReadAppSettingsKey("ClaveRCP" + IdiomaGramaticas);
+            GrupoMouraGestion = cfg.ReadAppSettingsKey("GrupoMouraGestion" + IdiomaGramaticas);
+
             ServidorSMTP = cfg.ReadAppSettingsKey("ServidorSMTP" + IdiomaGramaticas);
             UsuarioSMTP = cfg.ReadAppSettingsKey("UsuarioSMTP" + IdiomaGramaticas);
             ClaveSMTP = cfg.ReadAppSettingsKey("ClaveSMTP" + IdiomaGramaticas);
@@ -3973,7 +3984,7 @@ namespace AIMLGUI
             catch (Exception e) { }
             //Si quedó mal cerrada la ventana de Chrome, primero la cierra
 
-            if (BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + IdiomaComandoGoogle + ".DESACTIVO"))
+            if (BuscaTituloVentanaGoogle("RECVOZ.GOOGLE." + IdiomaComandoGoogle + ".DESACTIVO"))
             {
                 ActivarVentanaTitulo("RECVOZ.GOOGLE." + IdiomaComandoGoogle + ".DESACTIVO");
                 MaximizarMinimizarVentanaActiva(SW_SHOWMAXIMIZED);
@@ -3984,7 +3995,7 @@ namespace AIMLGUI
 
         public void CerrarGoogleChrome()
         {
-            if (BuscaTituloVentanaChrome("RECVOZ.GOOGLE." + IdiomaComandoGoogle ))
+            if (BuscaTituloVentanaGoogle("RECVOZ.GOOGLE." + IdiomaComandoGoogle ))
             {
                 ActivarVentanaTitulo("RECVOZ.GOOGLE." + IdiomaComandoGoogle );
                 MaximizarMinimizarVentanaActiva(SW_SHOWMAXIMIZED);
