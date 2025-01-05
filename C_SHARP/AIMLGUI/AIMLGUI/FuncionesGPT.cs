@@ -67,20 +67,73 @@ namespace XULIA
                         break;
                     }
                 case "consulta_personal_matrix":
-                    {
-                        LlamadasMatrhix("consulta_personal_matrix");
-                        break;
-                    }
                 case "consulta_permisos_matrix":
-                    {
-                        LlamadasMatrhix("consulta_permisos_matrix");
-                        break;
-                    }
                 case "informes_almacenados_matrix":
                     {
+                        LlamadasMatrhix(funcion);
+                        break;
+                    }
+                case "consulta_experiencia_fides":
+                case "consulta_formacion_academica_fides":
+                case "consulta_idiomas_fides":
+                case "consulta_solicitudes_listas_fides":
+                case "consulta_solicitudes_carrera_fides":
+                case "consulta_solicitudes_ps_fides":
+                case "consulta_baremo_fides":
+                case "consulta_expediente_fides":
+                    {
+                        LlamadasFIDES(funcion);
                         break;
                     }
             }
+        }
+        void LlamadasFIDES(string op)
+        {
+            string nif = "";
+            parametros.TryGetValue("s_nif", out nif);
+            if (!EsNifValido(nif))
+            {
+                nif = Clipboard.GetText();
+                if (!EsNifValido(nif))
+                {
+                    MessageBox.Show("Nif no válido");
+                    return;
+                }
+            }
+
+            SeleniumWeb.eFuncionesFides funcion;
+            switch (op)
+            {
+                case "consulta_experiencia_fides":
+                    funcion = SeleniumWeb.eFuncionesFides.Experiencia;
+                    break;
+                case "consulta_formacion_academica_fides":
+                    funcion = SeleniumWeb.eFuncionesFides.FormacionAcademica;
+                    break;
+                case "consulta_idiomas_fides":
+                    funcion = SeleniumWeb.eFuncionesFides.Idiomas;
+                    break;
+                case "consulta_solicitudes_listas_fides":
+                    funcion = SeleniumWeb.eFuncionesFides.InscripcionListas;
+                    break;
+                case "consulta_solicitudes_carrera_fides":
+                    funcion = SeleniumWeb.eFuncionesFides.InscripcionCarrera;
+                    break;
+                case "consulta_solicitudes_ps_fides":
+                    funcion = SeleniumWeb.eFuncionesFides.InscripcionPS;
+                    break;
+                case "consulta_baremo_fides":
+                    funcion = SeleniumWeb.eFuncionesFides.Baremo;
+                    break;
+                case "consulta_expediente_fides":
+                    funcion = SeleniumWeb.eFuncionesFides.Expediente;
+                    break;
+                default:
+                    funcion = SeleniumWeb.eFuncionesFides.Expediente;
+                    break;
+            }
+
+            procesamientoComandos.webdriver.AbrirFIDES(funcion, procesamientoComandos.UsuarioDA, procesamientoComandos.ClaveDA, nif);
         }
         void LlamadasMatrhix(string op)
         {

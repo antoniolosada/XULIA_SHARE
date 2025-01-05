@@ -459,6 +459,9 @@ namespace AIMLGUI
         public String GPT_Modelo = "llama3.1:8b";
         public String GPT_OllamaURL = "localhost";
         public String GPT_OllamaPrompt = "";
+        public String GPT_OllamaPrompt1 = "";
+        public String GPT_OllamaPrompt2 = "";
+        public String GPT_OllamaPrompt3 = "";
         public bool GPT_Ventana = false;
         public bool GPT_Voz = false;
         public String MODO = "";
@@ -3927,7 +3930,10 @@ namespace AIMLGUI
             GPT_API= cfg.ReadAppSettingsKey("GPT_API" + IdiomaGramaticas);
             GPT_Modelo = cfg.ReadAppSettingsKey("GPT_Modelo" + IdiomaGramaticas);
             GPT_OllamaURL = cfg.ReadAppSettingsKey("GPT_OllamaURL" + IdiomaGramaticas);
-            GPT_OllamaPrompt = cfg.ReadAppSettingsKey("GPT_OllamaPrompt" + IdiomaGramaticas);
+            GPT_OllamaPrompt1 = cfg.ReadAppSettingsKey("GPT_OllamaPrompt1" + IdiomaGramaticas);
+            GPT_OllamaPrompt2 = cfg.ReadAppSettingsKey("GPT_OllamaPrompt2" + IdiomaGramaticas);
+            GPT_OllamaPrompt3 = cfg.ReadAppSettingsKey("GPT_OllamaPrompt3" + IdiomaGramaticas);
+            GPT_OllamaPrompt = GPT_OllamaPrompt1+ GPT_OllamaPrompt2+ GPT_OllamaPrompt3;
             GPT_Ventana = (cfg.ReadAppSettingsKey("GPT_Ventana" + IdiomaGramaticas) == "S" ? true : false);
             GPT_Voz = (cfg.ReadAppSettingsKey("GPT_Voz" + IdiomaGramaticas) == "S" ? true : false);
 

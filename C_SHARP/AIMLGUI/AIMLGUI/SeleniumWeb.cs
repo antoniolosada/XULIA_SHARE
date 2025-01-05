@@ -30,7 +30,8 @@ namespace XULIA
             InscripcionListas,
             InscripcionCarrera,
             InscripcionPS,
-            Baremo
+            Baremo,
+            Expediente
         };
         public enum eFuncionesMatrhix
         {
@@ -198,7 +199,6 @@ namespace XULIA
                 EsperarCargaPagina("Datos Persoais");
             }
 
-            ((IJavaScriptExecutor)driver).ExecuteScript("window.open();");
             switch (Funcion)
             {
                 case eFuncionesFides.Baremo:
@@ -249,12 +249,9 @@ namespace XULIA
                     {
                         driver.Navigate().GoToUrl("https://fides.xunta.gal/fides/html/private/DistribuidorPlantillaAction!accesoMenu.action?idElemento=31");
                         EsperarCargaPagina("Nivel de Idiomas");
-                        //Formación académica
-                        ((IJavaScriptExecutor)driver).ExecuteScript("window.open(\"https://fides.xunta.gal/fides/html/private/DistribuidorPlantillaAction!accesoMenu.action?idElemento=43\", \"_blank\")");
-                        //Formación continuada
                         ((IJavaScriptExecutor)driver).ExecuteScript("window.open(\"https://fides.xunta.gal/fides/html/private/DistribuidorPlantillaAction!accesoMenu.action?idElemento=244\", \"_blank\")");
-                        //Formación continuada
                         ((IJavaScriptExecutor)driver).ExecuteScript("window.open(\"https://fides.xunta.gal/fides/html/private/DistribuidorPlantillaAction!accesoMenu.action?idElemento=328\", \"_blank\")");
+                        ((IJavaScriptExecutor)driver).ExecuteScript("window.open(\"https://fides.xunta.gal/fides/html/private/DistribuidorPlantillaAction!accesoMenu.action?idElemento=43\", \"_blank\")");
                         break;
                     }
                 case eFuncionesFides.FormacionAcademica:
@@ -273,12 +270,12 @@ namespace XULIA
                         //Experiencia profesional
                         driver.Navigate().GoToUrl("https://fides.xunta.gal/fides/html/private/DistribuidorPlantillaAction!accesoMenu.action?idElemento=25");
                         EsperarCargaPagina("Experiencia Interna");
-                        //Experiencia interna
-                        ((IJavaScriptExecutor)driver).ExecuteScript("window.open(\"https://fides.xunta.gal/fides/html/private/DistribuidorPlantillaAction!accesoMenu.action?idElemento=70\", \"_blank\")");
-                        //Experiencia externa
-                        ((IJavaScriptExecutor)driver).ExecuteScript("window.open(\"https://fides.xunta.gal/fides/html/private/DistribuidorPlantillaAction!accesoMenu.action?idElemento=71\", \"_blank\")");
                         //Inactividades
                         ((IJavaScriptExecutor)driver).ExecuteScript("window.open(\"https://fides.xunta.gal/fides/html/private/DistribuidorPlantillaAction!accesoMenu.action?idElemento=325\", \"_blank\")");
+                        //Experiencia externa
+                        ((IJavaScriptExecutor)driver).ExecuteScript("window.open(\"https://fides.xunta.gal/fides/html/private/DistribuidorPlantillaAction!accesoMenu.action?idElemento=71\", \"_blank\")");
+                        //Experiencia interna
+                        ((IJavaScriptExecutor)driver).ExecuteScript("window.open(\"https://fides.xunta.gal/fides/html/private/DistribuidorPlantillaAction!accesoMenu.action?idElemento=70\", \"_blank\")");
                         break;
                     }
             }
@@ -391,23 +388,27 @@ namespace XULIA
                         // Usar Split para dividir la cadena por saltos de línea
                         string[] lineas = texto.Split(new[] { "\r\n" }, StringSplitOptions.None);
 
-                        if (lineas[1] == "$RUN")
+                        try
                         {
-                            ((IJavaScriptExecutor)driver).ExecuteScript("recuperaParametros('" + lineas[1] + "' , '" + lineas[1] + "', 'NNNNNNNNNN');");
-                            // Mostrar cada línea por separado
-                            for (int i = 2; i < lineas.Length; i++)
+                            if (lineas[1] == "$RUN")
                             {
-                                var p = driver.FindElement(By.Id("valor_parametro_" + i.ToString()));
-                                p.Click();
-                                var pv = driver.FindElement(By.Id("valor_param"));
-                                pv.SendKeys(lineas[i]);
+                                ((IJavaScriptExecutor)driver).ExecuteScript("recuperaParametros('" + lineas[1] + "' , '" + lineas[1] + "', 'NNNNNNNNNN');");
+                                // Mostrar cada línea por separado
+                                for (int i = 2; i < lineas.Length; i++)
+                                {
+                                    var p = driver.FindElement(By.Id("valor_parametro_" + i.ToString()));
+                                    p.Click();
+                                    var pv = driver.FindElement(By.Id("valor_param"));
+                                    pv.SendKeys(lineas[i]);
+                                }
+                                var btejec = driver.FindElement(By.Name("enviar"));
+                                btejec.Click();
                             }
-                            var btejec = driver.FindElement(By.Name("enviar"));
-                            btejec.Click();
+                            else
+                            {
+                            }
                         }
-                        else
-                        { 
-                        }
+                        catch { }   
 
                         break;
                     }
