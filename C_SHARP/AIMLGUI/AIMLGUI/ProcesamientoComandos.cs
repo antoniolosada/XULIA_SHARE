@@ -452,7 +452,6 @@ namespace AIMLGUI
 
         public enum MovimientoRaton : int { Arriba, Abajo, Derecha, Izquierda, Parar, Diagonal1, Diagonal2, Diagonal3, Diagonal4 };
 
-        // EDIT: Variables modelos GPT
         public bool RespuestaGPT = false;
         public String ChatSpeechAPI = "Azure";
         public String GPT_API = "Ollama";
@@ -1009,7 +1008,7 @@ namespace AIMLGUI
 
         //************************ Procesamiento inicial de entradas de eventos de reconocimiento ************************************
         // EDIT: TextoReconocido()
-        public async Task<string> TextoReconocido(string texto, float GradoPrecision, bool ModoDictadoIdiomas)
+        public async Task<string> TextoReconocido(string texto, float GradoPrecision, bool ModoDictadoIdiomas, string origen = "")
         {
             bool OkXulia_entrada = OkXulia;
             if ((texto == "") || (!ARRANQUE_COMPLETADO)) return "";
@@ -1026,18 +1025,23 @@ namespace AIMLGUI
                 GRADO_PRECISION_TEXTO = GradoPrecision;
                 salida = texto;
                 precision = GradoPrecision;
-                if (!XULIA_ACTIVA)
+                // Si está activo el modo OkXulia con OkXulia de un solo comando y el texto se reconoció con Google o Azure interpretamos el comando
+                // si no procesamos solo los comandos de xulia inactiva
+                if (!(OkXulia_entrada && OK_XULIA_UnComando && (origen == "Azure" || origen == "Google")))
                 {
-                    bool comando_encontrado = false;
-                    for (int i = 0; i < XuliaComandosDesactivados.Length; i++)
+                    if (!XULIA_ACTIVA)
                     {
-                        if (salida == XuliaComandosDesactivados[i])
-                            comando_encontrado = true;
-                    }
-                    if (!comando_encontrado && (salida != XuliaActivar) && (salida != XuliaAtencion))
-                    {
-                        frmAIML.CambiarIcono(aimlForm.TipoIcono.desactiva);
-                        return "";
+                        bool comando_encontrado = false;
+                        for (int i = 0; i < XuliaComandosDesactivados.Length; i++)
+                        {
+                            if (salida == XuliaComandosDesactivados[i])
+                                comando_encontrado = true;
+                        }
+                        if (!comando_encontrado && (salida != XuliaActivar) && (salida != XuliaAtencion))
+                        {
+                            frmAIML.CambiarIcono(aimlForm.TipoIcono.desactiva);
+                            return "";
+                        }
                     }
                 }
 
@@ -4290,7 +4294,7 @@ namespace AIMLGUI
             {
                 case ResultReason.RecognizedSpeech:
                     Console.WriteLine($"RECOGNIZED: Text={speechRecognitionResult.Text}");
-                    await Me.TextoReconocido(speechRecognitionResult.Text, (float)0.99, true);
+                    await Me.TextoReconocido(speechRecognitionResult.Text, (float)0.99, true, "Azure");
                     break;
                 case ResultReason.NoMatch:
                     Console.WriteLine($"NOMATCH: Speech could not be recognized.");

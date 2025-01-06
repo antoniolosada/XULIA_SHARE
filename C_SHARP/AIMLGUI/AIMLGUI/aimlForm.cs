@@ -1035,7 +1035,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
                             {
                                 tbSalida.Text = salidaDictado + Constants.vbCrLf + tbSalida.Text;
                                 if (ModoDictadoConversacion)
-                                    ControlVoz.TextoReconocido(salidaDictado, (float)0.999999, true);
+                                    ControlVoz.TextoReconocido(salidaDictado, (float)0.999999, true, "Google");
                                 else if (ControlVoz.ModoComandoGoogle == "S")
                                     ControlVoz.TextoReconocidoComandoGoogle(salidaDictado);
                                 salidaDictado = "";
@@ -1061,11 +1061,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
         {
             ControlVoz.TextoReconocido(tbComando.Text , (float)0.999, true);
             tbComando.Text = "";
-            //ControlVoz.TextoReconocido("dictadoespañol", (float)0.999, true);
-            //ControlVoz.TextoReconocido("Esta es una prueba de reconocimiento nuevo párrafo par controlar las nuevas líenas.", (float)0.999, true);
-            //ControlVoz.TextoReconocido("Esta es una prueba de reconocimientonuevo párrafo par controlar las nuevas líenas.", (float)0.999, true);
-            //ControlVoz.TextoReconocido("Esta es una prueba de reconocimiento nuevo párrafo ", (float)0.999, true);
-            //ControlVoz.TextoReconocido("Esta es una prueba de reconocimiento nuevo párrafo", (float)0.999, true);
+
         }
 
         private void ayudaXuliaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1721,7 +1717,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
                 if ((ModoDictadoConversacion) || (ControlVoz.ModoComandoGoogle == "S"))
                 {
                     if (ModoDictadoConversacion)
-                        ControlVoz.TextoReconocido(texto, (float)0.999999, true);
+                        ControlVoz.TextoReconocido(texto, (float)0.999999, true, "Google");
                     else if (ControlVoz.ModoComandoGoogle == "S")
                         ControlVoz.TextoReconocidoComandoGoogle(texto);
                     salidaDictado = "";
