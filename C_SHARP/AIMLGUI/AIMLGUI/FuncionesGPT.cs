@@ -2,7 +2,9 @@
 using OllamaSharp;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -23,84 +25,95 @@ namespace XULIA
             procesamientoComandos = pc;
         }
         // EDIT: funciones
-        public void LlamarFuncion(string texto)
+        public string LlamarFuncion(string texto)
         {
-            parametros = new Dictionary<string, string>();
-            DescomponerTokens(texto);
-
-            string funcion = parametros["name"];
-
-            switch (funcion)
+            try 
             {
-                case "leer_cabecera_mensajes_correo":
-                    {
-                        string antiguedad;
-                        string emisor = "";
+                parametros = new Dictionary<string, string>();
+                DescomponerTokens(texto);
 
-                        fGPT.EjecFuncion(true);
-                        parametros.TryGetValue("n_dias_antiguedad", out antiguedad);
-                        parametros.TryGetValue("s_emisor", out emisor);
-                        ProcesamientoComandos.sDireccion lemisor = procesamientoComandos.DireccionesDestino.Find(x => x.comando == emisor);
-                        if (lemisor.comando != null) emisor = lemisor.direccion.ToString();
-                        if (emisor == null) emisor = "";
-                        string Mensajes = mailOffice.LeerBandejaEntada(int.Parse(antiguedad), emisor);
-                        fGPT.Pregunta(Mensajes);
-                        fGPT.EjecFuncion(false);
-                        break;
-                    }
-                case "lee_solicitud_moura":
-                    {
-                        string codigo = "";
-                        parametros.TryGetValue("s_codigo", out codigo);
-                        procesamientoComandos.webdriver.AbrirMoura(SeleniumWeb.eFuncionesMoura.ConsultarSolicitudGestion, procesamientoComandos.UsuarioRCP, 
-                                                                        procesamientoComandos.ClaveRCP, procesamientoComandos.GrupoMouraGestion, codigo);
-                        break;
-                    }
-                case "leer_cuadro_morfeo":
-                    {
-                        procesamientoComandos.webdriver.AbrirMorfeo(SeleniumWeb.eFuncionesMorfeo.ConsultaCuadro, procesamientoComandos.UsuarioDA, procesamientoComandos.ClaveDA);
-                        break;
-                    }
-                case "valida_permisos_morfeo":
-                    {
-                        procesamientoComandos.webdriver.AbrirMorfeo(SeleniumWeb.eFuncionesMorfeo.ValidarPermisos, procesamientoComandos.UsuarioDA, procesamientoComandos.ClaveDA);
-                        break;
-                    }
-                case "consulta_personal_matrix":
-                case "consulta_permisos_matrix":
-                case "informes_almacenados_matrix":
-                    {
-                        LlamadasMatrhix(funcion);
-                        break;
-                    }
-                case "consulta_experiencia_fides":
-                case "consulta_formacion_academica_fides":
-                case "consulta_idiomas_fides":
-                case "consulta_solicitudes_listas_fides":
-                case "consulta_solicitudes_carrera_fides":
-                case "consulta_solicitudes_ps_fides":
-                case "consulta_baremo_fides":
-                case "consulta_expediente_fides":
-                    {
-                        LlamadasFIDES(funcion);
-                        break;
-                    }
+                string funcion = parametros["name"];
+
+                switch (funcion)
+                {
+                    case "leer_cabecera_mensajes_correo":
+                        {
+                            string antiguedad;
+                            string emisor = "";
+
+                            fGPT.EjecFuncion(true);
+                            parametros.TryGetValue("n_dias_antiguedad", out antiguedad);
+                            parametros.TryGetValue("s_emisor", out emisor);
+                            ProcesamientoComandos.sDireccion lemisor = procesamientoComandos.DireccionesDestino.Find(x => x.comando == emisor);
+                            if (lemisor.comando != null) emisor = lemisor.direccion.ToString();
+                            if (emisor == null) emisor = "";
+                            string Mensajes = mailOffice.LeerBandejaEntada(int.Parse(antiguedad), emisor);
+                            fGPT.Pregunta(Mensajes);
+                            fGPT.EjecFuncion(false);
+                            break;
+                        }
+                    case "lee_solicitud_moura":
+                        {
+                            string codigo = "";
+                            parametros.TryGetValue("s_codigo", out codigo);
+                            procesamientoComandos.webdriver.AbrirMoura(SeleniumWeb.eFuncionesMoura.ConsultarSolicitudGestion, procesamientoComandos.UsuarioRCP,
+                                                                            procesamientoComandos.ClaveRCP, procesamientoComandos.GrupoMouraGestion, codigo);
+                            break;
+                        }
+                    case "leer_cuadro_morfeo":
+                        {
+                            procesamientoComandos.webdriver.AbrirMorfeo(SeleniumWeb.eFuncionesMorfeo.ConsultaCuadro, procesamientoComandos.UsuarioDA, procesamientoComandos.ClaveDA);
+                            break;
+                        }
+                    case "valida_permisos_morfeo":
+                        {
+                            procesamientoComandos.webdriver.AbrirMorfeo(SeleniumWeb.eFuncionesMorfeo.ValidarPermisos, procesamientoComandos.UsuarioDA, procesamientoComandos.ClaveDA);
+                            break;
+                        }
+                    case "consulta_personal_matrix":
+                    case "consulta_permisos_matrix":
+                    case "informes_almacenados_matrix":
+                        {
+                            LlamadasMatrhix(funcion);
+                            break;
+                        }
+                    case "consulta_experiencia_fides":
+                    case "consulta_formacion_academica_fides":
+                    case "consulta_idiomas_fides":
+                    case "consulta_solicitudes_listas_fides":
+                    case "consulta_solicitudes_carrera_fides":
+                    case "consulta_solicitudes_ps_fides":
+                    case "consulta_baremo_fides":
+                    case "consulta_expediente_fides":
+                        {
+                            LlamadasFIDES(funcion);
+                            break;
+                        }
+                    case "recuperar_dni_portapapeles":
+                        {
+                            string dni = RecuperarDniPortapapeles();
+                            if (dni == "")
+                                return ProcesamientoComandos.GPT_msg_ErrorNoDNI;
+                            else
+                                return ProcesamientoComandos.GPT_msg_SalidaDNI + " " + dni;
+                        }
+                }
             }
+            catch (Exception ex)
+            { 
+                MessageBox.Show(ex.Message);
+            }
+            return "";
         }
         void LlamadasFIDES(string op)
         {
             string nif = "";
-            parametros.TryGetValue("s_nif", out nif);
-            if (!EsNifValido(nif))
+            if (!RecuperarNIF(ref nif))
             {
-                nif = Clipboard.GetText();
-                if (!EsNifValido(nif))
-                {
-                    MessageBox.Show("Nif no válido");
-                    return;
-                }
+                MessageBox.Show("NIF no válido");
+                return;
             }
-
+            nif = nif.PadLeft(14, '0');
             SeleniumWeb.eFuncionesFides funcion;
             switch (op)
             {
@@ -138,15 +151,10 @@ namespace XULIA
         void LlamadasMatrhix(string op)
         {
             string nif = "";
-            parametros.TryGetValue("s_nif", out nif);
-            if (!EsNifValido(nif))
+            if (!RecuperarNIF(ref nif))
             {
-                nif = Clipboard.GetText();
-                if (!EsNifValido(nif))
-                {
-                    MessageBox.Show("Nif no válido");
-                    return;
-                }
+                MessageBox.Show("NIF no válido");
+                return;
             }
 
             SeleniumWeb.eFuncionesMatrhix funcion;
@@ -164,17 +172,6 @@ namespace XULIA
             }
 
             procesamientoComandos.webdriver.AbrirMatrhix(funcion, procesamientoComandos.UsuarioRCP, procesamientoComandos.ClaveRCP, nif, "");
-        }
-        public void LlamarFuncionOld(string texto)
-        {
-            Token("{", ref texto);
-            LeerParametro(ref texto);
-            Token("\"parameters\"", ref texto);
-            Token("{", ref texto);
-            while (LeerParametro(ref texto)) ;
-            Token("}", ref texto);
-            //Token("}", ref texto);
-
         }
         bool LeerParametro(ref string texto)
         {
@@ -291,7 +288,45 @@ namespace XULIA
 
         }
 
-#region Auxiliares
+        #region FuncionesGPT ---------------------------------------------------------------------------------------------------------------
+        string RecuperarDniPortapapeles()
+        {
+            string dni = Clipboard.GetText();
+
+            if (!EsNifValido(dni))
+                dni = CalcularLetraDNI(dni);
+
+            if (dni == "")
+            {
+                ErrorGPT(ProcesamientoComandos.GPT_msg_ErrorNoDNI);
+                return "";
+            }
+            else
+                return dni;
+        }
+        #endregion FuncionesGPT ----------------------------------------------------------------------------------------------------------- 
+
+        #region Auxiliares ----------------------------------------------------------------------------------------------------------------
+
+        public string CalcularLetraDNI(string dni)
+        {
+            string letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+            if (dni.Length == 8 && int.TryParse(dni, out int dniNum)) // Comprueba si el DNI tiene 8 dígitos
+            {
+                char letra = letras[dniNum % 23]; // Calcula la letra correspondiente
+                return dni + letra; // Devuelve el DNI completo con letra
+            }
+            else if (dni.Length == 9 && int.TryParse(dni.Substring(0, 8), out int _) && char.IsLetter(dni[8]))
+            {
+                return dni; // Si ya tiene 8 dígitos y una letra al final, devuelve el DNI tal cual
+            }
+            else
+                return ""; // Devuelve un mensaje de error si el formato es incorrecto
+        }
+        public void ErrorGPT(string error)
+        {
+            MessageBox.Show(error);
+        }
         static bool EsNifValido(string nif)
         {
             // Comprobar longitud
@@ -357,7 +392,23 @@ namespace XULIA
                 }
             }
         }
-        #endregion Auxiliares
+        bool RecuperarNIF(ref string nif)
+        {
+            parametros.TryGetValue("s_nif", out nif);
+
+            if (!EsNifValido(nif))
+                nif = CalcularLetraDNI(nif);
+
+            if (nif == "")
+            {
+                nif = RecuperarDniPortapapeles();
+                if (nif == "")
+                    return false;
+            }
+            return true;
+        }
+        #endregion Auxiliares ----------------------------------------------------------------------------------------------------------------
+
     }
 
 }

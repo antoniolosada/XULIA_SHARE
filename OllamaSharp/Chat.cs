@@ -101,8 +101,7 @@ public class Chat
     }
     public delegate Task<string> RespuestaGPT(string texto);
     
-	// TODO: SendAsEnumerableDelegado
-    public async Task<List<string>> SendAsEnumerableDelegado(string message, RespuestaGPT Respuesta, IEnumerable<Tool>? tools, IEnumerable<string>? imagesAsBase64 = default, [EnumeratorCancellation] CancellationToken cancellationToken = default)
+	public async Task<List<string>> SendAsEnumerableDelegado(string message, RespuestaGPT Respuesta, IEnumerable<Tool>? tools, IEnumerable<string>? imagesAsBase64 = default, [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
 		string salida = "";
 		string separador = ",.:;";

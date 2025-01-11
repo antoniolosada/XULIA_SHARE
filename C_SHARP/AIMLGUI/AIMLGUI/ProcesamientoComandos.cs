@@ -455,7 +455,8 @@ namespace AIMLGUI
         public bool RespuestaGPT = false;
         public String ChatSpeechAPI = "Azure";
         public String GPT_API = "Ollama";
-        public String GPT_Modelo = "llama3.1:8b";
+        public String GPT_Modelo = "llama3.1_temp0";
+        public String GPT_Modelos = "llama3.1_temp0";
         public String GPT_OllamaURL = "localhost";
         public String GPT_OllamaPrompt = "";
         public String GPT_OllamaPrompt1 = "";
@@ -463,6 +464,10 @@ namespace AIMLGUI
         public String GPT_OllamaPrompt3 = "";
         public bool GPT_Ventana = false;
         public bool GPT_Voz = false;
+        public bool GPT_ErrorPorVoz = false;
+        // EDIT: Mensajes GPT de idiomas
+        public static string GPT_msg_ErrorNoDNI = "";
+        public static string GPT_msg_SalidaDNI = "";
         public String MODO = "";
         string MODO_ANT = "";
         string MODO_CANCELAR = "";
@@ -3933,6 +3938,7 @@ namespace AIMLGUI
             ChatSpeechAPI = cfg.ReadAppSettingsKey("ChatSpeechAPI" + IdiomaGramaticas);
             GPT_API= cfg.ReadAppSettingsKey("GPT_API" + IdiomaGramaticas);
             GPT_Modelo = cfg.ReadAppSettingsKey("GPT_Modelo" + IdiomaGramaticas);
+            GPT_Modelos = cfg.ReadAppSettingsKey("GPT_Modelos" + IdiomaGramaticas);
             GPT_OllamaURL = cfg.ReadAppSettingsKey("GPT_OllamaURL" + IdiomaGramaticas);
             GPT_OllamaPrompt1 = cfg.ReadAppSettingsKey("GPT_OllamaPrompt1" + IdiomaGramaticas);
             GPT_OllamaPrompt2 = cfg.ReadAppSettingsKey("GPT_OllamaPrompt2" + IdiomaGramaticas);
@@ -3940,6 +3946,10 @@ namespace AIMLGUI
             GPT_OllamaPrompt = GPT_OllamaPrompt1+ GPT_OllamaPrompt2+ GPT_OllamaPrompt3;
             GPT_Ventana = (cfg.ReadAppSettingsKey("GPT_Ventana" + IdiomaGramaticas) == "S" ? true : false);
             GPT_Voz = (cfg.ReadAppSettingsKey("GPT_Voz" + IdiomaGramaticas) == "S" ? true : false);
+            GPT_ErrorPorVoz = (cfg.ReadAppSettingsKey("GPT_ErrorPorVoz" + IdiomaGramaticas) == "S" ? true : false);
+
+            GPT_msg_ErrorNoDNI = cfg.ReadAppSettingsKey("GPT_msg_ErrorNoDNI" + IdiomaGramaticas);
+            GPT_msg_SalidaDNI = cfg.ReadAppSettingsKey("GPT_msg_SalidaDNI" + IdiomaGramaticas);
 
             UsuarioDA = cfg.ReadAppSettingsKey("UsuarioDA" + IdiomaGramaticas);
             ClaveDA = cfg.ReadAppSettingsKey("ClaveDA" + IdiomaGramaticas);
@@ -4316,6 +4326,11 @@ namespace AIMLGUI
         static int contador = 0;
         async public void ReconocerTextoAzure(string RegionIdioma)
         {
+            if ((speechKey == "") || (speechRegion == ""))
+            {
+                MessageBox.Show("ERROR: No están establecidas las variables de entorno: SPEECH_KEY y SPEECH_REGION");
+                return;
+            }
             var speechConfig = SpeechConfig.FromSubscription(speechKey, speechRegion);
             speechConfig.SpeechRecognitionLanguage = RegionIdioma;
 

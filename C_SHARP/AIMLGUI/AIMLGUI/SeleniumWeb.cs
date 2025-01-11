@@ -14,6 +14,7 @@ using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 using OpenQA.Selenium.DevTools.V129.Debugger;
 using AIMLGUI;
+using System.Diagnostics;
 
 
 namespace XULIA
@@ -22,6 +23,7 @@ namespace XULIA
     {
         IWebDriver driver;
         ProcesamientoComandos pc;
+        int SegEsperaCargaPagina = 10;
         public enum eFuncionesFides
         {
             FormacionAcademica,
@@ -161,29 +163,25 @@ namespace XULIA
 
         public void AbrirFIDES(eFuncionesFides Funcion, string usuario, string usrclave, string nif)
         {
-            if (!IsLastCharLetter(nif))
-            {
-                nif = ExtractNumbers(nif);
-                string lnif = CalcularLetraNIF(int.Parse(nif)).ToString();
-                nif = nif + lnif;
-                nif = nif.PadLeft(14, '0');
-            }
-            else
-                nif = nif.PadLeft(14, '0');
-
             AbrirNavegadorSelenium(ref driver, "https://cas.xunta.local/cas/login?service=https%3A%2F%2Ffides.xunta.gal%2Ffides%2Findex.jsp");
 
-            EsperarCargaPagina("Sistema para a xestión do Expedient-e");
-            var login = driver.FindElement(By.Name("username"));
-            var clave = driver.FindElement(By.Name("password"));
-            var btsubmit = driver.FindElement(By.Id("submit"));
+            string[,] Cadenas = { { "Validador/a", "perfiles" }, { "Sistema para a xestión do Expedient-e", "login" } };
+            string pagina = EsperarCargaMultiplesPaginas(Cadenas);
 
-            clave.SendKeys(usrclave);
-            login.SendKeys(usuario);
-            Thread.Sleep(500);
-            btsubmit.Click();
+            if (pagina == "login")
+            {
+                var login = driver.FindElement(By.Name("username"));
+                var clave = driver.FindElement(By.Name("password"));
+                var btsubmit = driver.FindElement(By.Id("submit"));
+
+                clave.SendKeys(usrclave);
+                login.SendKeys(usuario);
+                Thread.Sleep(500);
+                btsubmit.Click();
+            }
 
             EsperarCargaPagina("Validador/a");
+
             if (Funcion == eFuncionesFides.Baremo)
             {
                 driver.Navigate().GoToUrl("https://fides.xunta.gal/fides/html/private/PerfilAdministradorAction.action?idTipoPerfil=6");
@@ -219,8 +217,8 @@ namespace XULIA
                         SelectElement sCat = new SelectElement(sel_convocatoria);
                         sCat.SelectByText(elementos[0]);
 
-                        btsubmit = driver.FindElement(By.Id("submit"));
-                        btsubmit.Click();
+                        var btsubmit1 = driver.FindElement(By.Id("submit"));
+                        btsubmit1.Click();
 
                         break;
                     }
@@ -505,14 +503,43 @@ namespace XULIA
 
         }
 
-        void EsperarCargaPagina(string Elemento)
+        string EsperarCargaMultiplesPaginas(string[,] Cadenas)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
             while (true)
             {
+                if (stopwatch.ElapsedMilliseconds >= SegEsperaCargaPagina * 1000)
+                    throw new InvalidOperationException("Tiempo de carga excedido");
+
+                for (int i = 0; i < Cadenas.GetLength(0); i++)
+                {
+                    try
+                    {
+                        var element = driver.FindElement(By.XPath("//*[contains(text(), '" + Cadenas[i, 0] + "')]"));
+                        return Cadenas[i, 1];
+                    }
+                    catch
+                    {
+                        Application.DoEvents();
+                    }
+                }
+            }
+        }
+        bool EsperarCargaPagina(string Elemento)
+        {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            while (true)
+            {
+                if (stopwatch.ElapsedMilliseconds >= SegEsperaCargaPagina * 1000)
+                    throw new InvalidOperationException("Tiempo de carga excedido");
                 try
                 {
                     var element = driver.FindElement(By.XPath("//*[contains(text(), '"+Elemento+"')]"));
-                    break;
+                    return true;
                 }
                 catch
                 {

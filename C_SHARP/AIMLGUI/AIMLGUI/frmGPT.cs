@@ -59,6 +59,8 @@ namespace XULIA
             pbPensando.Visible = false;
             EscribirTextoConColor(texto, Color.Black);
             SendMessage(tbSalidaGPT.Handle, WM_VSCROLL, (IntPtr)SB_BOTTOM, IntPtr.Zero);
+            tbSalidaGPT.Refresh();
+            Application.DoEvents();
 
             int pos = texto.IndexOf("<call>");
             if (pos > -1)
@@ -93,7 +95,16 @@ namespace XULIA
 
         private void cmdGPT_Click(object sender, EventArgs e)
         {
+            EnviarPrompt(tbGPT.Text);
+        }
+
+        public void EnviarPrompt(string prompt)
+        {
+            this.TopMost = true;
+            this.Refresh();
+            tbGPT.Text = prompt;
             ResponderPregunta();
+            this.TopMost = false;
         }
 
         private void frmGPT_Load(object sender, EventArgs e)
@@ -103,15 +114,16 @@ namespace XULIA
 
         private void tbGPT_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (e.KeyChar == Convert.ToChar(13)) LlamarGPT();
         }
         private void EscribirTextoConColor(string texto, Color color)
         {
             tbSalidaGPT.SelectionStart = tbSalidaGPT.TextLength;
             tbSalidaGPT.SelectionLength = 0;
             tbSalidaGPT.SelectionColor = color;
+            tbSalidaGPT.SelectionFont = new Font(tbSalidaGPT.Font.FontFamily, 16);
             tbSalidaGPT.AppendText(texto);
             tbSalidaGPT.SelectionColor = tbSalidaGPT.ForeColor; // Restablecer el color
+            tbGPT.Focus();
         }
         public void EjecFuncion(bool ejec)
         {
@@ -119,14 +131,16 @@ namespace XULIA
         }
         async void LlamarGPT()
         {
-            EscribirTextoConColor(Environment.NewLine + string.Concat(Enumerable.Repeat("-", 100)), Color.Green);
-            EscribirTextoConColor(Environment.NewLine + tbGPT.Text, Color.Blue);
+            EscribirTextoConColor(Environment.NewLine + string.Concat(Enumerable.Repeat("_", 63)), Color.Green);
+            EscribirTextoConColor(Environment.NewLine + tbGPT.Text+ Environment.NewLine, Color.Blue);
             tbSalidaGPT.Refresh();
+            Application.DoEvents(); 
             await pComandos.callGPT.GPT(tbGPT.Text, RespuestaGPT);
             tbGPT.Text = "";
             if (Funcion != "")
             {
-                pComandos.callGPT.LlamarFuncion(Funcion);
+                string salida_funcion = pComandos.callGPT.LlamarFuncion(Funcion);
+                if (salida_funcion != "") EnviarPrompt(salida_funcion);
                 Funcion = "";
             }
         }
