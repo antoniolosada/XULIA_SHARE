@@ -388,13 +388,13 @@ namespace XULIA
 
                         try
                         {
-                            if (lineas[1] == "$RUN")
+                            if (lineas[0] == "$RUN")
                             {
                                 ((IJavaScriptExecutor)driver).ExecuteScript("recuperaParametros('" + lineas[1] + "' , '" + lineas[1] + "', 'NNNNNNNNNN');");
                                 // Mostrar cada línea por separado
                                 for (int i = 2; i < lineas.Length; i++)
                                 {
-                                    var p = driver.FindElement(By.Id("valor_parametro_" + i.ToString()));
+                                    var p = driver.FindElement(By.Id("valor_parametro_" + (i-1).ToString()));
                                     p.Click();
                                     var pv = driver.FindElement(By.Id("valor_param"));
                                     pv.SendKeys(lineas[i]);
@@ -404,9 +404,13 @@ namespace XULIA
                             }
                             else
                             {
+                                throw new Exception("Parámetros del informe incorrectos");
                             }
                         }
-                        catch { }   
+                        catch (Exception ex)
+                        {
+                            throw new Exception("Parámetros del informe incorrectos: "+ex.Message);
+                        }
 
                         break;
                     }

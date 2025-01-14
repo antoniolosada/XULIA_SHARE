@@ -1086,8 +1086,7 @@ namespace AIMLGUI
                             RespuestaGPT = true;
                             Console.WriteLine("GPT: "+texto);
                             if (GPT_Ventana) callGPT.fGPT.MostrarGPT(this);
-                            callGPT.fGPT.Pregunta(texto);
-                            callGPT.fGPT.ResponderPregunta();
+                            callGPT.fGPT.EnviarPrompt(texto);
                             //await GPT(texto, RespuestaModeloGPT);
                         }
                         ActivarReconocedorOkXulia();
@@ -4326,7 +4325,7 @@ namespace AIMLGUI
         static int contador = 0;
         async public void ReconocerTextoAzure(string RegionIdioma)
         {
-            if ((speechKey == "") || (speechRegion == ""))
+            if ((speechKey == null) || (speechRegion == null))
             {
                 MessageBox.Show("ERROR: No están establecidas las variables de entorno: SPEECH_KEY y SPEECH_REGION");
                 return;

@@ -151,13 +151,16 @@ namespace XULIA
         void LlamadasMatrhix(string op)
         {
             string nif = "";
-            if (!RecuperarNIF(ref nif))
-            {
-                MessageBox.Show("NIF no válido");
-                return;
-            }
-
             SeleniumWeb.eFuncionesMatrhix funcion;
+
+            if (op != "informes_almacenados_matrix")
+            {
+                if (!RecuperarNIF(ref nif))
+                {
+                    ErrorGPT("NIF no válido");
+                    return;
+                }
+            }
             switch (op)
             {
                 case "consulta_personal_matrix":
@@ -165,6 +168,9 @@ namespace XULIA
                     break;
                 case "consulta_permisos_matrix":
                     funcion = SeleniumWeb.eFuncionesMatrhix.ConsultaPermisos;
+                    break;
+                case "informes_almacenados_matrix":
+                    funcion = SeleniumWeb.eFuncionesMatrhix.InformesAlmacenados;
                     break;
                 default:
                     funcion = SeleniumWeb.eFuncionesMatrhix.ConsultaPersonal;

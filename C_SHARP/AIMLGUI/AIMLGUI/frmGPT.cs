@@ -47,6 +47,7 @@ namespace XULIA
         {
             pComandos = pc;
             this.Show();
+            ProcesamientoComandos.SetForegroundWindow(this.Handle);
             pbPensando.Visible=false;
             tbGPT.Focus();
         }
@@ -86,6 +87,7 @@ namespace XULIA
         public void Pregunta(string texto)
         {
             tbGPT.Text = texto;
+            EnviarPrompt(tbGPT.Text);
         }
         public void ResponderPregunta()
         {
@@ -100,11 +102,8 @@ namespace XULIA
 
         public void EnviarPrompt(string prompt)
         {
-            this.TopMost = true;
-            this.Refresh();
             tbGPT.Text = prompt;
             ResponderPregunta();
-            this.TopMost = false;
         }
 
         private void frmGPT_Load(object sender, EventArgs e)
