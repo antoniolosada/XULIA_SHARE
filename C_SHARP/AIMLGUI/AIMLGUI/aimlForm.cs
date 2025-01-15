@@ -126,7 +126,8 @@ namespace AIMLGUI
             }
 
             m_Estado.ActualizarComando("Ready for Work ("+ ControlVoz.CodigoIdiomaComandoGoogle + ")");
-
+            if (ControlVoz.OcultarEstadoSegundos > 0)
+                ControlVoz.ActualizarPantallas(true);
         }
 
         #endregion Inicializacion
@@ -169,8 +170,13 @@ namespace AIMLGUI
             // Add menu to tray icon and show it.
             trayIcon.ContextMenu = trayMenu;
             trayIcon.Visible     = true;
+            trayIcon.MouseDoubleClick += trayIcon_MouseDoubleClick;
 
             frmAvatar = new Avatar();
+        }
+        private void trayIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ControlVoz.Estado.Show();
         }
         public void CambiarIcono(TipoIcono Tipo)
         {
@@ -1809,11 +1815,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
         private void button3_Click(object sender, EventArgs e)
         {
+            FuncionesGPT f = new FuncionesGPT(ControlVoz);
+
             //frmGPT f = new frmGPT();
             //f.MostrarGPT(ControlVoz);
-            ControlVoz.SampleJSON();
-            SalidaGPT fSalidaGPT = new SalidaGPT();
-            fSalidaGPT.Show();
+            //ControlVoz.SampleJSON();
+            //SalidaGPTmail fSalidaGPT = new SalidaGPTmail();
+            //fSalidaGPT.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)

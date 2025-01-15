@@ -289,7 +289,7 @@ namespace AIMLGUI
         public string UsuarioRCP = "";
         public string ClaveRCP = "";
         public string GrupoMouraGestion = "";
-
+        public frmRecuerdos fRecuerdos;
         sAlmacenamiento Almacenamiento = new sAlmacenamiento();
         public enum Preguntas : int { CuantosAnos, QueEs, QuienEs, QueTiempoHace };
 
@@ -465,6 +465,7 @@ namespace AIMLGUI
         public bool GPT_Ventana = false;
         public bool GPT_Voz = false;
         public bool GPT_ErrorPorVoz = false;
+        public string GPT_Recuerdos = "";
         // EDIT: Mensajes GPT de idiomas
         public static string GPT_msg_ErrorNoDNI = "";
         public static string GPT_msg_SalidaDNI = "";
@@ -519,7 +520,7 @@ namespace AIMLGUI
         public List<sDireccion> DireccionesDestino;
         public List<sListasRecuerdos> ListasRecuerdos = new List<sListasRecuerdos>();
 
-        SalidaGPT fSalidaGPT;
+        SalidaGPTmail fSalidaGPT;
 
         #endregion variables
 
@@ -546,6 +547,8 @@ namespace AIMLGUI
                 Estado.ActualizarComando("Estatus:  Config Loading");
                 cfg.IniCfg();
                 callGPT = new FuncionesGPT(this);
+                fRecuerdos = new frmRecuerdos(this);
+
                 CargarVariablesConfiguracion();
 
                 Estado.ActualizarComando("Estatus:  Contact Loading");
@@ -3862,7 +3865,26 @@ namespace AIMLGUI
             if (OcultarBarraPrecision == "S")
                 Estado.MostrarBarraPrecision();
         }
+        static string RecuperarURLOllama(string input, string clave)
+        {
+            // Separar la cadena en valores individuales usando el punto y coma
+            string[] valores = input.Split(';');
 
+            foreach (string valor in valores)
+            {
+                // Separar cada valor en partes usando la coma
+                string[] partes = valor.Split(',');
+
+                // Si la primera parte es igual a la clave buscada, devolver la segunda parte
+                if ((partes[0] == clave) || (partes[0] == "*"))
+                {
+                    return partes[1];
+                }
+            }
+
+            // Si no se encuentra la clave, devolver null o un valor apropiado
+            return null;
+        }
         // EDIT: CargarVariablesConfiguracion()
         void CargarVariablesConfiguracion()
         {
@@ -3938,7 +3960,6 @@ namespace AIMLGUI
             GPT_API= cfg.ReadAppSettingsKey("GPT_API" + IdiomaGramaticas);
             GPT_Modelo = cfg.ReadAppSettingsKey("GPT_Modelo" + IdiomaGramaticas);
             GPT_Modelos = cfg.ReadAppSettingsKey("GPT_Modelos" + IdiomaGramaticas);
-            GPT_OllamaURL = cfg.ReadAppSettingsKey("GPT_OllamaURL" + IdiomaGramaticas);
             GPT_OllamaPrompt1 = cfg.ReadAppSettingsKey("GPT_OllamaPrompt1" + IdiomaGramaticas);
             GPT_OllamaPrompt2 = cfg.ReadAppSettingsKey("GPT_OllamaPrompt2" + IdiomaGramaticas);
             GPT_OllamaPrompt3 = cfg.ReadAppSettingsKey("GPT_OllamaPrompt3" + IdiomaGramaticas);
@@ -3946,6 +3967,8 @@ namespace AIMLGUI
             GPT_Ventana = (cfg.ReadAppSettingsKey("GPT_Ventana" + IdiomaGramaticas) == "S" ? true : false);
             GPT_Voz = (cfg.ReadAppSettingsKey("GPT_Voz" + IdiomaGramaticas) == "S" ? true : false);
             GPT_ErrorPorVoz = (cfg.ReadAppSettingsKey("GPT_ErrorPorVoz" + IdiomaGramaticas) == "S" ? true : false);
+            GPT_OllamaURL = RecuperarURLOllama(cfg.ReadAppSettingsKey("GPT_OllamaURL" + IdiomaGramaticas), "DESKTOP-JQ5AR5D");
+            GPT_Recuerdos = GPT_OllamaPrompt1 = cfg.ReadAppSettingsKey("GPT_Recuerdos" + IdiomaGramaticas);
 
             GPT_msg_ErrorNoDNI = cfg.ReadAppSettingsKey("GPT_msg_ErrorNoDNI" + IdiomaGramaticas);
             GPT_msg_SalidaDNI = cfg.ReadAppSettingsKey("GPT_msg_SalidaDNI" + IdiomaGramaticas);

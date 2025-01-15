@@ -296,6 +296,12 @@
     <Compile Include="EnumWindows.cs" />
     <Compile Include="FindWindowsClass.cs" />
     <Compile Include="ConfigApp.cs" />
+    <Compile Include="frmRecuerdos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecuerdos.Designer.cs">
+      <DependentUpon>frmRecuerdos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAyuda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -382,6 +388,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditarModo.resx">
       <DependentUpon>EditarModo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecuerdos.resx">
+      <DependentUpon>frmRecuerdos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAyuda.resx">
       <DependentUpon>frmAyuda.cs</DependentUpon>

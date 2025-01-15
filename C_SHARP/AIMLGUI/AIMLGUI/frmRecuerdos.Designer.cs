@@ -1,6 +1,6 @@
 ﻿namespace XULIA
 {
-    partial class SalidaGPTmail
+    partial class frmRecuerdos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.grid = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,31 +39,20 @@
             this.grid.Location = new System.Drawing.Point(0, 0);
             this.grid.Name = "grid";
             this.grid.RowHeadersWidth = 62;
-            this.grid.Size = new System.Drawing.Size(1425, 425);
-            this.grid.TabIndex = 0;
-            this.grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellContentClick);
+            this.grid.Size = new System.Drawing.Size(800, 405);
+            this.grid.TabIndex = 1;
             this.grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellDoubleClick);
+            this.grid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellValueChanged);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(587, 390);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "cmdTest";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // SalidaGPT
+            // frmRecuerdos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1425, 425);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(800, 405);
             this.Controls.Add(this.grid);
-            this.Name = "SalidaGPT";
-            this.Text = "SalidaGPT";
+            this.Name = "frmRecuerdos";
+            this.Text = "Recuerdos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmRecuerdos_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
 
@@ -73,6 +61,5 @@
         #endregion
 
         private System.Windows.Forms.DataGridView grid;
-        private System.Windows.Forms.Button button1;
     }
 }

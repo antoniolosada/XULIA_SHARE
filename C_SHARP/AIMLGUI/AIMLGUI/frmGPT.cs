@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -54,14 +55,11 @@ namespace XULIA
 
         static bool LlamadaFuncion = false;
         static string Funcion = "";
-        public async Task<string> RespuestaGPT(string texto)
+        public async Task<string> RespuestaGPT(string input)
         {
+            string texto = input;
 
             pbPensando.Visible = false;
-            EscribirTextoConColor(texto, Color.Black);
-            SendMessage(tbSalidaGPT.Handle, WM_VSCROLL, (IntPtr)SB_BOTTOM, IntPtr.Zero);
-            tbSalidaGPT.Refresh();
-            Application.DoEvents();
 
             int pos = texto.IndexOf("<call>");
             if (pos > -1)
@@ -69,6 +67,12 @@ namespace XULIA
                 LlamadaFuncion = true;
                 texto = texto.Substring(pos + 6);
             }
+
+            if (LlamadaFuncion)
+                EscribirTextoConColor(input, Color.Green);
+            else
+                EscribirTextoConColor(input, Color.Black);
+
             pos = texto.IndexOf("</call>");
             if (pos > -1)
             {
@@ -80,6 +84,10 @@ namespace XULIA
                 pComandos.Hablar(texto);
             else if (LlamadaFuncion)
                 Funcion += texto;
+
+            SendMessage(tbSalidaGPT.Handle, WM_VSCROLL, (IntPtr)SB_BOTTOM, IntPtr.Zero);
+            tbSalidaGPT.Refresh();
+            Application.DoEvents();
 
             return texto;
         }
@@ -131,7 +139,7 @@ namespace XULIA
         async void LlamarGPT()
         {
             EscribirTextoConColor(Environment.NewLine + string.Concat(Enumerable.Repeat("_", 63)), Color.Green);
-            EscribirTextoConColor(Environment.NewLine + tbGPT.Text+ Environment.NewLine, Color.Blue);
+            EscribirTextoConColor(Environment.NewLine + tbGPT.Text + Environment.NewLine, Color.Blue);
             tbSalidaGPT.Refresh();
             Application.DoEvents(); 
             await pComandos.callGPT.GPT(tbGPT.Text, RespuestaGPT);

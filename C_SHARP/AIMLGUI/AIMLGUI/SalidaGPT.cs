@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace XULIA
 {
-    public partial class SalidaGPT : Form
+    public partial class SalidaGPTmail : Form
     {
         CorreoOffice comandos;
-        public SalidaGPT()
+        public SalidaGPTmail()
         {
             InitializeComponent();
         }

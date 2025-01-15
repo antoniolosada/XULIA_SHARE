@@ -97,6 +97,16 @@ namespace XULIA
                             else
                                 return ProcesamientoComandos.GPT_msg_SalidaDNI + " " + dni;
                         }
+                    case "mostrar_recuerdos":
+                        {
+                            procesamientoComandos.fRecuerdos.LeerRecuerdos();
+                            break;
+                        }
+                    case "recuerda_que":
+                        {
+                            Recuerda();
+                            break;
+                        }
                 }
             }
             catch (Exception ex)
@@ -105,6 +115,7 @@ namespace XULIA
             }
             return "";
         }
+        #region FuncionesGPT ---------------------------------------------------------------------------------------------------------------
         void LlamadasFIDES(string op)
         {
             string nif = "";
@@ -294,7 +305,6 @@ namespace XULIA
 
         }
 
-        #region FuncionesGPT ---------------------------------------------------------------------------------------------------------------
         string RecuperarDniPortapapeles()
         {
             string dni = Clipboard.GetText();
@@ -309,6 +319,17 @@ namespace XULIA
             }
             else
                 return dni;
+        }
+        public void Recuerda()
+        {
+            string recuerdo = "";
+            parametros.TryGetValue("s_recuerdo", out recuerdo);
+            if (recuerdo == "")
+            {
+                recuerdo = Clipboard.GetText();
+            }
+            if (recuerdo != "")
+                procesamientoComandos.fRecuerdos.Recuerda(recuerdo);
         }
         #endregion FuncionesGPT ----------------------------------------------------------------------------------------------------------- 
 

@@ -14,7 +14,7 @@ namespace XULIA
 {
     public class CorreoOffice
     {
-        SalidaGPT fSalidaGPT;
+        SalidaGPTmail fSalidaGPT;
 
         #region funciones_correo_outlook
         // EDIT: funciones de correo
@@ -161,7 +161,7 @@ namespace XULIA
             bool inicio = true;
             string Mensajes = "";
             string filter = "";
-            fSalidaGPT = new SalidaGPT();
+            fSalidaGPT = new SalidaGPTmail();
             fSalidaGPT.AddColumn("numero", "número", 50);
             fSalidaGPT.AddColumn("EntryID", "EntryID", 1);
             fSalidaGPT.AddColumn("Fecha", "Fecha", 90);
