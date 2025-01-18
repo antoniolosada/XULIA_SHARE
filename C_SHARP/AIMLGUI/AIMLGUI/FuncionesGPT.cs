@@ -48,7 +48,7 @@ namespace XULIA
                             if (lemisor.comando != null) emisor = lemisor.direccion.ToString();
                             if (emisor == null) emisor = "";
                             string Mensajes = mailOffice.LeerBandejaEntada(int.Parse(antiguedad), emisor);
-                            fGPT.Pregunta(Mensajes);
+                            fGPT.Pregunta(Mensajes+Environment.NewLine+ "Cuenta los correos electrónicos.");
                             fGPT.EjecFuncion(false);
                             break;
                         }
@@ -56,8 +56,13 @@ namespace XULIA
                         {
                             string codigo = "";
                             parametros.TryGetValue("s_codigo", out codigo);
-                            procesamientoComandos.webdriver.AbrirMoura(SeleniumWeb.eFuncionesMoura.ConsultarSolicitudGestion, procesamientoComandos.UsuarioRCP,
+                            if ((codigo == "") || (codigo == null) || (!int.TryParse(codigo, out _)))
+                                codigo = Clipboard.GetText();
+                            if (int.TryParse(codigo, out _))
+                                procesamientoComandos.webdriver.AbrirMoura(SeleniumWeb.eFuncionesMoura.ConsultarSolicitudGestion, procesamientoComandos.UsuarioRCP,
                                                                             procesamientoComandos.ClaveRCP, procesamientoComandos.GrupoMouraGestion, codigo);
+                            else
+                                ErrorGPT("ERROR: Código de Moura no válido");
                             break;
                         }
                     case "leer_cuadro_morfeo":

@@ -3967,7 +3967,7 @@ namespace AIMLGUI
             GPT_Ventana = (cfg.ReadAppSettingsKey("GPT_Ventana" + IdiomaGramaticas) == "S" ? true : false);
             GPT_Voz = (cfg.ReadAppSettingsKey("GPT_Voz" + IdiomaGramaticas) == "S" ? true : false);
             GPT_ErrorPorVoz = (cfg.ReadAppSettingsKey("GPT_ErrorPorVoz" + IdiomaGramaticas) == "S" ? true : false);
-            GPT_OllamaURL = RecuperarURLOllama(cfg.ReadAppSettingsKey("GPT_OllamaURL" + IdiomaGramaticas), "DESKTOP-JQ5AR5D");
+            GPT_OllamaURL = RecuperarURLOllama(cfg.ReadAppSettingsKey("GPT_OllamaURL" + IdiomaGramaticas), Environment.MachineName);
             GPT_Recuerdos = GPT_OllamaPrompt1 = cfg.ReadAppSettingsKey("GPT_Recuerdos" + IdiomaGramaticas);
 
             GPT_msg_ErrorNoDNI = cfg.ReadAppSettingsKey("GPT_msg_ErrorNoDNI" + IdiomaGramaticas);

@@ -7,6 +7,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -62,8 +63,16 @@ namespace XULIA
             AddColumn("Recuerdo", "Recuerdo", 800);
             int numero = 1;
 
-            string[] Recuerdos = pc.GPT_Recuerdos.Split('|');
+            string filePath = Application.StartupPath;
+            string contenido = "";
+            try {
+                contenido = File.ReadAllText(filePath + "\\Recuerdos.txt");
+                contenido = contenido.Replace(Environment.NewLine, "|");
+                pc.GPT_Recuerdos = contenido;
+            }
+            catch { }
 
+            string[] Recuerdos = Recuerdos = pc.GPT_Recuerdos.Split('|');
             foreach (string recuerdo in Recuerdos)
             {
                 AddRows(numero++, recuerdo);
@@ -90,7 +99,7 @@ namespace XULIA
                 if (row.Cells[1].Value != null)
                 {
                     if (sRecuerdos.Length > 0)
-                        sRecuerdos.Append("|");
+                        sRecuerdos.Append(Environment.NewLine);
                     sRecuerdos.Append(row.Cells[1].Value.ToString());
                 }
             }
@@ -98,11 +107,9 @@ namespace XULIA
         }
         void ActualizarRecuerdos(string sRecuerdos)
         {
-            string fic = Application.StartupPath + @"\XULIA.exe.config";
-            ConfigXml mCfg = new ConfigXml(fic, true);
-            mCfg.SetKeyValue("appSettings", "GPT_Recuerdos" + "_ES", sRecuerdos);
-            pc.GPT_Recuerdos = sRecuerdos;
-            mCfg.Save();
+            sRecuerdos = sRecuerdos.Replace("|", Environment.NewLine);
+            string filePath = Application.StartupPath;
+            File.WriteAllText(filePath + "\\Recuerdos.txt", sRecuerdos);
         }
         public void AddColumn(string id, string desc, int ancho)
         {
@@ -116,6 +123,7 @@ namespace XULIA
 
         private void grid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+            ActualizarRecuerdosGrid();
         }
 
         private void frmRecuerdos_FormClosing(object sender, FormClosingEventArgs e)
